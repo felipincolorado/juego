@@ -1,0 +1,572 @@
+# Comentarios del elenco por situación (canon §2; ESQUEMA §4).
+# 16 situaciones × 3 variantes por persona. El motor elige una variante al azar
+# sin repetir la última. Comentarios del mapa: menos de 14 palabras. Desenlaces
+# (bien / medias / mal): hasta 22. Al hablar a la casamentera: «usted»
+# (excepción: a Nilo se le escapa el «tú» y a veces se corrige).
+#
+# Notas para el guionista principal:
+# - `clase` se solapa con `gusta` (Celia) y `no_gusta` (Camila). Propuesta de
+#   prioridad: incidente > reemplazo > agitada > tras_escandalo > con_interes >
+#   con_rival > clase > gusta/no_gusta > asignado.
+# - `con_interes` y `con_rival` no nombran a nadie a propósito: el motor no
+#   necesita saber quién es la otra persona para elegir la frase.
+# - Ningún comentario usa {lugar} con preposición («al», «a los»), porque el
+#   artículo cambia según el lugar.
+
+presentacion:   # reparto de cartas (biblia §2.2): una frase al tocar cada carta
+  nilo:   { es: "¿Ocho? Mejor, así nadie se aburre. ¿En qué te ayudo? …¿En qué le ayudo?", en: "Eight? Even better, nobody gets bored. What can I do? …For you, I mean, ma'am." }
+  saul:   { es: "Saúl Veyra. Estaré donde se me necesite, a la hora que se me diga.", en: "Saúl Veyra. I'll be wherever I'm needed, at whatever hour I'm told." }
+  dario:  { es: "Encantado. De verdad. Bueno… casi siempre lo estoy.", en: "Delighted. Truly. Well… I nearly always am." }
+  teo:    { es: "Si me busca pareja, que se ría de mis chistes. Es mi única exigencia.", en: "If you're finding me a match, they must laugh at my jokes. That's my only condition." }
+  celia:  { es: "Lo he preparado todo. Bueno, casi todo. ¿Qué falta?", en: "I've prepared everything. Well, nearly everything. What's missing?" }
+  irene:  { es: "¿Por qué yo? No me malinterprete: lo pregunto de verdad.", en: "Why me? Don't misunderstand: I genuinely want to know." }
+  isolda: { es: "Le aviso desde ya: no pienso cambiarme el pelo.", en: "Fair warning: I'm not changing my hair." }
+  camila: { es: "Ya hice esto una vez, querida. Esta vez elijo yo.", en: "I've done this once before, darling. This time, I choose." }
+
+nota_presentacion:   # nota manuscrita de la asistente bajo cada carta (opcional)
+  nilo:   { es: "El Lobreda que no quiere serlo. Promete rápido.", en: "The Lobreda who'd rather not be one. Quick to promise." }
+  saul:   { es: "Puntual como un reloj. Igual de difícil de abrir.", en: "Punctual as a clock. Just as hard to open." }
+  dario:  { es: "Un Miravés. Sonríe mucho y cuenta poco.", en: "A Miravés. Smiles a great deal, tells very little." }
+  teo:    { es: "Hará reír a toda la ciudad. Menos a quien le importa.", en: "He'll make the whole city laugh. Except the one who matters." }
+  celia:  { es: "La prima de Nilo. No se lo diga así: ensaya hasta los saludos.", en: "Nilo's cousin. Don't call her that. She rehearses even her greetings." }
+  irene:  { es: "Viene del Archivo. Lo nota todo.", en: "From the Archive. Misses nothing." }
+  isolda: { es: "Velaria, de Puerto Nácar. No pide permiso.", en: "Velaria, from Port Nácar. Doesn't ask permission." }
+  camila: { es: "La señora Ferrán, viuda. Y carabina de Celia, para desgracia de las dos.", en: "Mrs. Ferrán, widowed. Also Celia's chaperone, to both their regret." }
+
+barks:
+
+  # ── Nilo: directo, cálido, promete antes de pensar. Se le escapa el «tú».
+  nilo:
+    tipica:
+      - { es: "Déjamelo a mí. Ya veremos el cómo.", en: "Leave it to me. We'll work out the how later." }
+      - { es: "Si alguien necesita una mano, tengo dos.", en: "If anyone needs a hand, I've got two." }
+      - { es: "Prometido. Bueno, casi prometido. …Prometido.", en: "Promise. Well, nearly. …No, promise." }
+    asignado:
+      - { es: "¿{lugar}? Voy. Dime… dígame a quién hay que ayudar.", en: "{lugar}? I'm in. Tell me who needs a hand." }
+      - { es: "Hecho. ¿Paso a buscar a alguien de camino?", en: "Done. Shall I pick anyone up on the way?" }
+      - { es: "Cuente conmigo. Y con mi carruaje, si hace falta.", en: "Count me in. And my carriage, if it comes to that." }
+    gusta:
+      - { es: "Por fin algo con cielo encima.", en: "Finally, something with sky overhead." }
+      - { es: "Aire, piedra y camino. Esto sí lo sé hacer.", en: "Air, stone and a path. This I know how to do." }
+      - { es: "¡Un paseo! Te debo una. …Le debo una.", en: "A walk! I owe you one. Truly." }
+    no_gusta:
+      - { es: "¿Tres horas sentado sin poder levantarme a nada?", en: "Three hours sitting still with nothing to get up for?" }
+      - { es: "Cinco tenedores. Yo con uno arreglo un eje.", en: "Five forks. I can fix an axle with one." }
+      - { es: "Prometo no levantarme a ayudar a los criados. No prometo cumplirlo.", en: "I promise not to get up and help the servants. I don't promise to keep it." }
+    camino:
+      - { es: "Ese carro lleva mal la carga. Un momento.", en: "That cart's loaded all wrong. One moment." }
+      - { es: "Por aquí se ataja. Confíe en mí.", en: "There's a shortcut this way. Trust me." }
+      - { es: "Ya le he prometido a un cochero que mañana lo ayudo.", en: "I've already promised a coachman I'll help him tomorrow." }
+    bien:
+      - { es: "¡Ha salido! Y esta vez nadie ha tenido que pagar por ello.", en: "It worked! And this time nobody had to pay for it." }
+      - { es: "¿Lo ves? …¿Lo ve? Le dije que saldría bien. Más o menos así.", en: "See? I told you it'd go well. Roughly like that." }
+      - { es: "Me han dado las gracias por algo que no era el apellido. Esto me lo apunto.", en: "They thanked me for something other than my surname. I'm writing that down." }
+    medias:
+      - { es: "Ni bien ni mal. Al menos he prometido una cosa de menos.", en: "Not good, not bad. At least I promised one thing fewer." }
+      - { es: "Ayudé a todos menos a quien importaba. Mañana lo arreglo.", en: "I helped everyone except the one who mattered. I'll fix it tomorrow." }
+      - { es: "A medias, como los caminos en primavera: se pasa, pero con barro.", en: "Halfway there, like spring roads: passable, but muddy." }
+    mal:
+      - { es: "Prometí demasiado. Otra vez.", en: "I promised too much. Again." }
+      - { es: "Lo siento. Quise arreglarlo todo y no arreglé nada.", en: "I'm sorry. I tried to fix everything and fixed nothing." }
+      - { es: "Esta la pago yo. No deje que la pague nadie más.", en: "This one's on me. Don't let anyone else pay for it." }
+    incidente:
+      - { es: "Tranquilos. Lo arreglo yo.", en: "Easy, everyone. I'll sort it." }
+      - { es: "Abran paso, por favor. ¿Quién se ha hecho daño?", en: "Let me through, please. Who's hurt?" }
+      - { es: "Ya voy. No sé qué haré, pero ya voy.", en: "Coming. No idea what I'll do, but coming." }
+    con_interes:
+      - { es: "Ah. Bien. Muy bien. Intentaré peinarme, por si acaso.", en: "Ah. Good. Very good. I'll try to comb my hair, just in case." }
+      - { es: "Con esa compañía me porto bien sin que me lo pida.", en: "In that company, I'll behave without being asked." }
+      - { es: "Sé lo que haces. …Lo que hace. Gracias.", en: "I know what you're doing. Thank you." }
+    con_rival:
+      - { es: "Bueno. Lo tomaré como una cuesta: despacio y sin quejarme.", en: "Fine. I'll treat it like a hill: slowly, no complaining." }
+      - { es: "No discutiré. Hoy no. Seguramente.", en: "I won't argue. Not today. Probably." }
+      - { es: "Iré. Pero si empieza la discusión, no seré quien la termine.", en: "I'll go. But if the arguing starts, I won't be the one to stop." }
+    agitada:
+      - { es: "Estoy bien. Necesito aire. Mucho aire.", en: "I'm fine. I need air. A lot of air." }
+      - { es: "No me pida que me quede quieto ahora.", en: "Don't ask me to sit still right now." }
+      - { es: "Dame un momento. …Deme. Ya se me pasa.", en: "Give me a moment. It'll pass." }
+    tras_escandalo:
+      - { es: "Que hablen. Mientras hablan de mí, no hablan de otros.", en: "Let them talk. While it's about me, it isn't about someone else." }
+      - { es: "Me miran como a un carro volcado. Ya me levantaré.", en: "They look at me like an overturned cart. I'll get back up." }
+      - { es: "Si le he costado algo, dígamelo. Lo pago.", en: "If I've cost you anything, tell me. I'll make it good." }
+    libre:
+      - { es: "¿Nada esta semana? Entonces ayudo a quien me lo pida.", en: "Nothing this week? Then I'll help whoever asks." }
+      - { es: "Mejor. Tengo cartas de Greda sin contestar desde hace un mes.", en: "Good. I've had letters from Greda unanswered for a month." }
+      - { es: "Me quedo libre. Avíseme si alguien necesita brazos.", en: "I'm free. Let me know if anyone needs a strong pair of arms." }
+    clase:
+      - { es: "¿Una lección? Pondré atención. Los pies, no lo prometo.", en: "A lesson? I'll pay attention. My feet make no promises." }
+      - { es: "En Greda bailábamos en la era. Aquí cuentan los pasos.", en: "In Greda we danced on the threshing floor. Here they count the steps." }
+      - { es: "Si la maestra me corrige, me corrijo. Soy obediente cuando quiero.", en: "If the teacher corrects me, I'll correct myself. I'm obedient when I choose." }
+    reemplazo:
+      - { es: "¿Ahora? Voy. Me pongo la chaqueta por el camino.", en: "Now? On my way. I'll put my coat on as I go." }
+      - { es: "Para eso estoy. ¿A quién sustituyo?", en: "That's what I'm for. Who am I standing in for?" }
+      - { es: "No me lo explique. Lo entiendo de camino.", en: "Don't explain. I'll work it out on the way." }
+
+  # ── Saúl: breve, procedural, vuelve a su primera decisión. Nunca bromea largo.
+  saul:
+    tipica:
+      - { es: "Lo dicho, dicho está.", en: "What's said is said." }
+      - { es: "Primero el deber. Lo demás, después.", en: "Duty first. Everything else, after." }
+      - { es: "No me gusta improvisar. Lo hago bien. No me gusta.", en: "I dislike improvising. I do it well. I still dislike it." }
+    asignado:
+      - { es: "Entendido. ¿Hora y puerta?", en: "Understood. Time and door?" }
+      - { es: "Allí estaré. Diez minutos antes.", en: "I'll be there. Ten minutes early." }
+      - { es: "Bien. ¿Quién más asiste? Lo pregunto por el protocolo.", en: "Very well. Who else attends? Purely a matter of protocol." }
+    gusta:
+      - { es: "Un orden claro. Se agradece.", en: "A clear order of things. Appreciated." }
+      - { es: "Saludos, precedencia, brindis. Por fin algo que sé leer.", en: "Greetings, precedence, toasts. Finally, something I can read." }
+      - { es: "Una recepción. Me pondré la casaca buena.", en: "A reception. I'll wear the good coat." }
+    no_gusta:
+      - { es: "No he venido a adivinar lo que siente nadie.", en: "I didn't come here to guess what anyone feels." }
+      - { es: "Tres actos de gente que no dice lo que quiere. Iré.", en: "Three acts of people not saying what they want. I'll go." }
+      - { es: "El teatro. Bien. Me sentaré cerca de la salida.", en: "The theatre. Fine. I'll sit near the exit." }
+    camino:
+      - { es: "Llegaremos con diez minutos de margen.", en: "We'll arrive with ten minutes to spare." }
+      - { es: "Ese cochero toma la curva demasiado abierta.", en: "That coachman takes the bend too wide." }
+      - { es: "Repaso los nombres. Nadie debería oír el suyo mal dicho.", en: "Going over the names. No one should hear theirs said wrong." }
+    bien:
+      - { es: "Correcto. …Más que correcto, quizá.", en: "Correct. …More than correct, perhaps." }
+      - { es: "Ha salido como estaba previsto. Algo mejor, incluso. No sé qué hacer con eso.", en: "It went as planned. Slightly better, even. I don't know what to do with that." }
+      - { es: "Me he reído. Una vez. Que no conste.", en: "I laughed. Once. Keep it off the record." }
+    medias:
+      - { es: "Aceptable. Hubo un error. Era mío.", en: "Acceptable. There was a mistake. Mine." }
+      - { es: "Cumplimos. Cumplir no es lo mismo que acertar.", en: "We did our duty. That isn't the same as getting it right." }
+      - { es: "Ni ganancia ni pérdida. Lo anoto y seguimos.", en: "Neither gain nor loss. I'll note it and we carry on." }
+    mal:
+      - { es: "Fue mi decisión. La sostengo.", en: "It was my decision. I stand by it." }
+      - { es: "No hay excusa. Mañana, mejor.", en: "No excuses. Better tomorrow." }
+      - { es: "Me equivoqué. …Me cuesta decirlo. Ahí está.", en: "I was wrong. …That costs me to say. There it is." }
+    incidente:
+      - { es: "Que nadie se mueva. Primero, los hechos.", en: "Nobody move. Facts first." }
+      - { es: "Yo me encargo. Apártense, por favor.", en: "I'll handle this. Stand back, please." }
+      - { es: "Calma. Esto tiene un procedimiento.", en: "Calm. There's a procedure for this." }
+    con_interes:
+      - { es: "Bien. …Bien.", en: "Good. …Good." }
+      - { es: "Entendido. Quizá me quite los guantes. Si hace calor.", en: "Understood. I may take my gloves off. If it's warm." }
+      - { es: "No pregunto por qué. Tampoco me opongo.", en: "I won't ask why. Nor will I object." }
+    con_rival:
+      - { es: "Seré correcto. No me pida más.", en: "I'll be correct. Don't ask me for more." }
+      - { es: "Mantendré la distancia reglamentaria.", en: "I'll keep regulation distance." }
+      - { es: "Ya hemos discutido antes. Sé cómo termina.", en: "We've argued before. I know how it ends." }
+    agitada:
+      - { es: "Estoy perfectamente. Déjeme un minuto.", en: "I'm perfectly well. Give me a minute." }
+      - { es: "Necesito una tarea. Cualquiera. Ahora.", en: "I need a task. Any task. Now." }
+      - { es: "Respiro. Cuento hasta diez. …Hasta veinte.", en: "Breathing. Counting to ten. …To twenty." }
+    tras_escandalo:
+      - { es: "No comento rumores. Tampoco los olvido.", en: "I don't comment on rumours. Nor do I forget them." }
+      - { es: "Mi casa tiene la memoria larga. Esto no ayudará.", en: "My house has a long memory. This won't help." }
+      - { es: "Seguiré como si nada. Es lo que se espera.", en: "I'll carry on as if nothing happened. It's what's expected." }
+    libre:
+      - { es: "Sin servicio. Revisaré la correspondencia de Tiria.", en: "Off duty. I'll go through the Tiria correspondence." }
+      - { es: "Una semana sin órdenes. No sé si me gusta.", en: "A week without orders. I'm not sure I like it." }
+      - { es: "Entendido. Estaré localizable.", en: "Understood. I'll be reachable." }
+    clase:
+      - { es: "Aprendí a bailar en la academia militar. Por compases.", en: "I learned to dance at the military academy. By the count." }
+      - { es: "Escucharé a la maestra. Hasta el final.", en: "I'll listen to the teacher. To the very end." }
+      - { es: "Una clase. Bien. La disciplina se agradece.", en: "A lesson. Good. Discipline is welcome." }
+    reemplazo:
+      - { es: "Recibido. Salgo ahora.", en: "Received. Leaving now." }
+      - { es: "Cubriré el puesto. Sin preguntas.", en: "I'll cover the post. No questions." }
+      - { es: "Sin aviso. Como en Tiria. Voy.", en: "No warning. Just like Tiria. On my way." }
+
+  # ── Dario: cortés, irónico, nunca del todo presente. Lo del sol es gusto y pose.
+  dario:
+    tipica:
+      - { es: "Qué velada tan… instructiva.", en: "What an… instructive evening." }
+      - { es: "Todo el mundo sonríe. Yo, por cortesía, también.", en: "Everyone's smiling. Out of courtesy, so am I." }
+      - { es: "Pregúnteme lo que quiera. Contestaré otra cosa, con mucha elegancia.", en: "Ask me anything. I'll answer something else, very elegantly." }
+    asignado:
+      - { es: "Será un placer. Casi siempre lo es, al principio.", en: "It will be a pleasure. It usually is, at first." }
+      - { es: "Allí estaré. Al menos, una parte de mí.", en: "I'll be there. Part of me, at least." }
+      - { es: "Acepto. Diga que llegaré tarde; da más prestigio.", en: "I accept. Tell them I'll be late; it's more distinguished." }
+    gusta:
+      - { es: "La música lo dice todo, y así nadie tiene que hacerlo.", en: "Music says everything, so nobody else has to." }
+      - { es: "Un baile. Por fin una conversación en la que no hay que hablar.", en: "A ball. At last, a conversation that needs no words." }
+      - { es: "Que toquen algo lento. Lo demás, déjemelo a mí.", en: "Have them play something slow. Leave the rest to me." }
+    no_gusta:
+      - { es: "¿A pleno sol? Qué entusiasmo tan… meridiano.", en: "In full sun? What a… noonday enthusiasm." }
+      - { es: "Pasear sin rumbo es el deporte de quien no tiene secretos.", en: "Strolling aimlessly is the sport of people with no secrets." }
+      - { es: "Llevaré sombrero. Y una excusa, por si el sombrero no basta.", en: "I'll bring a hat. And an excuse, in case the hat won't do." }
+    camino:
+      - { es: "Veamos quién finge mejor esta noche.", en: "Let's see who pretends best tonight." }
+      - { es: "Esa casa le debe dinero a la mía. Saludaré con más cariño.", en: "That house owes mine money. I'll wave more warmly." }
+      - { es: "Me gusta esta calle. Tiene más sombra que conversación.", en: "I like this street. More shade than conversation." }
+    bien:
+      - { es: "Nadie se ha dado cuenta de nada. Perfecto.", en: "Nobody noticed a thing. Perfect." }
+      - { es: "Encantador, todo. Hasta yo, me temo.", en: "All perfectly charming. Even me, I'm afraid." }
+      - { es: "Me han aplaudido. Por un momento, casi estuve allí de verdad.", en: "They applauded. For a moment I was almost actually there." }
+    medias:
+      - { es: "Ni triunfo ni ruina. Lo más elegante, en realidad.", en: "Neither triumph nor ruin. The most elegant outcome, really." }
+      - { es: "Sonreí en el momento justo. Todo lo demás llegó tarde.", en: "I smiled at exactly the right moment. Everything else arrived late." }
+      - { es: "Regular. Pero nadie lo sabrá, si usted no lo cuenta.", en: "So-so. But no one will know, unless you tell them." }
+    mal:
+      - { es: "Me han mirado demasiado de cerca.", en: "They looked at me far too closely." }
+      - { es: "Una mala noche. Mañana nadie la recordará. Yo sí.", en: "A bad night. Tomorrow nobody will remember it. I will." }
+      - { es: "He sido cortés con quien no debía, y sincero con nadie.", en: "I was courteous to the wrong person and honest with no one." }
+    incidente:
+      - { es: "Permítame. Una sonrisa a tiempo arregla más que una disculpa.", en: "Allow me. A timely smile mends more than an apology." }
+      - { es: "Qué escena. Déjeme convertirla en anécdota.", en: "What a scene. Let me turn it into an anecdote." }
+      - { es: "Nadie ha visto nada. Yo me ocupo de que siga así.", en: "Nobody saw anything. I'll make sure it stays that way." }
+    con_interes:
+      - { es: "Vaya. Usted sabe más de lo que aparenta.", en: "Well. You know more than you let on." }
+      - { es: "Será un placer. Esta vez, quizá, también al final.", en: "It will be a pleasure. Perhaps, this time, at the end as well." }
+      - { es: "No me mire así. Sólo es una velada. Probablemente.", en: "Don't look at me like that. It's only an evening. Probably." }
+    con_rival:
+      - { es: "Qué compañía tan… estimulante. Llevaré mi mejor sonrisa.", en: "What… stimulating company. I'll bring my best smile." }
+      - { es: "Seremos encantadores el uno con el otro. Será horrible.", en: "We'll be charming to each other. It will be dreadful." }
+      - { es: "Tenemos cuentas pendientes. Las cobraré en cortesías.", en: "We have accounts to settle. I'll collect in courtesies." }
+    agitada:
+      - { es: "Estoy bien. Siempre estoy bien. Ese es el problema.", en: "I'm fine. I'm always fine. That's the problem." }
+      - { es: "Necesito una ventana. Y que nadie me pregunte nada.", en: "I need a window. And no questions." }
+      - { es: "Disculpe. Se me ha caído la máscara. Un momento.", en: "Forgive me. My mask slipped. One moment." }
+    tras_escandalo:
+      - { es: "Un escándalo. Qué vulgar. Y qué bien se vende.", en: "A scandal. How vulgar. And how well it sells." }
+      - { es: "Que hablen. Mientras miran aquí, no miran a mi casa.", en: "Let them talk. While they look here, they aren't looking at my house." }
+      - { es: "Mi tía querrá hablar conmigo. Tarde, como siempre.", en: "My aunt will want a word. Late, as always." }
+    libre:
+      - { es: "Una semana sin compromisos. Mi tía me encontrará alguno.", en: "A week without engagements. My aunt will find me some." }
+      - { es: "Libre. Dormiré hasta tarde y lo llamaré estrategia.", en: "Free. I'll sleep late and call it strategy." }
+      - { es: "Nadie me necesita. Qué descanso. Y qué ofensa.", en: "Nobody needs me. How restful. How insulting." }
+    clase:
+      - { es: "Una clase. Corregiré posturas sin que nadie me lo pida.", en: "A lesson. I'll correct posture, entirely unasked." }
+      - { es: "Ya sé bailar. Vengo a ver cómo aprenden los demás.", en: "I can already dance. I'm here to watch the others learn." }
+      - { es: "La maestra cuenta los pasos. Yo cuento quién mira.", en: "The teacher counts the steps. I count who's watching." }
+    reemplazo:
+      - { es: "¿De sustituto? Qué halagador. Voy.", en: "A stand-in? How flattering. Coming." }
+      - { es: "Llegaré tarde y parecerá a propósito. Es mi especialidad.", en: "I'll arrive late and it'll look deliberate. My speciality." }
+      - { es: "Por usted, improviso. No se acostumbre.", en: "For you, I'll improvise. Don't get used to it." }
+
+  # ── Teo: ingenioso, rápido; si se pone serio, se desvía enseguida.
+  teo:
+    tipica:
+      - { es: "Si no se les puede ganar, hay que hacerlos reír.", en: "If you can't beat them, make them laugh." }
+      - { es: "Tengo un verso para cada ocasión. Casi todos, impublicables.", en: "I've a verse for every occasion. Most of them unprintable." }
+      - { es: "Hablo en serio. …Bueno, ahora ya no.", en: "I'm being serious. …Well, not anymore." }
+    asignado:
+      - { es: "¡Por fin una fiesta digna de mi única chaqueta buena!", en: "At last, a party worthy of my one good jacket!" }
+      - { es: "Iré. Habrá comida, ¿verdad? Lo pregunto por los molinos.", en: "I'll go. There'll be food, yes? Asking on behalf of the mills." }
+      - { es: "Acepto, y que conste que me han invitado. Por escrito.", en: "I accept, and let it be noted I was invited. In writing." }
+    gusta:
+      - { es: "Luces, público y gente que se equivoca en voz alta. El paraíso.", en: "Lights, an audience and people getting it wrong out loud. Paradise." }
+      - { es: "Teatro. Allí todos fingen, y yo descanso.", en: "The theatre. Everyone pretends there, so I get a night off." }
+      - { es: "Llevo tres críticas escritas y aún no ha empezado.", en: "I've written three reviews and it hasn't even started." }
+    no_gusta:
+      - { es: "¿Bailar? Mis pies tienen antecedentes.", en: "Dance? My feet have a criminal record." }
+      - { es: "Avisaré a mis parejas de baile. Es lo justo.", en: "I'll warn my dance partners. It's only fair." }
+      - { es: "Un baile. Me esconderé detrás de una columna, con ingenio.", en: "A ball. I'll hide behind a pillar. Wittily." }
+    camino:
+      - { es: "Llevo tres versos. Ninguno se puede decir en público.", en: "Three verses so far. Not one fit for company." }
+      - { es: "Esa carroza es nueva. Alguien ha cobrado. No he sido yo.", en: "That carriage is new. Someone's been paid. Not me." }
+      - { es: "Si veo a un acreedor, usted no me conoce.", en: "If I spot a creditor, you've never met me." }
+    bien:
+      - { es: "¡Se ha reído hasta la persona más seria de la sala! Bueno, casi.", en: "Even the sternest person in the room laughed! Well, nearly." }
+      - { es: "Me han invitado a otra cena. A los Rovena. En plural.", en: "I've been invited to another dinner. The Rovenas. Plural." }
+      - { es: "Ha salido bien y no sé qué hacer con las manos. Aplaudiré.", en: "It went well and I don't know what to do with my hands. I'll applaud." }
+    medias:
+      - { es: "Se rieron a la segunda. Lo cuento como un éxito aplazado.", en: "They laughed on the second try. I'm calling it a postponed triumph." }
+      - { es: "Regular. Como mis versos: rima, pero no convence.", en: "So-so. Like my verses: it rhymes, but it doesn't convince." }
+      - { es: "Medio salón me adora. El otro medio todavía no lo sabe.", en: "Half the room adores me. The other half just doesn't know it yet." }
+    mal:
+      - { es: "Nadie se rió. Nadie. Ni por compasión.", en: "Nobody laughed. Nobody. Not even out of pity." }
+      - { es: "Lo he estropeado. En serio. …Ya está, ya pasó lo serio.", en: "I ruined it. Truly. …There, the serious bit's over." }
+      - { es: "Mañana saldré en la Crónica. Por fin, y por lo peor.", en: "Tomorrow I'll be in the Chronicle. At last, and for all the wrong reasons." }
+    incidente:
+      - { es: "Un momento, que esto se arregla con una anécdota.", en: "One moment, this calls for an anecdote." }
+      - { es: "¡Que nadie se asuste! Bueno, un poco sí, que queda bonito.", en: "Nobody panic! Well, a little. It's very dramatic." }
+      - { es: "Yo distraigo y ustedes arreglan. Es mi talento.", en: "I'll distract, you fix it. It's my gift." }
+    con_interes:
+      - { es: "Tendré que estar gracioso. Y peinado. Las dos cosas a la vez.", en: "I'll have to be funny. And combed. Both at once." }
+      - { es: "No me mire así. No he preparado nada. …Lo he preparado todo.", en: "Don't look at me like that. I've prepared nothing. …I've prepared everything." }
+      - { es: "Esta vez me tiembla el verso. Qué raro.", en: "My verse is trembling this time. How odd." }
+    con_rival:
+      - { es: "Perfecto. Llevaré dos epigramas y una rima cruel.", en: "Perfect. I'll bring two epigrams and one cruel rhyme." }
+      - { es: "Estaré encantador. Es lo que más le molesta.", en: "I'll be charming. It's what annoys them most." }
+      - { es: "Tregua. Hasta el postre, al menos.", en: "A truce. Until dessert, at least." }
+    agitada:
+      - { es: "Estoy bien. Un chiste y se me pasa.", en: "I'm fine. One joke and it'll pass." }
+      - { es: "No se me ocurre nada gracioso. Eso sí que es grave.", en: "I can't think of anything funny. Now that's serious." }
+      - { es: "Déjeme un rato callado. No se lo cuente a nadie.", en: "Let me be quiet for a bit. Don't tell anyone." }
+    tras_escandalo:
+      - { es: "Un escándalo, y no lo he escrito yo. Qué envidia.", en: "A scandal, and I didn't write it. I'm jealous." }
+      - { es: "Todos susurran. Les falta ritmo, pero tienen material.", en: "Everyone's whispering. No rhythm, but excellent material." }
+      - { es: "Lo taparemos con una broma. …Puede que con dos.", en: "We'll cover it with a joke. …Possibly two." }
+    libre:
+      - { es: "¿Libre? Justo cuando tenía la chaqueta planchada.", en: "Free? Just when my jacket was pressed." }
+      - { es: "Una semana sin salones. Iré a ver los molinos. O a no verlos.", en: "A week without salons. I'll go see the mills. Or avoid them." }
+      - { es: "Aprovecharé para escribir. Y para esconderme de mis acreedores.", en: "I'll use it to write. And to hide from my creditors." }
+    clase:
+      - { es: "Una clase. Que conste que el que pisaba era otro.", en: "A lesson. For the record, the toe-stepper was someone else." }
+      - { es: "Aprenderé un paso. Uno. No pidamos milagros.", en: "I'll learn one step. One. Let's not ask for miracles." }
+      - { es: "Me pondré al fondo. Desde allí se ve mejor a todos.", en: "I'll stand at the back. You see everyone better from there." }
+    reemplazo:
+      - { es: "¡El suplente entra en escena! Aplausos, por favor.", en: "Enter the understudy! Applause, please." }
+      - { es: "Me encanta llegar sin invitación. Y ahora, además, con permiso.", en: "I love turning up uninvited. Now I even have permission." }
+      - { es: "Voy corriendo. Bueno, andando rápido, que corro fatal.", en: "Running over. Well, walking briskly. I run terribly." }
+
+  # ── Celia: disciplinada, ensayada, ansiosa por la aprobación.
+  celia:
+    tipica:
+      - { es: "Lo he ensayado.", en: "I've rehearsed this." }
+      - { es: "¿Se ha fijado en el guante? ¿Está recto?", en: "Have you looked at my glove? Is it straight?" }
+      - { es: "Una dama nunca improvisa. …¿Verdad que no?", en: "A lady never improvises. …Does she?" }
+    asignado:
+      - { es: "¿Quién más va? Necesito saberlo todo antes.", en: "Who else is going? I need to know everything beforehand." }
+      - { es: "Gracias. Esta noche repaso las reverencias.", en: "Thank you. I'll practise my curtsies tonight." }
+      - { es: "¿Qué se pone una para eso? No, no me lo diga. Lo sé.", en: "What does one wear to that? No, don't tell me. I know." }
+    gusta:
+      - { es: "Por fin un sitio donde importa hacerlo bien.", en: "Finally, somewhere doing it right actually matters." }
+      - { es: "Una clase. Allí equivocarse no sale en ningún pliego.", en: "A lesson. Mistakes there never make the papers." }
+      - { es: "Llevaré mis zapatillas de ensayo. Las buenas.", en: "I'll bring my practice slippers. The good ones." }
+    no_gusta:
+      - { es: "¿Y el protocolo? …¿Ninguno? ¿De verdad?", en: "And the protocol? …None? Really?" }
+      - { es: "Un paseo. Barro en el bajo y nadie que mire.", en: "A walk. Mud on the hem and nobody watching." }
+      - { es: "¿Andar por andar? ¿Y cuándo se saluda a alguien?", en: "Walking for walking's sake? And when does one greet anyone?" }
+    camino:
+      - { es: "Primer vals, segundo vals, reverencia, sonrisa…", en: "First waltz, second waltz, curtsy, smile…" }
+      - { es: "No me hable ahora, que pierdo la cuenta.", en: "Don't talk to me now, I'll lose count." }
+      - { es: "«Encantada de conocerla.» No. «Es un honor.» Tampoco…", en: "'Delighted to meet you.' No. 'An honour.' Not that either…" }
+    bien:
+      - { es: "¿Lo ha visto? Dígame que lo ha visto.", en: "Did you see? Tell me you saw." }
+      - { es: "Nadie ha dicho «la prima de Nilo». Ni una sola vez.", en: "Nobody said 'Nilo's cousin'. Not once." }
+      - { es: "Ha salido como lo ensayé. Mejor, incluso. Eso no lo había ensayado.", en: "It went just as I rehearsed. Better, even. I hadn't rehearsed that part." }
+    medias:
+      - { es: "Bien, salvo el tercer giro. Todos vieron el tercer giro.", en: "Fine, apart from the third turn. Everyone saw the third turn." }
+      - { es: "Correcto. Pero correcto no es lo mismo que bien, ¿verdad?", en: "Proper. But proper isn't the same as good, is it?" }
+      - { es: "Me sonrieron. ¿Por cortesía o de verdad? Necesito saberlo.", en: "They smiled at me. Politeness, or did they mean it? I need to know." }
+    mal:
+      - { es: "Un solo paso fuera de sitio, y ya lo comenta todo el salón.", en: "One step out of place and the whole room is talking." }
+      - { es: "Lo recuerdo todo. Cada mirada. Y quién se rió.", en: "I remember all of it. Every look. And who laughed." }
+      - { es: "No pasa nada. No pasa nada. …¿Cuándo sale la Crónica?", en: "It's fine. It's fine. …When does the Chronicle come out?" }
+    incidente:
+      - { es: "No, no, no. Esto no estaba en lo que ensayé.", en: "No, no, no. This wasn't in what I rehearsed." }
+      - { es: "¿Qué dice el protocolo de esto? Algo dirá.", en: "What does protocol say about this? It must say something." }
+      - { es: "Que nadie me mire. Que me miren. No sé.", en: "Nobody look at me. Everyone look. I don't know." }
+    con_interes:
+      - { es: "¿Con quién? No, no me lo diga. Ya lo sé. Ay.", en: "With whom? No, don't tell me. I know. Oh." }
+      - { es: "Tendré que repasarlo todo otra vez. Todo.", en: "I'll have to go over everything again. Everything." }
+      - { es: "No estoy nerviosa. Es el guante. Está torcido.", en: "I'm not nervous. It's the glove. It's crooked." }
+    con_rival:
+      - { es: "Muy bien. Seré perfecta. Que se note la diferencia.", en: "Very well. I'll be perfect. Let the difference show." }
+      - { es: "Sonreiré. Una dama sonríe aunque le rompan las reglas.", en: "I'll smile. A lady smiles even when the rules get broken." }
+      - { es: "Seguro que llega tarde y aun así lo celebran.", en: "They'll arrive late and still be applauded, I'm sure." }
+    agitada:
+      - { es: "Estoy bien. Sólo necesito repasar. Desde el principio.", en: "I'm fine. I just need to go over it. From the top." }
+      - { es: "No me toque el peinado, por favor. Es lo único en su sitio.", en: "Please don't touch my hair. It's the only thing in place." }
+      - { es: "Respiro en cuatro tiempos. Como en el vals. Ya está.", en: "Breathing in four counts. Like the waltz. There." }
+    tras_escandalo:
+      - { es: "Ahora me mirarán buscando el error. No lo encontrarán.", en: "Now they'll watch me for a mistake. They won't find one." }
+      - { es: "¿Saldré en la Crónica? ¿Con mi nombre o como «la prima»?", en: "Will I be in the Chronicle? By name, or as 'the cousin'?" }
+      - { es: "Hoy nadie me ha saludado como ayer. Lo he contado.", en: "Nobody greeted me the way they did yesterday. I counted." }
+    libre:
+      - { es: "¿Ninguna invitación? Entonces ensayo. Toda la semana.", en: "No invitations? Then I'll practise. All week." }
+      - { es: "¿Es porque lo hice mal? Puede decírmelo.", en: "Is it because I did badly? You can tell me." }
+      - { es: "Una semana libre. La señora Ferrán estará encantada.", en: "A free week. Mrs. Ferrán will be thrilled." }
+    clase:
+      - { es: "¡Una clase! ¿Puedo ponerme delante?", en: "A lesson! May I stand at the front?" }
+      - { es: "Ya lo sé hacer. Pero quiero que la maestra vea que lo sé.", en: "I know how already. But I want the teacher to see that I know." }
+      - { es: "Aquí se puede repetir un paso sin que nadie lo anote.", en: "Here you can repeat a step and nobody writes it down." }
+    reemplazo:
+      - { es: "¿Ahora? ¡Pero si no lo he ensayado!", en: "Now? But I haven't rehearsed it!" }
+      - { es: "Voy. Peinada a medias, pero voy.", en: "I'm going. Half my hairpins in, but going." }
+      - { es: "¿Me llaman a mí? ¿De verdad a mí? Voy.", en: "They're asking for me? Truly me? I'm going." }
+
+  # ── Irene: atenta, analítica, directa sin querer. Pregunta.
+  irene:
+    tipica:
+      - { es: "Interesante. ¿Por qué?", en: "Interesting. Why?" }
+      - { es: "¿Quién lo dijo primero? Eso siempre importa.", en: "Who said it first? That always matters." }
+      - { es: "¿Se ha dado cuenta de que nadie contesta lo que se le pregunta?", en: "Have you noticed nobody answers what they're actually asked?" }
+    asignado:
+      - { es: "¿Habrá biblioteca? Lo pregunto por si acaso.", en: "Will there be a library? Just in case." }
+      - { es: "¿Quién es el anfitrión? ¿Y quién le debe qué?", en: "Who's hosting? And who owes them what?" }
+      - { es: "Iré. ¿Puedo saber por qué me eligió?", en: "I'll go. May I ask why you chose me?" }
+    gusta:
+      - { es: "Gente que discute de verdad. Qué alivio.", en: "People actually arguing. What a relief." }
+      - { es: "¿Una mesa larga? Es un archivo que habla.", en: "A long table? That's an archive that talks." }
+      - { es: "¿Quién se sienta a mi lado? Ojalá alguien que me lleve la contraria.", en: "Who's seated beside me? I hope it's someone who'll disagree." }
+    no_gusta:
+      - { es: "Demasiada gente diciendo nada a la vez.", en: "Too many people saying nothing at once." }
+      - { es: "¿Por qué la música tiene que estar tan alta? Nadie se oye.", en: "Why must the music be so loud? Nobody can hear anybody." }
+      - { es: "¿Tendré que bailar? Nunca tuve lecciones. ¿Se nota?", en: "Will I have to dance? I never had lessons. Does it show?" }
+    camino:
+      - { es: "En el carruaje de enfrente mienten. Se nota en las manos.", en: "They're lying in the carriage opposite. You can tell from their hands." }
+      - { es: "¿Ese escudo no era de otro color el año pasado?", en: "Wasn't that crest a different colour last year?" }
+      - { es: "¿Cuánto se tarda en este trayecto? Lo anoto. Costumbre.", en: "How long does this route take? I'll note it. Habit." }
+    bien:
+      - { es: "Ha funcionado, y sé exactamente por qué.", en: "It worked, and I know exactly why." }
+      - { es: "¿Lo ha notado? Me escucharon hasta el final. ¿Eso pasa a menudo?", en: "Did you notice? They listened to the end. Does that happen often?" }
+      - { es: "Nadie me ha preguntado de qué familia vengo. Me han preguntado qué pienso.", en: "No one asked what family I come from. They asked what I think." }
+    medias:
+      - { es: "Acerté en lo que dije y fallé en cómo lo dije. ¿Siempre es así?", en: "I was right in what I said and wrong in how. Is it always like this?" }
+      - { es: "¿Por qué se rieron? No era una broma.", en: "Why did they laugh? It wasn't a joke." }
+      - { es: "Medio resultado. Me falta un dato. ¿Cuál?", en: "Half a result. I'm missing a piece. Which one?" }
+    mal:
+      - { es: "Lo vi venir y no dije nada. Error mío.", en: "I saw it coming and said nothing. My mistake." }
+      - { es: "Entendí el argumento y se me escapó la insinuación. Otra vez.", en: "I followed the argument and missed the hint. Again." }
+      - { es: "¿Qué hice mal? No me consuele: dígame el qué.", en: "What did I do wrong? Don't comfort me. Tell me what." }
+    incidente:
+      - { es: "Esperen. Esto no cuadra con lo que se dijo antes.", en: "Wait. That doesn't match what was said earlier." }
+      - { es: "¿Alguien ha visto quién empezó? Es importante.", en: "Did anyone see who started it? It matters." }
+      - { es: "¿Me permiten una pregunta? Sólo una. Bueno, dos.", en: "May I ask a question? Just one. Well, two." }
+    con_interes:
+      - { es: "¿Casualidad? No me lo parece. Tampoco me quejo.", en: "Coincidence? It doesn't look like one. I'm not complaining." }
+      - { es: "¿Por qué de pronto me importa el vestido?", en: "Why do I suddenly care about my dress?" }
+      - { es: "Interesante. ¿Por qué me tiemblan las manos?", en: "Interesting. Why are my hands shaking?" }
+    con_rival:
+      - { es: "¿Discutiremos? Bien. Llevaré fechas.", en: "Will we argue? Good. I'll bring dates." }
+      - { es: "¿No había otra persona disponible? Lo pregunto con curiosidad.", en: "Was nobody else available? I ask purely out of curiosity." }
+      - { es: "Seré educada. ¿También es obligatorio ser simpática?", en: "I'll be polite. Is being pleasant also required?" }
+    agitada:
+      - { es: "Pienso demasiado rápido. ¿Puede hablar más despacio?", en: "I'm thinking too fast. Could you speak more slowly?" }
+      - { es: "Necesito un rincón y diez minutos. ¿Aquí hay rincones?", en: "I need a corner and ten minutes. Are there corners here?" }
+      - { es: "No me mire. ¿Por qué me mira todo el mundo?", en: "Don't look at me. Why is everyone looking?" }
+    tras_escandalo:
+      - { es: "Interesante. ¿Por qué todos lo leen y nadie pregunta si es cierto?", en: "Interesting. Why does everyone read it and nobody ask if it's true?" }
+      - { es: "¿Quién gana con que se sepa? Esa es la pregunta.", en: "Who gains from it being known? That's the question." }
+      - { es: "Todos hablan del escándalo. ¿Alguien habla de lo que lo causó?", en: "Everyone's discussing the scandal. Is anyone discussing its cause?" }
+    libre:
+      - { es: "¿Libre? Tengo trabajo atrasado en el Archivo.", en: "Free? I'm behind on work at the Archive." }
+      - { es: "Una semana sin salones. ¿Me echarán de menos? No, ¿verdad?", en: "A week without salons. Will anyone miss me? No, will they?" }
+      - { es: "Bien. Leeré. ¿Me presta algo que no haya leído nadie?", en: "Good. I'll read. Could you lend me something nobody's read?" }
+    clase:
+      - { es: "¿Una clase de baile? ¿Para mí? ¿Está segura?", en: "A dance lesson? For me? Are you sure?" }
+      - { es: "Sé la historia de cada paso. ¿Bailarlos? Eso es otra cosa.", en: "I know the history of every step. Dancing them is another matter." }
+      - { es: "¿Por qué se cuenta en tres? Se lo preguntaré a la maestra.", en: "Why is it counted in three? I'll ask the teacher." }
+    reemplazo:
+      - { es: "¿Por qué yo? No me malinterprete: voy. Pero ¿por qué?", en: "Why me? Don't misunderstand: I'm going. But why?" }
+      - { es: "Dejo el libro abierto. Volveré a la misma página.", en: "I'll leave the book open. I'll be back on the same page." }
+      - { es: "¿A quién sustituyo? Necesito saber qué se esperaba de esa persona.", en: "Who am I replacing? I need to know what was expected of them." }
+
+  # ── Isolda: libre, provocadora, cálida con quien elige.
+  isolda:
+    tipica:
+      - { es: "¿Y quién decidió esa regla?", en: "And who decided that rule?" }
+      - { es: "Si me van a mirar, que sea por algo.", en: "If they're going to stare, let's give them a reason." }
+      - { es: "Lo peor que puede pasar es que hablen. Ya hablan.", en: "The worst that can happen is they talk. They already do." }
+    asignado:
+      - { es: "Voy. Pero me siento donde quiera.", en: "I'll go. But I'm sitting wherever I like." }
+      - { es: "Encantada. ¿Quién va a escandalizarse esta vez?", en: "Delighted. Who's going to be scandalised this time?" }
+      - { es: "Llevaré el pelo suelto. Que se vayan acostumbrando.", en: "I'll wear my hair loose. They may as well get used to it." }
+    gusta:
+      - { es: "Aire, gente nueva y nadie mirándome el pelo. Perfecto.", en: "Fresh air, new faces and nobody staring at my hair. Perfect." }
+      - { es: "¿Un paseo? Por fin puedo caminar a mi paso.", en: "A walk? At last I can go at my own pace." }
+      - { es: "Huele a río. Casi como en el puerto.", en: "Smells of river. Almost like the harbour." }
+    no_gusta:
+      - { es: "Otra vez me mirarán el pelo antes que la cara.", en: "Again they'll look at my hair before my face." }
+      - { es: "Saludar en orden, sonreír en orden, aburrirse en orden.", en: "Greet in order, smile in order, be bored in order." }
+      - { es: "Iré. Y me portaré bien. Casi todo el rato.", en: "I'll go. And behave. Most of the time." }
+    camino:
+      - { es: "Si llegamos tarde, que se note que llegamos.", en: "If we're late, let them notice we've arrived." }
+      - { es: "Abra la ventana. En Nácar no viajamos con el aire encerrado.", en: "Open the window. In Nácar we don't travel with the air shut in." }
+      - { es: "Apuesto a que alguien se tapa la boca al verme. Uno, dos…", en: "I bet someone covers their mouth when they see me. One, two…" }
+    bien:
+      - { es: "Les ha gustado, y no he tenido que fingir ni un poco.", en: "They liked it, and I didn't have to pretend one bit." }
+      - { es: "Me han vuelto a invitar. Con mi pelo y todo.", en: "They've invited me back. Hair and all." }
+      - { es: "Hoy nadie me ha pedido que baje la voz. Algo estamos haciendo bien.", en: "Nobody asked me to lower my voice today. We're doing something right." }
+    medias:
+      - { es: "Me aplaudieron y luego se taparon la boca. Lo acepto.", en: "They applauded, then covered their mouths. I'll take it." }
+      - { es: "Medio salón me ha sonreído. El otro medio, mañana.", en: "Half the room smiled at me. The other half, tomorrow." }
+      - { es: "No ha salido mal. Tampoco a mi manera. Me debo una.", en: "It didn't go badly. Nor did it go my way. I owe myself one." }
+    mal:
+      - { es: "Me pasé de la raya. …Aunque la raya estaba mal puesta.", en: "I crossed the line. …Though the line was badly drawn." }
+      - { es: "Me han mirado como a algo que trajo la marea.", en: "They looked at me like something the tide dragged in." }
+      - { es: "Lo siento por usted. Por ellos, nada.", en: "I'm sorry for your sake. For theirs, not in the least." }
+    incidente:
+      - { es: "Déjenmelo a mí. Me encanta un buen desastre.", en: "Leave it to me. I love a good disaster." }
+      - { es: "¡Por fin pasa algo!", en: "Finally, something's happening!" }
+      - { es: "Calma. En el puerto esto pasa todas las semanas.", en: "Calm down. At the harbour, this happens every week." }
+    con_interes:
+      - { es: "Vaya, vaya. Usted sabe elegir compañía.", en: "Well, well. You do know how to choose company." }
+      - { es: "Hoy me peino. No se acostumbre.", en: "Today I'm doing my hair. Don't get used to it." }
+      - { es: "Iré encantada. Y no pienso disimularlo.", en: "I'll go gladly. And I won't pretend otherwise." }
+    con_rival:
+      - { es: "Bien. Alguien tiene que recordarle que las reglas se inventaron.", en: "Good. Someone has to remind them the rules were made up." }
+      - { es: "Me portaré bien. Para que le moleste más.", en: "I'll behave. It'll annoy them more." }
+      - { es: "Llevaré mi mejor sonrisa. Y los codos en la mesa.", en: "I'll bring my best smile. And my elbows on the table." }
+    agitada:
+      - { es: "Necesito aire. Del de verdad, no del de salón.", en: "I need air. Real air, not ballroom air." }
+      - { es: "Si me quedo, digo algo. Si me voy, también. Elija.", en: "If I stay, I'll say something. If I leave, I'll still say it. Choose." }
+      - { es: "Estoy bien. Sólo quiero romper una regla. Una pequeña.", en: "I'm fine. I just want to break a rule. A small one." }
+    tras_escandalo:
+      - { es: "Que hablen. Por lo menos, de algo interesante.", en: "Let them talk. At least it's about something interesting." }
+      - { es: "A mí me miran igual, con escándalo o sin él.", en: "They stare at me the same, scandal or no scandal." }
+      - { es: "¿Escándalo? En Nácar a esto lo llamamos jueves.", en: "Scandal? In Nácar we call this Thursday." }
+    libre:
+      - { es: "¿Libre? Me voy al río. Sola, y sin sombrero.", en: "Free? I'm off to the river. Alone, and hatless." }
+      - { es: "Una semana sin salones. Me echarán de menos. Si no, peor para ellos.", en: "A week without salons. They'll miss me. If not, their loss." }
+      - { es: "Escribiré a Nácar. Que sepan que Valcenda aún no me ha domado.", en: "I'll write home to Nácar. Valcenda hasn't tamed me yet." }
+    clase:
+      - { es: "Una clase. Prometo no burlarme de la maestra. Mucho.", en: "A lesson. I promise not to mock the teacher. Much." }
+      - { es: "Ya me echaron de una. ¿Cuántas faltan para el récord?", en: "I've been thrown out of one already. How many for the record?" }
+      - { es: "Aprenderé los pasos. Y luego los bailaré a mi manera.", en: "I'll learn the steps. Then dance them my own way." }
+    reemplazo:
+      - { es: "¿Me llaman de urgencia? Así me gusta entrar en un salón.", en: "An urgent summons? That's how I like to enter a room." }
+      - { es: "Voy. Sin invitación formal, que es como mejor me sale.", en: "Coming. No formal invitation, which suits me best." }
+      - { es: "Me recojo el pelo por el camino. O no.", en: "I'll pin my hair up on the way. Or not." }
+
+  # ── Camila: experimentada, humor seco, compara con el pasado.
+  camila:
+    tipica:
+      - { es: "Querida, ya he visto esta función.", en: "Darling, I've seen this play before." }
+      - { es: "En mi primera temporada esto se hacía mejor. O lo recuerdo mejor.", en: "In my first season this was done better. Or I remember it better." }
+      - { es: "Sorpréndame. Le advierto que es difícil.", en: "Surprise me. I warn you, it's not easy." }
+    asignado:
+      - { es: "Iré. Alguien tendrá que vigilar a los jóvenes.", en: "I'll go. Someone has to keep an eye on the young." }
+      - { es: "Acepto. Llevaré el abanico, por si hay que despertar a alguien.", en: "I accept. I'll bring my fan, in case someone needs waking." }
+      - { es: "Muy bien. La última vez que fui, el vino era mejor.", en: "Very well. Last time I went, the wine was better." }
+    gusta:
+      - { es: "Una mesa pequeña y alguien con algo que contar. Basta.", en: "A small table and someone with something to say. That's enough." }
+      - { es: "Una cena. Julián decía que a la gente se la conoce en el segundo plato.", en: "A dinner. Julián used to say you only know people by the second course." }
+      - { es: "Por fin una velada en la que una puede sentarse.", en: "Finally, an evening where one is allowed to sit." }
+    no_gusta:
+      - { es: "Otra presentación de debutantes. Paciencia.", en: "Another parade of debutantes. Patience." }
+      - { es: "Una clase. Ya aprendí todo eso, y lo olvidé con gusto.", en: "A lesson. I learned all that once, and gladly forgot it." }
+      - { es: "Iré, pero sentada. Mis rodillas ya hicieron su temporada.", en: "I'll go, but I'm sitting. My knees have had their season." }
+    camino:
+      - { es: "Apuesto a que la anfitriona estrena vestido. Y a que le queda corto.", en: "I'll wager the hostess has a new gown. And that it's too short." }
+      - { es: "Por esta calle pasaba mi carruaje de recién casada. Más despacio.", en: "My carriage came down this street when I was newly married. Slower." }
+      - { es: "Este cochero va más rápido que el mío. Y peor.", en: "This coachman's faster than mine. And worse." }
+    bien:
+      - { es: "Vaya. Me han sorprendido. Ya casi no pasa.", en: "Well. I was surprised. That hardly happens anymore." }
+      - { es: "Casi como las cenas de antes. Pero con mejor conversación.", en: "Almost like the dinners of old. But with better conversation." }
+      - { es: "Me he reído sin taparme con el abanico. Hacía dos otoños que no.", en: "I laughed without hiding behind my fan. First time in two autumns." }
+    medias:
+      - { es: "Ni bien ni mal. Como la mayoría de los matrimonios.", en: "Neither good nor bad. Like most marriages." }
+      - { es: "Pasable. He visto veladas peores, y he dado algunas.", en: "Passable. I've seen worse evenings, and hosted a few." }
+      - { es: "Medio éxito. En mi primera temporada lo habría llamado triunfo.", en: "Half a success. In my first season, I'd have called it a triumph." }
+    mal:
+      - { es: "Debí quedarme en casa con un buen libro y un mal vino.", en: "I should have stayed home with a good book and a bad wine." }
+      - { es: "Un desastre. Y yo, que creía haberlos visto todos.", en: "A disaster. And I thought I'd seen them all." }
+      - { es: "Lo comentarán un mes entero. Lo sé: antes la que comentaba era yo.", en: "They'll talk about this for a month. I know; I used to be the one talking." }
+    incidente:
+      - { es: "Calma. He sobrevivido a cenas peores.", en: "Calm. I've survived worse dinners." }
+      - { es: "Déjeme a mí. Esto ya lo vi en la boda de una prima.", en: "Let me. I saw exactly this at a cousin's wedding." }
+      - { es: "Que alguien traiga agua. Y otro, discreción.", en: "Someone fetch water. And someone else, discretion." }
+    con_interes:
+      - { es: "Vaya. Hoy me pondré los pendientes buenos.", en: "Well. Tonight I'll wear the good earrings." }
+      - { es: "No me diga nada. Ya hice esto una vez.", en: "Don't say a word. I've done this before." }
+      - { es: "Hacía tiempo que no me miraba dos veces al espejo.", en: "It's been a while since I checked the mirror twice." }
+    con_rival:
+      - { es: "Qué velada tan larga me espera. La sobreviviré con elegancia.", en: "What a long evening awaits. I'll survive it elegantly." }
+      - { es: "Seré encantadora. También lo soy con mis acreedores.", en: "I'll be charming. I am with my creditors, too." }
+      - { es: "Ya me he cruzado con esa clase de persona. Ganó la paciencia.", en: "I've met the type before. Patience won." }
+    agitada:
+      - { es: "Estoy perfectamente. Sólo necesito sentarme. Y silencio.", en: "I'm perfectly well. I just need to sit. And silence." }
+      - { es: "Hacía mucho que nada me alteraba. No me gusta haberlo echado de menos.", en: "Nothing has rattled me in ages. I don't like that I missed it." }
+      - { es: "Un momento, querida. El abanico no da para tanto.", en: "A moment, darling. The fan can only do so much." }
+    tras_escandalo:
+      - { es: "Yo fui el escándalo de una temporada. Se pasa. Despacio.", en: "I was a season's scandal once. It passes. Slowly." }
+      - { es: "Hace dos otoños hablaban de mí. Ahora, de otros. Siempre hay otros.", en: "Two autumns ago it was me. Now it's others. There are always others." }
+      - { es: "Sonreír y no leer. Así se sobrevive.", en: "Smile and don't read. That's how one survives." }
+    libre:
+      - { es: "Una semana libre. Por fin podré aburrirme a mi manera.", en: "A free week. At last I can be bored my own way." }
+      - { es: "Bien. Celia necesita descansar de mí. Y yo de ella.", en: "Good. Celia needs a rest from me. And I from her." }
+      - { es: "Me quedaré en casa. Antes eso me daba pena.", en: "I'll stay home. That used to make me sad." }
+    clase:
+      - { es: "Una clase. Me sentaré al fondo a juzgar.", en: "A lesson. I'll sit at the back and judge." }
+      - { es: "En mi época esto se enseñaba mejor. Y más corto.", en: "They taught this better in my day. And faster." }
+      - { es: "Aprendí a bailar para casarme. ¿Y ahora para qué será?", en: "I learned to dance to get married. What's it for now?" }
+    reemplazo:
+      - { es: "¿De sustituta? Querida, he sido cosas peores.", en: "A substitute? Darling, I've been worse things." }
+      - { es: "Voy. Con el vestido de ayer, que nadie recuerda.", en: "Coming. In yesterday's dress, which nobody remembers." }
+      - { es: "Me avisan tarde. A las viudas siempre nos avisan tarde.", en: "Late notice. Widows always get the late notice." }
