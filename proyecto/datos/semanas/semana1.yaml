@@ -79,8 +79,8 @@ eventos:
           d: 3
           texto: { es: "Darle un rumor inofensivo y entretenido", en: "Give her a harmless, entertaining rumour" }
           exito:
-            es: "{a} le sirve un rumor tan bueno como falso. Mara lo celebra y deja de preguntar."
-            en: "{a} hands her a rumour as delicious as it is false. Mara is delighted and stops asking."
+            es: "{mejor} le sirve un rumor tan bueno como falso. Mara lo celebra y deja de preguntar."
+            en: "{mejor} hands her a rumour as delicious as it is false. Mara is delighted and stops asking."
           medias:
             es: "El rumor funciona a medias: Mara lo apunta, pero sigue mirando a {grupo}."
             en: "The rumour half works: Mara notes it down, but keeps her eyes on {grupo}."
@@ -98,8 +98,8 @@ eventos:
             es: "El debate entretiene un rato, hasta que Mara recupera la pregunta con una sonrisa."
             en: "The debate holds them for a while, until Mara reclaims her question with a smile."
           fallo:
-            es: "El argumento se enreda. Mara lo resume en una frase que hace quedar mal a {a}."
-            en: "The argument tangles itself up. Mara sums it up in one line that makes {a} look foolish."
+            es: "El argumento se enreda. Mara lo resume en una frase que hace quedar mal a {mejor}."
+            en: "The argument tangles itself up. Mara sums it up in one line that makes {mejor} look foolish."
         - id: negarse
           habilidad: presencia
           d: 4
@@ -143,8 +143,8 @@ eventos:
       desaire:
         titulo: { es: "Tinta en el mantel", en: "Ink on the tablecloth" }
         publico:
-          es: "En la Imprenta Calce, un comentario de {a} dejó a la sala en silencio. Mara promete los detalles."
-          en: "At the Calce Printing House, a remark from {a} left the room silent. Mara promises details."
+          es: "En la Imprenta Calce, un comentario de {mejor} dejó a la sala en silencio. Mara promete los detalles."
+          en: "At the Calce Printing House, a remark from {mejor} left the room silent. Mara promises details."
         privado:
           es: "Conviene no darle a Mara más motivos esta temporada. Tiene buena memoria y una prensa."
           en: "Best not to give Mara more material this season. She has a long memory, and a press."

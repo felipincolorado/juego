@@ -1,0 +1,571 @@
+nota: 'Inventario de imágenes pintadas. Iconos, sellos, radar, rutas, aros y textos se hacen en el motor o en vector. Los recortes de carta, hueco, ficha y viaje se derivan del original (diseno/ESPEC-FLUJO-PANTALLAS-v3.md
+  §7.1). La guía (asistente) ya no tiene retrato: decisión D9.'
+total: 79
+imagenes:
+- id: PJ-nilo-formal
+  archivo: personajes/nilo_formal.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/PROMPTS-ELENCO-ORIGINALES.md
+  tanda: 2
+  estado: pendiente
+- id: PJ-nilo-ficha
+  archivo: personajes/nilo_ficha.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-nilo-alegre
+  archivo: personajes/nilo_alegre.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-nilo-molesta
+  archivo: personajes/nilo_molesta.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-nilo-ruborizada
+  archivo: personajes/nilo_ruborizada.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-saul-formal
+  archivo: personajes/saul_formal.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/PROMPTS-ELENCO-ORIGINALES.md
+  tanda: 2
+  estado: pendiente
+- id: PJ-saul-ficha
+  archivo: personajes/saul_ficha.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-saul-alegre
+  archivo: personajes/saul_alegre.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-saul-molesta
+  archivo: personajes/saul_molesta.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-saul-ruborizada
+  archivo: personajes/saul_ruborizada.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-dario-formal
+  archivo: personajes/dario_formal.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/PROMPTS-ELENCO-ORIGINALES.md
+  tanda: 2
+  estado: pendiente
+- id: PJ-dario-ficha
+  archivo: personajes/dario_ficha.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-dario-alegre
+  archivo: personajes/dario_alegre.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-dario-molesta
+  archivo: personajes/dario_molesta.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-dario-ruborizada
+  archivo: personajes/dario_ruborizada.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-teo-formal
+  archivo: personajes/teo_formal.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/PROMPTS-ELENCO-ORIGINALES.md
+  tanda: 2
+  estado: pendiente
+- id: PJ-teo-ficha
+  archivo: personajes/teo_ficha.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-teo-alegre
+  archivo: personajes/teo_alegre.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-teo-molesta
+  archivo: personajes/teo_molesta.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-teo-ruborizada
+  archivo: personajes/teo_ruborizada.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-celia-formal
+  archivo: personajes/celia_formal.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/PROMPTS-ELENCO-ORIGINALES.md
+  tanda: 2
+  estado: pendiente
+- id: PJ-celia-ficha
+  archivo: personajes/celia_ficha.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-celia-alegre
+  archivo: personajes/celia_alegre.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-celia-molesta
+  archivo: personajes/celia_molesta.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-celia-ruborizada
+  archivo: personajes/celia_ruborizada.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-irene-formal
+  archivo: personajes/irene_formal.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/PROMPTS-ELENCO-ORIGINALES.md
+  tanda: 2
+  estado: pendiente
+- id: PJ-irene-ficha
+  archivo: personajes/irene_ficha.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-irene-alegre
+  archivo: personajes/irene_alegre.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-irene-molesta
+  archivo: personajes/irene_molesta.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-irene-ruborizada
+  archivo: personajes/irene_ruborizada.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-isolda-formal
+  archivo: personajes/isolda_formal.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/PROMPTS-ELENCO-ORIGINALES.md
+  tanda: 2
+  estado: pendiente
+- id: PJ-isolda-ficha
+  archivo: personajes/isolda_ficha.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-isolda-alegre
+  archivo: personajes/isolda_alegre.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-isolda-molesta
+  archivo: personajes/isolda_molesta.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-isolda-ruborizada
+  archivo: personajes/isolda_ruborizada.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-camila-formal
+  archivo: personajes/camila_formal.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/PROMPTS-ELENCO-ORIGINALES.md
+  tanda: 2
+  estado: pendiente
+- id: PJ-camila-ficha
+  archivo: personajes/camila_ficha.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-camila-alegre
+  archivo: personajes/camila_alegre.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-camila-molesta
+  archivo: personajes/camila_molesta.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-camila-ruborizada
+  archivo: personajes/camila_ruborizada.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: diseno/ENCARGOS-ELENCO-TANDA-2.md §6
+  tanda: 2
+  estado: pendiente
+- id: PJ-reina-neutral
+  archivo: personajes/reina_neutral.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: por escribir (tanda 3)
+  tanda: 3
+  estado: pendiente
+- id: PJ-reina-alegre
+  archivo: personajes/reina_alegre.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: por escribir (tanda 3)
+  tanda: 3
+  estado: pendiente
+- id: PJ-reina-seria
+  archivo: personajes/reina_seria.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: por escribir (tanda 3)
+  tanda: 3
+  estado: pendiente
+- id: UI-fondo-carta
+  archivo: ui/fondo_carta.png
+  px: 312x468
+  fondo: opaco
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md
+  tanda: 1
+  estado: pendiente
+- id: MAP-terreno
+  archivo: mapa/terreno.png
+  px: 2304x3456
+  fondo: opaco
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md (MAP-01)
+  tanda: 1
+  estado: pendiente
+- id: MAP-palacio
+  archivo: mapa/edificio_palacio.png
+  px: ~600x540
+  fondo: transparente
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md
+  tanda: 1
+  estado: pendiente
+- id: MAP-salon
+  archivo: mapa/edificio_salon.png
+  px: ~600x540
+  fondo: transparente
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md
+  tanda: 1
+  estado: pendiente
+- id: MAP-jardines
+  archivo: mapa/edificio_jardines.png
+  px: ~600x540
+  fondo: transparente
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md
+  tanda: 1
+  estado: pendiente
+- id: MAP-teatro
+  archivo: mapa/edificio_teatro.png
+  px: ~600x540
+  fondo: transparente
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md
+  tanda: 1
+  estado: pendiente
+- id: MAP-academia
+  archivo: mapa/edificio_academia.png
+  px: ~600x540
+  fondo: transparente
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md
+  tanda: 1
+  estado: pendiente
+- id: MAP-residencia
+  archivo: mapa/edificio_residencia.png
+  px: ~600x540
+  fondo: transparente
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md
+  tanda: 1
+  estado: pendiente
+- id: MAP-ambiente
+  archivo: mapa/ambiente.png
+  px: 2304x3456
+  fondo: transparente
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md
+  tanda: 1
+  estado: opcional
+- id: CARTA-grabado-corona
+  archivo: cartas/grabado_corona.png
+  px: 978x540
+  fondo: opaco
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md
+  tanda: 1
+  estado: pendiente
+- id: CARTA-grabado-lobreda
+  archivo: cartas/grabado_lobreda.png
+  px: 978x540
+  fondo: opaco
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md
+  tanda: 1
+  estado: pendiente
+- id: CARTA-grabado-veyra
+  archivo: cartas/grabado_veyra.png
+  px: 978x540
+  fondo: opaco
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md
+  tanda: 1
+  estado: pendiente
+- id: CARTA-grabado-mirave
+  archivo: cartas/grabado_mirave.png
+  px: 978x540
+  fondo: opaco
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md
+  tanda: 1
+  estado: pendiente
+- id: CARTA-grabado-serravalle
+  archivo: cartas/grabado_serravalle.png
+  px: 978x540
+  fondo: opaco
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md
+  tanda: 1
+  estado: pendiente
+- id: CARTA-grabado-rovena
+  archivo: cartas/grabado_rovena.png
+  px: 978x540
+  fondo: opaco
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md
+  tanda: 1
+  estado: pendiente
+- id: CARTA-grabado-calce
+  archivo: cartas/grabado_calce.png
+  px: 978x540
+  fondo: opaco
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md
+  tanda: 1
+  estado: pendiente
+- id: KEY-portada
+  archivo: portada/portada.png
+  px: 1290x2796
+  fondo: opaco
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md (KEY-01)
+  tanda: 1
+  estado: pendiente
+- id: CRON-cabecera
+  archivo: cartas/cabecera_cronica.png
+  px: 978x300
+  fondo: opaco
+  prompt: por escribir
+  tanda: 1
+  estado: pendiente
+- id: ORN-ramillete
+  archivo: ornamento/ramillete_esquina.png
+  px: 360x360
+  fondo: transparente
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md
+  tanda: 1
+  estado: pendiente
+- id: ORN-damasco
+  archivo: ornamento/damasco_mosaico.png
+  px: 512x512
+  fondo: opaco
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md
+  tanda: 1
+  estado: pendiente
+- id: ORN-papel
+  archivo: ornamento/papel_marfil_9.png
+  px: 288x288
+  fondo: opaco
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md
+  tanda: 1
+  estado: pendiente
+- id: ORN-guirnalda
+  archivo: ornamento/guirnalda_portada.png
+  px: 1080x400
+  fondo: transparente
+  prompt: diseno/PAQUETE-IMAGENES-TANDA-1.md
+  tanda: 1
+  estado: pendiente
+- id: CG-G01
+  archivo: escenas/cg_g01.png
+  px: 1536x1024 o 1024x1536
+  fondo: opaco
+  descripcion: Manos enguantadas que se rozan sobre una baranda
+  prompt: por escribir (tanda 4)
+  tanda: 4
+  estado: pendiente
+- id: CG-G02
+  archivo: escenas/cg_g02.png
+  px: 1536x1024 o 1024x1536
+  fondo: opaco
+  descripcion: Carta doblada que pasa de una mano a otra
+  prompt: por escribir (tanda 4)
+  tanda: 4
+  estado: pendiente
+- id: CG-G03
+  archivo: escenas/cg_g03.png
+  px: 1536x1024 o 1024x1536
+  fondo: opaco
+  descripcion: Dos siluetas a contraluz tras una cortina, balcón de noche
+  prompt: por escribir (tanda 4)
+  tanda: 4
+  estado: pendiente
+- id: CG-G04
+  archivo: escenas/cg_g04.png
+  px: 1536x1024 o 1024x1536
+  fondo: opaco
+  descripcion: Abanico abierto que oculta dos rostros
+  prompt: por escribir (tanda 4)
+  tanda: 4
+  estado: pendiente
+- id: CG-G05
+  archivo: escenas/cg_g05.png
+  px: 1536x1024 o 1024x1536
+  fondo: opaco
+  descripcion: Dos tazas de té y dos manos en una mesa pequeña
+  prompt: por escribir (tanda 4)
+  tanda: 4
+  estado: pendiente
+- id: CG-G06
+  archivo: escenas/cg_g06.png
+  px: 1536x1024 o 1024x1536
+  fondo: opaco
+  descripcion: Dos sombras en un pasillo con velas
+  prompt: por escribir (tanda 4)
+  tanda: 4
+  estado: pendiente
+- id: CG-P01
+  archivo: escenas/cg_beso_saul-dario.png
+  px: 1024x1536
+  fondo: opaco
+  descripcion: Beso saul-dario
+  prompt: por escribir (tanda 4, tras aprobar personajes)
+  tanda: 4
+  estado: pendiente
+- id: CG-P02
+  archivo: escenas/cg_beso_isolda-irene.png
+  px: 1024x1536
+  fondo: opaco
+  descripcion: Beso isolda-irene
+  prompt: por escribir (tanda 4, tras aprobar personajes)
+  tanda: 4
+  estado: pendiente
+- id: CG-P03
+  archivo: escenas/cg_beso_nilo-camila.png
+  px: 1024x1536
+  fondo: opaco
+  descripcion: Beso nilo-camila
+  prompt: por escribir (tanda 4, tras aprobar personajes)
+  tanda: 4
+  estado: pendiente
+- id: CG-P04
+  archivo: escenas/cg_beso_teo-celia.png
+  px: 1024x1536
+  fondo: opaco
+  descripcion: Beso teo-celia
+  prompt: por escribir (tanda 4, tras aprobar personajes)
+  tanda: 4
+  estado: pendiente
+- id: CG-P05
+  archivo: escenas/cg_beso_dario-celia.png
+  px: 1024x1536
+  fondo: opaco
+  descripcion: Beso dario-celia
+  prompt: por escribir (tanda 4, tras aprobar personajes)
+  tanda: 4
+  estado: pendiente
+- id: CG-P06
+  archivo: escenas/cg_beso_teo-irene.png
+  px: 1024x1536
+  fondo: opaco
+  descripcion: Beso teo-irene
+  prompt: por escribir (tanda 4, tras aprobar personajes)
+  tanda: 4
+  estado: pendiente
+- id: CG-P07
+  archivo: escenas/cg_acuerdo_saul-isolda.png
+  px: 1024x1536
+  fondo: opaco
+  descripcion: 'El acuerdo lavanda: dos copas que se chocan'
+  prompt: por escribir
+  tanda: 4
+  estado: pendiente
+- id: CG-B01
+  archivo: escenas/gran_baile.png
+  px: 1024x1536
+  fondo: opaco
+  descripcion: Salón entero en el último vals
+  prompt: por escribir
+  tanda: 4
+  estado: pendiente

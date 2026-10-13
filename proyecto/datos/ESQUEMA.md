@@ -28,6 +28,7 @@ texto: { es: "Lo he ensayado.", en: "I've rehearsed this." }
 | Variable | Valor |
 |---|---|
 | `{a}`, `{b}`, `{c}`, `{d}` | Nombre de pila de los asistentes, en el orden de las plazas |
+| `{mejor}` | En incidentes: el asistente con el valor más alto en la habilidad de la opción elegida (si hay empate, la primera plaza). En un desenlace, quien actuó en el incidente |
 | `{grupo}` | Los asistentes enlazados: «Saúl e Isolda» · «Saul and Isolda» |
 | `{amada}` | La persona amada (finales no correspondidos) |
 | `{dia}` | El número del día |
