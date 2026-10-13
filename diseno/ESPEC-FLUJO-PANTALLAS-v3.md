@@ -109,18 +109,20 @@ El ánimo **no** usa icono: lo cuenta la expresión del retrato (neutral, alegre
 
 ## 3. Componentes reutilizables
 
-### 3.1 Ficha de fecha (`ficha-fecha`)
+### 3.1 Ficha de fecha (`ficha-fecha`) — hoja de almanaque
 
-Se usa en cuatro lugares. Siempre igual: número grande, cabecera de color pequeña.
+Se usa en cuatro lugares y siempre tiene el mismo aspecto: **hoja de almanaque antiguo**, no calendario moderno. Papel marfil `#FCF8EF`, esquina casi recta (1 dp), filete exterior en tinta de 1 dp y filete interior de 0,5 dp a 2,5 dp de distancia, número grande en Cormorant Bold y sombra mínima. **Sin franja ni cabecera de color.**
+
+**Regla de fechas:** una ficha muestra siempre **un solo día, el de inicio**. Nunca rangos como «28–30». La duración se dice dentro de la hoja del evento («3 días · del 28 al 30»).
 
 | Variante | Tamaño | Dónde |
 |---|---|---|
 | Día de semana | 40 × 48 dp | Barra superior (los días de la semana en curso) |
-| Marcador | 36 × 36 dp (un día) / 52 × 36 dp (rango «28–30») | Junto al nombre del lugar en el mapa |
-| Encabezado de hoja | 48 × 56 dp | Hoja de evento, incidente, resultado |
-| Compromiso | Relleno flexible × 52 dp | Ficha de personaje (días ocupados con icono del evento) |
+| Marcador | 36 × 36 dp | Junto al nombre del lugar en el mapa (día de inicio) |
+| Encabezado de hoja | 48 × 56 dp, con etiqueta en versalitas arriba («OBLIG.», «AHORA») | Hoja de evento, incidente, resultado |
+| Compromiso | Relleno flexible × 52 dp | Ficha de personaje (día ocupado: filete `rosa-acción` e icono del evento) |
 
-Estados: **hoy** (cabecera `azul-profundo`, borde oro), **pasado** (50 % de opacidad), **con evento** (punto de color bajo el número), **ocupado** (fondo `rosa-acción`, número marfil, icono del evento).
+Estados: **hoy** (filetes en `oro`, el exterior de 1,8 dp), **pasado** (45 % de opacidad), **con evento** (punto `rosa-acción` bajo el número), **ocupado** (filete `rosa-acción` + icono), **incidente** (filete y etiqueta `frambuesa`).
 
 ### 3.2 Barra superior (`barra-semana`) — sustituye a la cartela «Día 27 / Otoño temprano»
 
@@ -148,7 +150,7 @@ Tocar un día del calendario **filtra el mapa**: sólo se ven los eventos de ese
 ```
         ( 🪭 )        ← sello 40 dp: icono del tipo de evento + estado
   ┌────┬───────────┐
-  │ 29 │ Recepción │   ← ficha-fecha 36 dp + nombre 15 dp, fondo marfil, borde oro
+  │ 29 │ Recepción │   ← ficha-fecha 36 dp (sólo día de inicio) + nombre 16 dp
   └────┴───────────┘
 ```
 
@@ -338,7 +340,7 @@ Debajo, dos bloques: **«Lo que se comenta»** (hechos públicos) y **«Sólo t�
 | v2 | v3 | Por qué |
 |---|---|---|
 | Cartela «Día 27 / 27 – 30 · Otoño temprano» | Barra con `S1/6`, cuatro fichas de día y contador ✉ | Tres textos que no ayudaban a decidir pasan a ser información accionable |
-| Número suelto bajo el nombre del lugar | Ficha de fecha a la izquierda del nombre | Se lee como calendario sin explicación |
+| Número suelto bajo el nombre del lugar; rangos «28–30» | Hoja de almanaque con el día de inicio a la izquierda del nombre; duración dentro de la hoja | Se lee como calendario antiguo y nunca se deforma con rangos |
 | Todos los sellos con la misma flor | Icono por tipo de evento + estado | El icono ahora dice algo |
 | Retratos 62 × 78 dp con cinta de texto | Tarjetas 104 × 156 dp, B/N cuando no están disponibles, emblema | Se valora el arte y el estado se ve sin leer |
 | Medallas de batería y caritas | Expresión del retrato | Se aprovechan las expresiones que ya se producen |
