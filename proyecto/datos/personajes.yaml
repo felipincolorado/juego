@@ -1,0 +1,137 @@
+# Elenco y recurrentes. Ver canon §3–4. «orientacion» es verdad de autor: nunca se muestra.
+elenco:
+  - id: nilo
+    nombre: { es: "Nilo Lobreda", en: "Nilo Lobreda" }
+    pila: "Nilo"
+    genero: m
+    edad: 26
+    casa: lobreda
+    color: "#3E6B4A"
+    habilidades: { baile: 2, estatus: 3, chisme: 2, presencia: 4, intelecto: 3 }
+    ejes: { libertad: 1, sinceridad: 2 }
+    gusta: paseo
+    no_gusta: cena
+    orientacion: hetero
+    linea: { es: "Te trata como a un amigo antes de saber tu nombre.", en: "Treats you like a friend before he knows your name." }
+  - id: saul
+    nombre: { es: "Saúl Veyra", en: "Saúl Veyra" }
+    pila: "Saúl"
+    genero: m
+    edad: 30
+    casa: veyra
+    color: "#4F6E8E"
+    habilidades: { baile: 3, estatus: 4, chisme: 1, presencia: 3, intelecto: 3 }
+    ejes: { libertad: -2, sinceridad: 1 }
+    gusta: recepcion
+    no_gusta: teatro
+    orientacion: gay
+    linea: { es: "Lo poco que deja ver vale mucho.", en: "What little he shows is worth a great deal." }
+  - id: dario
+    nombre: { es: "Dario Miravés", en: "Dario Miravés" }
+    pila: "Dario"
+    genero: m
+    edad: 27
+    casa: mirave
+    color: "#6B3A5C"
+    habilidades: { baile: 5, estatus: 2, chisme: 3, presencia: 3, intelecto: 1 }
+    ejes: { libertad: 0, sinceridad: -2 }
+    gusta: baile
+    no_gusta: paseo
+    orientacion: bi
+    linea: { es: "Cortesía perfecta con una puerta cerrada detrás.", en: "Perfect courtesy with a closed door behind it." }
+  - id: teo
+    nombre: { es: "Teo Rovena", en: "Teo Rovena" }
+    pila: "Teo"
+    genero: m
+    edad: 24
+    casa: rovena
+    color: "#B98A9E"
+    habilidades: { baile: 2, estatus: 2, chisme: 5, presencia: 2, intelecto: 3 }
+    ejes: { libertad: 1, sinceridad: -2 }
+    gusta: teatro
+    no_gusta: baile
+    orientacion: hetero
+    linea: { es: "Te hace reír y, de pronto, te mira en serio.", en: "Makes you laugh, then suddenly looks at you in earnest." }
+  - id: celia
+    nombre: { es: "Celia Lobreda", en: "Celia Lobreda" }
+    pila: "Celia"
+    genero: f
+    edad: 21
+    casa: lobreda
+    color: "#9DB59A"
+    habilidades: { baile: 5, estatus: 3, chisme: 1, presencia: 2, intelecto: 3 }
+    ejes: { libertad: -2, sinceridad: 1 }
+    gusta: clase
+    no_gusta: paseo
+    orientacion: hetero
+    linea: { es: "Disciplina convertida en gracia.", en: "Discipline turned into grace." }
+  - id: irene
+    nombre: { es: "Irene Salvat", en: "Irene Salvat" }
+    pila: "Irene"
+    genero: f
+    edad: 25
+    casa: archiveros
+    color: "#55687D"
+    habilidades: { baile: 1, estatus: 2, chisme: 3, presencia: 3, intelecto: 5 }
+    ejes: { libertad: -1, sinceridad: 2 }
+    gusta: cena
+    no_gusta: baile
+    orientacion: bi
+    linea: { es: "Cuando algo le interesa, nada más existe.", en: "When something interests her, nothing else exists." }
+  - id: isolda
+    nombre: { es: "Isolda Marén", en: "Isolda Marén" }
+    pila: "Isolda"
+    genero: f
+    edad: 26
+    casa: maren
+    color: "#4E9A8E"
+    habilidades: { baile: 3, estatus: 1, chisme: 2, presencia: 5, intelecto: 3 }
+    ejes: { libertad: 2, sinceridad: 1 }
+    gusta: paseo
+    no_gusta: recepcion
+    orientacion: lesbiana
+    linea: { es: "Una libertad que contagia.", en: "A freedom that's catching." }
+  - id: camila
+    nombre: { es: "Camila Ferrán", en: "Camila Ferrán" }
+    pila: "Camila"
+    genero: f
+    edad: 29
+    casa: ferran
+    color: "#A79BB8"
+    habilidades: { baile: 2, estatus: 4, chisme: 4, presencia: 2, intelecto: 2 }
+    ejes: { libertad: 1, sinceridad: -1 }
+    gusta: cena
+    no_gusta: clase
+    orientacion: hetero
+    tratamiento: { es: "señora Ferrán", en: "Mrs. Ferrán" }
+    linea: { es: "Juega la temporada con sus propias reglas.", en: "Plays the season by her own rules." }
+
+casas:
+  lobreda:    { es: "Casa Lobreda · Greda Alta", en: "House Lobreda · Greda Alta" }
+  veyra:      { es: "Casa Veyra · Tiria", en: "House Veyra · Tiria" }
+  mirave:     { es: "Casa Miravés · Puerto Nácar", en: "House Miravés · Port Nácar" }
+  rovena:     { es: "Casa Rovena · Lumbrevía", en: "House Rovena · Lumbrevía" }
+  archiveros: { es: "Familia Salvat · Calle de los Sellos", en: "The Salvats · Street of Seals" }
+  maren:      { es: "Aseguradores Marén · Puerto Nácar", en: "Marén Underwriters · Port Nácar" }
+  ferran:     { es: "Viuda de Ferrán", en: "Widow of the Ferrán house" }
+
+# Cercanía de partida (canon §3.3). Pares no listados empiezan en 0.
+cercania_inicial:
+  - [celia, camila, 2]
+  - [dario, isolda, 2]
+  - [nilo, celia, 2]
+  - [nilo, teo, 1]
+  - [nilo, saul, 1]
+  - [saul, dario, 1]
+  - [teo, camila, 1]
+  - [irene, isolda, 1]
+
+recurrentes:
+  - { id: reina,   nombre: { es: "La reina Maela", en: "Queen Maela" }, genero: f }
+  - { id: nota,    nombre: { es: "Nota", en: "Note" }, genero: f, sin_retrato: true }
+  - { id: mara,    nombre: { es: "Mara Calce", en: "Mara Calce" }, genero: f }
+  - { id: leonora, nombre: { es: "Leonora Serravalle", en: "Leonora Serravalle" }, genero: f }
+  - { id: ines,    nombre: { es: "Inés", en: "Inés" }, genero: f }
+  - { id: mireya,  nombre: { es: "Mireya", en: "Mireya" }, genero: f }
+  - { id: bruna,   nombre: { es: "Bruna", en: "Bruna" }, genero: f }
+  - { id: amalia,  nombre: { es: "Amalia Miravés", en: "Amalia Miravés" }, genero: f }
