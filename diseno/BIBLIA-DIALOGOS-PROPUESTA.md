@@ -3,7 +3,7 @@
 **14 de octubre de 2026 · PROPUESTA EDITORIAL. ES primero; EN pendiente con las mismas claves.**
 Depende de: [elenco](<ELENCO-TEMPORADA-PROPUESTA.md>), [narrativa](<NARRATIVA-TEMPORADA-PROPUESTA.md>), [relaciones y uniones](<RELACIONES-Y-UNIONES-PROPUESTA.md>) y [voces](<VOCES-ELENCO-PROPUESTA.md>). Los textos son muestras de tono y estructura para revisar antes de producir el resto.
 
-**Supuestos que hay que confirmar (ver §9):** la jugadora es «la casamentera» (femenino, sin nombre propio por ahora); la reina la trata de **vos**; la secretaria se llama provisionalmente **Aurelia Pons** y la trata de **señora**.
+**Decisiones del usuario (14 oct.):** la jugadora es «la casamentera», sin nombre, retrato ni rasgos. Registro moderno al estilo de Bridgerton: «usted» en sociedad y «tú» en confianza («ustedes» en plural, sin «vos» ni «vosotros»). La guía del tutorial son **notas manuscritas** de una asistente que nunca se ve (propuesta, ver [sistema de eventos](<SISTEMA-EVENTOS-Y-ESCENAS-PROPUESTA.md>) §7). Romance con beso como máximo.
 
 ---
 
@@ -24,75 +24,75 @@ Depende de: [elenco](<ELENCO-TEMPORADA-PROPUESTA.md>), [narrativa](<NARRATIVA-TE
 | 0:00 | Portada | Que esto es un juego de época | — |
 | 0:20 | Apertura (mapa atenuado, busto de la reina) | El encargo y el plazo | La reina |
 | 1:00 | **Reparto de cartas** | A su gente: ocho cartas que se reparten una por una | Cada personaje, una frase |
-| 2:30 | Mapa en planificación | Que la ciudad es la pantalla | Aurelia |
-| 3:00 | Sobre de la Recepción de apertura | Abrir una invitación | Aurelia |
-| 3:30 | Carta completa (opcional) | Que la carta se lee si se quiere | Aurelia |
-| 4:00 | Hoja de evento y asignación | Elegir a dos, comparar con el radar | Aurelia |
-| 5:00 | Ficha de un personaje | Que cada persona tiene algo que descubrir | Aurelia + personaje |
+| 2:30 | Mapa en planificación | Que la ciudad es la pantalla | Nota |
+| 3:00 | Sobre de la Recepción de apertura | Abrir una invitación | Nota |
+| 3:30 | Carta completa (opcional) | Que la carta se lee si se quiere | Nota |
+| 4:00 | Hoja de evento y asignación | Elegir a dos, comparar con el radar | Nota |
+| 5:00 | Ficha de un personaje | Que cada persona tiene algo que descubrir | Nota + personaje |
 | 5:45 | Segunda invitación, sin ayuda | Repetir solo | — |
-| 6:30 | Comenzar semana | Que el tiempo corre | Aurelia |
-| 7:00 | Semana en marcha + incidente guiado | Viajes, aros y decidir en un incidente | Aurelia + implicados |
+| 6:30 | Comenzar semana | Que el tiempo corre | Nota |
+| 7:00 | Semana en marcha + incidente guiado | Viajes, aros y decidir en un incidente | Nota + implicados |
 | 8:30 | Resultado | Que hay consecuencias públicas y privadas | El personaje |
-| 9:15 | Crónica de salones (mini) | El cierre semanal | Aurelia |
+| 9:15 | Crónica de salones (mini) | El cierre semanal | Nota |
 | 9:45 | Sobre sin firma en la residencia | El gancho | — |
 
 ### 2.1 Apertura — la reina
 
-> **Reina:** Se abre la Temporada del Sello. Ocho jóvenes de Valcenda quedan bajo vuestra tutela.
+> **Reina:** Se abre la Temporada del Sello. Ocho jóvenes de Valcenda quedan bajo su tutela.
 >
-> **Reina:** Al terminar, sellaré en el Archivo las uniones que hayáis sabido conducir. Elegid bien: lo sellado no se despega.
+> **Reina:** Al terminar, sellaré en el Archivo las uniones que haya sabido conducir. Elija bien: lo sellado no se despega.
 >
-> **Reina:** Valcenda os mirará a vos tanto como a ellos. Que hable con envidia, no con burla.
+> **Reina:** Valcenda la mirará a usted tanto como a ellos. Que hable con envidia, no con burla.
 
 ### 2.2 Reparto de cartas — presentación del elenco
 
-Las cartas caen una a una sobre el borde inferior. Al tocar cada una, el personaje dice su frase de presentación. Aurelia comenta en una línea (opcional, se puede saltar).
+Las cartas caen una a una sobre el borde inferior. Al tocar cada una, el personaje dice su frase de presentación. Una nota manuscrita añade una línea (opcional, se puede saltar).
 
-| Carta | Presentación del personaje | Comentario de Aurelia |
+| Carta | Presentación del personaje | Nota de la asistente |
 |---|---|---|
 | Nilo | «¿Ocho? Mejor. Así nadie se aburre. ¿En qué puedo ayudar?» | «El Lobreda que no quiere serlo. Promete rápido.» |
 | Saúl | «Saúl Veyra. Estaré donde se me necesite, a la hora que se me diga.» | «Puntual como un reloj. Igual de difícil de abrir.» |
 | Dario | «Encantado. De verdad. Bueno… casi siempre lo estoy.» | «Un Miravés. Sonríe mucho y cuenta poco.» |
-| Teo | «Si me buscáis pareja, que se ría de mis chistes. Es mi única exigencia.» | «Hará reír a toda la ciudad. Menos a quien le importa.» |
+| Teo | «Si me busca pareja, que se ría de mis chistes. Es mi única exigencia.» | «Hará reír a toda la ciudad. Menos a quien le importa.» |
 | Celia | «Lo he preparado todo. Bueno, casi todo. ¿Qué falta?» | «La prima de Nilo. Ensaya hasta los saludos.» |
-| Irene | «¿Por qué yo? No me malinterpretéis: lo pregunto de verdad.» | «Viene del Archivo. Lo nota todo.» |
-| Isolda | «Os aviso desde ya: no pienso cambiarme el pelo.» | «Velaria, de Puerto Nácar. No pide permiso.» |
+| Irene | «¿Por qué yo? No me malinterprete: lo pregunto de verdad.» | «Viene del Archivo. Lo nota todo.» |
+| Isolda | «Le aviso desde ya: no pienso cambiarme el pelo.» | «Velaria, de Puerto Nácar. No pide permiso.» |
 | Camila | «Ya hice esto una vez, querida. Esta vez elijo yo.» | «La viuda Ferrán. Y la carabina de Celia, para su desgracia.» |
 
-### 2.3 Mapa y primera invitación — Aurelia
+### 2.3 Mapa y primera invitación — notas de la asistente
 
-> **Aurelia:** Señora, esta es Valcenda. Cada sobre es una invitación. Tocad el del palacio.
+> **Nota:** Esta es Valcenda. Cada sobre es una invitación. Toque el del palacio.
 >
 > *(Hoja de evento abierta)*
-> **Aurelia:** La recepción de apertura. Piden dos invitados con buen apellido y soltura en la conversación.
+> **Nota:** La recepción de apertura. Piden dos invitados con buen apellido y soltura en la conversación.
 >
-> **Aurelia:** Tocad dos retratos de abajo. El dibujo de cinco puntas compara lo que piden con lo que llevan.
+> **Nota:** Toque dos retratos de abajo. El dibujo de cinco puntas compara lo que piden con lo que llevan.
 >
 > *(Con dos asignados)*
-> **Aurelia:** Bien. El sello confirma la respuesta. Podéis cambiar de idea hasta que empiece la semana.
+> **Nota:** Bien. El sello confirma la respuesta. Puede cambiar de idea hasta que empiece la semana.
 
 **Ficha (minuto 5):**
-> **Aurelia:** Tocad a cualquiera de ellos sin invitación abierta y veréis lo que sabemos.
-> **Aurelia:** Por ahora, poco. Cada salón os contará algo más.
+> **Nota:** Toque a cualquiera sin una invitación abierta y verá lo que sabemos de cada uno.
+> **Nota:** Por ahora, poco. Cada salón le contará algo más.
 
 **Comenzar semana (minuto 6:30):**
-> **Aurelia:** Cuando las invitaciones importantes tengan respuesta, el sello de arriba se enciende. Entonces, que empiece la semana.
+> **Nota:** Cuando las invitaciones importantes tengan respuesta, el sello de arriba se enciende. Entonces, que empiece la semana.
 
 ### 2.4 Incidente guiado (minuto 7)
 
-> **Aurelia:** Un aro rojo: algo pasa en la recepción. El tiempo se detiene hasta que decidáis.
+> **Nota:** Un aro rojo: algo pasa en la recepción. El tiempo se detiene hasta que usted decida.
 >
 > *(Hoja de incidente: por ejemplo, Teo y Celia en la recepción)*
 > **Celia:** No, no, no. Esto no estaba en lo que ensayé.
 >
-> **Aurelia:** Cada respuesta usa una habilidad. Elegid la que mejor tengan quienes están allí.
+> **Nota:** Cada respuesta usa una habilidad. Elija la que mejor dominen quienes están allí.
 
 ### 2.5 Cierre y gancho (minutos 9:15–10)
 
-> **Aurelia:** La Crónica de salones. Lo que Valcenda comenta de vuestra semana. Lo que no sale aquí, sólo lo sabéis vos.
+> **Nota:** La Crónica de salones: lo que Valcenda comenta de su semana. Lo que no sale aquí, sólo lo sabe usted.
 >
 > *(Los invitados se van. Un sobre sin firma bajo la puerta de la residencia.)*
-> **Aurelia:** …Señora. Esto no lo ha traído ningún criado.
+> **Nota (escrita deprisa):** Esto no lo ha traído ningún criado.
 
 ---
 
@@ -170,7 +170,7 @@ La propuesta ocurre en la **semana 6, durante el Gran Baile**, si la pareja lleg
 
 > **Isolda:** Hablemos claro, que a los dos se nos da mal fingir en privado.
 >
-> **Saúl:** Un acuerdo. Vuestro apellido en mi casa, el mío en vuestros contratos.
+> **Saúl:** Un acuerdo. Su apellido en mi casa, el mío en sus contratos.
 >
 > **Isolda:** Y cada uno con su vida. Con su… compañía.
 >
@@ -186,13 +186,13 @@ La propuesta ocurre en la **semana 6, durante el Gran Baile**, si la pareja lleg
 
 > **Saúl:** Las familias están de acuerdo. El paso quedará en paz.
 >
-> **Celia:** ¿Y vos? ¿Estáis de acuerdo?
+> **Celia:** ¿Y usted? ¿Está de acuerdo?
 >
 > **Saúl:** Cumpliré con todo lo que se espera de mí.
 >
-> **Celia:** No os he preguntado eso.
+> **Celia:** No le he preguntado eso.
 >
-> **Saúl:** *(pausa larga)* Es todo lo que puedo ofreceros, Celia.
+> **Saúl:** *(pausa larga)* Es todo lo que puedo ofrecerle, Celia.
 >
 > **Celia:** …Entonces lo aceptaré. Ya aprenderé a que me baste.
 
@@ -220,11 +220,11 @@ Cuando alguien se enamora de quien no puede corresponderle, la historia lo trata
 
 > *(Patio de la residencia, de noche. Semana 5.)*
 >
-> **Saúl:** Me ordenan volver a Tiria. Antes de irme, debo deciros algo, y no sé decirlo.
+> **Saúl:** Me ordenan volver a Tiria. Antes de irme, tengo que decirte algo, y no sé cómo.
 >
 > **Nilo:** Pues dilo mal. Yo lo entiendo igual.
 >
-> **Saúl:** Desde aquella tormenta, no he dejado de… Cuando estáis en una sala, sé dónde estáis sin mirar.
+> **Saúl:** Desde aquella tormenta, no he dejado de… Cuando estás en una sala, sé dónde estás sin mirar.
 >
 > **Nilo:** *(silencio)* Saúl…
 >
@@ -232,7 +232,7 @@ Cuando alguien se enamora de quien no puede corresponderle, la historia lo trata
 >
 > **Nilo:** Te debo la honestidad. No siento lo mismo. Pero no me pidas que deje de ser tu amigo.
 >
-> **Saúl:** *(se pone los guantes)* No os lo pediría nunca.
+> **Saúl:** *(se pone los guantes)* No te lo pediría nunca.
 
 ---
 
@@ -249,7 +249,7 @@ Por indicación del usuario, cada persona tiene dos finales si no forma unión: 
 | **Celia** | Abrió una academia de baile para debutantes. Les enseñaba los pasos perfectos y, el último día, les pedía que los olvidaran. | Siguió bailando cada temporada, impecable. Sólo ella sabía qué compás esperaba todavía cuando {amada} entraba en un salón. |
 | **Irene** | Llegó a custodia mayor del Archivo. Sabía los secretos de media ciudad y no usó ninguno. Algunos dicen que esa fue su manera de querer. | Ordenó durante años los papeles de la casa de {amada} con un cuidado que nadie entendía. Nunca se equivocó en una sola fecha. |
 | **Isolda** | Se hizo cargo de la aseguradora familiar y la llevó a Valcenda. Los salones que antes la miraban ahora le piden crédito. No ha cambiado de peinado. | Volvió a Puerto Nácar y se quedó mirando el mar un invierno entero. En primavera abrió los salones de su familia a todos los que, como ella, llegaban sin permiso. |
-| **Camila** | Rechazó tres propuestas más y se compró una casa junto al río. Organiza las cenas más deseadas de Valcenda y nunca invita a quien la aburre. | Siguió de carabina de otras debutantes. A cada una le dio el mismo consejo: «No esperéis a que os sorprendan». Ella había esperado demasiado a {amada}. |
+| **Camila** | Rechazó tres propuestas más y se compró una casa junto al río. Organiza las cenas más deseadas de Valcenda y nunca invita a quien la aburre. | Siguió de carabina de otras debutantes. A cada una le dio el mismo consejo: «No esperen a que las sorprendan». Ella había esperado demasiado a {amada}. |
 
 Total: **16 párrafos** (sustituyen a «feliz/amarga» del documento de relaciones; el recuento total de epílogos se mantiene en 67).
 
@@ -271,17 +271,15 @@ Los 60 cierres restantes siguen estas plantillas, con detalles propios de cada p
 
 ---
 
-## 9. Dudas que necesito aclarar
+## 9. Decisiones del usuario (14 oct.) y pendientes
 
-1. **¿La jugadora tiene nombre y género fijos?** Propuesta: «la casamentera», femenino, sin nombre ni retrato (el jugador se proyecta en ella).
-2. **¿La secretaria guía se llama Aurelia Pons**, o prefieres otro nombre u oficio (dama de compañía, mayordomo)?
-3. **¿Tratamiento de vos** para la reina y los personajes con la casamentera, o un registro más moderno?
-4. **¿Hasta dónde llega el romance en pantalla?** Propuesta: declaraciones, roces de manos y un beso en el epílogo; nada explícito.
-5. **¿Las propuestas sólo en el Gran Baile**, o pueden adelantarse (por ejemplo, una unión desigual empujada por las familias en la semana 5)?
-6. **¿Entradas de ficha con los hechos de la partida?** Propuesta: las seis fijas más una línea automática por evento importante («Semana 3: bailó con Dario en la Noche de los Faroles»).
+**Resuelto:** casamentera sin nombre ni retrato · registro moderno usted/tú al estilo de Bridgerton · beso como máximo · historial de la ficha opcional y no invasivo · eventos de 2–4 plazas con reglas distintas (ver [sistema de eventos](<SISTEMA-EVENTOS-Y-ESCENAS-PROPUESTA.md>)).
 
----
+**Pendiente:**
+1. ¿La guía como **notas manuscritas** sin personaje visible?
+2. ¿Las propuestas sólo en el Gran Baile, o una unión desigual puede adelantarse por presión familiar en la semana 5?
+3. Revisar el trato de Bridgerton en algunos episodios (doblaje latino e inglés) antes de producir todos los textos.
 
 ## English summary
 
-Proposal (Spanish samples; English to follow with the same keys). Direction rules: play before explaining, three lines maximum per beat, introduce each character through an action, signals never labels, endings told through concrete future facts. A minute-by-minute ten-minute tutorial script (queen's opening, the card deal introducing all eight cast members with one line each and a one-line comment from the guide, guided invitation, profile, start of week, guided incident, result, mini Chronicle and the unsigned-letter hook). Profiles grow through six fixed unlockable entries per character (48 total). Bond scenes follow curiosity, trust, romantic threshold and proposal; the threshold scene has a five-beat structure with a Teo–Celia sample. Proposal dialogues are written for each union type (mutual, lavender, uneven, companionship), plus a dignified unrequited-love confession (Saúl to Nilo). Every character gets two solo endings (never fell in love; unrequited love with an `{amada}` variable): 16 paragraphs. Pair-closing samples cover every epilogue type. Open questions: player name and gender, the guide's identity, forms of address, how far romance is shown, timing of proposals, and automatic profile lines from play events.
+Proposal (Spanish samples; English to follow with the same keys). Direction rules: play before explaining, three lines maximum per beat, introduce each character through an action, signals never labels, endings told through concrete future facts. A minute-by-minute ten-minute tutorial script (queen's opening, the card deal introducing all eight cast members with one line each and a one-line comment from the guide, guided invitation, profile, start of week, guided incident, result, mini Chronicle and the unsigned-letter hook). Profiles grow through six fixed unlockable entries per character (48 total). Bond scenes follow curiosity, trust, romantic threshold and proposal; the threshold scene has a five-beat structure with a Teo–Celia sample. Proposal dialogues are written for each union type (mutual, lavender, uneven, companionship), plus a dignified unrequited-love confession (Saúl to Nilo). Every character gets two solo endings (never fell in love; unrequited love with an `{amada}` variable): 16 paragraphs. Pair-closing samples cover every epilogue type. Resolved: nameless matchmaker, modern usted/tú register, kiss as the limit, optional event history. Pending: portrait-less guide notes, proposal timing, checking Bridgerton's forms of address.

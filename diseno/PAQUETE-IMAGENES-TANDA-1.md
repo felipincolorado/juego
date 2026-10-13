@@ -37,11 +37,12 @@ Estas cartas usan los recortes de la ilustración maestra (regla de encuadre pro
 | **1** | Papel marfil (textura) | 1 | **Este documento** |
 | **1** | Portada (ilustración sin texto) | 1 | **Este documento** |
 | 2 | Elenco social: 8 personas × 5 (original formal amplio del que se recorta la carta · pose de ficha editada desde ese original · 3 expresiones desde el original) | 40 | Propuesta de reparto en [ELENCO-TEMPORADA-PROPUESTA.md](<ELENCO-TEMPORADA-PROPUESTA.md>); pendiente de aprobación |
-| 2 | Reina (base + 2) y guía/secretaria (base + 3) | 7 | Bloqueado: faltan fichas |
+| 2 | Reina (base + 2). La guía del tutorial pasa a ser notas manuscritas sin retrato (propuesta) | 3 | Bloqueado: falta ficha de la reina |
 | 3 | Grabados de cabecera de carta (6 casas + Corona) | 7 | Tras tanda 1 |
 | 3 | Fondo de carta por casa (lavado pintado) | 6 | Puede hacerse en motor; generar sólo si no convence |
 | 3 | Cabecera de la Crónica | 1 | Tras tanda 1 |
 | 3 | Pétalos sueltos (partículas, 4 formas) | 1 hoja | Tras tanda 1 |
+| 4 | Escenas (CG): 6 genéricas sin rostros (manos, siluetas, abanico, cartas) + 6 besos de parejas prioritarias + acuerdo lavanda + fondo del Gran Baile | 14 | Tras aprobar el elenco; ver [sistema de eventos](<SISTEMA-EVENTOS-Y-ESCENAS-PROPUESTA.md>) §5 |
 | Opcional | Balaustrada inferior | 1 | Sólo si se elige la opción B |
 
 **No se generan:** iconos, sellos, radar, rutas, aros, textos, fichas de almanaque, marcos simples. Son vectores o motor.
