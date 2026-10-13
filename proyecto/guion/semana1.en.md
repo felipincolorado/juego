@@ -7,7 +7,7 @@
 
 > “Bring opinions, not curtsies.” Readings, wine and presses still warm.
 
-Requisito: intelecto 3, chisme 3, presencia 2
+Requisito: intelecto 5, chisme 4, presencia 4
 - \+ The Salon Chronicle is born here: whoever shines will be in it
 - − Mara asks a great deal, and writes it all down
 
@@ -21,15 +21,15 @@ Every autumn I open the printing house one night before the noise begins. We rea
 
 **Incidente (día 27)** · Mara hands out paper and ink: she wants every guest to write down who will be “the match of the season”. She means to print it.
 
-- **Give her a harmless, entertaining rumour** (chisme, d 3)
+- **Give her a harmless, entertaining rumour** (chisme, d 4)
   - Éxito: {mejor} hands her a rumour as delicious as it is false. Mara is delighted and stops asking.
   - A medias: The rumour half works: Mara notes it down, but keeps her eyes on {grupo}.
   - Fallo: The rumour was a little too true. Someone in the room goes pale.
-- **Start a debate on whether the Chronicle should exist at all** (intelecto, d 4)
+- **Start a debate on whether the Chronicle should exist at all** (intelecto, d 5)
   - Éxito: The whole room argues about freedom of the press. Nobody remembers the matches again.
   - A medias: The debate holds them for a while, until Mara reclaims her question with a smile.
   - Fallo: The argument tangles itself up. Mara sums it up in one line that makes {mejor} look foolish.
-- **Decline charmingly, so it sounds like a compliment** (presencia, d 4)
+- **Decline charmingly, so it sounds like a compliment** (presencia, d 5)
   - Éxito: “It would be unfair to spoil the ending for you, Mara.” She laughs; she likes being refused well.
   - A medias: The refusal is gracious, but it sounds as if there's something to hide.
   - Fallo: The refusal comes out curt. Mara writes something in her notebook and doesn't show it.
@@ -48,12 +48,12 @@ Every autumn I open the printing house one night before the noise begins. We rea
 - publico: At the Calce Printing House, a remark from {mejor} left the room silent. Mara promises details.
 - privado: Best not to give Mara more material this season. She has a long memory, and a press.
 
-## An early-autumn stroll · día 28 · jardines
+## An early-autumn stroll · día 27 · jardines
 *paseo · plazas 2–4 · cualquiera*
 
 > Asters in bloom, the river close by, and half of Valcenda pretending to stroll by chance.
 
-Requisito: presencia 3, chisme 2
+Requisito: presencia 4, chisme 3, estatus 3
 - \+ Leonora introduces her guests to everyone who passes
 - − If it rains, every hem will tell the tale
 
@@ -61,7 +61,7 @@ Requisito: presencia 3, chisme 2
 
 *Dear Matchmaker,*
 
-My gardens reach their finest week just as the season begins; I suspect the asters want to be seen as well. On Friday I'll open the river walks to anyone who knows how to stroll slowly and watch everyone else without being caught at it. Bring whoever wishes to be seen.
+My gardens reach their finest week just as the season begins; I suspect the asters want to be seen as well. On Thursday afternoon I'll open the river walks to anyone who knows how to stroll slowly and watch everyone else without being caught at it. Bring whoever wishes to be seen.
 
 *Leonora Serravalle*
 
@@ -73,7 +73,7 @@ My gardens reach their finest week just as the season begins; I suspect the aste
 
 **Desenlace · medias** — An uneventful stroll
 - publico: {grupo} strolled through the Serravalle Gardens. The weather was lovely, and that was the main news.
-- privado: No one was bored. No one dazzled. A Friday.
+- privado: No one was bored. No one dazzled. A Thursday.
   - si `asiste(celia)`: Celia came back with mud on her hem and didn't speak the whole way home.
 
 **Desenlace · desaire** — Mud and glances
@@ -85,7 +85,7 @@ My gardens reach their finest week just as the season begins; I suspect the aste
 
 > All eight will be presented to the Queen. One couple will open the first dance.
 
-Requisito: estatus 4, presencia 4, baile 3
+Requisito: estatus 4, presencia 4, baile 4
 - \+ The whole season watches tonight: whatever happens here will be remembered
 - − The master of ceremonies is new, and nervous
 
@@ -107,7 +107,7 @@ Her Majesty will receive your eight young people on Saturday, at lamp-lighting, 
   - Éxito: A correction both kind and firm. The Queen nods: she likes names said properly.
   - A medias: The correction is fair, but it sounds like a rebuke. The master of ceremonies turns red.
   - Fallo: No one hears the correction. Now it looks as if they're arguing in the middle of the hall.
-- **Start dancing and let the music cover the error** (baile, d 3)
+- **Start dancing and let the music cover the error** (baile, d 4)
   - Éxito: A glance at the orchestra and the waltz begins. By the third turn, nobody remembers the announcement.
   - A medias: The waltz starts a little out of step, then finds itself halfway through.
   - Fallo: The orchestra wasn't ready. The first bar sounds like a door slammed badly.

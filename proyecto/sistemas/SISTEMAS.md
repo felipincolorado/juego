@@ -67,10 +67,10 @@ grupo[h] = máximo(valor[h] de los asistentes)
 
 ```
 cobertura = Σ_h mínimo(grupo[h], requisito[h]) / Σ_h requisito[h]     (de 0 a 1)
-base = +2 si cobertura = 1
-       +1 si cobertura ≥ 0,75
-        0 si cobertura ≥ 0,5
-       −1 si es menor
+base = +1 si cobertura = 1
+        0 si cobertura ≥ 0,8
+       −1 si cobertura ≥ 0,6
+       −2 si es menor
 ```
 
 ### 3.3 Ánimo
@@ -90,14 +90,20 @@ Se suma y se divide entre el número de asistentes. Se redondea **hacia cero** a
   - **A medias:** `grupo[h] = d − 1` → 0.
   - **Fallo:** `grupo[h] ≤ d − 2` → −1.
 - Cada opción muestra su habilidad. La interfaz **no muestra la dificultad**, pero el pentágono permite intuirla.
+- **Cada opción tiene además una consecuencia propia**, que se aplica con cualquier resultado: `cercania_asistentes`, `efectos` (marcas que vuelven más tarde), `reputacion_si_exito`. La consecuencia se insinúa con una línea breve (`pista_coste`) bajo la opción.
+- Así **la decisión no es sólo «la habilidad más alta»**, sino qué precio se acepta.
+
+**Balance medido** con `herramientas/simular_eventos.py`: probando todas las combinaciones de asistentes, con la mejor opción el desenlace favorable debe quedar entre el 50 y el 85 %.
+- Las parejas deben tenerlo más difícil que los grupos de 3 o 4, porque los grupos gastan más gente de la semana.
+- Los eventos sin incidente sólo pueden salir favorables si el grupo cubre todo lo que se pide.
 
 ### 3.5 Desenlace
 
 ```
 total = base + ánimo + incidente
-favorable  si total ≥ 2   → sello oro, «Velada lograda»
-a medias   si total = 0 o 1 → sello glicinia, «A medias»
-desaire    si total ≤ −1  → sello tinta, «Un desaire»
+favorable  si total ≥ 1        → sello oro, «Velada lograda»
+a medias   si total = 0 o −1  → sello glicinia, «A medias»
+desaire    si total ≤ −2       → sello tinta, «Un desaire»
 ```
 
 | Desenlace | Reputación (evento obligatorio) | Reputación (evento opcional) | Cercanía | Ánimo |

@@ -1,0 +1,34 @@
+{
+ "chispas": [
+  {
+   "es": "{a} buscó a {b} con la mirada dos veces durante la velada. La segunda, {b} se dio cuenta.",
+   "en": "{a} looked for {b} across the room twice that evening. The second time, {b} noticed."
+  },
+  {
+   "es": "Al despedirse, {a} tardó un poco más de lo necesario en soltar la mano de {b}.",
+   "en": "When they said goodbye, {a} took a little longer than necessary to let go of {b}'s hand."
+  },
+  {
+   "es": "{a} se rió de algo que dijo {b}. No era tan gracioso. {a} lo sabía.",
+   "en": "{a} laughed at something {b} said. It wasn't that funny. {a} knew it."
+  },
+  {
+   "es": "{a} preguntó, como de pasada, a qué otras invitaciones irá {b} esta temporada.",
+   "en": "{a} asked, as if in passing, which other invitations {b} will be attending this season."
+  },
+  {
+   "es": "{b} habló casi toda la noche. {a} no interrumpió ni una vez, y eso en {a} es raro.",
+   "en": "{b} talked for most of the night. {a} didn't interrupt once, which for {a} is rare."
+  }
+ ],
+ "roces": [
+  {
+   "es": "{a} y {b} no se pusieron de acuerdo ni sobre el vino. Los dos parecían disfrutarlo.",
+   "en": "{a} and {b} couldn't agree even on the wine. Both seemed to enjoy it."
+  },
+  {
+   "es": "{a} corrigió a {b} en público. {b} sonrió de una manera que no auguraba nada bueno.",
+   "en": "{a} corrected {b} in public. {b} smiled in a way that promised nothing good."
+  }
+ ]
+}

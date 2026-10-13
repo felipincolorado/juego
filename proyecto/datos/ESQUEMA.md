@@ -176,3 +176,6 @@ Las claves usan puntos: `hoja.boton.carta`, `ajustes.idioma`. El motor resuelve 
 | `objeto_guardado` | En un paso del tutorial | Guarda ese objeto al terminar el paso |
 
 **Orden de las plazas en `dama_caballero`:** la plaza `a` es el caballero y la `b` es la dama.
+| `consecuencia: {cercania_asistentes, efectos, reputacion_si_exito}` | En una opción de incidente | Precio o premio de esa opción, se aplica con cualquier resultado |
+| `pista_coste: {es, en}` | En una opción de incidente | Línea breve bajo la opción que insinúa su consecuencia |
+| `chispa(a, b)` | Condiciones | Asistieron juntos esta semana y al menos uno puede sentir atracción por el otro (verdad de autor). Nunca se muestra como etiqueta |

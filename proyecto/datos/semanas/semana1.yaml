@@ -45,7 +45,7 @@ eventos:
     plazas: { min: 2, max: 3 }
     regla: cualquiera
     obligatorio: false
-    requisito: { intelecto: 3, chisme: 3, presencia: 2 }
+    requisito: { intelecto: 5, chisme: 4, presencia: 4 }
     anfitrion: { es: "Mara Calce, editora", en: "Mara Calce, publisher" }
     titulo: { es: "Velada de lectura", en: "An evening of readings" }
     resumen:
@@ -76,7 +76,9 @@ eventos:
       opciones:
         - id: rumor
           habilidad: chisme
-          d: 3
+          d: 4
+          consecuencia: { efectos: [rumor_en_la_cronica] }   # el rumor inventado reaparece en la Crónica nº 2
+          pista_coste: { es: "Mara lo publicará", en: "Mara will print it" }
           texto: { es: "Darle un rumor inofensivo y entretenido", en: "Give her a harmless, entertaining rumour" }
           exito:
             es: "{mejor} le sirve un rumor tan bueno como falso. Mara lo celebra y deja de preguntar."
@@ -89,7 +91,9 @@ eventos:
             en: "The rumour was a little too true. Someone in the room goes pale."
         - id: debate
           habilidad: intelecto
-          d: 4
+          d: 5
+          consecuencia: { cercania_asistentes: 1 }           # discutir juntos une
+          pista_coste: { es: "Une a quienes discuten", en: "Brings the debaters together" }
           texto: { es: "Abrir un debate sobre si la Crónica debería existir", en: "Start a debate on whether the Chronicle should exist at all" }
           exito:
             es: "La sala entera discute sobre la libertad de imprenta. Nadie vuelve a acordarse de las parejas."
@@ -102,7 +106,9 @@ eventos:
             en: "The argument tangles itself up. Mara sums it up in one line that makes {mejor} look foolish."
         - id: negarse
           habilidad: presencia
-          d: 4
+          d: 5
+          consecuencia: { efectos: [mara_respeta_casamentera] } # Mara la tratará mejor en la semana 2
+          pista_coste: { es: "Mara se queda sin historia", en: "Mara gets no story" }
           texto: { es: "Negarse con encanto, y que suene a cumplido", en: "Decline charmingly, so it sounds like a compliment" }
           exito:
             es: "«Sería injusto adelantarle el final, Mara.» Ella se ríe: le ha gustado que no se lo den."
@@ -149,16 +155,16 @@ eventos:
           es: "Conviene no darle a Mara más motivos esta temporada. Tiene buena memoria y una prensa."
           en: "Best not to give Mara more material this season. She has a long memory, and a press."
 
-  # ── Viernes 28 · Paseo por los Jardines Serravalle (opcional, sin incidente) ──
+  # ── Jueves 27 · Paseo por los Jardines Serravalle (opcional, sin incidente; SIMULTÁNEO con la lectura) ──
   - id: s1_paseo
     tipo: paseo
     lugar: jardines
-    dia: 28
+    dia: 27
     duracion: 1
     plazas: { min: 2, max: 4 }
     regla: cualquiera
     obligatorio: false
-    requisito: { presencia: 3, chisme: 2 }
+    requisito: { presencia: 4, chisme: 3, estatus: 3 }
     anfitrion: { es: "Leonora Serravalle", en: "Leonora Serravalle" }
     titulo: { es: "Paseo de primer otoño", en: "An early-autumn stroll" }
     resumen:
@@ -173,11 +179,11 @@ eventos:
       cuerpo:
         es: >
           Mis jardines llegan a su mejor semana justo cuando empieza la temporada; sospecho que los ásteres
-          también quieren que los vean. El viernes abriré los paseos del río a quien sepa pasear despacio
+          también quieren que los vean. El jueves por la tarde abriré los paseos del río a quien sepa pasear despacio
           y mirar a los demás sin que se note. Traiga a quien quiera dejarse ver.
         en: >
           My gardens reach their finest week just as the season begins; I suspect the asters want to be seen
-          as well. On Friday I'll open the river walks to anyone who knows how to stroll slowly and watch
+          as well. On Thursday afternoon I'll open the river walks to anyone who knows how to stroll slowly and watch
           everyone else without being caught at it. Bring whoever wishes to be seen.
       firma: { es: "Leonora Serravalle", en: "Leonora Serravalle" }
     desenlaces:
@@ -205,8 +211,8 @@ eventos:
           es: "{grupo} pasearon por los Jardines Serravalle. Hacía buen tiempo, y eso fue lo más comentado."
           en: "{grupo} strolled through the Serravalle Gardens. The weather was lovely, and that was the main news."
         privado:
-          es: "Nadie se aburrió. Nadie se lució. Un viernes."
-          en: "No one was bored. No one dazzled. A Friday."
+          es: "Nadie se aburrió. Nadie se lució. Un jueves."
+          en: "No one was bored. No one dazzled. A Thursday."
           variantes:
             - si: "asiste(celia)"
               texto:
@@ -230,7 +236,7 @@ eventos:
     plazas: { min: 2, max: 2 }
     regla: dama_caballero
     obligatorio: true
-    requisito: { estatus: 4, presencia: 4, baile: 3 }
+    requisito: { estatus: 4, presencia: 4, baile: 4 }
     anfitrion: { es: "La Corona", en: "The Crown" }
     titulo: { es: "Recepción de apertura", en: "The opening reception" }
     resumen:
@@ -262,6 +268,8 @@ eventos:
         - id: sonreir
           habilidad: presencia
           d: 4
+          consecuencia: {}                                     # la opción prudente
+          pista_coste: { es: "Lo más prudente", en: "The safest course" }
           texto: { es: "Sonreír y saludar como si fuera parte del protocolo", en: "Smile and bow as if it were part of the protocol" }
           exito:
             es: "{grupo} saludan con tanta naturalidad que la corte duda de quién se equivocó. La risa se apaga."
@@ -275,6 +283,8 @@ eventos:
         - id: corregir
           habilidad: estatus
           d: 4
+          consecuencia: { reputacion_si_exito: 1, efectos: [maestro_ceremonias_humillado] }
+          pista_coste: { es: "La reina lo verá; el maestro de ceremonias, también", en: "The Queen will see it; so will the master of ceremonies" }
           texto: { es: "Corregir el error con calma, ante la reina", en: "Calmly correct the error, before the Queen" }
           exito:
             es: "Una corrección amable y firme. La reina asiente: le gustan los nombres bien dichos."
@@ -287,7 +297,9 @@ eventos:
             en: "No one hears the correction. Now it looks as if they're arguing in the middle of the hall."
         - id: bailar
           habilidad: baile
-          d: 3
+          d: 4
+          consecuencia: { cercania_asistentes: 1 }           # un vals improvisado acerca a la pareja
+          pista_coste: { es: "Acerca a la pareja", en: "Draws the couple closer" }
           texto: { es: "Empezar a bailar y que la música tape el error", en: "Start dancing and let the music cover the error" }
           exito:
             es: "Un gesto a la orquesta y el vals empieza. Al tercer giro, nadie recuerda el anuncio."

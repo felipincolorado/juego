@@ -11,7 +11,7 @@
 - **nota**: Madam: all eight letters of introduction have arrived. I'll lay them out for you, one by one.
 
 ## t03_reparto · reparto_cartas
-*Las ocho cartas caen una a una y forman la mano en arco. Al tocar cada carta, el personaje dice su `presentacion` (textos/barks.yaml) y aparece su `nota_presentacion` manuscrita (se puede saltar). El paso termina cuando se han tocado las ocho o se pulsa «Continuar».*
+*Las ocho cartas caen juntas en unos 3 segundos y forman la mano. «Continuar» está visible desde el principio: la primera decisión del jugador debe llegar antes del minuto y medio de partida. Tocar una carta es opcional: el personaje dice su `presentacion` (textos/barks.yaml) y aparece su `nota_presentacion`. Las presentaciones no vistas se pueden ver después desde la ficha.*
 
 ## t04_mapa · mapa_planificacion
 *Resalta: marcador:palacio*

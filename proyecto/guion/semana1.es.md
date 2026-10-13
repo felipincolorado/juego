@@ -7,7 +7,7 @@
 
 > «Traigan opiniones, no reverencias.» Lecturas, vino y prensas aún calientes.
 
-Requisito: intelecto 3, chisme 3, presencia 2
+Requisito: intelecto 5, chisme 4, presencia 4
 - \+ La Crónica de salones nace aquí: quien brille, saldrá en ella
 - − Mara pregunta mucho, y todo lo apunta
 
@@ -21,15 +21,15 @@ Cada otoño abro la imprenta una noche antes de que empiece el ruido. Se leen po
 
 **Incidente (día 27)** · Mara reparte papel y tinta: quiere que cada invitado escriba quién será «la pareja de la temporada». Lo publicará.
 
-- **Darle un rumor inofensivo y entretenido** (chisme, d 3)
+- **Darle un rumor inofensivo y entretenido** (chisme, d 4)
   - Éxito: {mejor} le sirve un rumor tan bueno como falso. Mara lo celebra y deja de preguntar.
   - A medias: El rumor funciona a medias: Mara lo apunta, pero sigue mirando a {grupo}.
   - Fallo: El rumor era demasiado cierto. Alguien en la sala se pone pálido.
-- **Abrir un debate sobre si la Crónica debería existir** (intelecto, d 4)
+- **Abrir un debate sobre si la Crónica debería existir** (intelecto, d 5)
   - Éxito: La sala entera discute sobre la libertad de imprenta. Nadie vuelve a acordarse de las parejas.
   - A medias: El debate entretiene un rato, hasta que Mara recupera la pregunta con una sonrisa.
   - Fallo: El argumento se enreda. Mara lo resume en una frase que hace quedar mal a {mejor}.
-- **Negarse con encanto, y que suene a cumplido** (presencia, d 4)
+- **Negarse con encanto, y que suene a cumplido** (presencia, d 5)
   - Éxito: «Sería injusto adelantarle el final, Mara.» Ella se ríe: le ha gustado que no se lo den.
   - A medias: La negativa es amable, pero suena a que hay algo que ocultar.
   - Fallo: La negativa sale seca. Mara escribe algo en su cuaderno y no lo enseña.
@@ -48,12 +48,12 @@ Cada otoño abro la imprenta una noche antes de que empiece el ruido. Se leen po
 - publico: En la Imprenta Calce, un comentario de {mejor} dejó a la sala en silencio. Mara promete los detalles.
 - privado: Conviene no darle a Mara más motivos esta temporada. Tiene buena memoria y una prensa.
 
-## Paseo de primer otoño · día 28 · jardines
+## Paseo de primer otoño · día 27 · jardines
 *paseo · plazas 2–4 · cualquiera*
 
 > Ásteres en flor, el río cerca y medio Valcenda fingiendo que pasea por casualidad.
 
-Requisito: presencia 3, chisme 2
+Requisito: presencia 4, chisme 3, estatus 3
 - \+ Leonora presenta a sus invitados a todo el que pasa
 - − Si llueve, el bajo de los vestidos lo cuenta todo
 
@@ -61,7 +61,7 @@ Requisito: presencia 3, chisme 2
 
 *Querida casamentera:*
 
-Mis jardines llegan a su mejor semana justo cuando empieza la temporada; sospecho que los ásteres también quieren que los vean. El viernes abriré los paseos del río a quien sepa pasear despacio y mirar a los demás sin que se note. Traiga a quien quiera dejarse ver.
+Mis jardines llegan a su mejor semana justo cuando empieza la temporada; sospecho que los ásteres también quieren que los vean. El jueves por la tarde abriré los paseos del río a quien sepa pasear despacio y mirar a los demás sin que se note. Traiga a quien quiera dejarse ver.
 
 *Leonora Serravalle*
 
@@ -73,7 +73,7 @@ Mis jardines llegan a su mejor semana justo cuando empieza la temporada; sospech
 
 **Desenlace · medias** — Un paseo sin historia
 - publico: {grupo} pasearon por los Jardines Serravalle. Hacía buen tiempo, y eso fue lo más comentado.
-- privado: Nadie se aburrió. Nadie se lució. Un viernes.
+- privado: Nadie se aburrió. Nadie se lució. Un jueves.
   - si `asiste(celia)`: Celia volvió con barro en el bajo y no habló en todo el camino de vuelta.
 
 **Desenlace · desaire** — Barro y miradas
@@ -85,7 +85,7 @@ Mis jardines llegan a su mejor semana justo cuando empieza la temporada; sospech
 
 > Los ocho serán presentados ante la reina. Una pareja abrirá el primer baile.
 
-Requisito: estatus 4, presencia 4, baile 3
+Requisito: estatus 4, presencia 4, baile 4
 - \+ Toda la temporada mira esta noche: lo que pase aquí se recordará
 - − El maestro de ceremonias es nuevo y está nervioso
 
@@ -107,7 +107,7 @@ Su Majestad recibirá a sus ocho jóvenes el sábado, a la hora de las lámparas
   - Éxito: Una corrección amable y firme. La reina asiente: le gustan los nombres bien dichos.
   - A medias: La corrección es justa, pero suena a reproche. El maestro de ceremonias enrojece.
   - Fallo: Nadie escucha la corrección. Ahora parece que discuten en mitad del salón.
-- **Empezar a bailar y que la música tape el error** (baile, d 3)
+- **Empezar a bailar y que la música tape el error** (baile, d 4)
   - Éxito: Un gesto a la orquesta y el vals empieza. Al tercer giro, nadie recuerda el anuncio.
   - A medias: El vals empieza algo desacompasado y se arregla a la mitad.
   - Fallo: La orquesta no estaba lista. El primer compás suena como una puerta mal cerrada.

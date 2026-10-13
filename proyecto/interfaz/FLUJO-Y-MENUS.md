@@ -80,9 +80,10 @@ SEMANA 6 ─► GRAN BAILE ─► CARNET DE BAILE ─► propuestas ─► sello
 
 ## 4. La mano de cartas
 
-- Hay 8 cartas en arco en el borde inferior y **se ven todas a la vez**.
-  - Se pueden solapar.
-  - La carta tocada sube y se endereza.
+- Como en el marco v4 de Figma (`83:536`), las cartas van **en fila horizontal con un leve arco**.
+  - Se ven unas 3,5 cartas de 104 × 156 dp y la mano **se desliza** para ver al resto.
+  - La media carta del borde indica que hay más.
+  - Con ocho cartas a la vez en 390 dp, las caras quedarían demasiado pequeñas: se descartó.
 - Cada carta mide 2:3. El nombre va abajo, en una **placa a todo lo ancho**, del color de su casa.
 - Los estados y las reglas de toque son los de la especificación v3 §3.4:
   - **Blanco y negro:** ocupada o de viaje.

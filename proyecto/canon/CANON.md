@@ -89,7 +89,7 @@ Las habilidades van de 0 a 5. Los ejes de carácter van de −2 a +2:
 
 **Datos fijos nuevos:**
 - El difunto marido de Camila es **Julián Ferrán** (nuevo). Su barco, el *Clara de Nácar* (nuevo), se hundió hace dos otoños.
-- **Camila es la carabina de Celia** esta temporada.
+- **Camila es la carabina de Celia** esta temporada. Es **sólo narrativo**: aparece en las escenas y en los comentarios, pero no obliga a enviarlas juntas.
 
 ### 3.3 Uniones y vínculos previos
 

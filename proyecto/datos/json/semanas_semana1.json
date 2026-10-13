@@ -57,9 +57,9 @@
    "regla": "cualquiera",
    "obligatorio": false,
    "requisito": {
-    "intelecto": 3,
-    "chisme": 3,
-    "presencia": 2
+    "intelecto": 5,
+    "chisme": 4,
+    "presencia": 4
    },
    "anfitrion": {
     "es": "Mara Calce, editora",
@@ -113,7 +113,16 @@
      {
       "id": "rumor",
       "habilidad": "chisme",
-      "d": 3,
+      "d": 4,
+      "consecuencia": {
+       "efectos": [
+        "rumor_en_la_cronica"
+       ]
+      },
+      "pista_coste": {
+       "es": "Mara lo publicará",
+       "en": "Mara will print it"
+      },
       "texto": {
        "es": "Darle un rumor inofensivo y entretenido",
        "en": "Give her a harmless, entertaining rumour"
@@ -134,7 +143,14 @@
      {
       "id": "debate",
       "habilidad": "intelecto",
-      "d": 4,
+      "d": 5,
+      "consecuencia": {
+       "cercania_asistentes": 1
+      },
+      "pista_coste": {
+       "es": "Une a quienes discuten",
+       "en": "Brings the debaters together"
+      },
       "texto": {
        "es": "Abrir un debate sobre si la Crónica debería existir",
        "en": "Start a debate on whether the Chronicle should exist at all"
@@ -155,7 +171,16 @@
      {
       "id": "negarse",
       "habilidad": "presencia",
-      "d": 4,
+      "d": 5,
+      "consecuencia": {
+       "efectos": [
+        "mara_respeta_casamentera"
+       ]
+      },
+      "pista_coste": {
+       "es": "Mara se queda sin historia",
+       "en": "Mara gets no story"
+      },
       "texto": {
        "es": "Negarse con encanto, y que suene a cumplido",
        "en": "Decline charmingly, so it sounds like a compliment"
@@ -242,7 +267,7 @@
    "id": "s1_paseo",
    "tipo": "paseo",
    "lugar": "jardines",
-   "dia": 28,
+   "dia": 27,
    "duracion": 1,
    "plazas": {
     "min": 2,
@@ -251,8 +276,9 @@
    "regla": "cualquiera",
    "obligatorio": false,
    "requisito": {
-    "presencia": 3,
-    "chisme": 2
+    "presencia": 4,
+    "chisme": 3,
+    "estatus": 3
    },
    "anfitrion": {
     "es": "Leonora Serravalle",
@@ -284,8 +310,8 @@
      "en": "Dear Matchmaker,"
     },
     "cuerpo": {
-     "es": "Mis jardines llegan a su mejor semana justo cuando empieza la temporada; sospecho que los ásteres también quieren que los vean. El viernes abriré los paseos del río a quien sepa pasear despacio y mirar a los demás sin que se note. Traiga a quien quiera dejarse ver.\n",
-     "en": "My gardens reach their finest week just as the season begins; I suspect the asters want to be seen as well. On Friday I'll open the river walks to anyone who knows how to stroll slowly and watch everyone else without being caught at it. Bring whoever wishes to be seen.\n"
+     "es": "Mis jardines llegan a su mejor semana justo cuando empieza la temporada; sospecho que los ásteres también quieren que los vean. El jueves por la tarde abriré los paseos del río a quien sepa pasear despacio y mirar a los demás sin que se note. Traiga a quien quiera dejarse ver.\n",
+     "en": "My gardens reach their finest week just as the season begins; I suspect the asters want to be seen as well. On Thursday afternoon I'll open the river walks to anyone who knows how to stroll slowly and watch everyone else without being caught at it. Bring whoever wishes to be seen.\n"
     },
     "firma": {
      "es": "Leonora Serravalle",
@@ -335,8 +361,8 @@
       "en": "{grupo} strolled through the Serravalle Gardens. The weather was lovely, and that was the main news."
      },
      "privado": {
-      "es": "Nadie se aburrió. Nadie se lució. Un viernes.",
-      "en": "No one was bored. No one dazzled. A Friday.",
+      "es": "Nadie se aburrió. Nadie se lució. Un jueves.",
+      "en": "No one was bored. No one dazzled. A Thursday.",
       "variantes": [
        {
         "si": "asiste(celia)",
@@ -379,7 +405,7 @@
    "requisito": {
     "estatus": 4,
     "presencia": 4,
-    "baile": 3
+    "baile": 4
    },
    "anfitrion": {
     "es": "La Corona",
@@ -434,6 +460,11 @@
       "id": "sonreir",
       "habilidad": "presencia",
       "d": 4,
+      "consecuencia": {},
+      "pista_coste": {
+       "es": "Lo más prudente",
+       "en": "The safest course"
+      },
       "texto": {
        "es": "Sonreír y saludar como si fuera parte del protocolo",
        "en": "Smile and bow as if it were part of the protocol"
@@ -455,6 +486,16 @@
       "id": "corregir",
       "habilidad": "estatus",
       "d": 4,
+      "consecuencia": {
+       "reputacion_si_exito": 1,
+       "efectos": [
+        "maestro_ceremonias_humillado"
+       ]
+      },
+      "pista_coste": {
+       "es": "La reina lo verá; el maestro de ceremonias, también",
+       "en": "The Queen will see it; so will the master of ceremonies"
+      },
       "texto": {
        "es": "Corregir el error con calma, ante la reina",
        "en": "Calmly correct the error, before the Queen"
@@ -475,7 +516,14 @@
      {
       "id": "bailar",
       "habilidad": "baile",
-      "d": 3,
+      "d": 4,
+      "consecuencia": {
+       "cercania_asistentes": 1
+      },
+      "pista_coste": {
+       "es": "Acerca a la pareja",
+       "en": "Draws the couple closer"
+      },
       "texto": {
        "es": "Empezar a bailar y que la música tape el error",
        "en": "Start dancing and let the music cover the error"
