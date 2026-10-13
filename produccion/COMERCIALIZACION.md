@@ -65,3 +65,34 @@
   - si quieren saber quién dejó el sobre;
   - si hablan de parejas sin que se lo pidan.
 - Si eso funciona, producir las semanas 2–6 y presentar a plataformas.
+
+---
+
+## 6. ¿Y el mercado chino? (consulta del usuario, 13 oct.)
+
+### 6.1 China continental: hoy no conviene
+
+| Requisito | Qué implica |
+|---|---|
+| **Licencia de publicación** (ISBN de juego, de la autoridad de prensa y publicaciones, NPPA) | Obligatoria para cualquier juego que cobre: pago único, compras dentro del juego o anuncios. **Un estudio extranjero no puede pedirla**: necesita una editorial china con licencia, que suele quedarse con una parte importante de los ingresos ([AppInChina](https://appinchina.co/blog/the-complete-guide-to-chinas-game-publishing-isbn/), [Bird & Bird](https://cm.twobirds.com/en/insights/2025/china/shanghai-pilots-groundbreaking-policy-foreigndeveloped-games-in-shanghai-to-be-treated-as-domestic-g)) |
+| **Pocos cupos para juegos extranjeros** | En 2025 se aprobaron 1771 juegos, de los cuales sólo **95 fueron importados**: unos 9 o 10 al mes ([Niko Partners](https://substack.nikopartners.com/p/chinas-nppa-approved-1771-video-games)) |
+| **Plazos** | Las guías hablan de 6 a 12 meses. El organismo no publica plazos oficiales |
+| **Tiendas** | No hay Google Play. El App Store chino exige la licencia ([AppInChina](https://appinchina.co/blog/how-to-publish-your-game-in-china/)). En Android se publica en las tiendas de Huawei, Tencent, Xiaomi, Oppo o Vivo, casi siempre a través de la editorial |
+| **Contenido** | En 2021 se filtró una directriz que pedía no aprobar juegos con **relaciones del mismo género** ([PinkNews](https://thepinknews.com/2021/10/02/china-video-games-gay-effeminate-men-ban/)). No se pudo confirmar si sigue vigente, pero choca de frente con Saúl–Dario, Isolda–Irene, la unión lavanda y «todos con todos». Habría que hacer una versión recortada, y eso le quitaría la gracia al juego |
+
+**Conclusión:** China continental exigiría una editorial china, 6–12 meses de trámite y, casi seguro, quitar el corazón del juego. **No conviene para la primera versión.**
+
+### 6.2 El público chino sin pasar por China continental
+
+| Mercado | Cómo se publica | Por qué interesa |
+|---|---|---|
+| **Taiwán, Hong Kong y Macao** (chino tradicional) | En Google Play y el App Store normales, como en cualquier país, **sin la licencia continental** | Hay mucho público de romance y de otome, y la traducción es una sola: chino tradicional |
+| **Japón** | En las tiendas normales | Es la cuna del otome y del romance de época, con un público que paga por juegos de pago y por historias |
+| **Corea y el Sudeste Asiático** | En las tiendas normales | Según Niko Partners, Love and Deepspace tuvo allí un éxito inusual para un otome |
+
+### 6.3 Orden recomendado de idiomas
+
+1. **Español e inglés**, desde el lanzamiento (ya están en los datos).
+2. Si la primera temporada funciona: **chino tradicional y japonés**. Los datos ya son bilingües con claves, así que añadir `zh_hant` o `ja` es sumar una columna a cada texto, sin tocar el código.
+3. Revisar la tipografía. Cormorant Garamond y EB Garamond no tienen caracteres chinos ni japoneses. Habría que añadir una fuente CJK con licencia libre, como Noto Serif CJK (OFL).
+4. China continental, sólo con una editorial local interesada y aceptando una versión adaptada. Es una decisión de negocio aparte, no técnica.
