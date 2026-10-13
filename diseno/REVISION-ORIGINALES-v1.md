@@ -25,3 +25,19 @@ Teo y Celia son pareja prioritaria y ahora los dos tienen el pelo cobrizo: junto
 - **Pieles diversas,** como se pidió.
 - **Encuadre:** los ojos quedan cerca del **15 %** de alto, no del 20 %. Antes de recortar las cartas, hay que medir cada original y añadir margen arriba (la herramienta ya lo hizo con Dario).
 - **Hombros masculinos:** tres casacas con la manga abullonada en el hombro (Dario, Saúl y Teo). En los hombres de 1810 el hombro era liso. Conviene añadir *smooth set-in sleeves, no puffed sleeve heads* a los prompts masculinos si se rehacen.
+
+---
+
+## Correcciones del usuario (13 oct., segunda ronda)
+
+| Persona | Corrección | Cómo pedirla a ChatGPT |
+|---|---|---|
+| **Todos** | **Misma escala de cabeza**: de la coronilla a la barbilla, un cuarto del alto | Ya está en los 8 prompts (`HEAD SIZE`). En las imágenes que ya existen, la herramienta puede normalizarlo |
+| **Saúl** | El corbatín debe ser **blanco**: ChatGPT entendió «negro» como el color del corbatín. **Quitar los botones decorativos** de la casaca azul | Edición local: *«Change only the cravat to crisp white linen, and remove the decorative buttons on the lapels and collar of the blue coat; keep one simple row of silver buttons. Change nothing else.»* |
+| **Dario** | El **alfiler granate parece pegado** encima | Edición local: *«Push the small garnet pin into the knot of the cravat, partly hidden by the folds, so it sits naturally. Change nothing else.»* |
+| **Celia** | Le gusta, y tiene identidad dulce, pero recuerda a la protagonista de una serie conocida. Propuesta: **rubia miel** | Edición local: *«Change only the hair colour to honey blonde and the brows to honey brown. Keep the hairstyle, sprigs, face and everything else identical.»* |
+| **Irene** | **Le encanta**, con su origen asiático oriental. Pero el vestido todo azul recuerda a un personaje conocido: **cambiar el tono a gris carbón** | Edición local: *«Change only the dress colour to warm charcoal grey (not blue) and add a thin ink-blue ribbon at the waist. Keep everything else identical.»* |
+| **Isolda** | **Rehacer desde cero.** Hay que definirle un peinado, y **se lee como estereotipo** de su orientación: hay que evitarlo (regla nueva del canon) | Prompt v3 completo en `PROMPTS-ELENCO-ORIGINALES.md` §7: moño portuario con trenza, mechón perla estrecho, pendientes de perla, chaquetilla spencer abierta, mano apoyada en la solapa |
+| **Camila** | Aprobada en espíritu: voluptuosa, seductora y misteriosa | — |
+
+**Sobre editar o generar de nuevo:** para cambios puntuales que no tocan la identidad (un color, unos botones, un alfiler), la edición local de ChatGPT conserva la mano del dibujo. Para un rediseño como el de Isolda, mejor generar desde cero.

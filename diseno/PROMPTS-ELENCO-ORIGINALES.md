@@ -40,12 +40,16 @@ FRAMING: Three-quarter view: body turned about 40° to his left, face towards th
 Head-to-hip portrait, centred, cut at the hips. Leave a small margin above the hair:
 top of head at about 6% of the image height, eyes at about 20%, chin at about 31%.
 The face is always fully visible and turned towards the viewer; never seen from behind.
+HEAD SIZE (same for all eight cast members): the head, from the top of the hair to the chin,
+measures one quarter of the image height. Do not enlarge or shrink the head to show height:
+every portrait uses the same head scale so the cards line up.
 IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Slender build, long neck, long face, heavy-lidded grey eyes, fine straight nose.
 Pale olive skin with a cool undertone. Long straight black hair tied low at the nape with
 a dark ribbon. Nothing supernatural: no fangs, no red eyes, no vampire costume.
 COSTUME: Deep plum velvet tailcoat with a high collar; plain black waistcoat with no
-pattern; crisp white cravat with one small garnet pin. Clean, precise tailoring with
+pattern; crisp white cravat with one small garnet pin pushed into the knot of the cravat, partly hidden by
+the folds (not floating on top of it). Clean, precise tailoring with
 natural, fairly narrow early-19th-century shoulders: no padded or puffed shoulders.
 No rings, nothing in his hands.
 ACTING AND POSE: Perfect courtesy hiding a closed door. Chin slightly lowered, heavy-lidded gaze
@@ -101,6 +105,9 @@ FRAMING: Front view.
 Head-to-hip portrait, centred, cut at the hips. Leave a small margin above the hair:
 top of head at about 6% of the image height, eyes at about 20%, chin at about 31%.
 The face is always fully visible and turned towards the viewer; never seen from behind.
+HEAD SIZE (same for all eight cast members): the head, from the top of the hair to the chin,
+measures one quarter of the image height. Do not enlarge or shrink the head to show height:
+every portrait uses the same head scale so the cards line up.
 IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Broad shoulders, strong neck, broad jaw, thick dark brows, slightly broad straight
 nose, open warm face. Light olive skin tanned by mountain roads, flushed cheeks. Unruly
@@ -159,11 +166,16 @@ FRAMING: Front view, perfectly symmetrical: the only symmetrical pose of the cas
 Head-to-hip portrait, centred, cut at the hips. Leave a small margin above the hair:
 top of head at about 6% of the image height, eyes at about 20%, chin at about 31%.
 The face is always fully visible and turned towards the viewer; never seen from behind.
+HEAD SIZE (same for all eight cast members): the head, from the top of the hair to the chin,
+measures one quarter of the image height. Do not enlarge or shrink the head to show height:
+every portrait uses the same head scale so the cards line up.
 IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Tall, long neck, square shoulders, high cheekbones, defined jaw, calm dark eyes.
 Deep brown skin. Very short cropped black hair with a crisp hairline.
-COSTUME: Steel-blue dress tailcoat with a high collar and silver buttons (not gold),
-impeccable white cravat, white gloves.
+COSTUME: Steel-blue (greyish blue, not royal blue) dress tailcoat with a high collar and only
+ONE simple row of silver buttons to close it: no decorative buttons on the lapels, collar or
+sleeves. Smooth set-in sleeves, no puffed sleeve heads. Impeccable WHITE cravat (the cravat is
+white linen, never black), white waistcoat, white gloves.
 ACTING AND POSE: Composed and reliable: chin level, calm direct gaze, square relaxed shoulders,
 hands clasped behind his back (not visible). The stillness of someone who keeps his word,
 with contained warmth in the eyes.
@@ -216,6 +228,9 @@ FRAMING: Three-quarter view: body turned about 40° to his right, face towards t
 Head-to-hip portrait, centred, cut at the hips. Leave a small margin above the hair:
 top of head at about 6% of the image height, eyes at about 20%, chin at about 31%.
 The face is always fully visible and turned towards the viewer; never seen from behind.
+HEAD SIZE (same for all eight cast members): the head, from the top of the hair to the chin,
+measures one quarter of the image height. Do not enlarge or shrink the head to show height:
+every portrait uses the same head scale so the cards line up.
 IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Slim and restless, narrow face, very mobile arched brows, wide mouth. Fair skin
 with freckles and rosy cheeks. Messy copper hair going in every direction.
@@ -273,9 +288,12 @@ FRAMING: Slight three-quarter view: body turned about 20°, face towards the vie
 Head-to-hip portrait, centred, cut at the hips. Leave a small margin above the hair:
 top of head at about 6% of the image height, eyes at about 20%, chin at about 31%.
 The face is always fully visible and turned towards the viewer; never seen from behind.
+HEAD SIZE (same for all eight cast members): the head, from the top of the hair to the chin,
+measures one quarter of the image height. Do not enlarge or shrink the head to show height:
+every portrait uses the same head scale so the cards line up.
 IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Petite, long neck, dancer's posture, round face, large eyes, small chin, thick
-dark brows. Fair rosy skin. Light brown hair in a high elaborate updo with a braided
+honey-brown brows. Fair rosy skin. Honey-blonde hair in a high elaborate updo with a braided
 coronet and a few tiny green sprigs.
 COSTUME: Sage-green high-waisted gown with vertical botanical embroidery in a deeper green
 (suggested with a few strokes), short puffed sleeves, long white gloves.
@@ -287,7 +305,7 @@ language: head tilt, shoulder line, gaze direction, arm shape.
 Hands are simple shapes: hidden, fists, or flat on the body. No small objects held
 between the fingers, no rings, no pointing fingers, no interlaced visible fingers.
 At most one large prop, held in the whole hand.
-COLOUR KEY: Sage green, deeper green, pure white gloves, rosy fair skin, light brown hair.
+COLOUR KEY: Sage green, deeper green, pure white gloves, rosy fair skin, honey-blonde hair.
 TECHNIQUE (hand-made look of the attached references):
 Hand-drawn ink line with a slight wobble, heavier on the outer silhouette, thinner and
 sometimes broken inside; line colour dark grey-brown, softer than pure black.
@@ -330,11 +348,15 @@ FRAMING: Front view (a slight turn is fine).
 Head-to-hip portrait, centred, cut at the hips. Leave a small margin above the hair:
 top of head at about 6% of the image height, eyes at about 20%, chin at about 31%.
 The face is always fully visible and turned towards the viewer; never seen from behind.
+HEAD SIZE (same for all eight cast members): the head, from the top of the hair to the chin,
+measures one quarter of the image height. Do not enlarge or shrink the head to show height:
+every portrait uses the same head scale so the cards line up.
 IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
-IDENTITY: Tall, narrow shoulders, angular face, straight brows, attentive analytical eyes.
-Light-medium beige skin with a neutral undertone. Straight black hair in a plain low knot,
+IDENTITY: East Asian woman. Tall, narrow shoulders, angular face, straight brows, attentive
+analytical eyes. Light skin with a neutral undertone. Straight black hair in a plain low knot,
 no ornament. No glasses.
-COSTUME: Slate-blue day dress of fine wool, long sleeves, small white collar, no jewellery.
+COSTUME: Charcoal-grey day dress of fine wool (warm dark grey, NOT blue), long sleeves, small
+white collar, a narrow ink-blue ribbon at the waist, no jewellery.
 ACTING AND POSE: Studying the viewer as if reading a document: head tilted, attentive gaze, the
 ghost of a smile when she finds something interesting. Arms crossed at chest height with
 the hands tucked away (not visible).
@@ -344,7 +366,7 @@ language: head tilt, shoulder line, gaze direction, arm shape.
 Hands are simple shapes: hidden, fists, or flat on the body. No small objects held
 between the fingers, no rings, no pointing fingers, no interlaced visible fingers.
 At most one large prop, held in the whole hand.
-COLOUR KEY: Slate blue, pure white collar, black hair, beige skin.
+COLOUR KEY: Charcoal grey, pure white collar, a thin ink-blue ribbon, black hair, light skin. The dress must not read as blue.
 TECHNIQUE (hand-made look of the attached references):
 Hand-drawn ink line with a slight wobble, heavier on the outer silhouette, thinner and
 sometimes broken inside; line colour dark grey-brown, softer than pure black.
@@ -373,7 +395,7 @@ OUTPUT: exactly one character, no text, no lettering, no frame, no other people.
 MUST READ AT A GLANCE: Plain low knot and angular face; total attention.
 ```
 
-## 7. Isolda Marén · Empoderada (v2, 13 oct.: pelo contenido, chaquetilla, oficio)
+## 7. Isolda Marén · Segura y libre (v3, 13 oct.: peinado definido, sin estereotipos)
 
 ```text
 ROLE: You are a senior character designer for a hand-illustrated narrative mobile game.
@@ -387,21 +409,25 @@ FRAMING: Three-quarter view: body turned about 40° to her left, face towards th
 Head-to-hip portrait, centred, cut at the hips. Leave a small margin above the hair:
 top of head at about 6% of the image height, eyes at about 20%, chin at about 31%.
 The face is always fully visible and turned towards the viewer; never seen from behind.
+HEAD SIZE (same for all eight cast members): the head, from the top of the hair to the chin,
+measures one quarter of the image height. Do not enlarge or shrink the head to show height:
+every portrait uses the same head scale so the cards line up.
 IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
-IDENTITY: Strong neck and shoulders, straight brows, a warm, easy smile. Medium brown skin.
-Very dark slate-green hair, almost black with a green sheen, worn HALF-UP: the top pinned
-back with a simple comb, the rest falling in loose waves to the shoulders (not waist-long,
-not voluminous). One NARROW pearl-white lock at the front hairline, about two fingers wide.
-Muted copper irises. These traits are an ordinary family inheritance in her port city:
-nothing about her looks magical, aquatic or exotic.
-COSTUME: Sea-green day gown of practical wool-silk, high waist, V neckline with a side
-fastening (a port tradition), long sleeves. Over it, a SHORT OPEN SPENCER JACKET in deep
-navy-teal with plain round buttons, worn unbuttoned, slightly worn at the cuffs.
-A small leather account book tucked into the jacket's front pocket (a simple shape,
-not held). Modest neckline, same level of formality as the other cast members.
-ACTING AND POSE: The insurer's daughter who has already priced the risk and likes the odds:
-head slightly tilted, direct friendly gaze, warm amused smile that welcomes rather than
-challenges; near shoulder dropped, weight on one hip, one fist resting on the hip.
+IDENTITY: Graceful and lively, with an elegant posture comparable to the other ladies of the cast,
+soft straight brows, long lashes, a warm, easy smile. Medium brown skin. Very dark slate-green hair,
+almost black with a green sheen, dressed in a defined PORT-STYLE CHIGNON: a low, neat bun
+wrapped with a thin braid, a few soft curls loose at the temples. One NARROW pearl-white lock at
+the front hairline, swept back into the bun. Small pearl drop earrings. Muted copper irises.
+These traits are an ordinary family inheritance in her port city: nothing magical, aquatic or exotic.
+No visual coding of her personality as masculine or tomboyish: she is as feminine and refined as
+the other ladies; her freedom shows only in her expression and her open jacket.
+COSTUME: Sea-green day gown of fine wool-silk (muted, cool sea green, never mint), high waist,
+V neckline with a side fastening (a port tradition), modest neckline, long sleeves. Over it, a
+SHORT OPEN SPENCER JACKET in deep navy-teal with plain round buttons, worn unbuttoned. A small
+leather account book tucked into the jacket's front pocket (a simple shape, not held).
+ACTING AND POSE: She doesn't ask permission, and she is charming about it: three-quarter view,
+chin slightly raised, head a little tilted, warm amused smile, direct friendly gaze; one hand
+resting flat on the lapel of her open jacket, the other arm relaxed.
 POSE RULES: the personality must read in the upper half of the image (head, neck,
 shoulders, chest), because the game card shows only that part. Use big, clear body
 language: head tilt, shoulder line, gaze direction, arm shape.
@@ -434,7 +460,7 @@ varnish or vintage grading.
 BACKGROUND: fully transparent PNG. No background, no floor, no cast shadow,
 no white halo around the silhouette.
 OUTPUT: exactly one character, no text, no lettering, no frame, no other people.
-MUST READ AT A GLANCE: A warm, free port woman who belongs in this cast: half-up dark green-black hair with one narrow pearl lock, open spencer jacket, hand on hip.
+MUST READ AT A GLANCE: A warm, refined port lady who clearly belongs in this cast: neat dark green-black chignon with one narrow pearl lock, pearl earrings, open navy-teal spencer.
 ```
 
 ## 8. Camila Ferrán · Matriarca irónica
@@ -451,6 +477,9 @@ FRAMING: Three-quarter view: body turned about 40° to her right, face towards t
 Head-to-hip portrait, centred, cut at the hips. Leave a small margin above the hair:
 top of head at about 6% of the image height, eyes at about 20%, chin at about 31%.
 The face is always fully visible and turned towards the viewer; never seen from behind.
+HEAD SIZE (same for all eight cast members): the head, from the top of the hair to the chin,
+measures one quarter of the image height. Do not enlarge or shrink the head to show height:
+every portrait uses the same head scale so the cards line up.
 IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Full figure, short elegant neck, heavy-lidded eyes, a slow knowing smile. Deep
 brown skin. Dark coily hair arranged low at the nape.

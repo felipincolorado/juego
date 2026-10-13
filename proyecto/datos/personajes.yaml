@@ -71,7 +71,7 @@ elenco:
     genero: f
     edad: 25
     casa: archiveros
-    color: "#55687D"
+    color: "#4A4B52"
     habilidades: { baile: 1, estatus: 2, chisme: 3, presencia: 3, intelecto: 5 }
     ejes: { libertad: -1, sinceridad: 2 }
     gusta: cena

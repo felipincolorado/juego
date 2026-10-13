@@ -42,6 +42,8 @@
 | Largo de las frases | Comentarios del mapa: menos de 14 palabras. Desenlaces: hasta 22. Diálogo: un máximo de 3 líneas por toque | Igual |
 | Idiomas | El español es la versión maestra. El inglés **adapta la intención**: no traduce palabra por palabra y conserva el humor | — |
 
+**Prohibido en cualquier imagen:** que la orientación se lea en el aspecto. No se usan estereotipos de «marimacho» o de «afeminado»: las damas son igual de refinadas entre sí y los caballeros, igual de elegantes. La personalidad se muestra en la expresión y en la ropa, nunca en códigos de orientación.
+
 **Prohibido en cualquier texto:**
 - Afirmar una orientación o una condición antes de que el juego la revele.
 - Colmillos o rasgos de lobo.
@@ -66,7 +68,7 @@ Las habilidades van de 0 a 5. Los ejes de carácter van de −2 a +2:
 | `dario` | Dario Miravés | 27 | Miravés · ciruela | 5 | 2 | 3 | 3 | 1 | 0 | −2 | baile | paseo | bi |
 | `teo` | Teo Rovena | 24 | Rovena · rosa malva | 2 | 2 | 5 | 2 | 3 | +1 | −2 | teatro | baile | hetero |
 | `celia` | Celia Lobreda | 21 | Lobreda · verde salvia | 5 | 3 | 1 | 2 | 3 | −2 | +1 | clase | paseo | hetero |
-| `irene` | Irene Salvat | 25 | Archiveros · azul pizarra | 1 | 2 | 3 | 3 | 5 | −1 | +2 | cena | baile | bi |
+| `irene` | Irene Salvat | 25 | Archiveros · gris carbón | 1 | 2 | 3 | 3 | 5 | −1 | +2 | cena | baile | bi |
 | `isolda` | Isolda Marén | 26 | Marén · verde mar | 3 | 1 | 2 | 5 | 3 | +2 | +1 | paseo | recepcion | lesbiana |
 | `camila` | Camila Ferrán | 29 | Ferrán · lavanda y gris perla | 2 | 4 | 4 | 2 | 2 | +1 | −1 | cena | clase | hetero |
 
@@ -88,7 +90,8 @@ Las habilidades van de 0 a 5. Los ejes de carácter van de −2 a +2:
 | **Camila** | Experiencia y humor seco | Decidir sola su siguiente paso tras el luto | Dice no necesitar a nadie y echa de menos que la sorprendan | Su fortuna viene del seguro Marén por el barco hundido de su marido; la casa Miravés le reclama la deuda de ese barco, que **vence en la semana 5** | Se deja sorprender / Se queda observando, sola |
 
 **Datos fijos nuevos:**
-- **Celia es pelirroja cobriza** (original aprobado por el usuario el 13 de octubre); su recogido alto con ramitas se mantiene.
+- **Celia es rubia miel** (corrección del usuario del 13 de octubre: la pelirroja recordaba demasiado a un personaje conocido y repetía el pelo de Teo). Se mantiene su recogido alto con ramitas.
+- **Irene es de origen asiático oriental** (petición del usuario). Viste **gris carbón**, no azul, para no recordar a un personaje conocido.
 - El difunto marido de Camila es **Julián Ferrán** (nuevo). Su barco, el *Clara de Nácar* (nuevo), se hundió hace dos otoños.
 - **Camila es la carabina de Celia** esta temporada. Es **sólo narrativo**: aparece en las escenas y en los comentarios, pero no obliga a enviarlas juntas.
 
