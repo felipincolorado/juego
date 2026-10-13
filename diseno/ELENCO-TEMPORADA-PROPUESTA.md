@@ -65,7 +65,7 @@ Cada ficha: **atractivo · deseo de la temporada · contradicción · competenci
 - **Deseo de la temporada:** demostrar que puede ser útil en Valcenda por sí mismo, no como «el Lobreda de los pasos».
 - **Contradicción:** promete antes de medir el coste; su generosidad a veces la pagan otros.
 - **Competencia:** organizar, transportar, resolver lo práctico; leer el ánimo de un grupo.
-- **Vínculos previos:** primo de **Celia**, que le reprocha que a él todo se le perdone. Conoce a **Saúl** de la disputa de paso entre Lobreda y Veyra (mundo v0.3): se respetan y se miden.
+- **Vínculos previos:** primo de **Celia**, que le reprocha que a él todo se le perdone. **Recomendación: primos sin ruta romántica entre ellos** (el valor de su relación es el roce familiar; ver narrativa §3.2). Conoce a **Saúl** de la disputa de paso entre Lobreda y Veyra (mundo v0.3): se respetan y se miden.
 - **Gesto:** se inclina hacia quien habla; las manos siempre a punto de ayudar.
 - **Silueta:** hombros anchos, cuello fuerte, rizos oscuros desordenados que no se dejan peinar; piel tostada por los caminos; mandíbula ancha.
 - **Habilidades:** Baile 2 (bailes de feria de Greda, no de salón) · Estatus 3 (el apellido pesa aunque no quiera usarlo) · Chisme 2 · Presencia 4 (la gente le sigue) · Intelecto 3 (soluciones prácticas).
@@ -235,6 +235,9 @@ Una sola autoridad de identidad por persona:
 3. ¿Qué opción del **acuerdo lavanda** (A, B, C o ninguna)?
 4. ¿La condición de **Dario**: A (humano) o B (nocturno)?
 5. ¿Edad de **Saúl** (~30) y del resto?
+6. ¿Nilo y Celia, primos sin ruta (recomendado) o primos políticos con ruta?
+
+Documentos relacionados: [narrativa de la temporada](<NARRATIVA-TEMPORADA-PROPUESTA.md>) y [voces del elenco](<VOCES-ELENCO-PROPUESTA.md>).
 
 ---
 
