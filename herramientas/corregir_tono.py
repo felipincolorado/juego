@@ -70,6 +70,11 @@ def corregir(img, modo, valor, fuerza):
     # Ignora sombras profundas y luces quemadas: no informan del balance.
     lum = rgb.mean(axis=2)
     m &= (lum > 20) & (lum < 245)
+    if modo == "borde" and m.sum() >= 50:
+        # Si el personaje toca el borde, descarta lo que no se parece al fondo
+        # dominante (pelo, ropa): sólo quedan los píxeles cercanos a la mediana.
+        mediana = np.median(rgb[m], axis=0)
+        m &= np.abs(rgb - mediana).sum(axis=2) < 24
     if m.sum() < 50:
         raise ValueError("La zona de referencia tiene muy pocos píxeles útiles.")
 

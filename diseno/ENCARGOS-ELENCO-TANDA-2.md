@@ -280,6 +280,26 @@ Keep readable anatomy, complete hands and attached accessories.
 
 
 
+## 9. Segunda prueba: Dario v2 (14 oct.)
+
+**Color: resuelto desde el prompt.**
+- Fondo (esquinas superiores): RGB 121,2 · 121,2 · 121,2, variación 0,5 → **perfectamente neutro y plano**. No es #808080 exacto, pero **lo que importa es que sea neutro y uniforme, no el valor**: así sirve para medir y se recorta o amplía sin costuras.
+- Blancos: amarillo **+1,8** (v1: +15). El corbatín tiene sombras lila frías, como las referencias neutras de Dressmaker.
+- La corrección casi no actúa (ganancias 1,000). Herramienta mejorada: el modo `--borde` descarta ahora el pelo y la ropa que tocan el borde (antes el abrigo contaminaba la medición: 111 en lugar de 121).
+
+**Dirección de arte:**
+
+| Aspecto | v2 | Acción |
+|---|---|---|
+| Formato | ✅ 1024 × 1536 (2:3) | — |
+| Técnica | ⚠️ Mejor: terciopelo con sombras planas y manchadas. Siguen el rostro semirrealista, la línea casi negra y el damasco del chaleco muy detallado | Aceptable como candidata; afinar en v3 si se quiere más Dressmaker |
+| Hombros | ❌ Siguen anchos: el contorno ocupa ~80 % del ancho | **Edición local** en ChatGPT (seleccionar hombros y mangas): «estrechar los hombros a una caída natural, sin hombreras», sin regenerar el resto |
+| Encuadre | ❌ El pelo toca el borde superior (1,3 % en lugar de 6 %); ojos hacia el 10 % en lugar del 20 % | **Se corrige en posproducción**: como el fondo es neutro y plano, basta ampliar el lienzo por arriba con el mismo gris. No hace falta regenerar |
+| Actuación y silueta | ✅ Mirada lateral, media sonrisa, gira el anillo (ahora en la mano izquierda), pelo largo atado | — |
+
+**Estado:** candidata fuerte. Siguiente paso propuesto: edición local de hombros (y, opcionalmente, simplificar el damasco), ampliar lienzo superior y probarla montada en la carta.
+
+
 ---
 
 ## Anexo · Prompts completos del original formal (5.2–5.8)
