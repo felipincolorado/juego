@@ -58,7 +58,8 @@ El script informa del índice de amarillo antes y después (ejemplo de prueba: +
 COLOUR CONTROL (critical):
 Neutral daylight white balance (D65, 6500 K). This is a contemporary illustration,
 not an old painting or an old photograph.
-Whites are pure neutral white; greys are neutral; shadows are cool grey-violet or
+Whites are pure neutral white (linen, cravats and gloves are bright cool white like
+fresh snow, never cream or ivory); greys are neutral; shadows are cool grey-violet or
 deep blue-grey, never brown or amber. Paint each material in its own local colour;
 do not unify the image with any overall tone.
 NO yellow, orange, amber, sepia, golden or brown overall tint. NO aged paper,
@@ -126,13 +127,15 @@ ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front three-quarter view, head to hip, centred. Top of head at 6% of the
 image height, eyes at 20%, chin at 31%. Keep both hands inside the frame.
+IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: slender build, long neck, long face, heavy-lidded grey eyes, fine straight
 nose, a faint half-smile that does not reach the eyes. Pale olive skin with a cool
 undertone. Long straight black hair tied low at the nape with a dark ribbon.
 Nothing supernatural: no fangs, no red eyes, no vampire costume.
 COSTUME: deep plum velvet tailcoat with a high collar, black silk waistcoat with a
 subtle plum pattern, crisp white cravat with a single small garnet pin, one plain ring
-on the left hand. Clean, precise tailoring.
+on the left hand. Clean, precise tailoring with natural, fairly narrow early-19th-century
+shoulders: no padded or puffed shoulders.
 ACTING: perfect courtesy hiding a closed door. He is turning the ring with his thumb;
 his gaze arrives at the viewer a moment late.
 COLOUR KEY: plum, black, pure white linen, pale olive skin, grey eyes.
@@ -146,7 +149,8 @@ no 3D render, no photographic detail, no uniform vector look, no global grain.
 COLOUR CONTROL (critical):
 Neutral daylight white balance (D65, 6500 K). This is a contemporary illustration,
 not an old painting or an old photograph.
-Whites are pure neutral white; greys are neutral; shadows are cool grey-violet or
+Whites are pure neutral white (linen, cravats and gloves are bright cool white like
+fresh snow, never cream or ivory); greys are neutral; shadows are cool grey-violet or
 deep blue-grey, never brown or amber. Paint each material in its own local colour;
 do not unify the image with any overall tone.
 NO yellow, orange, amber, sepia, golden or brown overall tint. NO aged paper,
@@ -212,6 +216,33 @@ Keep readable anatomy, complete hands and attached accessories.
 
 ---
 
+## 8. Primera prueba: Dario v1 (14 oct.)
+
+**Color (medido):**
+- Fondo: índice de amarillo **+0,7** → el bloque de control de color funcionó; **no hubo filtro global**.
+- Blancos (corbatín, puños): **+15 a +18** → ChatGPT pinta el «blanco» como crema. El fondo gris no lo detecta.
+- La corrección de ChatGPT con el código de Python dio el mismo resultado que el script (diferencia media 0,95 sobre 255): **ChatGPT ejecutó bien el filtro sin redibujar**.
+- Nuevo modo `--blancos` en la herramienta: neutraliza sólo píxeles claros y poco saturados. Dario: blancos **+15,3 → +6,7**; piel, terciopelo y pelo sin cambios (±3). Resultado y comparación en `diseno/pruebas/`.
+- Prompts actualizados: los blancos se piden «blanco frío como nieve recién caída, nunca crema ni marfil».
+
+**Dirección de arte:**
+
+| Aspecto | Valoración |
+|---|---|
+| Silueta (pelo largo atado, cinta, cuello largo, ciruela) | ✅ Se reconoce; funcionará en carta |
+| Actuación (cortesía, mirada que llega tarde, gira el anillo) | ✅ Conseguida |
+| Sin clichés de vampiro | ✅ |
+| Rostro individual y atractivo | ✅ Alargado, párpados pesados |
+| Formato | ❌ Salió **cuadrado** (1254 × 1254), no 2:3: se cortan cadera y manos bajas. Añadido «IMAGE FORMAT: vertical 2:3» a los 8 prompts |
+| Hombros | ❌ Hombreras exageradas, más de los años 80 que de 1810. Corregido en el prompt de Dario |
+| Técnica | ⚠️ Línea limpia y sombreado suave de ilustración digital: está más cerca del cómic occidental que de lo «hecho a mano». Hay que compararlo con las imágenes de Dressmaker que usan como referencia (no las he visto) y, si hace falta, pedir textura de pincel visible y bordes de pincel seco |
+| Anillo | Menor: lo gira con la mano derecha; el prompt decía izquierda |
+
+**Estado:** candidato. No aprobar la identidad hasta generar la versión 2:3 con los hombros corregidos.
+
+
+---
+
 ## Anexo · Prompts completos del original formal (5.2–5.8)
 
 Cada bloque está completo y se pega tal cual (no hay marcadores que sustituir).
@@ -226,6 +257,7 @@ ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front view, head to hip, centred. Top of head at 6% of the image height,
 eyes at 20%, chin at 31%. Keep both hands inside the frame.
+IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Broad shoulders, strong neck, broad jaw, thick dark brows, slightly broad straight nose, open warm face. Light olive skin tanned by mountain roads, flushed cheeks. Unruly dark brown loose curls to the ears.
 COSTUME: Forest-green wool tailcoat slightly rumpled, oatmeal wool waistcoat with wooden buttons, linen shirt, loosely tied cravat.
 ACTING: Trying to look formal for the occasion; a held-back smile escapes; one hand on his chest as if about to bow.
@@ -240,7 +272,8 @@ no 3D render, no photographic detail, no uniform vector look, no global grain.
 COLOUR CONTROL (critical):
 Neutral daylight white balance (D65, 6500 K). This is a contemporary illustration,
 not an old painting or an old photograph.
-Whites are pure neutral white; greys are neutral; shadows are cool grey-violet or
+Whites are pure neutral white (linen, cravats and gloves are bright cool white like
+fresh snow, never cream or ivory); greys are neutral; shadows are cool grey-violet or
 deep blue-grey, never brown or amber. Paint each material in its own local colour;
 do not unify the image with any overall tone.
 NO yellow, orange, amber, sepia, golden or brown overall tint. NO aged paper,
@@ -261,6 +294,7 @@ ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front three-quarter view, head to hip, centred. Top of head at 6% of the image height,
 eyes at 20%, chin at 31%. Keep both hands inside the frame.
+IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Tall, long neck, square shoulders, high cheekbones, defined jaw, calm dark eyes. Deep brown skin. Very short cropped black hair with a crisp hairline.
 COSTUME: Steel-blue dress tailcoat with a high collar and silver buttons, impeccable white cravat, white gloves.
 ACTING: Composed and reliable: hands behind his back, chin level, direct steady gaze; the stillness of someone who keeps his word.
@@ -275,7 +309,8 @@ no 3D render, no photographic detail, no uniform vector look, no global grain.
 COLOUR CONTROL (critical):
 Neutral daylight white balance (D65, 6500 K). This is a contemporary illustration,
 not an old painting or an old photograph.
-Whites are pure neutral white; greys are neutral; shadows are cool grey-violet or
+Whites are pure neutral white (linen, cravats and gloves are bright cool white like
+fresh snow, never cream or ivory); greys are neutral; shadows are cool grey-violet or
 deep blue-grey, never brown or amber. Paint each material in its own local colour;
 do not unify the image with any overall tone.
 NO yellow, orange, amber, sepia, golden or brown overall tint. NO aged paper,
@@ -296,6 +331,7 @@ ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front view, head to hip, centred. Top of head at 6% of the image height,
 eyes at 20%, chin at 31%. Keep both hands inside the frame.
+IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Slim and restless, narrow face, very mobile arched brows, wide mouth. Fair skin with freckles and rosy cheeks. Messy copper hair going in every direction.
 COSTUME: His only good tailcoat in dusty mauve-rose, slightly worn at the cuffs; discreet patterned waistcoat; loosely knotted cravat.
 ACTING: Trying very hard to look serious and almost managing it: one corner of the mouth already rising, one eyebrow ahead of the joke.
@@ -310,7 +346,8 @@ no 3D render, no photographic detail, no uniform vector look, no global grain.
 COLOUR CONTROL (critical):
 Neutral daylight white balance (D65, 6500 K). This is a contemporary illustration,
 not an old painting or an old photograph.
-Whites are pure neutral white; greys are neutral; shadows are cool grey-violet or
+Whites are pure neutral white (linen, cravats and gloves are bright cool white like
+fresh snow, never cream or ivory); greys are neutral; shadows are cool grey-violet or
 deep blue-grey, never brown or amber. Paint each material in its own local colour;
 do not unify the image with any overall tone.
 NO yellow, orange, amber, sepia, golden or brown overall tint. NO aged paper,
@@ -331,6 +368,7 @@ ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front view, head to hip, centred. Top of head at 6% of the image height,
 eyes at 20%, chin at 31%. Keep both hands inside the frame.
+IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Petite, long neck, dancer's posture, round face, large eyes, small chin, thick dark brows. Fair rosy skin. Light brown hair in a high elaborate updo with a braided coronet and tiny green sprigs.
 COSTUME: Sage-green high-waisted gown with vertical botanical embroidery in a deeper green, short puffed sleeves, long white gloves.
 ACTING: Perfectly rehearsed: practised smile, chin slightly high, gloved hands folded at the waist.
@@ -345,7 +383,8 @@ no 3D render, no photographic detail, no uniform vector look, no global grain.
 COLOUR CONTROL (critical):
 Neutral daylight white balance (D65, 6500 K). This is a contemporary illustration,
 not an old painting or an old photograph.
-Whites are pure neutral white; greys are neutral; shadows are cool grey-violet or
+Whites are pure neutral white (linen, cravats and gloves are bright cool white like
+fresh snow, never cream or ivory); greys are neutral; shadows are cool grey-violet or
 deep blue-grey, never brown or amber. Paint each material in its own local colour;
 do not unify the image with any overall tone.
 NO yellow, orange, amber, sepia, golden or brown overall tint. NO aged paper,
@@ -366,6 +405,7 @@ ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front view, head to hip, centred. Top of head at 6% of the image height,
 eyes at 20%, chin at 31%. Keep both hands inside the frame.
+IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Tall, narrow shoulders, angular face, straight brows, attentive analytical eyes. Light-medium beige skin with a neutral undertone. Straight black hair in a plain low knot, no ornament. No glasses.
 COSTUME: Slate-blue day dress of fine wool, long sleeves, small white collar, no jewellery.
 ACTING: Studying the viewer as if reading a document: head slightly tilted, hands loosely together.
@@ -380,7 +420,8 @@ no 3D render, no photographic detail, no uniform vector look, no global grain.
 COLOUR CONTROL (critical):
 Neutral daylight white balance (D65, 6500 K). This is a contemporary illustration,
 not an old painting or an old photograph.
-Whites are pure neutral white; greys are neutral; shadows are cool grey-violet or
+Whites are pure neutral white (linen, cravats and gloves are bright cool white like
+fresh snow, never cream or ivory); greys are neutral; shadows are cool grey-violet or
 deep blue-grey, never brown or amber. Paint each material in its own local colour;
 do not unify the image with any overall tone.
 NO yellow, orange, amber, sepia, golden or brown overall tint. NO aged paper,
@@ -401,6 +442,7 @@ ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front three-quarter view, head to hip, centred. Top of head at 6% of the image height,
 eyes at 20%, chin at 31%. Keep both hands inside the frame.
+IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Strong neck and shoulders, straight brows, a ready smile. Medium brown skin. Velaria traits: slate-green hair in loose half-up waves with a pearl-white streak at the front, muted copper irises. These traits do not change her skin, jaw or age.
 COSTUME: Sea-green gown with a side fastening and a V neckline (a port tradition), a short open jacket she has not buttoned.
 ACTING: Relaxed and amused, weight on one hip, looking straight at the viewer as if daring them to object.
@@ -415,7 +457,8 @@ no 3D render, no photographic detail, no uniform vector look, no global grain.
 COLOUR CONTROL (critical):
 Neutral daylight white balance (D65, 6500 K). This is a contemporary illustration,
 not an old painting or an old photograph.
-Whites are pure neutral white; greys are neutral; shadows are cool grey-violet or
+Whites are pure neutral white (linen, cravats and gloves are bright cool white like
+fresh snow, never cream or ivory); greys are neutral; shadows are cool grey-violet or
 deep blue-grey, never brown or amber. Paint each material in its own local colour;
 do not unify the image with any overall tone.
 NO yellow, orange, amber, sepia, golden or brown overall tint. NO aged paper,
@@ -436,6 +479,7 @@ ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front three-quarter view, head to hip, centred. Top of head at 6% of the image height,
 eyes at 20%, chin at 31%. Keep both hands inside the frame.
+IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Full figure, short elegant neck, heavy-lidded eyes, a slow knowing smile. Deep brown skin. Dark coily hair arranged low at the nape.
 COSTUME: Lavender-grey half-mourning silk gown with black lace trim, a narrow black mourning ribbon at the wrist embroidered with a single initial, a closed fan held in both hands.
 ACTING: She has seen all this before: one eyebrow slightly raised, fan closed in both hands.
@@ -450,7 +494,8 @@ no 3D render, no photographic detail, no uniform vector look, no global grain.
 COLOUR CONTROL (critical):
 Neutral daylight white balance (D65, 6500 K). This is a contemporary illustration,
 not an old painting or an old photograph.
-Whites are pure neutral white; greys are neutral; shadows are cool grey-violet or
+Whites are pure neutral white (linen, cravats and gloves are bright cool white like
+fresh snow, never cream or ivory); greys are neutral; shadows are cool grey-violet or
 deep blue-grey, never brown or amber. Paint each material in its own local colour;
 do not unify the image with any overall tone.
 NO yellow, orange, amber, sepia, golden or brown overall tint. NO aged paper,

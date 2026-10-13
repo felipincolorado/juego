@@ -87,6 +87,31 @@ def corregir(img, modo, valor, fuerza):
     return imagen, media, nueva_media, ganancia
 
 
+def neutralizar_blancos(imagen, fuerza):
+    """Lleva hacia el gris neutro sólo los píxeles claros y poco saturados
+    (linos, camisas, encajes pintados en crema). No toca la piel ni los colores."""
+    tiene_alfa = imagen.mode == "RGBA"
+    rgba = imagen.convert("RGBA")
+    datos = np.asarray(rgba).astype(np.float64)
+    rgb, alfa = datos[..., :3], datos[..., 3]
+    lum = rgb.mean(axis=2, keepdims=True)
+    sat = (rgb.max(axis=2) - rgb.min(axis=2))[..., None]
+    peso = np.clip((lum - 165.0) / 55.0, 0, 1) * np.clip(1.0 - sat / 55.0, 0, 1) * fuerza
+    salida = np.clip(rgb + (lum - rgb) * peso, 0, 255)
+    out = np.dstack([salida, alfa]).astype(np.uint8)
+    res = Image.fromarray(out, "RGBA")
+    return res if tiene_alfa else res.convert("RGB")
+
+
+def amarillo_de_blancos(imagen):
+    rgb = np.asarray(imagen.convert("RGB")).astype(np.float64)
+    m = rgb.mean(axis=2) > 200
+    if m.sum() < 50:
+        return float("nan")
+    c = rgb[m]
+    return float(((c[:, 0] + c[:, 1]) / 2 - c[:, 2]).mean())
+
+
 def procesar(ruta, destino, args):
     img = Image.open(ruta)
     if args.zona:
@@ -96,10 +121,14 @@ def procesar(ruta, destino, args):
     else:
         modo, valor = "borde", args.borde
     imagen, antes, despues, ganancia = corregir(img, modo, valor, args.fuerza)
-    imagen.save(destino)
     print(f"{os.path.basename(ruta)}: referencia RGB {antes.round(1)} "
           f"(amarillo {indice_amarillo(antes):+.1f}) -> {despues.round(1)} "
           f"(amarillo {indice_amarillo(despues):+.1f}); ganancias {ganancia.round(3)}")
+    if args.blancos > 0:
+        previo = amarillo_de_blancos(imagen)
+        imagen = neutralizar_blancos(imagen, args.blancos)
+        print(f"   blancos: amarillo {previo:+.1f} -> {amarillo_de_blancos(imagen):+.1f}")
+    imagen.save(destino)
 
 
 def main():
@@ -111,6 +140,8 @@ def main():
     g.add_argument("--zona", help="Rectángulo neutro x,y,ancho,alto en píxeles")
     g.add_argument("--mundo-gris", action="store_true", help="Sin referencia: media de toda la imagen")
     p.add_argument("--fuerza", type=float, default=1.0, help="0 = nada, 1 = corrección completa")
+    p.add_argument("--blancos", type=float, default=0.0,
+                   help="0-1: además, neutraliza blancos pintados en crema (linos, camisas). Recomendado 0.8")
     args = p.parse_args()
 
     if os.path.isdir(args.entrada):
