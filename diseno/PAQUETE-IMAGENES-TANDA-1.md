@@ -52,7 +52,7 @@ Estas cartas usan los recortes de la ilustración maestra (regla de encuadre pro
 
 ### 3.1 Tamaños reales del generador
 
-Los formatos habituales del modelo son **1024 × 1024, 1024 × 1536 (vertical) o 1536 × 1024 (horizontal)**; comprobar siempre las dimensiones reales del archivo recibido. Los tamaños de la especificación (por ejemplo, mapa 2340 × 3000) son **objetivos**, no capacidades garantizadas: se intentan alcanzar después con un escalador que conserve el trazo (Krita, Real-ESRGAN, Topaz u otro) y se aceptan sólo tras revisión visual a tamaño de uso. **Escalar no cambia la proporción:** si el destino tiene otra proporción, hay que recortar o ampliar el lienzo (ver KEY-01). Transparencia, tamaño y escalado se registran como «objetivo» hasta comprobarlos.
+Los formatos habituales del modelo son **1024 × 1024, 1024 × 1536 (vertical) o 1536 × 1024 (horizontal)**; comprobar siempre las dimensiones reales del archivo recibido. Los tamaños de la especificación (por ejemplo, mapa ~2304 × 3456) son **objetivos**, no capacidades garantizadas: se intentan alcanzar después con un escalador que conserve el trazo (Krita, Real-ESRGAN, Topaz u otro) y se aceptan sólo tras revisión visual a tamaño de uso. **Escalar no cambia la proporción:** si el destino tiene otra proporción, hay que recortar o ampliar el lienzo (ver KEY-01). Transparencia, tamaño y escalado se registran como «objetivo» hasta comprobarlos.
 
 ### 3.2 Método de capas (de la imagen aprobada a piezas alineadas)
 
