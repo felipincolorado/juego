@@ -107,8 +107,8 @@
      "en": "Air, stone and a path. This I know how to do."
     },
     {
-     "es": "¡Un paseo! Te debo una. …Le debo una.",
-     "en": "A walk! I owe you one. Truly."
+     "es": "¡Un paseo! En Greda esto se llama «ir a trabajar».",
+     "en": "A stroll! Back in Greda we call this “going to work”."
     }
    ],
    "no_gusta": [
@@ -145,8 +145,8 @@
      "en": "It worked! And this time nobody had to pay for it."
     },
     {
-     "es": "¿Lo ves? …¿Lo ve? Le dije que saldría bien. Más o menos así.",
-     "en": "See? I told you it'd go well. Roughly like that."
+     "es": "Le dije que saldría bien. No le dije cómo, pero salió.",
+     "en": "I told you it would work out. I didn't say how, but it did."
     },
     {
      "es": "Me han dado las gracias por algo que no era el apellido. Esto me lo apunto.",
@@ -215,8 +215,8 @@
      "en": "Fine. I'll treat it like a hill: slowly, no complaining."
     },
     {
-     "es": "No discutiré. Hoy no. Seguramente.",
-     "en": "I won't argue. Not today. Probably."
+     "es": "Llevaré paciencia. La de mi madre, que la mía no alcanza.",
+     "en": "I'll bring patience. My mother's, since mine won't stretch that far."
     },
     {
      "es": "Iré. Pero si empieza la discusión, no seré quien la termine.",
@@ -225,22 +225,22 @@
    ],
    "agitada": [
     {
-     "es": "Estoy bien. Necesito aire. Mucho aire.",
-     "en": "I'm fine. I need air. A lot of air."
+     "es": "Deme algo que cargar. Lo que sea. Si no, me como las uñas.",
+     "en": "Give me something to carry. Anything. Otherwise I'll bite my nails."
     },
     {
      "es": "No me pida que me quede quieto ahora.",
      "en": "Don't ask me to sit still right now."
     },
     {
-     "es": "Dame un momento. …Deme. Ya se me pasa.",
-     "en": "Give me a moment. It'll pass."
+     "es": "Respiro como en la subida al paso: corto, y sin mirar abajo.",
+     "en": "I'm breathing like on the climb to the pass: short breaths, and don't look down."
     }
    ],
    "tras_escandalo": [
     {
-     "es": "Que hablen. Mientras hablan de mí, no hablan de otros.",
-     "en": "Let them talk. While it's about me, it isn't about someone else."
+     "es": "Si tienen que hablar de alguien, mejor de mí. Tengo espalda ancha.",
+     "en": "If they must talk about someone, better me. I've got broad shoulders."
     },
     {
      "es": "Me miran como a un carro volcado. Ya me levantaré.",
@@ -501,8 +501,8 @@
      "en": "I'll listen to the teacher. To the very end."
     },
     {
-     "es": "Una clase. Bien. La disciplina se agradece.",
-     "en": "A lesson. Good. Discipline is welcome."
+     "es": "Bien. Cuatro compases, media vuelta, saludo. Puedo con eso.",
+     "en": "Good. Four bars, half-turn, bow. I can manage that."
     }
    ],
    "reemplazo": [
@@ -677,8 +677,8 @@
    ],
    "agitada": [
     {
-     "es": "Estoy bien. Siempre estoy bien. Ese es el problema.",
-     "en": "I'm fine. I'm always fine. That's the problem."
+     "es": "Siempre estoy bien. Ese es, precisamente, el problema.",
+     "en": "I'm always fine. That, precisely, is the problem."
     },
     {
      "es": "Necesito una ventana. Y que nadie me pregunte nada.",
@@ -695,8 +695,8 @@
      "en": "A scandal. How vulgar. And how well it sells."
     },
     {
-     "es": "Que hablen. Mientras miran aquí, no miran a mi casa.",
-     "en": "Let them talk. While they look here, they aren't looking at my house."
+     "es": "Mientras miren aquí, no mirarán a mi casa. Sonreiré más.",
+     "en": "As long as they look here, they won't look at my house. I'll smile more."
     },
     {
      "es": "Mi tía querrá hablar conmigo. Tarde, como siempre.",
@@ -719,8 +719,8 @@
    ],
    "clase": [
     {
-     "es": "Una clase. Corregiré posturas sin que nadie me lo pida.",
-     "en": "A lesson. I'll correct posture, entirely unasked."
+     "es": "Corregiré posturas sin que nadie me lo pida. Es mi forma de ayudar.",
+     "en": "I'll correct postures without being asked. It's how I help."
     },
     {
      "es": "Ya sé bailar. Vengo a ver cómo aprenden los demás.",
@@ -827,8 +827,8 @@
      "en": "I've been invited to another dinner. The Rovenas. Plural."
     },
     {
-     "es": "Ha salido bien y no sé qué hacer con las manos. Aplaudiré.",
-     "en": "It went well and I don't know what to do with my hands. I'll applaud."
+     "es": "Ha salido bien. Voy a contárselo a alguien que no estuvo, para exagerar.",
+     "en": "It went well. I'm off to tell someone who wasn't there, so I can exaggerate."
     }
    ],
    "medias": [
@@ -879,8 +879,8 @@
      "en": "I'll have to be funny. And combed. Both at once."
     },
     {
-     "es": "No me mire así. No he preparado nada. …Lo he preparado todo.",
-     "en": "Don't look at me like that. I've prepared nothing. …I've prepared everything."
+     "es": "No he preparado nada. …He preparado tres frases y un desmayo, por si acaso.",
+     "en": "I haven't prepared a thing. …I've prepared three lines and a swoon, just in case."
     },
     {
      "es": "Esta vez me tiembla el verso. Qué raro.",
@@ -903,8 +903,8 @@
    ],
    "agitada": [
     {
-     "es": "Estoy bien. Un chiste y se me pasa.",
-     "en": "I'm fine. One joke and it'll pass."
+     "es": "Deme un minuto. Estoy buscando un chiste y no aparece ninguno.",
+     "en": "Give me a minute. I'm looking for a joke and none will come."
     },
     {
      "es": "No se me ocurre nada gracioso. Eso sí que es grave.",
@@ -945,8 +945,8 @@
    ],
    "clase": [
     {
-     "es": "Una clase. Que conste que el que pisaba era otro.",
-     "en": "A lesson. For the record, the toe-stepper was someone else."
+     "es": "Que conste en acta: aquella vez, el que pisaba era otro.",
+     "en": "Let the record show: that time, someone else was doing the treading."
     },
     {
      "es": "Aprenderé un paso. Uno. No pidamos milagros.",
@@ -1129,8 +1129,8 @@
    ],
    "agitada": [
     {
-     "es": "Estoy bien. Sólo necesito repasar. Desde el principio.",
-     "en": "I'm fine. I just need to go over it. From the top."
+     "es": "Necesito repasar. Desde el principio. Desde la primera reverencia.",
+     "en": "I need to go over it again. From the beginning. From the very first curtsy."
     },
     {
      "es": "No me toque el peinado, por favor. Es lo único en su sitio.",
@@ -1209,14 +1209,14 @@
      "en": "Who said it first? That always matters."
     },
     {
-     "es": "¿Se ha dado cuenta de que nadie contesta lo que se le pregunta?",
-     "en": "Have you noticed nobody answers what they're actually asked?"
+     "es": "Nadie contesta lo que se le pregunta. Lo he contado: tres de cada cuatro.",
+     "en": "Nobody answers what they're asked. I've counted: three out of four."
     }
    ],
    "asignado": [
     {
-     "es": "¿Habrá biblioteca? Lo pregunto por si acaso.",
-     "en": "Will there be a library? Just in case."
+     "es": "Iré. Llevaré un libro pequeño, por si la conversación es grande.",
+     "en": "I'll go. I'll bring a small book, in case the conversation turns out large."
     },
     {
      "es": "¿Quién es el anfitrión? ¿Y quién le debe qué?",
@@ -1233,8 +1233,8 @@
      "en": "People actually arguing. What a relief."
     },
     {
-     "es": "¿Una mesa larga? Es un archivo que habla.",
-     "en": "A long table? That's an archive that talks."
+     "es": "Una mesa larga es un archivo que habla. Me sentaré en el medio.",
+     "en": "A long table is an archive that talks. I'll sit in the middle."
     },
     {
      "es": "¿Quién se sienta a mi lado? Ojalá alguien que me lleve la contraria.",
@@ -1247,8 +1247,8 @@
      "en": "Too many people saying nothing at once."
     },
     {
-     "es": "¿Por qué la música tiene que estar tan alta? Nadie se oye.",
-     "en": "Why must the music be so loud? Nobody can hear anybody."
+     "es": "Con la música tan alta, la gente se acerca a hablar. Eso, al menos, es útil.",
+     "en": "With the music so loud, people lean in to talk. That, at least, is useful."
     },
     {
      "es": "¿Tendré que bailar? Nunca tuve lecciones. ¿Se nota?",
@@ -1261,12 +1261,12 @@
      "en": "They're lying in the carriage opposite. You can tell from their hands."
     },
     {
-     "es": "¿Ese escudo no era de otro color el año pasado?",
-     "en": "Wasn't that crest a different colour last year?"
+     "es": "Ese escudo era azul el año pasado. Alguien ha cambiado de alianza.",
+     "en": "That crest was blue last year. Someone has changed allegiance."
     },
     {
-     "es": "¿Cuánto se tarda en este trayecto? Lo anoto. Costumbre.",
-     "en": "How long does this route take? I'll note it. Habit."
+     "es": "Diecisiete minutos de la residencia hasta aquí. Lo anoto. Costumbre.",
+     "en": "Seventeen minutes from the residence to here. I'll note it. Habit."
     }
    ],
    "bien": [
@@ -1275,8 +1275,8 @@
      "en": "It worked, and I know exactly why."
     },
     {
-     "es": "¿Lo ha notado? Me escucharon hasta el final. ¿Eso pasa a menudo?",
-     "en": "Did you notice? They listened to the end. Does that happen often?"
+     "es": "Me escucharon hasta el final. No sabía que eso se sentía así.",
+     "en": "They listened to me all the way through. I didn't know that felt like this."
     },
     {
      "es": "Nadie me ha preguntado de qué familia vengo. Me han preguntado qué pienso.",
@@ -1293,8 +1293,8 @@
      "en": "Why did they laugh? It wasn't a joke."
     },
     {
-     "es": "Medio resultado. Me falta un dato. ¿Cuál?",
-     "en": "Half a result. I'm missing a piece. Which one?"
+     "es": "Medio resultado. Me falta un dato. Lo encontraré.",
+     "en": "Half a result. I'm missing one fact. I'll find it."
     }
    ],
    "mal": [
@@ -1321,8 +1321,8 @@
      "en": "Did anyone see who started it? It matters."
     },
     {
-     "es": "¿Me permiten una pregunta? Sólo una. Bueno, dos.",
-     "en": "May I ask a question? Just one. Well, two."
+     "es": "Un momento. Lo que acaba de decir contradice lo que dijo a las nueve.",
+     "en": "One moment. What you just said contradicts what you said at nine."
     }
    ],
    "con_interes": [
@@ -1345,12 +1345,12 @@
      "en": "Will we argue? Good. I'll bring dates."
     },
     {
-     "es": "¿No había otra persona disponible? Lo pregunto con curiosidad.",
-     "en": "Was nobody else available? I ask purely out of curiosity."
+     "es": "Seré educada. Lo de simpática, ya veremos.",
+     "en": "I'll be polite. Pleasant, we'll see."
     },
     {
-     "es": "Seré educada. ¿También es obligatorio ser simpática?",
-     "en": "I'll be polite. Is being pleasant also required?"
+     "es": "Recuerdo exactamente lo que dijo la última vez. Él, no.",
+     "en": "I remember exactly what was said last time. They don't."
     }
    ],
    "agitada": [
@@ -1359,8 +1359,8 @@
      "en": "I'm thinking too fast. Could you speak more slowly?"
     },
     {
-     "es": "Necesito un rincón y diez minutos. ¿Aquí hay rincones?",
-     "en": "I need a corner and ten minutes. Are there corners here?"
+     "es": "Necesito un rincón y diez minutos. Siempre hay un rincón.",
+     "en": "I need a corner and ten minutes. There's always a corner."
     },
     {
      "es": "No me mire. ¿Por qué me mira todo el mundo?",
@@ -1387,8 +1387,8 @@
      "en": "Free? I'm behind on work at the Archive."
     },
     {
-     "es": "Una semana sin salones. ¿Me echarán de menos? No, ¿verdad?",
-     "en": "A week without salons. Will anyone miss me? No, will they?"
+     "es": "Una semana sin salones. Nadie me echará de menos, y eso tiene sus ventajas.",
+     "en": "A week without salons. No one will miss me, which has its advantages."
     },
     {
      "es": "Bien. Leeré. ¿Me presta algo que no haya leído nadie?",
@@ -1397,12 +1397,12 @@
    ],
    "clase": [
     {
-     "es": "¿Una clase de baile? ¿Para mí? ¿Está segura?",
-     "en": "A dance lesson? For me? Are you sure?"
+     "es": "Sé la fecha en que se inventó cada paso. Bailarlos es otra cosa.",
+     "en": "I know the date every step was invented. Dancing them is another matter."
     },
     {
-     "es": "Sé la historia de cada paso. ¿Bailarlos? Eso es otra cosa.",
-     "en": "I know the history of every step. Dancing them is another matter."
+     "es": "Contaré en voz alta. Me da igual quién se ría.",
+     "en": "I'll count out loud. I don't care who laughs."
     },
     {
      "es": "¿Por qué se cuenta en tres? Se lo preguntaré a la maestra.",
@@ -1415,8 +1415,8 @@
      "en": "Why me? Don't misunderstand: I'm going. But why?"
     },
     {
-     "es": "Dejo el libro abierto. Volveré a la misma página.",
-     "en": "I'll leave the book open. I'll be back on the same page."
+     "es": "Dejo el libro abierto en la página ciento doce. Volveré.",
+     "en": "I'm leaving the book open at page one hundred and twelve. I'll be back."
     },
     {
      "es": "¿A quién sustituyo? Necesito saber qué se esperaba de esa persona.",
@@ -1449,14 +1449,14 @@
      "en": "Delighted. Who's going to be scandalised this time?"
     },
     {
-     "es": "Llevaré el pelo suelto. Que se vayan acostumbrando.",
-     "en": "I'll wear my hair loose. They may as well get used to it."
+     "es": "Voy. Ya calculé el riesgo: alto, y me encanta.",
+     "en": "I'll go. I've worked out the risk: high, and I love it."
     }
    ],
    "gusta": [
     {
-     "es": "Aire, gente nueva y nadie mirándome el pelo. Perfecto.",
-     "en": "Fresh air, new faces and nobody staring at my hair. Perfect."
+     "es": "Aire, gente nueva y nada que firmar. Así se pasea en Nácar.",
+     "en": "Fresh air, new faces and nothing to sign. That's how we stroll in Nácar."
     },
     {
      "es": "¿Un paseo? Por fin puedo caminar a mi paso.",
@@ -1469,8 +1469,8 @@
    ],
    "no_gusta": [
     {
-     "es": "Otra vez me mirarán el pelo antes que la cara.",
-     "en": "Again they'll look at my hair before my face."
+     "es": "En una recepción nadie dice lo que vale nada. En el puerto, sí.",
+     "en": "At a reception nobody says what anything's worth. At the port, they do."
     },
     {
      "es": "Saludar en orden, sonreír en orden, aburrirse en orden.",
@@ -1501,8 +1501,8 @@
      "en": "They liked it, and I didn't have to pretend one bit."
     },
     {
-     "es": "Me han vuelto a invitar. Con mi pelo y todo.",
-     "en": "They've invited me back. Hair and all."
+     "es": "Me han vuelto a invitar. Mi madre dirá que es un buen contrato.",
+     "en": "They've invited me back. My mother will call it a good contract."
     },
     {
      "es": "Hoy nadie me ha pedido que baje la voz. Algo estamos haciendo bien.",
@@ -1589,8 +1589,8 @@
      "en": "If I stay, I'll say something. If I go, I'll say it anyway."
     },
     {
-     "es": "Estoy bien. Sólo quiero romper una regla. Una pequeña.",
-     "en": "I'm fine. I just want to break a rule. A small one."
+     "es": "Déjeme romper una regla. Una pequeña. Me arregla el día.",
+     "en": "Let me break a rule. A small one. It'll mend my day."
     }
    ],
    "tras_escandalo": [
@@ -1617,14 +1617,14 @@
      "en": "A week without salons. They'll miss me. If not, their loss."
     },
     {
-     "es": "Escribiré a Nácar. Que sepan que Valcenda aún no me ha domado.",
-     "en": "I'll write home to Nácar. Valcenda hasn't tamed me yet."
+     "es": "Bajaré a los muelles a ver quién llega. Siempre llega alguien sin permiso.",
+     "en": "I'll go down to the wharves to see who comes in. Someone always arrives without permission."
     }
    ],
    "clase": [
     {
-     "es": "Una clase. Prometo no burlarme de la maestra. Mucho.",
-     "en": "A lesson. I promise not to mock the teacher. Much."
+     "es": "Prometo no burlarme de la maestra. Mucho. Bueno, un poco.",
+     "en": "I promise not to mock the teacher. Much. Well, a little."
     },
     {
      "es": "Ya me echaron de una. ¿Cuántas faltan para el récord?",
@@ -1645,8 +1645,8 @@
      "en": "Coming. No formal invitation, which suits me best."
     },
     {
-     "es": "Me recojo el pelo por el camino. O no.",
-     "en": "I'll pin my hair up on the way. Or not."
+     "es": "Voy. A los barcos que llegan tarde también se les espera.",
+     "en": "Coming. Ships that arrive late still get a welcome."
     }
    ]
   },
@@ -1699,8 +1699,8 @@
      "en": "Another parade of debutantes. Patience."
     },
     {
-     "es": "Una clase. Ya aprendí todo eso, y lo olvidé con gusto.",
-     "en": "A lesson. I learned all that once, and gladly forgot it."
+     "es": "Ya aprendí todo eso, y lo olvidé con muchísimo gusto.",
+     "en": "I learned all that once, and forgot it with enormous pleasure."
     },
     {
      "es": "Iré, pero sentada. Mis rodillas ya hicieron su temporada.",
@@ -1807,8 +1807,8 @@
    ],
    "agitada": [
     {
-     "es": "Estoy perfectamente. Sólo necesito sentarme. Y silencio.",
-     "en": "I'm perfectly well. I just need to sit. And silence."
+     "es": "Una silla, querida. Y que nadie me pregunte si estoy bien.",
+     "en": "A chair, darling. And let no one ask me if I'm all right."
     },
     {
      "es": "Hacía mucho que nada me alteraba. No me gusta haberlo echado de menos.",
@@ -1849,8 +1849,8 @@
    ],
    "clase": [
     {
-     "es": "Una clase. Me sentaré al fondo a juzgar.",
-     "en": "A lesson. I'll sit at the back and judge."
+     "es": "Me sentaré al fondo a juzgar. Alguien tiene que hacerlo.",
+     "en": "I'll sit at the back and judge. Somebody has to."
     },
     {
      "es": "En mi época esto se enseñaba mejor. Y más corto.",
