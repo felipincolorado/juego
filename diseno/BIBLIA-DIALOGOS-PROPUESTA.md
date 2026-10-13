@@ -148,7 +148,7 @@ Cada pareja con atracción mutua tiene cuatro escenas: **C (curiosidad), B (conf
 
 ## 5. Propuestas de matrimonio, por tipo de unión
 
-La propuesta ocurre en la **semana 6, durante el Gran Baile**, si la pareja llegó al umbral (o si una presión externa la empuja, en las uniones lavanda, desiguales y de compañía).
+La propuesta ocurre **sólo en la semana 6, durante el Gran Baile**, tras la decisión del jugador en el carnet de baile («el último vals»). Las uniones lavanda, desiguales y de compañía sólo se ofrecen allí si la partida les dio un motivo (acuerdo, presión familiar, deuda).
 
 ### 5.1 Atracción mutua — Teo y Celia
 
@@ -277,7 +277,6 @@ Los 60 cierres restantes siguen estas plantillas, con detalles propios de cada p
 
 **Pendiente:**
 1. ¿La guía como **notas manuscritas** sin personaje visible?
-2. ¿Las propuestas sólo en el Gran Baile, o una unión desigual puede adelantarse por presión familiar en la semana 5?
 3. Revisar el trato de Bridgerton en algunos episodios (doblaje latino e inglés) antes de producir todos los textos.
 
 ## English summary

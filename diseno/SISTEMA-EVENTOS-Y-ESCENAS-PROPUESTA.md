@@ -43,7 +43,7 @@
 | B | Confianza | Cercanía 2 | Escena B · **visita privada** · confidencia en la ficha | **Pasan del usted al tú** |
 | A | Umbral romántico | Cercanía 3 + atracción posible | Escena A (umbral) · imagen de roce de manos | Comentarios que se nombran el uno al otro |
 | ★ | Declaración | Escena A vista + visita privada | **Escena del beso** (imagen) | — |
-| ⚭ | Propuesta | Gran Baile (o presión externa en la semana 5) | Escena de propuesta según el tipo de unión | — |
+| ⚭ | Propuesta | **Sólo en el Gran Baile**, mediante el carnet de baile (§7 bis) | Escena de propuesta según el tipo de unión | — |
 
 Las uniones lavanda, desiguales y de compañía **no pasan por el beso**: llegan a la propuesta por acuerdo o presión, con su propia escena (biblia §5).
 
@@ -117,6 +117,25 @@ Sólo se abre si el jugador quiere. No aparece ningún aviso obligatorio. Las l�
 4. **Guía sin retrato:** las indicaciones del tutorial son notas manuscritas de una asistente que nunca se ve. La reina es la única que aparece en la apertura.
 
 ---
+
+## 7 bis. El último vals — la decisión del Gran Baile
+
+**Decisión del usuario (14 oct.):** las uniones se deciden **en el Gran Baile final**, no durante la temporada. Una persona puede tener **dos intereses románticos**, incluso haber besado a dos sin que nadie lo sepa.
+
+**Principio:** durante la temporada el jugador sólo asigna eventos; los vínculos crecen solos y se *leen* (comentarios, paso del usted al tú, diario de la ficha). La única decisión de pareja llega al final. El juego se aprende jugando.
+
+**Pantalla del carnet de baile:**
+
+1. Los ocho retratos; bajo cada uno, **hasta dos intereses** (los de mayor cercanía por encima del umbral).
+2. **Dos intereses** → el jugador elige con quién baila el último vals, o «ninguno».
+3. **Un interés** → la propuesta ocurre si ambos llegaron lejos; el jugador sólo confirma.
+4. **Ningún interés** → final en solitario («sin enamorarse» o «por amor no correspondido», según su historia).
+5. **Exclusividad automática:** al elegir una pareja, esas dos personas desaparecen de las demás opciones. Romper un corazón es parte de la decisión.
+6. **Uniones sin amor sólo si tienen motivo** en la partida: acuerdo lavanda pactado, presión familiar (por ejemplo, el compromiso Lobreda–Veyra), deuda. No se ofrecen combinaciones sin razón. El jugador no ve si serán felices: lo descubre en el epílogo.
+7. **El secreto del doble beso:** si alguien besó a dos personas, la descartada lo descubre en el baile (escena breve de reacción) antes de las propuestas.
+8. Después: escenas de propuesta encadenadas → Crónica final → epílogos.
+
+**Textos añadidos:** hasta 6 escenas de reacción al doble beso (sólo para quienes pueden tener dos intereses con beso: Dario, Irene, Teo, Nilo, Camila, Celia).
 
 ## 8. Decisiones pendientes
 

@@ -55,7 +55,7 @@ Cada semana: 1 invitación **obligatoria de historia**, 2–3 **opcionales**, 1 
 | **3 · Noche de los Faroles** | Conmemoración del incendio del Archivo (mundo v0.3): duelo, fiesta y protesta en las calles | **Velada de los Faroles** junto al río | La *Hoja* insinúa que sobrevivieron páginas del Pacto del Umbral. Media ciudad se pone nerviosa |
 | **4 · Luna llena** | Plenilunio (fecha fijada por autoría): Nilo no puede asistir a nada esa noche sin arriesgar su secreto | **Teatro de gala** (cae la misma noche) | Escándalo: la *Hoja* publica que «alguien de los salones no es lo que aparenta» |
 | **5 · Cierre de Cuentas** | Tormentas de Nácar y vencimiento de deudas (mundo v0.3); la tregua de Orsena tensa a la casa Veyra | **Cena de las deudas** en la villa Serravalle: se renegocian compromisos | Saúl recibe una orden que podría alejarlo de Valcenda; la deuda Miravés–Ferrán vence |
-| **6 · Gran Baile del Sello** | La reina sella en el Archivo las uniones de la temporada | **Gran Baile del Sello** en el salón de baile | Se descubre la autoría de la *Hoja*; propuestas, rechazos y sellos; epílogo |
+| **6 · Gran Baile del Sello** | La reina sella en el Archivo las uniones de la temporada | **Gran Baile del Sello** en el salón de baile, con **el último vals**: el jugador decide en el carnet de baile con quién se queda cada persona que tenga dos intereses (ver sistema de eventos §7 bis) | Se descubre la autoría de la *Hoja*; dobles besos descubiertos, propuestas, rechazos y sellos; epílogo |
 
 **Reglas del calendario:**
 - Un evento obligatorio sin asistentes válidos **no bloquea** la historia: se resuelve con un desenlace escrito («la casamentera envió sus disculpas»), con coste de reputación.
