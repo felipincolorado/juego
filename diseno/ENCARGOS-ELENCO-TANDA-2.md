@@ -98,6 +98,18 @@ Generar: 1024 × 1536. Objetivo tras escalar: 1536 × 2304 (sujeto a comprobaci�
 
 **Adjuntos del original formal:** los originales ilustrados de técnica (Dressmaker y los del proyecto), declarados como **técnica, no identidad ni color**; la carta de color individual si se prepara. Nunca adjuntar otro personaje del elenco.
 
+**Qué referencias de Dressmaker adjuntar (medido el 14 oct.):**
+
+| Referencia | Blancos (índice de amarillo) | Uso recomendado |
+|---|---|---|
+| Chica del vestido blanco y pelo rubio | +6 (casi neutra) | **Adjuntar**: línea, pintura y blancos con sombra lila fría |
+| Chica de vestido verde agua y abanico | −5 (fría) | **Adjuntar**: color local limpio, guantes blancos fríos |
+| Chica de gafas y chaleco verde | +22 (crema) | No adjuntar: enseña el blanco crema |
+| Dama de rosa con sombrero de pájaro | +23 (crema) | No adjuntar por color (sí sirve para estudiar actuación y personalidad del diseño) |
+| Dama de negro | +15 (cálida) | No adjuntar |
+
+La línea de las tres cálidas es marrón (≈ RGB 78·63·44); la de las dos frías es gris oscuro. El bloque de técnica pide gris-marrón oscuro, intermedio.
+
 **Aviso sobre Dressmaker:** si sus imágenes tienen una paleta cálida, adjuntarlas empuja hacia el amarillo. Declararlas explícitamente como referencia de **línea y pintura** y confiar el color al bloque de §2.3 y a la corrección posterior.
 
 ---
@@ -107,13 +119,19 @@ Generar: 1024 × 1536. Objetivo tras escalar: 1536 × 2304 (sujeto a comprobaci�
 Bloque de técnica común (ya incluido abajo en cada prompt):
 
 ```text
-TECHNIQUE: handcrafted illustration for a narrative mobile game, in the spirit of the
-attached hand-made reference: pressure-varied lines, slightly irregular, always darker
-than the material they outline; where light meets dark, the darker material owns the
-edge. Broad matte paint shapes, few structural shadows, quiet surfaces, texture only
-in small local areas. Hair in clear masses with few divisions and sparse highlights.
-Distinct, individual adult face (no generic beauty template). No plastic modelling,
-no 3D render, no photographic detail, no uniform vector look, no global grain.
+TECHNIQUE (hand-made look of the attached references):
+Hand-drawn ink line with a slight wobble, heavier on the outer silhouette, thinner and
+sometimes broken inside; line colour dark grey-brown, softer than pure black.
+Flat local colour fills with ONE simple shadow shape per material; shadow edges soft and
+slightly patchy, like gouache or marker on paper. Almost no gradients: no airbrush,
+no smooth rendering, no glossy velvet or satin effects.
+Highlights only as a few graphic shapes (hair, eyes, jewels). Patterns, lace and
+embroidery suggested with a few strokes, not rendered in detail.
+Face built from simple, characterful shapes: simple nose, small blush patches, expressive
+brows, individual features. Slightly stylised proportions (head and hair a little large),
+neither realistic nor anime. Hands simplified but readable.
+Whites have cool lilac-grey shadows.
+No 3D render, no photographic detail, no uniform vector look, no global grain.
 ```
 
 ### 5.1 Dario Miravés (primero)
@@ -139,13 +157,19 @@ shoulders: no padded or puffed shoulders.
 ACTING: perfect courtesy hiding a closed door. He is turning the ring with his thumb;
 his gaze arrives at the viewer a moment late.
 COLOUR KEY: plum, black, pure white linen, pale olive skin, grey eyes.
-TECHNIQUE: handcrafted illustration for a narrative mobile game, in the spirit of the
-attached hand-made reference: pressure-varied lines, slightly irregular, always darker
-than the material they outline; where light meets dark, the darker material owns the
-edge. Broad matte paint shapes, few structural shadows, quiet surfaces, texture only
-in small local areas. Hair in clear masses with few divisions and sparse highlights.
-Distinct, individual adult face (no generic beauty template). No plastic modelling,
-no 3D render, no photographic detail, no uniform vector look, no global grain.
+TECHNIQUE (hand-made look of the attached references):
+Hand-drawn ink line with a slight wobble, heavier on the outer silhouette, thinner and
+sometimes broken inside; line colour dark grey-brown, softer than pure black.
+Flat local colour fills with ONE simple shadow shape per material; shadow edges soft and
+slightly patchy, like gouache or marker on paper. Almost no gradients: no airbrush,
+no smooth rendering, no glossy velvet or satin effects.
+Highlights only as a few graphic shapes (hair, eyes, jewels). Patterns, lace and
+embroidery suggested with a few strokes, not rendered in detail.
+Face built from simple, characterful shapes: simple nose, small blush patches, expressive
+brows, individual features. Slightly stylised proportions (head and hair a little large),
+neither realistic nor anime. Hands simplified but readable.
+Whites have cool lilac-grey shadows.
+No 3D render, no photographic detail, no uniform vector look, no global grain.
 COLOUR CONTROL (critical):
 Neutral daylight white balance (D65, 6500 K). This is a contemporary illustration,
 not an old painting or an old photograph.
@@ -240,6 +264,21 @@ Keep readable anatomy, complete hands and attached accessories.
 
 **Estado:** candidato. No aprobar la identidad hasta generar la versión 2:3 con los hombros corregidos.
 
+### Análisis de técnica: Dressmaker frente a Dario v1
+
+| Rasgo | Dressmaker | Dario v1 | Ajuste en el prompt |
+|---|---|---|---|
+| Línea | Hecha a mano, temblorosa, más gruesa en el contorno, a veces abierta o con trazos de construcción | Limpia, uniforme, casi negra | Línea temblorosa, contorno más grueso, gris-marrón |
+| Pintura | Relleno plano + **una** sombra por material, bordes de pincel irregulares (gouache o rotulador) | Degradados suaves, terciopelo renderizado | Sin degradados ni brillos; una sombra por material |
+| Rostro | Formas simples y con carácter: nariz simple, rubor en manchas, cejas expresivas | Semirrealista, «guapo de ilustración» | Formas simples, proporciones algo estilizadas |
+| Proporción | Cabeza y pelo algo grandes, manos simplificadas | Realista, alargada | Estilización leve |
+| Detalle | Estampados y encajes sugeridos con pocos trazos | Damasco del chaleco detallado | Sugerir, no renderizar |
+| Personalidad | Objetos y gestos que cuentan (lápiz en el pelo, pájaro en el sombrero, abanico) | Gesto del anillo: bien | Mantener |
+
+**Atractivo:** Dressmaker es más simpático que seductor. El atractivo de nuestro elenco debe venir del **diseño y la actuación** (silueta, mirada, gesto), no de un renderizado más realista.
+
+
+
 
 ---
 
@@ -262,13 +301,19 @@ IDENTITY: Broad shoulders, strong neck, broad jaw, thick dark brows, slightly br
 COSTUME: Forest-green wool tailcoat slightly rumpled, oatmeal wool waistcoat with wooden buttons, linen shirt, loosely tied cravat.
 ACTING: Trying to look formal for the occasion; a held-back smile escapes; one hand on his chest as if about to bow.
 COLOUR KEY: forest green, oatmeal, white linen, tanned skin.
-TECHNIQUE: handcrafted illustration for a narrative mobile game, in the spirit of the
-attached hand-made reference: pressure-varied lines, slightly irregular, always darker
-than the material they outline; where light meets dark, the darker material owns the
-edge. Broad matte paint shapes, few structural shadows, quiet surfaces, texture only
-in small local areas. Hair in clear masses with few divisions and sparse highlights.
-Distinct, individual adult face (no generic beauty template). No plastic modelling,
-no 3D render, no photographic detail, no uniform vector look, no global grain.
+TECHNIQUE (hand-made look of the attached references):
+Hand-drawn ink line with a slight wobble, heavier on the outer silhouette, thinner and
+sometimes broken inside; line colour dark grey-brown, softer than pure black.
+Flat local colour fills with ONE simple shadow shape per material; shadow edges soft and
+slightly patchy, like gouache or marker on paper. Almost no gradients: no airbrush,
+no smooth rendering, no glossy velvet or satin effects.
+Highlights only as a few graphic shapes (hair, eyes, jewels). Patterns, lace and
+embroidery suggested with a few strokes, not rendered in detail.
+Face built from simple, characterful shapes: simple nose, small blush patches, expressive
+brows, individual features. Slightly stylised proportions (head and hair a little large),
+neither realistic nor anime. Hands simplified but readable.
+Whites have cool lilac-grey shadows.
+No 3D render, no photographic detail, no uniform vector look, no global grain.
 COLOUR CONTROL (critical):
 Neutral daylight white balance (D65, 6500 K). This is a contemporary illustration,
 not an old painting or an old photograph.
@@ -299,13 +344,19 @@ IDENTITY: Tall, long neck, square shoulders, high cheekbones, defined jaw, calm 
 COSTUME: Steel-blue dress tailcoat with a high collar and silver buttons, impeccable white cravat, white gloves.
 ACTING: Composed and reliable: hands behind his back, chin level, direct steady gaze; the stillness of someone who keeps his word.
 COLOUR KEY: steel blue, silver, pure white, deep brown skin.
-TECHNIQUE: handcrafted illustration for a narrative mobile game, in the spirit of the
-attached hand-made reference: pressure-varied lines, slightly irregular, always darker
-than the material they outline; where light meets dark, the darker material owns the
-edge. Broad matte paint shapes, few structural shadows, quiet surfaces, texture only
-in small local areas. Hair in clear masses with few divisions and sparse highlights.
-Distinct, individual adult face (no generic beauty template). No plastic modelling,
-no 3D render, no photographic detail, no uniform vector look, no global grain.
+TECHNIQUE (hand-made look of the attached references):
+Hand-drawn ink line with a slight wobble, heavier on the outer silhouette, thinner and
+sometimes broken inside; line colour dark grey-brown, softer than pure black.
+Flat local colour fills with ONE simple shadow shape per material; shadow edges soft and
+slightly patchy, like gouache or marker on paper. Almost no gradients: no airbrush,
+no smooth rendering, no glossy velvet or satin effects.
+Highlights only as a few graphic shapes (hair, eyes, jewels). Patterns, lace and
+embroidery suggested with a few strokes, not rendered in detail.
+Face built from simple, characterful shapes: simple nose, small blush patches, expressive
+brows, individual features. Slightly stylised proportions (head and hair a little large),
+neither realistic nor anime. Hands simplified but readable.
+Whites have cool lilac-grey shadows.
+No 3D render, no photographic detail, no uniform vector look, no global grain.
 COLOUR CONTROL (critical):
 Neutral daylight white balance (D65, 6500 K). This is a contemporary illustration,
 not an old painting or an old photograph.
@@ -336,13 +387,19 @@ IDENTITY: Slim and restless, narrow face, very mobile arched brows, wide mouth. 
 COSTUME: His only good tailcoat in dusty mauve-rose, slightly worn at the cuffs; discreet patterned waistcoat; loosely knotted cravat.
 ACTING: Trying very hard to look serious and almost managing it: one corner of the mouth already rising, one eyebrow ahead of the joke.
 COLOUR KEY: dusty mauve-rose, white shirt, copper hair, freckled fair skin.
-TECHNIQUE: handcrafted illustration for a narrative mobile game, in the spirit of the
-attached hand-made reference: pressure-varied lines, slightly irregular, always darker
-than the material they outline; where light meets dark, the darker material owns the
-edge. Broad matte paint shapes, few structural shadows, quiet surfaces, texture only
-in small local areas. Hair in clear masses with few divisions and sparse highlights.
-Distinct, individual adult face (no generic beauty template). No plastic modelling,
-no 3D render, no photographic detail, no uniform vector look, no global grain.
+TECHNIQUE (hand-made look of the attached references):
+Hand-drawn ink line with a slight wobble, heavier on the outer silhouette, thinner and
+sometimes broken inside; line colour dark grey-brown, softer than pure black.
+Flat local colour fills with ONE simple shadow shape per material; shadow edges soft and
+slightly patchy, like gouache or marker on paper. Almost no gradients: no airbrush,
+no smooth rendering, no glossy velvet or satin effects.
+Highlights only as a few graphic shapes (hair, eyes, jewels). Patterns, lace and
+embroidery suggested with a few strokes, not rendered in detail.
+Face built from simple, characterful shapes: simple nose, small blush patches, expressive
+brows, individual features. Slightly stylised proportions (head and hair a little large),
+neither realistic nor anime. Hands simplified but readable.
+Whites have cool lilac-grey shadows.
+No 3D render, no photographic detail, no uniform vector look, no global grain.
 COLOUR CONTROL (critical):
 Neutral daylight white balance (D65, 6500 K). This is a contemporary illustration,
 not an old painting or an old photograph.
@@ -373,13 +430,19 @@ IDENTITY: Petite, long neck, dancer's posture, round face, large eyes, small chi
 COSTUME: Sage-green high-waisted gown with vertical botanical embroidery in a deeper green, short puffed sleeves, long white gloves.
 ACTING: Perfectly rehearsed: practised smile, chin slightly high, gloved hands folded at the waist.
 COLOUR KEY: sage green, deeper green embroidery, white gloves, rosy fair skin.
-TECHNIQUE: handcrafted illustration for a narrative mobile game, in the spirit of the
-attached hand-made reference: pressure-varied lines, slightly irregular, always darker
-than the material they outline; where light meets dark, the darker material owns the
-edge. Broad matte paint shapes, few structural shadows, quiet surfaces, texture only
-in small local areas. Hair in clear masses with few divisions and sparse highlights.
-Distinct, individual adult face (no generic beauty template). No plastic modelling,
-no 3D render, no photographic detail, no uniform vector look, no global grain.
+TECHNIQUE (hand-made look of the attached references):
+Hand-drawn ink line with a slight wobble, heavier on the outer silhouette, thinner and
+sometimes broken inside; line colour dark grey-brown, softer than pure black.
+Flat local colour fills with ONE simple shadow shape per material; shadow edges soft and
+slightly patchy, like gouache or marker on paper. Almost no gradients: no airbrush,
+no smooth rendering, no glossy velvet or satin effects.
+Highlights only as a few graphic shapes (hair, eyes, jewels). Patterns, lace and
+embroidery suggested with a few strokes, not rendered in detail.
+Face built from simple, characterful shapes: simple nose, small blush patches, expressive
+brows, individual features. Slightly stylised proportions (head and hair a little large),
+neither realistic nor anime. Hands simplified but readable.
+Whites have cool lilac-grey shadows.
+No 3D render, no photographic detail, no uniform vector look, no global grain.
 COLOUR CONTROL (critical):
 Neutral daylight white balance (D65, 6500 K). This is a contemporary illustration,
 not an old painting or an old photograph.
@@ -410,13 +473,19 @@ IDENTITY: Tall, narrow shoulders, angular face, straight brows, attentive analyt
 COSTUME: Slate-blue day dress of fine wool, long sleeves, small white collar, no jewellery.
 ACTING: Studying the viewer as if reading a document: head slightly tilted, hands loosely together.
 COLOUR KEY: slate blue, white collar, black hair, beige skin.
-TECHNIQUE: handcrafted illustration for a narrative mobile game, in the spirit of the
-attached hand-made reference: pressure-varied lines, slightly irregular, always darker
-than the material they outline; where light meets dark, the darker material owns the
-edge. Broad matte paint shapes, few structural shadows, quiet surfaces, texture only
-in small local areas. Hair in clear masses with few divisions and sparse highlights.
-Distinct, individual adult face (no generic beauty template). No plastic modelling,
-no 3D render, no photographic detail, no uniform vector look, no global grain.
+TECHNIQUE (hand-made look of the attached references):
+Hand-drawn ink line with a slight wobble, heavier on the outer silhouette, thinner and
+sometimes broken inside; line colour dark grey-brown, softer than pure black.
+Flat local colour fills with ONE simple shadow shape per material; shadow edges soft and
+slightly patchy, like gouache or marker on paper. Almost no gradients: no airbrush,
+no smooth rendering, no glossy velvet or satin effects.
+Highlights only as a few graphic shapes (hair, eyes, jewels). Patterns, lace and
+embroidery suggested with a few strokes, not rendered in detail.
+Face built from simple, characterful shapes: simple nose, small blush patches, expressive
+brows, individual features. Slightly stylised proportions (head and hair a little large),
+neither realistic nor anime. Hands simplified but readable.
+Whites have cool lilac-grey shadows.
+No 3D render, no photographic detail, no uniform vector look, no global grain.
 COLOUR CONTROL (critical):
 Neutral daylight white balance (D65, 6500 K). This is a contemporary illustration,
 not an old painting or an old photograph.
@@ -447,13 +516,19 @@ IDENTITY: Strong neck and shoulders, straight brows, a ready smile. Medium brown
 COSTUME: Sea-green gown with a side fastening and a V neckline (a port tradition), a short open jacket she has not buttoned.
 ACTING: Relaxed and amused, weight on one hip, looking straight at the viewer as if daring them to object.
 COLOUR KEY: sea green, slate-green hair, pearl-white streak, muted copper eyes, medium brown skin.
-TECHNIQUE: handcrafted illustration for a narrative mobile game, in the spirit of the
-attached hand-made reference: pressure-varied lines, slightly irregular, always darker
-than the material they outline; where light meets dark, the darker material owns the
-edge. Broad matte paint shapes, few structural shadows, quiet surfaces, texture only
-in small local areas. Hair in clear masses with few divisions and sparse highlights.
-Distinct, individual adult face (no generic beauty template). No plastic modelling,
-no 3D render, no photographic detail, no uniform vector look, no global grain.
+TECHNIQUE (hand-made look of the attached references):
+Hand-drawn ink line with a slight wobble, heavier on the outer silhouette, thinner and
+sometimes broken inside; line colour dark grey-brown, softer than pure black.
+Flat local colour fills with ONE simple shadow shape per material; shadow edges soft and
+slightly patchy, like gouache or marker on paper. Almost no gradients: no airbrush,
+no smooth rendering, no glossy velvet or satin effects.
+Highlights only as a few graphic shapes (hair, eyes, jewels). Patterns, lace and
+embroidery suggested with a few strokes, not rendered in detail.
+Face built from simple, characterful shapes: simple nose, small blush patches, expressive
+brows, individual features. Slightly stylised proportions (head and hair a little large),
+neither realistic nor anime. Hands simplified but readable.
+Whites have cool lilac-grey shadows.
+No 3D render, no photographic detail, no uniform vector look, no global grain.
 COLOUR CONTROL (critical):
 Neutral daylight white balance (D65, 6500 K). This is a contemporary illustration,
 not an old painting or an old photograph.
@@ -484,13 +559,19 @@ IDENTITY: Full figure, short elegant neck, heavy-lidded eyes, a slow knowing smi
 COSTUME: Lavender-grey half-mourning silk gown with black lace trim, a narrow black mourning ribbon at the wrist embroidered with a single initial, a closed fan held in both hands.
 ACTING: She has seen all this before: one eyebrow slightly raised, fan closed in both hands.
 COLOUR KEY: lavender-grey, black lace, deep brown skin, dark hair.
-TECHNIQUE: handcrafted illustration for a narrative mobile game, in the spirit of the
-attached hand-made reference: pressure-varied lines, slightly irregular, always darker
-than the material they outline; where light meets dark, the darker material owns the
-edge. Broad matte paint shapes, few structural shadows, quiet surfaces, texture only
-in small local areas. Hair in clear masses with few divisions and sparse highlights.
-Distinct, individual adult face (no generic beauty template). No plastic modelling,
-no 3D render, no photographic detail, no uniform vector look, no global grain.
+TECHNIQUE (hand-made look of the attached references):
+Hand-drawn ink line with a slight wobble, heavier on the outer silhouette, thinner and
+sometimes broken inside; line colour dark grey-brown, softer than pure black.
+Flat local colour fills with ONE simple shadow shape per material; shadow edges soft and
+slightly patchy, like gouache or marker on paper. Almost no gradients: no airbrush,
+no smooth rendering, no glossy velvet or satin effects.
+Highlights only as a few graphic shapes (hair, eyes, jewels). Patterns, lace and
+embroidery suggested with a few strokes, not rendered in detail.
+Face built from simple, characterful shapes: simple nose, small blush patches, expressive
+brows, individual features. Slightly stylised proportions (head and hair a little large),
+neither realistic nor anime. Hands simplified but readable.
+Whites have cool lilac-grey shadows.
+No 3D render, no photographic detail, no uniform vector look, no global grain.
 COLOUR CONTROL (critical):
 Neutral daylight white balance (D65, 6500 K). This is a contemporary illustration,
 not an old painting or an old photograph.
