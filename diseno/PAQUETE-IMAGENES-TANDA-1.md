@@ -64,6 +64,20 @@ Generar cada edificio con una edición independiente puede cambiar perspectiva, 
 4. **Verificar cada pieza** en Figma sobre MAP-01: posición, escala, contorno y **orden de profundidad** (qué árboles, farolas o edificios vecinos quedan delante de la pieza y deben ir en una capa superior). La superposición al 50 % ayuda a detectar diferencias, pero no sustituye esta revisión.
 5. **Sólo como alternativa**, si el recorte manual no es viable: pedir la pieza aislada al generador editando MAP-01 (prompt MAP-03…08) y aplicarle la misma verificación. Si no coincide, se descarta.
 
+### 3.2 bis Medidas de pantalla que deben respetar las imágenes
+
+Para que este paquete se entienda sin abrir la especificación (`diseno/ESPEC-FLUJO-PANTALLAS-v3.md`, rama `claude/gifted-knuth-4g09c2` del repositorio):
+
+| Concepto | Valor |
+|---|---|
+| Pantalla de referencia | 390 × 844 dp (se valida también 360 × 780 y 430 × 932) |
+| Área segura | 47 dp arriba, 34 dp abajo |
+| Capa fija superior (calendario, contador, comenzar) | ~56 dp bajo el área segura → ocupa hasta ~105 dp desde arriba |
+| Capa fija inferior (mano de cartas) | ~182 dp desde abajo |
+| Zona útil del mapa entre ambas capas | ~557 dp de alto |
+
+**El mapa se desplaza y la interfaz no.** El calendario, los controles y la mano son capas fijas superpuestas; el mapa se mueve por debajo. Por eso no sirve reservar franjas «tranquilas» en la imagen: lo que garantiza que un edificio se vea es que **la cámara pueda centrarlo en la zona útil**. Regla: cada edificio de lugar debe quedar al menos a ~15 % del ancho y ~12 % del alto de los bordes del mapa, para que al desplazarse pueda situarse entre la capa superior y la mano.
+
 ### 3.3 Transparencia
 
 - Pedir siempre «true transparent background (alpha channel), PNG».
@@ -95,14 +109,17 @@ Local colour painted independently per material. Morning light, soft and cool-ne
 NO yellow, orange or sepia glaze over the image. NO photographic detail, NO 3D render,
 NO glossy plastic surfaces, NO uniform vector look, NO global grain or noise.
 Palette: natural greens and blues of a living city, warm-ivory and pale pastel
-façades (powder blue, blush, pale sage, cream), slate-lilac roofs, flowering trees,
-small accents of wisteria lilac and rose. Pastel is air and light, not a wash over everything:
+façades (powder blue, blush, pale sage, cream), slate-lilac roofs.
+SEASON: the first weeks of autumn. Trees mostly green with some amber, russet and soft gold;
+no spring blossom, no trees covered in flowers. Flowers only as small late-season accents:
+blue-lilac hydrangeas, lilac asters, late blush roses, ivy starting to turn red.
+Pastel is air and light, not a wash over everything:
 keep real darks (ink, deep foliage, window openings) for contrast.
 Fictional world: no real landmarks, no text, no signs, no heraldry from real families.
 ```
 
 **ES (equivalente):**
-Ilustración artesanal para juego narrativo móvil. Línea de tinta con presión variable, algo irregular, siempre más oscura que su material. Manchas mate amplias tipo gouache, pocas sombras estructurales, superficies tranquilas; textura sólo localizada. Color local por material. Luz de mañana suave, neutra-fría. Sin veladura amarilla, naranja ni sepia; sin detalle fotográfico, render 3D, plástico, vector uniforme ni grano general. Verdes y azules naturales, fachadas marfil y pasteles pálidos, tejados pizarra lila, árboles en flor, pequeños acentos glicinia y rosa. El pastel es aire y luz, no un velo sobre todo: conservar oscuros reales. Mundo ficticio: sin monumentos reales, textos, letreros ni heráldica real.
+Ilustración artesanal para juego narrativo móvil. Línea de tinta con presión variable, algo irregular, siempre más oscura que su material. Manchas mate amplias tipo gouache, pocas sombras estructurales, superficies tranquilas; textura sólo localizada. Color local por material. Luz de mañana suave, neutra-fría. Sin veladura amarilla, naranja ni sepia; sin detalle fotográfico, render 3D, plástico, vector uniforme ni grano general. Verdes y azules naturales, fachadas marfil y pasteles pálidos, tejados pizarra lila. Estación: primeras semanas de otoño; árboles sobre todo verdes con algo de ámbar, rojizo y oro suave; nada de floración primaveral ni árboles cubiertos de flores. Flores sólo como acentos tardíos: hortensias azul-lila, ásteres lila, rosas tardías y hiedra que empieza a enrojecer. El pastel es aire y luz, no un velo sobre todo: conservar oscuros reales. Mundo ficticio: sin monumentos reales, textos, letreros ni heráldica real.
 
 ---
 
@@ -111,7 +128,7 @@ Ilustración artesanal para juego narrativo móvil. Línea de tinta con presión
 ### MAP-01 · Mapa de Valcenda completo, de día
 
 - **Uso:** fondo principal del juego; se desplaza en vertical y algo en horizontal.
-- **Generar:** 1024 × 1536 (vertical). **Objetivo tras escalar:** 2340 × 3000 aprox. (recorte final a definir al montar).
+- **Generar:** 1024 × 1536 (vertical, 2:3). **Objetivo tras escalar:** ~2304 × 3456 px (768 × 1152 dp, misma proporción 2:3; sujeto a comprobación). El mapa es mayor que la pantalla y se desplaza bajo capas fijas (§3.2 bis).
 - **Fondo:** opaco.
 - **Adjuntos:** 3 originales de técnica.
 
@@ -126,9 +143,12 @@ Do not copy their subjects, composition or colours.
 
 VIEW: elevated oblique bird's-eye view (about 45°), one consistent camera and scale
 for every building. Portrait composition. Readable streets wide enough for small
-portrait tokens. Leave calm areas (plazas, lawns, river surface) where UI markers can sit.
-Keep the top 12% and bottom 22% of the image visually quiet (rooftops, gardens, water),
-because interface elements will cover them.
+portrait tokens. Leave calm areas (plazas, lawns, river surface) next to each venue
+where a small marker can sit without hiding the building.
+SCROLLING MAP: the image is larger than the phone screen and will scroll under fixed
+interface layers. Place every venue building well inside the image, at least 15% of the
+width and 12% of the height away from the edges, so the camera can centre each one.
+The edges can hold ordinary houses, gardens and the river.
 
 CITY: a Regency-era-inspired fictional capital on firm river terraces. A wide calm river
 (the Lumbre) crosses the upper third with an elegant stone bridge. Terraced townhouses
@@ -141,8 +161,9 @@ each with a recognisable silhouette:
 4. Residence: an elegant corner townhouse with a small private garden (the matchmaker's home).
 5. Academy: a modest classical building with a courtyard and a small cupola.
 6. Royal palace (Alto Laurel): larger, on the highest terrace, partly visible at an edge.
-Flowering trees (pink and white), climbing wisteria on a few walls, autumn hints
-(a few amber trees) because the season is early autumn.
+Early autumn: street trees mostly green with some amber and russet crowns, ivy on a few
+walls starting to redden, hydrangeas and late roses in the garden villa and residence.
+No blossoming trees.
 
 STYLE — SALVERNA ENVIRONMENT:
 Handcrafted illustration for a narrative mobile game. Pressure-varied ink lines,
@@ -153,8 +174,11 @@ Local colour painted independently per material. Morning light, soft and cool-ne
 NO yellow, orange or sepia glaze over the image. NO photographic detail, NO 3D render,
 NO glossy plastic surfaces, NO uniform vector look, NO global grain or noise.
 Palette: natural greens and blues of a living city, warm-ivory and pale pastel
-façades (powder blue, blush, pale sage, cream), slate-lilac roofs, flowering trees,
-small accents of wisteria lilac and rose. Pastel is air and light, not a wash over everything:
+façades (powder blue, blush, pale sage, cream), slate-lilac roofs.
+SEASON: the first weeks of autumn. Trees mostly green with some amber, russet and soft gold;
+no spring blossom, no trees covered in flowers. Flowers only as small late-season accents:
+blue-lilac hydrangeas, lilac asters, late blush roses, ivy starting to turn red.
+Pastel is air and light, not a wash over everything:
 keep real darks (ink, deep foliage, window openings) for contrast.
 Fictional world: no real landmarks, no text, no signs, no heraldry from real families.
 
@@ -165,7 +189,7 @@ REVIEW PRIORITIES: six venue buildings instantly distinguishable at phone size;
 consistent perspective; no yellow cast.
 ```
 
-**ES (resumen equivalente):** dibujo original desde cero de Valcenda en vista oblicua elevada (~45°), cámara y escala únicas, composición vertical. Río ancho con puente de piedra en el tercio superior; casas adosadas pastel, plazas, calles empedradas. Seis edificios de lugar bien separados y reconocibles: salón de baile neoclásico, villa con jardines formales (Serravalle), teatro redondo con cúpula, residencia de esquina con jardín, academia con patio y cúpula pequeña, palacio en la terraza más alta. Árboles en flor y toques de otoño. Zonas tranquilas para marcadores; franja superior (12 %) e inferior (22 %) calmas. Sin texto ni interfaz. Prioridades: edificios distinguibles, perspectiva coherente, sin tono amarillo.
+**ES (resumen equivalente):** dibujo original desde cero de Valcenda en vista oblicua elevada (~45°), cámara y escala únicas, composición vertical. Río ancho con puente de piedra en el tercio superior; casas adosadas pastel, plazas, calles empedradas. Seis edificios de lugar bien separados y reconocibles: salón de baile neoclásico, villa con jardines formales (Serravalle), teatro redondo con cúpula, residencia de esquina con jardín, academia con patio y cúpula pequeña, palacio en la terraza más alta. Primer otoño: árboles verdes con copas ámbar y rojizas, hiedra que enrojece, hortensias y rosas tardías; sin árboles en flor. Espacio tranquilo junto a cada edificio para su marcador. Mapa desplazable: cada edificio de lugar al menos a 15 % del ancho y 12 % del alto de los bordes, para que la cámara pueda centrarlo bajo las capas fijas. Sin texto ni interfaz. Prioridades: edificios distinguibles, perspectiva coherente, sin tono amarillo.
 
 ### MAP-02 · Plancha limpia (sin los seis edificios)
 
@@ -211,7 +235,7 @@ beyond its own plot, no text.
 
 ### UI-01 · Guirnalda floral superior
 
-- **Uso:** cuelga del borde superior del mapa; enmarca la ciudad y da fondo legible a las fichas de almanaque (sustituye a la franja superior). Se mece levemente.
+- **Uso:** capa fija colgada del borde superior de la pantalla (no se desplaza con el mapa); enmarca la ciudad y da fondo legible a las fichas de almanaque. Se mece levemente.
 - **Generar:** 1536 × 1024 (horizontal). Se usará la franja superior ~1536 × 420. **Fondo:** transparente.
 - **Adjuntos:** 3 originales de técnica.
 
@@ -219,8 +243,9 @@ beyond its own plot, no text.
 ```text
 OPERATION: NEW ORIGINAL DECORATIVE ELEMENT FROM SCRATCH.
 A horizontal hanging garland to frame the TOP EDGE of a mobile game screen.
-Clusters of lilac wisteria mixed with small climbing roses (blush and ivory) and
-fresh green leaves, hanging from a thin unseen line along the top edge.
+Early-autumn garden flowers: blue-lilac hydrangea heads, lilac asters, a few late climbing
+roses (blush and ivory) and trailing ivy with some leaves turning red and gold,
+hanging from a thin unseen line along the top edge. No wisteria, no spring blossom.
 Asymmetric and organic: denser and longer at the left and right corners (hanging down
 to about 40% of the image height), very sparse and short across the centre
 (only small leaves and a few blossoms, under 12% of the height) so the centre stays clear.
@@ -236,8 +261,11 @@ Local colour painted independently per material. Morning light, soft and cool-ne
 NO yellow, orange or sepia glaze over the image. NO photographic detail, NO 3D render,
 NO glossy plastic surfaces, NO uniform vector look, NO global grain or noise.
 Palette: natural greens and blues of a living city, warm-ivory and pale pastel
-façades (powder blue, blush, pale sage, cream), slate-lilac roofs, flowering trees,
-small accents of wisteria lilac and rose. Pastel is air and light, not a wash over everything:
+façades (powder blue, blush, pale sage, cream), slate-lilac roofs.
+SEASON: the first weeks of autumn. Trees mostly green with some amber, russet and soft gold;
+no spring blossom, no trees covered in flowers. Flowers only as small late-season accents:
+blue-lilac hydrangeas, lilac asters, late blush roses, ivy starting to turn red.
+Pastel is air and light, not a wash over everything:
 keep real darks (ink, deep foliage, window openings) for contrast.
 Fictional world: no real landmarks, no text, no signs, no heraldry from real families.
 
@@ -246,7 +274,7 @@ no text, no frame. Edges of petals clean, no white halo.
 REVIEW PRIORITIES: clear centre; painted (not photographic) flowers; real transparency.
 ```
 
-**ES:** guirnalda horizontal para el borde superior: glicinia lila con rosas trepadoras pequeñas (rosa pálido y marfil) y hojas verdes; asimétrica, densa y larga en las esquinas (hasta 40 % del alto), muy escasa en el centro (menos del 12 %). Sin arco ni simetría, sin parecer póster de serie. Fondo transparente real, sin halo.
+**ES:** guirnalda horizontal para el borde superior con flores de primer otoño: hortensias azul-lila, ásteres lila, algunas rosas trepadoras tardías (rosa pálido y marfil) e hiedra con hojas que empiezan a enrojecer; sin glicinia ni floración primaveral; asimétrica, densa y larga en las esquinas (hasta 40 % del alto), muy escasa en el centro (menos del 12 %). Sin arco ni simetría, sin parecer póster de serie. Fondo transparente real, sin halo.
 
 ### UI-02 · Ramillete de esquina
 
@@ -256,8 +284,8 @@ REVIEW PRIORITIES: clear centre; painted (not photographic) flowers; real transp
 **EN (pegar):**
 ```text
 OPERATION: NEW ORIGINAL DECORATIVE ELEMENT FROM SCRATCH.
-A small corner spray for stationery: a sprig of wisteria and one small rose with
-three leaves, growing diagonally from the TOP-LEFT corner towards the centre,
+A small corner spray for stationery: a sprig of lilac asters, one small late rose and
+two ivy leaves (one turning red), growing diagonally from the TOP-LEFT corner towards the centre,
 occupying only the top-left 45% of the canvas; the rest empty.
 Delicate and light, like a painted motif on fine writing paper.
 
@@ -270,8 +298,11 @@ Local colour painted independently per material. Morning light, soft and cool-ne
 NO yellow, orange or sepia glaze over the image. NO photographic detail, NO 3D render,
 NO glossy plastic surfaces, NO uniform vector look, NO global grain or noise.
 Palette: natural greens and blues of a living city, warm-ivory and pale pastel
-façades (powder blue, blush, pale sage, cream), slate-lilac roofs, flowering trees,
-small accents of wisteria lilac and rose. Pastel is air and light, not a wash over everything:
+façades (powder blue, blush, pale sage, cream), slate-lilac roofs.
+SEASON: the first weeks of autumn. Trees mostly green with some amber, russet and soft gold;
+no spring blossom, no trees covered in flowers. Flowers only as small late-season accents:
+blue-lilac hydrangeas, lilac asters, late blush roses, ivy starting to turn red.
+Pastel is air and light, not a wash over everything:
 keep real darks (ink, deep foliage, window openings) for contrast.
 Fictional world: no real landmarks, no text, no signs, no heraldry from real families.
 Simplified for small display: fewer, clearer shapes than a botanical study.
@@ -279,7 +310,7 @@ Simplified for small display: fewer, clearer shapes than a botanical study.
 OUTPUT: TRUE TRANSPARENT background (alpha), PNG, no paper, no text, no frame.
 ```
 
-**ES:** ramillete de esquina: una rama de glicinia y una rosa pequeña con tres hojas, en diagonal desde la esquina superior izquierda, ocupando sólo el 45 % superior izquierdo. Delicado, simplificado para tamaño pequeño. Transparente.
+**ES:** ramillete de esquina: una rama de ásteres lila, una rosa tardía pequeña y dos hojas de hiedra (una enrojeciendo), en diagonal desde la esquina superior izquierda, ocupando sólo el 45 % superior izquierdo. Delicado, simplificado para tamaño pequeño. Transparente.
 
 ### UI-03 · Papel marfil
 
@@ -302,11 +333,10 @@ Must stay quiet behind body text on a phone screen. OUTPUT: opaque PNG; edges in
 
 - **Uso:** pantalla de inicio. El título y los botones se ponen en Figma encima.
 - **Problema de proporción:** el generador entrega 1024 × 1536 (2:3) y la pantalla de destino ronda 9:19,5 (por ejemplo, 1290 × 2796). Escalar no lo resuelve: al llenar la altura se pierde ~31 % del ancho (unos 160 px por lado en el original).
-- **Solución en dos pasos:**
-  1. **Componer para el recorte desde el principio:** todo lo importante dentro de la **columna central del 68 % del ancho**; los laterales sólo con flores, follaje y fondo prescindibles.
-  2. **Ampliar el lienzo verticalmente** si hace falta más alto: extender cielo arriba y piedra abajo (edición «extender lienzo» o retoque), nunca estirar.
-  - El título, los botones y el foco se comprueban **sobre el encuadre final** en Figma (9:19,5 y también 9:16 y 9:20).
-- **Zonas (sobre la altura final):** título en el 18–36 %; carta y abanico en el **48–70 %**, por encima de los botones y con espacio para distinguir ambos objetos; botones en el 74–94 %.
+- **Vía elegida: recortar el ancho, conservar el alto.** Todo lo importante se compone dentro de la **columna central del 68 % del ancho**; al llenar la pantalla se recortan los laterales (sólo follaje y fondo prescindibles) y **la altura no cambia, así que los porcentajes de las zonas siguen siendo válidos**.
+- **Ampliar el lienzo sólo para pantallas más altas** que 9:19,5. Si se amplía, los porcentajes se desplazan (la imagen original pasa a ocupar una franja central): **hay que volver a medir** título, carta, abanico y botones sobre el encuadre final. Nunca estirar.
+- El título, los botones y el foco se comprueban **sobre el encuadre final** en Figma (9:19,5 y también 9:16 y 9:20).
+- **Zonas (porcentajes de la altura de la imagen generada, válidos con la vía de recorte):** título en el 18–36 %; carta y abanico en el **48–70 %**, por encima de los botones y con espacio para distinguir ambos objetos; botones en el 74–94 %.
 - **Generar:** 1024 × 1536 como primer paso. **Objetivo tras ampliar y escalar:** ~1290 × 2796 (objetivo sujeto a comprobación). **Fondo:** opaco.
 - **Adjuntos:** 3 originales de técnica (y MAP-01 aprobado como referencia de lugar, si existe).
 
@@ -319,7 +349,8 @@ CROP SAFETY: the image will be cropped to a narrow phone screen. Keep EVERY impo
 element inside the central 68% of the width. The outer 16% on each side may contain
 only expendable foliage, blossoms and background.
 COMPOSITION (three depth planes):
-- foreground: hanging wisteria and small roses entering from the top corners;
+- foreground: early-autumn flowers (hydrangeas, asters, late roses, reddening ivy)
+  entering from the top corners; no wisteria, no spring blossom;
   a stone balustrade crossing the lower part of the image;
 - middle: on the balustrade rail, between 48% and 70% of the image height, an open
   folding fan and a sealed letter with a rose wax seal, clearly separated from each other
@@ -341,8 +372,11 @@ Local colour painted independently per material. Morning light, soft and cool-ne
 NO yellow, orange or sepia glaze over the image. NO photographic detail, NO 3D render,
 NO glossy plastic surfaces, NO uniform vector look, NO global grain or noise.
 Palette: natural greens and blues of a living city, warm-ivory and pale pastel
-façades (powder blue, blush, pale sage, cream), slate-lilac roofs, flowering trees,
-small accents of wisteria lilac and rose. Pastel is air and light, not a wash over everything:
+façades (powder blue, blush, pale sage, cream), slate-lilac roofs.
+SEASON: the first weeks of autumn. Trees mostly green with some amber, russet and soft gold;
+no spring blossom, no trees covered in flowers. Flowers only as small late-season accents:
+blue-lilac hydrangeas, lilac asters, late blush roses, ivy starting to turn red.
+Pastel is air and light, not a wash over everything:
 keep real darks (ink, deep foliage, window openings) for contrast.
 Fictional world: no real landmarks, no text, no signs, no heraldry from real families.
 
@@ -351,9 +385,9 @@ REVIEW PRIORITIES: all key elements inside the central 68% column; calm title ba
 letter and fan readable above the button zone; no yellow cast.
 ```
 
-**ES (resumen equivalente):** ilustración de portada sin personas. Todo lo importante dentro de la columna central del 68 % del ancho; los laterales, sólo follaje prescindible. Delante: glicinias y rosas desde las esquinas superiores y una balaustrada de piedra en la parte baja. En medio, sobre la baranda y entre el 48 % y el 70 % del alto: abanico abierto y carta lacrada (sello rosa), separados y legibles. Al fondo: Valcenda con río y puente de mañana. Franja 18–36 % tranquila para el título; 26 % inferior simple y más oscuro para botones. Contraste fuerte en carta y abanico; pastel sólo en cielo y flores. Sin texto.
+**ES (resumen equivalente):** ilustración de portada sin personas. Todo lo importante dentro de la columna central del 68 % del ancho; los laterales, sólo follaje prescindible. Delante: flores de primer otoño (hortensias, ásteres, rosas tardías, hiedra que enrojece) desde las esquinas superiores y una balaustrada de piedra en la parte baja. En medio, sobre la baranda y entre el 48 % y el 70 % del alto: abanico abierto y carta lacrada (sello rosa), separados y legibles. Al fondo: Valcenda con río y puente de mañana. Franja 18–36 % tranquila para el título; 26 % inferior simple y más oscuro para botones. Contraste fuerte en carta y abanico; pastel sólo en cielo y flores. Sin texto.
 
-**Ampliación posterior (si falta alto):**
+**Ampliación posterior (sólo para pantallas más altas; después, volver a medir las zonas):**
 ```text
 EDIT OF THE ATTACHED IMAGE: extend the canvas vertically only. Continue the sky and
 distant city upward and the stone balustrade and paving downward, matching camera,

@@ -85,7 +85,7 @@ Lo floral es ceremonial: aparece cuando la pantalla es un momento, no cuando es 
 
 | Sí | No |
 |---|---|
-| Esquinas de cartas (ramillete de glicinia) | Filas de opciones del incidente |
+| Esquinas de cartas (ramillete de flores de primer otoño: ásteres, rosa tardía, hiedra) | Filas de opciones del incidente |
 | Portada (guirnalda alrededor del título) | Marcadores del mapa |
 | Cabecera de la «Crónica de salones» (cierre de semana) | Huecos de asistentes |
 | Fondo de la tira: **damasco floral tono sobre tono** al 8 % de opacidad | Encima de un texto |
@@ -394,12 +394,12 @@ La tarjeta de la tira necesita fondo: se le añade en el motor un fondo pintado 
 
 | Recurso | Tamaño | Fondo | Cantidad |
 |---|---|---|---|
-| Terreno base (calles, río, puente, parques, sin edificios principales) | **2340 × 3000 px** (780 × 1000 dp; el doble del ancho visible para desplazarse) | Opaco | 1 |
+| Terreno base (calles, río, puente, parques, sin edificios principales) | **~2304 × 3456 px** (768 × 1152 dp, proporción 2:3 como el generador; mayor que la pantalla para desplazarse) | Opaco | 1 |
 | Edificio de lugar (salón de baile, jardines, teatro, residencia, academia, palacio) | ~600 × 540 px | Transparente | 6 |
-| Capa de ambiente (árboles en flor, glicinia, barcas) | 2340 × 3000 | Transparente | 1 (opcional) |
+| Capa de ambiente (copas otoñales, hiedra, barcas) | 2304 × 3456 | Transparente | 1 (opcional) |
 | Variante de noche | Tinte en motor sobre las mismas capas | — | 0 imágenes nuevas |
 
-Dirección del mapa: vista oblicua elevada, fachadas pastel tipo Bath, árboles en flor, luz de mañana, sin dominante amarilla. Cámara y escala comunes para todas las capas.
+Dirección del mapa: vista oblicua elevada, fachadas pastel tipo Bath, **primer otoño** (árboles verdes con copas ámbar y rojizas, sin floración primaveral), luz de mañana, sin dominante amarilla. El mapa se desplaza bajo capas fijas de interfaz; cada edificio de lugar debe poder centrarse en la zona útil. Cámara y escala comunes para todas las capas.
 
 ### 7.3 Ilustraciones de cartas y portada
 
@@ -413,7 +413,7 @@ Dirección del mapa: vista oblicua elevada, fachadas pastel tipo Bath, árboles 
 
 | Recurso | Tamaño | Cantidad |
 |---|---|---|
-| Ramillete de esquina (glicinia) | 360 × 360 px, transparente | 1 (se refleja) |
+| Ramillete de esquina (flores de primer otoño) | 360 × 360 px, transparente | 1 (se refleja) |
 | Damasco floral para la tira | 512 × 512 px, mosaico continuo | 1 |
 | Textura de papel marfil (9 zonas) | 288 × 288 px | 1 |
 | Guirnalda de portada | 1080 × 400 px, transparente | 1 |
