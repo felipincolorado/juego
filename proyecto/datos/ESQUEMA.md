@@ -82,6 +82,10 @@ Expresiones simples, unidas con `y`, `o` y `no`:
 | `marca(nombre)` | Marca de historia activa |
 | `semana == n` | Semana actual |
 | `estado(id) == agitada/indispuesta` | Estado de una persona |
+| `nivel_max(id) >= B/A` | Nivel de vínculo más alto de esa persona con cualquiera |
+| `asistio_gusta(id) >= n` | Veces que fue a un evento de un tipo que le gusta |
+| `desaires(id) >= n` | Desaires que ha sufrido |
+| `marca(hito_<id>)`, `marca(epilogo)` | Hito de historia de esa persona; ya se ha llegado al epílogo |
 | `gusta(id)`, `no_gusta(id)` | El tipo del evento actual le gusta o no le gusta |
 
 ---

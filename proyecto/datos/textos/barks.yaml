@@ -14,7 +14,7 @@
 #   artículo cambia según el lugar.
 
 presentacion:   # reparto de cartas (biblia §2.2): una frase al tocar cada carta
-  nilo:   { es: "¿Ocho? Mejor, así nadie se aburre. ¿En qué te ayudo? …¿En qué le ayudo?", en: "Eight? Even better, nobody gets bored. What can I do? …For you, I mean, ma'am." }
+  nilo:   { es: "¿Ocho? Mejor, así nadie se aburre. ¿En qué te ayudo? …¿En qué le ayudo?", en: "Eight? Even better, nobody gets bored. What do you need? …Sorry. How may I help?" }
   saul:   { es: "Saúl Veyra. Estaré donde se me necesite, a la hora que se me diga.", en: "Saúl Veyra. I'll be wherever I'm needed, at whatever hour I'm told." }
   dario:  { es: "Encantado. De verdad. Bueno… casi siempre lo estoy.", en: "Delighted. Truly. Well… I nearly always am." }
   teo:    { es: "Si me busca pareja, que se ría de mis chistes. Es mi única exigencia.", en: "If you're finding me a match, they must laugh at my jokes. That's my only condition." }
@@ -52,7 +52,7 @@ barks:
     no_gusta:
       - { es: "¿Tres horas sentado sin poder levantarme a nada?", en: "Three hours sitting still with nothing to get up for?" }
       - { es: "Cinco tenedores. Yo con uno arreglo un eje.", en: "Five forks. I can fix an axle with one." }
-      - { es: "Prometo no levantarme a ayudar a los criados. No prometo cumplirlo.", en: "I promise not to get up and help the servants. I don't promise to keep it." }
+      - { es: "No me levantaré a ayudar a los criados. Seguramente.", en: "I won't jump up to help the servants. Probably." }
     camino:
       - { es: "Ese carro lleva mal la carga. Un momento.", en: "That cart's loaded all wrong. One moment." }
       - { es: "Por aquí se ataja. Confíe en mí.", en: "There's a shortcut this way. Trust me." }
@@ -80,7 +80,7 @@ barks:
     con_rival:
       - { es: "Bueno. Lo tomaré como una cuesta: despacio y sin quejarme.", en: "Fine. I'll treat it like a hill: slowly, no complaining." }
       - { es: "No discutiré. Hoy no. Seguramente.", en: "I won't argue. Not today. Probably." }
-      - { es: "Iré. Pero si empieza la discusión, no seré quien la termine.", en: "I'll go. But if the arguing starts, I won't be the one to stop." }
+      - { es: "Iré. Pero si empieza la discusión, no seré quien la termine.", en: "I'll go. But if it turns into a quarrel, I won't stop first." }
     agitada:
       - { es: "Estoy bien. Necesito aire. Mucho aire.", en: "I'm fine. I need air. A lot of air." }
       - { es: "No me pida que me quede quieto ahora.", en: "Don't ask me to sit still right now." }
@@ -363,7 +363,7 @@ barks:
       - { es: "Una semana libre. La señora Ferrán estará encantada.", en: "A free week. Mrs. Ferrán will be thrilled." }
     clase:
       - { es: "¡Una clase! ¿Puedo ponerme delante?", en: "A lesson! May I stand at the front?" }
-      - { es: "Ya lo sé hacer. Pero quiero que la maestra vea que lo sé.", en: "I know how already. But I want the teacher to see that I know." }
+      - { es: "Ya lo sé hacer. Pero quiero que la maestra vea que lo sé.", en: "I know how already. I want the teacher to see I know." }
       - { es: "Aquí se puede repetir un paso sin que nadie lo anote.", en: "Here you can repeat a step and nobody writes it down." }
     reemplazo:
       - { es: "¿Ahora? ¡Pero si no lo he ensayado!", en: "Now? But I haven't rehearsed it!" }
@@ -485,7 +485,7 @@ barks:
       - { es: "Llevaré mi mejor sonrisa. Y los codos en la mesa.", en: "I'll bring my best smile. And my elbows on the table." }
     agitada:
       - { es: "Necesito aire. Del de verdad, no del de salón.", en: "I need air. Real air, not ballroom air." }
-      - { es: "Si me quedo, digo algo. Si me voy, también. Elija.", en: "If I stay, I'll say something. If I leave, I'll still say it. Choose." }
+      - { es: "Si me quedo, digo algo. Si me voy, también lo diré.", en: "If I stay, I'll say something. If I go, I'll say it anyway." }
       - { es: "Estoy bien. Sólo quiero romper una regla. Una pequeña.", en: "I'm fine. I just want to break a rule. A small one." }
     tras_escandalo:
       - { es: "Que hablen. Por lo menos, de algo interesante.", en: "Let them talk. At least it's about something interesting." }
@@ -516,7 +516,7 @@ barks:
       - { es: "Muy bien. La última vez que fui, el vino era mejor.", en: "Very well. Last time I went, the wine was better." }
     gusta:
       - { es: "Una mesa pequeña y alguien con algo que contar. Basta.", en: "A small table and someone with something to say. That's enough." }
-      - { es: "Una cena. Julián decía que a la gente se la conoce en el segundo plato.", en: "A dinner. Julián used to say you only know people by the second course." }
+      - { es: "Julián decía que a la gente se la conoce en el segundo plato.", en: "Julián used to say you only know people by the second course." }
       - { es: "Por fin una velada en la que una puede sentarse.", en: "Finally, an evening where one is allowed to sit." }
     no_gusta:
       - { es: "Otra presentación de debutantes. Paciencia.", en: "Another parade of debutantes. Patience." }

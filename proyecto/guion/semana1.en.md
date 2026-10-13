@@ -22,13 +22,13 @@ Every autumn I open the printing house one night before the noise begins. We rea
 **Incidente (día 27)** · Mara hands out paper and ink: she wants every guest to write down who will be “the match of the season”. She means to print it.
 
 - **Give her a harmless, entertaining rumour** (chisme, d 3)
-  - Éxito: {a} hands her a rumour as delicious as it is false. Mara is delighted and stops asking.
+  - Éxito: {mejor} hands her a rumour as delicious as it is false. Mara is delighted and stops asking.
   - A medias: The rumour half works: Mara notes it down, but keeps her eyes on {grupo}.
   - Fallo: The rumour was a little too true. Someone in the room goes pale.
 - **Start a debate on whether the Chronicle should exist at all** (intelecto, d 4)
   - Éxito: The whole room argues about freedom of the press. Nobody remembers the matches again.
   - A medias: The debate holds them for a while, until Mara reclaims her question with a smile.
-  - Fallo: The argument tangles itself up. Mara sums it up in one line that makes {a} look foolish.
+  - Fallo: The argument tangles itself up. Mara sums it up in one line that makes {mejor} look foolish.
 - **Decline charmingly, so it sounds like a compliment** (presencia, d 4)
   - Éxito: “It would be unfair to spoil the ending for you, Mara.” She laughs; she likes being refused well.
   - A medias: The refusal is gracious, but it sounds as if there's something to hide.
@@ -45,7 +45,7 @@ Every autumn I open the printing house one night before the noise begins. We rea
 - privado: Mara isn't quoting them, but she won't forget them either. With her, that's something.
 
 **Desenlace · desaire** — Ink on the tablecloth
-- publico: At the Calce Printing House, a remark from {a} left the room silent. Mara promises details.
+- publico: At the Calce Printing House, a remark from {mejor} left the room silent. Mara promises details.
 - privado: Best not to give Mara more material this season. She has a long memory, and a press.
 
 ## An early-autumn stroll · día 28 · jardines

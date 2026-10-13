@@ -22,13 +22,13 @@ Cada otoño abro la imprenta una noche antes de que empiece el ruido. Se leen po
 **Incidente (día 27)** · Mara reparte papel y tinta: quiere que cada invitado escriba quién será «la pareja de la temporada». Lo publicará.
 
 - **Darle un rumor inofensivo y entretenido** (chisme, d 3)
-  - Éxito: {a} le sirve un rumor tan bueno como falso. Mara lo celebra y deja de preguntar.
+  - Éxito: {mejor} le sirve un rumor tan bueno como falso. Mara lo celebra y deja de preguntar.
   - A medias: El rumor funciona a medias: Mara lo apunta, pero sigue mirando a {grupo}.
   - Fallo: El rumor era demasiado cierto. Alguien en la sala se pone pálido.
 - **Abrir un debate sobre si la Crónica debería existir** (intelecto, d 4)
   - Éxito: La sala entera discute sobre la libertad de imprenta. Nadie vuelve a acordarse de las parejas.
   - A medias: El debate entretiene un rato, hasta que Mara recupera la pregunta con una sonrisa.
-  - Fallo: El argumento se enreda. Mara lo resume en una frase que hace quedar mal a {a}.
+  - Fallo: El argumento se enreda. Mara lo resume en una frase que hace quedar mal a {mejor}.
 - **Negarse con encanto, y que suene a cumplido** (presencia, d 4)
   - Éxito: «Sería injusto adelantarle el final, Mara.» Ella se ríe: le ha gustado que no se lo den.
   - A medias: La negativa es amable, pero suena a que hay algo que ocultar.
@@ -45,7 +45,7 @@ Cada otoño abro la imprenta una noche antes de que empiece el ruido. Se leen po
 - privado: Mara no los cita, pero tampoco los olvida. Con ella, eso ya es algo.
 
 **Desenlace · desaire** — Tinta en el mantel
-- publico: En la Imprenta Calce, un comentario de {a} dejó a la sala en silencio. Mara promete los detalles.
+- publico: En la Imprenta Calce, un comentario de {mejor} dejó a la sala en silencio. Mara promete los detalles.
 - privado: Conviene no darle a Mara más motivos esta temporada. Tiene buena memoria y una prensa.
 
 ## Paseo de primer otoño · día 28 · jardines

@@ -31,7 +31,7 @@ PROHIBIDAS_ES = re.compile(
 )
 VARIABLE = re.compile(r"\{([a-z_]+)(\|[^{}]*)?\}")
 FUNCIONES = {"asiste", "asistio", "desenlace", "opcion", "cercania", "nivel", "nivel_max", "rep",
-             "marca", "semana", "estado", "gusta", "no_gusta"}
+             "marca", "semana", "estado", "gusta", "no_gusta", "asistio_gusta", "desaires"}
 
 errores = []
 avisos = []
