@@ -116,6 +116,8 @@ La línea de las tres cálidas es marrón (≈ RGB 78·63·44); la de las dos fr
 
 ## 5. Prompts del original formal (listos para pegar)
 
+> **Versión vigente:** [PROMPTS-ELENCO-ORIGINALES.md](<PROMPTS-ELENCO-ORIGINALES.md>) (13 oct.), con generación desde cero, poses v2 y la autocrítica aplicada. Esta sección queda como historial.
+
 Bloque de técnica común (ya incluido abajo en cada prompt):
 
 ```text
