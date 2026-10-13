@@ -323,7 +323,8 @@ mobile game set in Valcenda, a fictional capital with early-19th-century fashion
 ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front view, head to hip, centred. Top of head at 6% of the image height,
-eyes at 20%, chin at 31%. IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
+eyes at 20%, chin at 31%.
+IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Broad shoulders, strong neck, broad jaw, thick dark brows, slightly broad straight nose, open warm face. Light olive skin tanned by mountain roads, flushed cheeks. Unruly dark brown loose curls to the ears.
 COSTUME: Forest-green wool tailcoat slightly rumpled, oatmeal wool waistcoat with wooden buttons, linen shirt, loosely tied cravat.
 ACTING: Warm and frank: front view, leaning slightly towards the viewer, a held-back smile escaping, one flat hand resting on his chest as if beginning a bow.
@@ -371,7 +372,8 @@ mobile game set in Valcenda, a fictional capital with early-19th-century fashion
 ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front three-quarter view, head to hip, centred. Top of head at 6% of the image height,
-eyes at 20%, chin at 31%. IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
+eyes at 20%, chin at 31%.
+IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Tall, long neck, square shoulders, high cheekbones, defined jaw, calm dark eyes. Deep brown skin. Very short cropped black hair with a crisp hairline.
 COSTUME: Steel-blue dress tailcoat with a high collar and silver buttons, impeccable white cravat, white gloves.
 ACTING: Composed and reliable: front view, chin level, calm direct gaze, square relaxed shoulders, hands clasped behind the back (not visible); the stillness of someone who keeps his word.
@@ -419,7 +421,8 @@ mobile game set in Valcenda, a fictional capital with early-19th-century fashion
 ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front view, head to hip, centred. Top of head at 6% of the image height,
-eyes at 20%, chin at 31%. IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
+eyes at 20%, chin at 31%.
+IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Slim and restless, narrow face, very mobile arched brows, wide mouth. Fair skin with freckles and rosy cheeks. Messy copper hair going in every direction.
 COSTUME: His only good tailcoat in dusty mauve-rose, slightly worn at the cuffs; discreet patterned waistcoat; loosely knotted cravat.
 ACTING: Trying very hard to look serious and almost managing it: shoulders slightly raised, head tilted, both fists gripping his own lapels in mock solemnity, one eyebrow up, a mouth corner escaping into a grin.
@@ -467,7 +470,8 @@ mobile game set in Valcenda, a fictional capital with early-19th-century fashion
 ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front view, head to hip, centred. Top of head at 6% of the image height,
-eyes at 20%, chin at 31%. IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
+eyes at 20%, chin at 31%.
+IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Petite, long neck, dancer's posture, round face, large eyes, small chin, thick dark brows. Fair rosy skin. Light brown hair in a high elaborate updo with a braided coronet and tiny green sprigs.
 COSTUME: Sage-green high-waisted gown with vertical botanical embroidery in a deeper green, short puffed sleeves, long white gloves.
 ACTING: Perfectly rehearsed: dancer's posture, long neck, chin slightly high, practised smile, gloved hands folded at the waist.
@@ -515,7 +519,8 @@ mobile game set in Valcenda, a fictional capital with early-19th-century fashion
 ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front view, head to hip, centred. Top of head at 6% of the image height,
-eyes at 20%, chin at 31%. IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
+eyes at 20%, chin at 31%.
+IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Tall, narrow shoulders, angular face, straight brows, attentive analytical eyes. Light-medium beige skin with a neutral undertone. Straight black hair in a plain low knot, no ornament. No glasses.
 COSTUME: Slate-blue day dress of fine wool, long sleeves, small white collar, no jewellery.
 ACTING: Studying the viewer as if reading a document: head tilted, one arm folded across the waist supporting the other elbow, the knuckles of that hand lightly at the chin, fingers curled.
@@ -563,7 +568,8 @@ mobile game set in Valcenda, a fictional capital with early-19th-century fashion
 ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front three-quarter view, head to hip, centred. Top of head at 6% of the image height,
-eyes at 20%, chin at 31%. IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
+eyes at 20%, chin at 31%.
+IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Strong neck and shoulders, straight brows, a ready smile. Medium brown skin. Velaria traits: slate-green hair in loose half-up waves with a pearl-white streak at the front, muted copper irises. These traits do not change her skin, jaw or age.
 COSTUME: Sea-green gown with a side fastening and a V neckline (a port tradition), a short open jacket she has not buttoned.
 ACTING: Relaxed and challenging: chin slightly raised, looking down at the viewer as if daring them to object, weight on one hip, shoulders open, one fist on the hip with the elbow out.
@@ -611,7 +617,8 @@ mobile game set in Valcenda, a fictional capital with early-19th-century fashion
 ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front three-quarter view, head to hip, centred. Top of head at 6% of the image height,
-eyes at 20%, chin at 31%. IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
+eyes at 20%, chin at 31%.
+IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Full figure, short elegant neck, heavy-lidded eyes, a slow knowing smile. Deep brown skin. Dark coily hair arranged low at the nape.
 COSTUME: Lavender-grey half-mourning silk gown with black lace trim, a narrow black mourning ribbon at the wrist embroidered with a single initial, a closed fan held in both hands.
 ACTING: She has seen all this before: head tilted slightly back, looking down her nose with one eyebrow raised, a slow knowing smile, the closed fan held in her whole hand and resting on her shoulder like a baton.
