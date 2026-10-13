@@ -363,7 +363,9 @@ Una **ilustración maestra por persona y expresión**, con encuadre fijo para po
 
 | Recurso | Tamaño | Fondo | Cantidad |
 |---|---|---|---|
-| Maestra de personaje (busto hasta la cadera) | **1536 × 2304 px** (2:3) | Transparente | 8 personas × 4 expresiones (neutral, alegre, molesta, ruborizada) = **32** |
+| Original formal (busto hasta la cadera, encuadre amplio) | **1536 × 2304 px** (2:3, objetivo) | Transparente | 8 |
+| Pose de ficha (editada desde el original aprobado) | 1536 × 2304 px (objetivo) | Transparente | 8 |
+| Expresiones (alegre, molesta, ruborizada; cada una desde el original) | 1536 × 2304 px (objetivo) | Transparente | 24 |
 
 Regla de encuadre de la maestra (para que la tira quede alineada):
 
@@ -422,15 +424,15 @@ Dirección del mapa: vista oblicua elevada, fachadas pastel tipo Bath, **primer 
 
 | Grupo | Imágenes |
 |---|---|
-| Elenco (8 × 4) | 32 |
+| Elenco (8 × 5: original, pose de ficha, 3 expresiones) | 40 |
 | Reina y guía | 7 |
 | Mapa (terreno, 6 edificios, ambiente) | 8 |
 | Cartas, portada, Crónica | 9 |
 | Ornamento | 4 |
 | Fondo de tarjeta | 1 |
-| **Total** | **61** |
+| **Total** | **69** |
 
-Escalabilidad: cada **personaje nuevo** cuesta 4 imágenes; cada **casa anfitriona nueva**, 1; cada **lugar nuevo**, 1 edificio. Iconos, sellos, radar, rutas y textos no generan imágenes.
+Escalabilidad: cada **personaje nuevo** cuesta 5 imágenes; cada **casa anfitriona nueva**, 1; cada **lugar nuevo**, 1 edificio. Iconos, sellos, radar, rutas y textos no generan imágenes.
 
 ---
 

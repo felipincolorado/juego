@@ -36,7 +36,7 @@ Estas cartas usan los recortes de la ilustración maestra (regla de encuadre pro
 | **1** | Ramillete de esquina para cartas y hojas | 1 | **Este documento** |
 | **1** | Papel marfil (textura) | 1 | **Este documento** |
 | **1** | Portada (ilustración sin texto) | 1 | **Este documento** |
-| 2 | Elenco social: 8 personas × 4 expresiones (neutral, alegre, molesta, ruborizada) | 32 | Bloqueado: faltan fichas de los ocho |
+| 2 | Elenco social: 8 personas × 5 (original formal amplio del que se recorta la carta · pose de ficha editada desde ese original · 3 expresiones desde el original) | 40 | Propuesta de reparto en [ELENCO-TEMPORADA-PROPUESTA.md](<ELENCO-TEMPORADA-PROPUESTA.md>); pendiente de aprobación |
 | 2 | Reina (base + 2) y guía/secretaria (base + 3) | 7 | Bloqueado: faltan fichas |
 | 3 | Grabados de cabecera de carta (6 casas + Corona) | 7 | Tras tanda 1 |
 | 3 | Fondo de carta por casa (lavado pintado) | 6 | Puede hacerse en motor; generar sólo si no convence |
