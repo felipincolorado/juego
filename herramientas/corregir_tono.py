@@ -12,6 +12,8 @@ Formas de indicar la zona neutra:
                      muestra gris pintada a propósito).
   --mundo-gris       sin referencia: supone que la media de toda la imagen es
                      gris. Menos fiable en ilustraciones muy coloridas.
+  --solo-blancos F   para personajes ya sin fondo: no hay referencia global, sólo
+                     neutraliza los blancos pintados en crema (F = 0-1, p. ej. 0.85).
 
 Uso:
   python corregir_tono.py MAP-01_v1.png --borde 3
@@ -119,6 +121,13 @@ def amarillo_de_blancos(imagen):
 
 def procesar(ruta, destino, args):
     img = Image.open(ruta)
+    if args.solo_blancos is not None:
+        previo = amarillo_de_blancos(img)
+        imagen = neutralizar_blancos(img.convert("RGBA") if img.mode in ("RGBA", "LA", "P") else img.convert("RGB"),
+                                     args.solo_blancos)
+        print(f"{os.path.basename(ruta)}: blancos amarillo {previo:+.1f} -> {amarillo_de_blancos(imagen):+.1f}")
+        imagen.save(destino)
+        return
     if args.zona:
         modo, valor = "zona", tuple(int(v) for v in args.zona.split(","))
     elif args.mundo_gris:
@@ -144,6 +153,8 @@ def main():
     g.add_argument("--borde", type=float, default=4.0, help="Franja de referencia en %% (por defecto 4)")
     g.add_argument("--zona", help="Rectángulo neutro x,y,ancho,alto en píxeles")
     g.add_argument("--mundo-gris", action="store_true", help="Sin referencia: media de toda la imagen")
+    g.add_argument("--solo-blancos", type=float, metavar="F",
+                   help="Personajes sin fondo: sólo neutraliza blancos en crema (0-1, recomendado 0.85)")
     p.add_argument("--fuerza", type=float, default=1.0, help="0 = nada, 1 = corrección completa")
     p.add_argument("--blancos", type=float, default=0.0,
                    help="0-1: además, neutraliza blancos pintados en crema (linos, camisas). Recomendado 0.8")

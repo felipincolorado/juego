@@ -17,7 +17,7 @@ Depende de [elenco](<ELENCO-TEMPORADA-PROPUESTA.md>), [relaciones](<RELACIONES-Y
 | 6 | **Edades sin fijar** | Rostros incoherentes con la ficha | Se proponen edades (§3) para revisión |
 | 7 | **Dos Lobreda (Nilo y Celia)** | Que parezcan iguales | Comparten verde de casa en tonos distintos y algún rasgo familiar (cejas), con siluetas opuestas |
 | 8 | **Orientación y aspecto** | Que el diseño «delate» la orientación | Ningún rasgo visual sugiere orientación; los estereotipos están prohibidos |
-| 9 | **Fondo transparente para personajes** | No permite medir ni corregir el tono amarillo | **Cambio propuesto:** generar sobre gris neutro #808080, corregir con la herramienta (§2) y después quitar el fondo |
+| 9 | **Fondo transparente para personajes** | No permite medir ni corregir el tono amarillo | **Decisión del usuario (13 oct.):** ChatGPT entrega el personaje ya sin fondo; no se genera sobre gris ni se recorta. El tono se controla en los blancos (§2) |
 
 Lo que funciona bien: arquetipos con contradicción, atractivo concreto, vínculos previos que generan drama, habilidades justificadas y el sistema de uniones con consecuencias. El elenco está listo para diseñarse.
 
@@ -38,8 +38,8 @@ Fuentes: [PopularAI](https://www.popularai.org/p/chatgpts-piss-filter-why-ai-ima
 
 1. **Evitar palabras que llaman al tono cálido** en todos los prompts: *Regency painting, vintage, antique, aged, parchment, candlelight, golden hour, warm, cozy, cinematic, sepia, oil painting, old master, varnish*. Hablar de «moda de principios del siglo XIX» en lugar de «pintura de época». Tampoco *warm-ivory*: usar *cool off-white*.
 2. **Bloque de control de color** dentro de cada prompt (§2.3), con blancos y sombras definidos.
-3. **Fondo gris neutro #808080** en personajes y piezas: el generador lo tiñe igual que al personaje, así que **el fondo mide exactamente cuánto amarillo metió**.
-4. **Corrección automática** con [`herramientas/corregir_tono.py`](<../herramientas/corregir_tono.py>): lee la franja del fondo, calcula la desviación y la elimina de toda la imagen. Después se quita el fondo (rembg, Krita, Photoshop o «eliminar fondo» de Figma).
+3. **Personajes sin fondo** (decisión del usuario, 13 oct.): ChatGPT los entrega ya en PNG transparente, así que no se genera sobre gris ni se recorta. Los fondos y escenarios sí conservan el método del gris o una zona neutra de referencia.
+4. **Corrección automática** con [`herramientas/corregir_tono.py`](<../herramientas/corregir_tono.py>). En personajes sin fondo: `--solo-blancos 0.85` (sólo neutraliza linos y camisas pintados en crema; no toca piel ni colores). En fondos: `--borde` o `--zona` como antes.
 
 ```
 pip install pillow numpy
@@ -64,8 +64,8 @@ deep blue-grey, never brown or amber. Paint each material in its own local colou
 do not unify the image with any overall tone.
 NO yellow, orange, amber, sepia, golden or brown overall tint. NO aged paper,
 varnish or vintage grading.
-BACKGROUND: flat, perfectly neutral mid-grey #808080, no gradient, no texture,
-no floor, no cast shadow on the background (it will be measured and removed).
+BACKGROUND: fully transparent PNG. No background, no floor, no cast shadow,
+no white halo around the silhouette.
 ```
 
 ---
@@ -89,7 +89,7 @@ Edades, pieles y rasgos son **propuestas**. Ningún rasgo sugiere orientación.
 
 ## 4. Imágenes por persona y orden de producción
 
-1. **Original formal** (las 8 primero): busto hasta la cadera, encuadre fijo (coronilla al 6 %, **ojos al 20 %**, barbilla al 31 %), manos visibles si actúan. Fondo gris neutro. De aquí se recorta la carta.
+1. **Original formal** (las 8 primero): busto hasta la cadera, encuadre fijo (coronilla al 6 %, **ojos al 20 %**, barbilla al 31 %), manos visibles si actúan. Sin fondo (PNG transparente). De aquí se recorta la carta.
 2. Revisión y **aprobación de identidad** de cada original.
 3. **Pose de ficha**: edición desde el original aprobado (§6).
 4. **Expresiones** (alegre, molesta, ruborizada): cada una desde el original (§6).
@@ -179,8 +179,8 @@ deep blue-grey, never brown or amber. Paint each material in its own local colou
 do not unify the image with any overall tone.
 NO yellow, orange, amber, sepia, golden or brown overall tint. NO aged paper,
 varnish or vintage grading.
-BACKGROUND: flat, perfectly neutral mid-grey #808080, no gradient, no texture,
-no floor, no cast shadow on the background (it will be measured and removed).
+BACKGROUND: fully transparent PNG. No background, no floor, no cast shadow,
+no white halo around the silhouette.
 OUTPUT: one character, no text, no frame, no other people.
 REVIEW PRIORITIES: unmistakable silhouette (long tied hair, long neck); mysterious
 courtesy without vampire clichés; neutral colour.
@@ -343,8 +343,8 @@ deep blue-grey, never brown or amber. Paint each material in its own local colou
 do not unify the image with any overall tone.
 NO yellow, orange, amber, sepia, golden or brown overall tint. NO aged paper,
 varnish or vintage grading.
-BACKGROUND: flat, perfectly neutral mid-grey #808080, no gradient, no texture,
-no floor, no cast shadow on the background (it will be measured and removed).
+BACKGROUND: fully transparent PNG. No background, no floor, no cast shadow,
+no white halo around the silhouette.
 OUTPUT: one character, no text, no frame, no other people.
 REVIEW PRIORITIES: warm, open silhouette (broad shoulders, unruly curls); sincerity; neutral colour.
 ```
@@ -386,8 +386,8 @@ deep blue-grey, never brown or amber. Paint each material in its own local colou
 do not unify the image with any overall tone.
 NO yellow, orange, amber, sepia, golden or brown overall tint. NO aged paper,
 varnish or vintage grading.
-BACKGROUND: flat, perfectly neutral mid-grey #808080, no gradient, no texture,
-no floor, no cast shadow on the background (it will be measured and removed).
+BACKGROUND: fully transparent PNG. No background, no floor, no cast shadow,
+no white halo around the silhouette.
 OUTPUT: one character, no text, no frame, no other people.
 REVIEW PRIORITIES: upright silhouette and crisp hairline; contained warmth under discipline; neutral colour.
 ```
@@ -429,8 +429,8 @@ deep blue-grey, never brown or amber. Paint each material in its own local colou
 do not unify the image with any overall tone.
 NO yellow, orange, amber, sepia, golden or brown overall tint. NO aged paper,
 varnish or vintage grading.
-BACKGROUND: flat, perfectly neutral mid-grey #808080, no gradient, no texture,
-no floor, no cast shadow on the background (it will be measured and removed).
+BACKGROUND: fully transparent PNG. No background, no floor, no cast shadow,
+no white halo around the silhouette.
 OUTPUT: one character, no text, no frame, no other people.
 REVIEW PRIORITIES: messy copper hair readable at small size; humour about to break; copper hair must not turn the image orange.
 ```
@@ -472,8 +472,8 @@ deep blue-grey, never brown or amber. Paint each material in its own local colou
 do not unify the image with any overall tone.
 NO yellow, orange, amber, sepia, golden or brown overall tint. NO aged paper,
 varnish or vintage grading.
-BACKGROUND: flat, perfectly neutral mid-grey #808080, no gradient, no texture,
-no floor, no cast shadow on the background (it will be measured and removed).
+BACKGROUND: fully transparent PNG. No background, no floor, no cast shadow,
+no white halo around the silhouette.
 OUTPUT: one character, no text, no frame, no other people.
 REVIEW PRIORITIES: high updo silhouette; rehearsed perfection with a hint of nerves; neutral colour.
 ```
@@ -515,8 +515,8 @@ deep blue-grey, never brown or amber. Paint each material in its own local colou
 do not unify the image with any overall tone.
 NO yellow, orange, amber, sepia, golden or brown overall tint. NO aged paper,
 varnish or vintage grading.
-BACKGROUND: flat, perfectly neutral mid-grey #808080, no gradient, no texture,
-no floor, no cast shadow on the background (it will be measured and removed).
+BACKGROUND: fully transparent PNG. No background, no floor, no cast shadow,
+no white halo around the silhouette.
 OUTPUT: one character, no text, no frame, no other people.
 REVIEW PRIORITIES: plain low knot and angular face; total attention; neutral colour.
 ```
@@ -558,8 +558,8 @@ deep blue-grey, never brown or amber. Paint each material in its own local colou
 do not unify the image with any overall tone.
 NO yellow, orange, amber, sepia, golden or brown overall tint. NO aged paper,
 varnish or vintage grading.
-BACKGROUND: flat, perfectly neutral mid-grey #808080, no gradient, no texture,
-no floor, no cast shadow on the background (it will be measured and removed).
+BACKGROUND: fully transparent PNG. No background, no floor, no cast shadow,
+no white halo around the silhouette.
 OUTPUT: one character, no text, no frame, no other people.
 REVIEW PRIORITIES: slate-green hair with pearl streak instantly readable; freedom; neutral colour.
 ```
@@ -601,8 +601,8 @@ deep blue-grey, never brown or amber. Paint each material in its own local colou
 do not unify the image with any overall tone.
 NO yellow, orange, amber, sepia, golden or brown overall tint. NO aged paper,
 varnish or vintage grading.
-BACKGROUND: flat, perfectly neutral mid-grey #808080, no gradient, no texture,
-no floor, no cast shadow on the background (it will be measured and removed).
+BACKGROUND: fully transparent PNG. No background, no floor, no cast shadow,
+no white halo around the silhouette.
 OUTPUT: one character, no text, no frame, no other people.
 REVIEW PRIORITIES: low coiled hair and full silhouette; experienced irony; neutral colour (lavender must not drift to beige).
 ```
