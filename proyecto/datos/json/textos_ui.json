@@ -1932,5 +1932,69 @@
    "es": "Gracias por acompañar la temporada.",
    "en": "Thank you for seeing the season through."
   }
+ },
+ "adivina": {
+  "marcador": {
+   "es": "La mesa de la cartomante",
+   "en": "The card-reader's table"
+  },
+  "titulo": {
+   "es": "La mesa de Oriana",
+   "en": "Oriana's table"
+  },
+  "velas": {
+   "es": "Velas: {n}",
+   "en": "Candles: {n}"
+  },
+  "parejas": {
+   "es": "Parejas: {n} de {total}",
+   "en": "Pairs: {n} of {total}"
+  },
+  "mesa_sencilla": {
+   "es": "Mesa sencilla (4 parejas, sin velas)",
+   "en": "Simple table (4 pairs, no candles)"
+  },
+  "nivel": {
+   "claro": {
+    "es": "Presagio claro",
+    "en": "A clear omen"
+   },
+   "velado": {
+    "es": "Presagio velado",
+    "en": "A veiled omen"
+   },
+   "oscuro": {
+    "es": "Presagio oscuro",
+    "en": "A dark omen"
+   }
+  },
+  "don_vela_aviso": {
+   "es": "La llama dorada marca la mejor respuesta.",
+   "en": "The golden flame marks the best answer."
+  },
+  "don_vela_etiqueta": {
+   "es": "Don de la vela",
+   "en": "The candle's gift"
+  },
+  "releer": {
+   "es": "Releer el presagio",
+   "en": "Read the omen again"
+  },
+  "volver": {
+   "es": "Levantarse de la mesa",
+   "en": "Leave the table"
+  },
+  "ya_visitada": {
+   "es": "Ya visitó a la cartomante esta semana.",
+   "en": "You've already visited the card-reader this week."
+  },
+  "carta_lector": {
+   "es": "Carta: {nombre}",
+   "en": "Card: {nombre}"
+  },
+  "carta_oculta_lector": {
+   "es": "Carta boca abajo, fila {fila}, columna {columna}",
+   "en": "Face-down card, row {fila}, column {columna}"
+  }
  }
 }

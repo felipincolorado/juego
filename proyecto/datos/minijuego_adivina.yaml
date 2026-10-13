@@ -1,0 +1,113 @@
+# Minijuego «La mesa de la cartomante». Diseño en proyecto/sistemas/MINIJUEGO-ADIVINA.md.
+# Los presagios son VERDAD de autor sobre la semana que empieza, en tres niveles: claro (todas las parejas),
+# velado (la mitad o más), oscuro (menos de la mitad). Nunca revelan orientación, condición ni autoría de la Hoja.
+
+personaje:
+  id: oriana
+  nombre: { es: "Oriana Vell, cartomante", en: "Oriana Vell, card-reader" }
+  lugar: muelles
+  arte: [oriana_neutral, oriana_sonrie, oriana_grave]
+
+mesas:
+  2: { parejas: 6,  rejilla: [3, 4], velas: 8 }
+  3: { parejas: 8,  rejilla: [4, 4], velas: 9 }
+  4: { parejas: 8,  rejilla: [4, 4], velas: 9 }
+  5: { parejas: 10, rejilla: [4, 5], velas: 10 }
+  6: { parejas: 10, rejilla: [4, 5], velas: 10 }
+
+cartas:
+  - { id: sello,   nombre: { es: "El Sello", en: "The Seal" },             sentido: { es: "Un compromiso que no se deshace.", en: "A promise that won't come undone." } }
+  - { id: abanico, nombre: { es: "El Abanico", en: "The Fan" },            sentido: { es: "Lo que se dice tapándose la boca.", en: "What is said behind one's hand." } }
+  - { id: mascara, nombre: { es: "La Máscara", en: "The Mask" },           sentido: { es: "Alguien no es lo que aparenta.", en: "Someone is not what they seem." } }
+  - { id: rosa,    nombre: { es: "La Rosa tardía", en: "The Late Rose" },  sentido: { es: "Un afecto que llega fuera de tiempo.", en: "An affection that arrives out of season." } }
+  - { id: llave,   nombre: { es: "La Llave", en: "The Key" },              sentido: { es: "Una puerta que sólo se abre en confianza.", en: "A door that opens only in trust." } }
+  - { id: farol,   nombre: { es: "El Farol", en: "The Lantern" },          sentido: { es: "Recordar a quien se perdió.", en: "Remembering the lost." } }
+  - { id: luna,    nombre: { es: "La Luna llena", en: "The Full Moon" },   sentido: { es: "Una noche en que alguien no puede estar.", en: "A night when someone cannot be there." } }
+  - { id: pluma,   nombre: { es: "La Pluma", en: "The Quill" },            sentido: { es: "Algo escrito que nadie firmó.", en: "Something written that no one signed." } }
+  - { id: corona,  nombre: { es: "La Corona", en: "The Crown" },           sentido: { es: "La mirada de la reina.", en: "The Queen's gaze." } }
+  - { id: barco,   nombre: { es: "El Barco", en: "The Ship" },             sentido: { es: "Una deuda que viene del mar.", en: "A debt that comes in from the sea." } }
+  - { id: nudo,    nombre: { es: "El Nudo de Serel", en: "The Serel Knot" }, sentido: { es: "Un recuerdo que alguien quiere conservar.", en: "A memory someone wants to keep." } }
+  - { id: copa,    nombre: { es: "La Copa", en: "The Cup" },               sentido: { es: "Un brindis que es también un pacto.", en: "A toast that is also a pact." } }
+
+# Qué cartas entran en la mesa de cada semana (las primeras son las que «hablan» de esa semana).
+mazo_semana:
+  2: [pluma, abanico, sello, corona, rosa, copa]
+  3: [farol, pluma, nudo, corona, mascara, llave, rosa, copa]
+  4: [luna, mascara, pluma, llave, abanico, rosa, sello, copa]
+  5: [barco, sello, copa, corona, llave, rosa, abanico, mascara, nudo, pluma]
+  6: [sello, rosa, corona, mascara, pluma, copa, llave, abanico, farol, barco]
+
+frases:
+  bienvenida:
+    - { es: "Siéntese, casamentera. Las cartas no muerden. Las personas, a veces.", en: "Sit down, Matchmaker. The cards don't bite. People sometimes do." }
+    - { es: "Otra semana, otra mesa. Veamos qué se esconde esta vez.", en: "Another week, another table. Let's see what's hiding this time." }
+    - { es: "Usted junta parejas allá arriba. Aquí abajo, también. Empiece.", en: "You make matches up there. Down here, so do you. Begin." }
+  acierto:
+    - { es: "Eso es.", en: "That's it." }
+    - { es: "Buena memoria. Le servirá en los salones.", en: "A good memory. It'll serve you in the drawing rooms." }
+    - { es: "Las cartas también se reconocen.", en: "Cards know their own kind." }
+  fallo:
+    - { es: "Casi. Las cartas, como la gente, se parecen sin ser la misma.", en: "Almost. Cards, like people, can look alike without being the same." }
+    - { es: "Una vela menos. No se apure.", en: "One candle fewer. Don't rush." }
+  ultima_vela: { es: "Queda una vela. Elija con cuidado.", en: "One candle left. Choose carefully." }
+  sin_velas: { es: "Se apagaron las velas. Le leeré lo que alcanzó a ver.", en: "The candles are out. I'll read you what you managed to see." }
+  todas: { es: "Toda la mesa. Hacía tiempo. Escuche bien, entonces.", en: "The whole table. It's been a while. Listen closely, then." }
+  don_vela:
+    es: "Llévese esta llama. Cuando dude, le dirá por dónde."
+    en: "Take this flame with you. When you hesitate, it will show you the way."
+  despedida:
+    - { es: "Vuelva la semana que viene. Las cartas cambian; yo, no.", en: "Come back next week. The cards change; I don't." }
+    - { es: "Y no le cuente a nadie lo que le dije. Pierde la gracia.", en: "And don't tell anyone what I said. It spoils it." }
+  ya_vino: { es: "Ya le leí las cartas esta semana. Dos lecturas, dos mentiras.", en: "I've read your cards this week. Two readings, two lies." }
+
+presagios:
+  2:
+    claro:
+      es: "La Pluma: antes de que termine la semana, un pliego sin firma dirá el secreto pequeño de quien más brilló. El Abanico: no será lo peor que se diga en el baile de las casas."
+      en: "The Quill: before this week is out, a sheet with no signature will tell the small secret of whoever shone brightest. The Fan: it won't be the worst thing said at the Houses' Ball."
+    velado:
+      es: "Veo tinta sin nombre y a alguien que brilló demasiado. Y un salón lleno de abanicos."
+      en: "I see ink with no name, and someone who shone too brightly. And a hall full of fans."
+    oscuro:
+      es: "Quien sube alto se ve desde lejos. Eso es todo lo que dicen hoy."
+      en: "Whoever climbs high is seen from far away. That's all they'll say today."
+  3:
+    claro:
+      es: "El Farol y la Pluma juntos: en la Noche de los Faroles, el pliego hablará de papeles que ardieron y no ardieron del todo. La reina estará en el río. La Llave: alguien de su elenco sabe más de lo que dice sobre el Archivo."
+      en: "The Lantern and the Quill together: on Lantern Night, the sheet will speak of papers that burned and didn't quite burn. The Queen will be at the river. The Key: someone among your eight knows more about the Archive than they say."
+    velado:
+      es: "Faroles sobre el agua, papeles que no terminaron de arder y una corona que mira el río."
+      en: "Lanterns on the water, papers that never finished burning, and a crown watching the river."
+    oscuro:
+      es: "Lo que se quema se recuerda. Lo que casi se quema, también."
+      en: "What burns is remembered. What almost burns, too."
+  4:
+    claro:
+      es: "La Luna llena cae la noche del teatro. Alguien que usted quiere tendrá que estar en otra parte esa noche: no le pregunte por qué, y no lo envíe. La Máscara: el pliego dirá que alguien de los salones no es lo que aparenta."
+      en: "The full moon falls on the night of the theatre. Someone you care for will need to be elsewhere that night: don't ask why, and don't send them. The Mask: the sheet will say someone in the salons is not what they seem."
+    velado:
+      es: "Una luna redonda sobre un teatro lleno, una silla vacía y una máscara que no es de función."
+      en: "A round moon over a full theatre, an empty seat, and a mask that isn't part of the play."
+    oscuro:
+      es: "Hay noches en que es mejor no estar. Él lo sabe. Usted, todavía no."
+      en: "There are nights when it's better not to be there. He knows it. You don't, yet."
+  5:
+    claro:
+      es: "El Barco y el Sello: en la cena de las deudas vencerá una cuenta que viene de un naufragio, y una viuda tendrá que decidir qué firma. La Corona: llegará una orden desde Tiria para alguien que siempre obedece."
+      en: "The Ship and the Seal: at the debts dinner, an account that began with a shipwreck will fall due, and a widow will have to decide what she signs. The Crown: an order will come from Tiria for someone who always obeys."
+    velado:
+      es: "Un barco hundido que todavía cobra, una firma que pesa y una carta militar sobre la mesa."
+      en: "A sunken ship still collecting, a signature that weighs heavy, and a military letter on the table."
+    oscuro:
+      es: "El mar devuelve lo que se lleva. Siempre con intereses."
+      en: "The sea gives back what it takes. Always with interest."
+  6:
+    claro:
+      es: "El Sello y la Rosa tardía: en el último vals, alguien elegirá y alguien se quedará mirando. La Pluma: esa noche se sabrá quién escribía sin firmar. Prepare a los suyos: no todos saldrán del baile con quien entraron."
+      en: "The Seal and the Late Rose: at the last waltz, someone will choose and someone will be left watching. The Quill: that night, everyone will learn who was writing without signing. Prepare your people: not all of them will leave the ball with the one they came with."
+    velado:
+      es: "Un vals que termina, una rosa que llegó tarde y una pluma que por fin firma."
+      en: "A waltz ending, a rose that came too late, and a quill that finally signs."
+    oscuro:
+      es: "Todo lo que se sella, se sella dos veces: en el papel y en la memoria."
+      en: "Everything sealed is sealed twice: on paper and in memory."

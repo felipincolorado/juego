@@ -1,6 +1,6 @@
 nota: 'Inventario de imágenes pintadas. Iconos, sellos, radar, rutas, aros y textos se hacen en el motor o en vector. Los recortes de carta, hueco, ficha y viaje se derivan del original (diseno/ESPEC-FLUJO-PANTALLAS-v3.md
   §7.1). La guía (asistente) ya no tiene retrato: decisión D9.'
-total: 79
+total: 96
 imagenes:
 - id: PJ-nilo-formal
   archivo: personajes/nilo_formal.png
@@ -568,4 +568,137 @@ imagenes:
   descripcion: Salón entero en el último vals
   prompt: por escribir
   tanda: 4
+  estado: pendiente
+- id: ADV-reverso
+  archivo: adivina/reverso.png
+  px: 480x720
+  fondo: opaco
+  descripcion: 'Reverso común de las cartas de Oriana: azul noche, filete dorado, nudo de Serel al centro'
+  prompt: por escribir (tanda 3)
+  tanda: 3
+  estado: pendiente
+- id: ADV-tapete
+  archivo: adivina/tapete.png
+  px: 1170x2532
+  fondo: opaco
+  descripcion: Mesa de terciopelo azul noche con una vela, vista cenital, sin cartas
+  prompt: por escribir (tanda 3)
+  tanda: 3
+  estado: pendiente
+- id: ADV-sello
+  archivo: adivina/carta_sello.png
+  px: 480x720
+  fondo: opaco
+  descripcion: 'Cara de carta: sello, mismo marco para las 12'
+  prompt: por escribir (tanda 3)
+  tanda: 3
+  estado: pendiente
+- id: ADV-abanico
+  archivo: adivina/carta_abanico.png
+  px: 480x720
+  fondo: opaco
+  descripcion: 'Cara de carta: abanico, mismo marco para las 12'
+  prompt: por escribir (tanda 3)
+  tanda: 3
+  estado: pendiente
+- id: ADV-mascara
+  archivo: adivina/carta_mascara.png
+  px: 480x720
+  fondo: opaco
+  descripcion: 'Cara de carta: mascara, mismo marco para las 12'
+  prompt: por escribir (tanda 3)
+  tanda: 3
+  estado: pendiente
+- id: ADV-rosa
+  archivo: adivina/carta_rosa.png
+  px: 480x720
+  fondo: opaco
+  descripcion: 'Cara de carta: rosa, mismo marco para las 12'
+  prompt: por escribir (tanda 3)
+  tanda: 3
+  estado: pendiente
+- id: ADV-llave
+  archivo: adivina/carta_llave.png
+  px: 480x720
+  fondo: opaco
+  descripcion: 'Cara de carta: llave, mismo marco para las 12'
+  prompt: por escribir (tanda 3)
+  tanda: 3
+  estado: pendiente
+- id: ADV-farol
+  archivo: adivina/carta_farol.png
+  px: 480x720
+  fondo: opaco
+  descripcion: 'Cara de carta: farol, mismo marco para las 12'
+  prompt: por escribir (tanda 3)
+  tanda: 3
+  estado: pendiente
+- id: ADV-luna
+  archivo: adivina/carta_luna.png
+  px: 480x720
+  fondo: opaco
+  descripcion: 'Cara de carta: luna, mismo marco para las 12'
+  prompt: por escribir (tanda 3)
+  tanda: 3
+  estado: pendiente
+- id: ADV-pluma
+  archivo: adivina/carta_pluma.png
+  px: 480x720
+  fondo: opaco
+  descripcion: 'Cara de carta: pluma, mismo marco para las 12'
+  prompt: por escribir (tanda 3)
+  tanda: 3
+  estado: pendiente
+- id: ADV-corona
+  archivo: adivina/carta_corona.png
+  px: 480x720
+  fondo: opaco
+  descripcion: 'Cara de carta: corona, mismo marco para las 12'
+  prompt: por escribir (tanda 3)
+  tanda: 3
+  estado: pendiente
+- id: ADV-barco
+  archivo: adivina/carta_barco.png
+  px: 480x720
+  fondo: opaco
+  descripcion: 'Cara de carta: barco, mismo marco para las 12'
+  prompt: por escribir (tanda 3)
+  tanda: 3
+  estado: pendiente
+- id: ADV-nudo
+  archivo: adivina/carta_nudo.png
+  px: 480x720
+  fondo: opaco
+  descripcion: 'Cara de carta: nudo, mismo marco para las 12'
+  prompt: por escribir (tanda 3)
+  tanda: 3
+  estado: pendiente
+- id: ADV-copa
+  archivo: adivina/carta_copa.png
+  px: 480x720
+  fondo: opaco
+  descripcion: 'Cara de carta: copa, mismo marco para las 12'
+  prompt: por escribir (tanda 3)
+  tanda: 3
+  estado: pendiente
+- id: PJ-oriana-neutral
+  archivo: personajes/oriana_neutral.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: por escribir (tanda 3)
+  tanda: 3
+  estado: pendiente
+- id: PJ-oriana-sonrie
+  archivo: personajes/oriana_sonrie.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: por escribir (tanda 3)
+  tanda: 3
+  estado: pendiente
+- id: PJ-oriana-grave
+  archivo: personajes/oriana_grave.png
+  px: 1536x2304
+  fondo: transparente
+  prompt: por escribir (tanda 3)
+  tanda: 3
   estado: pendiente

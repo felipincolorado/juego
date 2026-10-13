@@ -50,6 +50,7 @@ Unas **55 000–65 000 palabras en español** y otras tantas en inglés. Incluye
 
 ## Siguiente paso
 
-1. El usuario revisa la semana 1: `proyecto/guion/semana1.es.md`, `tutorial.es.md`, los comentarios y las fichas.
-2. Con sus correcciones: **E5** (semanas 2–6), siguiendo el mismo formato que `semanas/semana1.yaml`.
-3. Mientras tanto: E9 audio y E10 tipografías (investigación de licencias).
+La lista viva de pendientes está en [PENDIENTES.md](<PENDIENTES.md>), que se actualiza en cada sesión. Resumen:
+1. El usuario revisa la semana 1 y confirma las decisiones por defecto.
+2. Se escriben las semanas 2–6 (E5), con viajes largos, reemplazo, peticiones y la cartomante (`sistemas/MINIJUEGO-ADIVINA.md`).
+3. Plan de programación (E12).
