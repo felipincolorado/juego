@@ -1,0 +1,592 @@
+# Salverna · Cadenas de interfaz (v1)
+#
+# Todas las cadenas visibles de la interfaz. Ninguna se escribe en el código.
+# El motor las pide con ui("grupo.clave"), p. ej. ui("hoja.boton.carta").
+# Cada hoja del árbol es { es: "...", en: "..." }. El español es la versión maestra;
+# el inglés adapta la intención. Registro: la casamentera es «usted», en femenino.
+#
+# Los nombres de lugares (lugares.yaml), personas y casas (personajes.yaml),
+# los títulos de evento y los textos de semana (semanas/) NO viven aquí.
+#
+# ── Variables ─────────────────────────────────────────────────────────────
+# De ESQUEMA §1.2:
+#   {a} {b}        Nombre de pila de dos personas (pareja de un vínculo, etc.)
+#   {dia}          Número del día (27, 4…)
+#   {lugar}        Nombre del lugar (de lugares.yaml)
+#   {rep}          Cambio de reputación con signo («+2», «−1»)
+# Nuevas en este archivo:
+#   {n}            Número genérico (semana, contador, ranura, huecos…)
+#   {total}        Total de referencia de un contador («2 de {total}»)
+#   {min} {max}    Plazas mínimas y máximas de un evento
+#   {inicio} {fin} Día de inicio y de fin de un evento de varios días (número)
+#   {nombre}       Nombre de pila de la persona a la que se refiere el elemento
+#   {nombre|m|f}   Concordancia de género sobre {nombre} (ESQUEMA §1.3)
+#   {evento}       Título corto del evento (de semanas/)
+#   {tipo}         Nombre del tipo de evento (ui("hoja.tipo.<id>"))
+#   {anfitrion}    Anfitrión del evento (campo anfitrion del evento)
+#   {habilidad}    Nombre de una habilidad (ui("habilidades.<id>.nombre"))
+#   {valor}        Valor de una habilidad, de 0 a 5
+#   {baile} {estatus} {chisme} {presencia} {intelecto}
+#                  Valores de cada habilidad (lectores de pantalla)
+#   {pide} {llevan} Resumen de requisito / del grupo, ya compuesto (lector de pantalla)
+#   {dia_semana}   Nombre largo del día (ui("barra_semana.dias.<id>.largo"))
+#   {mes}          Nombre del mes (ui("barra_semana.meses.<id>"))
+#   {fecha}        Fecha ya compuesta con barra_semana.formato_fecha
+#   {semana}       Número de semana (1–6)
+#   {fase}         Nombre de fase (ui("ajustes.ranuras.fase.<id>"))
+#   {estado}       Texto de estado ya resuelto (lector de pantalla)
+#   {expresion}    Expresión ya resuelta (ui("cierre.privado.animo.<id>"))
+#   {desenlace}    Etiqueta de sello ya resuelta (ui("resultado.sello.<id>"))
+#   {motivo}       Motivo público de un cambio de reputación (de semanas/)
+#   {entrada}      Título de una entrada de ficha ya resuelto (ui("ficha.entrada.<id>"))
+#   {accion}       Nombre de la acción que confirma un sello (lector de pantalla)
+#   {edad}         Edad de la persona
+#   {version}      Versión del juego
+#   {porcentaje}   Volumen u otro porcentaje (0–100)
+# ──────────────────────────────────────────────────────────────────────────
+
+comun:
+  "si":        { es: "Sí", en: "Yes" }
+  "no":        { es: "No", en: "No" }
+  aceptar:   { es: "Aceptar", en: "OK" }
+  cancelar:  { es: "Cancelar", en: "Cancel" }
+  cerrar:    { es: "Cerrar", en: "Close" }
+  volver:    { es: "Volver", en: "Back" }
+  confirmar: { es: "Confirmar", en: "Confirm" }
+  continuar: { es: "Continuar", en: "Continue" }
+  siguiente: { es: "Siguiente", en: "Next" }
+  anterior:  { es: "Anterior", en: "Previous" }
+  nuevo:     { es: "Nuevo", en: "New" }
+  cargando:  { es: "Un momento…", en: "One moment…" }
+
+portada:
+  titulo:          { es: "Salverna", en: "Salverna" }
+  subtitulo:       { es: "La Temporada del Sello", en: "The Season of the Seal" }
+  lema:            { es: "Seis semanas, ocho corazones y una reina que lo sella todo.", en: "Six weeks, eight hearts, and a queen who seals it all." }
+  nueva_temporada: { es: "Nueva temporada", en: "New season" }
+  continuar:       { es: "Continuar", en: "Continue" }
+  continuar_info:  { es: "Semana {semana} de 6 · {fase}", en: "Week {semana} of 6 · {fase}" }
+  ajustes:         { es: "Ajustes", en: "Settings" }
+  idioma_es:       { es: "ES", en: "ES" }
+  idioma_en:       { es: "EN", en: "EN" }
+  version:         { es: "Versión {version}", en: "Version {version}" }
+  sobrescribir:
+    titulo:    { es: "¿Empezar una temporada nueva?", en: "Start a new season?" }
+    texto:     { es: "Perderá la temporada en curso (semana {semana} de 6).", en: "Your current season (week {semana} of 6) will be lost." }
+    confirmar: { es: "Empezar de nuevo", en: "Start over" }
+    cancelar:  { es: "Conservarla", en: "Keep it" }
+
+dialogo:
+  continuar_pista: { es: "Toque para continuar", en: "Tap to continue" }
+  saltar:          { es: "Saltar", en: "Skip" }
+  saltar_confirmar:
+    titulo: { es: "¿Saltar esta escena?", en: "Skip this scene?" }
+    texto:  { es: "Podrá releerla en el historial.", en: "You can read it again in the log." }
+  historial:        { es: "Historial", en: "Log" }
+  historial_titulo: { es: "Lo dicho hasta ahora", en: "So far" }
+  historial_vacio:  { es: "Aún no se ha dicho nada.", en: "Nothing has been said yet." }
+  avance_auto:      { es: "Avance automático", en: "Auto-advance" }
+  nombre_nota:      { es: "Nota de su asistente", en: "A note from your assistant" }
+  nombre_reina:     { es: "Su Majestad", en: "Her Majesty" }
+
+barra_semana:
+  semana_corta: { es: "S{n}/6", en: "W{n}/6" }
+  semana_larga: { es: "Semana {n} de 6", en: "Week {n} of 6" }
+  formato_fecha:       { es: "{dia} de {mes}", en: "{dia} {mes}" }
+  formato_fecha_larga: { es: "{dia_semana}, {dia} de {mes}", en: "{dia_semana}, {dia} {mes}" }
+  dias:
+    jue:
+      corto: { es: "Jue", en: "Thu" }
+      largo: { es: "Jueves", en: "Thursday" }
+    vie:
+      corto: { es: "Vie", en: "Fri" }
+      largo: { es: "Viernes", en: "Friday" }
+    sab:
+      corto: { es: "Sáb", en: "Sat" }
+      largo: { es: "Sábado", en: "Saturday" }
+    dom:
+      corto: { es: "Dom", en: "Sun" }
+      largo: { es: "Domingo", en: "Sunday" }
+  meses:
+    vendimias: { es: "Vendimias", en: "Vintage" }
+    nieblas:   { es: "Nieblas", en: "Mists" }
+    escarchas: { es: "Escarchas", en: "Frosts" }
+  etiqueta_hoy:   { es: "HOY", en: "TODAY" }
+  etiqueta_ahora: { es: "AHORA", en: "NOW" }
+  respuestas:       { es: "{n}/{total}", en: "{n}/{total}" }
+  respuestas_larga: { es: "{n} de {total} invitaciones respondidas", en: "{n} of {total} invitations answered" }
+  comenzar:          { es: "Comenzar la semana", en: "Begin the week" }
+  comenzar_bloqueado: { es: "Antes, responda las invitaciones obligatorias.", en: "Answer the required invitations first." }
+  pausa:    { es: "Pausa", en: "Pause" }
+  reanudar: { es: "Reanudar", en: "Resume" }
+  rapido:   { es: "Más rápido", en: "Faster" }
+  normal:   { es: "Velocidad normal", en: "Normal speed" }
+  filtro_pista:  { es: "Toque un día para ver sólo sus eventos.", en: "Tap a day to see only its events." }
+  filtro_activo: { es: "Sólo el {dia_semana} {dia}", en: "{dia_semana} {dia} only" }
+  filtro_quitar: { es: "Toque de nuevo para verlo todo.", en: "Tap again to see everything." }
+
+mapa:
+  estado:
+    por_responder: { es: "Por responder", en: "Awaiting reply" }
+    respondida:    { es: "Respondida", en: "Answered" }
+    declinada:     { es: "Declinada", en: "Declined" }
+    en_curso:      { es: "En curso", en: "Under way" }
+    atencion:      { es: "Requiere su atención", en: "Needs your attention" }
+    por_leer:      { es: "Noticias por leer", en: "News to read" }
+    concluida:     { es: "Concluida", en: "Over" }
+  obligatoria:       { es: "Obligatoria", en: "Required" }
+  opcional:          { es: "Opcional", en: "Optional" }
+  obligatoria_corta: { es: "OBLIG.", en: "REQ." }
+  mini_agenda:
+    titulo:  { es: "Invitaciones en {lugar}", en: "Invitations at {lugar}" }
+    cuantas: { es: "{n} invitaciones", en: "{n} invitations" }
+    pista:   { es: "Toque una para abrirla.", en: "Tap one to open it." }
+  sin_eventos_dia:  { es: "Nada previsto ese día.", en: "Nothing planned that day." }
+  sin_eventos_lugar: { es: "Ninguna invitación aquí esta semana.", en: "No invitations here this week." }
+  nueva_invitacion: { es: "Ha llegado una invitación nueva.", en: "A new invitation has arrived." }
+  centrar:          { es: "Centrar el mapa", en: "Recentre the map" }
+  residencia_pista: { es: "Su residencia. Aquí llega el correo.", en: "Your residence. The post arrives here." }
+
+mano_cartas:
+  estado:
+    disponible:   { es: "Disponible", en: "Available" }
+    seleccionada: { es: "{nombre|Seleccionado|Seleccionada}", en: "Selected" }
+    asignada:     { es: "{nombre|Invitado|Invitada} a {evento}", en: "Going to {evento}" }
+    fuera:        { es: "En {lugar}", en: "At {lugar}" }
+    en_viaje:     { es: "De camino a {lugar}", en: "On the way to {lugar}" }
+    agitada:      { es: "{nombre|AGITADO|AGITADA}", en: "UNSETTLED" }
+    indispuesta:  { es: "{nombre|INDISPUESTO|INDISPUESTA}", en: "UNWELL" }
+  no_elegible:
+    ocupada:       { es: "{evento} · desde el {dia}", en: "{evento} · from day {dia}" }
+    limite_semana: { es: "Ya tiene dos compromisos", en: "Already has two engagements" }
+    pide_dama:     { es: "Se pide una dama", en: "A lady is wanted" }
+    pide_caballero: { es: "Se pide un caballero", en: "A gentleman is wanted" }
+    indispuesta:   { es: "{nombre|Indispuesto|Indispuesta} ese día", en: "Unwell that day" }
+    tope_clase:    { es: "La clase ya no le aporta más", en: "Has nothing left to learn here" }
+  pista:
+    con_hoja:  { es: "Toque una carta para invitar a esa persona.", en: "Tap a card to invite that person." }
+    sin_hoja:  { es: "Toque una carta para ver su ficha.", en: "Tap a card to see their file." }
+    mantener:  { es: "Mantenga pulsado para abrir la ficha.", en: "Press and hold to open their file." }
+    deslizar:  { es: "Deslice para ver al resto.", en: "Swipe to see the others." }
+    quitar:    { es: "Toque una cara en un hueco para retirarla.", en: "Tap a face in a seat to remove it." }
+
+hoja:
+  etiqueta:
+    obligatoria: { es: "Obligatoria", en: "Required" }
+    opcional:    { es: "Opcional", en: "Optional" }
+  duracion_uno: { es: "1 día · el {inicio}", en: "1 day · day {inicio}" }
+  duracion:     { es: "{n} días · del {inicio} al {fin}", en: "{n} days · day {inicio} to {fin}" }
+  plazas:          { es: "{n} de {max}", en: "{n} of {max}" }
+  plazas_etiqueta: { es: "Invitados", en: "Guests" }
+  plazas_rango:    { es: "De {min} a {max} invitados", en: "{min} to {max} guests" }
+  plazas_fijas:    { es: "{max} invitados", en: "{max} guests" }
+  hueco_libre:     { es: "Libre", en: "Open" }
+  regla:
+    cualquiera:      { es: "Abierta a cualquiera", en: "Open to anyone" }
+    dama_caballero:  { es: "Una dama y un caballero", en: "A lady and a gentleman" }
+    solo_damas:      { es: "Sólo damas", en: "Ladies only" }
+    solo_caballeros: { es: "Sólo caballeros", en: "Gentlemen only" }
+  anfitrion: { es: "De parte de {anfitrion}", en: "Hosted by {anfitrion}" }
+  tipo:
+    baile:        { es: "Baile de cortejo", en: "Courtship ball" }
+    recepcion:    { es: "Recepción", en: "Reception" }
+    cena:         { es: "Cena", en: "Dinner" }
+    paseo:        { es: "Paseo", en: "Promenade" }
+    teatro:       { es: "Palco de teatro", en: "Theatre box" }
+    clase:        { es: "Clase", en: "Lesson" }
+    visita:       { es: "Visita privada", en: "Private visit" }
+    encargo_real: { es: "Encargo real", en: "Royal commission" }
+  radar:
+    requisito: { es: "Lo que se pide", en: "What's expected" }
+    invitados: { es: "Lo que llevan sus invitados", en: "What your guests bring" }
+    leyenda_pista: { es: "Cuanto más cubra la silueta, mejor irá la velada.", en: "The more the shape is covered, the better the evening." }
+  a_favor:   { es: "A favor", en: "In your favour" }
+  en_contra: { es: "En contra", en: "Against you" }
+  clase_mejora: { es: "Cada asistente gana +1 en {habilidad}.", en: "Each guest gains +1 {habilidad}." }
+  visita_pareja: { es: "Una visita discreta entre {a} y {b}.", en: "A discreet visit between {a} and {b}." }
+  boton:
+    carta:     { es: "Leer la carta", en: "Read the letter" }
+    responder: { es: "Responder", en: "Reply" }
+    declinar:  { es: "Declinar con cortesía", en: "Send regrets" }
+  respondida:    { es: "Respondida. Puede cambiar de idea hasta comenzar la semana.", en: "Answered. You can change your mind until the week begins." }
+  declinada:     { es: "Declinada con cortesía.", en: "Regrets sent." }
+  cambiar_pista: { es: "Toque una cara para cambiarla.", en: "Tap a face to change it." }
+  sello_inactivo_pista: { es: "Complete los huecos para responder.", en: "Fill the seats to reply." }
+  aviso_obligatoria_vacia: { es: "Si nadie acude, la Corona lo notará.", en: "If no one attends, the Crown will notice." }
+  error:
+    falta_dama:       { es: "Falta una dama.", en: "A lady is still needed." }
+    falta_caballero:  { es: "Falta un caballero.", en: "A gentleman is still needed." }
+    faltan_uno:       { es: "Falta un invitado.", en: "One more guest is needed." }
+    faltan:           { es: "Faltan {n} invitados.", en: "{n} more guests are needed." }
+    cupo_completo:    { es: "No quedan huecos. Retire a alguien primero.", en: "No seats left. Remove someone first." }
+    ocupada_dia:      { es: "{nombre} ya tiene compromiso el {dia}.", en: "{nombre} is already engaged on day {dia}." }
+    limite_semana:    { es: "{nombre} ya tiene dos compromisos esta semana.", en: "{nombre} already has two engagements this week." }
+    indispuesta:      { es: "{nombre} está {nombre|indispuesto|indispuesta}.", en: "{nombre} is unwell." }
+    solo_damas:       { es: "Esta invitación es sólo para damas.", en: "This invitation is for ladies only." }
+    solo_caballeros:  { es: "Esta invitación es sólo para caballeros.", en: "This invitation is for gentlemen only." }
+    dama_caballero:   { es: "Esta invitación pide una dama y un caballero.", en: "This invitation calls for a lady and a gentleman." }
+    tope_clase:       { es: "{nombre} ya domina {habilidad}; la clase no le aporta más.", en: "{nombre} has mastered {habilidad}; the lesson adds nothing." }
+    semana_comenzada: { es: "La semana ya ha comenzado.", en: "The week is already under way." }
+
+carta:
+  cerrar:      { es: "Cerrar la carta", en: "Close the letter" }
+  leer_entera: { es: "Leer la carta entera", en: "Read the whole letter" }
+  releer:      { es: "Releer la carta", en: "Read the letter again" }
+  guardada:    { es: "Queda en su escritorio para releerla.", en: "It stays on your desk to read again." }
+  sello_roto:  { es: "Toque para romper el lacre", en: "Tap to break the seal" }
+
+habilidades:
+  titulo: { es: "Habilidades", en: "Skills" }
+  nivel:  { es: "{valor} de 5", en: "{valor} of 5" }
+  baile:
+    nombre: { es: "Baile", en: "Dance" }
+    desc:   { es: "Gracia en la pista y en los giros de una conversación.", en: "Grace on the floor, and in the turns of a conversation." }
+  estatus:
+    nombre: { es: "Estatus", en: "Standing" }
+    desc:   { es: "El peso del apellido y de quien responde por uno.", en: "The weight of a name, and of who vouches for it." }
+  chisme:
+    nombre: { es: "Chisme", en: "Gossip" }
+    desc:   { es: "Saber qué se dice, y cuándo conviene decirlo.", en: "Knowing what is said, and when to say it." }
+  presencia:
+    nombre: { es: "Presencia", en: "Presence" }
+    desc:   { es: "Llenar una sala sin levantar la voz.", en: "Filling a room without raising one's voice." }
+  intelecto:
+    nombre: { es: "Intelecto", en: "Intellect" }
+    desc:   { es: "Seguir un argumento hasta el final, y ganarlo.", en: "Following an argument to the end, and winning it." }
+  mejora: { es: "{nombre}: +1 en {habilidad}", en: "{nombre}: +1 {habilidad}" }
+
+ficha:
+  seccion:
+    biografia:    { es: "Biografía", en: "Background" }
+    ficha_tecnica: { es: "Ficha técnica", en: "At a glance" }
+    habilidades:  { es: "Habilidades", en: "Skills" }
+    compromisos:  { es: "Compromisos de la semana", en: "This week's engagements" }
+    lo_que_sabe:  { es: "Lo que usted sabe", en: "What you know" }
+    diario:       { es: "Diario de la temporada", en: "Season diary" }
+  campo:
+    edad:        { es: "Edad", en: "Age" }
+    edad_valor:  { es: "{edad} años", en: "{edad}" }
+    casa:        { es: "Casa", en: "House" }
+    le_gusta:    { es: "Le gusta", en: "Enjoys" }
+    no_le_gusta: { es: "No le gusta", en: "Dislikes" }
+    desconocido: { es: "Aún no lo sabe", en: "Not yet known" }
+  entrada:
+    primera_impresion: { es: "Primera impresión", en: "First impression" }
+    lo_que_le_gusta:   { es: "Lo que le gusta", en: "What delights them" }
+    lo_que_teme:       { es: "Lo que teme", en: "What they fear" }
+    una_confidencia:   { es: "Una confidencia", en: "A confidence" }
+    lo_que_esconde:    { es: "Lo que esconde", en: "What they hide" }
+    como_termino:      { es: "Cómo terminó la temporada", en: "How the season ended" }
+  entrada_bloqueada: { es: "Aún no lo sabe.", en: "You don't know yet." }
+  entrada_nueva:     { es: "Nueva confidencia", en: "New confidence" }
+  compromiso:
+    ninguno:   { es: "Sin compromisos esta semana.", en: "No engagements this week." }
+    linea:     { es: "{evento} · {lugar}", en: "{evento} · {lugar}" }
+    varios_dias: { es: "{n} días", en: "{n} days" }
+  diario:
+    desplegar: { es: "Abrir el diario", en: "Open the diary" }
+    plegar:    { es: "Plegar el diario", en: "Fold the diary" }
+    vacio:     { es: "Todavía no hay nada anotado.", en: "Nothing noted yet." }
+    cuantas:   { es: "{n} anotaciones", en: "{n} entries" }
+    linea:
+      evento:     { es: "{evento} · {desenlace}", en: "{evento} · {desenlace}" }
+      ausente:    { es: "{evento} · no asistió", en: "{evento} · did not attend" }
+      indispuesta: { es: "{evento} · ausente, {nombre|indispuesto|indispuesta}", en: "{evento} · absent, unwell" }
+      tuteo:      { es: "{evento} · ahora se trata de tú con {b}", en: "{evento} · now on first-name terms with {b}" }
+      clase:      { es: "{evento} · +1 en {habilidad}", en: "{evento} · +1 {habilidad}" }
+      agitada:    { es: "{evento} · salió {nombre|agitado|agitada}", en: "{evento} · left unsettled" }
+  cerrar: { es: "Cerrar la ficha", en: "Close the file" }
+
+aviso_comenzar:
+  titulo:      { es: "Antes de empezar", en: "Before you begin" }
+  texto_una:   { es: "Queda una invitación sin responder. Se declinará con cortesía.", en: "One invitation is still unanswered. Regrets will be sent." }
+  texto_varias: { es: "Quedan {n} invitaciones sin responder. Se declinarán con cortesía.", en: "{n} invitations are still unanswered. Regrets will be sent." }
+  revisar:     { es: "Revisar", en: "Review" }
+  comenzar:    { es: "Comenzar", en: "Begin" }
+  faltan_obligatorias: { es: "Faltan {n} invitaciones obligatorias por responder.", en: "{n} required invitations still need a reply." }
+
+ejecucion:
+  cambio_dia:   { es: "{dia_semana} {dia}", en: "{dia_semana} {dia}" }
+  en_curso:     { es: "{evento}, en curso", en: "{evento}, under way" }
+  de_camino:    { es: "De camino a {lugar}", en: "On the way to {lugar}" }
+  atencion:     { es: "Algo ocurre en {lugar}.", en: "Something is happening at {lugar}." }
+  atender:      { es: "Toque para atenderlo", en: "Tap to attend to it" }
+  pausado:      { es: "En pausa", en: "Paused" }
+  dia_tranquilo: { es: "Un día tranquilo en Valcenda.", en: "A quiet day in Valcenda." }
+  fin_semana:   { es: "La semana llega a su fin.", en: "The week draws to a close." }
+  sobre_menor:  { es: "Noticias de {lugar}", en: "News from {lugar}" }
+
+incidente:
+  cabecera:  { es: "Un imprevisto", en: "A complication" }
+  elegir:    { es: "Elija cómo responder.", en: "Choose how to respond." }
+  habilidad: { es: "{habilidad}", en: "{habilidad}" }
+  no_cerrar: { es: "Esto requiere una respuesta.", en: "This needs an answer." }
+  implicados: { es: "Implicados", en: "Involved" }
+
+reemplazo:
+  titulo: { es: "Un cambio de planes", en: "A change of plans" }
+  causa:
+    indispuesta: { es: "{nombre} no podrá ir a {evento}: está {nombre|indispuesto|indispuesta}.", en: "{nombre} can't attend {evento}: {nombre|he's|she's} unwell." }
+    generica:    { es: "{nombre} no podrá ir a {evento}.", en: "{nombre} can't attend {evento}." }
+  pregunta: { es: "¿Qué hacemos?", en: "What shall we do?" }
+  sustituir:
+    titulo: { es: "Sustituir", en: "Find a replacement" }
+    desc:   { es: "Elija a alguien disponible para el hueco.", en: "Choose someone available for the seat." }
+    pista:  { es: "Las cartas con halo pueden ir.", en: "Cards with a glow can go." }
+  reducida:
+    titulo: { es: "Asistencia reducida", en: "Go with fewer" }
+    desc:   { es: "Irán {n} en lugar de {max}.", en: "{n} will go instead of {max}." }
+  retirarse:
+    titulo:          { es: "Retirarse con disculpas", en: "Withdraw with apologies" }
+    desc_opcional:   { es: "Nadie se lo tendrá en cuenta.", en: "No one will hold it against you." }
+    desc_obligatoria: { es: "La Corona lo notará: {rep} de reputación.", en: "The Crown will notice: {rep} reputation." }
+  sin_disponibles: { es: "No hay nadie disponible que cumpla la regla.", en: "No one available fits the invitation." }
+  confirmar: { es: "Confirmar el cambio", en: "Confirm the change" }
+
+resultado:
+  sello:
+    favorable: { es: "Velada lograda", en: "A fine evening" }
+    medias:    { es: "A medias", en: "Mixed fortunes" }
+    desaire:   { es: "Un desaire", en: "A snub" }
+  lo_que_se_comenta: { es: "Lo que se comenta", en: "What people are saying" }
+  solo_usted:        { es: "Sólo usted lo sabe", en: "Only you know" }
+  reputacion:        { es: "Reputación {rep}", en: "Reputation {rep}" }
+  acercamiento:      { es: "{a} y {b} se acercan.", en: "{a} and {b} grow closer." }
+  distanciamiento:   { es: "{a} y {b} se enfrían.", en: "{a} and {b} cool towards each other." }
+  sin_asistentes:    { es: "Nadie acudió en su nombre.", en: "No one attended on your behalf." }
+  enterada:          { es: "Seguir", en: "Carry on" }
+  menor:
+    titulo:     { es: "Noticias de {lugar}", en: "News from {lugar}" }
+    cambios:    { es: "Cambios", en: "Changes" }
+    leer_luego: { es: "Leer en el cierre", en: "Read at week's end" }
+    clase_hecha: { es: "La clase ha terminado.", en: "The lesson is over." }
+
+cierre:
+  cronica:
+    cabecera:   { es: "Crónica de salones", en: "The Salon Chronicle" }
+    lema:       { es: "Lo que Valcenda comenta", en: "What Valcenda is saying" }
+    imprenta:   { es: "Impresa por Mara Calce · Calle de los Sellos", en: "Printed by Mara Calce · Street of Seals" }
+    edicion:    { es: "Semana {semana} · {fecha}", en: "Week {semana} · {fecha}" }
+    reputacion: { es: "Su reputación esta semana: {rep}", en: "Your reputation this week: {rep}" }
+    motivos:    { es: "Por qué", en: "Why" }
+    motivo_linea: { es: "{rep} · {motivo}", en: "{rep} · {motivo}" }
+    total:      { es: "En lo que va de temporada: {rep}", en: "Season so far: {rep}" }
+    sin_cambios: { es: "Esta semana nadie habló de usted.", en: "No one spoke of you this week." }
+    hoja_sin_firma: { es: "La Hoja sin Firma", en: "The Unsigned Sheet" }
+    seguir:     { es: "Abrir lo privado", en: "Open the private notes" }
+  privado:
+    cabecera:   { es: "Sólo para sus ojos", en: "For your eyes only" }
+    abrir:      { es: "Romper el lacre", en: "Break the seal" }
+    vinculos:   { es: "Vínculos", en: "Bonds" }
+    curiosidad: { es: "{a} y {b} se buscan con la mirada.", en: "{a} and {b} keep finding each other across the room." }
+    tuteo:      { es: "{a} y {b} ahora se tratan de tú.", en: "{a} and {b} are now on first-name terms." }
+    umbral:     { es: "Entre {a} y {b} hay algo que ninguno dice.", en: "Something lies between {a} and {b} that neither will say." }
+    beso:       { es: "Entre {a} y {b} hubo un beso.", en: "There was a kiss between {a} and {b}." }
+    confesion:  { es: "{a} confesó lo que siente.", en: "{a} confessed {a|his|her} feelings." }
+    confidencia_nueva: { es: "Nueva confidencia en la ficha de {nombre}.", en: "A new confidence in {nombre}'s file." }
+    escenas_pendientes: { es: "Hay más que contar: quedará para la semana próxima.", en: "There's more to tell; it will keep until next week." }
+    animo_titulo: { es: "Cómo están", en: "How they are" }
+    animo:
+      neutral:    { es: "{nombre|sereno|serena}", en: "composed" }
+      alegre:     { es: "{nombre|contento|contenta}", en: "in good spirits" }
+      molesta:    { es: "{nombre|molesto|molesta}", en: "put out" }
+      ruborizada: { es: "{nombre|ruborizado|ruborizada}", en: "flushed" }
+      agitada:    { es: "{nombre|agitado|agitada}", en: "unsettled" }
+    animo_linea: { es: "{nombre}, {expresion}", en: "{nombre}, {expresion}" }
+    vacio:       { es: "Nada que contar en privado esta semana.", en: "Nothing private to report this week." }
+  continuar:      { es: "Pasar a la semana siguiente", en: "On to next week" }
+  ir_gran_baile:  { es: "Ir al Gran Baile", en: "On to the Grand Ball" }
+  nueva_semana:   { es: "Llega el correo de la semana {semana}.", en: "The post for week {semana} arrives." }
+  invitaciones_nuevas: { es: "{n} invitaciones nuevas", en: "{n} new invitations" }
+
+vinculos:
+  nivel:
+    conocidos:   { es: "Conocidos", en: "Acquaintances" }
+    curiosidad:  { es: "Curiosidad", en: "Curiosity" }
+    confianza:   { es: "Confianza", en: "Trust" }
+    umbral:      { es: "Umbral", en: "On the threshold" }
+    declaracion: { es: "Declaración", en: "Declaration" }
+    propuesta:   { es: "Propuesta", en: "Proposal" }
+  escena_desbloqueada: { es: "Una escena nueva entre {a} y {b}.", en: "A new scene between {a} and {b}." }
+  ver_escena:          { es: "Ver la escena", en: "Watch the scene" }
+  visita_desbloqueada: { es: "{a} y {b} ya pueden verse en una visita privada.", en: "{a} and {b} may now meet in a private visit." }
+  visita_disponible:   { es: "Visita privada disponible", en: "Private visit available" }
+
+gran_baile:
+  titulo:        { es: "Gran Baile del Sello", en: "The Grand Ball of the Seal" }
+  carnet:
+    titulo:       { es: "Carnet de baile", en: "Dance card" }
+    instrucciones: { es: "Elija con quién baila cada uno el último vals.", en: "Choose who dances the last waltz with whom." }
+    ultimo_vals:  { es: "El último vals", en: "The last waltz" }
+    intereses:    { es: "En su carnet", en: "On their card" }
+    un_interes:   { es: "Sólo hay un nombre en su carnet.", en: "There is only one name on their card." }
+    sin_intereses: { es: "Su carnet está en blanco: terminará la temporada por su cuenta.", en: "Their card is blank: they'll end the season on their own." }
+    ninguno:      { es: "Ninguno", en: "No one" }
+    ninguno_desc: { es: "{nombre} no bailará el último vals.", en: "{nombre} will sit out the last waltz." }
+    ya_pareja:    { es: "{nombre} ya baila con {b}.", en: "{nombre} is already dancing with {b}." }
+    exclusividad: { es: "Quien ya tiene pareja para el último vals desaparece de los demás carnets.", en: "Once someone has a partner for the last waltz, they vanish from every other card." }
+    motivo:
+      acuerdo:    { es: "Por un acuerdo", en: "By arrangement" }
+      familia:    { es: "Por compromiso de familia", en: "A family promise" }
+      deuda:      { es: "Por una deuda", en: "Over a debt" }
+    pendientes:   { es: "Quedan {n} carnets por decidir.", en: "{n} cards still to decide." }
+    confirmar:    { es: "Sellar el carnet", en: "Seal the card" }
+    confirmar_todo:
+      titulo:   { es: "¿Sellar los carnets?", en: "Seal the dance cards?" }
+      texto:    { es: "Después no podrá cambiarlos.", en: "You won't be able to change them afterwards." }
+      "si":       { es: "Sellar", en: "Seal" }
+      "no":       { es: "Repasarlos", en: "Look again" }
+  propuestas:     { es: "Las propuestas", en: "The proposals" }
+  sellos_reina:   { es: "Los sellos de la Reina", en: "The Queen's seals" }
+  sello_union:    { es: "Sellado en el Archivo: {a} y {b}", en: "Sealed in the Archive: {a} and {b}" }
+  cronica_final:  { es: "Crónica de salones · Edición del Gran Baile", en: "The Salon Chronicle · Grand Ball edition" }
+  epilogo:
+    titulo:       { es: "Epílogos", en: "Epilogues" }
+    uniones:      { es: "Las uniones", en: "The unions" }
+    por_su_cuenta: { es: "Por su cuenta", en: "On their own terms" }
+    la_hoja:      { es: "La Hoja sin Firma", en: "The Unsigned Sheet" }
+    el_archivo:   { es: "Lo que guarda el Archivo", en: "What the Archive keeps" }
+    su_lugar:     { es: "Su lugar en Valcenda", en: "Your place in Valcenda" }
+    fin:          { es: "Fin de la temporada", en: "End of the season" }
+  reputacion:
+    favorita:  { es: "Favorita de la Corona", en: "The Crown's favourite" }
+    respetada: { es: "Respetada", en: "Respected" }
+    olvidada:  { es: "Olvidada", en: "Forgotten" }
+  final:
+    portada:  { es: "Volver a la portada", en: "Return to the title screen" }
+    creditos: { es: "Ver los créditos", en: "See the credits" }
+
+ajustes:
+  titulo: { es: "Ajustes", en: "Settings" }
+  idioma: { es: "Idioma", en: "Language" }
+  idioma_es: { es: "Español", en: "Español" }
+  idioma_en: { es: "English", en: "English" }
+  seccion:
+    juego:          { es: "Juego", en: "Game" }
+    sonido:         { es: "Sonido", en: "Sound" }
+    accesibilidad:  { es: "Accesibilidad", en: "Accessibility" }
+    partida:        { es: "Partida", en: "Saved games" }
+    contenido:      { es: "Contenido", en: "Content" }
+  tamano_texto: { es: "Tamaño del texto", en: "Text size" }
+  tamano:
+    normal:   { es: "Normal", en: "Normal" }
+    grande:   { es: "Grande", en: "Large" }
+    muy_grande: { es: "Muy grande", en: "Extra large" }
+  velocidad: { es: "Velocidad de la semana", en: "Week speed" }
+  velocidad_opcion:
+    pausada: { es: "Pausada", en: "Leisurely" }
+    normal:  { es: "Normal", en: "Normal" }
+    rapida:  { es: "Rápida", en: "Brisk" }
+  velocidad_texto: { es: "Velocidad del texto", en: "Text speed" }
+  texto_inmediato: { es: "Al instante", en: "Instant" }
+  movimiento_reducido:      { es: "Movimiento reducido", en: "Reduced motion" }
+  movimiento_reducido_desc: { es: "Menos animaciones y sin latidos.", en: "Fewer animations, no pulsing." }
+  vibracion: { es: "Vibración", en: "Vibration" }
+  musica:    { es: "Música", en: "Music" }
+  efectos:   { es: "Efectos de sonido", en: "Sound effects" }
+  volumen:   { es: "{porcentaje} %", en: "{porcentaje}%" }
+  activado:    { es: "Sí", en: "On" }
+  desactivado: { es: "No", en: "Off" }
+  ruta_primos:      { es: "Permitir romances entre primos", en: "Allow romance between cousins" }
+  ruta_primos_desc: { es: "Si lo desactiva, los primos sólo serán familia.", en: "If turned off, cousins will remain simply family." }
+  reiniciar_tutorial:      { es: "Volver a ver el tutorial", en: "Replay the tutorial" }
+  reiniciar_tutorial_desc: { es: "Las notas de su asistente volverán a aparecer.", en: "Your assistant's notes will appear again." }
+  guardar:  { es: "Guardar partida", en: "Save game" }
+  cargar:   { es: "Cargar partida", en: "Load game" }
+  ranuras:
+    ranura:  { es: "Ranura {n}", en: "Slot {n}" }
+    vacia:   { es: "Vacía", en: "Empty" }
+    info:    { es: "Semana {semana} · {fase}", en: "Week {semana} · {fase}" }
+    fecha_guardado: { es: "Guardada el {fecha}", en: "Saved {fecha}" }
+    fase:
+      planificacion: { es: "Planificación", en: "Planning" }
+      ejecucion:     { es: "La semana en marcha", en: "Week under way" }
+      cierre:        { es: "Cierre", en: "Week's end" }
+      gran_baile:    { es: "Gran Baile", en: "Grand Ball" }
+    sobrescribir:
+      titulo: { es: "¿Sobrescribir la ranura {n}?", en: "Overwrite slot {n}?" }
+      texto:  { es: "Se perderá la partida guardada ahí.", en: "The game saved there will be lost." }
+      "si":     { es: "Sobrescribir", en: "Overwrite" }
+    cargar_confirmar:
+      titulo: { es: "¿Cargar la ranura {n}?", en: "Load slot {n}?" }
+      texto:  { es: "Perderá lo que no haya guardado.", en: "Anything unsaved will be lost." }
+      "si":     { es: "Cargar", en: "Load" }
+    borrar: { es: "Borrar", en: "Delete" }
+    borrar_confirmar:
+      titulo: { es: "¿Borrar la ranura {n}?", en: "Delete slot {n}?" }
+      texto:  { es: "No se podrá recuperar.", en: "This can't be undone." }
+      "si":     { es: "Borrar", en: "Delete" }
+  salir_portada: { es: "Salir a la portada", en: "Quit to title screen" }
+  salir_confirmar:
+    titulo: { es: "¿Salir a la portada?", en: "Quit to the title screen?" }
+    texto:  { es: "Se conserva lo guardado al empezar esta fase.", en: "Progress saved at the start of this phase is kept." }
+    texto_ejecucion: { es: "Si sale ahora, la semana volverá a empezar desde su planificación.", en: "If you leave now, the week will restart from your plan." }
+    "si":     { es: "Salir", en: "Quit" }
+  creditos: { es: "Créditos", en: "Credits" }
+  restaurar: { es: "Restaurar valores", en: "Restore defaults" }
+
+guardado:
+  autoguardado:     { es: "Guardado", en: "Saved" }
+  guardando:        { es: "Guardando…", en: "Saving…" }
+  guardado_ranura:  { es: "Guardado en la ranura {n}.", en: "Saved to slot {n}." }
+  fallo:            { es: "No se pudo guardar. Inténtelo de nuevo.", en: "The game couldn't be saved. Please try again." }
+  sin_espacio:      { es: "No queda espacio en el dispositivo.", en: "There's no space left on the device." }
+  cargando:         { es: "Cargando la temporada…", en: "Loading the season…" }
+  cargada:          { es: "Partida cargada.", en: "Game loaded." }
+  corrupta:         { es: "Esta partida está dañada y no se puede abrir.", en: "This saved game is damaged and can't be opened." }
+  version_distinta: { es: "Esta partida es de otra versión del juego.", en: "This save is from a different version of the game." }
+  reintentar:       { es: "Reintentar", en: "Try again" }
+
+tutorial:
+  saltar: { es: "Saltar el tutorial", en: "Skip the tutorial" }
+  saltar_confirmar:
+    titulo: { es: "¿Saltar el tutorial?", en: "Skip the tutorial?" }
+    texto:  { es: "Podrá volver a verlo desde Ajustes.", en: "You can replay it from Settings." }
+    "si":     { es: "Saltar", en: "Skip" }
+    "no":     { es: "Seguir", en: "Keep going" }
+  nota_entendido: { es: "Entendido", en: "Got it" }
+
+accesibilidad:
+  cerrar:         { es: "Cerrar", en: "Close" }
+  comenzar:       { es: "Comenzar la semana", en: "Begin the week" }
+  comenzar_inactivo: { es: "Comenzar la semana, no disponible: faltan respuestas obligatorias", en: "Begin the week, unavailable: required replies missing" }
+  pausa:          { es: "Pausar la semana", en: "Pause the week" }
+  reanudar:       { es: "Reanudar la semana", en: "Resume the week" }
+  rapido:         { es: "Avance rápido", en: "Fast forward" }
+  carta:          { es: "Abrir la carta", en: "Open the letter" }
+  ajustes:        { es: "Abrir los ajustes", en: "Open settings" }
+  historial:      { es: "Abrir el historial", en: "Open the log" }
+  sello:          { es: "Sello: {accion}", en: "Seal: {accion}" }
+  sello_inactivo: { es: "Sello: {accion}, no disponible todavía", en: "Seal: {accion}, not available yet" }
+  sello_resultado: { es: "Desenlace: {desenlace}", en: "Outcome: {desenlace}" }
+  carta_persona:  { es: "{nombre}, {estado}", en: "{nombre}, {estado}" }
+  carta_persona_pista: { es: "Toque para invitar. Mantenga pulsado para ver la ficha.", en: "Tap to invite. Press and hold to see their file." }
+  hueco_vacio:    { es: "Hueco libre, {n} de {max}", en: "Open seat, {n} of {max}" }
+  hueco_ocupado:  { es: "{nombre} en el hueco {n}. Toque para retirarlo.", en: "{nombre} in seat {n}. Tap to remove." }
+  pentagono:      { es: "Habilidades: Baile {baile}, Estatus {estatus}, Chisme {chisme}, Presencia {presencia}, Intelecto {intelecto}", en: "Skills: Dance {baile}, Standing {estatus}, Gossip {chisme}, Presence {presencia}, Intellect {intelecto}" }
+  radar_hoja:     { es: "Se pide: {pide}. Llevan: {llevan}.", en: "Expected: {pide}. Your guests bring: {llevan}." }
+  radar_par:      { es: "{habilidad} {valor}", en: "{habilidad} {valor}" }
+  ficha_fecha:    { es: "{dia_semana}, {dia} de {mes}", en: "{dia_semana}, {dia} {mes}" }
+  ficha_fecha_hoy: { es: "Hoy, {dia_semana} {dia} de {mes}", en: "Today, {dia_semana} {dia} {mes}" }
+  dia_filtro:     { es: "Mostrar sólo el {dia_semana} {dia}", en: "Show only {dia_semana} {dia}" }
+  marcador:       { es: "{lugar}: {evento}, {estado}", en: "{lugar}: {evento}, {estado}" }
+  marcador_varios: { es: "{lugar}: {n} invitaciones", en: "{lugar}: {n} invitations" }
+  mapa:           { es: "Mapa de Valcenda", en: "Map of Valcenda" }
+  mano_cartas:    { es: "El elenco", en: "The cast" }
+  busto:          { es: "{nombre}, {expresion}", en: "{nombre}, {expresion}" }
+  diario_plegado: { es: "Diario de la temporada, plegado. Toque para abrir.", en: "Season diary, folded. Tap to open." }
+  diario_abierto: { es: "Diario de la temporada, abierto. Toque para plegar.", en: "Season diary, open. Tap to fold." }
+  entrada_bloqueada: { es: "{entrada}: aún no lo sabe", en: "{entrada}: not yet known" }
+  continuar_dialogo: { es: "Continuar", en: "Continue" }
+
+creditos:
+  titulo:          { es: "Créditos", en: "Credits" }
+  direccion:       { es: "Dirección", en: "Direction" }
+  guion:           { es: "Guion", en: "Writing" }
+  arte:            { es: "Arte", en: "Art" }
+  musica:          { es: "Música y sonido", en: "Music and sound" }
+  programacion:    { es: "Programación", en: "Programming" }
+  traduccion:      { es: "Adaptación al inglés", en: "English adaptation" }
+  tipografias:     { es: "Tipografías", en: "Typefaces" }
+  agradecimientos: { es: "Agradecimientos", en: "Thanks" }
+  gracias:         { es: "Gracias por acompañar la temporada.", en: "Thank you for seeing the season through." }

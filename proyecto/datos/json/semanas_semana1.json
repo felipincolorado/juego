@@ -1,0 +1,833 @@
+{
+ "semana": {
+  "numero": 1,
+  "nombre": {
+   "es": "Apertura",
+   "en": "Opening"
+  },
+  "mes": "vendimias",
+  "dias": [
+   27,
+   28,
+   29,
+   30
+  ],
+  "hecho_del_reino": {
+   "titulo": {
+    "es": "Proclamación real",
+    "en": "Royal proclamation"
+   },
+   "texto": {
+    "es": "La reina ha abierto la Temporada del Sello. Las uniones de este otoño se sellarán en el Archivo.",
+    "en": "The Queen has opened the Season of the Seal. This autumn's matches will be sealed in the Archive."
+   }
+  }
+ },
+ "objetos": {
+  "carta_corona": {
+   "titulo": {
+    "es": "Proclamación de la Corona",
+    "en": "Proclamation of the Crown"
+   },
+   "saludo": {
+    "es": "A la casamentera de la Temporada,",
+    "en": "To the Matchmaker of the Season,"
+   },
+   "cuerpo": {
+    "es": "Por voluntad de Su Majestad Maela Aurenza, queda abierta la Temporada del Sello en Valcenda. Este año, y por primera vez, las uniones que se acuerden durante las seis semanas se sellarán en el Archivo renovado la noche del Gran Baile, con copia accesible para quien la solicite. Ocho jóvenes de casas y orígenes distintos quedan bajo su tutela. La Corona no le pide que los case a todos. Le pide que nadie se case por error.\n",
+    "en": "By the will of Her Majesty Maela Aurenza, the Season of the Seal is open in Valcenda. This year, for the first time, every match agreed during these six weeks will be sealed in the renewed Archive on the night of the Grand Ball, with a copy open to anyone who asks. Eight young people of different houses and origins are placed in your care. The Crown does not ask you to marry them all. It asks that no one marry by mistake.\n"
+   },
+   "firma": {
+    "es": "Por la Corona, Mireya, secretaria de listas",
+    "en": "For the Crown, Mireya, Keeper of the Lists"
+   }
+  }
+ },
+ "eventos": [
+  {
+   "id": "s1_lectura",
+   "tipo": "cena",
+   "lugar": "imprenta",
+   "dia": 27,
+   "duracion": 1,
+   "plazas": {
+    "min": 2,
+    "max": 3
+   },
+   "regla": "cualquiera",
+   "obligatorio": false,
+   "requisito": {
+    "intelecto": 3,
+    "chisme": 3,
+    "presencia": 2
+   },
+   "anfitrion": {
+    "es": "Mara Calce, editora",
+    "en": "Mara Calce, publisher"
+   },
+   "titulo": {
+    "es": "Velada de lectura",
+    "en": "An evening of readings"
+   },
+   "resumen": {
+    "es": "«Traigan opiniones, no reverencias.» Lecturas, vino y prensas aún calientes.",
+    "en": "“Bring opinions, not curtsies.” Readings, wine and presses still warm."
+   },
+   "a_favor": [
+    {
+     "es": "La Crónica de salones nace aquí: quien brille, saldrá en ella",
+     "en": "The Salon Chronicle is born here: whoever shines will be in it"
+    }
+   ],
+   "en_contra": [
+    {
+     "es": "Mara pregunta mucho, y todo lo apunta",
+     "en": "Mara asks a great deal, and writes it all down"
+    }
+   ],
+   "carta": {
+    "saludo": {
+     "es": "Estimada casamentera:",
+     "en": "Dear Matchmaker,"
+    },
+    "cuerpo": {
+     "es": "Cada otoño abro la imprenta una noche antes de que empiece el ruido. Se leen poemas, se discuten panfletos y se bebe un vino mejor de lo que mi oficio debería permitirme. Envíeme a quien sepa conversar. A los que sólo saben asentir, ya los tengo en las prensas.\n",
+     "en": "Every autumn I open the printing house one night before the noise begins. We read poems, argue over pamphlets and drink a wine finer than my trade ought to allow. Send me people who can hold a conversation. Those who can only nod, I already have on the presses.\n"
+    },
+    "firma": {
+     "es": "Mara Calce",
+     "en": "Mara Calce"
+    }
+   },
+   "incidente": {
+    "dia": 27,
+    "situacion": {
+     "es": "Mara reparte papel y tinta: quiere que cada invitado escriba quién será «la pareja de la temporada». Lo publicará.",
+     "en": "Mara hands out paper and ink: she wants every guest to write down who will be “the match of the season”. She means to print it."
+    },
+    "cita": {
+     "habla": "a",
+     "bark": "incidente"
+    },
+    "opciones": [
+     {
+      "id": "rumor",
+      "habilidad": "chisme",
+      "d": 3,
+      "texto": {
+       "es": "Darle un rumor inofensivo y entretenido",
+       "en": "Give her a harmless, entertaining rumour"
+      },
+      "exito": {
+       "es": "{a} le sirve un rumor tan bueno como falso. Mara lo celebra y deja de preguntar.",
+       "en": "{a} hands her a rumour as delicious as it is false. Mara is delighted and stops asking."
+      },
+      "medias": {
+       "es": "El rumor funciona a medias: Mara lo apunta, pero sigue mirando a {grupo}.",
+       "en": "The rumour half works: Mara notes it down, but keeps her eyes on {grupo}."
+      },
+      "fallo": {
+       "es": "El rumor era demasiado cierto. Alguien en la sala se pone pálido.",
+       "en": "The rumour was a little too true. Someone in the room goes pale."
+      }
+     },
+     {
+      "id": "debate",
+      "habilidad": "intelecto",
+      "d": 4,
+      "texto": {
+       "es": "Abrir un debate sobre si la Crónica debería existir",
+       "en": "Start a debate on whether the Chronicle should exist at all"
+      },
+      "exito": {
+       "es": "La sala entera discute sobre la libertad de imprenta. Nadie vuelve a acordarse de las parejas.",
+       "en": "The whole room argues about freedom of the press. Nobody remembers the matches again."
+      },
+      "medias": {
+       "es": "El debate entretiene un rato, hasta que Mara recupera la pregunta con una sonrisa.",
+       "en": "The debate holds them for a while, until Mara reclaims her question with a smile."
+      },
+      "fallo": {
+       "es": "El argumento se enreda. Mara lo resume en una frase que hace quedar mal a {a}.",
+       "en": "The argument tangles itself up. Mara sums it up in one line that makes {a} look foolish."
+      }
+     },
+     {
+      "id": "negarse",
+      "habilidad": "presencia",
+      "d": 4,
+      "texto": {
+       "es": "Negarse con encanto, y que suene a cumplido",
+       "en": "Decline charmingly, so it sounds like a compliment"
+      },
+      "exito": {
+       "es": "«Sería injusto adelantarle el final, Mara.» Ella se ríe: le ha gustado que no se lo den.",
+       "en": "“It would be unfair to spoil the ending for you, Mara.” She laughs; she likes being refused well."
+      },
+      "medias": {
+       "es": "La negativa es amable, pero suena a que hay algo que ocultar.",
+       "en": "The refusal is gracious, but it sounds as if there's something to hide."
+      },
+      "fallo": {
+       "es": "La negativa sale seca. Mara escribe algo en su cuaderno y no lo enseña.",
+       "en": "The refusal comes out curt. Mara writes something in her notebook and doesn't show it."
+      }
+     }
+    ]
+   },
+   "desenlaces": {
+    "favorable": {
+     "titulo": {
+      "es": "Una noche de ingenio",
+      "en": "A night of wit"
+     },
+     "publico": {
+      "es": "En la Imprenta Calce, {grupo} fueron la mejor conversación de la noche. Mara ya los cita.",
+      "en": "At the Calce Printing House, {grupo} were the best conversation of the night. Mara is already quoting them.",
+      "variantes": [
+       {
+        "si": "asiste(teo)",
+        "texto": {
+         "es": "Teo improvisó un verso sobre la tinta que Mara pidió para la Crónica. {grupo} se marcharon entre aplausos.",
+         "en": "Teo improvised a verse about ink that Mara begged for the Chronicle. {grupo} left to applause."
+        }
+       }
+      ]
+     },
+     "privado": {
+      "es": "Mara le escribió al día siguiente: «Sus jóvenes piensan. Qué raro, qué útil.»",
+      "en": "Mara wrote to you the next day: “Your young people think. How rare, how useful.”",
+      "variantes": [
+       {
+        "si": "asiste(irene)",
+        "texto": {
+         "es": "Irene se quedó mirando las prensas más de lo necesario. Preguntó cuánto tarda en secarse una tirada.",
+         "en": "Irene stood watching the presses longer than she needed to. She asked how long a print run takes to dry."
+        }
+       }
+      ]
+     }
+    },
+    "medias": {
+     "titulo": {
+      "es": "Una velada correcta",
+      "en": "A proper enough evening"
+     },
+     "publico": {
+      "es": "{grupo} asistieron a la velada de la Imprenta Calce. Se les vio atentos; no se les oyó mucho.",
+      "en": "{grupo} attended the Calce evening. They were seen paying attention; they weren't heard much."
+     },
+     "privado": {
+      "es": "Mara no los cita, pero tampoco los olvida. Con ella, eso ya es algo.",
+      "en": "Mara isn't quoting them, but she won't forget them either. With her, that's something."
+     }
+    },
+    "desaire": {
+     "titulo": {
+      "es": "Tinta en el mantel",
+      "en": "Ink on the tablecloth"
+     },
+     "publico": {
+      "es": "En la Imprenta Calce, un comentario de {a} dejó a la sala en silencio. Mara promete los detalles.",
+      "en": "At the Calce Printing House, a remark from {a} left the room silent. Mara promises details."
+     },
+     "privado": {
+      "es": "Conviene no darle a Mara más motivos esta temporada. Tiene buena memoria y una prensa.",
+      "en": "Best not to give Mara more material this season. She has a long memory, and a press."
+     }
+    }
+   }
+  },
+  {
+   "id": "s1_paseo",
+   "tipo": "paseo",
+   "lugar": "jardines",
+   "dia": 28,
+   "duracion": 1,
+   "plazas": {
+    "min": 2,
+    "max": 4
+   },
+   "regla": "cualquiera",
+   "obligatorio": false,
+   "requisito": {
+    "presencia": 3,
+    "chisme": 2
+   },
+   "anfitrion": {
+    "es": "Leonora Serravalle",
+    "en": "Leonora Serravalle"
+   },
+   "titulo": {
+    "es": "Paseo de primer otoño",
+    "en": "An early-autumn stroll"
+   },
+   "resumen": {
+    "es": "Ásteres en flor, el río cerca y medio Valcenda fingiendo que pasea por casualidad.",
+    "en": "Asters in bloom, the river close by, and half of Valcenda pretending to stroll by chance."
+   },
+   "a_favor": [
+    {
+     "es": "Leonora presenta a sus invitados a todo el que pasa",
+     "en": "Leonora introduces her guests to everyone who passes"
+    }
+   ],
+   "en_contra": [
+    {
+     "es": "Si llueve, el bajo de los vestidos lo cuenta todo",
+     "en": "If it rains, every hem will tell the tale"
+    }
+   ],
+   "carta": {
+    "saludo": {
+     "es": "Querida casamentera:",
+     "en": "Dear Matchmaker,"
+    },
+    "cuerpo": {
+     "es": "Mis jardines llegan a su mejor semana justo cuando empieza la temporada; sospecho que los ásteres también quieren que los vean. El viernes abriré los paseos del río a quien sepa pasear despacio y mirar a los demás sin que se note. Traiga a quien quiera dejarse ver.\n",
+     "en": "My gardens reach their finest week just as the season begins; I suspect the asters want to be seen as well. On Friday I'll open the river walks to anyone who knows how to stroll slowly and watch everyone else without being caught at it. Bring whoever wishes to be seen.\n"
+    },
+    "firma": {
+     "es": "Leonora Serravalle",
+     "en": "Leonora Serravalle"
+    }
+   },
+   "desenlaces": {
+    "favorable": {
+     "titulo": {
+      "es": "El paseo de moda",
+      "en": "The talk of the walks"
+     },
+     "publico": {
+      "es": "Leonora Serravalle no paró de presentar a {grupo}. Media orilla del río sabe ya sus nombres.",
+      "en": "Leonora Serravalle never stopped introducing {grupo}. Half the riverbank knows their names now.",
+      "variantes": [
+       {
+        "si": "asiste(isolda)",
+        "texto": {
+         "es": "Isolda Marén se quitó los guantes para tocar el agua del estanque. Los Serravalle lo encontraron encantador; los demás, escandaloso.",
+         "en": "Isolda Marén took off her gloves to touch the pond. The Serravalles found it charming; everyone else, scandalous."
+        }
+       }
+      ]
+     },
+     "privado": {
+      "es": "Leonora le hizo un gesto al despedirse: volverá a invitarlos.",
+      "en": "Leonora gave you a little nod as you left: she'll invite them again.",
+      "variantes": [
+       {
+        "si": "asiste(nilo) y asiste(isolda)",
+        "texto": {
+         "es": "Nilo e Isolda hablaron de seguros de caravana durante media hora. Ella se rió de verdad, dos veces.",
+         "en": "Nilo and Isolda talked about caravan insurance for half an hour. She laughed properly, twice."
+        }
+       }
+      ]
+     }
+    },
+    "medias": {
+     "titulo": {
+      "es": "Un paseo sin historia",
+      "en": "An uneventful stroll"
+     },
+     "publico": {
+      "es": "{grupo} pasearon por los Jardines Serravalle. Hacía buen tiempo, y eso fue lo más comentado.",
+      "en": "{grupo} strolled through the Serravalle Gardens. The weather was lovely, and that was the main news."
+     },
+     "privado": {
+      "es": "Nadie se aburrió. Nadie se lució. Un viernes.",
+      "en": "No one was bored. No one dazzled. A Friday.",
+      "variantes": [
+       {
+        "si": "asiste(celia)",
+        "texto": {
+         "es": "Celia volvió con barro en el bajo y no habló en todo el camino de vuelta.",
+         "en": "Celia came back with mud on her hem and didn't speak the whole way home."
+        }
+       }
+      ]
+     }
+    },
+    "desaire": {
+     "titulo": {
+      "es": "Barro y miradas",
+      "en": "Mud and glances"
+     },
+     "publico": {
+      "es": "Un tropiezo junto al estanque convirtió el paseo de {grupo} en el chiste de la tarde.",
+      "en": "A stumble by the pond turned {grupo}'s stroll into the joke of the afternoon."
+     },
+     "privado": {
+      "es": "Leonora fue amable, que es peor. Habrá que volver con mejor pie.",
+      "en": "Leonora was kind about it, which is worse. They'll need to come back on a better footing."
+     }
+    }
+   }
+  },
+  {
+   "id": "s1_recepcion",
+   "tipo": "recepcion",
+   "lugar": "palacio",
+   "dia": 29,
+   "duracion": 1,
+   "plazas": {
+    "min": 2,
+    "max": 2
+   },
+   "regla": "dama_caballero",
+   "obligatorio": true,
+   "requisito": {
+    "estatus": 4,
+    "presencia": 4,
+    "baile": 3
+   },
+   "anfitrion": {
+    "es": "La Corona",
+    "en": "The Crown"
+   },
+   "titulo": {
+    "es": "Recepción de apertura",
+    "en": "The opening reception"
+   },
+   "resumen": {
+    "es": "Los ocho serán presentados ante la reina. Una pareja abrirá el primer baile.",
+    "en": "All eight will be presented to the Queen. One couple will open the first dance."
+   },
+   "a_favor": [
+    {
+     "es": "Toda la temporada mira esta noche: lo que pase aquí se recordará",
+     "en": "The whole season watches tonight: whatever happens here will be remembered"
+    }
+   ],
+   "en_contra": [
+    {
+     "es": "El maestro de ceremonias es nuevo y está nervioso",
+     "en": "The master of ceremonies is new, and nervous"
+    }
+   ],
+   "carta": {
+    "saludo": {
+     "es": "A la casamentera de la Temporada,",
+     "en": "To the Matchmaker of the Season,"
+    },
+    "cuerpo": {
+     "es": "Su Majestad recibirá a sus ocho jóvenes el sábado, a la hora de las lámparas, en el Palacio de Alto Laurel. Le ruega que elija una dama y un caballero para abrir el primer baile ante la corte. Se valorará el apellido, la soltura y que nadie pise a nadie.\n",
+     "en": "Her Majesty will receive your eight young people on Saturday, at lamp-lighting, in Alto Laurel Palace. She asks you to choose one lady and one gentleman to open the first dance before the court. Name, ease and the absence of trodden toes will all be noted.\n"
+    },
+    "firma": {
+     "es": "Mireya, secretaria de listas",
+     "en": "Mireya, Keeper of the Lists"
+    }
+   },
+   "incidente": {
+    "dia": 29,
+    "situacion": {
+     "es": "El maestro de ceremonias anuncia a {a} y a {b} con las casas cambiadas. Alguien ríe en el fondo; la orquesta espera.",
+     "en": "The master of ceremonies announces {a} and {b} with their houses swapped. Someone laughs at the back; the orchestra waits."
+    },
+    "cita": {
+     "habla": "b",
+     "bark": "incidente"
+    },
+    "opciones": [
+     {
+      "id": "sonreir",
+      "habilidad": "presencia",
+      "d": 4,
+      "texto": {
+       "es": "Sonreír y saludar como si fuera parte del protocolo",
+       "en": "Smile and bow as if it were part of the protocol"
+      },
+      "exito": {
+       "es": "{grupo} saludan con tanta naturalidad que la corte duda de quién se equivocó. La risa se apaga.",
+       "en": "{grupo} bow so naturally that the court wonders who made the mistake. The laughter dies away."
+      },
+      "medias": {
+       "es": "El saludo es correcto, pero la risa del fondo tarda en irse.",
+       "en": "The bow is proper, but the laughter at the back takes its time to fade."
+      },
+      "fallo": {
+       "es": "La sonrisa llega tarde y forzada. La corte entiende que les ha dolido.",
+       "en": "The smile comes late and forced. The court can tell it stung."
+      }
+     },
+     {
+      "id": "corregir",
+      "habilidad": "estatus",
+      "d": 4,
+      "texto": {
+       "es": "Corregir el error con calma, ante la reina",
+       "en": "Calmly correct the error, before the Queen"
+      },
+      "exito": {
+       "es": "Una corrección amable y firme. La reina asiente: le gustan los nombres bien dichos.",
+       "en": "A correction both kind and firm. The Queen nods: she likes names said properly."
+      },
+      "medias": {
+       "es": "La corrección es justa, pero suena a reproche. El maestro de ceremonias enrojece.",
+       "en": "The correction is fair, but it sounds like a rebuke. The master of ceremonies turns red."
+      },
+      "fallo": {
+       "es": "Nadie escucha la corrección. Ahora parece que discuten en mitad del salón.",
+       "en": "No one hears the correction. Now it looks as if they're arguing in the middle of the hall."
+      }
+     },
+     {
+      "id": "bailar",
+      "habilidad": "baile",
+      "d": 3,
+      "texto": {
+       "es": "Empezar a bailar y que la música tape el error",
+       "en": "Start dancing and let the music cover the error"
+      },
+      "exito": {
+       "es": "Un gesto a la orquesta y el vals empieza. Al tercer giro, nadie recuerda el anuncio.",
+       "en": "A glance at the orchestra and the waltz begins. By the third turn, nobody remembers the announcement."
+      },
+      "medias": {
+       "es": "El vals empieza algo desacompasado y se arregla a la mitad.",
+       "en": "The waltz starts a little out of step, then finds itself halfway through."
+      },
+      "fallo": {
+       "es": "La orquesta no estaba lista. El primer compás suena como una puerta mal cerrada.",
+       "en": "The orchestra wasn't ready. The first bar sounds like a door slammed badly."
+      }
+     }
+    ]
+   },
+   "desenlaces": {
+    "favorable": {
+     "titulo": {
+      "es": "El primer baile, impecable",
+      "en": "A flawless first dance"
+     },
+     "publico": {
+      "es": "{grupo} abrieron el baile de la reina con una soltura que hizo callar a las mesas del fondo.",
+      "en": "{grupo} opened the Queen's dance with an ease that silenced the tables at the back.",
+      "variantes": [
+       {
+        "si": "asiste(saul) y asiste(celia)",
+        "texto": {
+         "es": "Saúl Veyra y Celia Lobreda abrieron el baile. Lobreda y Veyra, juntos: ya se habla de un compromiso que cerraría la disputa del paso.",
+         "en": "Saúl Veyra and Celia Lobreda opened the dance. A Lobreda and a Veyra together: there's already talk of an engagement that would settle the old mountain-pass quarrel."
+        },
+        "efectos": [
+         "rumor_compromiso_paso"
+        ]
+       },
+       {
+        "si": "asiste(dario) y asiste(celia)",
+        "texto": {
+         "es": "Dario Miravés y Celia Lobreda, la pareja más elegante que ha visto el palacio en años. Nadie miró a la orquesta.",
+         "en": "Dario Miravés and Celia Lobreda: the most elegant couple the palace has seen in years. Nobody looked at the orchestra."
+        }
+       },
+       {
+        "si": "asiste(isolda)",
+        "texto": {
+         "es": "Nadie habló del pelo de Isolda Marén. Todo el mundo habló de cómo bailaba.",
+         "en": "Nobody talked about Isolda Marén's hair. Everyone talked about the way she danced."
+        }
+       },
+       {
+        "si": "asiste(teo)",
+        "texto": {
+         "es": "Teo Rovena abrió el baile sin pisar a nadie. Valcenda lo celebra como un pequeño milagro.",
+         "en": "Teo Rovena opened the dance without treading on anyone. Valcenda is celebrating it as a minor miracle."
+        }
+       }
+      ]
+     },
+     "privado": {
+      "es": "La reina preguntó por usted dos veces. Mireya lo anotó.",
+      "en": "The Queen asked after you twice. Mireya made a note of it."
+     }
+    },
+    "medias": {
+     "titulo": {
+      "es": "Un comienzo correcto",
+      "en": "A respectable beginning"
+     },
+     "publico": {
+      "es": "{grupo} abrieron el baile sin tropiezos y sin brillo. La reina aplaudió lo justo.",
+      "en": "{grupo} opened the dance without a stumble and without a sparkle. The Queen applauded just enough."
+     },
+     "privado": {
+      "es": "Mireya dice que en palacio se esperaba algo más de usted. Lo dice con cariño.",
+      "en": "Mireya says the palace expected a little more of you. She says it fondly."
+     }
+    },
+    "desaire": {
+     "titulo": {
+      "es": "Un primer baile para olvidar",
+      "en": "A first dance best forgotten"
+     },
+     "publico": {
+      "es": "La apertura de {grupo} dio que hablar, y no por su elegancia. La corte se divirtió más de lo debido.",
+      "en": "{grupo}'s opening dance got people talking, and not about its elegance. The court enjoyed itself more than it should have."
+     },
+     "privado": {
+      "es": "La reina no la miró al despedirse. Habrá que recuperar terreno.",
+      "en": "The Queen didn't look at you as she left. You'll have ground to recover."
+     }
+    },
+    "sin_asistentes": {
+     "publico": {
+      "es": "La casamentera no presentó a nadie para abrir el baile. La reina lo abrió con su chambelán, y Valcenda tomó nota.",
+      "en": "The Matchmaker presented no one to open the dance. The Queen opened it with her chamberlain, and Valcenda took note."
+     }
+    }
+   }
+  },
+  {
+   "id": "s1_clase",
+   "tipo": "clase",
+   "lugar": "academia",
+   "dia": 30,
+   "duracion": 1,
+   "plazas": {
+    "min": 1,
+    "max": 3
+   },
+   "regla": "cualquiera",
+   "obligatorio": false,
+   "mejora": {
+    "habilidad": "baile",
+    "cantidad": 1,
+    "tope": 4
+   },
+   "anfitrion": {
+    "es": "Inés, cantante de los salones",
+    "en": "Inés, singer of the salons"
+   },
+   "titulo": {
+    "es": "Lección de baile",
+    "en": "A dancing lesson"
+   },
+   "resumen": {
+    "es": "Inés enseña los valses de esta temporada antes de que los toque ninguna orquesta.",
+    "en": "Inés teaches this season's waltzes before any orchestra has played them."
+   },
+   "a_favor": [
+    {
+     "es": "+1 en Baile a cada asistente (hasta 4)",
+     "en": "+1 Dance for each attendee (up to 4)"
+    }
+   ],
+   "en_contra": [
+    {
+     "es": "Quien ya baila de maravilla no aprende nada nuevo",
+     "en": "Those who already dance beautifully won't learn anything new"
+    }
+   ],
+   "carta": {
+    "saludo": {
+     "es": "Señora casamentera:",
+     "en": "Dear Matchmaker,"
+    },
+    "cuerpo": {
+     "es": "Los valses de este otoño son más rápidos que los del pasado, y la mitad de Valcenda lo descubrirá en mitad de un salón. El domingo los enseño en la Academia de la Puerta de Greda. Mande a quien quiera llegar al baile sabiendo ya dónde poner los pies. A quien ya lo sepa, mándemelo igual: me vendría bien una pareja que no tiemble.\n",
+     "en": "This autumn's waltzes are quicker than last year's, and half of Valcenda will find that out mid-ballroom. On Sunday I'll teach them at the Greda Gate Academy. Send me anyone who'd like to arrive at the ball already knowing where to put their feet. Anyone who already knows, send them anyway: I could use a partner who doesn't tremble.\n"
+    },
+    "firma": {
+     "es": "Inés",
+     "en": "Inés"
+    }
+   },
+   "completada": {
+    "publico": {
+     "es": "{grupo} tomaron lección de baile con Inés. Los valses de este otoño ya no les pillarán por sorpresa.",
+     "en": "{grupo} took a dancing lesson with Inés. This autumn's waltzes won't catch them out."
+    },
+    "privado": {
+     "es": "Inés dice que han trabajado bien. Viniendo de ella, es un elogio.",
+     "en": "Inés says they worked hard. Coming from her, that's praise.",
+     "variantes": [
+      {
+       "si": "asiste(teo)",
+       "texto": {
+        "es": "Teo pisó a Inés dos veces y la hizo reír tres. Ella dice que eso también es ritmo.",
+        "en": "Teo trod on Inés twice and made her laugh three times. She says that's rhythm too."
+       }
+      },
+      {
+       "si": "asiste(dario)",
+       "texto": {
+        "es": "Dario, que no necesita lecciones, se quedó a ayudar con los demás. Inés dice que enseña con paciencia, y que eso la sorprendió.",
+        "en": "Dario, who needs no lessons, stayed to help the others. Inés says he teaches patiently, and that surprised her."
+       }
+      },
+      {
+       "si": "asiste(celia)",
+       "texto": {
+        "es": "Celia corrigió a Inés una vez, muy bajito. Inés le dio la razón. Celia volvió a casa sonriendo.",
+        "en": "Celia corrected Inés once, very quietly. Inés agreed with her. Celia went home smiling."
+       }
+      },
+      {
+       "si": "asiste(irene)",
+       "texto": {
+        "es": "Irene contó los pasos en voz alta toda la tarde. Funcionó, y nadie se atrevió a reírse.",
+        "en": "Irene counted the steps aloud all afternoon. It worked, and nobody dared laugh."
+       }
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "cierre": {
+  "cronica": {
+   "numero": 1,
+   "cabecera": {
+    "es": "Crónica de salones",
+    "en": "The Salon Chronicle"
+   },
+   "subtitulo": {
+    "es": "Número 1 · Impreso por Calce, Calle de los Sellos",
+    "en": "Issue 1 · Printed by Calce, Street of Seals"
+   },
+   "entradilla": {
+    "es": "Empieza la temporada, y con ella nuestra obligación de contar lo que todos vieron y nadie se atreve a decir.",
+    "en": "The season begins, and with it our duty to report what everyone saw and no one dares to say."
+   },
+   "noticias": [
+    {
+     "id": "n_proclamacion",
+     "fija": true,
+     "titular": {
+      "es": "Lo sellado no se despega",
+      "en": "What is sealed stays sealed"
+     },
+     "texto": {
+      "es": "Su Majestad anunció que las uniones de esta temporada se sellarán en el Archivo. Más de una madre ha pedido sales.",
+      "en": "Her Majesty announced that this season's matches will be sealed in the Archive. More than one mother has called for smelling salts."
+     }
+    },
+    {
+     "id": "n_recepcion",
+     "evento": "s1_recepcion",
+     "usa_desenlace_publico": true,
+     "titular": {
+      "es": "La apertura del baile",
+      "en": "The opening dance"
+     }
+    },
+    {
+     "id": "n_lectura",
+     "evento": "s1_lectura",
+     "si": "asistio(s1_lectura, *)",
+     "usa_desenlace_publico": true,
+     "titular": {
+      "es": "Tinta y vino en la Calle de los Sellos",
+      "en": "Ink and wine on the Street of Seals"
+     }
+    },
+    {
+     "id": "n_paseo",
+     "evento": "s1_paseo",
+     "si": "asistio(s1_paseo, *)",
+     "usa_desenlace_publico": true,
+     "titular": {
+      "es": "Ásteres y apellidos",
+      "en": "Asters and surnames"
+     }
+    },
+    {
+     "id": "n_clase",
+     "evento": "s1_clase",
+     "si": "asistio(s1_clase, *)",
+     "usa_completada_publico": true,
+     "titular": {
+      "es": "Pies preparados",
+      "en": "Feet in readiness"
+     }
+    },
+    {
+     "id": "n_relleno_1",
+     "relleno": true,
+     "titular": {
+      "es": "Se dice, se comenta",
+      "en": "It is said, it is whispered"
+     },
+     "texto": {
+      "es": "Una dama de Alto Laurel asegura que este año habrá boda antes de las nieves. No dice de quién, porque no lo sabe.",
+      "en": "A lady of Alto Laurel insists there'll be a wedding before the snows. She doesn't say whose, because she doesn't know."
+     }
+    },
+    {
+     "id": "n_relleno_2",
+     "relleno": true,
+     "titular": {
+      "es": "Moda de primer otoño",
+      "en": "Early-autumn fashion"
+     },
+     "texto": {
+      "es": "Las mangas se llevan más cortas y los guantes, más largos. La lógica de esta temporada sigue siendo un misterio.",
+      "en": "Sleeves are worn shorter and gloves longer. The logic of this season remains a mystery."
+     }
+    }
+   ],
+   "pie": {
+    "es": "La Crónica no publica rumores. Sólo los que se confirman solos.",
+    "en": "The Chronicle does not print rumours. Only the ones that confirm themselves."
+   }
+  },
+  "solo_sus_ojos": {
+   "observaciones": [
+    {
+     "si": "marca(rumor_compromiso_paso)",
+     "texto": {
+      "es": "Nilo frunció el ceño al oír lo del compromiso de su prima. Celia no lo desmintió.",
+      "en": "Nilo frowned at the talk of his cousin's engagement. Celia didn't deny it."
+     }
+    },
+    {
+     "si": "asistio(s1_recepcion, dario) o asistio(s1_lectura, dario)",
+     "texto": {
+      "es": "Dario se marchó antes que nadie, como siempre. Un carruaje de la casa Miravés lo esperaba con las cortinas echadas.",
+      "en": "Dario left before anyone else, as always. A Miravés carriage was waiting for him with the curtains drawn."
+     }
+    },
+    {
+     "si": "asistio(s1_paseo, celia)",
+     "texto": {
+      "es": "Camila le dijo a Celia que el barro también se lleva con dignidad. Celia no ha decidido si eso era un consejo o una burla.",
+      "en": "Camila told Celia that mud can be worn with dignity too. Celia hasn't decided whether that was advice or mockery."
+     }
+    },
+    {
+     "si": "semana == 1",
+     "texto": {
+      "es": "Ocho personas, ocho deseos y una sola temporada. Por ahora, nadie le ha contado la verdad entera.",
+      "en": "Eight people, eight wishes and a single season. So far, nobody has told you the whole truth."
+     }
+    }
+   ]
+  },
+  "gancho": {
+   "pantalla": "residencia",
+   "sobre": {
+    "descripcion": "Papel grueso, sin lacre ni firma. La letra es pequeña y muy ordenada.",
+    "saludo": {
+     "es": "Señora casamentera:",
+     "en": "Madam Matchmaker:"
+    },
+    "cuerpo": {
+     "es": "Usted sellará uniones. Antes de sellarlas, pregunte qué se escribió debajo. Legajo de la Noche del Censo, folio 80. Faltan once páginas. Alguien más las está buscando.\n",
+     "en": "You will be sealing matches. Before you seal them, ask what was written underneath. The Census Night bundle, folio 80. Eleven pages are missing. Someone else is looking for them.\n"
+    },
+    "firma": null
+   },
+   "nota_final": {
+    "habla": "nota",
+    "es": "La guardo con las demás cartas. Y cierro la puerta con llave esta noche, si no le importa.",
+    "en": "I'll keep it with the other letters. And I'll lock the door tonight, if you don't mind."
+   },
+   "efectos": [
+    "hoja_sobre_recibido"
+   ],
+   "pista": "Autoría de Irene: número de folio con exactitud de archivera (canon §6, pista 1)."
+  }
+ }
+}

@@ -154,3 +154,20 @@ La reacción del personaje en el resultado sale de sus comentarios (`bark.bien`,
 ### 4.2 Claves de interfaz
 
 Las claves usan puntos: `hoja.boton.carta`, `ajustes.idioma`. El motor resuelve `ui("hoja.boton.carta")` según el idioma activo. **Ningún texto visible se escribe dentro del código.**
+
+---
+
+## 5. Campos añadidos al escribir la semana 1
+
+| Campo | Dónde | Significado |
+|---|---|---|
+| `efectos: [marca, …]` | En un desenlace, una variante o el gancho | Marcas de historia que se activan si ese texto se muestra |
+| `mejora: {habilidad, cantidad, tope}` | Eventos de tipo `clase` | Mejora de habilidad de cada asistente |
+| `completada: {publico, privado}` | Eventos de tipo `clase` | Sustituye a `desenlaces`, porque las clases no tienen resultado |
+| `cita: {habla: a, bark: incidente}` | En un incidente | Quien ocupa esa plaza dice una de sus frases de esa situación |
+| `noticias[].fija · relleno · usa_desenlace_publico · usa_completada_publico` | En la Crónica | Cómo se compone: primero las fijas, después el obligatorio, luego los opcionales con asistentes y, por último, el relleno hasta llegar a 3 noticias (máximo 4) |
+| `asistio(evento, *)` | Condiciones | Asistió alguien a ese evento |
+| `objetos` | Por semana | Cartas o documentos que se pueden releer en la residencia |
+| `objeto_guardado` | En un paso del tutorial | Guarda ese objeto al terminar el paso |
+
+**Orden de las plazas en `dama_caballero`:** la plaza `a` es el caballero y la `b` es la dama.

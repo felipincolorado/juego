@@ -1,0 +1,289 @@
+{
+ "pasos": [
+  {
+   "id": "t00_portada",
+   "pantalla": "portada",
+   "disparador": "inicio_partida_nueva",
+   "lineas": []
+  },
+  {
+   "id": "t01_reina",
+   "pantalla": "apertura",
+   "disparador": "tras_portada",
+   "fondo": "mapa_atenuado",
+   "lineas": [
+    {
+     "habla": "reina",
+     "expr": "neutral",
+     "es": "Se abre la Temporada del Sello. Ocho jóvenes de Valcenda quedan bajo su tutela.",
+     "en": "The Season of the Seal is open. Eight young people of Valcenda are now in your care."
+    },
+    {
+     "habla": "reina",
+     "expr": "neutral",
+     "es": "Al terminar, sellaré en el Archivo las uniones que haya sabido conducir. Elija bien: lo sellado no se despega.",
+     "en": "When it ends, I will seal in the Archive every match you have guided. Choose well. A seal does not come unstuck."
+    },
+    {
+     "habla": "reina",
+     "expr": "alegre",
+     "es": "Valcenda la mirará a usted tanto como a ellos. Que hable con envidia, no con burla.",
+     "en": "Valcenda will watch you as closely as them. Let it speak with envy, not with laughter."
+    }
+   ],
+   "objeto_guardado": "carta_corona"
+  },
+  {
+   "id": "t02_nota_bienvenida",
+   "pantalla": "apertura",
+   "disparador": "tras_t01",
+   "lineas": [
+    {
+     "habla": "nota",
+     "es": "Señora: ya han llegado las ocho cartas de presentación. Se las dejo sobre la mesa, una a una.",
+     "en": "Madam: all eight letters of introduction have arrived. I'll lay them out for you, one by one."
+    }
+   ]
+  },
+  {
+   "id": "t03_reparto",
+   "pantalla": "reparto_cartas",
+   "disparador": "tras_t02",
+   "descripcion": "Las ocho cartas caen una a una y forman la mano en arco. Al tocar cada carta, el personaje dice su `presentacion` (textos/barks.yaml) y aparece su `nota_presentacion` manuscrita (se puede saltar). El paso termina cuando se han tocado las ocho o se pulsa «Continuar».\n",
+   "lineas": []
+  },
+  {
+   "id": "t04_mapa",
+   "pantalla": "mapa_planificacion",
+   "disparador": "tras_t03",
+   "resaltar": "marcador:palacio",
+   "bloquea": true,
+   "lineas": [
+    {
+     "habla": "nota",
+     "es": "Esta es Valcenda. Cada sobre es una invitación. Toque el del palacio.",
+     "en": "This is Valcenda. Every envelope is an invitation. Tap the one at the palace."
+    }
+   ]
+  },
+  {
+   "id": "t05_hoja",
+   "pantalla": "hoja_evento",
+   "disparador": "abre_evento(s1_recepcion)",
+   "resaltar": "hoja.plaza",
+   "lineas": [
+    {
+     "habla": "nota",
+     "es": "La recepción de apertura. La Corona pide una pareja que abra el primer baile: una dama y un caballero.",
+     "en": "The opening reception. The Crown asks for a couple to open the first dance: one lady, one gentleman."
+    },
+    {
+     "habla": "nota",
+     "es": "Buen apellido, buena presencia y pies seguros. Eso es lo que miran.",
+     "en": "A good name, a good bearing and sure feet. That's what they'll be watching."
+    }
+   ]
+  },
+  {
+   "id": "t06_carta_opcional",
+   "pantalla": "hoja_evento",
+   "disparador": "tras_t05",
+   "resaltar": "hoja.carta",
+   "bloquea": false,
+   "lineas": [
+    {
+     "habla": "nota",
+     "es": "Si quiere la invitación completa, el sobre de la esquina la abre. No hace falta leerla.",
+     "en": "The envelope in the corner opens the full invitation, if you'd like it. You needn't read it."
+    }
+   ]
+  },
+  {
+   "id": "t07_asignar",
+   "pantalla": "hoja_evento",
+   "disparador": "tras_t06",
+   "resaltar": "mano.carta:*",
+   "lineas": [
+    {
+     "habla": "nota",
+     "es": "Toque dos cartas de su mano. El dibujo de cinco puntas compara lo que piden con lo que llevan.",
+     "en": "Tap two cards in your hand. The five-pointed figure compares what they ask for with what you're sending."
+    }
+   ]
+  },
+  {
+   "id": "t08_radar",
+   "pantalla": "hoja_evento",
+   "disparador": "plazas_completas(s1_recepcion)",
+   "resaltar": "hoja.radar",
+   "lineas": [
+    {
+     "habla": "nota",
+     "es": "La línea de puntos es lo que piden. El color, lo que llevan. Cuanto más lo cubra, mejor.",
+     "en": "The dotted line is what they ask for. The colour is what you're sending. The more it covers, the better."
+    },
+    {
+     "habla": "nota",
+     "es": "Bien. El sello confirma la respuesta. Puede cambiar de idea hasta que empiece la semana.",
+     "en": "Good. The seal confirms your reply. You can change your mind until the week begins."
+    }
+   ],
+   "resaltar_despues": "hoja.sello"
+  },
+  {
+   "id": "t09_ficha",
+   "pantalla": "mapa_planificacion",
+   "disparador": "responde(s1_recepcion)",
+   "resaltar": "mano.carta:*",
+   "bloquea": false,
+   "lineas": [
+    {
+     "habla": "nota",
+     "es": "Toque a cualquiera sin una invitación abierta y verá lo que sabemos de cada uno.",
+     "en": "Tap anyone while no invitation is open and you'll see what we know about them."
+    }
+   ]
+  },
+  {
+   "id": "t10_ficha_abierta",
+   "pantalla": "ficha",
+   "disparador": "abre_ficha(*)",
+   "lineas": [
+    {
+     "habla": "nota",
+     "es": "Por ahora, poco. Cada salón le contará algo más.",
+     "en": "Not much, for now. Every drawing room will tell you a little more."
+    }
+   ]
+  },
+  {
+   "id": "t11_solo",
+   "pantalla": "mapa_planificacion",
+   "disparador": "cierra_ficha",
+   "lineas": [
+    {
+     "habla": "nota",
+     "es": "Hay más invitaciones esta semana. Las demás son opcionales: responda a las que le convengan.",
+     "en": "There are more invitations this week. The rest are optional: answer the ones that suit you."
+    },
+    {
+     "habla": "nota",
+     "es": "Nadie puede estar en dos sitios el mismo día, ni ir a más de dos cosas por semana.",
+     "en": "Nobody can be in two places on the same day, or attend more than two things a week."
+    }
+   ]
+  },
+  {
+   "id": "t12_comenzar",
+   "pantalla": "mapa_planificacion",
+   "disparador": "obligatorias_respondidas",
+   "resaltar": "barra.comenzar",
+   "bloquea": false,
+   "lineas": [
+    {
+     "habla": "nota",
+     "es": "El sello de arriba ya está encendido. Cuando quiera, que empiece la semana.",
+     "en": "The seal up top is lit. Whenever you're ready, let the week begin."
+    }
+   ]
+  },
+  {
+   "id": "t13_marcha",
+   "pantalla": "mapa_ejecucion",
+   "disparador": "empieza_ejecucion",
+   "lineas": [
+    {
+     "habla": "nota",
+     "es": "Los días corren solos. Siga los retratos por el mapa: el aro dorado marca cuánto falta.",
+     "en": "The days now run on their own. Follow the portraits across the map: the gold ring shows how far along things are."
+    }
+   ]
+  },
+  {
+   "id": "t14_incidente",
+   "pantalla": "incidente",
+   "disparador": "incidente(s1_recepcion)",
+   "resaltar": "incidente.opciones",
+   "lineas": [
+    {
+     "habla": "nota",
+     "es": "Un aro rojo: algo pasa en la recepción. El tiempo se detiene hasta que usted decida.",
+     "en": "A red ring: something's happening at the reception. Time stops until you decide."
+    },
+    {
+     "habla": "nota",
+     "es": "Cada respuesta usa una habilidad. Elija la que mejor dominen quienes están allí.",
+     "en": "Each answer relies on a skill. Choose the one your people there handle best."
+    }
+   ]
+  },
+  {
+   "id": "t15_resultado",
+   "pantalla": "resultado",
+   "disparador": "resultado(s1_recepcion)",
+   "resaltar": "resultado.sello",
+   "bloquea": false,
+   "lineas": [
+    {
+     "habla": "nota",
+     "es": "Arriba, lo que todo Valcenda comentará. Abajo, lo que sólo usted sabe.",
+     "en": "Above, what all of Valcenda will be saying. Below, what only you know."
+    }
+   ]
+  },
+  {
+   "id": "t16_sobres_menores",
+   "pantalla": "mapa_ejecucion",
+   "disparador": "primer_sobre_menor",
+   "lineas": [
+    {
+     "habla": "nota",
+     "es": "Los sobres con lazo son resultados menores. Ábralos cuando quiera; también llegarán a la Crónica.",
+     "en": "Envelopes with a ribbon are minor results. Open them when you like; they'll reach the Chronicle too."
+    }
+   ]
+  },
+  {
+   "id": "t17_cronica",
+   "pantalla": "cronica",
+   "disparador": "cierre_semana(1)",
+   "resaltar": "cronica",
+   "bloquea": false,
+   "lineas": [
+    {
+     "habla": "nota",
+     "es": "La Crónica de salones: lo que Valcenda comenta de su semana. Lo que no sale aquí, sólo lo sabe usted.",
+     "en": "The Salon Chronicle: what Valcenda is saying about your week. Whatever isn't printed here, only you know."
+    }
+   ]
+  },
+  {
+   "id": "t18_privado",
+   "pantalla": "solo_sus_ojos",
+   "disparador": "tras_cronica(1)",
+   "lineas": [
+    {
+     "habla": "nota",
+     "es": "Y esto es para usted sola: quién se acerca a quién, y qué hemos aprendido.",
+     "en": "And this is for you alone: who is drawing closer to whom, and what we've learned."
+    }
+   ]
+  },
+  {
+   "id": "t19_gancho",
+   "pantalla": "residencia",
+   "disparador": "tras_privado(1)",
+   "descripcion": "Se ve la puerta de la residencia de noche. Un sobre sin lacre asoma por debajo. Tocarlo abre `semana1.gancho`.",
+   "resaltar": "residencia.puerta",
+   "lineas": [
+    {
+     "habla": "nota",
+     "expr": "neutral",
+     "es": "Esto no lo ha traído ningún criado.",
+     "en": "No servant brought this.",
+     "estilo": "escrita_deprisa"
+    }
+   ]
+  }
+ ]
+}

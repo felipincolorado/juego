@@ -1,0 +1,85 @@
+{
+ "lugares": [
+  {
+   "id": "palacio",
+   "edificio": true,
+   "barrio": "alto_laurel",
+   "nombre": {
+    "es": "Palacio de Alto Laurel",
+    "en": "Alto Laurel Palace"
+   }
+  },
+  {
+   "id": "salon",
+   "edificio": true,
+   "barrio": "alto_laurel",
+   "nombre": {
+    "es": "Salón de las Columnas",
+    "en": "The Hall of Columns"
+   }
+  },
+  {
+   "id": "jardines",
+   "edificio": true,
+   "barrio": "alto_laurel",
+   "nombre": {
+    "es": "Jardines Serravalle",
+    "en": "Serravalle Gardens"
+   }
+  },
+  {
+   "id": "teatro",
+   "edificio": true,
+   "barrio": "puente",
+   "nombre": {
+    "es": "Teatro del Puente",
+    "en": "The Bridge Theatre"
+   }
+  },
+  {
+   "id": "academia",
+   "edificio": true,
+   "barrio": "puerta_greda",
+   "nombre": {
+    "es": "Academia de la Puerta de Greda",
+    "en": "Greda Gate Academy"
+   }
+  },
+  {
+   "id": "residencia",
+   "edificio": true,
+   "barrio": "alto_laurel",
+   "nombre": {
+    "es": "La residencia",
+    "en": "The residence"
+   }
+  },
+  {
+   "id": "imprenta",
+   "edificio": false,
+   "barrio": "calle_sellos",
+   "nombre": {
+    "es": "Imprenta Calce",
+    "en": "Calce Printing House"
+   }
+  },
+  {
+   "id": "archivo",
+   "edificio": false,
+   "barrio": "calle_sellos",
+   "nombre": {
+    "es": "Archivo Real",
+    "en": "Royal Archive"
+   }
+  },
+  {
+   "id": "muelles",
+   "edificio": false,
+   "barrio": "canal_serel",
+   "nombre": {
+    "es": "Muelles del Canal de Serel",
+    "en": "Serel Canal Wharves"
+   }
+  }
+ ]
+}

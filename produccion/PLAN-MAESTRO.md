@@ -22,14 +22,14 @@ Construir el **paquete completo** para que otra persona (o ChatGPT) programe *Sa
 | # | Etapa | Entregables | Estado |
 |---|---|---|---|
 | E0 | Plan y memoria | Este archivo, `DECISIONES.md` | ✅ Hecho |
-| E1 | **Canon cerrado** | `proyecto/canon/`: mundo resumido (desde `produccion/fuentes/ENTREGA-INTEGRAL-SALVERNA-2026-10-13.md`), elenco definitivo, glosario, calendario, misterio de la *Hoja* resuelto | ⏳ Siguiente |
-| E2 | **Diseño de sistemas con números** | `proyecto/sistemas/`: semana y día, plazas, habilidades 0–5, fórmula de resultado de evento, cercanía, umbral romántico, reputación, cansancio, incidentes, Gran Baile, guardado | Pendiente |
-| E3 | **Modelo de datos y convención de textos** | `proyecto/datos/ESQUEMA.md`: personajes, eventos, escenas, líneas, condiciones, variables, IDs, formato ES/EN, género y concordancia | Pendiente |
-| E4 | **Semana 1 completa** (porción vertical) | Tutorial, apertura de la reina, invitaciones, misiones con opciones y resultados, comentarios en el mapa, escenas, crónica y gancho de la *Hoja*, en ES y EN | Pendiente · **revisión del usuario** |
+| E1 | **Canon cerrado** | `proyecto/canon/`: mundo resumido (desde `produccion/fuentes/ENTREGA-INTEGRAL-SALVERNA-2026-10-13.md`), elenco definitivo, glosario, calendario, misterio de la *Hoja* resuelto | ✅ v1 (`proyecto/canon/CANON.md`) |
+| E2 | **Diseño de sistemas con números** | `proyecto/sistemas/`: semana y día, plazas, habilidades 0–5, fórmula de resultado de evento, cercanía, umbral romántico, reputación, cansancio, incidentes, Gran Baile, guardado | ✅ v1 (`proyecto/sistemas/SISTEMAS.md`) |
+| E3 | **Modelo de datos y convención de textos** | `proyecto/datos/ESQUEMA.md`: personajes, eventos, escenas, líneas, condiciones, variables, IDs, formato ES/EN, género y concordancia | ✅ v1, más el validador `herramientas/compilar_datos.py` |
+| E4 | **Semana 1 completa** (porción vertical) | Tutorial, apertura de la reina, invitaciones, misiones con opciones y resultados, comentarios en el mapa, escenas, crónica y gancho de la *Hoja*, en ES y EN | ⏳ Escrita; pendiente de **revisión del usuario** |
 | E5 | Semanas 2–6 | Mismo contenido que E4 por semana; eventos obligatorios de historia | Pendiente |
 | E6 | Escenas de vínculo | C, B, A, beso y propuesta de las parejas prioritarias y secundarias; acuerdo lavanda; confesiones no correspondidas; amistad y rivalidad | Pendiente |
 | E7 | Gran Baile y finales | Carnet de baile, reacciones al doble beso, propuestas, crónica final, 67 epílogos de unión, 16 finales en solitario, reputación y resolución del misterio | Pendiente |
-| E8 | **Interfaz y flujo** | Árbol de menús, todas las cadenas de interfaz en ES y EN, pantallas con tamaños (de `ESPEC-FLUJO-PANTALLAS-v3` y Figma v4), estados y transiciones; repaso final del flujo en Figma o en un prototipo HTML | Pendiente |
+| E8 | **Interfaz y flujo** | Árbol de menús, todas las cadenas de interfaz en ES y EN, pantallas con tamaños (de `ESPEC-FLUJO-PANTALLAS-v3` y Figma v4), estados y transiciones; repaso final del flujo en Figma o en un prototipo HTML | ◐ Cadenas de interfaz escritas (`textos/ui.yaml`); falta el árbol de menús y el repaso del flujo |
 | E9 | **Audio** | Lista de pistas musicales con prompts para el generador de canciones, lista de efectos y ambientes, fuentes libres **con licencia comercial verificada** y enlaces | Pendiente |
 | E10 | Tipografías | Fuentes con licencia OFL comprobada, usos y tamaños, enlaces de descarga | Pendiente |
 | E11 | Inventario de imágenes | Todas las imágenes: ID, archivo, tamaño, capa, prompt, estado | Pendiente |
@@ -43,11 +43,13 @@ Unas **55 000–65 000 palabras en español** y otras tantas en inglés. Incluye
 
 ## Motor (recomendación para E12, sin bloquear nada)
 
-- El repositorio ya tiene archivos **Ren'Py** (`*.rpy`). Parecen de **otro juego** (un prólogo de juicio en el más allá), así que no se tocan.
+- Los archivos **Ren'Py** del juego anterior se movieron a `archivo/juego-anterior/`, intactos.
 - Ren'Py encaja con un juego narrativo: diálogos, guardado y traducción integrada, con exportación a Android. El mapa con cartas sería un desarrollo propio con sus «screens».
 - Alternativa: TypeScript con un empaquetador web para iOS y Android. Da más control de la interfaz, pero hay más que programar.
 - **Los datos de E3 serán neutrales** (JSON más tablas de textos), para servir a cualquiera de los dos.
 
 ## Siguiente paso
 
-**E1:** las fuentes originales del usuario ya están copiadas en [`fuentes/`](<fuentes/>) (entrega integral v0.3, guía de prompts, investigación de referentes, brief de Figma y análisis móvil). Falta leer la entrega integral (§3, §5, §6 y §12), redactar `proyecto/canon/` y aplicar las decisiones por defecto de `DECISIONES.md`.
+1. El usuario revisa la semana 1: `proyecto/guion/semana1.es.md`, `tutorial.es.md`, los comentarios y las fichas.
+2. Con sus correcciones: **E5** (semanas 2–6), siguiendo el mismo formato que `semanas/semana1.yaml`.
+3. Mientras tanto: E9 audio y E10 tipografías (investigación de licencias).
