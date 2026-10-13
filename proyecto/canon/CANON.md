@@ -88,6 +88,7 @@ Las habilidades van de 0 a 5. Los ejes de carácter van de −2 a +2:
 | **Camila** | Experiencia y humor seco | Decidir sola su siguiente paso tras el luto | Dice no necesitar a nadie y echa de menos que la sorprendan | Su fortuna viene del seguro Marén por el barco hundido de su marido; la casa Miravés le reclama la deuda de ese barco, que **vence en la semana 5** | Se deja sorprender / Se queda observando, sola |
 
 **Datos fijos nuevos:**
+- **Celia es pelirroja cobriza** (original aprobado por el usuario el 13 de octubre); su recogido alto con ramitas se mantiene.
 - El difunto marido de Camila es **Julián Ferrán** (nuevo). Su barco, el *Clara de Nácar* (nuevo), se hundió hace dos otoños.
 - **Camila es la carabina de Celia** esta temporada. Es **sólo narrativo**: aparece en las escenas y en los comentarios, pero no obliga a enviarlas juntas.
 

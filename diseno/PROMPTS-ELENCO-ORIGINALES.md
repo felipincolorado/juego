@@ -373,7 +373,7 @@ OUTPUT: exactly one character, no text, no lettering, no frame, no other people.
 MUST READ AT A GLANCE: Plain low knot and angular face; total attention.
 ```
 
-## 7. Isolda Marén · Empoderada
+## 7. Isolda Marén · Empoderada (v2, 13 oct.: pelo contenido, chaquetilla, oficio)
 
 ```text
 ROLE: You are a senior character designer for a hand-illustrated narrative mobile game.
@@ -388,21 +388,27 @@ Head-to-hip portrait, centred, cut at the hips. Leave a small margin above the h
 top of head at about 6% of the image height, eyes at about 20%, chin at about 31%.
 The face is always fully visible and turned towards the viewer; never seen from behind.
 IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
-IDENTITY: Strong neck and shoulders, straight brows, a ready smile. Medium brown skin.
-Slate-green hair in loose half-up waves with a pearl-white streak at the front; muted
-copper irises. The hair and eye colour are natural to her and do not change her skin,
-jaw or age.
-COSTUME: Sea-green gown with a side fastening and a V neckline (a port tradition), a short
-open jacket she has not buttoned.
-ACTING AND POSE: Relaxed and challenging: head tilted, direct gaze, a smile that dares the viewer
-to object; near shoulder dropped, shoulders open, weight on one hip, one fist on the hip.
+IDENTITY: Strong neck and shoulders, straight brows, a warm, easy smile. Medium brown skin.
+Very dark slate-green hair, almost black with a green sheen, worn HALF-UP: the top pinned
+back with a simple comb, the rest falling in loose waves to the shoulders (not waist-long,
+not voluminous). One NARROW pearl-white lock at the front hairline, about two fingers wide.
+Muted copper irises. These traits are an ordinary family inheritance in her port city:
+nothing about her looks magical, aquatic or exotic.
+COSTUME: Sea-green day gown of practical wool-silk, high waist, V neckline with a side
+fastening (a port tradition), long sleeves. Over it, a SHORT OPEN SPENCER JACKET in deep
+navy-teal with plain round buttons, worn unbuttoned, slightly worn at the cuffs.
+A small leather account book tucked into the jacket's front pocket (a simple shape,
+not held). Modest neckline, same level of formality as the other cast members.
+ACTING AND POSE: The insurer's daughter who has already priced the risk and likes the odds:
+head slightly tilted, direct friendly gaze, warm amused smile that welcomes rather than
+challenges; near shoulder dropped, weight on one hip, one fist resting on the hip.
 POSE RULES: the personality must read in the upper half of the image (head, neck,
 shoulders, chest), because the game card shows only that part. Use big, clear body
 language: head tilt, shoulder line, gaze direction, arm shape.
 Hands are simple shapes: hidden, fists, or flat on the body. No small objects held
 between the fingers, no rings, no pointing fingers, no interlaced visible fingers.
 At most one large prop, held in the whole hand.
-COLOUR KEY: Sea green, slate-green hair, pearl-white streak, muted copper eyes, medium brown skin.
+COLOUR KEY: Sea green, deep navy-teal jacket, very dark slate-green hair, one narrow pearl lock, muted copper eyes, medium brown skin. Keep the greens muted and cool, never mint or neon.
 TECHNIQUE (hand-made look of the attached references):
 Hand-drawn ink line with a slight wobble, heavier on the outer silhouette, thinner and
 sometimes broken inside; line colour dark grey-brown, softer than pure black.
@@ -428,7 +434,7 @@ varnish or vintage grading.
 BACKGROUND: fully transparent PNG. No background, no floor, no cast shadow,
 no white halo around the silhouette.
 OUTPUT: exactly one character, no text, no lettering, no frame, no other people.
-MUST READ AT A GLANCE: Slate-green hair with pearl streak instantly readable; freedom.
+MUST READ AT A GLANCE: A warm, free port woman who belongs in this cast: half-up dark green-black hair with one narrow pearl lock, open spencer jacket, hand on hip.
 ```
 
 ## 8. Camila Ferrán · Matriarca irónica
