@@ -1,6 +1,8 @@
-# Salverna · Estudio de poses de personaje — Propuesta (v1)
+# Salverna · Estudio de poses de personaje — Propuesta (v2)
 
 **13 de octubre de 2026 · PROPUESTA.** Complementa [encargos del elenco](<ENCARGOS-ELENCO-TANDA-2.md>) (§5 y §6) y el [elenco](<ELENCO-TEMPORADA-PROPUESTA.md>). Nada queda aprobado por estar escrito.
+
+**Regla del usuario (13 oct.):** **nadie de espaldas, nunca.** Se permite girar o ladear el cuerpo, siempre con la cara hacia el jugador. Cada persona puede tener dos poses (la formal para la carta y la de ficha).
 
 **Pedido del usuario:** que cada pose cuente la personalidad sin depender de detalles difíciles de dibujar (como el anillo que Dario gira entre los dedos). Los modelos son los juegos japoneses que mejor lo hacen.
 
@@ -37,7 +39,7 @@ La carta muestra sólo **el 50 % central del ancho y el 50 % superior del alto**
 
 | ✅ Usar (fáciles y legibles) | ❌ Evitar (caras y con errores frecuentes) |
 |---|---|
-| Manos ocultas: a la espalda, metida en el chaleco (gesto de época), brazos cruzados | Objetos pequeños entre los dedos: anillo, alfiler, lápiz, taza, carta abierta, flor |
+| Manos ocultas: a la espalda, brazos cruzados | Objetos pequeños entre los dedos: anillo, alfiler, lápiz, taza, carta abierta, flor |
 | Puño cerrado: en la cadera, agarrando la solapa | Dedos que señalan, se cruzan o tocan algo con precisión |
 | Mano plana apoyada: en el pecho, sobre el antebrazo | Dos manos entrelazadas con los dedos visibles |
 | Guantes: convierten la mano en una forma simple | Manos delante de la cara que tapen rasgos |
@@ -59,33 +61,50 @@ Cada arquetipo trae su frase en inglés, lista para pegar en el bloque POSE del 
 | **Galán** | Cabeza un poco ladeada, media sonrisa, mirada directa y sostenida | Tres cuartos, un hombro adelantado hacia el jugador | Una mano plana en el pecho, como al empezar una reverencia | Diagonal abierta hacia el jugador | *three-quarter view, near shoulder turned towards the viewer, head tilted slightly, steady warm gaze, one flat hand resting on his chest as if beginning a bow* |
 | **Segura** | Barbilla nivelada, mirada frontal tranquila, sin sonrisa forzada | Frontal, hombros rectos y relajados, simétrica | Manos a la espalda (no se ven) | Vertical, columna | *front view, chin level, calm direct gaze, square relaxed shoulders, hands clasped behind the back (not visible)* |
 | **Empoderada** | Barbilla algo alta, mirada desde arriba, sonrisa de desafío | Peso en una cadera, hombros abiertos y anchos | Un puño en la cadera, codo hacia fuera | Triángulo ancho | *chin slightly raised, looking down at the viewer with a challenging smile, weight on one hip, shoulders open, one fist on the hip with the elbow out* |
-| **Mística o enigmática** | Cuerpo de espaldas a tres cuartos; la cabeza gira y mira por encima del hombro; párpados pesados | El hombro hace de barrera entre él y el jugador | Una mano metida en el chaleco o fuera del cuadro | Diagonal cerrada, de espaldas | *body turned three-quarters away, head turning back over the shoulder towards the viewer, heavy-lidded gaze, one hand tucked inside the front of the waistcoat* |
+| **Mística o enigmática** | Cara hacia el jugador, barbilla algo baja, párpados pesados, mirada que llega tarde | Cuerpo girado a tres cuartos (unos 40°), nunca de espaldas | Relajadas y bajas; el gesto lo hace el pelo o la ropa (una coleta que cae hacia delante sobre el hombro) | Diagonal | *three-quarter view, body turned about 40°, face towards the viewer, chin slightly lowered, heavy-lidded gaze arriving a moment late, long hair falling forward over the near shoulder* |
 | **Bromista** | Una ceja arriba, la comisura se escapa, cabeza ladeada | Hombros algo altos, inclinado como si fuera a contar un secreto | Los dos puños agarran las solapas: «seriedad» de orador | Asimétrica, inquieta | *shoulders slightly raised, head tilted, one eyebrow up, mouth corner escaping into a grin, both fists gripping his own lapels in mock solemnity* |
 | **Ensayada o perfecta** | Barbilla alta, cuello largo, sonrisa practicada | Postura de bailarina, totalmente simétrica | Manos enguantadas juntas a la cintura (fuera de la carta) | Vertical y estrecha | *dancer's posture, long neck, chin slightly high, practised smile, gloved hands folded at the waist* |
-| **Analítica** | Cabeza ladeada, mirada que estudia, cejas rectas | Peso recto, ligeramente hacia atrás | Un brazo cruzado a la cintura; los nudillos de la otra mano rozan la barbilla, dedos recogidos | Asimétrica con el codo a media altura | *head tilted, studying gaze, one arm folded across the waist supporting the other elbow, the knuckles of that hand lightly at the chin, fingers curled* |
-| **Matriarca irónica** | Cabeza algo atrás, mira «por encima de la nariz», una ceja arriba | Peso atrás, figura amplia y quieta | Abanico cerrado sujeto con la mano entera, apoyado en el hombro | Ancha y horizontal | *head tilted slightly back, looking down her nose with one eyebrow raised, slow knowing smile, a closed fan held in her whole hand and resting on her shoulder like a baton* |
+| **Analítica** | Cabeza ladeada, mirada que estudia, cejas rectas | Peso recto, ligeramente hacia atrás | Brazos cruzados a la altura del pecho, manos ocultas | Cerrada, con la cabeza inclinada | *head tilted, studying gaze, arms crossed at chest height with the hands tucked away* |
+| **Matriarca irónica** | Cabeza nivelada, párpados caídos, una ceja arriba | Tres cuartos, figura amplia y quieta | Abanico cerrado en vertical contra el pecho, sujeto con la mano entera | Ancha, con una barra vertical | *head level, heavy-lidded eyes, one eyebrow raised, slow knowing smile, a closed fan held upright against her chest in her whole hand* |
 | **Cálido y franco** | Mirada abierta, sonrisa que se le escapa | Frontal, inclinado un poco hacia el jugador | Brazos abiertos o una mano en el pecho | Ancha y abierta | *front view, leaning slightly towards the viewer, open honest face, a held-back smile escaping* |
 
 ---
 
-## 4. Propuesta por personaje (original formal)
+## 4. Propuesta por personaje (original formal, v2)
 
-| Persona | Arquetipo | Pose propuesta | En la carta se lee… | Silueta |
-|---|---|---|---|---|
-| **Nilo** | Cálido-franco con toque de galán | Frontal, inclinado hacia el jugador, mano plana en el pecho como al empezar una reverencia | Sonrisa escapada, hombros anchos, la mano en el pecho | Ancha y abierta |
-| **Saúl** | Segura | Frontal, manos a la espalda, barbilla nivelada | Columna recta, cuello largo, mirada serena | Vertical, simétrica |
-| **Dario** | Mística | De espaldas a tres cuartos, mira por encima del hombro, una mano metida en el chaleco. **Sin anillo** | Hombro barrera, mirada que llega tarde, pelo atado | Diagonal cerrada |
-| **Teo** | Bromista | Hombros altos, puños en las solapas, una ceja arriba | Asimetría, sonrisa escapada, pelo revuelto | Inquieta, en zigzag |
-| **Celia** | Ensayada | Postura de bailarina, barbilla alta, manos juntas a la cintura | Cuello largo, recogido alto, sonrisa practicada | Vertical y estrecha |
-| **Irene** | Analítica | Cabeza ladeada, brazo cruzado, nudillos en la barbilla | Inclinación de la cabeza, codo a la altura del pecho | Asimétrica |
-| **Isolda** | Empoderada | Puño en la cadera, peso en una pierna, barbilla alta, chaquetilla abierta | Barbilla, mirada desafiante, franja perla, hombros abiertos | Triángulo ancho |
-| **Camila** | Matriarca irónica | Cabeza atrás, ceja arriba, abanico cerrado apoyado en el hombro | Mirada por encima de la nariz, abanico como diagonal | Ancha y horizontal |
+### 4.1 Autocrítica de la v1
 
-**Tímida:** ningún original formal la usa, porque nadie se presenta así en sociedad. Se usa en las **expresiones ruborizadas** y en la **pose de ficha de Celia**, cuando se le cae la máscara.
+1. **Dario de espaldas** escondía media cara justo en la zona de la carta. La regla del usuario lo prohíbe y tiene razón: la carta vive de la cara.
+2. **Contradicción con la regla del §2:** la v1 ponía gestos a la cintura (las manos de Celia, el puño de Isolda, las manos a la espalda de Saúl, la mano en el chaleco de Dario), y **ninguno se ve en la carta**. Esas cuatro cartas quedaban como bustos casi iguales.
+3. **La mano en el chaleco** es el cliché de Napoleón: se lee como estadista o como chiste, y además queda fuera de la carta.
+4. **Demasiadas vistas de frente** (4 de 8): en la mano de cartas formaban un muro de caras iguales.
+5. **Los nudillos de Irene en la barbilla:** la mano junto a la cara es lo más caro y lo que más falla, y además es el cliché de «estoy pensando».
+6. **El abanico de Camila en el hombro** se leía como una porra.
+7. **Teo con dos puños** podía parecer engreído y obligaba a dibujar dos manos.
+8. **Isolda y Camila** iban las dos con la barbilla alta y mirando desde arriba: se parecían.
 
-**Contrastes:**
-- Saúl y Celia comparten verticalidad. Los distinguen la simetría quieta de él y la barbilla alta de ella; en la carta, el recogido alto de Celia rompe la columna.
-- Dario y Camila: los dos son reservados. Él es una diagonal cerrada; ella, una forma ancha.
+### 4.2 Propuesta corregida
+
+| Persona | Arquetipo | Giro del cuerpo | Cabeza y mirada | Señal en la carta | Manos |
+|---|---|---|---|---|---|
+| **Nilo** | Cálido-franco | De frente, inclinado hacia el jugador | Sonrisa que se escapa | Mano plana en el pecho | Una, plana y visible |
+| **Saúl** | Segura | De frente, **la única pose simétrica** | Barbilla nivelada, mirada serena | Simetría y cuello alto | A la espalda |
+| **Dario** | Mística | Tres cuartos hacia su izquierda, **cara hacia el jugador** | Barbilla algo baja, párpados pesados, la mirada llega tarde | **La coleta cae hacia delante sobre el hombro**: el pelo hace el gesto sin coste de manos | Relajadas, fuera de la carta. Sin anillo |
+| **Teo** | Bromista | Tres cuartos hacia su derecha | La cabeza se inclina al lado contrario del cuerpo, una ceja arriba | El contragiro y la sonrisa | **Un** puño en la solapa |
+| **Celia** | Ensayada | Giro leve (unos 20°) | Barbilla alta, sonrisa practicada | Cuello largo y recogido alto | Juntas a la cintura (sólo en el original completo) |
+| **Irene** | Analítica | De frente o con un giro leve | Cabeza ladeada, mirada que estudia | **Brazos cruzados a la altura del pecho**: se ven en la carta y ocultan las manos | Ocultas |
+| **Isolda** | Empoderada | Tres cuartos hacia su izquierda | Cabeza ladeada, sonrisa de desafío, mirada directa | El hombro cercano bajado, hombros abiertos, chaquetilla abierta | Puño en la cadera (sólo en el original completo) |
+| **Camila** | Matriarca irónica | Tres cuartos hacia su derecha | Cabeza nivelada, párpados caídos, una ceja arriba, sonrisa lenta | **Abanico cerrado en vertical contra el pecho**: una barra simple | Una, en puño |
+
+**Reparto de giros:** de frente 3 (Nilo, Saúl, Irene) · tres cuartos a la izquierda 2 (Dario, Isolda) · tres cuartos a la derecha 2 (Teo, Camila) · giro leve 1 (Celia).
+
+**Tímida:** ningún original formal la usa, porque nadie se presenta así en sociedad. Aparece en las **expresiones ruborizadas** y en la **pose de ficha de Celia**, cuando se le cae la máscara.
+
+### 4.3 Riesgos abiertos
+
+- **Celia y Saúl** se distinguen sobre todo por el peinado y la barbilla. Si al generarlos se parecen, Celia gira más.
+- **La mano en el pecho de Nilo y los brazos cruzados de Irene** son gestos opuestos (abierto y cerrado) en la misma zona. Hay que comprobarlo en silueta.
+- **La prueba de silueta a 112 px** sólo se puede hacer cuando existan las imágenes. Hasta entonces, esto es una apuesta razonada, no algo comprobado.
 
 ---
 
@@ -106,9 +125,7 @@ At most one large prop, held in the whole hand.
 
 ## 6. Pendiente de decisión
 
-1. ¿Te sirven los arquetipos asignados, sobre todo **Dario místico de espaldas** y **Teo con los puños en las solapas**?
-2. ¿Camila **conserva el abanico** (como vara apoyada en el hombro) o se queda sin objeto?
-3. Para Dario: ¿**rehacer el original** con la nueva pose o **editar el v1** (el de mejor calidad)? Recomiendo editar el v1, para no perder la mano del dibujo.
+1. Para Dario: ¿**editar el v1** (mejor calidad; recomendado) con la nueva pose, o generarlo de nuevo con el prompt actualizado?
 
 ---
 

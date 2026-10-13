@@ -96,7 +96,7 @@ Cada ficha: **atractivo · deseo de la temporada · contradicción · competenci
 - **Contradicción:** domina la cortesía, pero evita la intimidad.
 - **Competencia:** presentación social impecable; conoce los créditos y deudas de media ciudad.
 - **Vínculos previos:** creció en los mismos salones del puerto que **Isolda**. La casa Miravés tiene una deuda pendiente con el difunto marido de **Camila**, o al revés (por fijar).
-- **Gesto:** mirada que vuelve tarde hacia el interlocutor; de tres cuartos, el hombro como barrera, una mano metida en el chaleco (ver estudio de poses).
+- **Gesto:** mirada que vuelve tarde hacia el interlocutor; cuerpo de tres cuartos con la cara hacia el interlocutor; la coleta cae sobre el hombro (ver estudio de poses).
 - **Silueta:** esbelto, cuello largo, pelo largo y oscuro atado con cinta, párpados pesados, rostro alargado.
 - **Habilidades:** Baile 5 (años perfeccionando su presentación) · Estatus 2 (evita usar el apellido) · Chisme 3 · Presencia 3 · Intelecto 1 (cultivó superficies, nunca estudió; revisable).
 - **Retrato formal:** tres cuartos, casaca oscura de corte perfecto, una sola joya.
