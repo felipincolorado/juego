@@ -115,7 +115,7 @@ Cada persona tiene un **arco de crecimiento** con dos salidas, según cómo la t
 
 El epílogo es una **Crónica final** que se compone con tres capas:
 
-1. **Destino de cada uno de los ocho**: unión con otra persona del elenco (su epílogo depende del tipo de unión: atracción mutua feliz/cordial/fría, lavanda cómplice/descubierta, desigual infeliz sin descendencia, o de compañía) o soltería (elegida y feliz, o amarga). Ver el documento de relaciones.
+1. **Destino de cada uno de los ocho**: unión con otra persona del elenco (su epílogo depende del tipo de unión: atracción mutua feliz/cordial/fría, lavanda cómplice/descubierta, desigual infeliz sin descendencia, o de compañía) o soltería (sin enamorarse, o por amor no correspondido). Ver el documento de relaciones.
 2. **Reputación de la casamentera** (3 niveles): favorita de la Corona · respetada · olvidada.
 3. **Hilo central** (2 × 2): autoría de la *Hoja* descubierta o no · secretos del Umbral protegidos o expuestos.
 

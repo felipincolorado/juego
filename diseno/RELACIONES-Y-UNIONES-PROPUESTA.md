@@ -90,7 +90,7 @@ Cada persona termina unida a una sola persona o sola. El epílogo final se compo
 | Lavanda | 1 × 2 (cómplices, descubiertos) | 2 |
 | Desigual | 14 parejas × 1 (con el punto de vista de quien sí sentía) | 14 |
 | Compañía | 2 parejas × 1 | 2 |
-| Sola o solo | 8 personas × 2 (soltería elegida y feliz · soledad amarga) | 16 |
+| Sola o solo | 8 personas × 2 (sin enamorarse · por amor no correspondido, con la persona amada como variable); escritos en la [biblia de diálogos](<BIBLIA-DIALOGOS-PROPUESTA.md>) §7 | 16 |
 | **Total** | | **67** |
 
 Más las capas globales de la narrativa (reputación de la casamentera y resolución del hilo central).
