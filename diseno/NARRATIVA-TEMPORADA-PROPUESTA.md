@@ -72,6 +72,8 @@ Como en las relaciones de Persona o los apoyos de Fire Emblem: **tres escenas po
 
 ### 3.2 Parejas posibles según la propuesta de orientaciones
 
+> **Actualizado:** por indicación del usuario, **todos pueden unirse con todos**; cambia el desenlace (atracción mutua, lavanda, unión desigual o de compañía). Ver [RELACIONES-Y-UNIONES-PROPUESTA.md](<RELACIONES-Y-UNIONES-PROPUESTA.md>) con las 28 parejas y sus vínculos previos. La tabla siguiente queda como **prioridad de escenas de vínculo** (qué parejas reciben primero las cuatro escenas completas), no como límite de uniones.
+
 Hombres: Nilo (hetero), Saúl (gay), Dario (bi), Teo (hetero). Mujeres: Celia (hetero), Irene (bi), Isolda (lesbiana), Camila (hetero). **Nilo y Celia: primos, sin ruta romántica** (recomendación).
 
 | Pareja | Tipo | Prioridad de producción | Nota |
@@ -113,7 +115,7 @@ Cada persona tiene un **arco de crecimiento** con dos salidas, según cómo la t
 
 El epílogo es una **Crónica final** que se compone con tres capas:
 
-1. **Destino de cada uno de los ocho** (5 posibles): compromiso por amor · acuerdo de conveniencia · cortejo abierto (sigue el año que viene) · soltería elegida y feliz · corazón roto o escándalo.
+1. **Destino de cada uno de los ocho**: unión con otra persona del elenco (su epílogo depende del tipo de unión: atracción mutua feliz/cordial/fría, lavanda cómplice/descubierta, desigual infeliz sin descendencia, o de compañía) o soltería (elegida y feliz, o amarga). Ver el documento de relaciones.
 2. **Reputación de la casamentera** (3 niveles): favorita de la Corona · respetada · olvidada.
 3. **Hilo central** (2 × 2): autoría de la *Hoja* descubierta o no · secretos del Umbral protegidos o expuestos.
 
@@ -135,7 +137,7 @@ Todo en ES y EN con claves estables.
 | **Crónica semanal** | 6 números × 4–6 noticias con variantes según lo ocurrido | ~40 noticias |
 | **La Hoja sin Firma** | 5 números | 5 |
 | **Reina y secretaria (tutorial y apertura)** | | ~40 líneas |
-| **Epílogo** | 8 personas × 5 destinos + 3 niveles de reputación + 4 combinaciones del hilo | 40 + 3 + 4 = **47 párrafos** |
+| **Epílogo** | 67 párrafos de uniones (ver documento de relaciones) + 3 niveles de reputación + 4 combinaciones del hilo | **74 párrafos** |
 
 ---
 
