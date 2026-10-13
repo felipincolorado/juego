@@ -94,7 +94,7 @@ Edades, pieles y rasgos son **propuestas**. Ningún rasgo sugiere orientación.
 3. **Pose de ficha**: edición desde el original aprobado (§6).
 4. **Expresiones** (alegre, molesta, ruborizada): cada una desde el original (§6).
 
-Generar: 1024 × 1536. Objetivo tras escalar: 1536 × 2304 (sujeto a comprobación). Después: `corregir_tono.py --borde 4` → quitar fondo → revisar alfa sobre claro y oscuro → montar en la carta en Figma.
+Generar: 1024 × 1536, ya sin fondo. Objetivo tras escalar: 1536 × 2304 (sujeto a comprobación). Después: `corregir_tono.py --solo-blancos 0.85` → revisar alfa sobre claro y oscuro → montar en la carta en Figma.
 
 **Adjuntos del original formal:** los originales ilustrados de técnica (Dressmaker y los del proyecto), declarados como **técnica, no identidad ni color**; la carta de color individual si se prepara. Nunca adjuntar otro personaje del elenco.
 
@@ -143,19 +143,27 @@ character in a narrative mobile game set in Valcenda, a fictional capital with
 early-19th-century fashion.
 ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
-FRAMING: front three-quarter view, head to hip, centred. Top of head at 6% of the
-image height, eyes at 20%, chin at 31%. Keep both hands inside the frame.
+FRAMING: three-quarter view, head to hip, centred. Top of head at 6% of the
+image height, eyes at 20%, chin at 31%.
 IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: slender build, long neck, long face, heavy-lidded grey eyes, fine straight
 nose, a faint half-smile that does not reach the eyes. Pale olive skin with a cool
 undertone. Long straight black hair tied low at the nape with a dark ribbon.
 Nothing supernatural: no fangs, no red eyes, no vampire costume.
 COSTUME: deep plum velvet tailcoat with a high collar, black silk waistcoat with a
-subtle plum pattern, crisp white cravat with a single small garnet pin, one plain ring
-on the left hand. Clean, precise tailoring with natural, fairly narrow early-19th-century
+subtle plum pattern suggested with a few strokes, crisp white cravat with a single small
+garnet pin. No rings, no jewellery in the hands. Clean, precise tailoring with natural, fairly narrow early-19th-century
 shoulders: no padded or puffed shoulders.
-ACTING: perfect courtesy hiding a closed door. He is turning the ring with his thumb;
-his gaze arrives at the viewer a moment late.
+ACTING: perfect courtesy hiding a closed door (mysterious archetype). Body turned
+three-quarters away, head turning back over the shoulder towards the viewer, his gaze
+arriving a moment late under heavy lids; one hand tucked inside the front of his
+waistcoat (period gesture), the other arm relaxed.
+POSE RULES: the personality must read in the upper half of the image (head, neck,
+shoulders, chest), because the game card shows only that part. Use big, clear body
+language: head tilt, shoulder line, gaze direction, arm shape.
+Hands are simple shapes: hidden, fists, or flat on the body. No small objects held
+between the fingers, no rings, no pointing fingers, no interlaced visible fingers.
+At most one large prop, held in the whole hand.
 COLOUR KEY: plum, black, pure white linen, pale olive skin, grey eyes.
 TECHNIQUE (hand-made look of the attached references):
 Hand-drawn ink line with a slight wobble, heavier on the outer silhouette, thinner and
@@ -188,23 +196,23 @@ courtesy without vampire clichés; neutral colour.
 
 ### 5.2–5.8 Resto del elenco
 
-Mismo prompt que 5.1 cambiando sólo los bloques **Create**, **FRAMING** (si cambia la vista), **IDENTITY**, **COSTUME**, **ACTING** y **COLOUR KEY**. Los bloques TECHNIQUE, COLOUR CONTROL y OUTPUT se pegan idénticos.
+Mismo prompt que 5.1 cambiando sólo los bloques **Create**, **FRAMING** (si cambia la vista), **IDENTITY**, **COSTUME**, **ACTING** y **COLOUR KEY**. Los bloques POSE RULES, TECHNIQUE, COLOUR CONTROL y OUTPUT se pegan idénticos. Poses según el [estudio de poses](<ESTUDIO-POSES-PERSONAJES.md>).
 
 | Persona | IDENTITY | COSTUME | ACTING | COLOUR KEY |
 |---|---|---|---|---|
-| **Nilo Lobreda**, 26 | Broad shoulders, strong neck, broad jaw, thick dark brows, slightly broad straight nose, open warm face. Light olive skin tanned by mountain roads, flushed cheeks. Unruly dark brown loose curls to the ears. | Forest-green wool tailcoat slightly rumpled, oatmeal wool waistcoat with wooden buttons, linen shirt, loosely tied cravat. | Trying to look formal for the occasion; a held-back smile escapes; one hand on his chest as if about to bow. Front view. | Forest green, oatmeal, white linen, tanned skin. |
-| **Saúl Veyra**, 30 | Tall, long neck, square shoulders, high cheekbones, defined jaw, calm dark eyes. Deep brown skin. Very short cropped black hair with a crisp hairline. | Steel-blue dress tailcoat with a high collar and silver buttons, impeccable white cravat, white gloves. | Composed and reliable: hands behind his back, chin level, direct steady gaze; the stillness of someone who keeps his word. | Steel blue, silver, pure white, deep brown skin. |
-| **Teo Rovena**, 24 | Slim and restless, narrow face, very mobile arched brows, wide mouth. Fair skin with freckles and rosy cheeks. Messy copper hair going in every direction. | His only good tailcoat in dusty mauve-rose, slightly worn at the cuffs; discreet patterned waistcoat; loosely knotted cravat. | Trying very hard to look serious and almost managing it: one corner of the mouth already rising, one eyebrow ahead of the joke. Front view. | Dusty mauve-rose, cream-white shirt, copper hair, freckled fair skin. |
-| **Celia Lobreda**, 21 | Petite, long neck, dancer's posture, round face, large eyes, small chin, the same thick Lobreda brows as her cousin. Fair rosy skin. Light brown hair in a high elaborate updo with a braided coronet and tiny green sprigs. | Sage-green high-waisted gown with vertical botanical embroidery, short puffed sleeves, long white gloves. | Perfectly rehearsed: practised smile, chin slightly high, gloved hands folded at the waist. | Sage green, white gloves, embroidery in deeper green, rosy fair skin. |
-| **Irene Salvat**, 25 | Tall, narrow shoulders, angular face, straight brows, attentive analytical eyes. Light-medium beige skin with a neutral undertone. Straight black hair in a plain low knot, no ornament. No glasses. | Slate-blue day dress of fine wool, long sleeves, small white collar, no jewellery. | Studying the viewer as if reading a document: head slightly tilted, hands loosely together. Front view. | Slate blue, white collar, black hair, beige skin. |
-| **Isolda Marén**, 26 | Strong neck and shoulders, straight brows, a ready smile. Medium brown skin. Velaria traits: slate-green hair in loose half-up waves with a pearl-white streak at the front, muted copper irises. | Sea-green gown with a side fastening and a V neckline (port tradition), a short open jacket she has not buttoned. | Relaxed and amused, weight on one hip, looking straight at the viewer as if daring them to object. | Sea green, slate-green hair, pearl streak, copper eyes, medium brown skin. |
-| **Camila Ferrán**, 29 | Full figure, short elegant neck, heavy-lidded eyes, a slow knowing smile. Deep brown skin. Dark coily hair arranged low at the nape. | Lavender-grey half-mourning silk gown with black lace trim, a narrow black mourning ribbon at the wrist embroidered with a single initial, a closed fan. | She has seen this before: one eyebrow slightly raised, fan closed in both hands. | Lavender-grey, black lace, deep brown skin, dark hair. |
+| **Nilo Lobreda**, 26 | Broad shoulders, strong neck, broad jaw, thick dark brows, slightly broad straight nose, open warm face. Light olive skin tanned by mountain roads, flushed cheeks. Unruly dark brown loose curls to the ears. | Forest-green wool tailcoat slightly rumpled, oatmeal wool waistcoat with wooden buttons, linen shirt, loosely tied cravat. | Warm and frank: front view, leaning slightly towards the viewer, a held-back smile escaping, one flat hand resting on his chest as if beginning a bow. | Forest green, oatmeal, white linen, tanned skin. |
+| **Saúl Veyra**, 30 | Tall, long neck, square shoulders, high cheekbones, defined jaw, calm dark eyes. Deep brown skin. Very short cropped black hair with a crisp hairline. | Steel-blue dress tailcoat with a high collar and silver buttons, impeccable white cravat, white gloves. | Composed and reliable: front view, chin level, calm direct gaze, square relaxed shoulders, hands clasped behind the back (not visible); the stillness of someone who keeps his word. | Steel blue, silver, pure white, deep brown skin. |
+| **Teo Rovena**, 24 | Slim and restless, narrow face, very mobile arched brows, wide mouth. Fair skin with freckles and rosy cheeks. Messy copper hair going in every direction. | His only good tailcoat in dusty mauve-rose, slightly worn at the cuffs; discreet patterned waistcoat; loosely knotted cravat. | Trying very hard to look serious and almost managing it: shoulders slightly raised, head tilted, both fists gripping his own lapels in mock solemnity, one eyebrow up, a mouth corner escaping into a grin. Front view. | Dusty mauve-rose, cream-white shirt, copper hair, freckled fair skin. |
+| **Celia Lobreda**, 21 | Petite, long neck, dancer's posture, round face, large eyes, small chin, the same thick Lobreda brows as her cousin. Fair rosy skin. Light brown hair in a high elaborate updo with a braided coronet and tiny green sprigs. | Sage-green high-waisted gown with vertical botanical embroidery, short puffed sleeves, long white gloves. | Perfectly rehearsed: dancer's posture, long neck, chin slightly high, practised smile, gloved hands folded at the waist. | Sage green, white gloves, embroidery in deeper green, rosy fair skin. |
+| **Irene Salvat**, 25 | Tall, narrow shoulders, angular face, straight brows, attentive analytical eyes. Light-medium beige skin with a neutral undertone. Straight black hair in a plain low knot, no ornament. No glasses. | Slate-blue day dress of fine wool, long sleeves, small white collar, no jewellery. | Studying the viewer as if reading a document: head tilted, one arm folded across the waist supporting the other elbow, the knuckles of that hand lightly at the chin, fingers curled. Front view. | Slate blue, white collar, black hair, beige skin. |
+| **Isolda Marén**, 26 | Strong neck and shoulders, straight brows, a ready smile. Medium brown skin. Velaria traits: slate-green hair in loose half-up waves with a pearl-white streak at the front, muted copper irises. | Sea-green gown with a side fastening and a V neckline (port tradition), a short open jacket she has not buttoned. | Relaxed and challenging: chin slightly raised, looking down at the viewer as if daring them to object, weight on one hip, shoulders open, one fist on the hip with the elbow out. | Sea green, slate-green hair, pearl streak, copper eyes, medium brown skin. |
+| **Camila Ferrán**, 29 | Full figure, short elegant neck, heavy-lidded eyes, a slow knowing smile. Deep brown skin. Dark coily hair arranged low at the nape. | Lavender-grey half-mourning silk gown with black lace trim, a narrow black mourning ribbon at the wrist embroidered with a single initial, a closed fan. | She has seen this before: head tilted slightly back, looking down her nose with one eyebrow raised, a slow knowing smile, the closed fan held in her whole hand and resting on her shoulder like a baton. | Lavender-grey, black lace, deep brown skin, dark hair. |
 
 ---
 
 ## 6. Pose de ficha y expresiones (desde el original aprobado)
 
-Plantilla (de la guía de prompts §7), con fondo gris neutro y el bloque COLOUR CONTROL añadido al final:
+Plantilla (de la guía de prompts §7), sin fondo y con los bloques POSE RULES y COLOUR CONTROL añadidos al final:
 
 ```text
 EDIT OF THE ATTACHED APPROVED ORIGINAL. The attached image is the sole visual authority.
@@ -213,18 +221,18 @@ accessories, palette, handcrafted line and paint. Do not beautify or redesign.
 NEW {POSE or EXPRESSION}: {intent and precise description from the table below}.
 Change only pose/expression, gesture and physically necessary folds.
 Keep readable anatomy, complete hands and attached accessories.
-(+ COLOUR CONTROL block from §2.3)
+(+ POSE RULES block from §5.1 and COLOUR CONTROL block from §2.3)
 ```
 
 | Persona | Pose de ficha (cómo es cuando baja la guardia) | Alegre | Molesta | Ruborizada |
 |---|---|---|---|---|
 | Nilo | Sentado del revés en una silla, cuerpo adelantado, atención franca a alguien fuera de cuadro | Carcajada abierta, cabeza atrás | Mandíbula apretada, mirada al suelo, culpa | Se rasca la nuca y aparta la vista sonriendo |
 | Saúl | Sentado, guantes retirados sobre la rodilla, hombros menos rígidos | Sonrisa pequeña que intenta contener | Mandíbula firme, mirada al frente, manos a la espalda | Aparta la mirada y se ajusta el corbatín |
-| Dario | Junto a una ventana, torso de tres cuartos, la mirada vuelve al interlocutor | Sonrisa auténtica, sorprendido de sí mismo | Cortesía helada, párpados aún más pesados | Pierde la compostura un instante, mano en el anillo |
+| Dario | Junto a una ventana, torso de tres cuartos, la mirada vuelve al interlocutor | Sonrisa auténtica, sorprendido de sí mismo | Cortesía helada, párpados aún más pesados | Pierde la compostura un instante: aparta la cara y el pelo le cae sobre la mejilla |
 | Teo | Acaba de soltar una observación: gesto abierto, un instante de incertidumbre | Ríe con todo el cuerpo | Cejas caídas, broma que no le sale | Se tapa media cara con la mano, ríe nervioso |
-| Celia | Preparándose antes de entrar al salón: concentración, postura ensayada | Sonrisa no ensayada, ojos brillantes | Labios apretados, se recoloca un guante | Mira hacia abajo, mejillas encendidas, sonrisa pequeña |
-| Irene | Deja un momento un documento para atender con curiosidad | Sonrisa de descubrimiento | Cejas rectas más juntas, mirada fija | Pierde el hilo, se toca el cuello del vestido |
-| Isolda | Postura cómoda y poco ceremonial, codo apoyado, atención cómplice | Ríe la primera, cabeza ladeada | Barbilla alta, sonrisa desafiante | Mira a un lado sin perder la sonrisa, se toca la franja perla |
+| Celia | Antes de entrar al salón se le cae la máscara (tímida): barbilla baja, hombros hacia dentro, una mano sujeta el otro brazo | Sonrisa no ensayada, ojos brillantes | Labios apretados, se recoloca un guante | Mira hacia abajo, mejillas encendidas, sonrisa pequeña |
+| Irene | Deja un momento un documento para atender con curiosidad | Sonrisa de descubrimiento | Cejas rectas más juntas, mirada fija | Pierde el hilo: baja la mirada y deshace el brazo cruzado |
+| Isolda | Postura cómoda y poco ceremonial, codo apoyado, atención cómplice | Ríe la primera, cabeza ladeada | Barbilla alta, sonrisa desafiante | Mira a un lado sin perder la sonrisa, el puño sale de la cadera |
 | Camila | Recostada en un diván, abanico cerrado, observa la sala con ironía | Sonrisa lenta que por fin llega | Abanico golpeando la palma, mirada de párpado caído | Abre el abanico para ocultar la sonrisa |
 
 ---
@@ -315,11 +323,16 @@ mobile game set in Valcenda, a fictional capital with early-19th-century fashion
 ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front view, head to hip, centred. Top of head at 6% of the image height,
-eyes at 20%, chin at 31%. Keep both hands inside the frame.
-IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
+eyes at 20%, chin at 31%. IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Broad shoulders, strong neck, broad jaw, thick dark brows, slightly broad straight nose, open warm face. Light olive skin tanned by mountain roads, flushed cheeks. Unruly dark brown loose curls to the ears.
 COSTUME: Forest-green wool tailcoat slightly rumpled, oatmeal wool waistcoat with wooden buttons, linen shirt, loosely tied cravat.
-ACTING: Trying to look formal for the occasion; a held-back smile escapes; one hand on his chest as if about to bow.
+ACTING: Warm and frank: front view, leaning slightly towards the viewer, a held-back smile escaping, one flat hand resting on his chest as if beginning a bow.
+POSE RULES: the personality must read in the upper half of the image (head, neck,
+shoulders, chest), because the game card shows only that part. Use big, clear body
+language: head tilt, shoulder line, gaze direction, arm shape.
+Hands are simple shapes: hidden, fists, or flat on the body. No small objects held
+between the fingers, no rings, no pointing fingers, no interlaced visible fingers.
+At most one large prop, held in the whole hand.
 COLOUR KEY: forest green, oatmeal, white linen, tanned skin.
 TECHNIQUE (hand-made look of the attached references):
 Hand-drawn ink line with a slight wobble, heavier on the outer silhouette, thinner and
@@ -358,11 +371,16 @@ mobile game set in Valcenda, a fictional capital with early-19th-century fashion
 ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front three-quarter view, head to hip, centred. Top of head at 6% of the image height,
-eyes at 20%, chin at 31%. Keep both hands inside the frame.
-IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
+eyes at 20%, chin at 31%. IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Tall, long neck, square shoulders, high cheekbones, defined jaw, calm dark eyes. Deep brown skin. Very short cropped black hair with a crisp hairline.
 COSTUME: Steel-blue dress tailcoat with a high collar and silver buttons, impeccable white cravat, white gloves.
-ACTING: Composed and reliable: hands behind his back, chin level, direct steady gaze; the stillness of someone who keeps his word.
+ACTING: Composed and reliable: front view, chin level, calm direct gaze, square relaxed shoulders, hands clasped behind the back (not visible); the stillness of someone who keeps his word.
+POSE RULES: the personality must read in the upper half of the image (head, neck,
+shoulders, chest), because the game card shows only that part. Use big, clear body
+language: head tilt, shoulder line, gaze direction, arm shape.
+Hands are simple shapes: hidden, fists, or flat on the body. No small objects held
+between the fingers, no rings, no pointing fingers, no interlaced visible fingers.
+At most one large prop, held in the whole hand.
 COLOUR KEY: steel blue, silver, pure white, deep brown skin.
 TECHNIQUE (hand-made look of the attached references):
 Hand-drawn ink line with a slight wobble, heavier on the outer silhouette, thinner and
@@ -401,11 +419,16 @@ mobile game set in Valcenda, a fictional capital with early-19th-century fashion
 ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front view, head to hip, centred. Top of head at 6% of the image height,
-eyes at 20%, chin at 31%. Keep both hands inside the frame.
-IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
+eyes at 20%, chin at 31%. IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Slim and restless, narrow face, very mobile arched brows, wide mouth. Fair skin with freckles and rosy cheeks. Messy copper hair going in every direction.
 COSTUME: His only good tailcoat in dusty mauve-rose, slightly worn at the cuffs; discreet patterned waistcoat; loosely knotted cravat.
-ACTING: Trying very hard to look serious and almost managing it: one corner of the mouth already rising, one eyebrow ahead of the joke.
+ACTING: Trying very hard to look serious and almost managing it: shoulders slightly raised, head tilted, both fists gripping his own lapels in mock solemnity, one eyebrow up, a mouth corner escaping into a grin.
+POSE RULES: the personality must read in the upper half of the image (head, neck,
+shoulders, chest), because the game card shows only that part. Use big, clear body
+language: head tilt, shoulder line, gaze direction, arm shape.
+Hands are simple shapes: hidden, fists, or flat on the body. No small objects held
+between the fingers, no rings, no pointing fingers, no interlaced visible fingers.
+At most one large prop, held in the whole hand.
 COLOUR KEY: dusty mauve-rose, white shirt, copper hair, freckled fair skin.
 TECHNIQUE (hand-made look of the attached references):
 Hand-drawn ink line with a slight wobble, heavier on the outer silhouette, thinner and
@@ -444,11 +467,16 @@ mobile game set in Valcenda, a fictional capital with early-19th-century fashion
 ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front view, head to hip, centred. Top of head at 6% of the image height,
-eyes at 20%, chin at 31%. Keep both hands inside the frame.
-IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
+eyes at 20%, chin at 31%. IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Petite, long neck, dancer's posture, round face, large eyes, small chin, thick dark brows. Fair rosy skin. Light brown hair in a high elaborate updo with a braided coronet and tiny green sprigs.
 COSTUME: Sage-green high-waisted gown with vertical botanical embroidery in a deeper green, short puffed sleeves, long white gloves.
-ACTING: Perfectly rehearsed: practised smile, chin slightly high, gloved hands folded at the waist.
+ACTING: Perfectly rehearsed: dancer's posture, long neck, chin slightly high, practised smile, gloved hands folded at the waist.
+POSE RULES: the personality must read in the upper half of the image (head, neck,
+shoulders, chest), because the game card shows only that part. Use big, clear body
+language: head tilt, shoulder line, gaze direction, arm shape.
+Hands are simple shapes: hidden, fists, or flat on the body. No small objects held
+between the fingers, no rings, no pointing fingers, no interlaced visible fingers.
+At most one large prop, held in the whole hand.
 COLOUR KEY: sage green, deeper green embroidery, white gloves, rosy fair skin.
 TECHNIQUE (hand-made look of the attached references):
 Hand-drawn ink line with a slight wobble, heavier on the outer silhouette, thinner and
@@ -487,11 +515,16 @@ mobile game set in Valcenda, a fictional capital with early-19th-century fashion
 ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front view, head to hip, centred. Top of head at 6% of the image height,
-eyes at 20%, chin at 31%. Keep both hands inside the frame.
-IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
+eyes at 20%, chin at 31%. IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Tall, narrow shoulders, angular face, straight brows, attentive analytical eyes. Light-medium beige skin with a neutral undertone. Straight black hair in a plain low knot, no ornament. No glasses.
 COSTUME: Slate-blue day dress of fine wool, long sleeves, small white collar, no jewellery.
-ACTING: Studying the viewer as if reading a document: head slightly tilted, hands loosely together.
+ACTING: Studying the viewer as if reading a document: head tilted, one arm folded across the waist supporting the other elbow, the knuckles of that hand lightly at the chin, fingers curled.
+POSE RULES: the personality must read in the upper half of the image (head, neck,
+shoulders, chest), because the game card shows only that part. Use big, clear body
+language: head tilt, shoulder line, gaze direction, arm shape.
+Hands are simple shapes: hidden, fists, or flat on the body. No small objects held
+between the fingers, no rings, no pointing fingers, no interlaced visible fingers.
+At most one large prop, held in the whole hand.
 COLOUR KEY: slate blue, white collar, black hair, beige skin.
 TECHNIQUE (hand-made look of the attached references):
 Hand-drawn ink line with a slight wobble, heavier on the outer silhouette, thinner and
@@ -530,11 +563,16 @@ mobile game set in Valcenda, a fictional capital with early-19th-century fashion
 ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front three-quarter view, head to hip, centred. Top of head at 6% of the image height,
-eyes at 20%, chin at 31%. Keep both hands inside the frame.
-IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
+eyes at 20%, chin at 31%. IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Strong neck and shoulders, straight brows, a ready smile. Medium brown skin. Velaria traits: slate-green hair in loose half-up waves with a pearl-white streak at the front, muted copper irises. These traits do not change her skin, jaw or age.
 COSTUME: Sea-green gown with a side fastening and a V neckline (a port tradition), a short open jacket she has not buttoned.
-ACTING: Relaxed and amused, weight on one hip, looking straight at the viewer as if daring them to object.
+ACTING: Relaxed and challenging: chin slightly raised, looking down at the viewer as if daring them to object, weight on one hip, shoulders open, one fist on the hip with the elbow out.
+POSE RULES: the personality must read in the upper half of the image (head, neck,
+shoulders, chest), because the game card shows only that part. Use big, clear body
+language: head tilt, shoulder line, gaze direction, arm shape.
+Hands are simple shapes: hidden, fists, or flat on the body. No small objects held
+between the fingers, no rings, no pointing fingers, no interlaced visible fingers.
+At most one large prop, held in the whole hand.
 COLOUR KEY: sea green, slate-green hair, pearl-white streak, muted copper eyes, medium brown skin.
 TECHNIQUE (hand-made look of the attached references):
 Hand-drawn ink line with a slight wobble, heavier on the outer silhouette, thinner and
@@ -573,11 +611,16 @@ mobile game set in Valcenda, a fictional capital with early-19th-century fashion
 ATTACHMENTS: the attached illustrations teach line and paint behaviour only.
 They do not supply face, clothes, pose or colour.
 FRAMING: front three-quarter view, head to hip, centred. Top of head at 6% of the image height,
-eyes at 20%, chin at 31%. Keep both hands inside the frame.
-IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
+eyes at 20%, chin at 31%. IMAGE FORMAT: vertical portrait 2:3 (1024 × 1536), not square.
 IDENTITY: Full figure, short elegant neck, heavy-lidded eyes, a slow knowing smile. Deep brown skin. Dark coily hair arranged low at the nape.
 COSTUME: Lavender-grey half-mourning silk gown with black lace trim, a narrow black mourning ribbon at the wrist embroidered with a single initial, a closed fan held in both hands.
-ACTING: She has seen all this before: one eyebrow slightly raised, fan closed in both hands.
+ACTING: She has seen all this before: head tilted slightly back, looking down her nose with one eyebrow raised, a slow knowing smile, the closed fan held in her whole hand and resting on her shoulder like a baton.
+POSE RULES: the personality must read in the upper half of the image (head, neck,
+shoulders, chest), because the game card shows only that part. Use big, clear body
+language: head tilt, shoulder line, gaze direction, arm shape.
+Hands are simple shapes: hidden, fists, or flat on the body. No small objects held
+between the fingers, no rings, no pointing fingers, no interlaced visible fingers.
+At most one large prop, held in the whole hand.
 COLOUR KEY: lavender-grey, black lace, deep brown skin, dark hair.
 TECHNIQUE (hand-made look of the attached references):
 Hand-drawn ink line with a slight wobble, heavier on the outer silhouette, thinner and
