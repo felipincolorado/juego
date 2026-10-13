@@ -5,13 +5,13 @@ Sigue la [guía de prompts](<../GUIA-PROMPTS-Y-GENERACION-PERSONAJES-SALVERNA.md
 
 ---
 
-## 1. Decisiones de la carta de personaje (cerradas para producir)
+## 1. Propuesta de carta de personaje (pendiente de aprobación)
 
-| Pregunta | Decisión | Por qué |
+| Pregunta | Propuesta | Por qué |
 |---|---|---|
 | ¿Redondeada o cuadrada? | **Arco arriba, esquinas casi rectas abajo** (radio superior = mitad del ancho; inferior 6 dp) | El arco es miniatura de época y ventana georgiana (el mismo motivo de la colección de libros de referencia). Un rectángulo redondeado parece botón de app; uno recto parece carta de estrategia. El arco es identidad propia y sigue leyéndose como carta. |
 | Proporción | Vertical **2:3**, 112 × 168 dp | El busto es vertical; la cabeza y los hombros caben sin recortar. |
-| Nombre | **Franja completa abajo, sobre los hombros**, 26 dp de alto, texto centrado | Decidido por el usuario: no corta el retrato y se lee como placa. |
+| Nombre | **Franja completa abajo, sobre los hombros**, 26 dp de alto, texto centrado | Indicación del usuario sobre la maqueta: no corta el retrato y se lee como placa. Falta verla con arte real. |
 | Color de la franja | **Color de la casa** del personaje, con filete de oro fino arriba y texto marfil | Identidad por color, como los lomos de los libros; evita que las ocho cartas sean iguales. |
 | Fondo dentro del arco | **Lavado pintado suave del color de la casa**, más claro arriba | El busto viene transparente; el fondo da identidad sin estampados. |
 | Marco | Filete de oro de 3 dp + filete interior claro de 1 dp | Lámina dorada fina, no relleno. |
@@ -19,7 +19,11 @@ Sigue la [guía de prompts](<../GUIA-PROMPTS-Y-GENERACION-PERSONAJES-SALVERNA.md
 | Estado seleccionado | La carta **se levanta** sobre la mano y gana un halo cálido | Gesto de sacar una carta de la mano. |
 | Estado alterado | Banda superior frambuesa con una palabra | Único estado con texto. |
 
-Estas cartas usan los recortes de la ilustración maestra (regla de encuadre: ojos al 20 % del alto). Los personajes se generan en la **tanda 2**, cuando existan sus fichas.
+**Estado:** ninguna de estas propuestas está aprobada. Se contrastan con las decisiones registradas del proyecto y se validan montadas en Figma a tamaño de teléfono.
+
+Estas cartas usan los recortes de la ilustración maestra (regla de encuadre propuesta: ojos al 20 % del alto). Los personajes se generan en la **tanda 2**, cuando existan sus fichas.
+
+**Prueba de formato con Leonora t48:** puede usarse para comprobar encuadre, recorte y lectura de la carta, **identificada en Figma como «personaje de prueba»**. Eso no la convierte en candidata del elenco social ni le asigna papel romántico.
 
 ---
 
@@ -48,16 +52,17 @@ Estas cartas usan los recortes de la ilustración maestra (regla de encuadre: oj
 
 ### 3.1 Tamaños reales del generador
 
-El modelo entrega **1024 × 1024, 1024 × 1536 (vertical) o 1536 × 1024 (horizontal)**. Los objetivos de la especificación (por ejemplo, mapa 2340 × 3000) se alcanzan **después**: escalado ×2–3 con un escalador que conserve el trazo (Krita, Real-ESRGAN, Topaz u otro) y revisión visual. No pedir tamaños imposibles en el prompt.
+Los formatos habituales del modelo son **1024 × 1024, 1024 × 1536 (vertical) o 1536 × 1024 (horizontal)**; comprobar siempre las dimensiones reales del archivo recibido. Los tamaños de la especificación (por ejemplo, mapa 2340 × 3000) son **objetivos**, no capacidades garantizadas: se intentan alcanzar después con un escalador que conserve el trazo (Krita, Real-ESRGAN, Topaz u otro) y se aceptan sólo tras revisión visual a tamaño de uso. **Escalar no cambia la proporción:** si el destino tiene otra proporción, hay que recortar o ampliar el lienzo (ver KEY-01). Transparencia, tamaño y escalado se registran como «objetivo» hasta comprobarlos.
 
-### 3.2 El truco de las capas (imagen completa → piezas idénticas)
+### 3.2 Método de capas (de la imagen aprobada a piezas alineadas)
 
-1. **Generar la escena completa** (mapa con todo).
-2. **Plancha limpia:** editar *esa misma imagen* pidiendo quitar los edificios de lugar y pintar el suelo, la vegetación y las calles que había debajo. Sin esto, al mover o iluminar un edificio aparecería un hueco o un duplicado.
-3. **Piezas aisladas:** editar *esa misma imagen completa* (no la plancha) pidiendo reproducir **sólo un edificio**, idéntico en posición relativa, perspectiva, escala, luz y pintura, sobre **fondo realmente transparente**.
-4. **Comprobar en Figma:** superponer el PNG sobre la imagen completa con 50 % de opacidad. Si no coincide, se corrige la pieza; no se acepta «parecido».
+Generar cada edificio con una edición independiente puede cambiar perspectiva, tamaño, contorno y detalles. Por eso el orden preferente es:
 
-**Límite honesto:** el generador no garantiza identidad de píxel. Las piezas pueden desplazarse o variar detalles. Por eso la comprobación del paso 4 es obligatoria, y a veces conviene recortar el edificio a mano de la imagen completa (Krita/Photoshop) y usar el generador sólo para la plancha limpia.
+1. **Conservar el mapa aprobado como original** (MAP-01). Nunca se sobrescribe.
+2. **Extraer los edificios directamente de ese original** cuando sea posible: máscara y recorte manual en Krita/Photoshop, con su escalinata, rejas y patio. Así la pieza es, por construcción, idéntica y está en su sitio.
+3. **Reconstruir el terreno que queda debajo** (MAP-02): edición con el generador o retoque manual, pintando suelo, setos y caminos donde estaban los edificios.
+4. **Verificar cada pieza** en Figma sobre MAP-01: posición, escala, contorno y **orden de profundidad** (qué árboles, farolas o edificios vecinos quedan delante de la pieza y deben ir en una capa superior). La superposición al 50 % ayuda a detectar diferencias, pero no sustituye esta revisión.
+5. **Sólo como alternativa**, si el recorte manual no es viable: pedir la pieza aislada al generador editando MAP-01 (prompt MAP-03…08) y aplicarle la misma verificación. Si no coincide, se descarta.
 
 ### 3.3 Transparencia
 
@@ -77,7 +82,7 @@ ID del recurso · prompt exacto · adjuntos y rol · tamaño real recibido · es
 
 ## 4. Bloque de estilo común de entorno
 
-Este bloque se pega dentro de cada prompt de la tanda 1. Extiende la técnica de la guía de personajes al entorno.
+Este bloque ya está incluido completo dentro de cada prompt de la tanda 1 (no hay marcadores que sustituir). Extiende la técnica de la guía de personajes al entorno.
 
 **EN (pegar):**
 ```text
@@ -139,7 +144,19 @@ each with a recognisable silhouette:
 Flowering trees (pink and white), climbing wisteria on a few walls, autumn hints
 (a few amber trees) because the season is early autumn.
 
-{STYLE — SALVERNA ENVIRONMENT block}
+STYLE — SALVERNA ENVIRONMENT:
+Handcrafted illustration for a narrative mobile game. Pressure-varied ink lines,
+slightly irregular, always darker than the material they outline (brown-grey on stone,
+deep green on foliage, slate on roofs). Broad matte gouache-like paint shapes with
+few structural shadows and quiet surfaces; texture only in small local areas.
+Local colour painted independently per material. Morning light, soft and cool-neutral.
+NO yellow, orange or sepia glaze over the image. NO photographic detail, NO 3D render,
+NO glossy plastic surfaces, NO uniform vector look, NO global grain or noise.
+Palette: natural greens and blues of a living city, warm-ivory and pale pastel
+façades (powder blue, blush, pale sage, cream), slate-lilac roofs, flowering trees,
+small accents of wisteria lilac and rose. Pastel is air and light, not a wash over everything:
+keep real darks (ink, deep foliage, window openings) for contrast.
+Fictional world: no real landmarks, no text, no signs, no heraldry from real families.
 
 OUTPUT: single opaque illustration, no text, no labels, no UI, no frame, no people larger
 than tiny distant figures.
@@ -172,8 +189,8 @@ bridge, trees, colours, line and paint. Same canvas size and framing. No text.
 ### MAP-03 a MAP-08 · Edificios aislados (uno por encargo)
 
 - **Uso:** capa superior de cada lugar (se ilumina al seleccionar, puede tener animación sutil: banderolas, ventanas encendidas al atardecer).
-- **Generar:** editar MAP-01 aprobado, mismo tamaño de lienzo; luego recortar el área útil. **Fondo:** transparente.
-- **Adjuntos:** únicamente MAP-01.
+- **Método preferente:** recorte manual desde MAP-01 (§3.2). **Alternativa:** edición con el generador usando el prompt siguiente, mismo lienzo, fondo transparente como objetivo.
+- **Adjuntos (alternativa):** únicamente MAP-01.
 - IDs: `MAP-03 salón de baile` · `MAP-04 villa y jardines` · `MAP-05 teatro` · `MAP-06 residencia` · `MAP-07 academia` · `MAP-08 palacio`.
 
 **EN (pegar, cambiando {building}):**
@@ -190,7 +207,7 @@ beyond its own plot, no text.
 
 **ES:** edición de MAP-01: conservar sólo {edificio} exactamente igual (misma posición en el lienzo, perspectiva, escala, luz, color, línea y pintura), con su escalinata, rejas y su pequeño patio; eliminar el resto con fondo realmente transparente. No redibujar ni mejorar.
 
-**Comprobación obligatoria:** superponer en Figma sobre MAP-01 al 50 %; si no coincide, recortar a mano de MAP-01.
+**Verificación obligatoria (§3.2 paso 4):** posición, escala, contorno y orden de profundidad sobre MAP-01. Si no coincide, se descarta y se recorta a mano.
 
 ### UI-01 · Guirnalda floral superior
 
@@ -210,7 +227,19 @@ to about 40% of the image height), very sparse and short across the centre
 Must not look like a copy of any film or series poster: no arch, no symmetry.
 Seen from slightly below, soft morning light.
 
-{STYLE — SALVERNA ENVIRONMENT block}
+STYLE — SALVERNA ENVIRONMENT:
+Handcrafted illustration for a narrative mobile game. Pressure-varied ink lines,
+slightly irregular, always darker than the material they outline (brown-grey on stone,
+deep green on foliage, slate on roofs). Broad matte gouache-like paint shapes with
+few structural shadows and quiet surfaces; texture only in small local areas.
+Local colour painted independently per material. Morning light, soft and cool-neutral.
+NO yellow, orange or sepia glaze over the image. NO photographic detail, NO 3D render,
+NO glossy plastic surfaces, NO uniform vector look, NO global grain or noise.
+Palette: natural greens and blues of a living city, warm-ivory and pale pastel
+façades (powder blue, blush, pale sage, cream), slate-lilac roofs, flowering trees,
+small accents of wisteria lilac and rose. Pastel is air and light, not a wash over everything:
+keep real darks (ink, deep foliage, window openings) for contrast.
+Fictional world: no real landmarks, no text, no signs, no heraldry from real families.
 
 OUTPUT: isolated element on TRUE TRANSPARENT background (alpha), PNG. No sky, no wall,
 no text, no frame. Edges of petals clean, no white halo.
@@ -232,7 +261,19 @@ three leaves, growing diagonally from the TOP-LEFT corner towards the centre,
 occupying only the top-left 45% of the canvas; the rest empty.
 Delicate and light, like a painted motif on fine writing paper.
 
-{STYLE — SALVERNA ENVIRONMENT block}
+STYLE — SALVERNA ENVIRONMENT:
+Handcrafted illustration for a narrative mobile game. Pressure-varied ink lines,
+slightly irregular, always darker than the material they outline (brown-grey on stone,
+deep green on foliage, slate on roofs). Broad matte gouache-like paint shapes with
+few structural shadows and quiet surfaces; texture only in small local areas.
+Local colour painted independently per material. Morning light, soft and cool-neutral.
+NO yellow, orange or sepia glaze over the image. NO photographic detail, NO 3D render,
+NO glossy plastic surfaces, NO uniform vector look, NO global grain or noise.
+Palette: natural greens and blues of a living city, warm-ivory and pale pastel
+façades (powder blue, blush, pale sage, cream), slate-lilac roofs, flowering trees,
+small accents of wisteria lilac and rose. Pastel is air and light, not a wash over everything:
+keep real darks (ink, deep foliage, window openings) for contrast.
+Fictional world: no real landmarks, no text, no signs, no heraldry from real families.
 Simplified for small display: fewer, clearer shapes than a botanical study.
 
 OUTPUT: TRUE TRANSPARENT background (alpha), PNG, no paper, no text, no frame.
@@ -250,15 +291,23 @@ OUTPUT: TRUE TRANSPARENT background (alpha), PNG, no paper, no text, no frame.
 A seamless, tileable texture of fine ivory writing paper (#FBF7F0 average), very subtle:
 faint cotton fibres and gentle tonal variation only. Flat and evenly lit, no shadows,
 no folds, no stains, no vignette, no yellowing, no visible pattern repetition.
-Must stay quiet behind 16 px text. OUTPUT: opaque PNG, edges tile seamlessly.
+Must stay quiet behind body text on a phone screen. OUTPUT: opaque PNG; edges intended to tile seamlessly.
 ```
 
-**ES:** textura continua de papel marfil fino (media #FBF7F0), muy sutil: fibras y leve variación tonal; sin sombras, pliegues, manchas, viñeta ni amarilleo. Debe quedar tranquila detrás de texto de 16 px. Bordes repetibles.
+**ES:** textura continua de papel marfil fino (media #FBF7F0), muy sutil: fibras y leve variación tonal; sin sombras, pliegues, manchas, viñeta ni amarilleo. Debe quedar tranquila detrás del texto de lectura en el teléfono. Bordes pensados para repetirse.
+
+**Comprobación:** pedir textura repetible no asegura que lo sea. Montar una repetición 3 × 3 y buscar costuras o motivos que se repiten; probar lectura del cuerpo de texto real sobre la textura en Figma a tamaño de teléfono.
 
 ### KEY-01 · Portada
 
 - **Uso:** pantalla de inicio. El título y los botones se ponen en Figma encima.
-- **Generar:** 1024 × 1536. **Objetivo tras escalar:** 1290 × 2796 con zona segura central. **Fondo:** opaco.
+- **Problema de proporción:** el generador entrega 1024 × 1536 (2:3) y la pantalla de destino ronda 9:19,5 (por ejemplo, 1290 × 2796). Escalar no lo resuelve: al llenar la altura se pierde ~31 % del ancho (unos 160 px por lado en el original).
+- **Solución en dos pasos:**
+  1. **Componer para el recorte desde el principio:** todo lo importante dentro de la **columna central del 68 % del ancho**; los laterales sólo con flores, follaje y fondo prescindibles.
+  2. **Ampliar el lienzo verticalmente** si hace falta más alto: extender cielo arriba y piedra abajo (edición «extender lienzo» o retoque), nunca estirar.
+  - El título, los botones y el foco se comprueban **sobre el encuadre final** en Figma (9:19,5 y también 9:16 y 9:20).
+- **Zonas (sobre la altura final):** título en el 18–36 %; carta y abanico en el **48–70 %**, por encima de los botones y con espacio para distinguir ambos objetos; botones en el 74–94 %.
+- **Generar:** 1024 × 1536 como primer paso. **Objetivo tras ampliar y escalar:** ~1290 × 2796 (objetivo sujeto a comprobación). **Fondo:** opaco.
 - **Adjuntos:** 3 originales de técnica (y MAP-01 aprobado como referencia de lugar, si existe).
 
 **EN (pegar):**
@@ -266,30 +315,56 @@ Must stay quiet behind 16 px text. OUTPUT: opaque PNG, edges tile seamlessly.
 OPERATION: NEW ORIGINAL KEY ART FROM SCRATCH.
 Title-screen illustration for a portrait mobile game about a matchmaker during the
 social season of Valcenda, a fictional Regency-inspired capital.
-COMPOSITION (three depth planes): foreground — hanging wisteria and roses at the top
-corners and a stone balustrade at the bottom edge; middle — an empty terrace with an
-open folding fan and a sealed letter with a rose wax seal resting on the balustrade;
-background — the city of Valcenda at early-morning light with the river and stone
-bridge, softly lit. NO people (characters are added later as separate art).
-Keep the centre band (from 35% to 60% of the height) calm and low in detail for the
-game title; keep the bottom 25% darker and simple for buttons.
-Strong value contrast near the letter and fan (deep ink shadows, clean whites);
+CROP SAFETY: the image will be cropped to a narrow phone screen. Keep EVERY important
+element inside the central 68% of the width. The outer 16% on each side may contain
+only expendable foliage, blossoms and background.
+COMPOSITION (three depth planes):
+- foreground: hanging wisteria and small roses entering from the top corners;
+  a stone balustrade crossing the lower part of the image;
+- middle: on the balustrade rail, between 48% and 70% of the image height, an open
+  folding fan and a sealed letter with a rose wax seal, clearly separated from each other
+  and both inside the central column;
+- background: the city of Valcenda in early-morning light, river and stone bridge, soft.
+NO people (characters are added later as separate art).
+ZONES: keep 18%–36% of the height calm and low in detail (sky and distant roofs) for the
+game title. Keep the bottom 26% simple and darker (lower balustrade and stone paving)
+for buttons; nothing important there.
+Strong value contrast at the letter and fan (deep ink shadows, clean whites);
 pastel only in sky and blossoms.
 
-{STYLE — SALVERNA ENVIRONMENT block}
+STYLE — SALVERNA ENVIRONMENT:
+Handcrafted illustration for a narrative mobile game. Pressure-varied ink lines,
+slightly irregular, always darker than the material they outline (brown-grey on stone,
+deep green on foliage, slate on roofs). Broad matte gouache-like paint shapes with
+few structural shadows and quiet surfaces; texture only in small local areas.
+Local colour painted independently per material. Morning light, soft and cool-neutral.
+NO yellow, orange or sepia glaze over the image. NO photographic detail, NO 3D render,
+NO glossy plastic surfaces, NO uniform vector look, NO global grain or noise.
+Palette: natural greens and blues of a living city, warm-ivory and pale pastel
+façades (powder blue, blush, pale sage, cream), slate-lilac roofs, flowering trees,
+small accents of wisteria lilac and rose. Pastel is air and light, not a wash over everything:
+keep real darks (ink, deep foliage, window openings) for contrast.
+Fictional world: no real landmarks, no text, no signs, no heraldry from real families.
 
 OUTPUT: single opaque illustration, no text, no logo, no frame.
-REVIEW PRIORITIES: calm title band; letter and fan as focal point; no yellow cast.
+REVIEW PRIORITIES: all key elements inside the central 68% column; calm title band;
+letter and fan readable above the button zone; no yellow cast.
 ```
 
-**ES:** ilustración de portada sin personas: delante, glicinias y rosas colgando en las esquinas superiores y una balaustrada de piedra abajo; en medio, una terraza con un abanico abierto y una carta lacrada (sello rosa) sobre la balaustrada; al fondo, Valcenda con río y puente a primera hora. Franja central (35–60 % del alto) tranquila para el título; 25 % inferior más oscuro y simple para botones. Contraste fuerte en carta y abanico; pastel sólo en cielo y flores. Sin texto.
+**ES (resumen equivalente):** ilustración de portada sin personas. Todo lo importante dentro de la columna central del 68 % del ancho; los laterales, sólo follaje prescindible. Delante: glicinias y rosas desde las esquinas superiores y una balaustrada de piedra en la parte baja. En medio, sobre la baranda y entre el 48 % y el 70 % del alto: abanico abierto y carta lacrada (sello rosa), separados y legibles. Al fondo: Valcenda con río y puente de mañana. Franja 18–36 % tranquila para el título; 26 % inferior simple y más oscuro para botones. Contraste fuerte en carta y abanico; pastel sólo en cielo y flores. Sin texto.
 
----
+**Ampliación posterior (si falta alto):**
+```text
+EDIT OF THE ATTACHED IMAGE: extend the canvas vertically only. Continue the sky and
+distant city upward and the stone balustrade and paving downward, matching camera,
+light, line and paint exactly. Do not move, resize or redraw anything already present.
+No text.
+```
 
 ## 6. Orden de trabajo recomendado
 
 1. **MAP-01** → lo monto en Figma y revisamos juntos a tamaño teléfono con marcadores y cartas.
-2. Si se aprueba: **MAP-02** y **MAP-03…08** (capas).
+2. Si se aprueba: extracción manual de edificios y **MAP-02** (terreno reconstruido); generador para piezas sólo como alternativa.
 3. En paralelo: **UI-01, UI-02, UI-03** (independientes del mapa).
 4. **KEY-01** cuando el mapa esté aprobado (comparten lugar y luz).
 5. Mientras tanto, se escriben las **fichas del elenco social** para desbloquear la tanda 2. Para probar el formato de la carta antes, puede usarse una base ya aprobada (Leonora t48).
@@ -300,4 +375,4 @@ Subir cada resultado aquí o al repositorio con su ID en el nombre del archivo (
 
 ## English summary
 
-Batch 1 covers environment and UI only, because the eight social-season characters have no design sheets yet (the project guide forbids generating characters without them). Card decisions are fixed: arched top with near-square bottom corners, 2:3, full-width name bar over the shoulders in the character's house colour, painted house-colour wash behind a transparent bust, ivory veil for busy, lift for selected. The image model outputs 1024×1024, 1024×1536 or 1536×1024; targets are reached by trait-preserving upscaling. Layer method: generate the full map, edit it into a clean plate without the six venue buildings, then edit the full map into one transparent PNG per building, and verify each by 50 % overlay in Figma (hand-cut from the full map if it does not align). Prompts (EN to paste, ES equivalent) are provided for the full map, clean plate, six building cut-outs, top floral garland, corner spray, ivory paper texture and title key art, each with a shared environment style block (handcrafted line, matte gouache, local colour, no yellow glaze, pastel as air not as wash).
+Batch 1 covers environment and UI only, because the eight social-season characters have no design sheets yet (the project guide forbids generating characters without them). Card proposals (not yet approved; to be validated mounted in Figma): arched top with near-square bottom corners, 2:3, full-width name bar over the shoulders in the character's house colour, painted house-colour wash behind a transparent bust, ivory veil for busy, lift for selected. The image model usually outputs 1024×1024, 1024×1536 or 1536×1024. Layer method: keep the approved full map as the original, cut buildings directly from it where possible, rebuild the ground underneath, and verify each piece for position, scale, outline and depth order; generator cut-outs are only a fallback. The title art is composed for a central 68 % safe column and extended vertically, since 2:3 output cannot become ~9:19.5 by scaling. Sizes, transparency and upscaling are targets subject to checking. Prompts (EN to paste, ES equivalent) are provided for the full map, clean plate, six building cut-outs, top floral garland, corner spray, ivory paper texture and title key art, each with a shared environment style block (handcrafted line, matte gouache, local colour, no yellow glaze, pastel as air not as wash).
