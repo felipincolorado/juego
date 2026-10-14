@@ -41,15 +41,17 @@ button{font:inherit;color:inherit}
 
 /* Barra superior */
 .barra{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));left:12px;right:12px;display:flex;align-items:center;gap:8px}
-.semana{background:var(--marfil);border:1px solid var(--oro);border-radius:4px;padding:4px 8px;font-family:var(--display);font-weight:600;font-size:14px}
+.ficha-barra{height:42px;background:#FCF8EF;border:1px solid var(--tinta);outline:.5px solid var(--tinta);outline-offset:-4px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;line-height:1;position:relative}
+.ficha-barra small{font-size:7.5px;letter-spacing:.08em;font-weight:600;margin-bottom:3px}
+.semana{width:52px;font-size:16px}
+.resp{width:52px;font-size:16px;margin-left:auto;font-variant-numeric:tabular-nums}
 .dias{display:flex;gap:5px}
-.dia{width:34px;height:42px;background:#FCF8EF;border:1px solid var(--tinta);outline:.5px solid var(--tinta);outline-offset:-4px;
-  display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:19px;position:relative;line-height:1}
-.dia small{position:absolute;top:3px;font-size:7.5px;letter-spacing:.08em;font-weight:600}
-.dia.hoy{border-color:var(--oro);border-width:1.8px;outline-color:var(--oro)}
-.dia.evento::after{content:"";position:absolute;bottom:3px;width:4px;height:4px;border-radius:50%;background:var(--rosa)}
-.resp{margin-left:auto;background:var(--marfil);border:1px solid var(--oro);border-radius:4px;padding:4px 8px;font-size:14px;font-variant-numeric:tabular-nums}
-.sello{width:40px;height:40px;border-radius:50%;background:var(--rosa);border:none;box-shadow:inset 0 0 0 3px var(--oro-claro);color:var(--marfil);font-size:15px;cursor:pointer;opacity:.4}
+.dia{width:36px;font-size:19px}
+.dia.evento{border-color:var(--rosa);outline-color:var(--rosa);color:var(--rosa)}
+.dia.hoy{box-shadow:0 0 0 2px var(--oro)}
+
+.sello{width:42px;height:42px;flex:none;border-radius:50%;background:var(--rosa);border:none;box-shadow:inset 0 0 0 3px var(--oro-claro);color:var(--marfil);font-size:15px;cursor:pointer;opacity:.4}
 .sello.listo{opacity:1;animation:late 2s ease-in-out infinite}
 @keyframes late{50%{transform:scale(1.05)}}
 
@@ -70,12 +72,17 @@ button{font:inherit;color:inherit}
 .mano{position:absolute;z-index:6;left:0;right:0;bottom:calc(14px + env(safe-area-inset-bottom,0px));display:flex;gap:12px;overflow-x:auto;padding:16px 14px 6px;scroll-snap-type:x mandatory;scrollbar-width:none}
 .mano::-webkit-scrollbar{display:none}
 .cuadro{flex:0 0 104px;scroll-snap-align:start;background:none;border:none;padding:0;cursor:pointer;transition:transform .2s}
-.cuadro .marco{position:relative;width:104px;height:156px;padding:7px;
-  background:linear-gradient(135deg,var(--oro-claro),var(--oro) 35%,var(--oro-hondo) 70%,var(--oro) );
-  box-shadow:0 4px 10px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.4)}
+.cuadro .marco{position:relative;width:104px;height:156px;padding:8px;
+  background:
+   radial-gradient(circle at 8px 8px,var(--oro-claro) 3px,transparent 3.5px),
+   radial-gradient(circle at calc(100% - 8px) 8px,var(--oro-claro) 3px,transparent 3.5px),
+   radial-gradient(circle at 8px calc(100% - 8px),var(--oro-claro) 3px,transparent 3.5px),
+   radial-gradient(circle at calc(100% - 8px) calc(100% - 8px),var(--oro-claro) 3px,transparent 3.5px),
+   linear-gradient(135deg,var(--oro-claro),var(--oro) 35%,var(--oro-hondo) 70%,var(--oro));
+  box-shadow:0 4px 10px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.45), inset 0 0 0 3px var(--oro-hondo), inset 0 0 0 4px var(--oro-claro)}
 .cuadro .lienzo{position:relative;width:100%;height:100%;overflow:hidden;box-shadow:inset 0 0 0 2px var(--oro-hondo), inset 0 0 0 3px var(--oro-claro)}
 .cuadro img{width:100%;height:100%;object-fit:cover;display:block}
-.cuadro .placa{margin:6px auto 0;width:86px;background:linear-gradient(var(--oro-claro),var(--oro));border:1px solid var(--oro-hondo);
+.cuadro .placa{margin:4px 0 0;width:104px;background:linear-gradient(var(--oro-claro),var(--oro));border:1px solid var(--oro-hondo);
   font-family:var(--display);font-weight:700;font-size:14px;letter-spacing:.06em;text-align:center;color:var(--tinta);padding:1px 0}
 .cuadro.elegido{transform:translateY(-10px)}
 .cuadro.ocupado img{filter:grayscale(1) brightness(.9)}
@@ -124,9 +131,9 @@ h2{font-family:var(--display);font-weight:600;font-size:24px;line-height:1.05;ma
   <div class="mapa" aria-hidden="true"></div>
   <div class="sombra-sup"></div><div class="sombra-inf"></div>
   <div class="barra">
-    <div class="semana" title="Semana 1 de 6">S1/6</div>
+    <div class="ficha-barra semana" title="Semana 1 de 6"><small>SEMANA</small>1 de 6</div>
     <div class="dias" id="dias"></div>
-    <div class="resp" id="resp">✉ 0/4</div>
+    <div class="ficha-barra resp" id="resp" title="Invitaciones respondidas"><small>✉</small><span id="respn">0/4</span></div>
     <button class="sello" id="comenzar" aria-label="Comenzar semana">▶</button>
   </div>
   <div id="marcadores"></div>
@@ -148,13 +155,13 @@ let abierto=null;
 const $=s=>document.querySelector(s);
 
 function render(){
-  $("#dias").innerHTML=[27,28,29,30].map((d,i)=>`<div class="dia ${i==0?'hoy':''} ${D.eventos.some(e=>e.dia==d)?'evento':''}"><small>${DSEM[d]}</small>${d}</div>`).join("");
+  $("#dias").innerHTML=[27,28,29,30].map((d,i)=>`<div class="ficha-barra dia ${i==0?'hoy':''} ${D.eventos.some(e=>e.dia==d)?'evento':''}" title="${D.eventos.some(e=>e.dia==d)?'Hay eventos este día':'Sin eventos'}"><small>${DSEM[d]}</small>${d}</div>`).join("");
   $("#marcadores").innerHTML=D.eventos.map(e=>{const [x,y]=POS[e.lugar];return `<button class="marcador ${e.obligatorio?'oblig':''} ${respondidas.has(e.id)?'resp-ok':''}" style="left:${x}%;top:${y}%" data-ev="${e.id}" aria-label="${e.titulo}"><span class="icono">${ICON[e.tipo]||"✉"}</span><span class="etq"><b>${e.dia}</b><span>${e.lugarN}</span></span></button>`}).join("");
   document.querySelectorAll(".marcador").forEach(b=>b.onclick=()=>abrirEvento(b.dataset.ev));
   const ocup=ocupados();
   $("#mano").innerHTML=D.elenco.map(p=>`<button class="cuadro ${abierto&&abierto.plazas&&abierto.plazas.includes(p.id)?'elegido':''} ${ocup[p.id]&&!(abierto&&abierto.plazas&&abierto.plazas.includes(p.id))?'ocupado':''}" data-p="${p.id}" aria-label="${p.pila}"><div class="marco"><div class="lienzo"><img alt="" src="${IMG[p.id]}"></div></div><div class="placa">${p.pila}</div></button>`).join("");
   document.querySelectorAll(".cuadro").forEach(b=>b.onclick=()=>tocarCarta(b.dataset.p,b));
-  $("#resp").textContent=`✉ ${respondidas.size}/${D.eventos.length}`;
+  $("#respn").textContent=`${respondidas.size}/${D.eventos.length}`;
   const obl=D.eventos.filter(e=>e.obligatorio).every(e=>respondidas.has(e.id));
   $("#comenzar").classList.toggle("listo",obl);
 }
