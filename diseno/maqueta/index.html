@@ -14,7 +14,7 @@
   color-scheme: light;
 }
 html,body{height:100%}
-body{background:var(--fondo);color:var(--tinta);font-family:var(--texto);font-variant-numeric:lining-nums;
+body{margin:0;background:var(--fondo);color:var(--tinta);font-family:var(--texto);font-variant-numeric:lining-nums;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
   display:flex;justify-content:center;align-items:center;padding-block:12px;box-sizing:border-box}
 *{box-sizing:border-box}
@@ -40,25 +40,25 @@ button{font:inherit;color:inherit}
 .sombra-inf{position:absolute;inset:auto 0 0 0;height:260px;background:linear-gradient(transparent,rgba(43,51,80,.45))}
 
 /* Barra superior */
-.barra{position:absolute;top:calc(10px + env(safe-area-inset-top,0px));left:12px;right:12px;display:flex;align-items:flex-end;gap:8px}
-.semana-txt{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.12em;color:var(--marfil);text-transform:uppercase;text-shadow:0 1px 3px rgba(0,0,0,.4);margin:0 0 4px 2px}
+.barra{position:absolute;top:calc(10px + env(safe-area-inset-top,0px));left:12px;right:12px;display:flex;align-items:flex-end;justify-content:space-between;gap:8px}
+.semana-txt{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.12em;color:var(--marfil);text-transform:uppercase;text-shadow:0 1px 3px rgba(0,0,0,.4);margin:0 0 4px;text-align:center}
 .calendario{display:flex;flex-direction:column}
 .ficha-barra{height:42px;background:#FCF8EF;border:1px solid var(--tinta);outline:.5px solid var(--tinta);outline-offset:-4px;
   display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;line-height:1;position:relative}
 .ficha-barra small{font-size:7.5px;letter-spacing:.08em;font-weight:600;margin-bottom:5px}
 .semana{width:52px;font-size:16px}
-.sobres{position:absolute;right:calc(10px + env(safe-area-inset-right,0px));top:calc(74px + env(safe-area-inset-top,0px));width:50px;height:36px;border:none;cursor:pointer;padding:0;background:none}
+.sobres{position:relative;flex:none;width:42px;height:42px;border:none;cursor:pointer;padding:0;background:none;display:grid;place-items:center}
 .sobres svg{display:block;filter:drop-shadow(0 2px 4px rgba(0,0,0,.25))}
-.sobres span{position:absolute;left:0;right:0;bottom:3px;text-align:center;font-family:var(--display);font-weight:700;font-size:13px;color:var(--tinta);font-variant-numeric:tabular-nums}
+.sobres span{position:absolute;left:0;right:0;bottom:7px;text-align:center;font-family:var(--display);font-weight:700;font-size:13px;color:var(--tinta);font-variant-numeric:tabular-nums}
 .sobres.completo span{color:var(--oro-hondo)}
-.dias{display:flex;gap:4px}
-.dia{width:36px;font-size:18px}
+.dias{display:flex;gap:3px}
+.dia{width:33px;font-size:17px}
 .dia.libre{opacity:.75}
 .dia.sigue{border-color:var(--rosa);outline:1px dashed var(--rosa);outline-offset:-4px;color:var(--rosa)}
 .dia.evento{border-color:var(--rosa);outline-color:var(--rosa);color:var(--rosa)}
 .dia.hoy{box-shadow:0 0 0 2px var(--oro)}
 
-.sello{width:42px;height:42px;flex:none;margin-left:auto;align-self:flex-end;border-radius:50%;background:var(--rosa);border:none;box-shadow:inset 0 0 0 3px var(--oro-claro);color:var(--marfil);font-size:15px;cursor:pointer;opacity:.4}
+.sello{width:42px;height:42px;flex:none;border-radius:50%;background:var(--rosa);border:none;box-shadow:inset 0 0 0 3px var(--oro-claro);color:var(--marfil);font-size:15px;cursor:pointer;opacity:.4}
 .sello.listo{opacity:1;animation:late 2s ease-in-out infinite}
 @keyframes late{50%{transform:scale(1.05)}}
 
@@ -138,10 +138,10 @@ h2{font-family:var(--display);font-weight:600;font-size:24px;line-height:1.05;ma
   <div class="mapa" aria-hidden="true"></div>
   <div class="sombra-sup"></div><div class="sombra-inf"></div>
   <div class="barra">
+    <button class="sobres" id="sobres" aria-label="Invitaciones por responder"><svg width="42" height="31" viewBox="0 0 50 36"><rect x="1" y="1" width="48" height="34" rx="2" fill="#FBF7F0" stroke="#2B3350" stroke-width="1.2"/><path d="M1.5 2 L25 20 L48.5 2" fill="none" stroke="#2B3350" stroke-width="1.2"/><circle cx="25" cy="19" r="4" fill="#C0627A"/></svg><span id="respn">0/4</span></button>
     <div class="calendario"><div class="semana-txt">Semana 1</div><div class="dias" id="dias"></div></div>
     <button class="sello" id="comenzar" aria-label="Comenzar semana">▶</button>
   </div>
-  <button class="sobres" id="sobres" aria-label="Invitaciones por responder"><svg width="50" height="36" viewBox="0 0 50 36"><rect x="1" y="1" width="48" height="34" rx="2" fill="#FBF7F0" stroke="#2B3350" stroke-width="1.2"/><path d="M1.5 2 L25 20 L48.5 2" fill="none" stroke="#2B3350" stroke-width="1.2"/><circle cx="25" cy="19" r="4" fill="#C0627A"/></svg><span id="respn">0/4</span></button>
   <div id="marcadores"></div>
   <div class="nota" id="nota"><small>NOTA</small>Ya llegaron sus ocho jóvenes. Toque una carta para conocer a cada uno, o un sobre para responder.</div>
   <div class="mano" id="mano"></div>
