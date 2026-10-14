@@ -69,7 +69,7 @@ Las habilidades van de 0 a 5. Los ejes de carácter van de −2 a +2:
 | `teo` | Teo Rovena | 24 | Rovena · rosa malva | 2 | 2 | 5 | 2 | 3 | +1 | −2 | teatro | baile | hetero |
 | `celia` | Celia Lobreda | 21 | Lobreda · verde salvia | 5 | 3 | 1 | 2 | 3 | −2 | +1 | clase | paseo | hetero |
 | `irene` | Irene Salvat | 25 | Archiveros · gris carbón | 1 | 2 | 3 | 3 | 5 | −1 | +2 | cena | baile | bi |
-| `isolda` | Isolda Marén | 26 | Marén · verde mar | 3 | 1 | 2 | 5 | 3 | +2 | +1 | paseo | recepcion | lesbiana |
+| `isolda` | Isolda Marén | 23 | Marén · amarillo prímula | 3 | 2 | 3 | 2 | 4 | −1 | +2 | paseo | recepcion | lesbiana |
 | `camila` | Camila Ferrán | 29 | Ferrán · lavanda y gris perla | 2 | 4 | 4 | 2 | 2 | +1 | −1 | cena | clase | hetero |
 
 **Damas y caballeros** (para la regla de los bailes de cortejo):
@@ -86,7 +86,7 @@ Las habilidades van de 0 a 5. Los ejes de carácter van de −2 a +2:
 | **Teo** | Humor, y de pronto una mirada seria | Que la casa Rovena vuelva a ser invitada a todas partes (los molinos pasan una mala racha) | Divierte a todos para evitar una conversación sincera | Debe dinero a Nilo y a medio Lumbrevía | Tiene una conversación sincera / Se convierte en el bufón de los salones |
 | **Celia** | Disciplina convertida en gracia | Destacar por mérito propio, no ser «la prima de Nilo» | Depende de la aprobación ajena | Guarda una lista de quienes la miraron mal en un salón | Baila por gusto / Se quiebra ante un error público |
 | **Irene** | Atención total | Acceder a los archivos privados de las casas | Entiende los argumentos mejor que las insinuaciones | **Es la autora de *La Hoja sin Firma* (D5)**, ver §6 | Se arriesga a ser vista y publica sólo los abusos / Usa lo que sabe contra otros |
-| **Isolda** | Libertad contagiosa | Un lugar propio en los salones sin pedir permiso | Rechaza las convenciones y desea pertenecer | Velaria (es público); su familia pagó el seguro del barco Ferrán | Encuentra su lugar sin dejar de ser ella / Rompe con todos por orgullo |
+| **Isolda** | Dulzura tímida; cuando habla, todos se callan para oírla | Atreverse a hablar primero, una sola vez, de algo que quiere | Calcula todos los riesgos y nunca corre el suyo | Hija de aseguradores de Puerto Nácar; su familia pagó el seguro del barco Ferrán. Está enamorada en silencio y no se lo ha dicho a nadie | Dice en voz alta lo que quiere / Se casa por conveniencia y calla |
 | **Camila** | Experiencia y humor seco | Decidir sola su siguiente paso tras el luto | Dice no necesitar a nadie y echa de menos que la sorprendan | Su fortuna viene del seguro Marén por el barco hundido de su marido; la casa Miravés le reclama la deuda de ese barco, que **vence en la semana 5** | Se deja sorprender / Se queda observando, sola |
 
 **Datos fijos nuevos:**
@@ -114,13 +114,13 @@ La matriz de las 28 parejas está en `diseno/RELACIONES-Y-UNIONES-PROPUESTA.md` 
 | Pareja | Puntos | Por qué |
 |---|---|---|
 | Celia–Camila | 2 | Carabina |
-| Dario–Isolda | 2 | Amigos de infancia en el puerto |
+| Dario–Isolda | 2 | Amigos de infancia en el puerto; él la defendía cuando ella no se atrevía a hablar |
 | Nilo–Celia | 2 | Primos |
 | Nilo–Teo | 1 | Taberna y deuda |
 | Nilo–Saúl | 1 | La tormenta en el paso |
 | Saúl–Dario | 1 | Negociaron el préstamo Veyra |
 | Teo–Camila | 1 | Teo fue protegido de su difunto marido |
-| Irene–Isolda | 1 | Los papeles del linaje velario |
+| Irene–Isolda | 1 | Los registros portuarios de su abuela, que Irene buscó tres semanas más de lo necesario |
 | Resto | 0 | — |
 
 ---
@@ -196,3 +196,28 @@ La matriz de las 28 parejas está en `diseno/RELACIONES-Y-UNIONES-PROPUESTA.md` 
 - Éxito social, afinidad, deseo y consentimiento son cosas distintas: **una tirada nunca impone deseo**.
 - La reputación de la casamentera sólo recoge lo que la sociedad pudo saber.
 - Las uniones se deciden en el Gran Baile, con el carnet de baile.
+
+
+---
+
+## 8. Cambio de personaje: Isolda (14 oct.)
+
+Decisión del usuario, a partir del original nuevo:
+- **Aspecto:** pelo castaño ondulado medio recogido, pluma amarilla en el peinado, ojos ámbar, vestido amarillo pálido con florecitas azules.
+- **Carácter:** **tímida y dulce**.
+- **Deja de ser velaria.**
+
+Su función en la historia se mantiene: es la dama lesbiana, el romance prioritario con Irene y el posible acuerdo lavanda con Saúl. Ahora es más fuerte, porque los dos esconden lo que sienten. Su color de casa pasa a **amarillo prímula** (`#D9C46A`).
+
+## 9. Calendario corregido (semanas de 7 días)
+
+| Cap. | Días |
+|---|---|
+| 1 | Vendimias 24–30 |
+| 2 | Nieblas 1–7 |
+| 3 | Nieblas 8–14 |
+| 4 | Nieblas 15–21 (plenilunio el 20) |
+| 5 | Nieblas 22–28 |
+| 6 | Nieblas 29 – Escarchas 5 (Gran Baile el 5) |
+
+Esta tabla **reemplaza** las fechas del §6. Los meses tienen 30 días.

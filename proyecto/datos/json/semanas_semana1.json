@@ -7,6 +7,9 @@
   },
   "mes": "vendimias",
   "dias": [
+   24,
+   25,
+   26,
    27,
    28,
    29,
@@ -331,8 +334,8 @@
        {
         "si": "asiste(isolda)",
         "texto": {
-         "es": "Isolda Marén se quitó los guantes para tocar el agua del estanque. Los Serravalle lo encontraron encantador; los demás, escandaloso.",
-         "en": "Isolda Marén took off her gloves to touch the pond. The Serravalles found it charming; everyone else, scandalous."
+         "es": "La joven Marén, de amarillo, apenas habló en toda la tarde. Aun así, tres caballeros preguntaron su nombre al salir.",
+         "en": "The young Miss Marén, in yellow, barely spoke all afternoon. Even so, three gentlemen asked her name on the way out."
         }
        }
       ]
@@ -573,8 +576,8 @@
        {
         "si": "asiste(isolda)",
         "texto": {
-         "es": "Nadie habló del pelo de Isolda Marén. Todo el mundo habló de cómo bailaba.",
-         "en": "Nobody talked about Isolda Marén's hair. Everyone talked about the way she danced."
+         "es": "Isolda Marén, que según dicen no habla con nadie, abrió el baile sin un solo error. Hubo quien contuvo el aliento.",
+         "en": "Isolda Marén, who they say speaks to no one, opened the dance without a single misstep. Some held their breath."
         }
        },
        {

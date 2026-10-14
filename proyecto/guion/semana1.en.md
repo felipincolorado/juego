@@ -67,7 +67,7 @@ My gardens reach their finest week just as the season begins; I suspect the aste
 
 **Desenlace · favorable** — The talk of the walks
 - publico: Leonora Serravalle never stopped introducing {grupo}. Half the riverbank knows their names now.
-  - si `asiste(isolda)`: Isolda Marén took off her gloves to touch the pond. The Serravalles found it charming; everyone else, scandalous.
+  - si `asiste(isolda)`: The young Miss Marén, in yellow, barely spoke all afternoon. Even so, three gentlemen asked her name on the way out.
 - privado: Leonora gave you a little nod as you left: she'll invite them again.
   - si `asiste(nilo) y asiste(isolda)`: Nilo and Isolda talked about caravan insurance for half an hour. She laughed properly, twice.
 
@@ -116,7 +116,7 @@ Her Majesty will receive your eight young people on Saturday, at lamp-lighting, 
 - publico: {grupo} opened the Queen's dance with an ease that silenced the tables at the back.
   - si `asiste(saul) y asiste(celia)`: Saúl Veyra and Celia Lobreda opened the dance. A Lobreda and a Veyra together: there's already talk of an engagement that would settle the old mountain-pass quarrel.
   - si `asiste(dario) y asiste(celia)`: Dario Miravés and Celia Lobreda: the most elegant couple the palace has seen in years. Nobody looked at the orchestra.
-  - si `asiste(isolda)`: Nobody talked about Isolda Marén's hair. Everyone talked about the way she danced.
+  - si `asiste(isolda)`: Isolda Marén, who they say speaks to no one, opened the dance without a single misstep. Some held their breath.
   - si `asiste(teo)`: Teo Rovena opened the dance without treading on anyone. Valcenda is celebrating it as a minor miracle.
 - privado: The Queen asked after you twice. Mireya made a note of it.
 

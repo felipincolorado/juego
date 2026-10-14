@@ -67,7 +67,7 @@ Mis jardines llegan a su mejor semana justo cuando empieza la temporada; sospech
 
 **Desenlace · favorable** — El paseo de moda
 - publico: Leonora Serravalle no paró de presentar a {grupo}. Media orilla del río sabe ya sus nombres.
-  - si `asiste(isolda)`: Isolda Marén se quitó los guantes para tocar el agua del estanque. Los Serravalle lo encontraron encantador; los demás, escandaloso.
+  - si `asiste(isolda)`: La joven Marén, de amarillo, apenas habló en toda la tarde. Aun así, tres caballeros preguntaron su nombre al salir.
 - privado: Leonora le hizo un gesto al despedirse: volverá a invitarlos.
   - si `asiste(nilo) y asiste(isolda)`: Nilo e Isolda hablaron de seguros de caravana durante media hora. Ella se rió de verdad, dos veces.
 
@@ -116,7 +116,7 @@ Su Majestad recibirá a sus ocho jóvenes el sábado, a la hora de las lámparas
 - publico: {grupo} abrieron el baile de la reina con una soltura que hizo callar a las mesas del fondo.
   - si `asiste(saul) y asiste(celia)`: Saúl Veyra y Celia Lobreda abrieron el baile. Lobreda y Veyra, juntos: ya se habla de un compromiso que cerraría la disputa del paso.
   - si `asiste(dario) y asiste(celia)`: Dario Miravés y Celia Lobreda, la pareja más elegante que ha visto el palacio en años. Nadie miró a la orquesta.
-  - si `asiste(isolda)`: Nadie habló del pelo de Isolda Marén. Todo el mundo habló de cómo bailaba.
+  - si `asiste(isolda)`: Isolda Marén, que según dicen no habla con nadie, abrió el baile sin un solo error. Hubo quien contuvo el aliento.
   - si `asiste(teo)`: Teo Rovena abrió el baile sin pisar a nadie. Valcenda lo celebra como un pequeño milagro.
 - privado: La reina preguntó por usted dos veces. Mireya lo anotó.
 

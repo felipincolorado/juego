@@ -338,48 +338,48 @@
   },
   "isolda": {
    "biografia": {
-    "es": "Velaria de Puerto Nácar, de la familia Marén, aseguradores ricos y sin título. Creció en los salones del puerto y llega a Valcenda sin intención de pedir permiso.",
-    "en": "A velaria from Port Nácar, of the Maréns, wealthy untitled underwriters. She grew up in the harbour salons and arrives in Valcenda with no intention of asking permission."
+    "es": "Hija de los aseguradores Marén de Puerto Nácar, que respaldan barcos y convoyes de medio reino. Llega a su primera temporada en Valcenda con un vestido amarillo y muy pocas palabras.",
+    "en": "Daughter of the Marén underwriters of Port Nácar, who stand behind ships and convoys across half the kingdom. She arrives at her first Valcenda season in a yellow dress and with very few words."
    },
    "entradas": [
     {
      "id": "impresion",
      "desbloqueo": "semana >= 1",
      "texto": {
-      "es": "Apoya el codo donde no debe y ríe la primera. Ya ha avisado de que no piensa cambiarse el pelo.",
-      "en": "She leans her elbow where she shouldn't and laughs first. She's already warned that she won't change her hair."
+      "es": "Saluda en voz tan baja que hay que inclinarse para oírla. Quien se inclina, se queda.",
+      "en": "She greets people so softly you have to lean in to hear her. Those who lean in, stay."
      }
     },
     {
      "id": "gusta",
      "desbloqueo": "asistio_gusta(isolda) >= 1",
      "texto": {
-      "es": "Los paseos y el agua. Al aire libre nadie le dice cómo sentarse.",
-      "en": "Walks, and anywhere near water. Outdoors, nobody tells her how to sit."
+      "es": "Los jardines a media tarde, cuando ya nadie pasea. Dice que las flores no esperan conversación.",
+      "en": "Gardens in mid-afternoon, when no one is strolling anymore. She says flowers don't expect conversation."
      }
     },
     {
      "id": "teme",
      "desbloqueo": "desaires(isolda) >= 1",
      "texto": {
-      "es": "Que la acepten sólo cuando se porte como otra. O que no la acepten nunca, que es lo mismo pero más corto.",
-      "en": "Being accepted only when she behaves like someone else. Or never being accepted, which is the same thing, only quicker."
+      "es": "Quedarse sin palabras delante de quien le importa, y que esa persona crea que no tenía nada que decir.",
+      "en": "Losing her words in front of someone she cares about, and that person thinking she had nothing to say."
      }
     },
     {
      "id": "confidencia",
      "desbloqueo": "nivel_max(isolda) >= B",
      "texto": {
-      "es": "Habla de una archivera que buscó sus papeles tres semanas más de lo necesario. Para no importarle, lo cuenta muy a menudo.",
-      "en": "She talks about an archivist who searched for her papers three weeks longer than needed. For something that doesn't matter to her, she mentions it a lot."
+      "es": "Admite que fue al Archivo por unos papeles de su abuela y que volvió más veces de las necesarias. No dice por qué. Se ruboriza al no decirlo.",
+      "en": "She admits she went to the Archive for her grandmother's papers and went back more times than she needed to. She doesn't say why. She blushes not saying it."
      }
     },
     {
      "id": "esconde",
      "desbloqueo": "nivel_max(isolda) >= A o marca(hito_isolda)",
      "texto": {
-      "es": "Su familia pide un vínculo formal a cambio de respaldar convoyes. Isolda lo ha calculado como aseguradora: un buen acuerdo le dejaría la vida, y el corazón, donde están.",
-      "en": "Her family wants a formal tie in exchange for backing convoys. Isolda has run the numbers like an underwriter: the right arrangement would leave her life, and her heart, exactly where they are."
+      "es": "Guarda una cinta de pelo que no es suya en el libro de cuentas de su madre. Es de una dama que una vez le prestó un lápiz sin mirarla y le cambió la tarde.",
+      "en": "She keeps a hair ribbon that isn't hers inside her mother's account book. It belongs to a lady who once lent her a pencil without looking up, and changed her afternoon."
      }
     },
     {

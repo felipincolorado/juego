@@ -25,8 +25,8 @@
    "en": "Why me? Don't misunderstand: I genuinely want to know."
   },
   "isolda": {
-   "es": "Le aviso desde ya: no pienso cambiarme el pelo.",
-   "en": "Fair warning: I'm not changing my hair."
+   "es": "Gracias por… Perdón. Soy Isolda. Isolda Marén.",
+   "en": "Thank you for… Sorry. I'm Isolda. Isolda Marén."
   },
   "camila": {
    "es": "Ya hice esto una vez, querida. Esta vez elijo yo.",
@@ -59,8 +59,8 @@
    "en": "From the Archive. Misses nothing."
   },
   "isolda": {
-   "es": "Velaria, de Puerto Nácar. No pide permiso.",
-   "en": "Velaria, from Port Nácar. Doesn't ask permission."
+   "es": "La hija de los aseguradores de Nácar. Habla bajito y no se pierde nada.",
+   "en": "The Nácar underwriters' daughter. Speaks softly and misses nothing."
   },
   "camila": {
    "es": "La señora Ferrán, viuda. Y carabina de Celia, para desgracia de las dos.",
@@ -1427,226 +1427,226 @@
   "isolda": {
    "tipica": [
     {
-     "es": "¿Y quién decidió esa regla?",
-     "en": "And who decided that rule?"
+     "es": "Perdón. …No, nada. Sigan.",
+     "en": "Sorry. …No, nothing. Go on."
     },
     {
-     "es": "Si me van a mirar, que sea por algo.",
-     "en": "If they're going to stare, let's give them a reason."
+     "es": "Yo escucho. Se me da mejor que hablar.",
+     "en": "I listen. I'm better at it than talking."
     },
     {
-     "es": "Lo peor que puede pasar es que hablen. Ya hablan.",
-     "en": "The worst that can happen is they talk. They already do."
+     "es": "Mi madre diría que ya calculé el riesgo. Lo calculé. Por eso no digo nada.",
+     "en": "My mother would say I've already weighed the risk. I have. That's why I'm quiet."
     }
    ],
    "asignado": [
     {
-     "es": "Voy. Pero me siento donde quiera.",
-     "en": "I'll go. But I'm sitting wherever I like."
+     "es": "¿Yo? …Está bien. Iré.",
+     "en": "Me? …All right. I'll go."
     },
     {
-     "es": "Encantada. ¿Quién va a escandalizarse esta vez?",
-     "en": "Delighted. Who's going to be scandalised this time?"
+     "es": "Me pondré cerca de una ventana. Por si acaso.",
+     "en": "I'll stand near a window. Just in case."
     },
     {
-     "es": "Voy. Ya calculé el riesgo: alto, y me encanta.",
-     "en": "I'll go. I've worked out the risk: high, and I love it."
+     "es": "Gracias por pensar en mí. De verdad, no es costumbre.",
+     "en": "Thank you for thinking of me. Truly, people don't usually."
     }
    ],
    "gusta": [
     {
-     "es": "Aire, gente nueva y nada que firmar. Así se pasea en Nácar.",
-     "en": "Fresh air, new faces and nothing to sign. That's how we stroll in Nácar."
+     "es": "Un paseo. Ahí nadie espera que una diga nada brillante.",
+     "en": "A stroll. Nobody expects you to say anything clever there."
     },
     {
-     "es": "¿Un paseo? Por fin puedo caminar a mi paso.",
-     "en": "A walk? At last I can go at my own pace."
+     "es": "Hay un banco junto al estanque. Ya lo tengo elegido.",
+     "en": "There's a bench by the pond. I've already chosen it."
     },
     {
-     "es": "Huele a río. Casi como en el puerto.",
-     "en": "Smells of river. Almost like the harbour."
+     "es": "Aire, flores y silencio. Me sabe a Nácar en primavera.",
+     "en": "Air, flowers and quiet. It tastes like Nácar in spring."
     }
    ],
    "no_gusta": [
     {
-     "es": "En una recepción nadie dice lo que vale nada. En el puerto, sí.",
-     "en": "At a reception nobody says what anything's worth. At the port, they do."
+     "es": "¿Tanta gente? Me quedaré junto a la columna, si no le importa.",
+     "en": "So many people? I'll keep by a pillar, if you don't mind."
     },
     {
-     "es": "Saludar en orden, sonreír en orden, aburrirse en orden.",
-     "en": "Greet in order, smile in order, be bored in order."
+     "es": "En las recepciones todos hablan a la vez. Yo me pierdo en la segunda frase.",
+     "en": "At receptions everyone talks at once. I'm lost by the second sentence."
     },
     {
-     "es": "Iré. Y me portaré bien. Casi todo el rato.",
-     "en": "I'll go. And behave. Most of the time."
+     "es": "Iré. Sonreiré. Contaré los minutos.",
+     "en": "I'll go. I'll smile. I'll count the minutes."
     }
    ],
    "camino": [
     {
-     "es": "Si llegamos tarde, que se note que llegamos.",
-     "en": "If we're late, let them notice we've arrived."
+     "es": "Repaso un saludo. Uno solo. Con eso me basta.",
+     "en": "I'm practising one greeting. Just the one. That will do."
     },
     {
-     "es": "Abra la ventana. En Nácar no viajamos con el aire encerrado.",
-     "en": "Open the window. In Nácar we don't travel with the air shut in."
+     "es": "Ese cochero silba la misma canción que los marineros de casa.",
+     "en": "That coachman whistles the same tune as the sailors back home."
     },
     {
-     "es": "Apuesto a que alguien se tapa la boca al verme. Uno, dos…",
-     "en": "I bet someone covers their mouth when they see me. One, two…"
+     "es": "Si alguien me pregunta algo, ¿me ayudará a contestar?",
+     "en": "If someone asks me something, will you help me answer?"
     }
    ],
    "bien": [
     {
-     "es": "Les ha gustado, y no he tenido que fingir ni un poco.",
-     "en": "They liked it, and I didn't have to pretend one bit."
+     "es": "Hablé dos veces. Y la segunda se rieron conmigo, no de mí.",
+     "en": "I spoke twice. And the second time they laughed with me, not at me."
     },
     {
-     "es": "Me han vuelto a invitar. Mi madre dirá que es un buen contrato.",
-     "en": "They've invited me back. My mother will call it a good contract."
+     "es": "Alguien me pidió que repitiera lo que dije. Lo repetí. No me temblaba la voz.",
+     "en": "Someone asked me to repeat what I'd said. I did. My voice didn't shake."
     },
     {
-     "es": "Hoy nadie me ha pedido que baje la voz. Algo estamos haciendo bien.",
-     "en": "Nobody asked me to lower my voice today. We're doing something right."
+     "es": "Fue bonito. No sé decirlo mejor, pero fue bonito.",
+     "en": "It was lovely. I can't put it better, but it was lovely."
     }
    ],
    "medias": [
     {
-     "es": "Me aplaudieron y luego se taparon la boca. Lo acepto.",
-     "en": "They applauded, then covered their mouths. I'll take it."
+     "es": "No me equivoqué en nada. Tampoco me atreví a nada.",
+     "en": "I didn't get anything wrong. I didn't dare anything either."
     },
     {
-     "es": "Medio salón me ha sonreído. El otro medio, mañana.",
-     "en": "Half the room smiled at me. The other half, tomorrow."
+     "es": "Me miraron una vez. Bajé la vista. La próxima vez, quizá no.",
+     "en": "They looked at me once. I looked down. Next time, perhaps not."
     },
     {
-     "es": "No ha salido mal. Tampoco a mi manera. Me debo una.",
-     "en": "It didn't go badly. Nor did it go my way. I owe myself one."
+     "es": "Estuvo bien. Para mí, estuvo casi bien.",
+     "en": "It went well. For me, it went almost well."
     }
    ],
    "mal": [
     {
-     "es": "Me pasé de la raya. …Aunque la raya estaba mal puesta.",
-     "en": "I crossed the line. …Though the line was badly drawn."
+     "es": "Quise decir algo y se me quedó en la garganta. Lo siento.",
+     "en": "I meant to say something and it stuck in my throat. I'm sorry."
     },
     {
-     "es": "Me han mirado como a algo que trajo la marea.",
-     "en": "They looked at me like something the tide dragged in."
+     "es": "Se rieron. Creo que no era conmigo. Creo.",
+     "en": "They laughed. I don't think it was at me. I think."
     },
     {
-     "es": "Lo siento por usted. Por ellos, nada.",
-     "en": "I'm sorry for your sake. For theirs, not in the least."
+     "es": "Mañana me quedaré en casa. Un día solo. Prometido.",
+     "en": "Tomorrow I'll stay home. Just one day. I promise."
     }
    ],
    "incidente": [
     {
-     "es": "Déjenmelo a mí. Me encanta un buen desastre.",
-     "en": "Leave it to me. I love a good disaster."
+     "es": "Ay. ¿Qué hacemos? Dígame qué hago.",
+     "en": "Oh. What do we do? Tell me what to do."
     },
     {
-     "es": "¡Por fin pasa algo!",
-     "en": "Finally, something's happening!"
+     "es": "Yo… vi lo que pasó. Si sirve de algo, lo vi todo.",
+     "en": "I… saw what happened. If it helps, I saw all of it."
     },
     {
-     "es": "Calma. En el puerto esto pasa todas las semanas.",
-     "en": "Calm down. At the harbour, this happens every week."
+     "es": "No sé hablar delante de tanta gente. Pero puedo ayudar en silencio.",
+     "en": "I can't speak in front of so many people. But I can help quietly."
     }
    ],
    "con_interes": [
     {
-     "es": "Vaya, vaya. Usted sabe elegir compañía.",
-     "en": "Well, well. You do know how to choose company."
+     "es": "¿Va también…? No, nada. Sólo preguntaba.",
+     "en": "Is… also going? No, nothing. I was only asking."
     },
     {
-     "es": "Hoy me peino. No se acostumbre.",
-     "en": "Today I'm doing my hair. Don't get used to it."
+     "es": "Me pondré la pluma nueva. No por nada.",
+     "en": "I'll wear the new feather. For no reason."
     },
     {
-     "es": "Iré encantada. Y no pienso disimularlo.",
-     "en": "I'll go gladly. And I won't pretend otherwise."
+     "es": "Si me tiembla la taza, no lo diga.",
+     "en": "If my cup shakes, don't mention it."
     }
    ],
    "con_rival": [
     {
-     "es": "Bien. Alguien tiene que recordarle que las reglas se inventaron.",
-     "en": "Good. Someone has to remind them the rules were made up."
+     "es": "Seré amable. Siempre soy amable. Es lo único que sé hacer bien.",
+     "en": "I'll be kind. I'm always kind. It's the one thing I do well."
     },
     {
-     "es": "Me portaré bien. Para que le moleste más.",
-     "en": "I'll behave. It'll annoy them more."
+     "es": "Me sentaré lejos. No por mala educación. Por paz.",
+     "en": "I'll sit far away. Not out of rudeness. For peace."
     },
     {
-     "es": "Llevaré mi mejor sonrisa. Y los codos en la mesa.",
-     "en": "I'll bring my best smile. And my elbows on the table."
+     "es": "Quizá esta vez no me mire así. Quizá.",
+     "en": "Perhaps this time she won't look at me like that. Perhaps."
     }
    ],
    "agitada": [
     {
-     "es": "Necesito aire. Del de verdad, no del de salón.",
-     "en": "I need air. Real air, not ballroom air."
+     "es": "Necesito un rincón. Uno pequeño.",
+     "en": "I need a corner. A small one."
     },
     {
-     "es": "Si me quedo, digo algo. Si me voy, también lo diré.",
-     "en": "If I stay, I'll say something. If I go, I'll say it anyway."
+     "es": "Respiro como me enseñó mi abuela: contando olas.",
+     "en": "I'm breathing the way my grandmother taught me: counting waves."
     },
     {
-     "es": "Déjeme romper una regla. Una pequeña. Me arregla el día.",
-     "en": "Let me break a rule. A small one. It'll mend my day."
+     "es": "No llore delante de nadie, Isolda. No llore.",
+     "en": "Don't cry in front of anyone, Isolda. Don't cry."
     }
    ],
    "tras_escandalo": [
     {
-     "es": "Que hablen. Por lo menos, de algo interesante.",
-     "en": "Let them talk. At least it's about something interesting."
+     "es": "Pobre gente. Mañana podría ser cualquiera de nosotros.",
+     "en": "Poor things. Tomorrow it could be any of us."
     },
     {
-     "es": "A mí me miran igual, con escándalo o sin él.",
-     "en": "They stare at me the same, scandal or no scandal."
+     "es": "Yo no diré nada. Nunca digo nada. Por eso me lo cuentan todo.",
+     "en": "I won't say a word. I never do. That's why people tell me everything."
     },
     {
-     "es": "¿Escándalo? En Nácar a esto lo llamamos jueves.",
-     "en": "Scandal? In Nácar we call this Thursday."
+     "es": "¿Lo ha leído? Yo no quería. Lo leí dos veces.",
+     "en": "Have you read it? I didn't want to. I read it twice."
     }
    ],
    "libre": [
     {
-     "es": "¿Libre? Me voy al río. Sola, y sin sombrero.",
-     "en": "Free? I'm off to the river. Alone, and hatless."
+     "es": "¿Libre? Escribiré a casa. Y leeré junto al río.",
+     "en": "Free? I'll write home. And read by the river."
     },
     {
-     "es": "Una semana sin salones. Me echarán de menos. Si no, peor para ellos.",
-     "en": "A week without salons. They'll miss me. If not, their loss."
+     "es": "Una semana tranquila. Gracias. Lo digo de corazón.",
+     "en": "A quiet week. Thank you. I mean it."
     },
     {
-     "es": "Bajaré a los muelles a ver quién llega. Siempre llega alguien sin permiso.",
-     "en": "I'll go down to the wharves to see who comes in. Someone always arrives without permission."
+     "es": "Iré al Archivo a buscar unos papeles de mi abuela. Sin prisa.",
+     "en": "I'll go to the Archive to look for some of my grandmother's papers. No hurry."
     }
    ],
    "clase": [
     {
-     "es": "Prometo no burlarme de la maestra. Mucho. Bueno, un poco.",
-     "en": "I promise not to mock the teacher. Much. Well, a little."
+     "es": "Me pondré atrás. Desde ahí también se aprende.",
+     "en": "I'll stand at the back. You learn from there too."
     },
     {
-     "es": "Ya me echaron de una. ¿Cuántas faltan para el récord?",
-     "en": "I've been thrown out of one already. How many for the record?"
+     "es": "Bailo mejor cuando nadie me mira. Ojalá en clase no miren.",
+     "en": "I dance better when no one's watching. I hope no one watches in class."
     },
     {
-     "es": "Aprenderé los pasos. Y luego los bailaré a mi manera.",
-     "en": "I'll learn the steps. Then dance them my own way."
+     "es": "Si me equivoco, que sea aquí y no en un salón.",
+     "en": "If I'm going to get it wrong, let it be here and not in a ballroom."
     }
    ],
    "reemplazo": [
     {
-     "es": "¿Me llaman de urgencia? Así me gusta entrar en un salón.",
-     "en": "An urgent summons? That's how I like to enter a room."
+     "es": "¿Yo, en lugar de…? Bueno. Respiro y voy.",
+     "en": "Me, instead of…? All right. A breath, and I'll go."
     },
     {
-     "es": "Voy. Sin invitación formal, que es como mejor me sale.",
-     "en": "Coming. No formal invitation, which suits me best."
+     "es": "No era mi invitación, pero haré que no se note.",
+     "en": "It wasn't my invitation, but I'll make sure no one can tell."
     },
     {
-     "es": "Voy. A los barcos que llegan tarde también se les espera.",
-     "en": "Coming. Ships that arrive late still get a welcome."
+     "es": "Voy. Aunque nadie me esperara.",
+     "en": "I'm going. Even if no one was expecting me."
     }
    ]
   },

@@ -11,277 +11,284 @@
 # - marcas nuevas: hito_<id> (hito de historia personal; p. ej. hito_nilo) y epilogo
 #                  (se activa al componer el epílogo).
 # Una entrada desbloqueada no se vuelve a bloquear aunque la condición deje de cumplirse.
-
 fichas:
-
   nilo:
     biografia:
-      es: "De la casa Lobreda de Greda Alta, cuyas caravanas cruzan el paso hacia Valcenda. Primo de Celia. Llega con fama de resolver cualquier cosa antes de que se la pidan."
-      en: "Of House Lobreda of Greda Alta, whose caravans cross the pass into Valcenda. Celia's cousin. Arrives with a reputation for fixing things before anyone asks."
+      es: De la casa Lobreda de Greda Alta, cuyas caravanas cruzan el paso hacia Valcenda. Primo de Celia. Llega con fama de resolver cualquier cosa antes de que se la pidan.
+      en: Of House Lobreda of Greda Alta, whose caravans cross the pass into Valcenda. Celia's cousin. Arrives with a reputation for fixing things before anyone asks.
     entradas:
-      - id: impresion
-        desbloqueo: "semana >= 1"
-        texto:
-          es: "Promete antes de que una termine de pedir. Lo raro es que casi siempre cumple."
-          en: "He promises before you've finished asking. The odd thing is, he nearly always delivers."
-      - id: gusta
-        desbloqueo: "asistio_gusta(nilo) >= 1"
-        texto:
-          es: "Los paseos. Al aire libre camina más rápido que nadie y, aun así, espera a todos."
-          en: "Walks. Outdoors he moves faster than anyone, and still waits for everybody."
-      - id: teme
-        desbloqueo: "desaires(nilo) >= 1"
-        texto:
-          es: "Que su ayuda la paguen otros. Lo dijo en broma; no lo era."
-          en: "That others end up paying for his help. He said it as a joke. It wasn't."
-      - id: confidencia
-        desbloqueo: "nivel_max(nilo) >= B"
-        texto:
-          es: "Le gustaría casarse con alguien que no necesite que la rescaten. Así, dice, por una vez lo rescatarían a él."
-          en: "He'd like to marry a woman who doesn't need rescuing. That way, he says, someone might rescue him for once."
-      - id: esconde
-        desbloqueo: "nivel_max(nilo) >= A o marca(hito_nilo)"
-        texto:
-          es: "Algunas noches, siempre las mismas del mes, no hay forma de encontrarlo. Vuelve al amanecer, agotado y con una explicación que suena ensayada."
-          en: "Some nights, always the same ones each month, he can't be found anywhere. He comes back at dawn, exhausted, with an explanation that sounds rehearsed."
-      - id: final
-        desbloqueo: "marca(epilogo)"
-        texto: { es: "(se rellena con el epílogo)", en: "(filled by the epilogue)" }
-
+    - id: impresion
+      desbloqueo: semana >= 1
+      texto:
+        es: Promete antes de que una termine de pedir. Lo raro es que casi siempre cumple.
+        en: He promises before you've finished asking. The odd thing is, he nearly always delivers.
+    - id: gusta
+      desbloqueo: asistio_gusta(nilo) >= 1
+      texto:
+        es: Los paseos. Al aire libre camina más rápido que nadie y, aun así, espera a todos.
+        en: Walks. Outdoors he moves faster than anyone, and still waits for everybody.
+    - id: teme
+      desbloqueo: desaires(nilo) >= 1
+      texto:
+        es: Que su ayuda la paguen otros. Lo dijo en broma; no lo era.
+        en: That others end up paying for his help. He said it as a joke. It wasn't.
+    - id: confidencia
+      desbloqueo: nivel_max(nilo) >= B
+      texto:
+        es: Le gustaría casarse con alguien que no necesite que la rescaten. Así, dice, por una vez lo rescatarían a él.
+        en: He'd like to marry a woman who doesn't need rescuing. That way, he says, someone might rescue him for once.
+    - id: esconde
+      desbloqueo: nivel_max(nilo) >= A o marca(hito_nilo)
+      texto:
+        es: Algunas noches, siempre las mismas del mes, no hay forma de encontrarlo. Vuelve al amanecer, agotado y con una explicación que suena ensayada.
+        en: Some nights, always the same ones each month, he can't be found anywhere. He comes back at dawn, exhausted, with an explanation that sounds rehearsed.
+    - id: final
+      desbloqueo: marca(epilogo)
+      texto:
+        es: (se rellena con el epílogo)
+        en: (filled by the epilogue)
   saul:
     biografia:
-      es: "Oficial de la casa Veyra de Tiria, formado en la academia militar. Su casa y la de los Lobreda mantienen una vieja disputa por el paso de Greda."
-      en: "An officer of House Veyra of Tiria, trained at the military academy. His house and the Lobredas have long disputed the Greda pass."
+      es: Oficial de la casa Veyra de Tiria, formado en la academia militar. Su casa y la de los Lobreda mantienen una vieja disputa por el paso de Greda.
+      en: An officer of House Veyra of Tiria, trained at the military academy. His house and the Lobredas have long disputed the Greda pass.
     entradas:
-      - id: impresion
-        desbloqueo: "semana >= 1"
-        texto:
-          es: "Llega diez minutos antes y se marcha cuando se le indica. Lo que piensa lo guarda con los guantes."
-          en: "Arrives ten minutes early and leaves when told. Whatever he thinks, he keeps tucked away with his gloves."
-      - id: gusta
-        desbloqueo: "asistio_gusta(saul) >= 1"
-        texto:
-          es: "Las recepciones formales. Cuando todos saben dónde ponerse, por fin se permite mirar a alguien."
-          en: "Formal receptions. When everyone knows where to stand, he finally lets himself look at someone."
-      - id: teme
-        desbloqueo: "desaires(saul) >= 1"
-        texto:
-          es: "Rectificar en público. Prefiere sostener un error a admitir que dudó."
-          en: "Correcting himself in public. He'd rather stand by a mistake than admit he hesitated."
-      - id: confidencia
-        desbloqueo: "nivel_max(saul) >= B"
-        texto:
-          es: "Habla de una tormenta en el paso y de alguien que no lo dejó atrás. Cuando lo cuenta, se quita los guantes."
-          en: "He talks about a storm on the pass and someone who didn't leave him behind. When he tells it, he takes his gloves off."
-      - id: esconde
-        desbloqueo: "nivel_max(saul) >= A o marca(hito_saul)"
-        texto:
-          es: "Aceptará el compromiso que convenga a los Veyra. Lo que nunca explica es por qué le da igual con qué dama sea."
-          en: "He'll accept whatever match suits the Veyras. What he never explains is why it makes no difference to him which lady it is."
-      - id: final
-        desbloqueo: "marca(epilogo)"
-        texto: { es: "(se rellena con el epílogo)", en: "(filled by the epilogue)" }
-
+    - id: impresion
+      desbloqueo: semana >= 1
+      texto:
+        es: Llega diez minutos antes y se marcha cuando se le indica. Lo que piensa lo guarda con los guantes.
+        en: Arrives ten minutes early and leaves when told. Whatever he thinks, he keeps tucked away with his gloves.
+    - id: gusta
+      desbloqueo: asistio_gusta(saul) >= 1
+      texto:
+        es: Las recepciones formales. Cuando todos saben dónde ponerse, por fin se permite mirar a alguien.
+        en: Formal receptions. When everyone knows where to stand, he finally lets himself look at someone.
+    - id: teme
+      desbloqueo: desaires(saul) >= 1
+      texto:
+        es: Rectificar en público. Prefiere sostener un error a admitir que dudó.
+        en: Correcting himself in public. He'd rather stand by a mistake than admit he hesitated.
+    - id: confidencia
+      desbloqueo: nivel_max(saul) >= B
+      texto:
+        es: Habla de una tormenta en el paso y de alguien que no lo dejó atrás. Cuando lo cuenta, se quita los guantes.
+        en: He talks about a storm on the pass and someone who didn't leave him behind. When he tells it, he takes his gloves off.
+    - id: esconde
+      desbloqueo: nivel_max(saul) >= A o marca(hito_saul)
+      texto:
+        es: Aceptará el compromiso que convenga a los Veyra. Lo que nunca explica es por qué le da igual con qué dama sea.
+        en: He'll accept whatever match suits the Veyras. What he never explains is why it makes no difference to him which lady it is.
+    - id: final
+      desbloqueo: marca(epilogo)
+      texto:
+        es: (se rellena con el epílogo)
+        en: (filled by the epilogue)
   dario:
     biografia:
-      es: "Sobrino y heredero de Amalia Miravés, cabeza de una casa de prestamistas de Puerto Nácar. Es el mejor bailarín de los salones y uno de los que menos hablan de sí mismos."
-      en: "Nephew and heir of Amalia Miravés, head of a lending house in Port Nácar. The finest dancer in the salons, and one of the least willing to talk about himself."
+      es: Sobrino y heredero de Amalia Miravés, cabeza de una casa de prestamistas de Puerto Nácar. Es el mejor bailarín de los salones y uno de los que menos hablan de sí mismos.
+      en: Nephew and heir of Amalia Miravés, head of a lending house in Port Nácar. The finest dancer in the salons, and one of the least willing to talk about himself.
     entradas:
-      - id: impresion
-        desbloqueo: "semana >= 1"
-        texto:
-          es: "Cortesía perfecta, y la mirada siempre un poco por detrás de la conversación. Se acuerda de todo el mundo; nadie se acuerda de lo que dijo él."
-          en: "Perfect courtesy, his gaze always a step behind the conversation. He remembers everyone; nobody remembers what he said."
-      - id: gusta
-        desbloqueo: "asistio_gusta(dario) >= 1"
-        texto:
-          es: "Los bailes. En la pista no hace falta hablar, y él baila como quien por fin descansa."
-          en: "Balls. On the floor nobody needs to talk, and he dances like someone finally at rest."
-      - id: teme
-        desbloqueo: "desaires(dario) >= 1"
-        texto:
-          es: "Que lo miren de cerca demasiado tiempo. Un desaire le dura menos que una pregunta sincera."
-          en: "Being looked at closely for too long. A snub lasts him less than one honest question."
-      - id: confidencia
-        desbloqueo: "nivel_max(dario) >= B"
-        texto:
-          es: "Confesó que la última vez que perdió la compostura fue negociando un préstamo, y no por las cifras. La anterior, corrigiéndole la postura a una debutante."
-          en: "He admitted the last time he lost his composure was negotiating a loan, and not over the figures. The time before, correcting a debutante's posture."
-      - id: esconde
-        desbloqueo: "nivel_max(dario) >= A o marca(hito_dario)"
-        texto:
-          es: "En casa de su tía Amalia las cortinas no se abren y las visitas se reciben muy tarde. Dario lo cuenta como una excentricidad, nunca como una pregunta."
-          en: "In his aunt Amalia's house the curtains stay drawn and callers are received very late. Dario tells it as an eccentricity, never as a question."
-      - id: final
-        desbloqueo: "marca(epilogo)"
-        texto: { es: "(se rellena con el epílogo)", en: "(filled by the epilogue)" }
-
+    - id: impresion
+      desbloqueo: semana >= 1
+      texto:
+        es: Cortesía perfecta, y la mirada siempre un poco por detrás de la conversación. Se acuerda de todo el mundo; nadie se acuerda de lo que dijo él.
+        en: Perfect courtesy, his gaze always a step behind the conversation. He remembers everyone; nobody remembers what he said.
+    - id: gusta
+      desbloqueo: asistio_gusta(dario) >= 1
+      texto:
+        es: Los bailes. En la pista no hace falta hablar, y él baila como quien por fin descansa.
+        en: Balls. On the floor nobody needs to talk, and he dances like someone finally at rest.
+    - id: teme
+      desbloqueo: desaires(dario) >= 1
+      texto:
+        es: Que lo miren de cerca demasiado tiempo. Un desaire le dura menos que una pregunta sincera.
+        en: Being looked at closely for too long. A snub lasts him less than one honest question.
+    - id: confidencia
+      desbloqueo: nivel_max(dario) >= B
+      texto:
+        es: Confesó que la última vez que perdió la compostura fue negociando un préstamo, y no por las cifras. La anterior, corrigiéndole la postura a una debutante.
+        en: He admitted the last time he lost his composure was negotiating a loan, and not over the figures. The time before, correcting a debutante's posture.
+    - id: esconde
+      desbloqueo: nivel_max(dario) >= A o marca(hito_dario)
+      texto:
+        es: En casa de su tía Amalia las cortinas no se abren y las visitas se reciben muy tarde. Dario lo cuenta como una excentricidad, nunca como una pregunta.
+        en: In his aunt Amalia's house the curtains stay drawn and callers are received very late. Dario tells it as an eccentricity, never as a question.
+    - id: final
+      desbloqueo: marca(epilogo)
+      texto:
+        es: (se rellena con el epílogo)
+        en: (filled by the epilogue)
   teo:
     biografia:
-      es: "Hijo de la casa Rovena, dueña de los molinos de Lumbrevía. Sus versos de ocasión circulan por todos los salones; las invitaciones a su casa, últimamente, por menos."
-      en: "Son of House Rovena, owners of the Lumbrevía mills. His occasional verses go round every salon; invitations to his house, lately, go round fewer."
+      es: Hijo de la casa Rovena, dueña de los molinos de Lumbrevía. Sus versos de ocasión circulan por todos los salones; las invitaciones a su casa, últimamente, por menos.
+      en: Son of House Rovena, owners of the Lumbrevía mills. His occasional verses go round every salon; invitations to his house, lately, go round fewer.
     entradas:
-      - id: impresion
-        desbloqueo: "semana >= 1"
-        texto:
-          es: "Hace reír a la sala entera en menos de un minuto. Si se le pregunta algo en serio, tarda dos en contestar con otra broma."
-          en: "He can make a whole room laugh in under a minute. Ask him something serious and he takes two to answer with another joke."
-      - id: gusta
-        desbloqueo: "asistio_gusta(teo) >= 1"
-        texto:
-          es: "El teatro. Allí todos fingen a la vez, y él puede descansar de hacerlo solo."
-          en: "The theatre. Everyone pretends at once there, so he gets a rest from doing it alone."
-      - id: teme
-        desbloqueo: "desaires(teo) >= 1"
-        texto:
-          es: "El silencio después de un chiste. Y, aunque no lo diga, las cuentas de los molinos."
-          en: "The silence after a joke. And, though he won't say so, the mill accounts."
-      - id: confidencia
-        desbloqueo: "nivel_max(teo) >= B"
-        texto:
-          es: "Tiene un cuaderno de versos para una dama que nunca se los cree. Dice que es lo único que escribe sin buscar la risa."
-          en: "He keeps a notebook of verses for a lady who never believes them. He says it's the only thing he writes without angling for a laugh."
-      - id: esconde
-        desbloqueo: "nivel_max(teo) >= A o marca(hito_teo)"
-        texto:
-          es: "Debe dinero a Nilo y a media Lumbrevía. Paga las rondas con lo que le prestan para pagar las deudas."
-          en: "He owes money to Nilo and half of Lumbrevía. He buys the rounds with what he borrows to pay off his debts."
-      - id: final
-        desbloqueo: "marca(epilogo)"
-        texto: { es: "(se rellena con el epílogo)", en: "(filled by the epilogue)" }
-
+    - id: impresion
+      desbloqueo: semana >= 1
+      texto:
+        es: Hace reír a la sala entera en menos de un minuto. Si se le pregunta algo en serio, tarda dos en contestar con otra broma.
+        en: He can make a whole room laugh in under a minute. Ask him something serious and he takes two to answer with another joke.
+    - id: gusta
+      desbloqueo: asistio_gusta(teo) >= 1
+      texto:
+        es: El teatro. Allí todos fingen a la vez, y él puede descansar de hacerlo solo.
+        en: The theatre. Everyone pretends at once there, so he gets a rest from doing it alone.
+    - id: teme
+      desbloqueo: desaires(teo) >= 1
+      texto:
+        es: El silencio después de un chiste. Y, aunque no lo diga, las cuentas de los molinos.
+        en: The silence after a joke. And, though he won't say so, the mill accounts.
+    - id: confidencia
+      desbloqueo: nivel_max(teo) >= B
+      texto:
+        es: Tiene un cuaderno de versos para una dama que nunca se los cree. Dice que es lo único que escribe sin buscar la risa.
+        en: He keeps a notebook of verses for a lady who never believes them. He says it's the only thing he writes without angling for a laugh.
+    - id: esconde
+      desbloqueo: nivel_max(teo) >= A o marca(hito_teo)
+      texto:
+        es: Debe dinero a Nilo y a media Lumbrevía. Paga las rondas con lo que le prestan para pagar las deudas.
+        en: He owes money to Nilo and half of Lumbrevía. He buys the rounds with what he borrows to pay off his debts.
+    - id: final
+      desbloqueo: marca(epilogo)
+      texto:
+        es: (se rellena con el epílogo)
+        en: (filled by the epilogue)
   celia:
     biografia:
-      es: "Debutante de la rama Lobreda de Valcenda y prima de Nilo. Baila mejor que nadie de su edad. Esta temporada la acompaña como carabina la señora Ferrán."
-      en: "A debutante of the Valcenda branch of the Lobredas, and Nilo's cousin. Dances better than anyone her age. Mrs. Ferrán is her chaperone this season."
+      es: Debutante de la rama Lobreda de Valcenda y prima de Nilo. Baila mejor que nadie de su edad. Esta temporada la acompaña como carabina la señora Ferrán.
+      en: A debutante of the Valcenda branch of the Lobredas, and Nilo's cousin. Dances better than anyone her age. Mrs. Ferrán is her chaperone this season.
     entradas:
-      - id: impresion
-        desbloqueo: "semana >= 1"
-        texto:
-          es: "Ensaya hasta los saludos. Dice que lo tiene todo preparado; casi nunca es verdad."
-          en: "She rehearses even her greetings. She says she has everything prepared; it's almost never true."
-      - id: gusta
-        desbloqueo: "asistio_gusta(celia) >= 1"
-        texto:
-          es: "Las clases. Es el único sitio donde equivocarse no se ve."
-          en: "Lessons. The only place where a mistake doesn't show."
-      - id: teme
-        desbloqueo: "desaires(celia) >= 1"
-        texto:
-          es: "Que un error suyo llegue a la Crónica antes que ella a casa."
-          en: "That one of her mistakes reaches the Chronicle before she gets home."
-      - id: confidencia
-        desbloqueo: "nivel_max(celia) >= B"
-        texto:
-          es: "Nunca ha bailado por gusto. Le gustaría saber qué se siente con un caballero que no vaya contando los pasos."
-          en: "She has never danced for the pleasure of it. She'd like to know how it feels with a gentleman who isn't counting the steps."
-      - id: esconde
-        desbloqueo: "nivel_max(celia) >= A o marca(hito_celia)"
-        texto:
-          es: "Guarda una lista con cada persona que la ha mirado mal en un salón. Con fecha."
-          en: "She keeps a list of everyone who has ever looked at her wrongly in a salon. Dated."
-      - id: final
-        desbloqueo: "marca(epilogo)"
-        texto: { es: "(se rellena con el epílogo)", en: "(filled by the epilogue)" }
-
+    - id: impresion
+      desbloqueo: semana >= 1
+      texto:
+        es: Ensaya hasta los saludos. Dice que lo tiene todo preparado; casi nunca es verdad.
+        en: She rehearses even her greetings. She says she has everything prepared; it's almost never true.
+    - id: gusta
+      desbloqueo: asistio_gusta(celia) >= 1
+      texto:
+        es: Las clases. Es el único sitio donde equivocarse no se ve.
+        en: Lessons. The only place where a mistake doesn't show.
+    - id: teme
+      desbloqueo: desaires(celia) >= 1
+      texto:
+        es: Que un error suyo llegue a la Crónica antes que ella a casa.
+        en: That one of her mistakes reaches the Chronicle before she gets home.
+    - id: confidencia
+      desbloqueo: nivel_max(celia) >= B
+      texto:
+        es: Nunca ha bailado por gusto. Le gustaría saber qué se siente con un caballero que no vaya contando los pasos.
+        en: She has never danced for the pleasure of it. She'd like to know how it feels with a gentleman who isn't counting the steps.
+    - id: esconde
+      desbloqueo: nivel_max(celia) >= A o marca(hito_celia)
+      texto:
+        es: Guarda una lista con cada persona que la ha mirado mal en un salón. Con fecha.
+        en: She keeps a list of everyone who has ever looked at her wrongly in a salon. Dated.
+    - id: final
+      desbloqueo: marca(epilogo)
+      texto:
+        es: (se rellena con el epílogo)
+        en: (filled by the epilogue)
   irene:
     biografia:
-      es: "De una familia de archiveros de la Calle de los Sellos, sin título. Trabaja en el Archivo Real y recuerda fechas que otros prefieren olvidar."
-      en: "From an untitled family of archivists on the Street of Seals. She works at the Royal Archive and remembers dates others would rather forget."
+      es: De una familia de archiveros de la Calle de los Sellos, sin título. Trabaja en el Archivo Real y recuerda fechas que otros prefieren olvidar.
+      en: From an untitled family of archivists on the Street of Seals. She works at the Royal Archive and remembers dates others would rather forget.
     entradas:
-      - id: impresion
-        desbloqueo: "semana >= 1"
-        texto:
-          es: "Pregunta «¿por qué?» como otros dicen «buenas noches». Escucha con la cabeza inclinada y se olvida de la taza que sostiene."
-          en: "She asks 'why?' the way others say 'good evening'. She listens with her head tilted and forgets the cup in her hand."
-      - id: gusta
-        desbloqueo: "asistio_gusta(irene) >= 1"
-        texto:
-          es: "Las cenas con conversación. Para ella, una mesa larga es un archivo que habla."
-          en: "Dinners with real conversation. To her, a long table is an archive that talks."
-      - id: teme
-        desbloqueo: "desaires(irene) >= 1"
-        texto:
-          es: "Que la miren a ella con la atención que ella pone en los demás."
-          en: "Being looked at with the attention she gives everyone else."
-      - id: confidencia
-        desbloqueo: "nivel_max(irene) >= B"
-        texto:
-          es: "Admite que sólo dos personas le han hecho perder el hilo: una dama que pidió papeles de su linaje y un caballero al que negó una copia. Ninguno lo sabe."
-          en: "She admits only two people have ever made her lose her thread: a lady who asked for her lineage papers and a gentleman she refused a copy. Neither knows."
-      - id: esconde
-        desbloqueo: "nivel_max(irene) >= A o marca(hito_irene)"
-        texto:
-          es: "Llega a las cenas con los ojos de quien no ha dormido y una tinta en los dedos más espesa que la de los registros. No se la limpia del todo nunca."
-          en: "She arrives at dinners with the eyes of someone who hasn't slept, and ink on her fingers thicker than any ledger ink. It never quite washes off."
-      - id: final
-        desbloqueo: "marca(epilogo)"
-        texto: { es: "(se rellena con el epílogo)", en: "(filled by the epilogue)" }
-
+    - id: impresion
+      desbloqueo: semana >= 1
+      texto:
+        es: Pregunta «¿por qué?» como otros dicen «buenas noches». Escucha con la cabeza inclinada y se olvida de la taza que sostiene.
+        en: She asks 'why?' the way others say 'good evening'. She listens with her head tilted and forgets the cup in her hand.
+    - id: gusta
+      desbloqueo: asistio_gusta(irene) >= 1
+      texto:
+        es: Las cenas con conversación. Para ella, una mesa larga es un archivo que habla.
+        en: Dinners with real conversation. To her, a long table is an archive that talks.
+    - id: teme
+      desbloqueo: desaires(irene) >= 1
+      texto:
+        es: Que la miren a ella con la atención que ella pone en los demás.
+        en: Being looked at with the attention she gives everyone else.
+    - id: confidencia
+      desbloqueo: nivel_max(irene) >= B
+      texto:
+        es: 'Admite que sólo dos personas le han hecho perder el hilo: una dama que pidió papeles de su linaje y un caballero al que negó una copia. Ninguno lo sabe.'
+        en: 'She admits only two people have ever made her lose her thread: a lady who asked for her lineage papers and a gentleman she refused a copy. Neither knows.'
+    - id: esconde
+      desbloqueo: nivel_max(irene) >= A o marca(hito_irene)
+      texto:
+        es: Llega a las cenas con los ojos de quien no ha dormido y una tinta en los dedos más espesa que la de los registros. No se la limpia del todo nunca.
+        en: She arrives at dinners with the eyes of someone who hasn't slept, and ink on her fingers thicker than any ledger ink. It never quite washes off.
+    - id: final
+      desbloqueo: marca(epilogo)
+      texto:
+        es: (se rellena con el epílogo)
+        en: (filled by the epilogue)
   isolda:
     biografia:
-      es: "Velaria de Puerto Nácar, de la familia Marén, aseguradores ricos y sin título. Creció en los salones del puerto y llega a Valcenda sin intención de pedir permiso."
-      en: "A velaria from Port Nácar, of the Maréns, wealthy untitled underwriters. She grew up in the harbour salons and arrives in Valcenda with no intention of asking permission."
+      es: Hija de los aseguradores Marén de Puerto Nácar, que respaldan barcos y convoyes de medio reino. Llega a su primera temporada en Valcenda con un vestido amarillo y muy pocas palabras.
+      en: Daughter of the Marén underwriters of Port Nácar, who stand behind ships and convoys across half the kingdom. She arrives at her first Valcenda season in a yellow dress and with very few words.
     entradas:
-      - id: impresion
-        desbloqueo: "semana >= 1"
-        texto:
-          es: "Apoya el codo donde no debe y ríe la primera. Ya ha avisado de que no piensa cambiarse el pelo."
-          en: "She leans her elbow where she shouldn't and laughs first. She's already warned that she won't change her hair."
-      - id: gusta
-        desbloqueo: "asistio_gusta(isolda) >= 1"
-        texto:
-          es: "Los paseos y el agua. Al aire libre nadie le dice cómo sentarse."
-          en: "Walks, and anywhere near water. Outdoors, nobody tells her how to sit."
-      - id: teme
-        desbloqueo: "desaires(isolda) >= 1"
-        texto:
-          es: "Que la acepten sólo cuando se porte como otra. O que no la acepten nunca, que es lo mismo pero más corto."
-          en: "Being accepted only when she behaves like someone else. Or never being accepted, which is the same thing, only quicker."
-      - id: confidencia
-        desbloqueo: "nivel_max(isolda) >= B"
-        texto:
-          es: "Habla de una archivera que buscó sus papeles tres semanas más de lo necesario. Para no importarle, lo cuenta muy a menudo."
-          en: "She talks about an archivist who searched for her papers three weeks longer than needed. For something that doesn't matter to her, she mentions it a lot."
-      - id: esconde
-        desbloqueo: "nivel_max(isolda) >= A o marca(hito_isolda)"
-        texto:
-          es: "Su familia pide un vínculo formal a cambio de respaldar convoyes. Isolda lo ha calculado como aseguradora: un buen acuerdo le dejaría la vida, y el corazón, donde están."
-          en: "Her family wants a formal tie in exchange for backing convoys. Isolda has run the numbers like an underwriter: the right arrangement would leave her life, and her heart, exactly where they are."
-      - id: final
-        desbloqueo: "marca(epilogo)"
-        texto: { es: "(se rellena con el epílogo)", en: "(filled by the epilogue)" }
-
+    - id: impresion
+      desbloqueo: semana >= 1
+      texto:
+        es: Saluda en voz tan baja que hay que inclinarse para oírla. Quien se inclina, se queda.
+        en: She greets people so softly you have to lean in to hear her. Those who lean in, stay.
+    - id: gusta
+      desbloqueo: asistio_gusta(isolda) >= 1
+      texto:
+        es: Los jardines a media tarde, cuando ya nadie pasea. Dice que las flores no esperan conversación.
+        en: Gardens in mid-afternoon, when no one is strolling anymore. She says flowers don't expect conversation.
+    - id: teme
+      desbloqueo: desaires(isolda) >= 1
+      texto:
+        es: Quedarse sin palabras delante de quien le importa, y que esa persona crea que no tenía nada que decir.
+        en: Losing her words in front of someone she cares about, and that person thinking she had nothing to say.
+    - id: confidencia
+      desbloqueo: nivel_max(isolda) >= B
+      texto:
+        es: Admite que fue al Archivo por unos papeles de su abuela y que volvió más veces de las necesarias. No dice por qué. Se ruboriza al no decirlo.
+        en: She admits she went to the Archive for her grandmother's papers and went back more times than she needed to. She doesn't say why. She blushes not saying it.
+    - id: esconde
+      desbloqueo: nivel_max(isolda) >= A o marca(hito_isolda)
+      texto:
+        es: Guarda una cinta de pelo que no es suya en el libro de cuentas de su madre. Es de una dama que una vez le prestó un lápiz sin mirarla y le cambió la tarde.
+        en: She keeps a hair ribbon that isn't hers inside her mother's account book. It belongs to a lady who once lent her a pencil without looking up, and changed her afternoon.
+    - id: final
+      desbloqueo: marca(epilogo)
+      texto:
+        es: (se rellena con el epílogo)
+        en: (filled by the epilogue)
   camila:
     biografia:
-      es: "Viuda de Julián Ferrán, cuyo barco, el Clara de Nácar, se hundió hace dos otoños. Vuelve a los salones de medio luto y como carabina de Celia Lobreda."
-      en: "Widow of Julián Ferrán, whose ship, the Clara de Nácar, sank two autumns ago. She returns to the salons in half-mourning, as Celia Lobreda's chaperone."
+      es: Viuda de Julián Ferrán, cuyo barco, el Clara de Nácar, se hundió hace dos otoños. Vuelve a los salones de medio luto y como carabina de Celia Lobreda.
+      en: Widow of Julián Ferrán, whose ship, the Clara de Nácar, sank two autumns ago. She returns to the salons in half-mourning, as Celia Lobreda's chaperone.
     entradas:
-      - id: impresion
-        desbloqueo: "semana >= 1"
-        texto:
-          es: "Ya hizo esto una vez y lo recuerda todo. Cuando algo la aburre, golpea la palma con el abanico cerrado, que es a menudo."
-          en: "She's done this before and remembers all of it. When something bores her she taps her palm with her closed fan, which is often."
-      - id: gusta
-        desbloqueo: "asistio_gusta(camila) >= 1"
-        texto:
-          es: "Las cenas pequeñas. Le recuerdan los años en que Julián llenaba la casa de invitados."
-          en: "Small dinners. They remind her of the years when Julián filled the house with guests."
-      - id: teme
-        desbloqueo: "desaires(camila) >= 1"
-        texto:
-          es: "Que su siguiente paso vuelvan a decidirlo la familia, una deuda o la costumbre. Y aburrirse, que es peor."
-          en: "That her next step will be decided for her again, by family, a debt or custom. And being bored, which is worse."
-      - id: confidencia
-        desbloqueo: "nivel_max(camila) >= B"
-        texto:
-          es: "Un caballero le arregló el carruaje en el camino sin saber quién era. Dice que es lo más romántico que le ha pasado en dos años, y que él ni se enteró."
-          en: "A gentleman once fixed her carriage on the road without knowing who she was. She says it's the most romantic thing to happen to her in two years, and he never noticed."
-      - id: esconde
-        desbloqueo: "nivel_max(camila) >= A o marca(hito_camila)"
-        texto:
-          es: "Su fortuna viene del seguro que pagaron los Marén por el barco, y la casa Miravés le reclama la deuda de ese mismo barco. Vence en la quinta semana, y ella sonríe como si no supiera la fecha."
-          en: "Her fortune comes from the Marén insurance on the ship, and House Miravés is claiming that same ship's debt. It falls due in the fifth week, and she smiles as if she didn't know the date."
-      - id: final
-        desbloqueo: "marca(epilogo)"
-        texto: { es: "(se rellena con el epílogo)", en: "(filled by the epilogue)" }
+    - id: impresion
+      desbloqueo: semana >= 1
+      texto:
+        es: Ya hizo esto una vez y lo recuerda todo. Cuando algo la aburre, golpea la palma con el abanico cerrado, que es a menudo.
+        en: She's done this before and remembers all of it. When something bores her she taps her palm with her closed fan, which is often.
+    - id: gusta
+      desbloqueo: asistio_gusta(camila) >= 1
+      texto:
+        es: Las cenas pequeñas. Le recuerdan los años en que Julián llenaba la casa de invitados.
+        en: Small dinners. They remind her of the years when Julián filled the house with guests.
+    - id: teme
+      desbloqueo: desaires(camila) >= 1
+      texto:
+        es: Que su siguiente paso vuelvan a decidirlo la familia, una deuda o la costumbre. Y aburrirse, que es peor.
+        en: That her next step will be decided for her again, by family, a debt or custom. And being bored, which is worse.
+    - id: confidencia
+      desbloqueo: nivel_max(camila) >= B
+      texto:
+        es: Un caballero le arregló el carruaje en el camino sin saber quién era. Dice que es lo más romántico que le ha pasado en dos años, y que él ni se enteró.
+        en: A gentleman once fixed her carriage on the road without knowing who she was. She says it's the most romantic thing to happen to her in two years, and he never noticed.
+    - id: esconde
+      desbloqueo: nivel_max(camila) >= A o marca(hito_camila)
+      texto:
+        es: Su fortuna viene del seguro que pagaron los Marén por el barco, y la casa Miravés le reclama la deuda de ese mismo barco. Vence en la quinta semana, y ella sonríe como si no supiera la fecha.
+        en: Her fortune comes from the Marén insurance on the ship, and House Miravés is claiming that same ship's debt. It falls due in the fifth week, and she smiles as if she didn't know the date.
+    - id: final
+      desbloqueo: marca(epilogo)
+      texto:
+        es: (se rellena con el epílogo)
+        en: (filled by the epilogue)

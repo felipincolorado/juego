@@ -160,7 +160,7 @@
    "genero": "f",
    "edad": 25,
    "casa": "archiveros",
-   "color": "#55687D",
+   "color": "#4A4B52",
    "habilidades": {
     "baile": 1,
     "estatus": 2,
@@ -188,26 +188,26 @@
    },
    "pila": "Isolda",
    "genero": "f",
-   "edad": 26,
+   "edad": 23,
    "casa": "maren",
-   "color": "#4E9A8E",
+   "color": "#D9C46A",
    "habilidades": {
     "baile": 3,
-    "estatus": 1,
-    "chisme": 2,
-    "presencia": 5,
-    "intelecto": 3
+    "estatus": 2,
+    "chisme": 3,
+    "presencia": 2,
+    "intelecto": 4
    },
    "ejes": {
-    "libertad": 2,
-    "sinceridad": 1
+    "libertad": -1,
+    "sinceridad": 2
    },
    "gusta": "paseo",
    "no_gusta": "recepcion",
    "orientacion": "lesbiana",
    "linea": {
-    "es": "Una libertad que contagia.",
-    "en": "A freedom that's catching."
+    "es": "Habla poco, y cuando habla, todos se callan para oírla.",
+    "en": "She speaks little, and when she does, everyone hushes to hear her."
    }
   },
   {
