@@ -1,0 +1,824 @@
+{
+ "semana": {
+  "numero": 6,
+  "nombre": {
+   "es": "Gran Baile del Sello",
+   "en": "The Grand Ball of the Seal"
+  },
+  "mes": "escarchas",
+  "dias": [
+   29,
+   30,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "hecho_del_reino": {
+   "titulo": {
+    "es": "La primera escarcha",
+    "en": "The first frost"
+   },
+   "texto": {
+    "es": "Cae la primera escarcha sobre Valcenda. El domingo, en el Salón de las Columnas, la reina sellará las uniones de la temporada en el libro del Archivo.",
+    "en": "The first frost falls on Valcenda. On Sunday, in the Hall of Columns, the Queen will seal the season's unions in the Archive's book."
+   }
+  }
+ },
+ "apertura": {
+  "lineas": [
+   {
+    "habla": "nota",
+    "es": "Señora: es la última semana. El carnet de baile está sobre su mesa y la nota del Archivo, debajo.",
+    "en": "Madam: it's the last week. The dance card is on your desk, and the note from the Archive underneath it."
+   },
+   {
+    "habla": "nota",
+    "es": "La nota dice «antes del baile». El Archivo abre el viernes por la noche, para preparar el libro de los sellos.",
+    "en": "The note says “before the ball.” The Archive opens on Friday night, to prepare the book of seals."
+   }
+  ],
+  "recuerdos": [
+   {
+    "si": "marca(acuerdo_lavanda)",
+    "texto": {
+     "es": "Saúl e Isolda han enviado juntos una carta a sus padres. Esta vez sí la han enviado.",
+     "en": "Saúl and Isolda have sent their fathers a letter together. This time they actually sent it."
+    }
+   },
+   {
+    "si": "marca(deuda_saldada)",
+    "texto": {
+     "es": "Camila ha venido a darle las gracias en persona. Ha traído un catalejo viejo: «Me lo devolvió Isolda Marén. Ninguna de las dos lloró. Casi.»",
+     "en": "Camila came to thank you in person. She brought an old spyglass: “Isolda Marén gave it back to me. Neither of us cried. Almost.”"
+    }
+   },
+   {
+    "si": "marca(celia_rechaza_paso)",
+    "texto": {
+     "es": "Celia ha devuelto la última página de las capitulaciones sin firmar. Su padre no le habla. Ella baila sola cada mañana, sin contar.",
+     "en": "Celia has returned the last page of the articles unsigned. Her father isn't speaking to her. She dances alone every morning, without counting."
+    }
+   }
+  ],
+  "decision": [
+   {
+    "id": "ir_archivo",
+    "texto": {
+     "es": "Ir al Archivo el viernes por la noche",
+     "en": "Go to the Archive on Friday night"
+    },
+    "resultado": {
+     "es": "Lo apunta en su agenda con una sola palabra: «Archivo». Después la tacha, y la vuelve a escribir.",
+     "en": "You note it in your diary with a single word: “Archive.” Then you cross it out, and write it again."
+    },
+    "efectos": [
+     "ir_archivo"
+    ]
+   },
+   {
+    "id": "no_ir",
+    "texto": {
+     "es": "No ir: hay cosas que es mejor no saber",
+     "en": "Don't go: some things are better not known"
+    },
+    "resultado": {
+     "es": "Guarda la nota con el sobre de la primera semana. Si la temporada termina sin saberlo, que termine así.",
+     "en": "You put the note away with the envelope from the first week. If the season ends without your knowing, let it end that way."
+    },
+    "efectos": [
+     "no_ir_archivo"
+    ]
+   }
+  ]
+ },
+ "peticiones": [
+  {
+   "id": "p6_nilo_confia",
+   "personaje": "nilo",
+   "tipo": "no_asistir",
+   "dia": 4,
+   "si": "nivel_max(nilo) >= B",
+   "texto": {
+    "es": "Nilo: «El sábado no me mande a nada. Tengo que contarle a alguien lo que me pasa las noches de luna. Si no lo hago ahora, no lo haré nunca.»",
+    "en": "Nilo: “Don't send me anywhere on Saturday. I have to tell someone what happens to me on moonlit nights. If I don't do it now, I never will.”"
+   },
+   "si_cumple": {
+    "es": "El domingo, Nilo llega al baile con la cara de quien ha dormido por primera vez en años. No dice a quién se lo contó. Se le nota.",
+    "en": "On Sunday Nilo arrives at the ball looking like someone who has slept for the first time in years. He doesn't say whom he told. It shows."
+   },
+   "efectos_si_cumple": [
+    "nilo_confiesa"
+   ],
+   "si_no": {
+    "es": "Nilo no se lo cuenta a nadie. Sonríe toda la semana, como siempre. Como siempre, demasiado.",
+    "en": "Nilo tells no one. He smiles all week, as always. As always, too much."
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "id": "s6_escarcha",
+   "tipo": "paseo",
+   "lugar": "jardines",
+   "dia": 1,
+   "duracion": 1,
+   "plazas": {
+    "min": 2,
+    "max": 4
+   },
+   "regla": "cualquiera",
+   "obligatorio": false,
+   "requisito": {
+    "presencia": 4,
+    "chisme": 4,
+    "baile": 3
+   },
+   "anfitrion": {
+    "es": "Leonora Serravalle",
+    "en": "Leonora Serravalle"
+   },
+   "titulo": {
+    "es": "La primera escarcha",
+    "en": "The first frost"
+   },
+   "resumen": {
+    "es": "Los jardines amanecen blancos. El último paseo de la temporada, para decir en voz baja lo que no se dirá en el baile.",
+    "en": "The gardens wake up white. The last stroll of the season, for saying quietly what won't be said at the ball."
+   },
+   "a_favor": [
+    {
+     "es": "Lo que se dice con frío se recuerda mucho tiempo",
+     "en": "What's said in the cold is remembered a long time"
+    }
+   ],
+   "en_contra": [
+    {
+     "es": "Leonora ha invitado también a los padres",
+     "en": "Leonora has invited the parents too"
+    }
+   ],
+   "carta": {
+    "saludo": {
+     "es": "Querida casamentera:",
+     "en": "Dear Matchmaker,"
+    },
+    "cuerpo": {
+     "es": "Mis ásteres se han helado esta noche. Es lo que tiene el otoño: cuando por fin está bonito, se termina. El miércoles paseamos entre la escarcha por última vez. Traiga a quien aún tenga algo que decir.\n",
+     "en": "My asters froze last night. That's autumn for you: just when it's finally lovely, it ends. On Wednesday we'll walk among the frost one last time. Bring whoever still has something to say.\n"
+    },
+    "firma": {
+     "es": "Leonora Serravalle",
+     "en": "Leonora Serravalle"
+    }
+   },
+   "desenlaces": {
+    "favorable": {
+     "titulo": {
+      "es": "Huellas en la escarcha",
+      "en": "Footprints in the frost"
+     },
+     "publico": {
+      "es": "{grupo} pasearon por los jardines helados de los Serravalle. Dejaron huellas en la escarcha, y algunas iban en pareja.",
+      "en": "{grupo} strolled through the frozen Serravalle gardens. They left footprints in the frost, and some went in pairs."
+     },
+     "privado": {
+      "es": "Leonora le dice al despedirse: «Ha sido una buena temporada. La echaré de menos, y no lo diré en público.»",
+      "en": "As you part, Leonora says: “It's been a good season. I shall miss it, and I shan't say so in public.”"
+     }
+    },
+    "medias": {
+     "titulo": {
+      "es": "Frío",
+      "en": "Cold"
+     },
+     "publico": {
+      "es": "El paseo de la primera escarcha fue breve: hacía demasiado frío para decir nada.",
+      "en": "The first-frost stroll was brief: it was too cold to say anything."
+     },
+     "privado": {
+      "es": "Algunos padres vigilaron cada paso. Nadie se atrevió a dar ninguno.",
+      "en": "Some parents watched every step. No one dared take one."
+     }
+    },
+    "desaire": {
+     "titulo": {
+      "es": "Hielo",
+      "en": "Ice"
+     },
+     "publico": {
+      "es": "En el paseo de la escarcha hubo resbalones, y no todos fueron por el hielo.",
+      "en": "There were slips at the frost stroll, and not all of them were on the ice."
+     },
+     "privado": {
+      "es": "Leonora le manda un frasco de linimento. Sin nota. Con mucha intención.",
+      "en": "Leonora sends you a jar of liniment. No note. A great deal of meaning."
+     }
+    }
+   }
+  },
+  {
+   "id": "s6_gran_baile",
+   "tipo": "baile",
+   "lugar": "salon",
+   "dia": 5,
+   "duracion": 1,
+   "plazas": {
+    "min": 8,
+    "max": 8
+   },
+   "regla": "cualquiera",
+   "obligatorio": true,
+   "final": true,
+   "anfitrion": {
+    "es": "La Corona",
+    "en": "The Crown"
+   },
+   "titulo": {
+    "es": "Gran Baile del Sello",
+    "en": "The Grand Ball of the Seal"
+   },
+   "resumen": {
+    "es": "Doce valses, ocho jóvenes y un libro abierto sobre un atril. Al final de la noche, la reina sellará lo que la temporada haya unido.",
+    "en": "Twelve waltzes, eight young people and a book open on a lectern. At the end of the night, the Queen will seal whatever the season has joined."
+   },
+   "carta": {
+    "saludo": {
+     "es": "A la casamentera de la Temporada,",
+     "en": "To the Matchmaker of the Season,"
+    },
+    "cuerpo": {
+     "es": "Su Majestad la espera el domingo en el Salón de las Columnas con sus ocho jóvenes. Habrá doce valses y un solo libro. Rellene el carnet con cuidado: lo que se baila esta noche se sella al amanecer. Su Majestad desea añadir, de su puño y letra, que ha disfrutado de esta temporada más que de ninguna.\n",
+     "en": "Her Majesty expects you on Sunday in the Hall of Columns with your eight young people. There will be twelve waltzes and a single book. Fill in the dance card with care: what is danced tonight is sealed at dawn. Her Majesty wishes to add, in her own hand, that she has enjoyed this season more than any other.\n"
+    },
+    "firma": {
+     "es": "Mireya, secretaria de listas",
+     "en": "Mireya, Keeper of the Lists"
+    }
+   },
+   "carnet": {
+    "titulo": {
+     "es": "Carnet de baile",
+     "en": "Dance card"
+    },
+    "instruccion": {
+     "es": "Elija con quién baila cada uno el último vals. Lo que se baile esta noche, la reina lo sellará.",
+     "en": "Choose who dances the last waltz with whom. Whatever is danced tonight, the Queen will seal."
+    },
+    "ninguno": {
+     "es": "Bailar con nadie",
+     "en": "Dance with no one"
+    },
+    "solitario": {
+     "es": "{a} no tiene a nadie esperándole en el carnet. Esta noche bailará para sí {a|mismo|misma}.",
+     "en": "{a} has no one waiting on the card. Tonight {a|he|she} will dance for {a|himself|herself}."
+    },
+    "sin_amor": {
+     "es": "Un acuerdo, no un amor",
+     "en": "An arrangement, not a love"
+    }
+   },
+   "doble_beso": {
+    "generico": [
+     {
+      "habla": "b",
+      "expr": "molesta",
+      "es": "Lo vi en el carnet antes que en tu cara. Tendrías que habérmelo dicho tú.",
+      "en": "I saw it on the card before I saw it in your face. You should have told me yourself."
+     },
+     {
+      "habla": null,
+      "es": "{b} sale a la terraza. Vuelve para el tercer vals, con la espalda recta y los ojos secos.",
+      "en": "{b} steps out onto the terrace. {b|He|She} comes back for the third waltz, back straight and eyes dry."
+     }
+    ],
+    "variantes": [
+     {
+      "si": "marca(beso_teo_celia) y marca(beso_teo_irene)",
+      "lineas": [
+       {
+        "habla": null,
+        "es": "Celia e Irene se encuentran junto a la ponchera. Se miran. Las dos han leído los versos de Teo.",
+        "en": "Celia and Irene meet by the punch bowl. They look at each other. Both have read Teo's verses."
+       },
+       {
+        "habla": "irene",
+        "es": "Interesante. ¿Por qué un hombre que no se cree nada escribe tanto?",
+        "en": "Interesting. Why does a man who believes nothing write so much?"
+       },
+       {
+        "habla": "celia",
+        "expr": "alegre",
+        "es": "Porque baila fatal. Algo tenía que hacer bien.",
+        "en": "Because he dances dreadfully. He had to do something well."
+       }
+      ]
+     },
+     {
+      "si": "marca(beso_dario_celia) y marca(beso_saul_dario)",
+      "lineas": [
+       {
+        "habla": "celia",
+        "es": "Dario. Te he visto mirar al capitán como me mirabas a mí al piano.",
+        "en": "Dario. I've seen you look at the Captain the way you looked at me at the piano."
+       },
+       {
+        "habla": "dario",
+        "es": "Lo sé. Lo siento. No sabía que se podía sentir dos veces lo mismo.",
+        "en": "I know. I'm sorry. I didn't know you could feel the same thing twice."
+       },
+       {
+        "habla": "celia",
+        "es": "Se puede. Pero sólo se puede bailar con uno.",
+        "en": "You can. But you can only dance with one."
+       }
+      ]
+     }
+    ]
+   },
+   "propuestas": {
+    "mutua": {
+     "feliz": {
+      "es": "{a} le pide a {b} el último vals y, antes de que empiece la música, algo más. {b} dice que sí antes de que termine la pregunta.",
+      "en": "{a} asks {b} for the last waltz and, before the music starts, for something more. {b} says yes before the question is finished."
+     },
+     "cordial": {
+      "es": "{a} y {b} se prometen con una sonrisa tranquila. No es una pasión de novela. Es algo que dura.",
+      "en": "{a} and {b} become engaged with a quiet smile. It isn't a novel's passion. It's something that lasts."
+     },
+     "fria": {
+      "es": "{a} y {b} se prometen porque es lo que se espera. Bailan bien. Hablan poco.",
+      "en": "{a} and {b} become engaged because it's what's expected. They dance well. They talk little."
+     }
+    },
+    "lavanda": {
+     "es": "Saúl le ofrece el brazo a Isolda delante de toda la corte. Los dos padres lloran. Ellos dos se miran como socios que acaban de cerrar el mejor trato de su vida.",
+     "en": "Saúl offers Isolda his arm before the whole court. Both fathers weep. The two of them look at each other like partners who have just closed the best deal of their lives."
+    },
+    "paso": {
+     "es": "Saúl y Celia bailan el último vals con una corrección perfecta. Las casas Lobreda y Veyra aplauden. Ellos cuentan los pasos, cada uno por su lado.",
+     "en": "Saúl and Celia dance the last waltz with perfect correctness. Houses Lobreda and Veyra applaud. They each count the steps, separately."
+    },
+    "deuda": {
+     "es": "Camila le pide a Teo el último vals. Teo hace un chiste. Camila se ríe. Aurelio Rovena respira por primera vez en dos meses.",
+     "en": "Camila asks Teo for the last waltz. Teo makes a joke. Camila laughs. Aurelio Rovena breathes for the first time in two months."
+    },
+    "variantes": [
+     {
+      "si": "union(saul, dario)",
+      "es": "Saúl cruza el salón sin guantes y le tiende la mano a Dario. Media corte contiene la respiración. La reina, no: sonríe y moja la pluma.",
+      "en": "Saúl crosses the hall without gloves and holds out his hand to Dario. Half the court holds its breath. The Queen doesn't: she smiles and dips her pen."
+     },
+     {
+      "si": "union(irene, isolda)",
+      "es": "Isolda cruza el salón y, sin esperar a nadie, le pide a Irene el último vals en voz alta. Lo ha dicho ella primero, delante de todos.",
+      "en": "Isolda crosses the hall and, without waiting for anyone, asks Irene for the last waltz aloud. She said it first, in front of everyone."
+     },
+     {
+      "si": "union(nilo, camila)",
+      "es": "Nilo no le promete nada a Camila. Le pregunta. Ella dice que sí, y añade: «Las noches de luna, regaremos las plantas.»",
+      "en": "Nilo promises Camila nothing. He asks her. She says yes, and adds: “On moonlit nights, we'll water the plants.”"
+     }
+    ]
+   },
+   "sellos": [
+    {
+     "si": "rep >= 12",
+     "habla": "reina",
+     "es": "Casamentera. He sellado muchas temporadas y ninguna como ésta. Quédese en Valcenda. La Corona tendrá trabajo para usted.",
+     "en": "Matchmaker. I have sealed many seasons and none like this one. Stay in Valcenda. The Crown will have work for you."
+    },
+    {
+     "si": "rep >= 4",
+     "habla": "reina",
+     "es": "Ha sido una buena temporada. Valcenda recordará su nombre, y yo también. No es poco.",
+     "en": "It has been a good season. Valcenda will remember your name, and so shall I. That's no small thing."
+    },
+    {
+     "habla": "reina",
+     "es": "La temporada ha terminado. Le agradezco su servicio. Valcenda tiene memoria corta: quizá eso la consuele.",
+     "en": "The season is over. I thank you for your service. Valcenda has a short memory: perhaps that will console you."
+    }
+   ]
+  }
+ ],
+ "confrontacion": {
+  "dia": 3,
+  "si": "marca(ir_archivo)",
+  "ramas": [
+   {
+    "si": "pistas >= 3 o nivel_max(irene) >= B",
+    "lineas": [
+     {
+      "habla": null,
+      "es": "El Archivo está a oscuras salvo una lámpara. Irene espera junto al atril del libro de los sellos, con los manguitos de escribiente puestos.",
+      "en": "The Archive is dark but for one lamp. Irene waits by the lectern of the book of seals, wearing her clerk's sleeves."
+     },
+     {
+      "habla": "irene",
+      "es": "Ha venido. Entonces ya lo sabe.",
+      "en": "You came. So you already know."
+     },
+     {
+      "habla": "irene",
+      "es": "Sí. Soy yo. El sobre, las Hojas, la prensa de Arcos Bajos. Encontré los folios que las casas quemaron para cambiar quién era hijo de quién, y nadie quería leerlos.",
+      "en": "Yes. It's me. The envelope, the Sheets, the press in Arcos Bajos. I found the folios the houses burned to change who was whose child, and no one wanted to read them."
+     },
+     {
+      "habla": "irene",
+      "es": "Pero entre esos folios hay otros. Páginas del Pacto, con nombres de gente que sólo intentaba esconderse. Gente que aprecio. Mañana imprimo el último número, y todavía no sé qué nombres poner.",
+      "en": "But among those folios there are others. Pages of the Pact, with the names of people who were only trying to hide. People I care about. Tomorrow I print the last issue, and I still don't know which names to include."
+     },
+     {
+      "habla": "irene",
+      "si": "nivel(irene, isolda) >= A o nivel(irene, teo) >= A",
+      "es": "Alguien me dijo que publicara lo que se robó y callara a quien se escondía. Creo que tenía razón. Pero quería oírselo a usted.",
+      "en": "Someone told me to publish what was stolen and keep quiet about those who were hiding. I think they were right. But I wanted to hear it from you."
+     }
+    ],
+    "decision": [
+     {
+      "id": "proteger",
+      "texto": {
+       "es": "«Publique los abusos. Proteja los nombres.»",
+       "en": "“Publish the abuses. Protect the names.”"
+      },
+      "resultado": {
+       "es": "Irene tacha una lista entera, despacio. Deja sólo los nombres de quienes robaron. «Gracias», dice. «Llevaba ochenta años esperando a que alguien me lo dijera.» Luego se ríe de sí misma: «Ochenta años no. Tres semanas.»",
+       "en": "Irene crosses out an entire list, slowly. She leaves only the names of those who stole. “Thank you,” she says. “I'd been waiting eighty years for someone to tell me that.” Then she laughs at herself: “Not eighty years. Three weeks.”"
+      },
+      "efectos": [
+       "irene_descubierta",
+       "nombres_protegidos_final"
+      ]
+     },
+     {
+      "id": "todo",
+      "texto": {
+       "es": "«Publíquelo todo. La verdad no se elige.»",
+       "en": "“Publish all of it. One doesn't pick and choose the truth.”"
+      },
+      "resultado": {
+       "es": "Irene asiente sin mirarla. «Eso pensaba yo. Ojalá me hubiera dicho otra cosa.» Apaga la lámpara.",
+       "en": "Irene nods without looking at you. “That's what I thought. I wish you'd told me something else.” She puts out the lamp."
+      },
+      "efectos": [
+       "irene_descubierta",
+       "hoja_completa"
+      ]
+     },
+     {
+      "id": "entregar",
+      "texto": {
+       "es": "«Entrégueme los folios. Se los daré a la reina.»",
+       "en": "“Give me the folios. I'll take them to the Queen.”"
+      },
+      "resultado": {
+       "es": "Irene duda mucho tiempo. Luego le da la caja. «Si la reina hace con esto lo que yo no me atreví, habrá valido la pena. Si no, nunca se lo perdonaré.»",
+       "en": "Irene hesitates a long time. Then she hands you the box. “If the Queen does with this what I didn't dare, it will have been worth it. If not, I'll never forgive you.”"
+      },
+      "efectos": [
+       "irene_descubierta",
+       "folios_a_la_reina",
+       "nombres_protegidos_final"
+      ]
+     }
+    ]
+   },
+   {
+    "si": "no (pistas >= 3 o nivel_max(irene) >= B)",
+    "lineas": [
+     {
+      "habla": null,
+      "es": "El Archivo está a oscuras. Sobre el atril del libro de los sellos hay un papel doblado, con letra pequeña y muy ordenada.",
+      "en": "The Archive is dark. On the lectern of the book of seals lies a folded paper, in small, very neat handwriting."
+     },
+     {
+      "habla": null,
+      "es": "«Todavía no me ha encontrado. Quizá sea mejor así. Mañana sabrá lo que decidí.»",
+      "en": "“You still haven't found me. Perhaps it's better that way. Tomorrow you'll know what I decided.”"
+     }
+    ],
+    "efectos": [
+     "irene_anonima"
+    ]
+   }
+  ]
+ },
+ "cierre": {
+  "hoja": {
+   "numero": 5,
+   "cabecera": {
+    "es": "La Hoja sin Firma · Último número",
+    "en": "The Unsigned Sheet · Final issue"
+   },
+   "entradilla": {
+    "es": "Ochenta años después, lo que no ardió.",
+    "en": "Eighty years on, what did not burn."
+   },
+   "cuerpo": {
+    "es": "Esta Hoja publica hoy los folios 80 a 84 del Archivo Real: las casas que, la Noche del Censo, quemaron sus linajes para quedarse con lo que no era suyo. Sus nombres están abajo. Que la reina haga justicia; nosotros sólo hemos hecho memoria.",
+    "en": "Today this Sheet publishes folios 80 to 84 of the Royal Archive: the houses that, on Census Night, burned their own lineages to keep what wasn't theirs. Their names are below. Let the Queen do justice; we have only done remembering.",
+    "variantes": [
+     {
+      "si": "marca(nombres_protegidos_final) o nivel(irene, isolda) >= A o nivel(irene, teo) >= A",
+      "texto": {
+       "es": "Las páginas del Pacto del Umbral se quedan donde estaban. Quien sólo quería esconderse tiene derecho a seguir escondido.",
+       "en": "The pages of the Threshold Pact stay where they were. Those who only wanted to hide have the right to stay hidden."
+      }
+     },
+     {
+      "si": "marca(hoja_completa) o no (marca(nombres_protegidos_final) o nivel(irene, isolda) >= A o nivel(irene, teo) >= A)",
+      "texto": {
+       "es": "Publicamos también las páginas del Pacto del Umbral, con todos sus nombres. Entre ellos, el de una casa de Greda Alta cuyos hijos no salen las noches de luna.",
+       "en": "We also publish the pages of the Threshold Pact, with all their names. Among them, a house of Greda Alta whose sons do not go out on moonlit nights."
+      }
+     }
+    ]
+   },
+   "pie": {
+    "es": "— Firmado: I. S., archivera. Ya no hace falta esconderse.",
+    "en": "— Signed: I. S., archivist. There's no need to hide any more."
+   },
+   "pie_si_anonima": {
+    "es": "— Sin firma. Como siempre.",
+    "en": "— Unsigned. As ever."
+   },
+   "efectos": [
+    "hoja_final"
+   ]
+  },
+  "cronica": {
+   "numero": 6,
+   "cabecera": {
+    "es": "Crónica de salones · Número extraordinario",
+    "en": "The Salon Chronicle · Special issue"
+   },
+   "subtitulo": {
+    "es": "El Gran Baile del Sello",
+    "en": "The Grand Ball of the Seal"
+   },
+   "entradilla": {
+    "es": "Doce valses, un libro y una Hoja. Esta Crónica no recuerda una noche igual, y lleva treinta años recordando noches.",
+    "en": "Twelve waltzes, one book and one Sheet. This Chronicle doesn't remember a night like it, and it has been remembering nights for thirty years."
+   },
+   "noticias": [
+    {
+     "id": "n6_sellos",
+     "fija": true,
+     "titular": {
+      "es": "Lo que la reina selló",
+      "en": "What the Queen sealed"
+     },
+     "texto": {
+      "es": "Su Majestad selló al amanecer las uniones de la temporada. La lista completa, en la página dos. Las lágrimas, en todas.",
+      "en": "At dawn Her Majesty sealed the season's unions. The full list is on page two. The tears, on every page."
+     }
+    },
+    {
+     "id": "n6_autora",
+     "si": "marca(irene_descubierta)",
+     "titular": {
+      "es": "La archivera",
+      "en": "The archivist"
+     },
+     "texto": {
+      "es": "La autora de la Hoja sin Firma es Irene Salvat, del Archivo Real. Esta Crónica, que la sospechó de todo el mundo menos de ella, se quita el sombrero. Y le ofrece trabajo.",
+      "en": "The author of the Unsigned Sheet is Irene Salvat, of the Royal Archive. This Chronicle, which suspected everyone but her, takes off its hat. And offers her a job."
+     }
+    },
+    {
+     "id": "n6_anonima",
+     "si": "no marca(irene_descubierta)",
+     "titular": {
+      "es": "El último pliego",
+      "en": "The last sheet"
+     },
+     "texto": {
+      "es": "La Hoja sin Firma se despidió en el Gran Baile. Sigue sin firma. Esta Crónica sigue buscando, aunque ya sin recompensa.",
+      "en": "The Unsigned Sheet took its leave at the Grand Ball. It remains unsigned. This Chronicle is still looking, though no longer offering a reward."
+     }
+    },
+    {
+     "id": "n6_mara",
+     "fija": true,
+     "titular": {
+      "es": "Una nota de la editora",
+      "en": "A note from the publisher"
+     },
+     "texto": {
+      "es": "Esta Crónica firma todo lo que publica. Esta temporada ha aprendido que firmar no basta: también hay que tener razón.",
+      "en": "This Chronicle signs everything it prints. This season it has learned that signing isn't enough: one must also be right."
+     }
+    }
+   ],
+   "pie": {
+    "es": "Fin de la temporada. Mara Calce, editora.",
+    "en": "End of the season. Mara Calce, publisher."
+   }
+  }
+ },
+ "epilogos": {
+  "nilo": [
+   {
+    "si": "marca(nilo_confiesa) y union(nilo, camila)",
+    "es": "Nilo se casó con Camila en primavera. Las noches de luna, ella cierra los postigos del invernadero y riega las plantas hasta el amanecer. Nunca le ha pedido que prometa nada.",
+    "en": "Nilo married Camila in the spring. On moonlit nights she closes the conservatory shutters and waters the plants until dawn. She has never asked him to promise anything."
+   },
+   {
+    "si": "marca(nilo_confiesa) o marca(nilo_elige_promesa)",
+    "es": "Nilo aprendió a medir lo que promete. Alguien en Valcenda conoce su secreto y lo guarda. Las noches de luna ya no las pasa solo.",
+    "en": "Nilo learned to weigh what he promises. Someone in Valcenda knows his secret and keeps it. He no longer spends moonlit nights alone."
+   },
+   {
+    "si": "marca(hoja_completa) o marca(nilo_visto)",
+    "es": "La Hoja final puso a la casa Lobreda en boca de todos. Nilo volvió a Greda Alta antes del invierno. Sigue ayudando a todo el mundo, pero ahora desde lejos.",
+    "en": "The final Sheet put House Lobreda on every tongue. Nilo went back to Greda Alta before winter. He still helps everyone, but from a distance now."
+   },
+   {
+    "es": "Nilo siguió prometiendo antes de que nadie terminara de pedir. Casi siempre cumplió. Casi.",
+    "en": "Nilo went on promising before anyone had finished asking. He nearly always delivered. Nearly."
+   }
+  ],
+  "saul": [
+   {
+    "si": "union(saul, dario)",
+    "es": "Saúl se quedó en Valcenda. El ejército recibió una carta muy correcta y muy breve. En el despacho de los Veyra hay ahora dos pares de guantes sobre la mesa, y ninguno se usa.",
+    "en": "Saúl stayed in Valcenda. The army received a very correct and very brief letter. In the Veyra study there are now two pairs of gloves on the desk, and neither is worn."
+   },
+   {
+    "si": "union(saul, isolda)",
+    "es": "Saúl e Isolda se casaron por los convoyes y se quieren como socios. Su casa tiene una puerta que siempre se puede cerrar, y la usan los dos.",
+    "en": "Saúl and Isolda married for the convoys and love each other as partners. Their house has a door that can always be closed, and both of them use it."
+   },
+   {
+    "si": "union(saul, celia)",
+    "es": "Saúl cumplió con el paso de Greda y con su casa. Es un marido correcto, puntual y leal. Algunas mañanas, en el picadero, se queda mucho rato mirando a ninguna parte.",
+    "en": "Saúl did his duty by the Greda pass and by his house. He is a proper husband, punctual and loyal. Some mornings, at the riding school, he stands a long time looking at nothing."
+   },
+   {
+    "es": "Saúl volvió a Tiria después del Gran Baile, como mandaba la orden. Escribe cartas a Valcenda que nunca dicen nada y que alguien guarda en un cajón.",
+    "en": "Saúl went back to Tiria after the Grand Ball, as ordered. He writes letters to Valcenda that never say anything, and that someone keeps in a drawer."
+   }
+  ],
+  "dario": [
+   {
+    "si": "union(saul, dario) o union(dario, celia)",
+    "es": "Dario dejó que alguien lo conociera, y no se murió de miedo. Sigue tropezando con talento, pero ya sólo cuando quiere.",
+    "en": "Dario let someone know him, and didn't die of fright. He still stumbles with talent, but only when he chooses to."
+   },
+   {
+    "si": "marca(dario_sin_mascara) o marca(dario_guarda_secreto_isolda)",
+    "es": "Dario no se casó esta temporada. Se plantó ante su tía y aplazó la herencia un año más. Dice que es lo más valiente que ha hecho, y que le temblaban las rodillas.",
+    "en": "Dario didn't marry this season. He stood up to his aunt and put off the inheritance another year. He says it's the bravest thing he's ever done, and that his knees were shaking."
+   },
+   {
+    "es": "Dario heredó la casa Miravés sin quererla. Su carruaje sigue con las cortinas echadas. Ahora es él quien no las abre.",
+    "en": "Dario inherited House Miravés without wanting it. His carriage still has its curtains drawn. Now he is the one who won't open them."
+   }
+  ],
+  "teo": [
+   {
+    "si": "union(teo, celia) o union(teo, irene)",
+    "es": "Teo se casó con alguien que se ríe con él y no de él. Los molinos siguen en apuros. El cuaderno de versos ya va por el tercer tomo.",
+    "en": "Teo married someone who laughs with him and not at him. The mills are still struggling. The notebook of verse is on its third volume."
+   },
+   {
+    "si": "union(teo, camila)",
+    "es": "Teo y Camila se casaron por las cuentas y se hacen reír cada mañana. Los molinos Rovena pagan los jornales a tiempo. Teo dice que es el matrimonio más divertido de Valcenda, y nadie le lleva la contraria.",
+    "en": "Teo and Camila married for the accounts and make each other laugh every morning. The Rovena mills pay their wages on time. Teo says it's the funniest marriage in Valcenda, and nobody argues."
+   },
+   {
+    "si": "marca(teo_conversacion_seria) o marca(teo_sin_chiste)",
+    "es": "Teo no se casó esta temporada. Pero dijo algo sincero una vez, delante de alguien, y desde entonces no ha podido volver a ser sólo un bufón.",
+    "en": "Teo didn't marry this season. But he said something sincere once, in front of someone, and since then he hasn't been able to go back to being just a clown."
+   },
+   {
+    "es": "Teo es el invitado más solicitado de Valcenda. Lo llaman para que haga reír. Nadie lo llama para otra cosa.",
+    "en": "Teo is the most sought-after guest in Valcenda. People invite him to make them laugh. Nobody invites him for anything else."
+   }
+  ],
+  "celia": [
+   {
+    "si": "union(teo, celia) o union(dario, celia)",
+    "es": "Celia baila por gusto. A veces se equivoca en el tercer giro y se ríe antes que nadie. Ha quemado la lista.",
+    "en": "Celia dances for pleasure. Sometimes she misses the third turn and laughs before anyone else. She has burned the list."
+   },
+   {
+    "si": "union(saul, celia)",
+    "es": "Celia se casó por el paso de Greda. Es la dama más admirada de Valcenda. Sigue contando los pasos, en voz muy baja.",
+    "en": "Celia married for the Greda pass. She is the most admired lady in Valcenda. She still counts her steps, very quietly."
+   },
+   {
+    "si": "marca(celia_rechaza_paso)",
+    "es": "Celia no se casó. Rechazó un compromiso que todo el mundo daba por hecho y abrió una academia de baile en la Puerta de Greda. Sus alumnas no cuentan los pasos.",
+    "en": "Celia didn't marry. She turned down an engagement everyone took for granted and opened a dancing academy at the Greda Gate. Her pupils don't count their steps."
+   },
+   {
+    "es": "Celia sigue siendo perfecta. Un error en público, una tarde de invierno, estuvo a punto de romperla. Se levantó sola, pero no ha vuelto a bailar.",
+    "en": "Celia is still perfect. One public mistake, one winter afternoon, nearly broke her. She got up on her own, but she hasn't danced since."
+   }
+  ],
+  "irene": [
+   {
+    "si": "union(irene, isolda) o union(teo, irene)",
+    "es": "Irene se arriesgó a ser vista, y alguien la vio entera. Trabaja de día en el Archivo y de noche, ahora, sólo duerme.",
+    "en": "Irene risked being seen, and someone saw all of her. She works at the Archive by day and, now, at night she only sleeps."
+   },
+   {
+    "si": "marca(irene_descubierta) y marca(nombres_protegidos_final)",
+    "es": "Irene publicó los abusos y calló a quien sólo se escondía. La reina la nombró guardiana de los folios recuperados. Mara Calce le ofrece trabajo cada semana. Ella dice que no, cada semana, con mucha educación.",
+    "en": "Irene published the abuses and kept quiet about those who were only hiding. The Queen named her keeper of the recovered folios. Mara Calce offers her a job every week. She says no, every week, very politely."
+   },
+   {
+    "si": "marca(irene_descubierta)",
+    "es": "Irene firmó la última Hoja con sus iniciales. Lo publicó todo. Ganó la verdad y perdió a dos amigos. No sabe todavía si el trato fue justo.",
+    "en": "Irene signed the last Sheet with her initials. She published everything. The truth won, and she lost two friends. She still doesn't know whether it was a fair trade."
+   },
+   {
+    "es": "Nadie sabe quién escribió la Hoja sin Firma. En el Archivo, una archivera de letra pequeña y muy ordenada sigue trabajando de noche.",
+    "en": "No one knows who wrote the Unsigned Sheet. At the Archive, an archivist with small, very neat handwriting still works at night."
+   }
+  ],
+  "isolda": [
+   {
+    "si": "union(irene, isolda)",
+    "es": "Isolda dijo en voz alta lo que quería, delante de toda la corte. Ahora habla primero casi siempre. Cuando no, Irene espera.",
+    "en": "Isolda said aloud what she wanted, in front of the whole court. Now she nearly always speaks first. When she doesn't, Irene waits."
+   },
+   {
+    "si": "union(saul, isolda) y marca(isolda_hablo_primero)",
+    "es": "Isolda se casó con Saúl por los convoyes y con los ojos abiertos. Detrás de su puerta hay alguien a quien quiere, y ese alguien lo sabe.",
+    "en": "Isolda married Saúl for the convoys, with her eyes open. Behind her door there's someone she loves, and that someone knows it."
+   },
+   {
+    "si": "union(saul, isolda)",
+    "es": "Isolda se casó con Saúl por los convoyes. Es una buena alianza y un buen marido. Lo que quería de verdad no se lo dijo nunca a nadie.",
+    "en": "Isolda married Saúl for the convoys. It's a good alliance and a good husband. What she truly wanted she never told anyone."
+   },
+   {
+    "es": "Isolda volvió a Puerto Nácar sin casarse. Habla poco, y cuando habla, todos se callan para oírla. Aún no ha dicho lo que más quería decir.",
+    "en": "Isolda went back to Port Nácar unmarried. She says little, and when she speaks, everyone falls silent to hear her. She still hasn't said what she most wanted to say."
+   }
+  ],
+  "camila": [
+   {
+    "si": "union(nilo, camila)",
+    "es": "Camila se dejó sorprender. Por un caballero de sombrero horrible, dos veces en el mismo camino. Dice que a la tercera ya no cuenta como casualidad.",
+    "en": "Camila let herself be surprised. By a gentleman in a dreadful hat, twice on the same road. She says the third time no longer counts as chance."
+   },
+   {
+    "si": "union(teo, camila)",
+    "es": "Camila se casó con Teo por las cuentas y descubrió que reírse por las mañanas también es una forma de querer.",
+    "en": "Camila married Teo for the accounts and discovered that laughing in the mornings is a kind of love too."
+   },
+   {
+    "si": "marca(deuda_saldada)",
+    "es": "Camila no se casó. Pagó sus deudas, devolvió el catalejo al mar y se fue a vivir sola a la costa. Dice que nunca ha estado mejor. Esta vez es verdad.",
+    "en": "Camila didn't marry. She paid her debts, returned the spyglass to the sea and went to live alone on the coast. She says she's never been better. This time it's true."
+   },
+   {
+    "es": "Camila sigue en Valcenda, observándolo todo con su copa en la mano. Es la mejor carabina de la ciudad. Por las noches, echa de menos que la sorprendan.",
+    "en": "Camila is still in Valcenda, watching everything, glass in hand. She's the best chaperone in the city. At night, she misses being surprised."
+   }
+  ]
+ },
+ "epilogo_misterio": [
+  {
+   "si": "marca(irene_descubierta) y marca(nombres_protegidos_final)",
+   "es": "La verdad del incendio salió a la luz, y quienes sólo se escondían siguieron a salvo. Valcenda aprendió que se puede decir la verdad sin hacer daño. Le costó ochenta años.",
+   "en": "The truth about the fire came out, and those who were only hiding stayed safe. Valcenda learned that the truth can be told without doing harm. It took eighty years."
+  },
+  {
+   "si": "marca(irene_descubierta)",
+   "es": "La verdad del incendio salió a la luz entera, con todos sus nombres. Hubo justicia y hubo daño. En Greda Alta, una casa cerró sus postigos para siempre.",
+   "en": "The whole truth about the fire came out, every name with it. There was justice and there was harm. In Greda Alta, one house closed its shutters for good."
+  },
+  {
+   "si": "nivel(irene, isolda) >= A o nivel(irene, teo) >= A",
+   "es": "Nadie supo quién escribía la Hoja. Pero la última no nombró a quien se escondía: alguien había convencido a su autora de que el silencio, a veces, también es justicia.",
+   "en": "No one learned who wrote the Sheet. But the last one named none of those who were hiding: someone had convinced its author that silence, sometimes, is also justice."
+  },
+  {
+   "es": "Nadie supo quién escribía la Hoja. La última lo publicó todo. Valcenda leyó, se escandalizó y, como siempre, nadie preguntó si era cierto.",
+   "en": "No one learned who wrote the Sheet. The last one published everything. Valcenda read it, was scandalised and, as ever, no one asked whether it was true."
+  }
+ ],
+ "epilogo_casamentera": [
+  {
+   "si": "rep >= 12",
+   "es": "La reina la nombró casamentera de la Corona. Le han dado un despacho en palacio, con vistas al río. Usted prefiere su residencia, y Bruna también.",
+   "en": "The Queen named you Matchmaker to the Crown. You've been given an office at the palace, overlooking the river. You prefer your residence, and so does Bruna."
+  },
+  {
+   "si": "rep >= 4",
+   "es": "Su nombre se pronuncia con respeto en los salones. La temporada que viene, ya hay seis casas que le han escrito. Bruna dice que esta vez no le dejará aceptar más de ocho.",
+   "en": "Your name is spoken with respect in the salons. Next season, six houses have already written to you. Bruna says this time she won't let you take more than eight."
+  },
+  {
+   "es": "Valcenda la olvidará pronto. Ocho personas, no. Algunas le escriben todavía, en invierno, para contarle cómo les va.",
+   "en": "Valcenda will soon forget you. Eight people won't. Some still write to you in winter, to tell you how they are."
+  }
+ ]
+}

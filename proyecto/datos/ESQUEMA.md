@@ -221,3 +221,15 @@ Las claves usan puntos: `hoja.boton.carta`, `ajustes.idioma`. El motor resuelve 
 | `peticiones[].si` | Petición | La petición sólo aparece si se cumple la condición |
 | `escenas[].tipo: beso / confesion / acuerdo` | `escenas/capitulo5.yaml` | Escenas especiales (sistemas §4.3); `condicion` decide si se pueden reproducir |
 | `escenas[].de`, `escenas[].a` | Confesión | Quien confiesa y a quien |
+
+## 10. Campos añadidos al escribir la semana 6 (final)
+
+| Campo | Dónde | Significado |
+|---|---|---|
+| `pistas >= n` | Condiciones | Número de marcas `pista_*` reunidas |
+| `union(a, b)` | Condiciones | La reina selló esa unión en el Gran Baile |
+| `final: true`, `carnet`, `doble_beso`, `propuestas`, `sellos` | Evento `s6_gran_baile` | Textos del Gran Baile (sistemas §9). No se asigna: van los ocho |
+| `confrontacion: {dia, si, ramas[{si, lineas, decision, efectos}]}` | Semana 6 | La escena con Irene en el Archivo |
+| `hoja.pie_si_anonima` | Hoja final | Pie si la autora no fue descubierta |
+| `epilogos: {id: [{si, es, en}, …]}` | Semana 6 | Destino de cada persona: el primero que se cumpla; el último no lleva condición |
+| `epilogo_misterio`, `epilogo_casamentera` | Semana 6 | El misterio 2 × 2 y el final de la casamentera según la reputación |

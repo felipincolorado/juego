@@ -31,7 +31,7 @@ PROHIBIDAS_ES = re.compile(
 )
 VARIABLE = re.compile(r"\{([a-z_]+)(\|[^{}]*)?\}")
 FUNCIONES = {"asiste", "asistio", "desenlace", "opcion", "cercania", "nivel", "nivel_max", "rep",
-             "marca", "semana", "estado", "gusta", "no_gusta", "asistio_gusta", "desaires", "chispa"}
+             "marca", "semana", "estado", "gusta", "no_gusta", "asistio_gusta", "desaires", "chispa", "pistas", "union"}
 
 errores = []
 avisos = []
@@ -167,6 +167,7 @@ def guion_semana(datos, lengua):
     if "cierre" not in datos:
         return "\n".join(out + ["*(Cierre pendiente: se escribe en la parte 2.)*", ""])
     cr = datos["cierre"]["cronica"]
+    cr.setdefault("entradilla", {}); cr.setdefault("subtitulo", {})
     out += [f"## {t(cr['cabecera'])} · {t(cr['subtitulo'])}", "", f"*{t(cr['entradilla'])}*", ""]
     for n in cr["noticias"]:
         out.append(f"- **{t(n['titular'])}**" + (f": {t(n.get('texto'))}" if n.get("texto") else " (texto del desenlace)"))
@@ -182,15 +183,32 @@ def guion_semana(datos, lengua):
             out += [f"- si `{v['si']}`: {t(v['texto'])}" for v in h["cuerpo"].get("variantes", [])]
         out += ["", f"*{t(h['pie'])}*", ""]
     out += ["## Sólo para sus ojos", ""]
-    for o in datos["cierre"]["solo_sus_ojos"]["observaciones"]:
+    for o in datos["cierre"].get("solo_sus_ojos", {}).get("observaciones", []):
         out.append(f"- si `{o['si']}`: {t(o['texto'])}")
-    gancho = datos["cierre"]["gancho"]
+    gancho = datos["cierre"].get("gancho", {})
     if "sobre" in gancho:
         g = gancho["sobre"]
         out += ["", "## El sobre sin firma", "", f"*{t(g['saludo'])}*", "", t(g["cuerpo"]).strip(), "",
                 f"> {t(gancho['nota_final'])}", ""]
     else:
         out += ["", "## Gancho", ""] + [f"- **{l.get('habla') or 'narración'}**: {t(l)}" for l in gancho.get("lineas", [])] + [""]
+    for clave, titulo in (("epilogos", "Epílogos"),):
+        if clave in datos:
+            out += [f"## {titulo}", ""]
+            for quien, finales in datos[clave].items():
+                out.append(f"### {quien}")
+                out += [f"- " + (f"si `{f['si']}`: " if f.get("si") else "si no: ") + t(f) for f in finales]
+                out.append("")
+    for clave, titulo in (("epilogo_misterio", "Epílogo del misterio"), ("epilogo_casamentera", "Epílogo de la casamentera")):
+        if clave in datos:
+            out += [f"## {titulo}", ""] + [f"- " + (f"si `{f['si']}`: " if f.get("si") else "si no: ") + t(f) for f in datos[clave]] + [""]
+    if "confrontacion" in datos:
+        out += ["## Confrontación en el Archivo", ""]
+        for r in datos["confrontacion"]["ramas"]:
+            out.append(f"**Si `{r['si']}`**")
+            out += [f"- **{l.get('habla') or 'narración'}**: {t(l)}" for l in r["lineas"]]
+            out += [f"- Opción **{t(d['texto'])}** → {t(d['resultado'])}" for d in r.get("decision", [])]
+            out.append("")
     return "\n".join(out)
 
 

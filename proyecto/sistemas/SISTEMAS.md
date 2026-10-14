@@ -213,7 +213,8 @@ Eventos con baile de varias parejas (el Baile de las casas, el Gran Baile): igua
 3. **Uniones sin amor** (lavanda, desigual o de compañía): sólo se ofrecen si la partida activó su motivo:
    - Lavanda: `motivo.lavanda` (alianza de convoyes, que se activa con la escena del acuerdo).
    - Lobreda–Veyra: `motivo.compromiso_paso`.
-   - Miravés–Ferrán: `motivo.deuda`.
+   - Rovena–Ferrán (Teo y Camila): `motivo.deuda`, con la escena `acuerdo_teo_camila` (cambio del 14 de octubre: antes era Miravés–Ferrán).
+   - Las marcas reales son `acuerdo_lavanda`, `acuerdo_paso` y `acuerdo_deuda` (`escenas/capitulo5.yaml`).
 4. **Calidad de la unión mutua:**
    - Cercanía ≥ 14: feliz.
    - De 10 a 13: cordial.

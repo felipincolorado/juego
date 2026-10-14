@@ -92,3 +92,20 @@ Se actualiza al terminar cada sesión. **Lo que espera tu decisión va primero.*
 - `escenas/capitulo5.yaml`: 6 besos, 2 confesiones no correspondidas (Dario a Isolda; Celia a Saúl), una confesión genérica y 3 acuerdos sin amor (la lavanda Saúl–Isolda, el compromiso del paso Saúl–Celia y la deuda Teo–Camila).
 - **Equilibrio pendiente:** con la mejor opción, la cena de las deudas sale favorable el 94 % de las veces. La fórmula topa en 5, y con tres personas casi siempre se cubre el requisito. Habría que revisar §3.1 (el +1 por segundo asistente) antes de programar, o aceptarlo, porque en los obligatorios lo que está en juego es la historia.
 - **Siguiente:** capítulo 6 (Gran Baile del Sello): el carnet de baile, la confrontación con Irene en el Archivo, «Proteger los nombres», las propuestas y los epílogos de las 8 vidas.
+
+## Capítulo 6 · terminado: LA HISTORIA ESTÁ COMPLETA (14 oct.)
+
+- `semanas/semana6.yaml`:
+  - apertura (decisión: ir o no al Archivo);
+  - la petición final de Nilo, que confía su secreto;
+  - el paseo de la primera escarcha;
+  - la **confrontación con Irene**: confiesa si hay 3 o más pistas o si alguien llegó con ella al nivel B. Opciones: proteger los nombres, publicarlo todo o entregar los folios a la reina;
+  - el **Gran Baile**: los textos del carnet, el doble beso, las propuestas (mutua feliz, cordial o fría; lavanda; paso; deuda) y los sellos según la reputación;
+  - la Hoja final, firmada «I. S.» o sin firma;
+  - la Crónica extraordinaria;
+  - los **epílogos**: de 3 a 4 finales por persona, el misterio 2 × 2 y el final de la casamentera.
+- **Para el motor:** las funciones `pistas` y `union`; la pantalla del carnet; el orden del final (doble beso → propuestas → sellos → Hoja final → Crónica → epílogos).
+- **Revisión recomendada antes de programar:**
+  - una lectura seguida de los 6 guiones (`proyecto/guion/*.es.md`) para pulir repeticiones;
+  - el equilibrio de los eventos obligatorios de las semanas 4 y 5;
+  - la adaptación al inglés por un hablante nativo.
