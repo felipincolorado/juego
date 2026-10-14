@@ -151,3 +151,10 @@ Maqueta: `diseno/maqueta/index.html`, publicada como artefacto privado. Manda so
    - Tocar una cara ya puesta (en el hueco o en la mano) la retira.
 5. **Cerrar:** ✕, tocar el mapa o arrastrar el asa hacia abajo. Desde la altura expandida, el primer arrastre vuelve a la compacta.
 6. **Sellar:** sólo se puede con el mínimo de invitados. Si se intenta antes, la línea de ayuda dice cuántos faltan. Al sellar, el marcador queda en rosa y el sobre de la barra suma uno.
+
+### 9.1 Correcciones del usuario a la hoja (14 oct., tras la maqueta v6)
+
+- **El papel marfil de la hoja nace en el borde inferior del teléfono** y sube por detrás de los retratos. Los retratos quedan delante, sobre el papel. No hay una tarjeta flotando encima de la mano.
+- **No hay «Ver detalles».** La información base va siempre visible: fecha, título, regla, cita, huecos, pentágono, + y −, línea de ayuda y sello.
+- **«Leer la invitación»** abre la carta completa a pantalla completa, con tratamiento rococó: grabado de la casa anfitriona, filigrana, flores y lacre roto.
+- **Acabado:** la maqueta HTML define el comportamiento; el acabado visual se hace en Figma con `diseno/BRIEF-FIGMA-v5.md`.
