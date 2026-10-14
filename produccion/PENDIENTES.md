@@ -60,3 +60,19 @@ Se actualiza al terminar cada sesión. **Lo que espera tu decisión va primero.*
 - `escenas/vinculos_B.yaml`: 10 escenas B, en las que pasan al tú, más una genérica. Marcas nuevas que usarán los capítulos 4 y 5: `celia_cubre_nilo` (permite evitar el incidente de Nilo el día 20), `lavanda_hablada`, `saul_sin_guantes` y `celia_error_tapado`.
 - Simulación de la semana 3: con la mejor opción, entre el 53 % y el 78 % de desenlaces favorables.
 - **Siguiente:** capítulo 4 (Luna llena), en dos partes.
+
+## Capítulo 4 · terminado (14 oct.)
+
+- `semanas/semana4.yaml`:
+  - apertura: recuerdos de la semana 3 y el té con Amalia Miravés (decisión);
+  - peticiones: Nilo pide que no lo manden a nada el día 20 (`no_asistir`); Isolda quiere ir al teatro si va Irene (`requiere_con`);
+  - eventos:
+    - cena entre prensas en casa de Mara (juego de sospechas; Irene llega con tinta de imprenta en los dedos);
+    - tiro con arco (la conversación seria de Teo);
+    - **primera visita privada** (sólo parejas en nivel B, con variantes para las 7 parejas);
+    - **teatro de gala**, obligatorio, con dos parejas y un `incidente_riesgo` que sustituye al normal si va Nilo: Nilo se va y el grupo cuenta sin él;
+  - cierre: Crónica nº 4, Hoja nº 3 («alguien no es lo que aparenta»: apunta a Dario y roza a Nilo si lo vieron), 8 notas privadas y gancho hacia la semana 5 (tormentas, deuda de Camila, correo de Tiria para Saúl).
+- `escenas/vinculos_A.yaml`: 6 escenas A de parejas con atracción mutua y una genérica.
+- Simulación de la semana 4: con la mejor opción, entre el 66 % y el 69 % de desenlaces favorables. Si va Nilo al teatro, con la peor opción no hay ningún favorable.
+- Marcas que usará el capítulo 5: `nilo_visto`, `nilo_cubierto`, `nilo_confia`, `amalia_conocida`, `amalia_saludada`, `teo_conversacion_seria`, `teo_bufon`, `isolda_hablo_primero`, `camila_espera_secreto`, `dario_sin_mascara`, `nombres_protegidos`, `pista_archivera`, `pista_ausencias`.
+- **Siguiente:** capítulo 5 (Cierre de Cuentas): la cena de las deudas, los motivos de las uniones sin amor (el acuerdo lavanda, el compromiso del paso y la deuda), los besos y las confesiones no correspondidas.

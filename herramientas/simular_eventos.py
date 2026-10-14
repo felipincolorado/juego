@@ -22,15 +22,20 @@ def valido(ev, ids):
             or (r == "parejas" and g.count("f") == g.count("m")))
 
 def resolver(ev, ids, mejor=True):
+    if ev.get("incidente_riesgo") and "nilo" in ids:   # Nilo se va del palco: el grupo cuenta sin él
+        ids = tuple(i for i in ids if i != "nilo")
     req = ev["requisito"]
     cob = sum(min(grupo(ids, h), v) for h, v in req.items()) / sum(req.values())
     base = 1 if cob >= 1 else 0 if cob >= .8 else -1 if cob >= .6 else -2
     an = sum((1 if per[i]["gusta"] == ev["tipo"] else 0) - (1 if per[i]["no_gusta"] == ev["tipo"] else 0) for i in ids) / len(ids)
     an = int(an) if abs(an) >= 1 else 0
     inc = 0
-    if ev.get("incidente"):
+    inc_ev = ev.get("incidente")
+    if ev.get("incidente_riesgo") and len(ids) < ev["plazas"]["min"]:   # Nilo ya se fue
+        inc_ev = ev["incidente_riesgo"]
+    if inc_ev:
         res = []
-        for o in ev["incidente"]["opciones"]:
+        for o in inc_ev["opciones"]:
             v = grupo(ids, o["habilidad"])
             res.append(1 if v >= o["d"] else 0 if v == o["d"] - 1 else -1)
         inc = max(res) if mejor else min(res)

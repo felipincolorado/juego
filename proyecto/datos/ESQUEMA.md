@@ -202,3 +202,14 @@ Las claves usan puntos: `hoja.boton.carta`, `ajustes.idioma`. El motor resuelve 
 | `peticiones[].efectos_si_cumple` | Petición | Marcas que se activan al cumplirse |
 | `lineas[].si` | Línea de diálogo | La línea sólo se muestra si se cumple la condición |
 | `hoja.cuerpo` (con `variantes`) | Hoja | Texto único de la Hoja, en lugar de `secreto_por_protagonista` |
+
+## 8. Campos añadidos al escribir la semana 4
+
+| Campo | Dónde | Significado |
+|---|---|---|
+| `peticiones[].tipo: no_asistir` + `dia` | Petición | Se cumple si no se asigna a esa persona a nada ese día |
+| `peticiones[].requiere_con: id` | Petición | Se cumple si asisten el solicitante y esa persona |
+| `incidente_riesgo: {si, dia, situacion, cita, opciones}` | Evento | Sustituye al `incidente` si se cumple `si` (Nilo en el teatro del plenilunio) |
+| `opciones[].facil_si: {si, d}` | Opción de incidente | Si se cumple la condición, la dificultad baja a `d` |
+| `disponible_si` | Evento | Condición sobre las plazas para poder asignar (la visita exige `nivel(a, b) >= B`) |
+| `tipo: visita` | Evento | Sin requisito ni desenlace: usa `completada`. +2 de cercanía |

@@ -179,7 +179,7 @@ Matriz de autoría y dirección (A puede sentir atracción por B), sacada de las
 | **Alegre / molesta / ruborizada** | Según el desenlace o la escena | Sólo la expresión del retrato | Hasta el siguiente evento |
 | **Agitada** | Falló la opción de un incidente en un desaire | −1 de ánimo en su próximo evento | Hasta el cierre de la semana siguiente |
 | **Indispuesta** | Sólo por guion (`indisposicion` de un evento; p. ej., la fiebre de los molinos en la semana 2) | No puede asistir; se ofrece un **reemplazo** | Los días que indique el guion |
-| **Ausente por luna** | Nilo, la noche de plenilunio (Nieblas 20) | Si se le asigna algo nocturno ese día, salta un incidente de riesgo (semana 4) | 1 noche |
+| **Ausente por luna** | Nilo, la noche de plenilunio (Nieblas 20) | Si se le asigna algo nocturno ese día, salta el `incidente_riesgo` del evento en lugar del normal, y Nilo se va: el valor del grupo y el ánimo se calculan **sin él**. Con `celia_cubre_nilo` y Celia en el evento, la opción «cubrir» baja a d 2 (`facil_si`) | 1 noche |
 
 No hay mecánica de cansancio en la versión 1.
 

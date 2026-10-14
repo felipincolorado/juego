@@ -110,7 +110,7 @@ def guion_semana(datos, lengua):
     if datos.get("peticiones"):
         out += ["## Peticiones", ""]
         for pe in datos["peticiones"]:
-            out += [f"- **{pe['personaje']}** pide `{pe['evento']}`: {t(pe['texto'])}",
+            out += [f"- **{pe['personaje']}** pide " + (f"no ir a nada el día {pe['dia']}" if pe.get("tipo") == "no_asistir" else f"`{pe['evento']}`") + f": {t(pe['texto'])}",
                     f"  - Si se cumple: {t(pe['si_cumple'])}", f"  - Si no: {t(pe['si_no'])}"]
         out.append("")
     for ev in datos["eventos"]:
@@ -131,6 +131,12 @@ def guion_semana(datos, lengua):
         if inc:
             out += ["", f"**Incidente (día {inc['dia']})** · {t(inc['situacion'])}", ""]
             for o in inc["opciones"]:
+                out += [f"- **{t(o['texto'])}** ({o['habilidad']}, d {o['d']})",
+                        f"  - Éxito: {t(o['exito'])}", f"  - A medias: {t(o['medias'])}", f"  - Fallo: {t(o['fallo'])}"]
+        ir = ev.get("incidente_riesgo")
+        if ir:
+            out += ["", f"**Incidente de riesgo (si `{ir['si']}`, sustituye al anterior)** · {t(ir['situacion'])}", ""]
+            for o in ir["opciones"]:
                 out += [f"- **{t(o['texto'])}** ({o['habilidad']}, d {o['d']})",
                         f"  - Éxito: {t(o['exito'])}", f"  - A medias: {t(o['medias'])}", f"  - Fallo: {t(o['fallo'])}"]
         ind = ev.get("indisposicion")
@@ -195,7 +201,8 @@ def guion_escenas(datos, lengua, titulo):
         out += [f"## {' y '.join(e['pareja'])} · {t(e['ambiente'])}", f"*{e['id']} · nivel {e['nivel']}*", ""]
         for l in e["lineas"]:
             quien = l.get("habla") or "narración"
-            out.append(f"- **{quien}**" + (f" ({l['expr']})" if l.get("expr") else "") + f": {t(l)}")
+            out.append(f"- **{quien}**" + (f" ({l['expr']})" if l.get("expr") else "")
+                       + (f" [si `{l['si']}`]" if l.get("si") else "") + f": {t(l)}")
         out += ["", f"> {t(e.get('apunte'))}", ""]
     return "\n".join(out)
 

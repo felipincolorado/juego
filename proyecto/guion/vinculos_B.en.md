@@ -35,7 +35,7 @@
 - **irene** (alegre): You can. I've been doing it in my head for weeks.
 - **isolda** (alegre): Then… thank you, Irene. For spending three weeks looking for something that wasn't lost.
 - **irene**: You're welcome, Isolda. I'd do it again.
-- **narración**: As they part, Isolda notices a pair of clerk's sleeves on Irene's desk, stained with ink. She says nothing.
+- **narración** [si `marca(pista_taller_arcos)`]: As they part, Isolda notices a pair of clerk's sleeves on Irene's desk, stained with ink. She says nothing.
 
 > Isolda calls Irene by her name now. She says it very softly, like someone slipping something into a pocket.
 
@@ -162,8 +162,8 @@
 - **dario** (ruborizada): Just “Dario”, Isolda Marén?
 - **isolda** (alegre): I called you Dario when we were eight. I've only taken it back.
 - **dario**: My aunt wants something from this season. I don't know what. If I find out, you'll be the first to know.
-- **isolda**: Does it have to do with a chest of burned papers?
-- **dario**: …You'll be the second. It seems you're already the first.
+- **isolda** [si `marca(pujador_miraves)`]: Does it have to do with a chest of burned papers?
+- **dario** [si `marca(pujador_miraves)`]: …You'll be the second. It seems you're already the first.
 
 > Isolda has offered to speak for Dario if he ever needs it. He didn't say no.
 

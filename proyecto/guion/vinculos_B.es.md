@@ -35,7 +35,7 @@
 - **irene** (alegre): Puedes. Yo llevo semanas haciéndolo por dentro.
 - **isolda** (alegre): Entonces… gracias, Irene. Por buscar tres semanas algo que no estaba perdido.
 - **irene**: De nada, Isolda. Lo volvería a hacer.
-- **narración**: Al despedirse, Isolda ve en la mesa de Irene unos manguitos de escribiente, manchados de tinta. No dice nada.
+- **narración** [si `marca(pista_taller_arcos)`]: Al despedirse, Isolda ve en la mesa de Irene unos manguitos de escribiente, manchados de tinta. No dice nada.
 
 > Isolda ya llama a Irene por su nombre. Lo dice muy bajito, como quien se guarda algo en el bolsillo.
 
@@ -162,8 +162,8 @@
 - **dario** (ruborizada): ¿Me tuteas, Isolda Marén?
 - **isolda** (alegre): Te tuteaba a los ocho años. Sólo lo he recuperado.
 - **dario**: Mi tía quiere algo de esta temporada. No sé qué. Si lo averiguo, serás la primera en saberlo.
-- **isolda**: ¿Tiene que ver con un cofre de papeles quemados?
-- **dario**: …Serás la segunda. Parece que la primera ya eres tú.
+- **isolda** [si `marca(pujador_miraves)`]: ¿Tiene que ver con un cofre de papeles quemados?
+- **dario** [si `marca(pujador_miraves)`]: …Serás la segunda. Parece que la primera ya eres tú.
 
 > Isolda le ha ofrecido a Dario hablar por él si algún día lo necesita. Él no ha dicho que no.
 

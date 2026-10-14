@@ -1,0 +1,576 @@
+{
+ "escenas": [
+  {
+   "id": "a_saul_dario",
+   "nivel": "A",
+   "pareja": [
+    "saul",
+    "dario"
+   ],
+   "ambiente": {
+    "es": "El picadero de los Veyra, al amanecer",
+    "en": "The Veyra riding school, at dawn"
+   },
+   "lineas": [
+    {
+     "habla": null,
+     "es": "Dario llega con la ropa de la noche anterior. Saúl ya está cepillando a su caballo.",
+     "en": "Dario arrives in last night's clothes. Saúl is already grooming his horse."
+    },
+    {
+     "habla": "saul",
+     "es": "No has dormido.",
+     "en": "You haven't slept."
+    },
+    {
+     "habla": "dario",
+     "es": "Tú tampoco. Pero tú lo disimulas mejor.",
+     "en": "Neither have you. But you hide it better."
+    },
+    {
+     "habla": "saul",
+     "es": "Llevo treinta años disimulando. Se me da bien.",
+     "en": "I've been hiding things for thirty years. I'm good at it."
+    },
+    {
+     "habla": "dario",
+     "es": "¿Disimulando qué?",
+     "en": "Hiding what?"
+    },
+    {
+     "habla": null,
+     "es": "Saúl deja el cepillo. El caballo resopla, impaciente.",
+     "en": "Saúl puts down the brush. The horse snorts, impatient."
+    },
+    {
+     "habla": "saul",
+     "es": "Lo que me pasó en el despacho. Lo que me pasa cada vez que entras en un salón y yo ya sé dónde estás antes de mirar.",
+     "en": "What happened to me in the study. What happens every time you walk into a room and I know where you are before I look."
+    },
+    {
+     "habla": "dario",
+     "expr": "ruborizada",
+     "es": "Saúl.",
+     "en": "Saúl."
+    },
+    {
+     "habla": "saul",
+     "es": "No te pido nada. Mi padre, Tiria, el deber: todo eso sigue ahí. Sólo quería decirlo una vez en voz alta, a alguien que no fuera el caballo.",
+     "en": "I'm not asking for anything. My father, Tiria, duty: all of that's still there. I only wanted to say it aloud once, to someone other than the horse."
+    },
+    {
+     "habla": "dario",
+     "es": "¿Sabes por qué perdí la compostura con aquel préstamo? Me miraste las manos mientras firmaba, y se me olvidó mi propio nombre.",
+     "en": "Do you know why I lost my composure over that loan? You watched my hands while I signed, and I forgot my own name."
+    },
+    {
+     "habla": "saul",
+     "expr": "alegre",
+     "es": "Te equivocaste en la segunda letra.",
+     "en": "You got the second letter wrong."
+    },
+    {
+     "habla": "dario",
+     "expr": "alegre",
+     "es": "Lo sé. Nunca he firmado tan mal ni he estado tan contento.",
+     "en": "I know. I've never signed so badly or been so happy."
+    },
+    {
+     "habla": null,
+     "es": "Ninguno se acerca más. Todavía no. El caballo es el único que mira hacia otro lado.",
+     "en": "Neither moves any closer. Not yet. The horse is the only one who looks away."
+    }
+   ],
+   "apunte": {
+    "es": "Saúl le dijo a Dario lo que llevaba treinta años callando. Lo dijo en un picadero, al amanecer, que es donde Saúl dice las cosas importantes.",
+    "en": "Saúl told Dario what he'd kept quiet for thirty years. He said it in a riding school at dawn, which is where Saúl says important things."
+   }
+  },
+  {
+   "id": "a_irene_isolda",
+   "nivel": "A",
+   "pareja": [
+    "irene",
+    "isolda"
+   ],
+   "ambiente": {
+    "es": "La escalera de los Salvat, de noche",
+    "en": "The Salvats' staircase, at night"
+   },
+   "lineas": [
+    {
+     "habla": null,
+     "es": "Isolda se ha quedado la última otra vez.",
+     "en": "Isolda has stayed until last again."
+    },
+    {
+     "habla": "irene",
+     "es": "Vas a perder el carruaje.",
+     "en": "You'll miss your carriage."
+    },
+    {
+     "habla": "isolda",
+     "es": "Lo he despedido.",
+     "en": "I've sent it away."
+    },
+    {
+     "habla": "irene",
+     "es": "¿Por qué?",
+     "en": "Why?"
+    },
+    {
+     "habla": null,
+     "es": "Isolda respira hondo. Le tiemblan las manos, y esta vez no las esconde.",
+     "en": "Isolda takes a deep breath. Her hands are trembling, and this time she doesn't hide them."
+    },
+    {
+     "habla": "isolda",
+     "es": "Porque toda la vida he esperado a que otros hablen por mí. Y esto no se lo puedo pedir a nadie.",
+     "en": "Because all my life I've waited for others to speak for me. And this is something I can't ask anyone to say."
+    },
+    {
+     "habla": "isolda",
+     "expr": "ruborizada",
+     "es": "Irene. Me gustas. No como una amiga. Como en los libros que no se prestan.",
+     "en": "Irene. I like you. Not as a friend. Like in the books that aren't lent out."
+    },
+    {
+     "habla": null,
+     "es": "Irene no contesta enseguida. Es la primera vez que se queda sin una frase exacta.",
+     "en": "Irene doesn't answer at once. It's the first time she's been left without an exact phrase."
+    },
+    {
+     "habla": "irene",
+     "es": "Hay cosas de mí que no sabes. Cosas que hago de noche.",
+     "en": "There are things about me you don't know. Things I do at night."
+    },
+    {
+     "habla": "isolda",
+     "es": "No me importa lo que hagas de noche. Me importa que me buscaras tres semanas.",
+     "en": "I don't care what you do at night. I care that you looked for me for three weeks."
+    },
+    {
+     "habla": "irene",
+     "expr": "alegre",
+     "es": "Habría buscado tres años.",
+     "en": "I'd have looked for three years."
+    },
+    {
+     "habla": "isolda",
+     "expr": "alegre",
+     "es": "Lo he dicho yo primero.",
+     "en": "I said it first."
+    },
+    {
+     "habla": "irene",
+     "expr": "alegre",
+     "es": "Lo has dicho tú primero. Lo apunto.",
+     "en": "You said it first. I'm writing that down."
+    }
+   ],
+   "efectos": [
+    "isolda_hablo_primero"
+   ],
+   "apunte": {
+    "es": "Isolda le dijo a Irene lo que sentía antes de que nadie pudiera decirlo por ella. Es la primera vez que habla primero de algo que quiere.",
+    "en": "Isolda told Irene how she felt before anyone could say it for her. It's the first time she has spoken first about something she wants."
+   }
+  },
+  {
+   "id": "a_nilo_camila",
+   "nivel": "A",
+   "pareja": [
+    "nilo",
+    "camila"
+   ],
+   "ambiente": {
+    "es": "El invernadero de los Ferrán",
+    "en": "The Ferrán conservatory"
+   },
+   "lineas": [
+    {
+     "habla": null,
+     "es": "Camila riega unas plantas que eran de su marido.",
+     "en": "Camila is watering plants that belonged to her husband."
+    },
+    {
+     "habla": "nilo",
+     "es": "No sabía que te gustaran las plantas.",
+     "en": "I didn't know you liked plants."
+    },
+    {
+     "habla": "camila",
+     "es": "No me gustan. Le gustaban a Julián. Las riego para no tener que decidir si las tiro.",
+     "en": "I don't. Julián did. I water them so I don't have to decide whether to throw them out."
+    },
+    {
+     "habla": "nilo",
+     "es": "Te ayudo.",
+     "en": "I'll help."
+    },
+    {
+     "habla": "camila",
+     "expr": "molesta",
+     "es": "¿Ves? Otra vez. Ofreces antes de saber.",
+     "en": "See? There you go again. Offering before you know."
+    },
+    {
+     "habla": "nilo",
+     "es": "Esta vez sí sé. Sé que no puedo arreglar lo del barco ni lo de los Miravés. Y aun así quiero quedarme.",
+     "en": "This time I do know. I know I can't fix the ship, or the Miravés. And I still want to stay."
+    },
+    {
+     "habla": "camila",
+     "es": "¿Por qué?",
+     "en": "Why?"
+    },
+    {
+     "habla": "nilo",
+     "expr": "ruborizada",
+     "es": "Porque eres la única persona de Valcenda a la que no quiero rescatar. Quiero estar a tu lado mientras te rescatas sola.",
+     "en": "Because you're the one person in Valcenda I don't want to rescue. I want to be beside you while you rescue yourself."
+    },
+    {
+     "habla": null,
+     "es": "Camila deja la regadera. Lo mira como miraba la ponchera la primera noche: calculando cuánto le va a costar.",
+     "en": "Camila sets down the watering can. She looks at him the way she looked at the punch that first night: working out what it will cost her."
+    },
+    {
+     "habla": "camila",
+     "expr": "alegre",
+     "es": "Es lo más romántico que me han dicho desde lo del eje. Y lo del eje también fuiste tú.",
+     "en": "That's the most romantic thing anyone's said to me since the axle. And the axle was you as well."
+    },
+    {
+     "habla": "nilo",
+     "es": "Hay algo de mí que todavía no sabes.",
+     "en": "There's something about me you still don't know."
+    },
+    {
+     "habla": "camila",
+     "es": "Lo sé. Lo veo en cómo miras la luna. Cuando quieras contármelo, aquí estaré. Regando plantas.",
+     "en": "I know. I see it in the way you look at the moon. When you want to tell me, I'll be here. Watering plants."
+    }
+   ],
+   "efectos": [
+    "camila_espera_secreto"
+   ],
+   "apunte": {
+    "es": "Nilo no le prometió nada a Camila. Por primera vez en la temporada, eso fue lo que más valió.",
+    "en": "Nilo promised Camila nothing. For the first time this season, that was what counted most."
+   }
+  },
+  {
+   "id": "a_teo_celia",
+   "nivel": "A",
+   "pareja": [
+    "teo",
+    "celia"
+   ],
+   "ambiente": {
+    "es": "El banco al borde de la pista, el de la primera vez",
+    "en": "The bench at the edge of the dance floor, the same as the first time"
+   },
+   "lineas": [
+    {
+     "habla": null,
+     "es": "Teo está sentado. Celia, de pie, no cuenta nada.",
+     "en": "Teo is sitting. Celia is standing, counting nothing."
+    },
+    {
+     "habla": "celia",
+     "es": "Me han dicho que tu padre quiere casarte con dinero.",
+     "en": "I've heard your father wants to marry you to money."
+    },
+    {
+     "habla": "teo",
+     "es": "Mi padre quiere muchas cosas. Que funcionen los molinos, que yo deje de hacer chistes…",
+     "en": "My father wants a lot of things. For the mills to work, for me to stop making jokes…"
+    },
+    {
+     "habla": "celia",
+     "es": "¿Y tú qué quieres?",
+     "en": "And what do you want?"
+    },
+    {
+     "habla": "teo",
+     "es": "Ésa es la pregunta que llevo evitando toda la temporada.",
+     "en": "That's the question I've been dodging all season."
+    },
+    {
+     "habla": "celia",
+     "es": "Pues deja de evitarla. Yo he dejado de contar los pasos. Te toca.",
+     "en": "Then stop dodging it. I've stopped counting my steps. Your turn."
+    },
+    {
+     "habla": null,
+     "es": "Teo se ríe. Luego se calla. Luego la mira, y ya no se ríe.",
+     "en": "Teo laughs. Then he goes quiet. Then he looks at her, and isn't laughing any more."
+    },
+    {
+     "habla": "teo",
+     "expr": "ruborizada",
+     "es": "Quiero a alguien que se ría conmigo y no de mí. Y la única que lo hace es una dama que baila demasiado bien para mí.",
+     "en": "I want someone who laughs with me and not at me. And the only one who does is a lady who dances far too well for me."
+    },
+    {
+     "habla": "celia",
+     "es": "Bailo demasiado bien para todo el mundo. Eso no es un motivo.",
+     "en": "I dance too well for everyone. That's not a reason."
+    },
+    {
+     "habla": "teo",
+     "es": "¿Y cuál sería un motivo?",
+     "en": "Then what would be?"
+    },
+    {
+     "habla": "celia",
+     "expr": "alegre",
+     "es": "Que me lo digas sin un chiste.",
+     "en": "Saying it to me without a joke."
+    },
+    {
+     "habla": "teo",
+     "es": "Me gustas, Celia. Sin chiste.",
+     "en": "I like you, Celia. No joke."
+    },
+    {
+     "habla": "celia",
+     "expr": "ruborizada",
+     "es": "Bien. Era eso.",
+     "en": "Good. That was it."
+    }
+   ],
+   "efectos": [
+    "teo_sin_chiste"
+   ],
+   "apunte": {
+    "es": "Teo le dijo algo sincero a Celia, y no se rió después. Celia dice que es lo más difícil que ha visto hacer a nadie.",
+    "en": "Teo told Celia something sincere, and didn't laugh afterwards. Celia says it's the hardest thing she's ever seen anyone do."
+   }
+  },
+  {
+   "id": "a_dario_celia",
+   "nivel": "A",
+   "pareja": [
+    "dario",
+    "celia"
+   ],
+   "ambiente": {
+    "es": "La Academia vacía, al atardecer",
+    "en": "The empty Academy, at dusk"
+   },
+   "lineas": [
+    {
+     "habla": null,
+     "es": "Dario toca el piano mal, a propósito. Celia lo corrige desde la puerta.",
+     "en": "Dario is playing the piano badly, on purpose. Celia corrects him from the doorway."
+    },
+    {
+     "habla": "celia",
+     "es": "Esa nota es falsa.",
+     "en": "That note's false."
+    },
+    {
+     "habla": "dario",
+     "es": "Como yo.",
+     "en": "Like me."
+    },
+    {
+     "habla": "celia",
+     "expr": "molesta",
+     "es": "No digas eso.",
+     "en": "Don't say that."
+    },
+    {
+     "habla": "dario",
+     "es": "Es verdad. Toda la temporada he hecho de heredero encantador. Es más fácil que ser alguien.",
+     "en": "It's true. All season I've played the charming heir. It's easier than being someone."
+    },
+    {
+     "habla": "celia",
+     "es": "Conmigo no lo haces.",
+     "en": "You don't do it with me."
+    },
+    {
+     "habla": "dario",
+     "es": "Contigo no puedo. Me has visto tropezar con talento.",
+     "en": "With you I can't. You've seen me stumble with talent."
+    },
+    {
+     "habla": null,
+     "es": "Celia se sienta a su lado en el banco del piano y toca la nota correcta.",
+     "en": "Celia sits beside him on the piano bench and plays the right note."
+    },
+    {
+     "habla": "celia",
+     "es": "Me dijiste que querías aprender qué se siente al no fingir. ¿Lo has aprendido?",
+     "en": "You told me you wanted to learn what it feels like not to pretend. Have you?"
+    },
+    {
+     "habla": "dario",
+     "expr": "ruborizada",
+     "es": "Se siente esto. Miedo. Y ganas de que no te vayas.",
+     "en": "It feels like this. Fear. And wanting you not to leave."
+    },
+    {
+     "habla": "celia",
+     "expr": "alegre",
+     "es": "No me voy.",
+     "en": "I'm not leaving."
+    },
+    {
+     "habla": "dario",
+     "es": "Celia, me gustas. No el aplauso. Tú.",
+     "en": "Celia, I like you. Not the applause. You."
+    },
+    {
+     "habla": "celia",
+     "es": "Lo sé. Es lo único que has dicho esta temporada sin gracia.",
+     "en": "I know. It's the only thing you've said all season without any charm."
+    }
+   ],
+   "efectos": [
+    "dario_sin_mascara"
+   ],
+   "apunte": {
+    "es": "Dario le dijo algo a Celia sin una pizca de encanto. Ella dice que es lo mejor que le ha oído.",
+    "en": "Dario told Celia something without a trace of charm. She says it's the best thing she's ever heard him say."
+   }
+  },
+  {
+   "id": "a_teo_irene",
+   "nivel": "A",
+   "pareja": [
+    "teo",
+    "irene"
+   ],
+   "ambiente": {
+    "es": "La biblioteca de los Salvat",
+    "en": "The Salvats' library"
+   },
+   "lineas": [
+    {
+     "habla": null,
+     "es": "Teo trae el cuaderno de versos. Esta vez lo abre.",
+     "en": "Teo has brought the notebook of verse. This time he opens it."
+    },
+    {
+     "habla": "teo",
+     "es": "Te prometí que te diría si me creías. No, al revés: tú me lo dirías a mí.",
+     "en": "I promised I'd tell you if you believed me. No, the other way round: you'd tell me."
+    },
+    {
+     "habla": "irene",
+     "es": "Lee.",
+     "en": "Read."
+    },
+    {
+     "habla": null,
+     "es": "Teo lee. Es un verso corto, sin rima fácil y sin chiste.",
+     "en": "Teo reads. It's a short verse, with no easy rhyme and no joke."
+    },
+    {
+     "habla": "irene",
+     "es": "¿Para quién es?",
+     "en": "Who is it for?"
+    },
+    {
+     "habla": "teo",
+     "es": "Para una dama que nunca se cree nada. Lo escribí antes de saber que eras tú. Luego lo supe.",
+     "en": "For a lady who never believes anything. I wrote it before I knew it was you. Then I knew."
+    },
+    {
+     "habla": "irene",
+     "es": "Es exacto.",
+     "en": "It's accurate."
+    },
+    {
+     "habla": "teo",
+     "expr": "ruborizada",
+     "es": "¿Eso es bueno?",
+     "en": "Is that good?"
+    },
+    {
+     "habla": "irene",
+     "expr": "alegre",
+     "es": "Es lo mejor que digo de algo.",
+     "en": "It's the best thing I say about anything."
+    },
+    {
+     "habla": "irene",
+     "es": "Teo, hay cosas de mí que podrían hacerte daño. Y a tus amigos.",
+     "en": "Teo, there are things about me that could hurt you. And your friends."
+    },
+    {
+     "habla": "teo",
+     "es": "Mis amigos son un desastre y yo, un bufón endeudado. Somos perfectos para que nos hagan daño.",
+     "en": "My friends are a disaster and I'm an indebted clown. We're perfect for being hurt."
+    },
+    {
+     "habla": "irene",
+     "expr": "molesta",
+     "es": "No te rías de esto.",
+     "en": "Don't laugh about this."
+    },
+    {
+     "habla": "teo",
+     "es": "No me río. Me gustas, Irene. Con tus cosas de noche y todo.",
+     "en": "I'm not laughing. I like you, Irene. Night-time secrets and all."
+    }
+   ],
+   "efectos": [
+    "teo_sin_chiste"
+   ],
+   "apunte": {
+    "es": "Teo le leyó un verso a Irene. Ella dijo que era exacto. Teo lleva dos días sonriendo sin motivo aparente.",
+    "en": "Teo read Irene a verse. She said it was accurate. Teo has been smiling for two days for no apparent reason."
+   }
+  },
+  {
+   "id": "a_generica",
+   "nivel": "A",
+   "pareja": [
+    "a",
+    "b"
+   ],
+   "ambiente": {
+    "es": "Al final de la velada, cuando ya se han ido todos",
+    "en": "At the end of the evening, after everyone has gone"
+   },
+   "lineas": [
+    {
+     "habla": null,
+     "es": "{a} y {b} se quedan solos. Ninguno se despide.",
+     "en": "{a} and {b} are left alone. Neither says goodnight."
+    },
+    {
+     "habla": "a",
+     "es": "Llevo semanas pensando en ti más de lo que debería.",
+     "en": "I've been thinking about you for weeks, more than I should."
+    },
+    {
+     "habla": "b",
+     "expr": "ruborizada",
+     "es": "¿Y por qué lo dices ahora?",
+     "en": "And why say it now?"
+    },
+    {
+     "habla": "a",
+     "es": "Porque se acaba la temporada. Y no quiero que se acabe sin decirlo.",
+     "en": "Because the season is ending. And I don't want it to end without saying so."
+    },
+    {
+     "habla": "b",
+     "expr": "alegre",
+     "es": "Entonces no se acabará sin que yo te conteste: yo también.",
+     "en": "Then it won't end without my answer: me too."
+    }
+   ],
+   "apunte": {
+    "es": "{a} y {b} ya no se buscan por los salones: se encuentran.",
+    "en": "{a} and {b} no longer look for each other across the room: they find each other."
+   }
+  }
+ ]
+}

@@ -1,0 +1,691 @@
+# Semana 4 · Luna llena — Nieblas 15 a 21 (lunes a domingo). Arco: proyecto/canon/ARCO-TEMPORADA.md.
+# Novedades: petición de NO asistir (Nilo), incidente de riesgo que sustituye al normal si va Nilo al teatro,
+# primera visita privada (se desbloquea en el vínculo B) y escenas A (escenas/vinculos_A.yaml).
+# Misterio: Irene llega a la cena con tinta en los dedos (pista). Pista falsa: las cortinas del carruaje de Dario.
+# Presagio de la cartomante: minijuego_adivina.yaml, semana 4 (advierte de no enviar a Nilo).
+
+semana:
+  numero: 4
+  nombre: { es: "Luna llena", en: "Full Moon" }
+  mes: nieblas
+  dias: [15, 16, 17, 18, 19, 20, 21]
+  hecho_del_reino:
+    titulo: { es: "Plenilunio", en: "Full moon" }
+    texto:
+      es: "La noche del sábado 20 hay luna llena. El Teatro del Puente abre su techo de cristal para la función de gala, como cada otoño, y Valcenda entera querrá estar debajo."
+      en: "On the night of Saturday the 20th the moon is full. The Bridge Theatre opens its glass roof for the gala performance, as it does every autumn, and all of Valcenda will want to be beneath it."
+
+# ─────────────────────────────────────────────────────────────────────────────
+apertura:
+  lineas:
+    - habla: nota
+      es: "Señora: la segunda Hoja ha asustado a más gente que la primera. Tres casas han pedido ver sus legajos en el Archivo. El Archivo dice que están en restauración."
+      en: "Madam: the second Sheet has frightened more people than the first. Three houses have asked to see their bundles at the Archive. The Archive says they're being restored."
+    - habla: nota
+      es: "Y ha llegado una invitación que no esperaba: Amalia Miravés la recibe a tomar el té. Al atardecer."
+      en: "And an invitation has arrived that I didn't expect: Amalia Miravés will receive you for tea. At sunset."
+  recuerdos:
+    - si: "marca(reina_interes) o marca(reina_conmovida)"
+      texto:
+        es: "Mireya dice que la reina ha preguntado por usted dos veces esta semana. Una, por su nombre."
+        en: "Mireya says the Queen has asked after you twice this week. Once, by name."
+    - si: "marca(vistos_en_arcos)"
+      texto:
+        es: "Alguien dejó una nota sin firma bajo su puerta: «Las barcas no deberían acercarse a Arcos Bajos de noche. Por su bien y por el de otros.» La letra es pequeña y muy ordenada."
+        en: "Someone slipped an unsigned note under your door: “Boats shouldn't go near Arcos Bajos at night. For your sake and for others'.” The handwriting is small and very neat."
+    - si: "marca(mara_investiga)"
+      texto:
+        es: "Mara Calce ha pegado carteles en la Calle de los Sellos: diez coronas por el impresor de la Hoja. Ya hay seis personas que dicen saberlo. Ninguna coincide."
+        en: "Mara Calce has put up notices on the Street of Seals: ten crowns for the Sheet's printer. Six people already claim to know. None of them agree."
+    - si: "marca(lavanda_hablada)"
+      texto:
+        es: "Los Veyra y los Marén han cenado juntos. Saúl e Isolda se sentaron uno al lado del otro y hablaron de libros toda la noche. Sus padres parecían encantados. Ellos, tranquilos."
+        en: "The Veyras and the Maréns have dined together. Saúl and Isolda sat side by side and talked about books all evening. Their fathers seemed delighted. They seemed at peace."
+  decision:
+    - id: aceptar_amalia
+      texto: { es: "Ir al té de Amalia Miravés", en: "Go to Amalia Miravés's tea" }
+      resultado:
+        es: "La casa Miravés tiene todas las cortinas echadas. Amalia es pálida, amable y muy precisa. «Los papeles viejos hacen daño a gente que no lo merece», le dice. «Yo sólo quiero que nadie los lea antes de tiempo. Ni siquiera mi sobrino.» Al irse, ve que no ha tocado su taza."
+        en: "Every curtain in the Miravés house is drawn. Amalia is pale, gracious and very exact. “Old papers hurt people who don't deserve it,” she tells you. “I only want no one to read them before their time. Not even my nephew.” As you leave, you notice she hasn't touched her cup."
+      efectos: [amalia_conocida]
+    - id: excusarse_amalia
+      texto: { es: "Excusarse con una nota", en: "Send a note of apology" }
+      resultado:
+        es: "Amalia responde a vuelta de correo: «Lo comprendo. A mí tampoco me gusta salir de día.» No sabe si es una broma."
+        en: "Amalia replies by return: “I understand. I don't care to go out by day either.” You can't tell whether it's a joke."
+      efectos: [amalia_ofendida]
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Peticiones. Nuevos campos:
+#   `tipo: no_asistir` + `dia` = se cumple si NO se asigna a la persona a nada ese día.
+#   `requiere_con: id` = se cumple si asisten el solicitante y esa persona.
+peticiones:
+  - id: p4_nilo_luna
+    personaje: nilo
+    tipo: no_asistir
+    dia: 20
+    texto:
+      es: "Nilo: «¿Me haría un favor? El sábado no me mande a ninguna parte. No me pregunte por qué. Te… Le debo una.»"
+      en: "Nilo: “Would you do me a favour? Don't send me anywhere on Saturday. Don't ask me why. I owe you— I'll owe you one.”"
+    si_cumple:
+      es: "El domingo, Nilo le trae flores del camino de Greda. Tiene ojeras y una sonrisa enorme. «Gracias por no preguntar.»"
+      en: "On Sunday, Nilo brings you flowers from the Greda road. He has shadows under his eyes and an enormous smile. “Thank you for not asking.”"
+    efectos_si_cumple: [nilo_confia]
+    si_no:
+      es: "Nilo no protesta. Es lo peor que podría haber hecho."
+      en: "Nilo doesn't protest. It's the worst thing he could have done."
+  - id: p4_isolda_teatro
+    personaje: isolda
+    evento: s4_teatro
+    requiere_solicitante: true
+    requiere_con: irene
+    texto:
+      es: "Isolda, mirando al suelo: «Si Irene va al teatro… ¿podría ir yo también? Es que nunca he visto la luna desde allí.»"
+      en: "Isolda, eyes on the floor: “If Irene is going to the theatre… could I go too? I've never seen the moon from there.”"
+    si_cumple:
+      es: "Isolda vuelve del teatro sin decir nada. Pero esa noche, en la residencia, se la oye cantar en voz baja."
+      en: "Isolda comes back from the theatre without a word. But that night, at the residence, you hear her singing softly."
+    si_no:
+      es: "Isolda dice que la luna se ve igual desde la ventana. Y es verdad, casi."
+      en: "Isolda says the moon looks the same from the window. And it's true, almost."
+
+# ─────────────────────────────────────────────────────────────────────────────
+eventos:
+  # ── Martes 16 · Cena en la imprenta Calce (opcional; Irene con tinta en los dedos) ──
+  - id: s4_cena_calce
+    tipo: cena
+    lugar: imprenta
+    dia: 16
+    duracion: 1
+    plazas: { min: 2, max: 3 }
+    regla: cualquiera
+    obligatorio: false
+    requisito: { chisme: 5, intelecto: 5, presencia: 5 }
+    anfitrion: { es: "Mara Calce, editora", en: "Mara Calce, publisher" }
+    titulo: { es: "Cena entre prensas", en: "Supper among the presses" }
+    resumen:
+      es: "Mara Calce invita a cenar en la imprenta, entre pliegos recién salidos. Promete un juego de sobremesa: adivinar quién escribe la Hoja."
+      en: "Mara Calce invites guests to sup at the printing house, among freshly printed sheets. She promises an after-dinner game: guessing who writes the Sheet."
+    a_favor:
+      - { es: "Mara sabe más chismes que nadie y los cuenta gratis", en: "Mara knows more gossip than anyone and gives it away for free" }
+    en_contra:
+      - { es: "Todo lo que se diga puede salir impreso el lunes", en: "Anything said may be in print by Monday" }
+    carta:
+      saludo: { es: "Querida rival:", en: "Dear rival," }
+      cuerpo:
+        es: >
+          Usted junta parejas y yo junto noticias: nos parecemos más de lo que a usted le gustaría.
+          El martes ceno en la imprenta, entre las prensas, que es donde mejor se piensa. Después de los postres,
+          jugaremos a adivinar quién escribe esa Hoja que me roba lectores. El que acierte, cena gratis todo el otoño.
+        en: >
+          You put couples together and I put news together: we're more alike than you'd care to admit.
+          On Tuesday I'm dining at the printing house, among the presses, which is where one thinks best. After dessert
+          we'll play at guessing who writes that Sheet that's stealing my readers. Whoever guesses right dines free all autumn.
+      firma: { es: "Mara Calce", en: "Mara Calce" }
+    incidente:
+      dia: 16
+      situacion:
+        es: "Mara reparte papeletas: cada invitado debe escribir un nombre. Ella lee la suya en voz alta: «Dario Miravés. Nadie lo ve de día, su carruaje nunca abre las cortinas y su tía compra papeles quemados.» La mesa se vuelve hacia {a}."
+        en: "Mara hands out slips: each guest must write a name. She reads her own aloud: “Dario Miravés. No one sees him by day, his carriage never opens its curtains and his aunt buys burned papers.” The table turns to {a}."
+      cita: { habla: a, bark: incidente }
+      opciones:
+        - id: seguir
+          habilidad: chisme
+          d: 5
+          texto: { es: "Seguir el juego y escuchar todas las sospechas", en: "Play along and hear every suspicion" }
+          pista_coste: { es: "Mucho que oír, y Dario no lo agradecerá", en: "Plenty to hear, and Dario won't thank you" }
+          consecuencia: { efectos: [sospechas_oidas, dario_sospechoso] }
+          exito:
+            es: "{mejor} juega con gracia y escucha. Salen seis nombres. Dos veces el de Dario, una el de Mara y una, en voz muy baja, «alguien del Archivo»."
+            en: "{mejor} plays gracefully and listens. Six names come out. Dario's twice, Mara's once, and once, very quietly, “someone from the Archive.”"
+          medias:
+            es: "El juego divierte, pero todos repiten el nombre de Dario, como si fuera un estribillo."
+            en: "The game is fun, but everyone repeats Dario's name, as if it were a chorus."
+          fallo:
+            es: "{mejor} escribe un nombre por compromiso y Mara lo lee en voz alta. No era el que debía."
+            en: "{mejor} writes a name just to play along, and Mara reads it aloud. It was the wrong one."
+        - id: defender
+          habilidad: intelecto
+          d: 5
+          texto: { es: "Desmontar la sospecha: quien escribe sabe de archivos, no de carruajes", en: "Dismantle the suspicion: whoever writes knows archives, not carriages" }
+          pista_coste: { es: "Un buen razonamiento, y alguien en la mesa se inquieta", en: "A sound argument, and someone at the table grows uneasy" }
+          consecuencia: { efectos: [pista_archivera, irene_inquieta], cercania_asistentes: 1 }
+          exito:
+            es: "{mejor} razona en voz alta: la Hoja cita folios exactos, usa papel de descarte y sale al día siguiente de las visitas al Archivo. «Es una archivera, o un escribiente.» Mara apunta algo. La mesa se queda pensando."
+            en: "{mejor} reasons aloud: the Sheet cites exact folios, uses discard paper and appears the day after visits to the Archive. “It's an archivist, or a clerk.” Mara writes something down. The table falls to thinking."
+          medias:
+            es: "El razonamiento es bueno, pero Mara lo interrumpe con un brindis. Nadie sabe si lo ha oído."
+            en: "The reasoning is sound, but Mara cuts it off with a toast. Nobody knows whether she heard it."
+          fallo:
+            es: "{mejor} se embarulla con los folios y Mara se ríe: «Eso es lo que diría el autor.»"
+            en: "{mejor} gets muddled over the folios and Mara laughs: “That's just what the author would say.”"
+        - id: negarse
+          habilidad: presencia
+          d: 5
+          texto: { es: "Negarse con elegancia: no se juega con nombres ajenos", en: "Decline gracefully: one doesn't play with other people's names" }
+          pista_coste: { es: "Mara se aburrirá; los ausentes se lo agradecerán", en: "Mara will be bored; the absent will be grateful" }
+          consecuencia: { efectos: [nombres_protegidos], reputacion_si_exito: 1 }
+          exito:
+            es: "{mejor} rompe su papeleta sin escribir nada. «Esta mesa ya tiene bastantes nombres impresos.» Dos invitados hacen lo mismo. Mara, para sorpresa de todos, también."
+            en: "{mejor} tears up the slip without writing anything. “This table has enough names in print already.” Two guests do the same. Mara, to everyone's surprise, does too."
+          medias:
+            es: "Nadie más se niega, pero tampoco insisten."
+            en: "No one else declines, but no one presses the point either."
+          fallo:
+            es: "La negativa suena a que {mejor} tiene algo que ocultar. Mara la apunta en su cuaderno."
+            en: "The refusal sounds as if {mejor} has something to hide. Mara notes it in her book."
+    desenlaces:
+      favorable:
+        titulo: { es: "Sobremesa larga", en: "A long table" }
+        publico:
+          es: "{grupo} cenaron entre las prensas de la imprenta Calce. Fue la cena más comentada de la semana, y Mara no publicará ni la mitad."
+          en: "{grupo} supped among the presses at the Calce printing house. It was the most talked-about dinner of the week, and Mara won't print half of it."
+        privado:
+          es: "Mara le envía las papeletas del juego en un sobre. «Para que vea lo que piensa Valcenda. A mí ya no me interesa: yo sé que no fui.»"
+          en: "Mara sends you the slips from the game in an envelope. “So you can see what Valcenda thinks. It no longer interests me: I know it wasn't me.”"
+          variantes:
+            - si: "asiste(irene)"
+              texto:
+                es: "Irene llegó tarde y con los dedos manchados de una tinta espesa, de imprenta. Dijo que había estado restaurando un legajo. Nadie en la imprenta Calce restaura legajos con esa tinta."
+                en: "Irene arrived late, her fingers stained with thick printer's ink. She said she'd been restoring a bundle. Nobody at the Calce printing house restores bundles with that ink."
+            - si: "asiste(dario)"
+              texto:
+                es: "Dario oyó su nombre en el juego y se rió con todos. En el carruaje, de vuelta, abrió las cortinas por primera vez."
+                en: "Dario heard his name in the game and laughed along. In the carriage home, he opened the curtains for the first time."
+      medias:
+        titulo: { es: "Tinta y vino", en: "Ink and wine" }
+        publico:
+          es: "{grupo} cenaron con Mara Calce. Se bebió bien y se habló de más."
+          en: "{grupo} supped with Mara Calce. The wine was good and the talk was too much."
+        privado:
+          es: "Por la mañana, en la Crónica no sale nada de la cena. Mara se lo guarda. Eso le preocupa más que si lo hubiera publicado."
+          en: "In the morning, the Chronicle prints nothing about the supper. Mara is keeping it. That worries you more than if she'd published it."
+          variantes:
+            - si: "asiste(irene)"
+              texto:
+                es: "Irene escondía las manos bajo la mesa. Cuando las sacó para brindar, tenía los dedos negros de tinta."
+                en: "Irene kept her hands under the table. When she raised them for a toast, her fingers were black with ink."
+      desaire:
+        titulo: { es: "Nombres en voz alta", en: "Names read aloud" }
+        publico:
+          es: "En la cena de la imprenta Calce se leyeron en voz alta nombres que no debían. Varias casas han dejado de saludar a {grupo}."
+          en: "At the Calce supper, names were read aloud that shouldn't have been. Several houses have stopped greeting {grupo}."
+        privado:
+          es: "Dario no le escribe esta semana. Es la primera vez que su encanto le falla a usted."
+          en: "Dario doesn't write to you this week. It's the first time his charm has failed you."
+
+  # ── Jueves 18 · Tiro con arco en los Jardines Serravalle (opcional; la conversación de Teo) ──
+  - id: s4_arco
+    tipo: paseo
+    lugar: jardines
+    dia: 18
+    duracion: 1
+    plazas: { min: 2, max: 4 }
+    regla: cualquiera
+    obligatorio: false
+    requisito: { presencia: 5, estatus: 4, baile: 4 }
+    anfitrion: { es: "Leonora Serravalle", en: "Leonora Serravalle" }
+    titulo: { es: "Tiro con arco", en: "An archery party" }
+    resumen:
+      es: "Leonora organiza un concurso de tiro con arco entre los ásteres. Se apunta mal y se conversa bien."
+      en: "Leonora hosts an archery contest among the asters. The aim is poor and the conversation good."
+    a_favor:
+      - { es: "Un buen tiro se recuerda más que un buen vals", en: "A good shot is remembered longer than a good waltz" }
+    en_contra:
+      - { es: "Han venido acreedores de varias casas: los cobros no han terminado", en: "Creditors of several houses are here: the reckonings aren't over" }
+    carta:
+      saludo: { es: "Querida casamentera:", en: "Dear Matchmaker," }
+      cuerpo:
+        es: >
+          El jueves, arcos y dianas entre los ásteres. No le prometo puntería, pero sí buena compañía y un premio
+          de plata para quien acierte en el centro. He perdonado la subasta: venga, y traiga a quien sepa perder con gracia.
+        en: >
+          On Thursday, bows and targets among the asters. I can't promise good aim, but I can promise good company and a silver
+          prize for whoever hits the centre. I've forgiven the auction: do come, and bring those who know how to lose gracefully.
+      firma: { es: "Leonora Serravalle", en: "Leonora Serravalle" }
+    incidente:
+      dia: 18
+      situacion:
+        es: "Entre tiro y tiro, un escribiente de prestamista se acerca a Teo y le recuerda, en voz alta, una deuda. Teo suelta un chiste y nadie se ríe. Lo mira {a}."
+        en: "Between shots, a moneylender's clerk approaches Teo and reminds him, loudly, of a debt. Teo cracks a joke and nobody laughs. {a} is watching him."
+      cita: { habla: a, bark: incidente }
+      opciones:
+        - id: hablar
+          habilidad: presencia
+          d: 5
+          texto: { es: "Llevarse a Teo aparte y hablar con él de verdad", en: "Take Teo aside and talk to him properly" }
+          pista_coste: { es: "Una conversación seria, si Teo la aguanta", en: "A serious conversation, if Teo can bear it" }
+          consecuencia: { efectos: [teo_conversacion_seria], cercania_asistentes: 1 }
+          exito:
+            es: "Bajo los castaños, Teo deja de bromear. «Mi padre quiere casarme con dinero. Y yo quiero que alguien se ría conmigo, no de mí.» Lo dice una vez y no lo repite."
+            en: "Under the chestnuts, Teo stops joking. “My father wants to marry me to money. And I want someone to laugh with me, not at me.” He says it once and doesn't repeat it."
+          medias:
+            es: "Teo empieza a hablar en serio y, a mitad de la frase, hace un chiste. Se le ha escapado otra vez."
+            en: "Teo starts to speak seriously and, halfway through, makes a joke. It's slipped away from him again."
+          fallo:
+            es: "Teo se ríe de la oferta antes de oírla. «¿Hablar? Si quisiera hablar, me habría hecho cura.»"
+            en: "Teo laughs at the offer before hearing it. “Talk? If I wanted to talk, I'd have become a priest.”"
+        - id: despachar
+          habilidad: estatus
+          d: 5
+          texto: { es: "Despachar al escribiente con autoridad", en: "Dismiss the clerk with authority" }
+          pista_coste: { es: "Se irá; el problema, no", en: "He'll go; the problem won't" }
+          consecuencia: { reputacion_si_exito: 1 }
+          exito:
+            es: "{mejor} le recuerda al escribiente que está en una casa ajena. Se marcha con una reverencia. Teo da las gracias con los ojos."
+            en: "{mejor} reminds the clerk he's a guest in someone else's house. He leaves with a bow. Teo says thank you with his eyes."
+          medias:
+            es: "El escribiente se aparta, pero se queda esperando junto a la verja."
+            en: "The clerk steps back, but waits by the gate."
+          fallo:
+            es: "El escribiente responde que la deuda es pública. Ahora lo es."
+            en: "The clerk replies that the debt is public. Now it is."
+        - id: bromear
+          habilidad: chisme
+          d: 4
+          texto: { es: "Ayudar a Teo a convertirlo en un chiste", en: "Help Teo turn it into a joke" }
+          pista_coste: { es: "Todos se reirán; Teo, por dentro, no", en: "Everyone will laugh; Teo, inside, won't" }
+          consecuencia: { efectos: [teo_bufon] }
+          exito:
+            es: "Entre {mejor} y Teo convierten la deuda en la mejor historia de la tarde. Leonora llora de risa. Teo, al terminar, se queda muy callado."
+            en: "Between them, {mejor} and Teo turn the debt into the best story of the afternoon. Leonora weeps with laughter. When it's over, Teo goes very quiet."
+          medias:
+            es: "El chiste funciona a medias. Algunos se ríen; otros miran al escribiente."
+            en: "The joke half works. Some laugh; others look at the clerk."
+          fallo:
+            es: "El chiste cae en un silencio que se oye desde la casa."
+            en: "The joke falls into a silence you can hear from the house."
+    desenlaces:
+      favorable:
+        titulo: { es: "En el centro", en: "Dead centre" }
+        publico:
+          es: "{grupo} brillaron en el tiro con arco de los Serravalle. El premio de plata se quedó en casa de la casamentera, y Leonora no se lo reprocha."
+          en: "{grupo} shone at the Serravalle archery. The silver prize went home with the Matchmaker's party, and Leonora doesn't hold it against them."
+          variantes:
+            - si: "asiste(celia) y asiste(dario)"
+              texto:
+                es: "Celia Lobreda acertó en el centro a la primera. Dario Miravés falló a propósito los tres tiros siguientes para que nadie lo pudiera comparar."
+                en: "Celia Lobreda hit the centre at her first attempt. Dario Miravés deliberately missed his next three shots so no one could compare them."
+            - si: "asiste(saul)"
+              texto:
+                es: "El capitán Veyra tiró como en el ejército: sin gracia y sin fallar. Se quitó los guantes para el último tiro. Hubo quien lo comentó."
+                en: "Captain Veyra shot as he had in the army: without grace and without missing. He took off his gloves for the final shot. People remarked on it."
+        privado:
+          es: "Leonora le dice al despedirse: «Ese chico Rovena es mejor de lo que finge.» No dice cuál de los dos lados la sorprendió."
+          en: "As you leave, Leonora says: “That Rovena boy is better than he pretends.” She doesn't say which side of him surprised her."
+          variantes:
+            - si: "asiste(teo) y opcion(s4_arco) == hablar"
+              texto:
+                es: "Teo le escribe esa noche, sin chistes: «Gracias por la conversación. No sé si la repetiré, pero ya no puedo decir que no la tuve.»"
+                en: "Teo writes to you that night, without a single joke: “Thank you for the conversation. I don't know if I'll have another, but I can no longer say I never had one.”"
+      medias:
+        titulo: { es: "Flechas al césped", en: "Arrows in the lawn" }
+        publico:
+          es: "El tiro con arco de los Serravalle fue agradable. Las flechas fueron a parar sobre todo al césped."
+          en: "The Serravalle archery party was pleasant. Most of the arrows ended up in the lawn."
+        privado:
+          es: "El escribiente del prestamista se fue con un recado para la casa Rovena. Teo lo sabe y no dice nada."
+          en: "The moneylender's clerk left with a message for House Rovena. Teo knows and says nothing."
+      desaire:
+        titulo: { es: "Deudas en público", en: "Debts in public" }
+        publico:
+          es: "En los Jardines Serravalle se habló más de deudas que de flechas. {grupo} se fueron antes del premio."
+          en: "At the Serravalle Gardens there was more talk of debts than of arrows. {grupo} left before the prize."
+        privado:
+          es: "Teo no aparece en ningún salón hasta el domingo. Nilo dice que está bien. Nilo siempre dice que todo está bien."
+          en: "Teo doesn't show his face in any salon until Sunday. Nilo says he's fine. Nilo always says everything's fine."
+
+  # ── Viernes 19 · Visita privada (se desbloquea en el vínculo B; sin resolución) ──
+  # Sólo pueden asistir dos personas que hayan llegado al nivel B entre sí. Da +2 de cercanía (sistemas §2.2).
+  - id: s4_visita
+    tipo: visita
+    lugar: residencia
+    dia: 19
+    duracion: 1
+    plazas: { min: 2, max: 2 }
+    regla: cualquiera
+    obligatorio: false
+    disponible_si: "nivel(a, b) >= B"
+    anfitrion: { es: "La residencia", en: "The residence" }
+    titulo: { es: "Una visita privada", en: "A private visit" }
+    resumen:
+      es: "Una tarde sin salones ni Crónica. Dos personas que ya se tutean, una sala con chimenea y nadie mirando."
+      en: "An afternoon without salons or Chronicle. Two people already on first-name terms, a room with a fire and nobody watching."
+    a_favor:
+      - { es: "+2 de cercanía. Prepara la escena del umbral (A)", en: "+2 closeness. Sets up the threshold scene (A)" }
+    en_contra:
+      - { es: "No da reputación: nadie se entera", en: "No reputation: nobody finds out" }
+    completada:
+      publico:   # una visita privada nunca sale en la Crónica; este texto sólo lo ve el jugador
+        es: "Una tarde privada. Nadie en Valcenda lo sabrá."
+        en: "A private afternoon. No one in Valcenda will know."
+      privado:
+        es: "{a} y {b} pasaron la tarde en la residencia. Bruna llevó té dos veces y, la segunda, no se atrevió a interrumpir."
+        en: "{a} and {b} spent the afternoon at the residence. Bruna brought tea twice and, the second time, didn't dare interrupt."
+        variantes:
+          - si: "asiste(saul) y asiste(dario)"
+            texto:
+              es: "Saúl y Dario jugaron al ajedrez sin terminar la partida. Saúl dejó los guantes en la mesa de la entrada y se fue sin ellos."
+              en: "Saúl and Dario played chess without finishing the game. Saúl left his gloves on the hall table and went home without them."
+          - si: "asiste(irene) y asiste(isolda)"
+            texto:
+              es: "Irene leyó en voz alta e Isolda escuchó con los ojos cerrados. Luego fue Isolda quien leyó, y no se equivocó ni una vez."
+              en: "Irene read aloud and Isolda listened with her eyes closed. Then Isolda read, and didn't stumble once."
+          - si: "asiste(nilo) y asiste(camila)"
+            texto:
+              es: "Camila le enseñó a Nilo a jugar a las cartas como juegan las viudas: sin piedad. Nilo perdió todo y se rió todo el rato."
+              en: "Camila taught Nilo to play cards the way widows play: without mercy. Nilo lost everything and laughed the whole time."
+          - si: "asiste(teo) y asiste(celia)"
+            texto:
+              es: "Teo intentó enseñarle a Celia a contar un chiste. Celia ensayó la entonación nueve veces. Al décimo, Teo se rió de verdad."
+              en: "Teo tried to teach Celia how to tell a joke. Celia rehearsed the delivery nine times. On the tenth, Teo genuinely laughed."
+          - si: "asiste(dario) y asiste(celia)"
+            texto:
+              es: "Dario y Celia bailaron sin música en la sala pequeña. Ella no contó. Él no fingió. Bruna dice que no los vio."
+              en: "Dario and Celia danced without music in the small parlour. She didn't count. He didn't pretend. Bruna says she didn't see them."
+          - si: "asiste(teo) y asiste(irene)"
+            texto:
+              es: "Teo leyó por fin uno de sus versos. Irene no dijo si se lo creía, pero le pidió otro."
+              en: "Teo finally read one of his verses. Irene didn't say whether she believed it, but she asked for another."
+          - si: "asiste(saul) y asiste(isolda)"
+            texto:
+              es: "Saúl e Isolda redactaron juntos una carta a sus padres sobre los convoyes. Tardaron tres horas y se rieron mucho. No la enviaron."
+              en: "Saúl and Isolda drafted a letter to their fathers about the convoys together. It took three hours and they laughed a great deal. They didn't send it."
+
+  # ── Sábado 20 · Teatro de gala bajo la luna llena (OBLIGATORIO; dos parejas en el palco) ──
+  - id: s4_teatro
+    tipo: teatro
+    lugar: teatro
+    dia: 20
+    duracion: 1
+    plazas: { min: 4, max: 4 }
+    regla: parejas
+    obligatorio: true
+    requisito: { intelecto: 5, estatus: 5, presencia: 5 }
+    anfitrion: { es: "El Teatro del Puente", en: "The Bridge Theatre" }
+    titulo: { es: "Teatro de gala", en: "The gala performance" }
+    resumen:
+      es: "Función de gala con el techo de cristal abierto a la luna llena. Le corresponde un palco: dos parejas, a la vista de toda la sala."
+      en: "A gala performance with the glass roof opened to the full moon. You have a box: two couples, in full view of the house."
+    a_favor:
+      - { es: "Toda Valcenda estará mirando los palcos, no el escenario", en: "All Valcenda will be watching the boxes, not the stage" }
+    en_contra:
+      - { es: "La función termina tarde, con la luna en lo alto", en: "The performance ends late, with the moon high" }
+      - { es: "La tía de Dario tiene el palco de al lado", en: "Dario's aunt has the next box" }
+    carta:
+      saludo: { es: "A la casamentera de la Temporada,", en: "To the Matchmaker of the Season," }
+      cuerpo:
+        es: >
+          El Teatro del Puente tiene el honor de reservarle el palco cuarto para la función de gala del sábado:
+          «La dama del faro», en tres actos, con el techo abierto a la luna llena. Le rogamos que lo ocupen dos parejas.
+          Un palco vacío en una noche así se comenta más que cualquier escena.
+        en: >
+          The Bridge Theatre has the honour of reserving the fourth box for you at Saturday's gala:
+          “The Lady of the Lighthouse,” in three acts, with the roof open to the full moon. We ask that two couples occupy it.
+          An empty box on such a night is talked about more than any scene.
+      firma: { es: "La dirección del Teatro del Puente", en: "The management of the Bridge Theatre" }
+    incidente:
+      dia: 20
+      situacion:
+        es: "En el entreacto, Amalia Miravés ocupa el palco de al lado con las cortinas echadas. Media sala mira hacia allí, y después hacia {a}. Alguien susurra «La Hoja tenía razón»."
+        en: "In the interval, Amalia Miravés takes the next box with its curtains drawn. Half the house looks over, then at {a}. Someone whispers, “The Sheet was right.”"
+      cita: { habla: a, bark: incidente }
+      opciones:
+        - id: saludar
+          habilidad: estatus
+          d: 5
+          texto: { es: "Saludar a Amalia en público, con toda cortesía", en: "Greet Amalia in public, with every courtesy" }
+          pista_coste: { es: "Calmará la sala; Amalia lo recordará", en: "It'll calm the house; Amalia will remember" }
+          consecuencia: { efectos: [amalia_saludada], reputacion_si_exito: 1 }
+          exito:
+            es: "{mejor} cruza al palco vecino y saluda. Amalia descorre una cortina, un palmo, y sonríe. La sala decide que no hay nada que ver."
+            en: "{mejor} crosses to the next box and greets her. Amalia draws back a curtain, a hand's breadth, and smiles. The house decides there's nothing to see."
+          medias:
+            es: "Amalia responde al saludo sin descorrer las cortinas. La sala sigue mirando, aunque menos."
+            en: "Amalia returns the greeting without opening the curtains. The house keeps looking, if less."
+          fallo:
+            es: "El saludo llega tarde y parece una disculpa. Ahora la sala mira a los dos palcos."
+            en: "The greeting comes too late and looks like an apology. Now the house is watching both boxes."
+        - id: ignorar
+          habilidad: presencia
+          d: 5
+          texto: { es: "Hacer que el palco brille más que el chisme", en: "Make the box shine brighter than the gossip" }
+          pista_coste: { es: "La sala mirará a los suyos", en: "The house will look at your people" }
+          consecuencia: { cercania_asistentes: 1 }
+          exito:
+            es: "El palco cuarto ríe, conversa y aplaude a destiempo con tanta gracia que la sala deja de mirar las cortinas."
+            en: "The fourth box laughs, chats and applauds out of turn so charmingly that the house stops looking at the curtains."
+          medias:
+            es: "Funciona hasta el tercer acto, cuando alguien vuelve a señalar el palco de Amalia."
+            en: "It works until the third act, when someone points at Amalia's box again."
+          fallo:
+            es: "Las risas del palco suenan forzadas bajo la luna. Alguien pide silencio."
+            en: "The laughter from the box sounds forced under the moon. Someone calls for silence."
+        - id: observar
+          habilidad: intelecto
+          d: 5
+          texto: { es: "Observar quién no está en su sitio esta noche", en: "Notice who isn't where they should be tonight" }
+          pista_coste: { es: "Verá lo que otros no ven", en: "You'll see what others miss" }
+          consecuencia: { efectos: [pista_ausencias] }
+          exito:
+            es: "{mejor} cuenta los palcos: Amalia está, Dario está, Mara está. Faltan dos personas: un caballero que siempre llega primero e Irene Salvat, que dijo que vendría."
+            en: "{mejor} counts the boxes: Amalia is here, Dario is here, Mara is here. Two people are missing: a gentleman who's always first to arrive, and Irene Salvat, who said she'd come."
+          medias:
+            es: "{mejor} nota que alguien falta, pero no sabe quién hasta que se apagan las luces."
+            en: "{mejor} senses someone is missing, but can't tell who before the lights go down."
+          fallo:
+            es: "{mejor} mira tanto a los palcos que se pierde el final de la obra. Lo comenta medio teatro."
+            en: "{mejor} watches the boxes so closely that the end of the play goes unseen. Half the theatre remarks on it."
+    # Si Nilo está en el palco, este incidente SUSTITUYE al anterior (sistemas §6, «Ausente por luna»).
+    incidente_riesgo:
+      si: "asiste(nilo)"
+      dia: 20
+      situacion:
+        es: "Al abrirse el techo de cristal, la luz de la luna llena entra en la sala. Nilo se pone muy pálido, se excusa y sale del palco sin mirar a nadie. {a} lo ve alejarse hacia el río."
+        en: "As the glass roof opens, the full moon's light pours into the house. Nilo goes very pale, excuses himself and leaves the box without looking at anyone. {a} watches him head toward the river."
+      cita: { habla: a, bark: incidente }
+      opciones:
+        - id: cubrir
+          habilidad: chisme
+          d: 5
+          facil_si: { si: "asiste(celia) y marca(celia_cubre_nilo)", d: 2 }   # Celia ya tenía la excusa preparada
+          texto: { es: "Cubrirlo: inventar una excusa para el palco", en: "Cover for him: invent an excuse for the box" }
+          pista_coste: { es: "Su secreto quedará a salvo, si la excusa convence", en: "His secret will be safe, if the excuse convinces" }
+          consecuencia: { efectos: [nilo_cubierto] }
+          exito:
+            es: "«Una cita», dice {mejor}, «con una dama que no quiere que la vean.» El palco se ríe, la sala también, y nadie vuelve a preguntar."
+            en: "“An assignation,” says {mejor}, “with a lady who doesn't wish to be seen.” The box laughs, so does the house, and nobody asks again."
+          medias:
+            es: "La excusa convence a medias. Alguien del palco de enfrente apunta la hora."
+            en: "The excuse half convinces. Someone in the box opposite notes the time."
+          fallo:
+            es: "La excusa se contradice sola. Para el tercer acto, media sala sabe que Nilo Lobreda se fue corriendo."
+            en: "The excuse contradicts itself. By the third act, half the house knows Nilo Lobreda ran out."
+        - id: seguirlo
+          habilidad: presencia
+          d: 5
+          texto: { es: "Seguirlo, por si necesita ayuda", en: "Follow him, in case he needs help" }
+          pista_coste: { es: "Puede ayudarlo. Puede ver lo que él no quiere que vea", en: "You might help him. You might see what he doesn't want seen" }
+          consecuencia: { efectos: [nilo_visto], cercania_asistentes: 1 }
+          exito:
+            es: "{mejor} lo alcanza junto al río. Nilo tiembla, de espaldas, y le pide sin volverse que se vaya. «Por favor. Mañana se lo cuento todo. Hoy no.» {mejor} se va. Lo cumple."
+            en: "{mejor} catches up with him by the river. Nilo is shaking, his back turned, and asks without turning round to be left alone. “Please. I'll tell you everything tomorrow. Not tonight.” {mejor} goes. And keeps that promise."
+          medias:
+            es: "{mejor} lo pierde entre los faroles del puente. Sólo encuentra su chaqueta, doblada con cuidado sobre la barandilla."
+            en: "{mejor} loses him among the lanterns on the bridge. All that's left is his coat, carefully folded over the railing."
+          fallo:
+            es: "{mejor} lo sigue hasta el río y alguien más los sigue a los dos. Por la mañana, ya circula que Nilo Lobreda «huyó del teatro como un animal asustado»."
+            en: "{mejor} follows him to the river, and someone else follows them both. By morning it's going round that Nilo Lobreda “fled the theatre like a frightened animal.”"
+        - id: dejarlo
+          habilidad: estatus
+          d: 4
+          texto: { es: "Dejarlo ir y disculparlo como indispuesto", en: "Let him go and give out that he's indisposed" }
+          pista_coste: { es: "Un palco incompleto; un secreto intacto", en: "A box one short; a secret intact" }
+          consecuencia: { efectos: [nilo_cubierto] }
+          exito:
+            es: "{mejor} manda una nota a la dirección: el señor Lobreda está indispuesto. El palco queda incompleto, pero digno."
+            en: "{mejor} sends a note to the management: Mr. Lobreda is indisposed. The box is one short, but dignified."
+          medias:
+            es: "La nota llega, pero el asiento vacío se ve desde toda la sala."
+            en: "The note arrives, but the empty seat is visible from the whole house."
+          fallo:
+            es: "La nota se pierde. Durante dos actos, el asiento de Nilo es lo más mirado del teatro."
+            en: "The note goes astray. For two acts, Nilo's seat is the most-watched thing in the theatre."
+    desenlaces:
+      favorable:
+        titulo: { es: "Bajo el techo de cristal", en: "Under the glass roof" }
+        publico:
+          es: "El palco cuarto fue el más admirado de la gala. {grupo} vieron «La dama del faro» bajo la luna, y la sala los vio a ellos."
+          en: "The fourth box was the most admired at the gala. {grupo} watched “The Lady of the Lighthouse” under the moon, and the house watched them."
+          variantes:
+            - si: "asiste(irene) y asiste(isolda)"
+              texto:
+                es: "Isolda Marén e Irene Salvat compartieron un programa durante toda la función. En el tercer acto, Isolda dejó de leerlo y miró a Irene."
+                en: "Isolda Marén and Irene Salvat shared a programme for the whole performance. In the third act, Isolda stopped reading it and looked at Irene."
+            - si: "asiste(saul) y asiste(dario)"
+              texto:
+                es: "El capitán Veyra y el señor Miravés compartieron palco y no se dirigieron la palabra en público. En privado, dicen, no pararon."
+                en: "Captain Veyra and Mr. Miravés shared the box and didn't exchange a word in public. In private, they say, they didn't stop."
+            - si: "asiste(celia) y marca(celia_error_tapado)"
+              texto:
+                es: "Celia Lobreda tropezó en la escalera del palco, se levantó sola y saludó a la sala. La ovación fue para ella."
+                en: "Celia Lobreda tripped on the box stairs, got up on her own and bowed to the house. The ovation was hers."
+        privado:
+          es: "La reina no estaba, pero envió a Mireya. Mireya le dice: «Su Majestad querrá saber quién faltó esta noche. Yo ya lo sé.»"
+          en: "The Queen wasn't there, but she sent Mireya. Mireya tells you: “Her Majesty will want to know who was missing tonight. I already know.”"
+          variantes:
+            - si: "asiste(nilo) y marca(nilo_cubierto)"
+              texto:
+                es: "Al amanecer, Nilo deja una nota en la residencia: «Gracias. Algún día se lo explicaré. Te lo prometo.» Esta vez no se ha corregido."
+                en: "At dawn, Nilo leaves a note at the residence: “Thank you. Some day I'll explain. I promise you.” This time he hasn't corrected himself."
+      medias:
+        titulo: { es: "Un palco a medias", en: "A box half watched" }
+        publico:
+          es: "La gala fue hermosa y el palco cuarto, correcto. La sala pasó más tiempo mirando las cortinas de los Miravés."
+          en: "The gala was beautiful and the fourth box respectable. The house spent more time watching the Miravés curtains."
+        privado:
+          es: "En la salida, alguien ha dejado un pliego doblado en cada carruaje. Es la tercera Hoja, un día antes de lo previsto."
+          en: "At the exit, someone has left a folded sheet in every carriage. It's the third Sheet, a day early."
+      desaire:
+        titulo: { es: "La noche de la luna", en: "The night of the moon" }
+        publico:
+          es: "En la gala del Teatro del Puente, el palco de la casamentera dio más que hablar que la obra. Ninguna de las cosas que se dicen es buena."
+          en: "At the Bridge Theatre gala, the Matchmaker's box caused more talk than the play. None of what's being said is good."
+        privado:
+          es: "Mireya le escribe una sola línea: «La reina leerá la Hoja antes que la Crónica.»"
+          en: "Mireya writes you a single line: “The Queen will read the Sheet before the Chronicle.”"
+      sin_asistentes:
+        publico:
+          es: "El palco cuarto se quedó vacío la noche de la gala. Bajo la luna llena, se veía desde toda la sala."
+          en: "The fourth box stood empty on gala night. Under the full moon, the whole house could see it."
+
+# ─────────────────────────────────────────────────────────────────────────────
+cierre:
+  cronica:
+    numero: 4
+    cabecera: { es: "Crónica de salones", en: "The Salon Chronicle" }
+    subtitulo: { es: "Número 4 · Impreso por Calce, Calle de los Sellos", en: "Issue 4 · Printed by Calce, Street of Seals" }
+    entradilla:
+      es: "Luna llena, techo abierto y un pliego en cada carruaje. Valcenda no dormirá tranquila hasta el próximo cuarto menguante."
+      en: "A full moon, an open roof and a sheet in every carriage. Valcenda won't sleep soundly until the next waning quarter."
+    noticias:
+      - id: n4_teatro
+        evento: s4_teatro
+        usa_desenlace_publico: true
+        titular: { es: "La dama del faro", en: "The Lady of the Lighthouse" }
+      - id: n4_cena
+        evento: s4_cena_calce
+        si: "asistio(s4_cena_calce, *)"
+        usa_desenlace_publico: true
+        titular: { es: "Entre prensas", en: "Among the presses" }
+      - id: n4_arco
+        evento: s4_arco
+        si: "asistio(s4_arco, *)"
+        usa_desenlace_publico: true
+        titular: { es: "Flechas y ásteres", en: "Arrows and asters" }
+      - id: n4_nilo
+        si: "marca(nilo_visto) y no marca(nilo_cubierto)"
+        titular: { es: "Una salida apresurada", en: "A hasty exit" }
+        texto:
+          es: "El joven Lobreda abandonó la gala en mitad del segundo acto. Esta Crónica no especula. Sólo informa de que corría."
+          en: "Young Lobreda left the gala in the middle of the second act. This Chronicle does not speculate. It merely reports that he was running."
+      - id: n4_relleno_1
+        relleno: true
+        titular: { es: "Cortinas", en: "Curtains" }
+        texto:
+          es: "Los tapiceros de Alto Laurel han vendido más cortinas gruesas esta semana que en todo el año. Nadie quiere que lo miren por la ventana."
+          en: "The upholsterers of Alto Laurel sold more heavy curtains this week than in the whole year. Nobody wants to be seen through a window."
+    pie:
+      es: "La Crónica firma todo lo que publica. Esta semana, con más orgullo que nunca."
+      en: "The Chronicle signs everything it prints. This week, more proudly than ever."
+
+  # Hoja nº 3: «alguien de los salones no es lo que aparenta». Apunta a Dario (pista falsa). Si Nilo fue visto,
+  # también lo roza a él: es el momento en que el pliego de Irene empieza a poner en peligro a gente que aprecia.
+  hoja:
+    numero: 3
+    cabecera: { es: "La Hoja sin Firma", en: "The Unsigned Sheet" }
+    entradilla:
+      es: "Alguien de los salones no es lo que aparenta."
+      en: "Someone in the salons is not what they seem."
+    cuerpo:
+      es: "Llega cuando se pone el sol. Su carruaje nunca abre las cortinas. Su familia compra papeles quemados. Interesante. ¿Por qué nadie le ha visto nunca a mediodía?"
+      en: "They arrive as the sun sets. Their carriage never opens its curtains. Their family buys burned papers. Interesting. Why has no one ever seen them at noon?"
+      variantes:
+        - si: "marca(nilo_visto) y no marca(nilo_cubierto)"
+          texto:
+            es: "Y no es el único. Otro caballero abandona los teatros cuando sale la luna. El Pacto del Umbral tenía una página para cada uno."
+            en: "Nor are they the only one. Another gentleman leaves theatres when the moon rises. The Threshold Pact had a page for each of them."
+        - si: "marca(amalia_saludada)"
+          texto:
+            es: "Algunos ya la saludan en público. Valcenda siempre ha preferido la cortesía a las preguntas."
+            en: "Some already greet her in public. Valcenda has always preferred courtesy to questions."
+    pie:
+      es: "— Folios 82 y 83. El 84 lo guardamos para el final."
+      en: "— Folios 82 and 83. We are keeping 84 for the end."
+    pista: "Pista falsa: todo apunta a los Miravés. Pista real: Irene tenía tinta de imprenta en los dedos el martes (s4_cena_calce) y faltó al teatro (pista_ausencias)."
+    efectos: [hoja_3_publicada]
+
+  solo_sus_ojos:
+    observaciones:
+      - si: "asistio(s4_cena_calce, irene)"
+        texto:
+          es: "Irene llevaba tinta de imprenta en los dedos el martes. No de registro: de imprenta. Usted conoce la diferencia; Mara se la enseñó."
+          en: "Irene had printer's ink on her fingers on Tuesday. Not ledger ink: printer's ink. You know the difference; Mara taught you."
+      - si: "marca(pista_ausencias)"
+        texto:
+          es: "La noche del teatro faltaron dos personas: Nilo, que siempre llega primero, e Irene, que había dicho que vendría. La Hoja apareció en los carruajes antes de terminar la función."
+          en: "On theatre night two people were missing: Nilo, who is always first to arrive, and Irene, who had said she'd come. The Sheet was in the carriages before the performance ended."
+      - si: "marca(pista_archivera)"
+        texto:
+          es: "Lo dijo en voz alta en casa de Mara: quien escribe es una archivera, o un escribiente. Desde entonces no ha podido dejar de pensarlo."
+          en: "You said it aloud at Mara's: whoever writes it is an archivist, or a clerk. You haven't been able to stop thinking about it since."
+      - si: "marca(dario_sospechoso)"
+        texto:
+          es: "Media Valcenda sospecha de Dario. Usted no. Dario no sabe escribir una carta sin faltas de ortografía, y la Hoja no tiene ni una."
+          en: "Half of Valcenda suspects Dario. You don't. Dario can't write a letter without spelling mistakes, and the Sheet has none."
+      - si: "marca(nilo_visto)"
+        texto:
+          es: "Nilo temblaba junto al río y no quiso volverse. Le prometió contarlo todo. Usted decide no preguntar hasta que él quiera."
+          en: "Nilo was shaking by the river and wouldn't turn round. He promised to tell you everything. You decide not to ask until he's ready."
+      - si: "marca(amalia_conocida)"
+        texto:
+          es: "Amalia Miravés quiere que nadie lea esos papeles «antes de tiempo». Usted empieza a entender que no los quiere para hacer daño, sino para que no se lo hagan a alguien."
+          en: "Amalia Miravés wants no one to read those papers “before their time.” You begin to understand she doesn't want them to do harm, but to keep harm from someone."
+      - si: "marca(teo_conversacion_seria)"
+        texto:
+          es: "Teo quiere a alguien que se ría con él, no de él. Lo dijo una vez. A usted le basta."
+          en: "Teo wants someone who laughs with him, not at him. He said it once. That's enough for you."
+      - si: "semana == 4"
+        texto:
+          es: "Quedan dos semanas. Las parejas ya no son posibilidades: son personas que se esperan en los rincones."
+          en: "Two weeks left. The couples are no longer possibilities: they are people waiting for each other in corners."
+
+  gancho:
+    pantalla: residencia
+    lineas:
+      - habla: nota
+        es: "Señora: tres noticias. La primera, que llegan tormentas de Nácar. La segunda, que la deuda Miravés contra la señora Ferrán vence la semana que viene."
+        en: "Madam: three pieces of news. First, storms are coming from Nácar. Second, the Miravés claim against Mrs. Ferrán falls due next week."
+      - habla: nota
+        es: "La tercera, que ha llegado un correo de Tiria para el capitán Veyra. Lleva el sello del ejército. No lo ha abierto delante de nadie."
+        en: "The third: a letter has come from Tiria for Captain Veyra. It bears the army seal. He hasn't opened it in front of anyone."
