@@ -1,0 +1,511 @@
+{
+ "semana": {
+  "numero": 3,
+  "nombre": {
+   "es": "Noche de los Faroles",
+   "en": "Lantern Night"
+  },
+  "mes": "nieblas",
+  "dias": [
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14
+  ],
+  "hecho_del_reino": {
+   "titulo": {
+    "es": "Ochenta años del incendio",
+    "en": "Eighty years since the fire"
+   },
+   "texto": {
+    "es": "Hace ochenta años ardió el Archivo Real la Noche del Censo. Esta semana Valcenda enciende faroles sobre el río por todo lo que se perdió. La reina bajará a los muelles el sábado.",
+    "en": "Eighty years ago the Royal Archive burned on Census Night. This week Valcenda lights lanterns on the river for everything that was lost. The Queen will come down to the wharves on Saturday."
+   }
+  }
+ },
+ "apertura": {
+  "lineas": [
+   {
+    "habla": "nota",
+    "es": "Señora: la Hoja sin Firma está en todas las mesas del desayuno. Nadie admite haberla leído. Todos la citan.",
+    "en": "Madam: the Unsigned Sheet is on every breakfast table. Nobody admits to reading it. Everybody quotes it."
+   },
+   {
+    "habla": "nota",
+    "es": "Y Mara Calce ha vuelto. Espera en el recibidor con el sombrero puesto, que es su manera de decir que no piensa irse.",
+    "en": "And Mara Calce is back. She's waiting in the hall with her hat on, which is her way of saying she isn't leaving."
+   }
+  ],
+  "recuerdos": [
+   {
+    "si": "marca(hoja_retirada)",
+    "texto": {
+     "es": "En los salones se comenta que usted mandó recoger los pliegos del baile. Unos lo llaman prudencia. Otros, miedo.",
+     "en": "The salons are saying you had the sheets gathered up at the ball. Some call it prudence. Others, fear."
+    }
+   },
+   {
+    "si": "marca(pista_archivo_interno)",
+    "texto": {
+     "es": "El escribiente del Archivo le hizo una seña al pasar: el legajo 80 ha vuelto a salir. Esta vez nadie lo ha apuntado.",
+     "en": "The Archive clerk signalled to you as you passed: bundle 80 has gone out again. This time nobody wrote it down."
+    }
+   },
+   {
+    "si": "marca(irene_recelosa)",
+    "texto": {
+     "es": "Irene no vino al té del lunes. Mandó decir que tenía trabajo. Es la primera vez que se excusa.",
+     "en": "Irene didn't come to Monday's tea. She sent word she had work. It's the first time she's sent an excuse."
+    }
+   },
+   {
+    "si": "marca(irene_agradecida)",
+    "texto": {
+     "es": "Irene le manda saludos por medio de Bruna. Bruna dice que es la primera vez que Irene manda saludos a alguien.",
+     "en": "Irene sends her regards through Bruna. Bruna says it's the first time Irene has sent anyone her regards."
+    }
+   },
+   {
+    "si": "marca(rumor_compromiso_paso)",
+    "texto": {
+     "es": "Las casas Lobreda y Veyra ya no piden mesas contiguas: piden la misma. El rumor del compromiso del paso tiene fecha, aunque nadie la ha dicho.",
+     "en": "Houses Lobreda and Veyra no longer ask for neighbouring tables: they ask for the same one. The rumour of the pass engagement has a date, though no one has said it."
+    }
+   }
+  ],
+  "decision": [
+   {
+    "id": "recibir_mara",
+    "texto": {
+     "es": "Recibir a Mara Calce",
+     "en": "Receive Mara Calce"
+    },
+    "resultado": {
+     "es": "Mara deja la Hoja sobre su mesa. «Esta semana he vendido el doble de Crónicas. No me mire así: yo no la escribí. Ojalá. Pero está mal impresa: ninguna prensa mía deja esas manchas.» Antes de irse, pregunta qué sabe usted. Usted no contesta. Ella sonríe, como si eso fuera una respuesta.",
+     "en": "Mara drops the Sheet on your desk. “I sold twice as many Chronicles this week. Don't look at me like that: I didn't write it. I wish I had. But it's badly printed: no press of mine leaves smudges like that.” Before leaving, she asks what you know. You don't answer. She smiles, as though that were an answer."
+    },
+    "efectos": [
+     "mara_recibida",
+     "pista_mala_impresion"
+    ]
+   },
+   {
+    "id": "despedir_mara",
+    "texto": {
+     "es": "Despedirla con una nota cortés",
+     "en": "Send her away with a polite note"
+    },
+    "resultado": {
+     "es": "Mara le devuelve la nota con una línea debajo de la suya: «Entonces lo averiguaré sola.» La letra es grande y rápida.",
+     "en": "Mara returns your note with one line beneath yours: “Then I'll find out on my own.” The handwriting is large and hurried."
+    },
+    "efectos": [
+     "mara_investiga"
+    ]
+   }
+  ]
+ },
+ "peticiones": [
+  {
+   "id": "p3_camila_subasta",
+   "personaje": "camila",
+   "evento": "s3_subasta",
+   "texto": {
+    "es": "Camila: «Subastan el catalejo de mi marido entre los objetos del Archivo. No quiero comprarlo. Quiero saber quién lo compra.»",
+    "en": "Camila: “They're auctioning my husband's spyglass with the Archive's things. I don't want to buy it. I want to know who does.”"
+   },
+   "si_cumple": {
+    "es": "Le cuenta a Camila quién se llevó el catalejo: la casa Marén. Camila se ríe sin ganas. «Los aseguradores. Claro. Compran todo lo que se hunde.»",
+    "en": "You tell Camila who took the spyglass: House Marén. Camila laughs without humour. “The insurers. Of course. They buy everything that sinks.”"
+   },
+   "efectos_si_cumple": [
+    "catalejo_maren"
+   ],
+   "si_no": {
+    "es": "Camila no vuelve a preguntar. Pero esa semana la ve dos veces mirando el río desde el puente.",
+    "en": "Camila doesn't ask again. But twice that week you see her watching the river from the bridge."
+   }
+  },
+  {
+   "id": "p3_celia_clase",
+   "personaje": "celia",
+   "evento": "s3_clase",
+   "requiere_solicitante": true,
+   "texto": {
+    "es": "Celia: «Quiero ir a la lección de protocolo. Si la reina me habla en el río, quiero saber contestar. Y quiero ir sin Nilo.»",
+    "en": "Celia: “I want to go to the protocol lesson. If the Queen speaks to me at the river, I want to know how to answer. And I want to go without Nilo.”"
+   },
+   "si_cumple": {
+    "es": "Celia vuelve de palacio con la espalda aún más recta, si es posible. Le dice a Nilo que no necesitó a nadie. Nilo aplaude demasiado fuerte.",
+    "en": "Celia comes back from the palace standing even straighter, if that's possible. She tells Nilo she didn't need anyone. Nilo claps far too loudly."
+   },
+   "si_no": {
+    "es": "Celia ensaya reverencias sola, frente al espejo del pasillo. Las cuenta en voz baja.",
+    "en": "Celia practises curtsies alone in front of the corridor mirror. She counts them under her breath."
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "id": "s3_subasta",
+   "tipo": "recepcion",
+   "lugar": "jardines",
+   "dia": 9,
+   "duracion": 1,
+   "plazas": {
+    "min": 2,
+    "max": 4
+   },
+   "regla": "cualquiera",
+   "obligatorio": false,
+   "requisito": {
+    "estatus": 5,
+    "presencia": 4,
+    "chisme": 4
+   },
+   "anfitrion": {
+    "es": "Leonora Serravalle",
+    "en": "Leonora Serravalle"
+   },
+   "titulo": {
+    "es": "Subasta por el Archivo",
+    "en": "An auction for the Archive"
+   },
+   "resumen": {
+    "es": "En los Jardines Serravalle se subastan objetos que se salvaron del incendio, o que dicen haberse salvado. Lo recaudado irá a la restauración del Archivo.",
+    "en": "At the Serravalle Gardens, objects saved from the fire, or said to have been, go under the hammer. The proceeds go to restoring the Archive."
+   },
+   "a_favor": [
+    {
+     "es": "Las casas pujan por caridad y, sobre todo, por ser vistas",
+     "en": "Houses bid for charity and, above all, to be seen"
+    },
+    {
+     "es": "Hay lotes que interesan a más de uno de su elenco",
+     "en": "Some lots interest more than one of your eight"
+    }
+   ],
+   "en_contra": [
+    {
+     "es": "Una puja mal hecha se recuerda más que un baile",
+     "en": "A badly judged bid is remembered longer than a dance"
+    }
+   ],
+   "carta": {
+    "saludo": {
+     "es": "Querida casamentera:",
+     "en": "Dear Matchmaker,"
+    },
+    "cuerpo": {
+     "es": "Ochenta años después, todavía aparecen en los desvanes cosas que se salvaron del incendio: un tintero, un mapa, un catalejo que nadie sabe cómo llegó allí. El martes los subastamos en mis jardines, por el Archivo. Traiga a sus jóvenes. Que pujen, que se dejen ver y, si es posible, que no paguen de más por un tintero.\n",
+     "en": "Eighty years on, things saved from the fire still turn up in attics: an inkwell, a map, a spyglass no one can explain. On Tuesday we'll auction them in my gardens, for the Archive. Bring your young people. Let them bid, let them be seen and, if possible, let them not overpay for an inkwell.\n"
+    },
+    "firma": {
+     "es": "Leonora Serravalle",
+     "en": "Leonora Serravalle"
+    }
+   },
+   "incidente": {
+    "dia": 9,
+    "situacion": {
+     "es": "Sale el lote 12: un cofre de papeles chamuscados, sin catalogar. Un hombre de guantes grises puja enseguida, y alto. Nadie sabe para quién puja.",
+     "en": "Lot 12 comes up: a chest of scorched, uncatalogued papers. A man in grey gloves bids at once, and high. Nobody knows who he's bidding for."
+    },
+    "cita": {
+     "habla": "a",
+     "bark": "incidente"
+    },
+    "opciones": [
+     {
+      "id": "pujar",
+      "habilidad": "estatus",
+      "d": 5,
+      "texto": {
+       "es": "Pujar por el cofre en nombre del Archivo",
+       "en": "Bid for the chest on the Archive's behalf"
+      },
+      "pista_coste": {
+       "es": "Todos sabrán que le interesan esos papeles",
+       "en": "Everyone will know you care about those papers"
+      },
+      "consecuencia": {
+       "efectos": [
+        "cofre_para_archivo",
+        "interes_por_papeles"
+       ],
+       "reputacion_si_exito": 1
+      },
+      "exito": {
+       "es": "{mejor} sube la puja con calma hasta que el hombre de los guantes grises se rinde. El cofre volverá al Archivo, y la sala aplaude.",
+       "en": "{mejor} raises the bid calmly until the man in grey gloves gives up. The chest will go back to the Archive, and the room applauds."
+      },
+      "medias": {
+       "es": "{mejor} se retira a tiempo. El cofre se lo lleva el hombre de los guantes grises, pero ha pagado el triple.",
+       "en": "{mejor} drops out in time. The man in grey gloves takes the chest, but he's paid three times its worth."
+      },
+      "fallo": {
+       "es": "La puja se dispara y {mejor} se queda con un precio que no puede pagar. Leonora lo arregla con una sonrisa. Nadie lo olvidará.",
+       "en": "The bidding runs away and {mejor} is left holding a price that can't be paid. Leonora smooths it over with a smile. No one will forget."
+      }
+     },
+     {
+      "id": "preguntar",
+      "habilidad": "chisme",
+      "d": 4,
+      "texto": {
+       "es": "Averiguar para quién puja el hombre de los guantes grises",
+       "en": "Find out who the man in grey gloves is bidding for"
+      },
+      "pista_coste": {
+       "es": "Un nombre, y el cofre en otras manos",
+       "en": "A name, and the chest in other hands"
+      },
+      "consecuencia": {
+       "efectos": [
+        "pujador_miraves"
+       ]
+      },
+      "exito": {
+       "es": "Un criado de los Serravalle lo reconoce: es el administrador de Amalia Miravés. La tía de Dario quiere esos papeles, y los quiere sin que se sepa.",
+       "en": "A Serravalle servant recognises him: he's Amalia Miravés's steward. Dario's aunt wants those papers, and wants them quietly."
+      },
+      "medias": {
+       "es": "Nadie lo conoce, pero su carruaje espera con las cortinas echadas, a pleno sol.",
+       "en": "No one knows him, but his carriage waits with its curtains drawn, in broad daylight."
+      },
+      "fallo": {
+       "es": "La pregunta llega a oídos del hombre de los guantes grises. Mira a {mejor} durante el resto de la subasta.",
+       "en": "The question reaches the man in grey gloves. He watches {mejor} for the rest of the auction."
+      }
+     },
+     {
+      "id": "examinar",
+      "habilidad": "intelecto",
+      "d": 5,
+      "texto": {
+       "es": "Pedir, antes de pujar, examinar los papeles",
+       "en": "Ask to examine the papers before bidding"
+      },
+      "pista_coste": {
+       "es": "Un dato que nadie debería ver",
+       "en": "Something no one was meant to see"
+      },
+      "consecuencia": {
+       "efectos": [
+        "pista_sello_umbral"
+       ],
+       "cercania_asistentes": 1
+      },
+      "exito": {
+       "es": "Entre los papeles, medio quemado, hay un sello que {mejor} no reconoce: una puerta abierta dentro de un círculo. Leonora cierra el cofre un poco deprisa.",
+       "en": "Among the papers, half burned, is a seal {mejor} doesn't recognise: an open door inside a circle. Leonora closes the chest a little too quickly."
+      },
+      "medias": {
+       "es": "Les dejan mirar un momento. Hay fechas de hace ochenta años y una palabra repetida: «Umbral».",
+       "en": "They're allowed a moment's look. There are dates from eighty years ago and one word repeated: “Threshold.”"
+      },
+      "fallo": {
+       "es": "Leonora se niega con amabilidad: «Los lotes se compran, querida, no se leen.» La sala se ríe.",
+       "en": "Leonora refuses kindly: “Lots are for buying, my dear, not for reading.” The room laughs."
+      }
+     }
+    ]
+   },
+   "desenlaces": {
+    "favorable": {
+     "titulo": {
+      "es": "Martillo y caridad",
+      "en": "Hammer and charity"
+     },
+     "publico": {
+      "es": "La subasta de los Serravalle recaudó más que ninguna en diez años. {grupo} pujaron con elegancia y se fueron con la sala a su favor.",
+      "en": "The Serravalle auction raised more than any in ten years. {grupo} bid with elegance and left with the room on their side.",
+      "variantes": [
+       {
+        "si": "asiste(saul)",
+        "texto": {
+         "es": "El capitán Veyra compró un mapa antiguo del paso de Greda por una suma discreta, y lo regaló al Archivo en el acto. Nadie le había visto regalar nada.",
+         "en": "Captain Veyra bought an old map of the Greda pass for a discreet sum and gave it to the Archive on the spot. No one had ever seen him give anything away."
+        }
+       },
+       {
+        "si": "asiste(teo)",
+        "texto": {
+         "es": "Teo Rovena hizo de subastador durante tres lotes cuando el titular se quedó sin voz. Vendió un tintero por el precio de un caballo.",
+         "en": "Teo Rovena played auctioneer for three lots when the real one lost his voice. He sold an inkwell for the price of a horse."
+        }
+       }
+      ]
+     },
+     "privado": {
+      "es": "Leonora le escribe para darle las gracias, y añade al final: «El lote 12 no estaba en mi lista. No sé quién lo trajo.»",
+      "en": "Leonora writes to thank you, and adds at the end: “Lot 12 wasn't on my list. I don't know who brought it.”",
+      "variantes": [
+       {
+        "si": "asiste(irene)",
+        "texto": {
+         "es": "Irene no pujó por nada. Pero no apartó los ojos del lote 12 hasta que se lo llevaron, y se fue sin despedirse.",
+         "en": "Irene didn't bid on anything. But she didn't take her eyes off lot 12 until it was carried away, and she left without saying goodbye."
+        }
+       },
+       {
+        "si": "asiste(dario) y marca(pujador_miraves)",
+        "texto": {
+         "es": "Cuando se supo para quién pujaba el hombre de los guantes grises, Dario se puso muy serio. Después se rió demasiado alto de algo que no tenía gracia.",
+         "en": "When it came out who the man in grey gloves was bidding for, Dario went very serious. Then he laughed too loudly at something that wasn't funny."
+        }
+       }
+      ]
+     }
+    },
+    "medias": {
+     "titulo": {
+      "es": "Pujas tibias",
+      "en": "Lukewarm bids"
+     },
+     "publico": {
+      "es": "La subasta por el Archivo fue correcta. {grupo} pujaron poco y bien, que en estos tiempos de cobros ya es mucho.",
+      "en": "The auction for the Archive was respectable. {grupo} bid little and wisely, which in this season of reckonings is saying a lot."
+     },
+     "privado": {
+      "es": "El cofre del lote 12 salió de los jardines en un carruaje sin escudo. Nadie de su elenco sabe adónde fue.",
+      "en": "The chest from lot 12 left the gardens in a carriage without a crest. None of your eight knows where it went.",
+      "variantes": [
+       {
+        "si": "asiste(irene)",
+        "texto": {
+         "es": "Irene siguió el carruaje con la mirada hasta el final de la calle. Luego le preguntó la hora a {mejor}, aunque llevaba reloj.",
+         "en": "Irene followed the carriage with her eyes to the end of the street. Then she asked {mejor} the time, though she was wearing a watch."
+        }
+       }
+      ]
+     }
+    },
+    "desaire": {
+     "titulo": {
+      "es": "Una puja de más",
+      "en": "One bid too many"
+     },
+     "publico": {
+      "es": "En la subasta de los Serravalle se pujó más de lo que se podía pagar. La Crónica no dirá quién; ya lo sabe todo el mundo.",
+      "en": "At the Serravalle auction someone bid more than they could pay. The Chronicle won't say who; everyone already knows."
+     },
+     "privado": {
+      "es": "Leonora no la ha invitado al té del jueves. Es la primera vez en tres temporadas.",
+      "en": "Leonora hasn't invited you to Thursday's tea. It's the first time in three seasons."
+     }
+    }
+   }
+  },
+  {
+   "id": "s3_clase",
+   "tipo": "clase",
+   "lugar": "palacio",
+   "dia": 10,
+   "duracion": 1,
+   "plazas": {
+    "min": 1,
+    "max": 3
+   },
+   "regla": "cualquiera",
+   "obligatorio": false,
+   "mejora": {
+    "habilidad": "estatus",
+    "cantidad": 1,
+    "tope": 4
+   },
+   "anfitrion": {
+    "es": "Mireya, secretaria de listas",
+    "en": "Mireya, Keeper of the Lists"
+   },
+   "titulo": {
+    "es": "Lección de protocolo",
+    "en": "A lesson in protocol"
+   },
+   "resumen": {
+    "es": "Mireya enseña cómo se habla a la reina: cuándo, cuánto y, sobre todo, cuándo no.",
+    "en": "Mireya teaches how to speak to the Queen: when, how much and, above all, when not to."
+   },
+   "a_favor": [
+    {
+     "es": "+1 en Estatus a cada asistente (hasta 4)",
+     "en": "+1 Standing for each attendee (up to 4)"
+    },
+    {
+     "es": "La reina estará en el río el sábado",
+     "en": "The Queen will be at the river on Saturday"
+    }
+   ],
+   "en_contra": [
+    {
+     "es": "Mireya no perdona una reverencia torcida",
+     "en": "Mireya does not forgive a crooked curtsy"
+    }
+   ],
+   "carta": {
+    "saludo": {
+     "es": "Señora casamentera:",
+     "en": "Madam Matchmaker:"
+    },
+    "cuerpo": {
+     "es": "Su Majestad bajará al río el sábado y, por primera vez en años, hablará con quien se le acerque. Eso me preocupa. El miércoles enseño en palacio lo que hay que saber: cómo se saluda, cuánto se habla y qué no se pregunta nunca. Mande a quien quiera que la reina recuerde su nombre por buenos motivos.\n",
+     "en": "Her Majesty will come down to the river on Saturday and, for the first time in years, will speak to whoever approaches her. That worries me. On Wednesday, at the palace, I'll teach what needs knowing: how to greet her, how much to say and what must never be asked. Send anyone who would like the Queen to remember their name for the right reasons.\n"
+    },
+    "firma": {
+     "es": "Mireya, secretaria de listas",
+     "en": "Mireya, Keeper of the Lists"
+    }
+   },
+   "completada": {
+    "publico": {
+     "es": "{grupo} tomaron lección de protocolo con Mireya, en palacio. Se dice que salieron saludando a las columnas.",
+     "en": "{grupo} took a lesson in protocol with Mireya at the palace. Word is they left bowing to the columns."
+    },
+    "privado": {
+     "es": "Mireya le escribe una línea: «Aprobados.» Viniendo de ella, es casi un abrazo.",
+     "en": "Mireya sends you one line: “Passed.” Coming from her, that's nearly an embrace.",
+     "variantes": [
+      {
+       "si": "asiste(isolda)",
+       "texto": {
+        "es": "Isolda casi no habló en toda la lección. Mireya dice que es justo lo que la reina prefiere: alguien que habla poco y, cuando habla, dice algo.",
+        "en": "Isolda barely spoke all lesson. Mireya says it's just what the Queen prefers: someone who says little and, when she speaks, says something."
+       }
+      },
+      {
+       "si": "asiste(nilo)",
+       "texto": {
+        "es": "Nilo tuteó a Mireya dos veces y se corrigió tres. Mireya le hizo repetir el saludo hasta que dejó de sonreír.",
+        "en": "Nilo addressed Mireya too familiarly twice and corrected himself three times. Mireya made him repeat the greeting until he stopped smiling."
+       }
+      },
+      {
+       "si": "asiste(teo)",
+       "texto": {
+        "es": "Teo preguntó qué no se le pregunta nunca a la reina. Mireya le contestó que eso, precisamente.",
+        "en": "Teo asked what one must never ask the Queen. Mireya told him: exactly that."
+       }
+      },
+      {
+       "si": "asiste(celia)",
+       "texto": {
+        "es": "Celia hizo la reverencia perfecta a la primera. Mireya no dijo nada, y Celia supo que eso era un elogio.",
+        "en": "Celia made a perfect curtsy on the first attempt. Mireya said nothing, and Celia knew that was praise."
+       }
+      },
+      {
+       "si": "asiste(dario)",
+       "texto": {
+        "es": "Dario sabía ya todo el protocolo. Mireya le preguntó dónde lo había aprendido. «En casa de mi tía», dijo, «se practica mucho de noche.»",
+        "en": "Dario already knew all the protocol. Mireya asked where he'd learned it. “At my aunt's,” he said. “We practise a great deal at night.”"
+       }
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

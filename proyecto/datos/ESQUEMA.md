@@ -192,3 +192,11 @@ Las claves usan puntos: `hoja.boton.carta`, `ajustes.idioma`. El motor resuelve 
 | `indisposicion: {dias, quien, aviso}` | Evento | Tras el evento, un asistente queda indispuesto esos días (sistemas §6). `quien` es la regla en texto; el motor la implementa. `{a}` es la persona indispuesta |
 | `reemplazo: {evento, opciones: {sustituir, reducir, retirar}}` | Evento que causa la indisposición | Textos de la hoja de reemplazo del evento afectado. `{a}` es la persona que falta y `{b}` quien la sustituye |
 | `cierre.hoja: {numero, cabecera, secreto_por_protagonista, pie, efectos, reaccion}` | Cierre | *La Hoja sin Firma*. Publica el secreto de quien tenga más fama (sistemas §5 bis); `reaccion` hace que el protagonista diga una frase de su `bark` |
+
+## 7. Campos añadidos al escribir la semana 3
+
+| Campo | Dónde | Significado |
+|---|---|---|
+| `apertura.recuerdos: [{si, texto}]` | Apertura | Líneas de la asistente según las marcas de semanas anteriores; se muestran todas las que se cumplan |
+| `peticiones[].requiere_solicitante: true` | Petición | Sólo se cumple si asiste quien la pide |
+| `peticiones[].efectos_si_cumple` | Petición | Marcas que se activan al cumplirse |

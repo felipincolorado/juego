@@ -102,6 +102,8 @@ def guion_semana(datos, lengua):
     ap = datos.get("apertura")
     if ap:
         out += ["## Apertura", ""] + [f"- **{l.get('habla') or 'narración'}**: {t(l)}" for l in ap.get("lineas", [])]
+        for r in ap.get("recuerdos", []):
+            out.append(f"- si `{r['si']}`: {t(r['texto'])}")
         for d in ap.get("decision", []):
             out.append(f"- Opción **{t(d['texto'])}** → {t(d.get('resultado'))}")
         out.append("")
@@ -156,6 +158,8 @@ def guion_semana(datos, lengua):
                 for v in d.get("variantes", []):
                     out.append(f"  - si `{v['si']}`: {t(v['texto'])}")
         out.append("")
+    if "cierre" not in datos:
+        return "\n".join(out + ["*(Cierre pendiente: se escribe en la parte 2.)*", ""])
     cr = datos["cierre"]["cronica"]
     out += [f"## {t(cr['cabecera'])} · {t(cr['subtitulo'])}", "", f"*{t(cr['entradilla'])}*", ""]
     for n in cr["noticias"]:
