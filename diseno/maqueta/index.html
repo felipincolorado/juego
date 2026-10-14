@@ -98,13 +98,27 @@ button{font:inherit;color:inherit}
 .cuadro.sacude{animation:sac .35s}
 @keyframes sac{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
 
-/* Hojas */
-.velo{position:absolute;inset:0;z-index:5;background:rgba(30,30,50,.25);opacity:0;pointer-events:none;transition:opacity .25s}
+/* Hojas: suben desde detrás de la mano de retratos. Dos alturas: compacta (asignar) y expandida (detalle). */
+.mundo{position:absolute;inset:0;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.velo{position:absolute;inset:0;z-index:4;background:rgba(30,30,50,.18);opacity:0;pointer-events:none;transition:opacity .3s}
 .velo.on{opacity:1;pointer-events:auto}
-.hoja{position:absolute;z-index:7;left:12px;right:12px;bottom:-100%;max-height:calc(100% - 90px);overflow-y:auto;background:var(--marfil);border:1px solid var(--oro);border-radius:6px;
-  padding:16px;box-shadow:0 -8px 24px rgba(0,0,0,.25);transition:bottom .3s ease}
-.hoja.on{bottom:calc(206px + env(safe-area-inset-bottom,0px))}
-.hoja.alta.on{bottom:12px}
+.hoja{--mano:206px;position:absolute;z-index:5;left:10px;right:10px;bottom:var(--mano);
+  max-height:calc(100% - var(--mano) - 80px);overflow:hidden;background:var(--marfil);border:1px solid var(--oro);border-bottom:none;border-radius:10px 10px 0 0;
+  padding:4px 16px 14px;box-shadow:0 -10px 28px rgba(30,30,60,.28);transform:translateY(calc(100% + var(--mano)));
+  transition:transform .38s cubic-bezier(.2,.8,.2,1), max-height .35s ease;touch-action:none}
+.hoja.on{transform:translateY(0)}
+.hoja.expandida{overflow-y:auto;touch-action:pan-y}
+.hoja .asa{display:block;width:100%;height:22px;border:none;background:none;cursor:grab;position:relative}
+.hoja .asa::before{content:"";position:absolute;left:50%;top:9px;width:40px;height:4px;border-radius:2px;background:var(--marfil-sombra);transform:translateX(-50%);box-shadow:inset 0 0 0 1px rgba(142,110,46,.35)}
+.detalle{display:none}
+.hoja.expandida .detalle{display:block}
+.mas{background:none;border:none;color:var(--seda-hondo);font-size:14px;cursor:pointer;padding:6px 0}
+.hoja.expandida .mas .t1, .hoja:not(.expandida) .mas .t2{display:none}
+.marcador.activo .icono{box-shadow:0 0 0 4px rgba(192,98,122,.35),0 2px 6px rgba(0,0,0,.2);animation:pulso 1.6s ease-in-out infinite}
+@keyframes pulso{50%{box-shadow:0 0 0 9px rgba(192,98,122,.12),0 2px 6px rgba(0,0,0,.2)}}
+.cuadro.noapto{filter:saturate(.25) brightness(.92);opacity:.7}
+.cuadro.elegido .marco{box-shadow:0 0 0 2px var(--rosa),0 8px 16px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.45), inset 0 0 0 3px var(--oro-hondo), inset 0 0 0 4px var(--oro-claro)}
+.volando{position:absolute;z-index:20;pointer-events:none;object-fit:cover;box-shadow:0 6px 16px rgba(0,0,0,.35)}
 .cerrar{position:absolute;top:6px;right:6px;width:40px;height:40px;border:none;background:none;font-size:20px;cursor:pointer;color:var(--tinta-suave)}
 .cab{display:flex;gap:12px;align-items:center;padding-right:30px}
 .fecha-g{width:48px;height:56px;flex:none;background:#FCF8EF;border:1px solid var(--tinta);outline:.5px solid var(--tinta);outline-offset:-4px;display:grid;place-items:center;
@@ -115,8 +129,10 @@ h2{font-family:var(--display);font-weight:600;font-size:24px;line-height:1.05;ma
 .cita{font-style:italic;margin:10px 0;font-size:15.5px}
 .fila{display:flex;gap:12px;align-items:flex-start}
 .plazas{display:flex;gap:8px;flex-wrap:wrap}
-.plaza{width:72px;height:108px;border:1.5px dashed var(--oro);display:grid;place-items:center;color:var(--tinta-suave);font-size:24px;background:var(--marfil-sombra);padding:4px}
-.plaza img{width:100%;height:100%;object-fit:cover;box-shadow:0 0 0 2px var(--oro)}
+.plaza{width:72px;height:108px;border:1.5px dashed var(--oro);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:var(--tinta-suave);font-size:12px;background:var(--marfil-sombra);padding:5px;text-align:center;line-height:1.2;cursor:pointer}
+.plaza b{font-size:24px;font-weight:400;line-height:1}
+.plaza.llena{border:none;padding:5px;background:linear-gradient(135deg,var(--oro-claro),var(--oro) 40%,var(--oro-hondo))}
+.plaza.llena img{width:100%;height:100%;object-fit:cover;display:block}
 .radar{flex:none}
 .lista{margin:10px 0 0;padding:0;list-style:none;font-size:14px;display:grid;gap:3px}
 .pie{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
@@ -137,14 +153,13 @@ h2{font-family:var(--display);font-weight:600;font-size:24px;line-height:1.05;ma
 </style>
 
 <div class="telefono" id="tel">
-  <div class="mapa" aria-hidden="true"></div>
+  <div class="mundo" id="mundo"><div class="mapa" aria-hidden="true"></div><div id="marcadores"></div></div>
   <div class="sombra-sup"></div><div class="sombra-inf"></div>
   <div class="barra">
     <button class="sobres" id="sobres" aria-label="Invitaciones por responder"><svg width="42" height="31" viewBox="0 0 50 36"><rect x="1" y="1" width="48" height="34" rx="2" fill="#FBF7F0" stroke="#2B3350" stroke-width="1.2"/><path d="M1.5 2 L25 20 L48.5 2" fill="none" stroke="#2B3350" stroke-width="1.2"/><circle cx="25" cy="19" r="4" fill="#C0627A"/></svg><span id="respn">0/4</span></button>
     <div class="calendario"><div class="semana-txt">Semana 1</div><div class="dias" id="dias"></div></div>
     <button class="sello" id="comenzar" aria-label="Comenzar semana">▶</button>
   </div>
-  <div id="marcadores"></div>
   <div class="nota" id="nota"><small>NOTA</small>Ya llegaron sus ocho jóvenes. Toque una carta para conocer a cada uno, o un sobre para responder.</div>
   <div class="mano" id="mano"></div>
   <div class="velo" id="velo"></div>
@@ -165,10 +180,12 @@ const $=s=>document.querySelector(s);
 function render(){
   const empieza=d=>D.eventos.some(e=>e.dia==d), sigue=d=>D.eventos.some(e=>d>e.dia&&d<e.dia+(e.duracion||1));
   $("#dias").innerHTML=[24,25,26,27,28,29,30].map(d=>`<div class="ficha-barra dia ${d==27?'hoy':''} ${empieza(d)?'evento':sigue(d)?'sigue':'libre'}" title="${empieza(d)?'Empieza un evento':sigue(d)?'Continúa un evento':'Sin eventos'}"><small>${DSEM[d]}</small>${d}</div>`).join("");
-  $("#marcadores").innerHTML=D.eventos.map(e=>{const [x,y]=POS[e.lugar];return `<button class="marcador ${e.obligatorio?'oblig':''} ${respondidas.has(e.id)?'resp-ok':''}" style="left:${x}%;top:${y}%" data-ev="${e.id}" aria-label="${e.titulo}"><span class="icono">${ICON[e.tipo]||"✉"}</span><span class="etq"><b>${e.dia}</b><span>${e.lugarN}</span></span></button>`}).join("");
+  $("#marcadores").innerHTML=D.eventos.map(e=>{const [x,y]=POS[e.lugar];return `<button class="marcador ${e.obligatorio?'oblig':''} ${respondidas.has(e.id)?'resp-ok':''} ${abierto&&abierto.e&&abierto.e.id==e.id?'activo':''}" style="left:${x}%;top:${y}%" data-ev="${e.id}" aria-label="${e.titulo}"><span class="icono">${ICON[e.tipo]||"✉"}</span><span class="etq"><b>${e.dia}</b><span>${e.lugarN}</span></span></button>`}).join("");
   document.querySelectorAll(".marcador").forEach(b=>b.onclick=()=>abrirEvento(b.dataset.ev));
   const ocup=ocupados();
-  $("#mano").innerHTML=D.elenco.map(p=>`<button class="cuadro ${abierto&&abierto.plazas&&abierto.plazas.includes(p.id)?'elegido':''} ${ocup[p.id]&&!(abierto&&abierto.plazas&&abierto.plazas.includes(p.id))?'ocupado':''}" data-p="${p.id}" aria-label="${p.pila}"><div class="marco"><div class="lienzo"><img alt="" src="${IMG[p.id]}"><div class="placa">${p.pila}</div></div></div></button>`).join("");
+  const scr=$("#mano").scrollLeft;const ev=abierto&&abierto.tipo=="evento";
+  $("#mano").innerHTML=D.elenco.map(p=>`<button class="cuadro ${ev&&abierto.plazas.includes(p.id)?'elegido':''} ${ev&&!abierto.plazas.includes(p.id)&&motivo(p.id)?'noapto':''} ${!ev&&ocup[p.id]?'ocupado':''}" data-p="${p.id}" aria-label="${p.pila}"><div class="marco"><div class="lienzo"><img alt="" src="${IMG[p.id]}"><div class="placa">${p.pila}</div></div></div></button>`).join("");
+  $("#mano").scrollLeft=scr;
   document.querySelectorAll(".cuadro").forEach(b=>b.onclick=()=>tocarCarta(b.dataset.p,b));
   $("#respn").textContent=`${respondidas.size}/${D.eventos.length}`;
   $("#sobres").classList.toggle("completo",respondidas.size==D.eventos.length);
@@ -176,7 +193,18 @@ function render(){
   $("#comenzar").classList.toggle("listo",obl);
 }
 function ocupados(){const o={};for(const [ev,l] of Object.entries(asign))for(const p of l)(o[p]=o[p]||[]).push(ev);return o}
-function cerrar(){$("#hoja").classList.remove("on","alta");$("#velo").classList.remove("on");abierto=null;render()}
+function medirMano(){const m=$("#mano");const h=$("#tel").getBoundingClientRect().bottom-m.getBoundingClientRect().top;$("#hoja").style.setProperty("--mano",h+"px");return h}
+function enfocar(lugar){const tel=$("#tel").getBoundingClientRect();if(!lugar){$("#mundo").style.transform="";return}
+  const y=POS[lugar][1]/100*tel.height;const dy=Math.max(-tel.height*.42,Math.min(0,150-y));$("#mundo").style.transform=`translateY(${dy}px)`}
+function abrirHoja(expandida){medirMano();const h=$("#hoja");h.classList.toggle("expandida",!!expandida);requestAnimationFrame(()=>h.classList.add("on"));$("#velo").classList.add("on")}
+function cerrar(){const h=$("#hoja");h.classList.remove("on","expandida");$("#velo").classList.remove("on");enfocar(null);abierto=null;render()}
+// arrastre del asa: arriba expande, abajo compacta o cierra; un toque alterna
+(function(){let y0=null,dy=0;const h=$("#hoja");
+  h.addEventListener("pointerdown",e=>{if(!e.target.closest(".asa"))return;y0=e.clientY;dy=0;h.style.transition="none";h.setPointerCapture(e.pointerId)});
+  h.addEventListener("pointermove",e=>{if(y0==null)return;dy=e.clientY-y0;if(dy>0)h.style.transform=`translateY(${dy}px)`});
+  h.addEventListener("pointerup",()=>{if(y0==null)return;h.style.transition="";h.style.transform="";
+    if(Math.abs(dy)<6)h.classList.toggle("expandida");else if(dy<-30)h.classList.add("expandida");else if(dy>60){if(h.classList.contains("expandida"))h.classList.remove("expandida");else cerrar()}
+    y0=null})})();
 $("#velo").onclick=cerrar;
 
 function grupo(ids,h){const v=ids.map(i=>D.pers[i].habilidades[h]).sort((a,b)=>b-a);if(!v.length)return 0;return Math.min(5,v[0]+(v.slice(1).some(x=>x>=3)?1:0))}
@@ -191,30 +219,40 @@ function radar(req,ids,size){const c=size/2,r=c-34,ang=i=>-Math.PI/2+i*2*Math.PI
   return s+"</svg>"}
 
 function ocultarNota(){$("#nota").hidden=true}
-function abrirEvento(id){ocultarNota();const e=D.eventos.find(x=>x.id==id);abierto={tipo:"evento",e,plazas:[...(asign[id]||[])]};pintarEvento();$("#hoja").classList.add("on");$("#velo").classList.add("on");render()}
-function pintarEvento(){const {e,plazas}=abierto;const n=e.plazas.max;
-  let pl="";for(let i=0;i<n;i++){const p=plazas[i];pl+=`<div class="plaza" data-i="${i}">${p?`<img alt="${D.pers[p].pila}" src="${IMG[p]}">`:"+"}</div>`}
-  const listo=plazas.length>=e.plazas.min;
-  $("#hoja").innerHTML=`<button class="cerrar" aria-label="Cerrar">✕</button>
+function motivo(pid){const {e,plazas}=abierto;const p=D.pers[pid];const otros=(ocupados()[pid]||[]).filter(x=>x!=e.id);
+  if(otros.some(x=>D.eventos.find(y=>y.id==x).dia==e.dia))return `${p.pila} ya tiene compromiso el ${e.dia}.`;
+  if(otros.length>=2)return `${p.pila} ya tiene dos compromisos esta semana.`;
+  if(plazas.length>=e.plazas.max)return "No quedan huecos. Retire a alguien primero.";
+  if(e.regla=="dama_caballero"&&plazas.map(x=>D.pers[x].genero).includes(p.genero))return p.genero=="m"?"Falta una dama, no otro caballero.":"Falta un caballero, no otra dama.";
+  return ""}
+function abrirEvento(id){ocultarNota();const e=D.eventos.find(x=>x.id==id);abierto={tipo:"evento",e,plazas:[...(asign[id]||[])]};
+  pintarEvento();enfocar(e.lugar);abrirHoja(false);render()}
+function pintarEvento(){const {e,plazas}=abierto;const n=e.plazas.max;const h=$("#hoja");
+  let pl="";for(let i=0;i<n;i++){const p=plazas[i];pl+=p?`<div class="plaza llena" data-i="${i}" title="Toque para retirar"><img alt="${D.pers[p].pila}" src="${IMG[p]}"></div>`:`<div class="plaza" data-i="${i}"><b>+</b>${i<e.plazas.min?"Toque una carta":"Opcional"}</div>`}
+  const listo=plazas.length>=e.plazas.min, exp=h.classList.contains("expandida");
+  h.innerHTML=`<button class="asa" aria-label="Arrastre para ver más o cerrar"></button><button class="cerrar" aria-label="Cerrar">✕</button>
    <div class="cab"><div class="fecha-g"><small>${e.obligatorio?"OBLIG.":DSEM[e.dia]}</small>${e.dia}</div><div><h2>${e.titulo}</h2><div class="sub">${e.anfitrion} · ${e.reglaN}</div></div></div>
-   <p class="cita">${e.resumen}</p>
-   <div class="fila"><div><div class="plazas">${pl}</div><ul class="lista">${e.a_favor.map(x=>`<li>+ ${x}</li>`).join("")}${e.en_contra.map(x=>`<li>− ${x}</li>`).join("")}</ul></div>${e.requisito?radar(e.requisito,plazas,150):""}</div>
-   <div class="aviso" id="aviso"></div>
-   <div class="pie"><button class="enlace" id="vercarta">✉ Leer la carta</button><button class="sello-g ${listo?'listo':''}" id="responder">Sellar</button></div>`;
-  $(".cerrar").onclick=cerrar;
-  document.querySelectorAll(".plaza img").forEach((im,i)=>im.parentElement.onclick=()=>{abierto.plazas.splice(i,1);pintarEvento();render()});
-  $("#responder").onclick=()=>{if(!listo)return;asign[e.id]=[...abierto.plazas];respondidas.add(e.id);cerrar()};
-  $("#vercarta").onclick=()=>{$("#hoja").classList.add("alta");$("#hoja").innerHTML=`<button class="cerrar" aria-label="Cerrar">✕</button><p class="sub">${e.carta.saludo}</p><p class="bio" style="white-space:pre-line">${e.carta.cuerpo}</p><p style="font-family:var(--display);font-style:italic;font-size:20px;text-align:right">${e.carta.firma}</p>`;$(".cerrar").onclick=()=>{$("#hoja").classList.remove("alta");pintarEvento()}}
+   <div class="fila" style="margin-top:10px;justify-content:space-between"><div class="plazas">${pl}</div>${e.requisito?radar(e.requisito,plazas,150):""}</div>
+   <div class="aviso" id="aviso">${plazas.length?"":"Toque las cartas de abajo para invitar."}</div>
+   <div class="pie" style="margin-top:2px"><button class="mas" id="mas"><span class="t1">Ver detalles ▴</span><span class="t2">Menos ▾</span></button><button class="sello-g ${listo?'listo':''}" id="responder">Sellar</button></div>
+   <div class="detalle"><p class="cita">${e.resumen}</p><ul class="lista">${e.a_favor.map(x=>`<li>+ ${x}</li>`).join("")}${e.en_contra.map(x=>`<li>− ${x}</li>`).join("")}</ul>
+   <div class="etiqueta">La carta</div><p class="sub">${e.carta.saludo}</p><p class="bio" style="white-space:pre-line">${e.carta.cuerpo}</p><p style="font-family:var(--display);font-style:italic;font-size:20px;text-align:right;margin:4px 0 0">${e.carta.firma}</p></div>`;
+  h.classList.toggle("expandida",exp);
+  $(".cerrar").onclick=cerrar;$("#mas").onclick=()=>h.classList.toggle("expandida");
+  document.querySelectorAll(".plaza.llena").forEach(el=>el.onclick=()=>{abierto.plazas.splice(+el.dataset.i,1);pintarEvento();render()});
+  $("#responder").onclick=()=>{if(!listo){$("#aviso").textContent=`Faltan ${e.plazas.min-plazas.length} por elegir.`;return}asign[e.id]=[...abierto.plazas];respondidas.add(e.id);cerrar()};
 }
+function volar(pid,btn){const tel=$("#tel").getBoundingClientRect();const desde=btn.querySelector("img").getBoundingClientRect();
+  const i=abierto.plazas.indexOf(pid);const destino=document.querySelector(`.plaza[data-i="${i}"]`);if(!destino)return;const hasta=destino.getBoundingClientRect();
+  const im=document.createElement("img");im.src=IMG[pid];im.className="volando";Object.assign(im.style,{left:desde.left-tel.left+"px",top:desde.top-tel.top+"px",width:desde.width+"px",height:desde.height+"px"});
+  $("#tel").appendChild(im);destino.style.visibility="hidden";
+  const a=im.animate([{transform:"translate(0,0)"},{transform:`translate(${hasta.left-desde.left}px,${hasta.top-desde.top}px) scale(${hasta.width/desde.width})`}],{duration:matchMedia("(prefers-reduced-motion:reduce)").matches?1:380,easing:"cubic-bezier(.2,.8,.2,1)"});
+  im.style.transformOrigin="top left";a.onfinish=()=>{im.remove();destino.style.visibility=""}}
 function tocarCarta(pid,btn){
-  if(abierto&&abierto.tipo=="evento"){const {e,plazas}=abierto;const av=m=>{$("#aviso").textContent=m;btn.classList.add("sacude");setTimeout(()=>btn.classList.remove("sacude"),400)};
+  if(abierto&&abierto.tipo=="evento"){const {plazas}=abierto;
     if(plazas.includes(pid)){plazas.splice(plazas.indexOf(pid),1);pintarEvento();render();return}
-    if(plazas.length>=e.plazas.max)return av("No quedan huecos. Retire a alguien primero.");
-    const p=D.pers[pid];const o=ocupados()[pid]||[];const otros=o.filter(x=>x!=e.id);
-    if(otros.some(x=>D.eventos.find(y=>y.id==x).dia==e.dia))return av(`${p.pila} ya tiene compromiso el ${e.dia}.`);
-    if(otros.length>=2)return av(`${p.pila} ya tiene dos compromisos esta semana.`);
-    if(e.regla=="dama_caballero"){const g=plazas.map(x=>D.pers[x].genero);if(g.includes(p.genero))return av(p.genero=="m"?"Falta una dama.":"Falta un caballero.")}
-    plazas.push(pid);pintarEvento();render();return}
+    const m=motivo(pid);if(m){$("#aviso").textContent=m;btn.classList.add("sacude");setTimeout(()=>btn.classList.remove("sacude"),400);return}
+    plazas.push(pid);pintarEvento();render();volar(pid,document.querySelector(`.cuadro[data-p="${pid}"]`));return}
   abrirFicha(pid)}
 function abrirFicha(pid){ocultarNota();const p=D.pers[pid];abierto={tipo:"ficha"};
   $("#hoja").innerHTML=`<button class="cerrar" aria-label="Cerrar">✕</button>
@@ -223,7 +261,8 @@ function abrirFicha(pid){ocultarNota();const p=D.pers[pid];abierto={tipo:"ficha"
    <div class="etiqueta">Biografía</div><p class="bio">${p.bio}</p>
    <div class="etiqueta">Lo que usted sabe</div>
    ${p.entradas.map((t,i)=>`<div class="entrada ${i?'bloq':''}">${i?'Aún no lo sabe.':t}</div>`).join("")}`;
-  $(".cerrar").onclick=cerrar;$("#hoja").classList.add("on","alta");$("#velo").classList.add("on");render()}
+  $("#hoja").insertAdjacentHTML("afterbegin",'<button class="asa" aria-label="Arrastre para cerrar"></button>');
+  $(".cerrar").onclick=cerrar;abrirHoja(true);render()}
 $("#sobres").onclick=()=>{const e=D.eventos.find(x=>!respondidas.has(x.id));if(e)abrirEvento(e.id)};
 $("#comenzar").onclick=()=>{if($("#comenzar").classList.contains("listo")){$("#nota").hidden=false;$("#nota").innerHTML="<small>NOTA</small>Aquí empezaría la semana: los días corren y los retratos viajan por el mapa.";}};
 render();

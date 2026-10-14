@@ -131,3 +131,23 @@ Maqueta: `diseno/maqueta/index.html`, publicada como artefacto privado. Manda so
 | **Retrato del elenco** | Cuadro rectangular de 112 × 168 dp, con marco y el **nombre dentro del cuadro**, en una placa abajo a todo lo ancho. La cara baja un poco para dejar aire arriba, donde irán las bandas de estado |
 | **Nota de la asistente** | Se oculta al primer toque, para no saturar la pantalla |
 | **Cifras** | Siempre de tipo «lining» (todas a la misma altura); las cifras antiguas de Cormorant se confundían con letras |
+
+## 9. Hoja de evento: interacción (maqueta v6, 14 oct.)
+
+1. **Al tocar un marcador:**
+   - El mapa se desliza para que ese lugar quede visible encima de la hoja; su marcador late en rosa.
+   - La hoja **sube desde detrás de la mano de retratos**, que sigue visible y operable debajo.
+   - Un velo suave atenúa el resto del mapa.
+2. **Altura compacta (para asignar):**
+   - Fecha, título y regla.
+   - Huecos 2:3 con marco: «+ Toque una carta» en los obligatorios, «Opcional» en el resto.
+   - Pentágono de lo que se pide frente a lo que llevan.
+   - Una línea de ayuda o de error.
+   - «Ver detalles ▴» y el sello «Sellar».
+3. **Altura expandida (para leer):** se abre con el asa (arrastrar hacia arriba o tocar) o con «Ver detalles». Añade la cita, los puntos a favor y en contra, y la **carta completa dentro de la misma hoja** (no abre otra pantalla).
+4. **Asignar:**
+   - Al tocar un retrato, este **vuela a su hueco**.
+   - Mientras la hoja está abierta, los retratos que no pueden ir se ven desaturados. Si se tocan, se sacuden y la línea de ayuda dice el motivo: ya tiene compromiso ese día, ya tiene dos esta semana, falta una dama o un caballero, o no quedan huecos.
+   - Tocar una cara ya puesta (en el hueco o en la mano) la retira.
+5. **Cerrar:** ✕, tocar el mapa o arrastrar el asa hacia abajo. Desde la altura expandida, el primer arrastre vuelve a la compacta.
+6. **Sellar:** sólo se puede con el mínimo de invitados. Si se intenta antes, la línea de ayuda dice cuántos faltan. Al sellar, el marcador queda en rosa y el sobre de la barra suma uno.
