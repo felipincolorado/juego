@@ -1,0 +1,211 @@
+<title>Salverna · Maqueta</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
+<style>
+/* Maqueta de una sola pantalla: el mapa es la pantalla; barra arriba, mano de retratos abajo, hojas que suben. */
+:root{
+  --marfil:#FBF7F0; --marfil-sombra:#EFE7DA; --tinta:#2B3350; --tinta-suave:#5D6480;
+  --seda:#A9C6E0; --seda-hondo:#5E82A8; --rosa:#C0627A; --glicinia:#B9A6D3; --menta:#BFD8C6;
+  --oro:#C9A45C; --oro-claro:#E6CF97; --oro-hondo:#8E6E2E; --frambuesa:#B23A5B;
+  --fondo:#E9E4EE;
+  --display:"Cormorant Garamond", "Cormorant", Georgia, serif;
+  --texto:"EB Garamond", Garamond, Georgia, serif;
+  color-scheme: light;
+}
+html,body{height:100%}
+body{background:var(--fondo);color:var(--tinta);font-family:var(--texto);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;justify-content:center;align-items:center;padding-block:12px;box-sizing:border-box}
+*{box-sizing:border-box}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--seda-hondo);outline-offset:2px}
+
+.telefono{position:relative;width:100%;max-width:390px;height:min(844px,100%);min-height:640px;border-radius:28px;overflow:hidden;
+  box-shadow:0 0 0 8px #1f2236,0 24px 60px rgba(30,30,60,.35);background:#cfe0c8}
+@media (max-width:440px){ body{padding:0} .telefono{max-width:none;border-radius:0;box-shadow:none;height:100%;min-height:0} }
+
+/* Mapa provisional pintado con gradientes: río, parques y calles */
+.mapa{position:absolute;inset:0;
+  background:
+   radial-gradient(ellipse 60% 18% at 70% 30%, #b9d3a9 60%, transparent 61%),
+   radial-gradient(ellipse 35% 14% at 25% 62%, #bcd5ad 60%, transparent 61%),
+   linear-gradient(118deg, transparent 38%, #9ec3d9 38.5%, #b6d4e6 43%, #9ec3d9 47%, transparent 47.5%),
+   repeating-linear-gradient(28deg, rgba(255,255,255,.35) 0 2px, transparent 2px 46px),
+   repeating-linear-gradient(-62deg, rgba(255,255,255,.28) 0 2px, transparent 2px 52px),
+   linear-gradient(#e9e1cf,#e4dccb)}
+.mapa::after{content:"Mapa de Valcenda (provisional)";position:absolute;left:50%;top:44%;transform:translate(-50%,-50%) rotate(-4deg);
+  font-family:var(--display);font-style:italic;font-size:20px;color:rgba(43,51,80,.25);white-space:nowrap}
+.sombra-sup{position:absolute;inset:0 0 auto 0;height:120px;background:linear-gradient(rgba(43,51,80,.35),transparent)}
+.sombra-inf{position:absolute;inset:auto 0 0 0;height:260px;background:linear-gradient(transparent,rgba(43,51,80,.45))}
+
+/* Barra superior */
+.barra{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));left:12px;right:12px;display:flex;align-items:center;gap:8px}
+.semana{background:var(--marfil);border:1px solid var(--oro);border-radius:4px;padding:4px 8px;font-family:var(--display);font-weight:600;font-size:14px}
+.dias{display:flex;gap:5px}
+.dia{width:34px;height:42px;background:#FCF8EF;border:1px solid var(--tinta);outline:.5px solid var(--tinta);outline-offset:-4px;
+  display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:19px;position:relative;line-height:1}
+.dia small{position:absolute;top:3px;font-size:7.5px;letter-spacing:.08em;font-weight:600}
+.dia.hoy{border-color:var(--oro);border-width:1.8px;outline-color:var(--oro)}
+.dia.evento::after{content:"";position:absolute;bottom:3px;width:4px;height:4px;border-radius:50%;background:var(--rosa)}
+.resp{margin-left:auto;background:var(--marfil);border:1px solid var(--oro);border-radius:4px;padding:4px 8px;font-size:14px;font-variant-numeric:tabular-nums}
+.sello{width:40px;height:40px;border-radius:50%;background:var(--rosa);border:none;box-shadow:inset 0 0 0 3px var(--oro-claro);color:var(--marfil);font-size:15px;cursor:pointer;opacity:.4}
+.sello.listo{opacity:1;animation:late 2s ease-in-out infinite}
+@keyframes late{50%{transform:scale(1.05)}}
+
+/* Marcadores */
+.marcador{position:absolute;display:flex;flex-direction:column;align-items:center;gap:3px;background:none;border:none;cursor:pointer;transform:translate(-50%,-50%)}
+.marcador .icono{width:40px;height:40px;border-radius:50%;background:var(--marfil);border:2px solid var(--glicinia);display:grid;place-items:center;font-size:18px;box-shadow:0 2px 6px rgba(0,0,0,.2)}
+.marcador.oblig .icono{border-color:var(--rosa)}
+.marcador.resp-ok .icono{background:var(--rosa);color:var(--marfil)}
+.marcador .etq{display:flex;align-items:stretch;background:var(--marfil);border:1px solid var(--tinta);font-size:13px}
+.marcador .etq b{font-family:var(--display);font-size:15px;padding:0 6px;border-right:1px solid var(--tinta);display:grid;place-items:center}
+.marcador .etq span{padding:2px 6px;white-space:nowrap}
+
+/* Nota de la asistente */
+.nota{position:absolute;left:24px;right:24px;bottom:236px;background:var(--marfil);border:1px solid var(--oro);padding:10px 14px;font-style:italic;font-size:15px;box-shadow:0 6px 16px rgba(0,0,0,.18)}
+.nota small{display:block;font-style:normal;font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.14em;color:var(--tinta-suave)}
+
+/* Mano de retratos: cuadros rectangulares con marco */
+.mano{position:absolute;z-index:6;left:0;right:0;bottom:calc(14px + env(safe-area-inset-bottom,0px));display:flex;gap:12px;overflow-x:auto;padding:16px 14px 6px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.mano::-webkit-scrollbar{display:none}
+.cuadro{flex:0 0 104px;scroll-snap-align:start;background:none;border:none;padding:0;cursor:pointer;transition:transform .2s}
+.cuadro .marco{position:relative;width:104px;height:156px;padding:7px;
+  background:linear-gradient(135deg,var(--oro-claro),var(--oro) 35%,var(--oro-hondo) 70%,var(--oro) );
+  box-shadow:0 4px 10px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.4)}
+.cuadro .lienzo{position:relative;width:100%;height:100%;overflow:hidden;box-shadow:inset 0 0 0 2px var(--oro-hondo), inset 0 0 0 3px var(--oro-claro)}
+.cuadro img{width:100%;height:100%;object-fit:cover;display:block}
+.cuadro .placa{margin:6px auto 0;width:86px;background:linear-gradient(var(--oro-claro),var(--oro));border:1px solid var(--oro-hondo);
+  font-family:var(--display);font-weight:700;font-size:14px;letter-spacing:.06em;text-align:center;color:var(--tinta);padding:1px 0}
+.cuadro.elegido{transform:translateY(-10px)}
+.cuadro.ocupado img{filter:grayscale(1) brightness(.9)}
+.cuadro.sacude{animation:sac .35s}
+@keyframes sac{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+
+/* Hojas */
+.velo{position:absolute;inset:0;z-index:5;background:rgba(30,30,50,.25);opacity:0;pointer-events:none;transition:opacity .25s}
+.velo.on{opacity:1;pointer-events:auto}
+.hoja{position:absolute;z-index:7;left:12px;right:12px;bottom:-100%;max-height:calc(100% - 90px);overflow-y:auto;background:var(--marfil);border:1px solid var(--oro);border-radius:6px;
+  padding:16px;box-shadow:0 -8px 24px rgba(0,0,0,.25);transition:bottom .3s ease}
+.hoja.on{bottom:calc(222px + env(safe-area-inset-bottom,0px))}
+.hoja.alta.on{bottom:12px}
+.cerrar{position:absolute;top:6px;right:6px;width:40px;height:40px;border:none;background:none;font-size:20px;cursor:pointer;color:var(--tinta-suave)}
+.cab{display:flex;gap:12px;align-items:center;padding-right:30px}
+.fecha-g{width:48px;height:56px;flex:none;background:#FCF8EF;border:1px solid var(--tinta);outline:.5px solid var(--tinta);outline-offset:-4px;display:grid;place-items:center;
+  font-family:var(--display);font-weight:700;font-size:24px;position:relative}
+.fecha-g small{position:absolute;top:4px;font-size:8px;letter-spacing:.1em}
+h2{font-family:var(--display);font-weight:600;font-size:24px;line-height:1.05;margin:0;text-wrap:balance}
+.sub{font-size:13px;color:var(--tinta-suave)}
+.cita{font-style:italic;margin:10px 0;font-size:15.5px}
+.fila{display:flex;gap:12px;align-items:flex-start}
+.plazas{display:flex;gap:8px;flex-wrap:wrap}
+.plaza{width:72px;height:108px;border:1.5px dashed var(--oro);display:grid;place-items:center;color:var(--tinta-suave);font-size:24px;background:var(--marfil-sombra);padding:4px}
+.plaza img{width:100%;height:100%;object-fit:cover;box-shadow:0 0 0 2px var(--oro)}
+.radar{flex:none}
+.lista{margin:10px 0 0;padding:0;list-style:none;font-size:14px;display:grid;gap:3px}
+.pie{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.enlace{background:none;border:none;text-decoration:underline;color:var(--seda-hondo);cursor:pointer;font-size:15px}
+.sello-g{width:56px;height:56px;border-radius:50%;border:none;background:var(--rosa);box-shadow:inset 0 0 0 4px var(--oro-claro);color:var(--marfil);font-family:var(--display);font-weight:700;font-size:13px;cursor:pointer;opacity:.4}
+.sello-g.listo{opacity:1}
+.aviso{font-size:13px;color:var(--frambuesa);min-height:18px;margin-top:6px}
+.etiqueta{font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.14em;color:var(--tinta-suave);text-transform:uppercase;margin:14px 0 4px}
+.ficha-cab{display:flex;gap:14px;align-items:flex-end}
+.ficha-cab .cuadro{pointer-events:none}
+.bio{font-size:15.5px;line-height:1.45;margin:6px 0 0}
+.tecnica{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;font-size:14px}
+.tecnica dt{color:var(--tinta-suave)}
+.tecnica dd{margin:0}
+.entrada{border-top:1px solid var(--marfil-sombra);padding:6px 0;font-size:14.5px}
+.entrada.bloq{color:var(--tinta-suave);font-style:italic}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="telefono" id="tel">
+  <div class="mapa" aria-hidden="true"></div>
+  <div class="sombra-sup"></div><div class="sombra-inf"></div>
+  <div class="barra">
+    <div class="semana" title="Semana 1 de 6">S1/6</div>
+    <div class="dias" id="dias"></div>
+    <div class="resp" id="resp">✉ 0/4</div>
+    <button class="sello" id="comenzar" aria-label="Comenzar semana">▶</button>
+  </div>
+  <div id="marcadores"></div>
+  <div class="nota" id="nota"><small>NOTA</small>Ya llegaron sus ocho jóvenes. Toque una carta para conocer a cada uno, o un sobre para responder.</div>
+  <div class="mano" id="mano"></div>
+  <div class="velo" id="velo"></div>
+  <section class="hoja" id="hoja" aria-live="polite"></section>
+</div>
+
+<script>
+const D = /*DATOS*/null;
+const IMG = /*IMAGENES*/null;
+const HAB=["baile","estatus","chisme","presencia","intelecto"], HABN={baile:"Baile",estatus:"Estatus",chisme:"Chisme",presencia:"Presencia",intelecto:"Intelecto"};
+const ICON={recepcion:"🫖",paseo:"🌹",cena:"🍷",clase:"📖",baile:"🪭"};
+const DSEM={27:"JUE",28:"VIE",29:"SÁB",30:"DOM"};
+const POS={palacio:[50,24],jardines:[74,41],imprenta:[26,38],academia:[62,57]};
+const asign={}, respondidas=new Set();
+let abierto=null;
+const $=s=>document.querySelector(s);
+
+function render(){
+  $("#dias").innerHTML=[27,28,29,30].map((d,i)=>`<div class="dia ${i==0?'hoy':''} ${D.eventos.some(e=>e.dia==d)?'evento':''}"><small>${DSEM[d]}</small>${d}</div>`).join("");
+  $("#marcadores").innerHTML=D.eventos.map(e=>{const [x,y]=POS[e.lugar];return `<button class="marcador ${e.obligatorio?'oblig':''} ${respondidas.has(e.id)?'resp-ok':''}" style="left:${x}%;top:${y}%" data-ev="${e.id}" aria-label="${e.titulo}"><span class="icono">${ICON[e.tipo]||"✉"}</span><span class="etq"><b>${e.dia}</b><span>${e.lugarN}</span></span></button>`}).join("");
+  document.querySelectorAll(".marcador").forEach(b=>b.onclick=()=>abrirEvento(b.dataset.ev));
+  const ocup=ocupados();
+  $("#mano").innerHTML=D.elenco.map(p=>`<button class="cuadro ${abierto&&abierto.plazas&&abierto.plazas.includes(p.id)?'elegido':''} ${ocup[p.id]&&!(abierto&&abierto.plazas&&abierto.plazas.includes(p.id))?'ocupado':''}" data-p="${p.id}" aria-label="${p.pila}"><div class="marco"><div class="lienzo"><img alt="" src="${IMG[p.id]}"></div></div><div class="placa">${p.pila}</div></button>`).join("");
+  document.querySelectorAll(".cuadro").forEach(b=>b.onclick=()=>tocarCarta(b.dataset.p,b));
+  $("#resp").textContent=`✉ ${respondidas.size}/${D.eventos.length}`;
+  const obl=D.eventos.filter(e=>e.obligatorio).every(e=>respondidas.has(e.id));
+  $("#comenzar").classList.toggle("listo",obl);
+}
+function ocupados(){const o={};for(const [ev,l] of Object.entries(asign))for(const p of l)(o[p]=o[p]||[]).push(ev);return o}
+function cerrar(){$("#hoja").classList.remove("on","alta");$("#velo").classList.remove("on");abierto=null;render()}
+$("#velo").onclick=cerrar;
+
+function grupo(ids,h){const v=ids.map(i=>D.pers[i].habilidades[h]).sort((a,b)=>b-a);if(!v.length)return 0;return Math.min(5,v[0]+(v.slice(1).some(x=>x>=3)?1:0))}
+function radar(req,ids,size){const c=size/2,r=c-26,ang=i=>-Math.PI/2+i*2*Math.PI/5;
+  const pt=(i,v)=>[c+Math.cos(ang(i))*r*v/5,c+Math.sin(ang(i))*r*v/5];
+  const poly=vals=>vals.map((v,i)=>pt(i,v).join(",")).join(" ");
+  let s=`<svg class="radar" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" role="img" aria-label="Pentágono de habilidades">`;
+  for(const k of [1,2,3,4,5])s+=`<polygon points="${poly([k,k,k,k,k])}" fill="none" stroke="#EFE7DA" stroke-width="1"/>`;
+  if(req)s+=`<polygon points="${poly(HAB.map(h=>req[h]||0))}" fill="none" stroke="#5D6480" stroke-width="1.5" stroke-dasharray="4 3"/>`;
+  if(ids&&ids.length)s+=`<polygon points="${poly(HAB.map(h=>grupo(ids,h)))}" fill="rgba(192,98,122,.25)" stroke="#C0627A" stroke-width="2"/>`;
+  HAB.forEach((h,i)=>{const [x,y]=pt(i,6.3);s+=`<text x="${x}" y="${y+3}" font-size="9" text-anchor="middle" fill="#5D6480" font-family="Cormorant Garamond, serif" font-weight="600">${HABN[h].toUpperCase()}</text>`});
+  return s+"</svg>"}
+
+function abrirEvento(id){const e=D.eventos.find(x=>x.id==id);abierto={tipo:"evento",e,plazas:[...(asign[id]||[])]};pintarEvento();$("#hoja").classList.add("on");$("#velo").classList.add("on");render()}
+function pintarEvento(){const {e,plazas}=abierto;const n=e.plazas.max;
+  let pl="";for(let i=0;i<n;i++){const p=plazas[i];pl+=`<div class="plaza" data-i="${i}">${p?`<img alt="${D.pers[p].pila}" src="${IMG[p]}">`:"+"}</div>`}
+  const listo=plazas.length>=e.plazas.min;
+  $("#hoja").innerHTML=`<button class="cerrar" aria-label="Cerrar">✕</button>
+   <div class="cab"><div class="fecha-g"><small>${e.obligatorio?"OBLIG.":DSEM[e.dia]}</small>${e.dia}</div><div><h2>${e.titulo}</h2><div class="sub">${e.anfitrion} · ${e.reglaN}</div></div></div>
+   <p class="cita">${e.resumen}</p>
+   <div class="fila"><div><div class="plazas">${pl}</div><ul class="lista">${e.a_favor.map(x=>`<li>+ ${x}</li>`).join("")}${e.en_contra.map(x=>`<li>− ${x}</li>`).join("")}</ul></div>${e.requisito?radar(e.requisito,plazas,150):""}</div>
+   <div class="aviso" id="aviso"></div>
+   <div class="pie"><button class="enlace" id="vercarta">✉ Leer la carta</button><button class="sello-g ${listo?'listo':''}" id="responder">Sellar</button></div>`;
+  $(".cerrar").onclick=cerrar;
+  document.querySelectorAll(".plaza img").forEach((im,i)=>im.parentElement.onclick=()=>{abierto.plazas.splice(i,1);pintarEvento();render()});
+  $("#responder").onclick=()=>{if(!listo)return;asign[e.id]=[...abierto.plazas];respondidas.add(e.id);cerrar()};
+  $("#vercarta").onclick=()=>{$("#hoja").classList.add("alta");$("#hoja").innerHTML=`<button class="cerrar" aria-label="Cerrar">✕</button><p class="sub">${e.carta.saludo}</p><p class="bio" style="white-space:pre-line">${e.carta.cuerpo}</p><p style="font-family:var(--display);font-style:italic;font-size:20px;text-align:right">${e.carta.firma}</p>`;$(".cerrar").onclick=()=>{$("#hoja").classList.remove("alta");pintarEvento()}}
+}
+function tocarCarta(pid,btn){
+  if(abierto&&abierto.tipo=="evento"){const {e,plazas}=abierto;const av=m=>{$("#aviso").textContent=m;btn.classList.add("sacude");setTimeout(()=>btn.classList.remove("sacude"),400)};
+    if(plazas.includes(pid)){plazas.splice(plazas.indexOf(pid),1);pintarEvento();render();return}
+    if(plazas.length>=e.plazas.max)return av("No quedan huecos. Retire a alguien primero.");
+    const p=D.pers[pid];const o=ocupados()[pid]||[];const otros=o.filter(x=>x!=e.id);
+    if(otros.some(x=>D.eventos.find(y=>y.id==x).dia==e.dia))return av(`${p.pila} ya tiene compromiso el ${e.dia}.`);
+    if(otros.length>=2)return av(`${p.pila} ya tiene dos compromisos esta semana.`);
+    if(e.regla=="dama_caballero"){const g=plazas.map(x=>D.pers[x].genero);if(g.includes(p.genero))return av(p.genero=="m"?"Falta una dama.":"Falta un caballero.")}
+    plazas.push(pid);pintarEvento();render();return}
+  abrirFicha(pid)}
+function abrirFicha(pid){const p=D.pers[pid];abierto={tipo:"ficha"};
+  $("#hoja").innerHTML=`<button class="cerrar" aria-label="Cerrar">✕</button>
+   <div class="ficha-cab"><div class="cuadro"><div class="marco"><div class="lienzo"><img alt="" src="${IMG[pid]}"></div></div></div><div><h2>${p.nombre}</h2><div class="sub">${p.casa}</div><p class="cita">${p.linea}</p></div></div>
+   <div class="fila" style="margin-top:8px">${radar(null,[pid],150)}<dl class="tecnica"><dt>Edad</dt><dd>${p.edad}</dd>${HAB.map(h=>`<dt>${HABN[h]}</dt><dd>${p.habilidades[h]} de 5</dd>`).join("")}</dl></div>
+   <div class="etiqueta">Biografía</div><p class="bio">${p.bio}</p>
+   <div class="etiqueta">Lo que usted sabe</div>
+   ${p.entradas.map((t,i)=>`<div class="entrada ${i?'bloq':''}">${i?'Aún no lo sabe.':t}</div>`).join("")}`;
+  $(".cerrar").onclick=cerrar;$("#hoja").classList.add("on","alta");$("#velo").classList.add("on");render()}
+$("#comenzar").onclick=()=>{if($("#comenzar").classList.contains("listo"))$("#nota").innerHTML="<small>NOTA</small>Aquí empezaría la semana: los días corren y los retratos viajan por el mapa.";};
+render();
+</script>
