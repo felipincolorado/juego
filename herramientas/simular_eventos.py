@@ -18,7 +18,8 @@ def valido(ev, ids):
     g = [per[i]["genero"] for i in ids]
     r = ev["regla"]
     return (r == "cualquiera" or (r == "dama_caballero" and sorted(g) == ["f", "m"])
-            or (r == "solo_damas" and set(g) == {"f"}) or (r == "solo_caballeros" and set(g) == {"m"}))
+            or (r == "solo_damas" and set(g) == {"f"}) or (r == "solo_caballeros" and set(g) == {"m"})
+            or (r == "parejas" and g.count("f") == g.count("m")))
 
 def resolver(ev, ids, mejor=True):
     req = ev["requisito"]

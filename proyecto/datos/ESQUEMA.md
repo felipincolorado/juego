@@ -179,3 +179,16 @@ Las claves usan puntos: `hoja.boton.carta`, `ajustes.idioma`. El motor resuelve 
 | `consecuencia: {cercania_asistentes, efectos, reputacion_si_exito}` | En una opción de incidente | Precio o premio de esa opción, se aplica con cualquier resultado |
 | `pista_coste: {es, en}` | En una opción de incidente | Línea breve bajo la opción que insinúa su consecuencia |
 | `chispa(a, b)` | Condiciones | Asistieron juntos esta semana y al menos uno puede sentir atracción por el otro (verdad de autor). Nunca se muestra como etiqueta |
+
+## 6. Campos añadidos al escribir la semana 2
+
+| Campo | Dónde | Significado |
+|---|---|---|
+| `apertura.decision: [{id, texto, efectos}]` | Apertura de la semana | Pequeña elección de la casamentera antes del mapa; activa marcas |
+| `peticiones: [{id, personaje, evento, texto, si_cumple, si_no}]` | Por semana | Un personaje pide que alguien del elenco vaya a un evento (sistemas §5 ter) |
+| `duracion: N` | Evento | Días que ocupa. Los asistentes quedan ocupados del `dia` al `dia + N − 1` |
+| `regla: parejas` | Evento | Mismo número de damas y caballeros. Plazas: `a` caballero, `b` dama, `c` caballero, `d` dama |
+| `incidente.dia` | Incidente de un evento de varios días | Día en que salta |
+| `indisposicion: {dias, quien, aviso}` | Evento | Tras el evento, un asistente queda indispuesto esos días (sistemas §6). `quien` es la regla en texto; el motor la implementa. `{a}` es la persona indispuesta |
+| `reemplazo: {evento, opciones: {sustituir, reducir, retirar}}` | Evento que causa la indisposición | Textos de la hoja de reemplazo del evento afectado. `{a}` es la persona que falta y `{b}` quien la sustituye |
+| `cierre.hoja: {numero, cabecera, secreto_por_protagonista, pie, efectos, reaccion}` | Cierre | *La Hoja sin Firma*. Publica el secreto de quien tenga más fama (sistemas §5 bis); `reaccion` hace que el protagonista diga una frase de su `bark` |

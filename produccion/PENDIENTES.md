@@ -43,3 +43,11 @@ Se actualiza al terminar cada sesión. **Lo que espera tu decisión va primero.*
 4. **Plan de programación** (E12): motor, arquitectura, orden de implementación, demo de la semana 1, criterios de aceptación y pruebas.
 5. **Repaso del flujo en Figma** o en una maqueta HTML. Incluye las pantallas que faltan: ficha, incidente, resultado, Crónica, carnet de baile y la mesa de la cartomante.
 6. **Prueba de juego** con 5–10 personas antes de producir todo: medir el balance real.
+
+## Capítulo 2 · terminado (14 oct.)
+
+- `semanas/semana2.yaml`: apertura con decisión, 2 peticiones, 3 eventos (excursión de 2 días, cena con pista, baile obligatorio de dos parejas), incidentes con 3 opciones y consecuencias, indisposición y reemplazo, Crónica nº 2, *Hoja* nº 1 (8 secretos posibles), «Sólo para sus ojos» y gancho.
+- `escenas/vinculos_C.yaml`: 10 escenas C (las 7 prioritarias y 3 de parejas que parten con cercanía 2), más una genérica.
+- Simulación de la semana 2: con la mejor opción, entre el 68 % y el 80 % de desenlaces favorables; con la peor, entre el 17 % y el 52 %.
+- **Falta para el motor:** implementar la fama (sistemas §5 bis), las peticiones (§5 ter), la regla `parejas` y la elección de `indisposicion.quien`.
+- **Siguiente:** capítulo 3 (Noche de los Faroles), con las escenas B.

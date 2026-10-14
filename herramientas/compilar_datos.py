@@ -99,6 +99,18 @@ def guion_semana(datos, lengua):
     t = lambda x: (x or {}).get(lengua, "") if isinstance(x, dict) else ""
     s = datos["semana"]
     out = [f"# Semana {s['numero']} · {t(s['nombre'])}", "", f"**{t(s['hecho_del_reino']['titulo'])}.** {t(s['hecho_del_reino']['texto'])}", ""]
+    ap = datos.get("apertura")
+    if ap:
+        out += ["## Apertura", ""] + [f"- **{l.get('habla') or 'narración'}**: {t(l)}" for l in ap.get("lineas", [])]
+        for d in ap.get("decision", []):
+            out.append(f"- Opción **{t(d['texto'])}** → {t(d.get('resultado'))}")
+        out.append("")
+    if datos.get("peticiones"):
+        out += ["## Peticiones", ""]
+        for pe in datos["peticiones"]:
+            out += [f"- **{pe['personaje']}** pide `{pe['evento']}`: {t(pe['texto'])}",
+                    f"  - Si se cumple: {t(pe['si_cumple'])}", f"  - Si no: {t(pe['si_no'])}"]
+        out.append("")
     for ev in datos["eventos"]:
         out += [f"## {t(ev['titulo'])} · día {ev['dia']} · {ev['lugar']}",
                 f"*{ev['tipo']} · plazas {ev['plazas']['min']}–{ev['plazas']['max']} · {ev['regla']}"
@@ -119,6 +131,16 @@ def guion_semana(datos, lengua):
             for o in inc["opciones"]:
                 out += [f"- **{t(o['texto'])}** ({o['habilidad']}, d {o['d']})",
                         f"  - Éxito: {t(o['exito'])}", f"  - A medias: {t(o['medias'])}", f"  - Fallo: {t(o['fallo'])}"]
+        ind = ev.get("indisposicion")
+        if ind:
+            out += ["", f"**Indisposición (días {ind['dias']})** · {ind['quien']}: {t(ind['aviso'])}"]
+        rz = ev.get("reemplazo")
+        if rz:
+            out += ["", f"**Reemplazo en `{rz['evento']}`** · {t(rz['texto'])}"]
+            out += [f"- {t(v)}" for v in rz["opciones"].values()]
+            for k in ("resultado_reducir", "resultado_retirar"):
+                if k in rz:
+                    out.append(f"- {k}: {t(rz[k])}")
         for nombre, d in (ev.get("desenlaces") or {}).items():
             out += ["", f"**Desenlace · {nombre}**" + (f" — {t(d.get('titulo'))}" if d.get("titulo") else "")]
             for clave in ("publico", "privado"):
@@ -138,12 +160,35 @@ def guion_semana(datos, lengua):
     out += [f"## {t(cr['cabecera'])} · {t(cr['subtitulo'])}", "", f"*{t(cr['entradilla'])}*", ""]
     for n in cr["noticias"]:
         out.append(f"- **{t(n['titular'])}**" + (f": {t(n.get('texto'))}" if n.get("texto") else " (texto del desenlace)"))
-    out += ["", f"*{t(cr['pie'])}*", "", "## Sólo para sus ojos", ""]
+    out += ["", f"*{t(cr['pie'])}*", ""]
+    h = datos["cierre"].get("hoja")
+    if h:
+        out += [f"## {t(h['cabecera'])} · nº {h['numero']}", "", f"*{t(h['entradilla'])}*", "",
+                "Secreto según quién tenga más fama:"]
+        out += [f"- **{k}**: {t(v)}" for k, v in h["secreto_por_protagonista"].items()]
+        out += ["", f"*{t(h['pie'])}*", ""]
+    out += ["## Sólo para sus ojos", ""]
     for o in datos["cierre"]["solo_sus_ojos"]["observaciones"]:
         out.append(f"- si `{o['si']}`: {t(o['texto'])}")
-    g = datos["cierre"]["gancho"]["sobre"]
-    out += ["", "## El sobre sin firma", "", f"*{t(g['saludo'])}*", "", t(g["cuerpo"]).strip(), "",
-            f"> {t(datos['cierre']['gancho']['nota_final'])}", ""]
+    gancho = datos["cierre"]["gancho"]
+    if "sobre" in gancho:
+        g = gancho["sobre"]
+        out += ["", "## El sobre sin firma", "", f"*{t(g['saludo'])}*", "", t(g["cuerpo"]).strip(), "",
+                f"> {t(gancho['nota_final'])}", ""]
+    else:
+        out += ["", "## Gancho", ""] + [f"- **{l.get('habla') or 'narración'}**: {t(l)}" for l in gancho.get("lineas", [])] + [""]
+    return "\n".join(out)
+
+
+def guion_escenas(datos, lengua, titulo):
+    t = lambda x: (x or {}).get(lengua, "") if isinstance(x, dict) else ""
+    out = [f"# {titulo}", ""]
+    for e in datos["escenas"]:
+        out += [f"## {' y '.join(e['pareja'])} · {t(e['ambiente'])}", f"*{e['id']} · nivel {e['nivel']}*", ""]
+        for l in e["lineas"]:
+            quien = l.get("habla") or "narración"
+            out.append(f"- **{quien}**" + (f" ({l['expr']})" if l.get("expr") else "") + f": {t(l)}")
+        out += ["", f"> {t(e.get('apunte'))}", ""]
     return "\n".join(out)
 
 
@@ -199,6 +244,9 @@ def main():
                 texto = guion_semana(d, lengua)
             elif nombre.endswith("tutorial.yaml"):
                 base, texto = "tutorial", guion_tutorial(d, lengua)
+            elif nombre.startswith("escenas"):
+                base = os.path.basename(nombre).rsplit(".", 1)[0]
+                texto = guion_escenas(d, lengua, "Escenas de vínculo · " + base.split("_")[-1])
             else:
                 continue
             with open(os.path.join(SALIDA_GUION, f"{base}.{lengua}.md"), "w", encoding="utf-8") as f:

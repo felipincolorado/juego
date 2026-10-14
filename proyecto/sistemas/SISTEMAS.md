@@ -160,13 +160,25 @@ Matriz de autoría y dirección (A puede sentir atracción por B), sacada de las
 - La Crónica muestra el cambio de la semana y sus motivos, sólo los públicos.
 - **La reputación nunca obliga a nadie a nada.**
 
+### 5 bis. Fama de cada joven
+
+- **Fama** = número de desenlaces favorables en eventos públicos a los que asistió (las clases no cuentan). Suma también +1 quien abrió el baile de la recepción.
+- La *Hoja sin Firma* elige al joven con más fama. En caso de empate, al primero en el orden del elenco (Nilo, Saúl, Dario, Teo, Celia, Irene, Isolda, Camila).
+- La fama no se muestra con números: la Crónica la insinúa («el nombre que más se repite en los salones»).
+
+### 5 ter. Peticiones
+
+- Desde la semana 2, de 1 a 2 por semana. Aparecen como nota en el mapa al empezar la planificación.
+- **Se cumplen** si alguien del elenco asiste al evento pedido (el propio solicitante cuenta). Efecto: ánimo alegre del solicitante en su próximo evento y +1 de cercanía con la casamentera (entrada «Lo que le gusta» de su ficha).
+- **No cumplir** sólo produce el texto `si_no` en el cierre. No hay castigo de reputación: pedir es un favor, no una orden.
+
 ## 6. Estados de una persona
 
 | Estado | Cuándo | Efecto | Duración |
 |---|---|---|---|
 | **Alegre / molesta / ruborizada** | Según el desenlace o la escena | Sólo la expresión del retrato | Hasta el siguiente evento |
 | **Agitada** | Falló la opción de un incidente en un desaire | −1 de ánimo en su próximo evento | Hasta el cierre de la semana siguiente |
-| **Indispuesta** | Sólo por guion (incidentes escritos) | No puede asistir; se ofrece un **reemplazo** | Los días que indique el guion |
+| **Indispuesta** | Sólo por guion (`indisposicion` de un evento; p. ej., la fiebre de los molinos en la semana 2) | No puede asistir; se ofrece un **reemplazo** | Los días que indique el guion |
 | **Ausente por luna** | Nilo, la noche de plenilunio (Nieblas 20) | Si se le asigna algo nocturno ese día, salta un incidente de riesgo (semana 4) | 1 noche |
 
 No hay mecánica de cansancio en la versión 1.
@@ -181,10 +193,14 @@ No hay mecánica de cansancio en la versión 1.
 
 Cuando una persona asignada pasa a estar indispuesta antes de su evento, se abre la hoja de reemplazo con hasta tres salidas:
 1. **Sustituir** por una persona disponible que cumpla la regla.
-2. **Asistencia reducida:** se va con menos gente, si hay más que el mínimo.
+2. **Asistencia reducida:** se va con menos gente, si hay más que el mínimo. En un evento de regla `parejas` se permite bajar una pareja por debajo del mínimo (la pareja de quien falta se queda en casa); la cobertura se calcula con quienes van.
 3. **Retirarse con disculpas:**
    - En un evento opcional: reputación 0.
    - En un evento obligatorio: −1, y la historia sigue con un texto propio.
+
+### 8.1 Regla «parejas»
+
+Eventos con baile de varias parejas (el Baile de las casas, el Gran Baile): igual número de damas que de caballeros. En el Baile de las casas son 4 plazas obligatorias, dos parejas. La cobertura se calcula con los cuatro, como siempre.
 
 ## 9. Gran Baile (semana 6)
 

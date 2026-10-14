@@ -1,0 +1,1037 @@
+{
+ "semana": {
+  "numero": 2,
+  "nombre": {
+   "es": "Primeras impresiones",
+   "en": "First impressions"
+  },
+  "mes": "nieblas",
+  "dias": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "hecho_del_reino": {
+   "titulo": {
+    "es": "Cobros de otoño",
+    "en": "Autumn reckonings"
+   },
+   "texto": {
+    "es": "Vencen los cobros de otoño. Las casas con deudas sonríen más de lo normal y gastan menos de lo que aparentan.",
+    "en": "The autumn debts fall due. Houses that owe money smile more than usual and spend less than they pretend."
+   }
+  }
+ },
+ "apertura": {
+  "lineas": [
+   {
+    "habla": "nota",
+    "es": "Señora: el sobre sin firma sigue en su escritorio. Folio 80, legajo de la Noche del Censo.",
+    "en": "Madam: the unsigned envelope is still on your desk. Folio 80, the Census Night bundle."
+   },
+   {
+    "habla": "nota",
+    "es": "Podría preguntar en el Archivo, con discreción. O guardarlo y esperar a que quien lo escribió vuelva a hacerlo.",
+    "en": "You could ask at the Archive, discreetly. Or keep it and wait for whoever wrote it to write again."
+   }
+  ],
+  "decision": [
+   {
+    "id": "preguntar",
+    "texto": {
+     "es": "Preguntar con discreción en el Archivo",
+     "en": "Ask discreetly at the Archive"
+    },
+    "resultado": {
+     "es": "Un escribiente le dice que ese legajo «no se presta». Después baja la voz: «Aunque alguien lo pidió hace un mes. Alguien de la casa.»",
+     "en": "A clerk tells you that bundle “isn't lent out.” Then he lowers his voice: “Though someone asked for it a month ago. Someone from inside.”"
+    },
+    "efectos": [
+     "pista_archivo_interno"
+    ]
+   },
+   {
+    "id": "esperar",
+    "texto": {
+     "es": "Guardarlo y esperar",
+     "en": "Keep it and wait"
+    },
+    "resultado": {
+     "es": "Lo guarda con las demás cartas. Si quien lo escribió quiere algo de usted, volverá a escribir.",
+     "en": "You keep it with the other letters. If whoever wrote it wants something from you, they'll write again."
+    },
+    "efectos": [
+     "sobre_guardado"
+    ]
+   }
+  ]
+ },
+ "peticiones": [
+  {
+   "id": "p2_teo_molinos",
+   "personaje": "teo",
+   "evento": "s2_molinos",
+   "texto": {
+    "es": "Teo: «Mi padre abre los molinos esta semana. Si va alguien de su elenco, la ribera entera hablará de los Rovena. Si no va nadie, también.»",
+    "en": "Teo: “My father is opening the mills this week. If someone from your cast goes, the whole riverbank will talk about the Rovenas. If no one goes, so will they.”"
+   },
+   "si_cumple": {
+    "es": "Teo le manda una nota con un solo verso: «Gracias, y que no se entere mi orgullo.»",
+    "en": "Teo sends you a note with a single line of verse: “Thank you, and don't let my pride find out.”"
+   },
+   "si_no": {
+    "es": "Teo no dice nada. Es la primera vez que no hace un chiste sobre algo.",
+    "en": "Teo says nothing. It's the first time he hasn't made a joke about something."
+   }
+  },
+  {
+   "id": "p2_isolda_cena",
+   "personaje": "isolda",
+   "evento": "s2_cena_salvat",
+   "texto": {
+    "es": "Isolda, muy bajito: «Si… si hubiera un sitio libre en la cena de la Calle de los Sellos, a mí me gustaría ir. Sólo si sobra.»",
+    "en": "Isolda, very quietly: “If… if there were a free seat at the dinner on the Street of Seals, I'd like to go. Only if there's one spare.”"
+   },
+   "si_cumple": {
+    "es": "Isolda le da las gracias tres veces y se pone una pluma nueva en el pelo. No explica por qué esa cena.",
+    "en": "Isolda thanks you three times and wears a new feather in her hair. She doesn't explain why that dinner."
+   },
+   "si_no": {
+    "es": "Isolda dice que lo entiende perfectamente. Lo dice demasiado deprisa.",
+    "en": "Isolda says she understands perfectly. She says it too quickly."
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "id": "s2_molinos",
+   "tipo": "paseo",
+   "lugar": "muelles",
+   "dia": 4,
+   "duracion": 2,
+   "plazas": {
+    "min": 2,
+    "max": 4
+   },
+   "regla": "cualquiera",
+   "obligatorio": false,
+   "requisito": {
+    "presencia": 5,
+    "estatus": 4,
+    "intelecto": 5
+   },
+   "anfitrion": {
+    "es": "Aurelio Rovena, padre de Teo",
+    "en": "Aurelio Rovena, Teo's father"
+   },
+   "titulo": {
+    "es": "Jornada en los molinos",
+    "en": "A day at the mills"
+   },
+   "resumen": {
+    "es": "Dos días río arriba, entre ruedas de agua y almuerzos al sol. Los Rovena quieren que se hable de ellos, y bien.",
+    "en": "Two days upriver, among waterwheels and lunches in the sun. The Rovenas want to be talked about, and kindly."
+   },
+   "a_favor": [
+    {
+     "es": "Dos días juntos acercan mucho a quienes van",
+     "en": "Two days together bring the guests much closer"
+    }
+   ],
+   "en_contra": [
+    {
+     "es": "El cielo amenaza lluvia, y la ribera se embarra",
+     "en": "The sky threatens rain, and the riverbank turns to mud"
+    },
+    {
+     "es": "Quien vaya no podrá asistir a nada más el jueves ni el viernes",
+     "en": "Whoever goes can't attend anything else on Thursday or Friday"
+    }
+   ],
+   "carta": {
+    "saludo": {
+     "es": "Distinguida casamentera:",
+     "en": "Distinguished Matchmaker,"
+    },
+    "cuerpo": {
+     "es": "Los molinos Rovena llevan tres generaciones moliendo el grano que come Valcenda. Este otoño abrimos sus puertas durante dos días: barcas, almuerzo junto a las ruedas y una cena sencilla en la casa del río. Mi hijo insiste en que sus jóvenes lo pasarán bien. Yo insisto en que lo cuenten después.\n",
+     "en": "The Rovena mills have ground the grain Valcenda eats for three generations. This autumn we open their doors for two days: boats, lunch beside the wheels and a simple supper at the river house. My son insists your young people will enjoy themselves. I insist they talk about it afterwards.\n"
+    },
+    "firma": {
+     "es": "Aurelio Rovena",
+     "en": "Aurelio Rovena"
+    }
+   },
+   "incidente": {
+    "dia": 5,
+    "situacion": {
+     "es": "Llueve. Bajo el alero, un grupo de arrendatarios espera al señor Rovena: les deben los jornales de dos meses. Los invitados lo están viendo.",
+     "en": "It's raining. Under the eaves, a group of tenants waits for Mr Rovena: they're owed two months' wages. The guests are watching."
+    },
+    "cita": {
+     "habla": "a",
+     "bark": "incidente"
+    },
+    "opciones": [
+     {
+      "id": "mediar",
+      "habilidad": "presencia",
+      "d": 5,
+      "texto": {
+       "es": "Acercarse a los arrendatarios y escucharlos",
+       "en": "Go over to the tenants and listen to them"
+      },
+      "pista_coste": {
+       "es": "Los Rovena quedarán en evidencia",
+       "en": "The Rovenas will be shown up"
+      },
+      "consecuencia": {
+       "efectos": [
+        "arrendatarios_escuchados"
+       ]
+      },
+      "exito": {
+       "es": "{mejor} los escucha bajo la lluvia sin apurarlos. Cuando llega Rovena, ya no hay gritos: hay una fecha de pago.",
+       "en": "{mejor} listens to them in the rain without hurrying them. When Rovena arrives, there's no more shouting: there's a payment date."
+      },
+      "medias": {
+       "es": "Los arrendatarios se calman a medias. Uno de ellos se queda mirando a los invitados con rencor.",
+       "en": "The tenants calm down, more or less. One of them keeps glaring at the guests."
+      },
+      "fallo": {
+       "es": "{mejor} no encuentra las palabras. Los gritos llegan hasta el comedor.",
+       "en": "{mejor} can't find the words. The shouting reaches the dining room."
+      }
+     },
+     {
+      "id": "cuentas",
+      "habilidad": "intelecto",
+      "d": 5,
+      "texto": {
+       "es": "Revisar con el administrador las cuentas del molino",
+       "en": "Go through the mill's accounts with the steward"
+      },
+      "pista_coste": {
+       "es": "Verá lo que los Rovena no quieren que se vea",
+       "en": "You'll see what the Rovenas don't want seen"
+      },
+      "consecuencia": {
+       "efectos": [
+        "deuda_rovena_vista"
+       ],
+       "cercania_asistentes": 1
+      },
+      "exito": {
+       "es": "Las cuentas cuadran a medias: los molinos ganan, pero los adelantos de cosecha se los come una deuda con los Miravés. Hay dinero para los jornales si se retrasa otra cosa.",
+       "en": "The accounts half add up: the mills make money, but a debt to the Miravés eats the harvest advances. There's money for the wages if something else waits."
+      },
+      "medias": {
+       "es": "El administrador enseña unas cuentas y esconde otras. Algo no cuadra, y {mejor} lo nota.",
+       "en": "The steward shows some accounts and hides others. Something doesn't add up, and {mejor} notices."
+      },
+      "fallo": {
+       "es": "El administrador se ofende. Rovena se entera de que alguien ha mirado sus libros.",
+       "en": "The steward takes offence. Rovena finds out someone has looked at his books."
+      }
+     },
+     {
+      "id": "distraer",
+      "habilidad": "chisme",
+      "d": 4,
+      "texto": {
+       "es": "Distraer a los invitados con un buen cuento junto al fuego",
+       "en": "Distract the guests with a good story by the fire"
+      },
+      "pista_coste": {
+       "es": "Nadie verá nada… esta vez",
+       "en": "Nobody will see a thing… this time"
+      },
+      "consecuencia": {
+       "efectos": [
+        "deuda_rovena_tapada"
+       ]
+      },
+      "exito": {
+       "es": "Junto al fuego, {mejor} cuenta una historia tan buena que nadie mira por la ventana.",
+       "en": "By the fire, {mejor} tells a story so good that nobody looks out of the window."
+      },
+      "medias": {
+       "es": "La historia funciona hasta que alguien pregunta por los gritos de fuera.",
+       "en": "The story works until someone asks about the shouting outside."
+      },
+      "fallo": {
+       "es": "La historia se cae a la mitad. Todos miran por la ventana a la vez.",
+       "en": "The story falls apart halfway. Everyone looks out of the window at once."
+      }
+     }
+    ]
+   },
+   "indisposicion": {
+    "dias": [
+     6,
+     7
+    ],
+    "quien": "asistente de s2_molinos que también esté en s2_baile_casas, el de Presencia más baja",
+    "aviso": {
+     "es": "{a} volvió de los molinos con fiebre. Bruna dice que no se levantará hasta el lunes.",
+     "en": "{a} came back from the mills with a fever. Bruna says {a|he|she} won't be up before Monday."
+    }
+   },
+   "desenlaces": {
+    "favorable": {
+     "titulo": {
+      "es": "Dos días río arriba",
+      "en": "Two days upriver"
+     },
+     "publico": {
+      "es": "Los invitados de los Rovena volvieron de los molinos encantados, embarrados y con historias. La ribera habla bien de la casa, por una vez.",
+      "en": "The Rovenas' guests came back from the mills delighted, muddy and full of stories. The riverbank is speaking well of the house, for once.",
+      "variantes": [
+       {
+        "si": "asiste(teo)",
+        "texto": {
+         "es": "Teo Rovena enseñó los molinos de su familia con un orgullo que nadie le conocía. Hubo quien olvidó que alguna vez bromeó sobre ellos.",
+         "en": "Teo Rovena showed off his family's mills with a pride no one knew he had. Some forgot he'd ever joked about them."
+        }
+       }
+      ]
+     },
+     "privado": {
+      "es": "Aurelio Rovena le escribió una carta de agradecimiento demasiado larga para un hombre que dice no tener tiempo.",
+      "en": "Aurelio Rovena wrote you a thank-you letter far too long for a man who says he has no time.",
+      "variantes": [
+       {
+        "si": "opcion(s2_molinos) == cuentas",
+        "texto": {
+         "es": "Ahora sabe que los molinos Rovena deben dinero a la casa Miravés. Teo no lo sabe. O finge muy bien.",
+         "en": "You now know the Rovena mills owe money to House Miravés. Teo doesn't know. Or he pretends very well."
+        }
+       }
+      ]
+     }
+    },
+    "medias": {
+     "titulo": {
+      "es": "Barro y buena voluntad",
+      "en": "Mud and goodwill"
+     },
+     "publico": {
+      "es": "La jornada en los molinos Rovena fue agradable cuando no llovía. Llovió bastante.",
+      "en": "The day at the Rovena mills was pleasant whenever it wasn't raining. It rained a good deal."
+     },
+     "privado": {
+      "es": "Teo le pregunta, como quien no quiere la cosa, si alguien comentó algo de los jornales. Usted no contesta. Él tampoco insiste.",
+      "en": "Teo asks you, as if in passing, whether anyone mentioned the wages. You don't answer. He doesn't press."
+     }
+    },
+    "desaire": {
+     "titulo": {
+      "es": "Gritos bajo la lluvia",
+      "en": "Shouting in the rain"
+     },
+     "publico": {
+      "es": "En los molinos Rovena, los arrendatarios reclamaron sus jornales delante de los invitados. La Crónica lamenta no haber estado allí; ya tiene tres versiones.",
+      "en": "At the Rovena mills, the tenants demanded their wages in front of the guests. The Chronicle regrets not being there; it already has three versions."
+     },
+     "privado": {
+      "es": "Teo no le ha escrito desde entonces. Su padre, sí: para decir que nunca más.",
+      "en": "Teo hasn't written to you since. His father has: to say never again."
+     }
+    }
+   },
+   "reemplazo": {
+    "evento": "s2_baile_casas",
+    "titulo": {
+     "es": "Un hueco en el baile",
+     "en": "A gap at the ball"
+    },
+    "texto": {
+     "es": "{a} no podrá bailar el domingo. El baile es obligatorio: alguien tiene que ocupar su lugar.",
+     "en": "{a} won't be able to dance on Sunday. The ball is required: someone must take {a|his|her} place."
+    },
+    "opciones": {
+     "sustituir": {
+      "es": "Enviar a otra persona en su lugar",
+      "en": "Send someone else in {a|his|her} place"
+     },
+     "reducir": {
+      "es": "Ir con una pareja menos",
+      "en": "Go with one couple fewer"
+     },
+     "retirar": {
+      "es": "Enviar disculpas a los anfitriones",
+      "en": "Send apologies to the hosts"
+     }
+    },
+    "resultado_reducir": {
+     "es": "Una sola pareja abrirá el baile de su casa. Se notará el hueco, pero no tanto como una silla vacía.",
+     "en": "A single couple will dance for your house. The gap will show, but not as much as an empty chair."
+    },
+    "resultado_retirar": {
+     "es": "Las casas reciben sus disculpas. Las aceptan en voz alta y las comentan en voz baja.",
+     "en": "The houses receive your apologies. They accept them aloud and discuss them under their breath."
+    }
+   }
+  },
+  {
+   "id": "s2_cena_salvat",
+   "tipo": "cena",
+   "lugar": "archivo",
+   "dia": 6,
+   "duracion": 1,
+   "plazas": {
+    "min": 2,
+    "max": 3
+   },
+   "regla": "cualquiera",
+   "obligatorio": false,
+   "requisito": {
+    "intelecto": 5,
+    "chisme": 5,
+    "estatus": 3
+   },
+   "anfitrion": {
+    "es": "Tomás Salvat, archivero mayor",
+    "en": "Tomás Salvat, Senior Archivist"
+   },
+   "titulo": {
+    "es": "Cena en la Calle de los Sellos",
+    "en": "Supper on the Street of Seals"
+   },
+   "resumen": {
+    "es": "La familia Salvat recibe en su casa, encima de los depósitos del Archivo. Se habla en voz baja, por costumbre.",
+    "en": "The Salvat family receives guests at home, above the Archive's stores. People talk quietly, out of habit."
+   },
+   "a_favor": [
+    {
+     "es": "Aquí se sabe de verdad quién debe qué a quién",
+     "en": "Here people really know who owes what to whom"
+    }
+   ],
+   "en_contra": [
+    {
+     "es": "Las conversaciones son largas y nadie baila",
+     "en": "Conversations are long and nobody dances"
+    }
+   ],
+   "carta": {
+    "saludo": {
+     "es": "Estimada señora:",
+     "en": "Dear Madam,"
+    },
+    "cuerpo": {
+     "es": "Mi hija Irene me asegura que usted es persona de confianza, y mi hija no se equivoca casi nunca. El sábado cenaremos en casa, sobre los depósitos. No hay música ni espejos: hay buen vino y mejores papeles. Traiga a quien sepa escuchar. En esta calle, quien escucha, aprende.\n",
+     "en": "My daughter Irene assures me you are someone to be trusted, and my daughter is almost never wrong. On Saturday we dine at home, above the stores. There's no music and no mirrors: there's good wine and better papers. Bring whoever knows how to listen. On this street, those who listen, learn.\n"
+    },
+    "firma": {
+     "es": "Tomás Salvat",
+     "en": "Tomás Salvat"
+    }
+   },
+   "incidente": {
+    "dia": 6,
+    "situacion": {
+     "es": "Un viejo escribiente, algo bebido, comenta que alguien pidió el legajo de la Noche del Censo hace un mes «y lo devolvió más ligero». Irene deja la copa en la mesa.",
+     "en": "An old clerk, a little drunk, mentions that someone requested the Census Night bundle a month ago “and brought it back lighter.” Irene sets her glass down."
+    },
+    "cita": {
+     "habla": "a",
+     "bark": "incidente"
+    },
+    "opciones": [
+     {
+      "id": "sonsacar",
+      "habilidad": "chisme",
+      "d": 5,
+      "texto": {
+       "es": "Sonsacarle al escribiente quién lo pidió",
+       "en": "Coax the clerk into saying who asked for it"
+      },
+      "pista_coste": {
+       "es": "Irene lo notará",
+       "en": "Irene will notice"
+      },
+      "consecuencia": {
+       "efectos": [
+        "pista_letra_registro",
+        "irene_recelosa"
+       ]
+      },
+      "exito": {
+       "es": "El escribiente no recuerda el nombre, pero sí la letra del registro: «Pequeña, muy ordenada. De alguien de aquí.»",
+       "en": "The clerk doesn't remember the name, but he does remember the handwriting in the register: “Small, very neat. Someone from here.”"
+      },
+      "medias": {
+       "es": "El escribiente empieza a contarlo y Tomás Salvat le sirve más vino para que olvide.",
+       "en": "The clerk starts to tell it and Tomás Salvat pours him more wine so he'll forget."
+      },
+      "fallo": {
+       "es": "La pregunta suena a interrogatorio. La mesa se queda en silencio.",
+       "en": "The question sounds like an interrogation. The table falls silent."
+      }
+     },
+     {
+      "id": "registro",
+      "habilidad": "intelecto",
+      "d": 5,
+      "texto": {
+       "es": "Pedir, con interés de erudito, ver el libro de préstamos",
+       "en": "Ask, with a scholar's interest, to see the lending register"
+      },
+      "pista_coste": {
+       "es": "Un dato exacto, y un favor que deber",
+       "en": "An exact fact, and a favour owed"
+      },
+      "consecuencia": {
+       "efectos": [
+        "pista_letra_registro"
+       ],
+       "cercania_asistentes": 1
+      },
+      "exito": {
+       "es": "Tomás Salvat enseña el libro con orgullo de archivero. En la línea del legajo, la firma está tachada; la letra de la fecha es pequeña y muy ordenada.",
+       "en": "Tomás Salvat shows the register with an archivist's pride. On the bundle's line the signature has been struck out; the date is written in small, very neat handwriting."
+      },
+      "medias": {
+       "es": "Les enseñan el libro, pero la página del legajo está doblada. Nadie se atreve a desdoblarla en la mesa.",
+       "en": "They're shown the register, but the bundle's page is folded over. Nobody dares unfold it at the table."
+      },
+      "fallo": {
+       "es": "Tomás Salvat sonríe y dice que los libros no salen de la mesa de trabajo. La conversación cambia.",
+       "en": "Tomás Salvat smiles and says the books don't leave the work table. The conversation moves on."
+      }
+     },
+     {
+      "id": "cambiar",
+      "habilidad": "presencia",
+      "d": 4,
+      "texto": {
+       "es": "Cambiar de tema con gracia, por cortesía con los anfitriones",
+       "en": "Gracefully change the subject, out of courtesy to the hosts"
+      },
+      "pista_coste": {
+       "es": "Irene se lo agradecerá",
+       "en": "Irene will be grateful"
+      },
+      "consecuencia": {
+       "efectos": [
+        "irene_agradecida"
+       ]
+      },
+      "exito": {
+       "es": "Un brindis por las hijas que aprenden el oficio de sus padres. Irene levanta la copa y, por un momento, mira a {mejor} con alivio.",
+       "en": "A toast to daughters who learn their parents' trade. Irene raises her glass and, for a moment, looks at {mejor} with relief."
+      },
+      "medias": {
+       "es": "El tema cambia, pero el escribiente sigue murmurando en su rincón.",
+       "en": "The subject changes, but the clerk keeps muttering in his corner."
+      },
+      "fallo": {
+       "es": "El brindis llega tarde y suena a que todos ocultan algo.",
+       "en": "The toast comes too late and sounds as if everyone is hiding something."
+      }
+     }
+    ]
+   },
+   "desenlaces": {
+    "favorable": {
+     "titulo": {
+      "es": "Vino y buenos papeles",
+      "en": "Wine and good papers"
+     },
+     "publico": {
+      "es": "{grupo} cenaron en casa de los Salvat, en la Calle de los Sellos. Dicen que hablaron de historia hasta la medianoche, y que nadie se aburrió.",
+      "en": "{grupo} dined with the Salvats on the Street of Seals. They say the talk was of history until midnight, and nobody was bored.",
+      "variantes": [
+       {
+        "si": "asiste(isolda)",
+        "texto": {
+         "es": "La señorita Marén, tan callada, hizo una pregunta sobre los registros del puerto que dejó en silencio a la mesa entera. Irene Salvat la contestó durante media hora.",
+         "en": "Miss Marén, so quiet, asked a question about the port records that silenced the whole table. Irene Salvat answered it for half an hour."
+        }
+       }
+      ]
+     },
+     "privado": {
+      "es": "Al despedirse, Irene le escribe una nota de dos líneas: «Vuelva. En esta calle se escucha mejor que en los salones.» La letra es pequeña y muy ordenada.",
+      "en": "On parting, Irene sends you a two-line note: “Come back. On this street people listen better than in ballrooms.” The handwriting is small and very neat.",
+      "variantes": [
+       {
+        "si": "asiste(isolda) y asiste(irene)",
+        "texto": {
+         "es": "Isolda e Irene se quedaron hablando en la escalera cuando todos ya se habían ido. Isolda volvió sin la pluma del pelo. No parecía importarle.",
+         "en": "Isolda and Irene stayed talking on the stairs after everyone had left. Isolda came back without the feather in her hair. She didn't seem to mind."
+        }
+       }
+      ]
+     }
+    },
+    "medias": {
+     "titulo": {
+      "es": "Una cena callada",
+      "en": "A quiet supper"
+     },
+     "publico": {
+      "es": "{grupo} cenaron con los Salvat. Fue una cena seria, en una calle seria.",
+      "en": "{grupo} dined with the Salvats. It was a serious supper, on a serious street."
+     },
+     "privado": {
+      "es": "Tomás Salvat les acompañó hasta la puerta y miró la calle antes de cerrar. A un lado y al otro.",
+      "en": "Tomás Salvat saw them to the door and checked the street before closing it. Left and right."
+     }
+    },
+    "desaire": {
+     "titulo": {
+      "es": "Preguntas de más",
+      "en": "Too many questions"
+     },
+     "publico": {
+      "es": "Se comenta que en casa de los Salvat alguien preguntó lo que no debía. Los archiveros no lo olvidarán pronto.",
+      "en": "Word is that at the Salvats' someone asked what they shouldn't. Archivists will not soon forget it."
+     },
+     "privado": {
+      "es": "Irene no le ha devuelto el saludo esta mañana. Lo ha visto. Ha decidido no verlo.",
+      "en": "Irene didn't return your greeting this morning. She saw you. She decided not to."
+     }
+    }
+   }
+  },
+  {
+   "id": "s2_baile_casas",
+   "tipo": "baile",
+   "lugar": "salon",
+   "dia": 7,
+   "duracion": 1,
+   "plazas": {
+    "min": 4,
+    "max": 4
+   },
+   "regla": "parejas",
+   "obligatorio": true,
+   "requisito": {
+    "baile": 5,
+    "estatus": 4,
+    "presencia": 5
+   },
+   "anfitrion": {
+    "es": "Las casas de la temporada",
+    "en": "The houses of the season"
+   },
+   "titulo": {
+    "es": "Baile de las casas",
+    "en": "The Houses' Ball"
+   },
+   "resumen": {
+    "es": "Cada casa presenta a sus jóvenes en el Salón de las Columnas. Usted presenta dos parejas, y Valcenda decide quién brilla.",
+    "en": "Every house presents its young people at the Hall of Columns. You present two couples, and Valcenda decides who shines."
+   },
+   "a_favor": [
+    {
+     "es": "Bailar juntos acerca el doble que una cena",
+     "en": "Dancing together draws people twice as close as a supper"
+    }
+   ],
+   "en_contra": [
+    {
+     "es": "Las casas con deudas vigilarán quién baila con quién",
+     "en": "Houses in debt will be watching who dances with whom"
+    }
+   ],
+   "carta": {
+    "saludo": {
+     "es": "A la casamentera de la Temporada,",
+     "en": "To the Matchmaker of the Season,"
+    },
+    "cuerpo": {
+     "es": "Como cada otoño, las casas abrirán el Salón de las Columnas para el primer gran baile. Le corresponden dos parejas en el segundo vals. Le recuerdo, con todo el respeto, que la reina leerá la Crónica del lunes. Las casas Lobreda y Veyra han pedido mesas contiguas. No pregunte por qué; ya lo sabe.\n",
+     "en": "As every autumn, the houses will open the Hall of Columns for the first great ball. Two couples are yours in the second waltz. May I remind you, with all respect, that the Queen will read Monday's Chronicle. Houses Lobreda and Veyra have asked for neighbouring tables. Don't ask why; you already know.\n"
+    },
+    "firma": {
+     "es": "Mireya, secretaria de listas",
+     "en": "Mireya, Keeper of the Lists"
+    }
+   },
+   "incidente": {
+    "dia": 7,
+    "situacion": {
+     "es": "Al empezar el segundo vals, aparecen sobre las mesas unos pliegos impresos, sin firma. Todo el salón lee a la vez. Algunos miran hacia {a} y {b}.",
+     "en": "As the second waltz begins, printed sheets appear on the tables, unsigned. The whole hall reads at once. Some glance at {a} and {b}."
+    },
+    "cita": {
+     "habla": "b",
+     "bark": "tras_escandalo"
+    },
+    "opciones": [
+     {
+      "id": "bailar",
+      "habilidad": "baile",
+      "d": 5,
+      "texto": {
+       "es": "Seguir bailando como si nada",
+       "en": "Keep dancing as if nothing had happened"
+      },
+      "pista_coste": {
+       "es": "Las parejas se acercarán",
+       "en": "The couples will draw closer"
+      },
+      "consecuencia": {
+       "cercania_asistentes": 1
+      },
+      "exito": {
+       "es": "Las dos parejas siguen el vals sin perder el compás. Al tercer giro, el salón vuelve a mirar el baile y no los pliegos.",
+       "en": "Both couples keep the waltz without losing the beat. By the third turn, the hall is watching the dance again, not the sheets."
+      },
+      "medias": {
+       "es": "Una de las parejas pierde el paso un instante. Lo justo para que alguien lo apunte.",
+       "en": "One couple loses the step for a moment. Just long enough for someone to note it down."
+      },
+      "fallo": {
+       "es": "El vals se rompe. Las parejas se quedan quietas en mitad del salón, leyendo como todos.",
+       "en": "The waltz falls apart. The couples stand still in the middle of the hall, reading like everyone else."
+      }
+     },
+     {
+      "id": "retirar",
+      "habilidad": "estatus",
+      "d": 5,
+      "texto": {
+       "es": "Pedir a los anfitriones que recojan los pliegos",
+       "en": "Ask the hosts to gather up the sheets"
+      },
+      "pista_coste": {
+       "es": "Habrá menos copias, y quien las imprimió se fijará en usted",
+       "en": "Fewer copies will spread, and whoever printed them will take note of you"
+      },
+      "consecuencia": {
+       "efectos": [
+        "hoja_retirada"
+       ],
+       "reputacion_si_exito": 1
+      },
+      "exito": {
+       "es": "Los criados recogen los pliegos antes del tercer vals. Los que quedan circulan escondidos en los guantes, que es peor para la reputación de quien los lee.",
+       "en": "The servants gather the sheets before the third waltz. The ones left travel hidden in gloves, which looks worse for those reading them."
+      },
+      "medias": {
+       "es": "Se recogen la mitad. La otra mitad ya está en los bolsillos.",
+       "en": "Half are gathered. The other half are already in pockets."
+      },
+      "fallo": {
+       "es": "La petición llega tarde y se interpreta como miedo. ¿Qué tiene que esconder la casamentera?",
+       "en": "The request comes too late and reads as fear. What does the Matchmaker have to hide?"
+      }
+     },
+     {
+      "id": "averiguar",
+      "habilidad": "chisme",
+      "d": 4,
+      "texto": {
+       "es": "Averiguar quién dejó los pliegos",
+       "en": "Find out who left the sheets"
+      },
+      "pista_coste": {
+       "es": "Una pista sobre el papel",
+       "en": "A clue about the paper"
+      },
+      "consecuencia": {
+       "efectos": [
+        "pista_papel_descarte"
+       ]
+      },
+      "exito": {
+       "es": "Nadie vio quién los dejó, pero {mejor} se fija en el papel: es de cuadernillo cosido, con el borde cortado. Papel de descarte, del que usan los escribientes.",
+       "en": "Nobody saw who left them, but {mejor} notices the paper: stitched quire, edge trimmed off. Discard paper, the kind clerks use."
+      },
+      "medias": {
+       "es": "Un criado jura que los pliegos llegaron en una cesta de flores. Las flores eran de la floristería de la Calle de los Sellos.",
+       "en": "A servant swears the sheets arrived in a flower basket. The flowers came from the florist on the Street of Seals."
+      },
+      "fallo": {
+       "es": "La pregunta circula más deprisa que los pliegos. Ahora todos sospechan de todos.",
+       "en": "The question spreads faster than the sheets. Now everyone suspects everyone."
+      }
+     }
+    ]
+   },
+   "desenlaces": {
+    "favorable": {
+     "titulo": {
+      "es": "El segundo vals, el mejor",
+      "en": "The second waltz, the finest"
+     },
+     "publico": {
+      "es": "Ni los pliegos sin firma pudieron con el segundo vals: {grupo} bailaron como si el salón fuera suyo. La Crónica no recuerda un primer baile tan comentado.",
+      "en": "Not even the unsigned sheets could spoil the second waltz: {grupo} danced as if they owned the hall. The Chronicle can't recall a first ball so talked about.",
+      "variantes": [
+       {
+        "si": "asiste(saul) y asiste(celia)",
+        "texto": {
+         "es": "Saúl Veyra y Celia Lobreda volvieron a bailar juntos. Las mesas Lobreda y Veyra brindaron a la vez. Ya nadie dice «rumor»: dicen «cuándo».",
+         "en": "Saúl Veyra and Celia Lobreda danced together again. The Lobreda and Veyra tables toasted at the same moment. Nobody says “rumour” now: they say “when.”"
+        },
+        "efectos": [
+         "rumor_compromiso_paso"
+        ]
+       },
+       {
+        "si": "asiste(dario) y asiste(celia)",
+        "texto": {
+         "es": "Dario Miravés y Celia Lobreda, otra vez. Valcenda empieza a hablar de ellos como de una pieza de música: en pareja.",
+         "en": "Dario Miravés and Celia Lobreda, again. Valcenda is starting to speak of them like a piece of music: as a pair."
+        }
+       },
+       {
+        "si": "asiste(teo) y asiste(irene)",
+        "texto": {
+         "es": "Teo Rovena bailó con Irene Salvat y, por una vez, no hizo ni un chiste. Ella le corrigió el paso dos veces. Él le dio las gracias las dos.",
+         "en": "Teo Rovena danced with Irene Salvat and, for once, made no jokes. She corrected his step twice. He thanked her both times."
+        }
+       }
+      ]
+     },
+     "privado": {
+      "es": "Mireya le hace llegar una nota: «Su Majestad pidió la Crónica antes que el desayuno.»",
+      "en": "Mireya sends you a note: “Her Majesty asked for the Chronicle before breakfast.”"
+     }
+    },
+    "medias": {
+     "titulo": {
+      "es": "Un baile interrumpido",
+      "en": "An interrupted ball"
+     },
+     "publico": {
+      "es": "El Baile de las casas tuvo dos protagonistas: el segundo vals, que fue correcto, y unos pliegos sin firma, que fueron otra cosa.",
+      "en": "The Houses' Ball had two stars: the second waltz, which was proper, and some unsigned sheets, which were something else."
+     },
+     "privado": {
+      "es": "Al salir, encuentra un pliego en el asiento de su carruaje. Alguien quería asegurarse de que lo leyera.",
+      "en": "On the way out, you find a sheet on the seat of your carriage. Someone wanted to make sure you read it."
+     }
+    },
+    "desaire": {
+     "titulo": {
+      "es": "El baile de los pliegos",
+      "en": "The ball of the sheets"
+     },
+     "publico": {
+      "es": "Del Baile de las casas sólo se recordará el escándalo y que {grupo} se quedaron quietos en mitad del salón.",
+      "en": "All anyone will remember of the Houses' Ball is the scandal, and {grupo} standing frozen in the middle of the hall."
+     },
+     "privado": {
+      "es": "La reina no pidió la Crónica. Mireya dice que eso es peor.",
+      "en": "The Queen didn't ask for the Chronicle. Mireya says that's worse."
+     }
+    },
+    "sin_asistentes": {
+     "publico": {
+      "es": "La casamentera no presentó parejas en el Baile de las casas. Las demás casas bailaron más tiempo, y hablaron de ella entre vals y vals.",
+      "en": "The Matchmaker presented no couples at the Houses' Ball. The other houses danced longer, and talked about her between waltzes."
+     }
+    }
+   }
+  }
+ ],
+ "cierre": {
+  "cronica": {
+   "numero": 2,
+   "cabecera": {
+    "es": "Crónica de salones",
+    "en": "The Salon Chronicle"
+   },
+   "subtitulo": {
+    "es": "Número 2 · Impreso por Calce, Calle de los Sellos",
+    "en": "Issue 2 · Printed by Calce, Street of Seals"
+   },
+   "entradilla": {
+    "es": "Semana de cobros, semana de sonrisas. Nunca se baila tan bien como cuando se debe dinero.",
+    "en": "A week of reckonings, a week of smiles. People never dance so well as when they owe money."
+   },
+   "noticias": [
+    {
+     "id": "n2_baile",
+     "evento": "s2_baile_casas",
+     "usa_desenlace_publico": true,
+     "titular": {
+      "es": "El segundo vals",
+      "en": "The second waltz"
+     }
+    },
+    {
+     "id": "n2_pliego",
+     "fija": true,
+     "titular": {
+      "es": "Un pliego sin modales",
+      "en": "A sheet without manners"
+     },
+     "texto": {
+      "es": "Esta Crónica no sabe quién imprimió la hoja que circuló el domingo, y lo lamenta: nos habría gustado contratarlo. Lamentamos aún más su falta de firma.",
+      "en": "This Chronicle does not know who printed the sheet that circulated on Sunday, and regrets it: we'd have liked to hire them. We regret their lack of a signature even more."
+     }
+    },
+    {
+     "id": "n2_molinos",
+     "evento": "s2_molinos",
+     "si": "asistio(s2_molinos, *)",
+     "usa_desenlace_publico": true,
+     "titular": {
+      "es": "Ruedas y lluvia",
+      "en": "Wheels and rain"
+     }
+    },
+    {
+     "id": "n2_cena",
+     "evento": "s2_cena_salvat",
+     "si": "asistio(s2_cena_salvat, *)",
+     "usa_desenlace_publico": true,
+     "titular": {
+      "es": "Calle de los Sellos",
+      "en": "Street of Seals"
+     }
+    },
+    {
+     "id": "n2_rumor_semana1",
+     "si": "marca(rumor_en_la_cronica)",
+     "titular": {
+      "es": "Lo que se dijo en la imprenta",
+      "en": "What was said at the printing house"
+     },
+     "texto": {
+      "es": "Un invitado a nuestra velada de lectura nos confió el nombre de la pareja de la temporada. Lo publicamos con gusto. Si no es cierto, lo será.",
+      "en": "A guest at our reading evening confided to us the name of the season's match. We publish it with pleasure. If it isn't true, it soon will be."
+     }
+    },
+    {
+     "id": "n2_relleno_1",
+     "relleno": true,
+     "titular": {
+      "es": "Cobros",
+      "en": "Reckonings"
+     },
+     "texto": {
+      "es": "Tres casas han vendido caballos esta semana y ninguna lo admite. Las cuadras de Alto Laurel están más vacías que sus promesas.",
+      "en": "Three houses sold horses this week and none admits it. The stables of Alto Laurel are emptier than their promises."
+     }
+    }
+   ],
+   "pie": {
+    "es": "La Crónica firma todo lo que publica. Que conste.",
+    "en": "The Chronicle signs everything it prints. Let that be noted."
+   }
+  },
+  "hoja": {
+   "numero": 1,
+   "cabecera": {
+    "es": "La Hoja sin Firma",
+    "en": "The Unsigned Sheet"
+   },
+   "entradilla": {
+    "es": "Valcenda guarda sus secretos en cajones. Nosotros guardamos las llaves.",
+    "en": "Valcenda keeps its secrets in drawers. We keep the keys."
+   },
+   "secreto_por_protagonista": {
+    "nilo": {
+     "es": "El joven Lobreda ayuda a todo el mundo. Pregunten en el paso de Greda quién paga el socorro de invierno que su casa debe desde hace dos años.",
+     "en": "Young Lobreda helps everyone. Ask at the Greda pass who pays the winter relief his house has owed for two years."
+    },
+    "saul": {
+     "es": "El capitán Veyra rechazó dos compromisos antes de esta temporada. Su familia dice que por deber. ¿Por qué nadie pregunta por qué?",
+     "en": "Captain Veyra refused two engagements before this season. His family says it was duty. Why does nobody ask why?"
+    },
+    "dario": {
+     "es": "El heredero Miravés ha asistido a once fiestas al aire libre en tres años. Ha llegado a todas cuando ya se ponía el sol.",
+     "en": "The Miravés heir has attended eleven outdoor parties in three years. He has arrived at every one as the sun was setting."
+    },
+    "teo": {
+     "es": "Los molinos Rovena llevan dos meses sin pagar a sus arrendatarios. El ingenio de la casa no alcanza para los jornales.",
+     "en": "The Rovena mills haven't paid their tenants in two months. The house's wit doesn't stretch to wages."
+    },
+    "celia": {
+     "es": "La señorita Lobreda ensaya cada noche con un maestro de baile que su rama de la familia no puede pagar. ¿Quién paga?",
+     "en": "Miss Lobreda rehearses every night with a dancing master her branch of the family cannot afford. Who pays?"
+    },
+    "irene": {
+     "es": "Una archivera fue vista en los depósitos del Archivo pasada la medianoche. El Archivo dice que es imposible. El Archivo dice muchas cosas.",
+     "en": "An archivist was seen in the Archive's stores after midnight. The Archive says it's impossible. The Archive says many things."
+    },
+    "isolda": {
+     "es": "Hace dos otoños, la casa Marén pagó sin discutir el seguro de un barco hundido. Las aseguradoras de Nácar nunca pagan sin discutir. ¿Por qué la señorita Marén palidece cuando alguien nombra el «Clara de Nácar»?",
+     "en": "Two autumns ago, House Marén paid out on a sunken ship without a quarrel. Nácar insurers never pay without a quarrel. Why does Miss Marén turn pale whenever someone mentions the “Clara de Nácar”?"
+    },
+    "camila": {
+     "es": "La viuda Ferrán sonríe mucho para alguien con una deuda que vence este otoño. Pregunten a la casa Miravés por el «Clara de Nácar».",
+     "en": "The widow Ferrán smiles a great deal for someone with a debt due this autumn. Ask House Miravés about the “Clara de Nácar.”"
+    }
+   },
+   "pie": {
+    "es": "¿Por qué todos lo leen y nadie pregunta si es cierto? — Legajo 80.",
+    "en": "Why does everyone read it and no one ask whether it's true? — Bundle 80."
+   },
+   "pista": "La frase del pie es casi la misma que dice Irene (barks.irene.tras_escandalo). Firma con el número de legajo del sobre de la semana 1.",
+   "efectos": [
+    "hoja_1_publicada"
+   ],
+   "reaccion": {
+    "habla": "protagonista",
+    "bark": "tras_escandalo"
+   }
+  },
+  "solo_sus_ojos": {
+   "observaciones": [
+    {
+     "si": "marca(pista_letra_registro) y marca(sobre_guardado)",
+     "texto": {
+      "es": "Compara la letra del sobre sin firma con lo que le contaron del registro: pequeña, muy ordenada. No es una prueba. Es una coincidencia que no la deja dormir.",
+      "en": "You compare the handwriting on the unsigned envelope with what you were told about the register: small, very neat. It isn't proof. It's a coincidence that won't let you sleep."
+     }
+    },
+    {
+     "si": "marca(pista_papel_descarte)",
+     "texto": {
+      "es": "Guarda un pliego de la Hoja junto al sobre de la semana pasada. El papel es del mismo cuadernillo cosido.",
+      "en": "You keep a copy of the Sheet next to last week's envelope. The paper comes from the same stitched quire."
+     }
+    },
+    {
+     "si": "marca(deuda_rovena_vista)",
+     "texto": {
+      "es": "Los molinos Rovena deben dinero a los Miravés. Teo no lo ha dicho. Dario, tampoco.",
+      "en": "The Rovena mills owe money to the Miravés. Teo hasn't said so. Neither has Dario."
+     }
+    },
+    {
+     "si": "marca(irene_agradecida)",
+     "texto": {
+      "es": "Irene le envía un libro sin nota. Es una historia del Archivo anterior al incendio. Hay una página doblada: la del folio 80.",
+      "en": "Irene sends you a book with no note. It's a history of the Archive before the fire. One page is folded down: the one about folio 80."
+     }
+    },
+    {
+     "si": "semana == 2",
+     "texto": {
+      "es": "Primera semana de cobros, primera Hoja. Alguien en Valcenda ha decidido que la temporada no será sólo de bailes.",
+      "en": "First week of reckonings, first Sheet. Someone in Valcenda has decided this season won't be only about dancing."
+     }
+    }
+   ]
+  },
+  "gancho": {
+   "pantalla": "residencia",
+   "lineas": [
+    {
+     "habla": "nota",
+     "es": "Señora: Mara Calce ha venido dos veces. Quiere saber si usted sabe quién imprimió la Hoja. Le dije que no. ¿Hice bien?",
+     "en": "Madam: Mara Calce has called twice. She wants to know if you know who printed the Sheet. I told her no. Did I do right?"
+    },
+    {
+     "habla": "nota",
+     "es": "La reina baja al río la semana que viene, para los Faroles. Dicen que no lo hacía desde que era niña.",
+     "en": "The Queen is coming down to the river next week, for the Lanterns. They say she hasn't done so since she was a girl."
+    }
+   ]
+  }
+ }
+}
