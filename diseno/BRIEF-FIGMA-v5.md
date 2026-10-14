@@ -1,5 +1,7 @@
 # Brief para Figma (IA de Figma o Figma Make) · Plantilla v5 — 14 oct.
 
+> **Sustituido por [`figma-make/`](<figma-make/PROMPTS.md>)** (14 oct.): `Guidelines.md` más los mensajes paso a paso, siguiendo la guía oficial de Figma Make. Este archivo queda como historial.
+
 **Qué es:** las decisiones probadas en la maqueta HTML (`diseno/maqueta/`), convertidas en instrucciones para que Figma genere la plantilla con acabado profesional y de época.
 
 **Cómo usarlo:**
