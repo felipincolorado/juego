@@ -102,16 +102,17 @@ button{font:inherit;color:inherit}
 .mundo{position:absolute;inset:0;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
 .velo{position:absolute;inset:0;z-index:4;background:rgba(30,30,50,.18);opacity:0;pointer-events:none;transition:opacity .3s}
 .velo.on{opacity:1;pointer-events:auto}
-.hoja{--mano:206px;position:absolute;z-index:5;left:10px;right:10px;bottom:var(--mano);
-  max-height:calc(100% - var(--mano) - 80px);overflow:hidden;background:var(--marfil);border:1px solid var(--oro);border-bottom:none;border-radius:10px 10px 0 0;
-  padding:4px 16px 14px;box-shadow:0 -10px 28px rgba(30,30,60,.28);transform:translateY(calc(100% + var(--mano)));
+.hoja{--mano:206px;position:absolute;z-index:5;left:10px;right:10px;bottom:0;
+  max-height:calc(100% - 80px);overflow:hidden;padding-bottom:calc(var(--mano) + 10px)!important;background:var(--marfil);border:1px solid var(--oro);border-bottom:none;border-radius:10px 10px 0 0;
+  padding:4px 16px 14px;box-shadow:0 -10px 28px rgba(30,30,60,.28);transform:translateY(100%);
   transition:transform .38s cubic-bezier(.2,.8,.2,1), max-height .35s ease;touch-action:none}
 .hoja.on{transform:translateY(0)}
 .hoja.expandida{overflow-y:auto;touch-action:pan-y}
 .hoja .asa{display:block;width:100%;height:22px;border:none;background:none;cursor:grab;position:relative}
 .hoja .asa::before{content:"";position:absolute;left:50%;top:9px;width:40px;height:4px;border-radius:2px;background:var(--marfil-sombra);transform:translateX(-50%);box-shadow:inset 0 0 0 1px rgba(142,110,46,.35)}
-.detalle{display:none}
-.hoja.expandida .detalle{display:block}
+.detalle{display:block}
+.carta-completa{display:none}
+.hoja.expandida .carta-completa{display:block}
 .mas{background:none;border:none;color:var(--seda-hondo);font-size:14px;cursor:pointer;padding:6px 0}
 .hoja.expandida .mas .t1, .hoja:not(.expandida) .mas .t2{display:none}
 .marcador.activo .icono{box-shadow:0 0 0 4px rgba(192,98,122,.35),0 2px 6px rgba(0,0,0,.2);animation:pulso 1.6s ease-in-out infinite}
@@ -232,11 +233,12 @@ function pintarEvento(){const {e,plazas}=abierto;const n=e.plazas.max;const h=$(
   const listo=plazas.length>=e.plazas.min, exp=h.classList.contains("expandida");
   h.innerHTML=`<button class="asa" aria-label="Arrastre para ver más o cerrar"></button><button class="cerrar" aria-label="Cerrar">✕</button>
    <div class="cab"><div class="fecha-g"><small>${e.obligatorio?"OBLIG.":DSEM[e.dia]}</small>${e.dia}</div><div><h2>${e.titulo}</h2><div class="sub">${e.anfitrion} · ${e.reglaN}</div></div></div>
-   <div class="fila" style="margin-top:10px;justify-content:space-between"><div class="plazas">${pl}</div>${e.requisito?radar(e.requisito,plazas,150):""}</div>
+   <p class="cita" style="margin:8px 0 6px">${e.resumen}</p>
+   <div class="fila" style="justify-content:space-between"><div class="plazas">${pl}</div>${e.requisito?radar(e.requisito,plazas,150):""}</div>
+   <ul class="lista" style="margin-top:6px">${e.a_favor.map(x=>`<li>+ ${x}</li>`).join("")}${e.en_contra.map(x=>`<li>− ${x}</li>`).join("")}</ul>
    <div class="aviso" id="aviso">${plazas.length?"":"Toque las cartas de abajo para invitar."}</div>
-   <div class="pie" style="margin-top:2px"><button class="mas" id="mas"><span class="t1">Ver detalles ▴</span><span class="t2">Menos ▾</span></button><button class="sello-g ${listo?'listo':''}" id="responder">Sellar</button></div>
-   <div class="detalle"><p class="cita">${e.resumen}</p><ul class="lista">${e.a_favor.map(x=>`<li>+ ${x}</li>`).join("")}${e.en_contra.map(x=>`<li>− ${x}</li>`).join("")}</ul>
-   <div class="etiqueta">La carta</div><p class="sub">${e.carta.saludo}</p><p class="bio" style="white-space:pre-line">${e.carta.cuerpo}</p><p style="font-family:var(--display);font-style:italic;font-size:20px;text-align:right;margin:4px 0 0">${e.carta.firma}</p></div>`;
+   <div class="pie" style="margin-top:2px"><button class="mas" id="mas"><span class="t1">✉ Leer la invitación</span><span class="t2">✉ Cerrar la invitación</span></button><button class="sello-g ${listo?'listo':''}" id="responder">Sellar</button></div>
+   <div class="carta-completa"><div class="etiqueta">La invitación</div><p class="sub">${e.carta.saludo}</p><p class="bio" style="white-space:pre-line">${e.carta.cuerpo}</p><p style="font-family:var(--display);font-style:italic;font-size:20px;text-align:right;margin:4px 0 0">${e.carta.firma}</p></div>`;
   h.classList.toggle("expandida",exp);
   $(".cerrar").onclick=cerrar;$("#mas").onclick=()=>h.classList.toggle("expandida");
   document.querySelectorAll(".plaza.llena").forEach(el=>el.onclick=()=>{abierto.plazas.splice(+el.dataset.i,1);pintarEvento();render()});

@@ -32,11 +32,12 @@ Fuentes:
 2. Abre **Code → guidelines → Guidelines.md** y reemplaza su contenido por el de [`Guidelines.md`](<Guidelines.md>) de esta carpeta.
 3. Ten a mano para adjuntar:
    - los 8 retratos (`diseno/maqueta/*_carta.jpg`);
-   - `ref_mapa.png` y `ref_hoja.png`, que son capturas de la maqueta HTML y sirven **sólo** para la disposición.
+   - `ref_mapa.png` y `ref_hoja.png`, que son capturas de la maqueta HTML y sirven **sólo** para la disposición (posiciones y proporciones). En `ref_hoja.png` el papel ya nace en el borde inferior, detrás de los retratos;
+   - `ref_estilo_figma_v4.png`, la pantalla anterior de Figma cuyo acabado gustó. Sirve **sólo** como referencia de estilo: la textura del mapa, el papel y la calidad. No hay que copiar su disposición, su barra ni sus textos.
 
 ### Paso 1 · El encargo (primer mensaje)
 
-Adjunta los 8 retratos y `ref_mapa.png`, y pega:
+Adjunta los 8 retratos, `ref_mapa.png` y `ref_estilo_figma_v4.png`, y pega:
 
 ```text
 Build the main screen of the Salverna mobile game prototype, following Guidelines.md exactly.
@@ -55,8 +56,10 @@ KEY ELEMENTS:
   Toque una carta para conocer a cada uno.»
 - Hand of eight PortraitCards using the attached portraits, in this order: Nilo, Saúl, Dario, Teo,
   Celia, Irene, Isolda, Camila.
-CONSTRAINTS: layout and visuals only in this step, no interactions yet. The attached screenshot is a
-LAYOUT reference only: match positions and proportions, but make the visual finish richer and more
+CONSTRAINTS: layout and visuals only in this step, no interactions yet. Attachments: the 8 portraits
+are the real character images (use them as-is inside the frames); "ref_mapa" is a LAYOUT reference only;
+"ref_estilo_figma_v4" is a STYLE reference only (map illustration quality, paper, finish), do not copy
+its layout, its top bar or its texts. For the layout reference: match positions and proportions, but make the visual finish richer and more
 period (gilded carved frames, filigree, almanac paper), as described in Guidelines.md.
 DONE WHEN: the screen looks like a polished period game screen, every element sits in the positions
 described, the portraits are rectangular with the name inside the frame, and nothing looks like a dating app.
