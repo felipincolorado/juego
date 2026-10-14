@@ -14,7 +14,7 @@
   color-scheme: light;
 }
 html,body{height:100%}
-body{background:var(--fondo);color:var(--tinta);font-family:var(--texto);
+body{background:var(--fondo);color:var(--tinta);font-family:var(--texto);font-variant-numeric:lining-nums;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
   display:flex;justify-content:center;align-items:center;padding-block:12px;box-sizing:border-box}
 *{box-sizing:border-box}
@@ -40,18 +40,25 @@ button{font:inherit;color:inherit}
 .sombra-inf{position:absolute;inset:auto 0 0 0;height:260px;background:linear-gradient(transparent,rgba(43,51,80,.45))}
 
 /* Barra superior */
-.barra{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));left:12px;right:12px;display:flex;align-items:center;gap:8px}
+.barra{position:absolute;top:calc(10px + env(safe-area-inset-top,0px));left:12px;right:12px;display:flex;align-items:flex-end;gap:8px}
+.semana-txt{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.12em;color:var(--marfil);text-transform:uppercase;text-shadow:0 1px 3px rgba(0,0,0,.4);margin:0 0 4px 2px}
+.calendario{display:flex;flex-direction:column}
 .ficha-barra{height:42px;background:#FCF8EF;border:1px solid var(--tinta);outline:.5px solid var(--tinta);outline-offset:-4px;
   display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;line-height:1;position:relative}
-.ficha-barra small{font-size:7.5px;letter-spacing:.08em;font-weight:600;margin-bottom:3px}
+.ficha-barra small{font-size:7.5px;letter-spacing:.08em;font-weight:600;margin-bottom:5px}
 .semana{width:52px;font-size:16px}
-.resp{width:52px;font-size:16px;margin-left:auto;font-variant-numeric:tabular-nums}
-.dias{display:flex;gap:5px}
-.dia{width:36px;font-size:19px}
+.sobres{position:absolute;right:calc(10px + env(safe-area-inset-right,0px));top:calc(74px + env(safe-area-inset-top,0px));width:50px;height:36px;border:none;cursor:pointer;padding:0;background:none}
+.sobres svg{display:block;filter:drop-shadow(0 2px 4px rgba(0,0,0,.25))}
+.sobres span{position:absolute;left:0;right:0;bottom:3px;text-align:center;font-family:var(--display);font-weight:700;font-size:13px;color:var(--tinta);font-variant-numeric:tabular-nums}
+.sobres.completo span{color:var(--oro-hondo)}
+.dias{display:flex;gap:4px}
+.dia{width:36px;font-size:18px}
+.dia.libre{opacity:.75}
+.dia.sigue{border-color:var(--rosa);outline:1px dashed var(--rosa);outline-offset:-4px;color:var(--rosa)}
 .dia.evento{border-color:var(--rosa);outline-color:var(--rosa);color:var(--rosa)}
 .dia.hoy{box-shadow:0 0 0 2px var(--oro)}
 
-.sello{width:42px;height:42px;flex:none;border-radius:50%;background:var(--rosa);border:none;box-shadow:inset 0 0 0 3px var(--oro-claro);color:var(--marfil);font-size:15px;cursor:pointer;opacity:.4}
+.sello{width:42px;height:42px;flex:none;margin-left:auto;align-self:flex-end;border-radius:50%;background:var(--rosa);border:none;box-shadow:inset 0 0 0 3px var(--oro-claro);color:var(--marfil);font-size:15px;cursor:pointer;opacity:.4}
 .sello.listo{opacity:1;animation:late 2s ease-in-out infinite}
 @keyframes late{50%{transform:scale(1.05)}}
 
@@ -65,14 +72,14 @@ button{font:inherit;color:inherit}
 .marcador .etq span{padding:2px 6px;white-space:nowrap}
 
 /* Nota de la asistente */
-.nota{position:absolute;left:24px;right:24px;bottom:236px;background:var(--marfil);border:1px solid var(--oro);padding:10px 14px;font-style:italic;font-size:15px;box-shadow:0 6px 16px rgba(0,0,0,.18)}
+.nota{position:absolute;left:24px;right:24px;bottom:214px;background:var(--marfil);border:1px solid var(--oro);padding:10px 14px;font-style:italic;font-size:15px;box-shadow:0 6px 16px rgba(0,0,0,.18)}
 .nota small{display:block;font-style:normal;font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.14em;color:var(--tinta-suave)}
 
 /* Mano de retratos: cuadros rectangulares con marco */
 .mano{position:absolute;z-index:6;left:0;right:0;bottom:calc(14px + env(safe-area-inset-bottom,0px));display:flex;gap:12px;overflow-x:auto;padding:16px 14px 6px;scroll-snap-type:x mandatory;scrollbar-width:none}
 .mano::-webkit-scrollbar{display:none}
-.cuadro{flex:0 0 104px;scroll-snap-align:start;background:none;border:none;padding:0;cursor:pointer;transition:transform .2s}
-.cuadro .marco{position:relative;width:104px;height:156px;padding:8px;
+.cuadro{flex:0 0 112px;scroll-snap-align:start;background:none;border:none;padding:0;cursor:pointer;transition:transform .2s}
+.cuadro .marco{position:relative;width:112px;height:168px;padding:8px;
   background:
    radial-gradient(circle at 8px 8px,var(--oro-claro) 3px,transparent 3.5px),
    radial-gradient(circle at calc(100% - 8px) 8px,var(--oro-claro) 3px,transparent 3.5px),
@@ -80,9 +87,9 @@ button{font:inherit;color:inherit}
    radial-gradient(circle at calc(100% - 8px) calc(100% - 8px),var(--oro-claro) 3px,transparent 3.5px),
    linear-gradient(135deg,var(--oro-claro),var(--oro) 35%,var(--oro-hondo) 70%,var(--oro));
   box-shadow:0 4px 10px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.45), inset 0 0 0 3px var(--oro-hondo), inset 0 0 0 4px var(--oro-claro)}
-.cuadro .lienzo{position:relative;width:100%;height:100%;overflow:hidden;box-shadow:inset 0 0 0 2px var(--oro-hondo), inset 0 0 0 3px var(--oro-claro)}
-.cuadro img{width:100%;height:100%;object-fit:cover;display:block}
-.cuadro .placa{margin:4px 0 0;width:104px;background:linear-gradient(var(--oro-claro),var(--oro));border:1px solid var(--oro-hondo);
+.cuadro .lienzo{position:relative;width:100%;height:100%;overflow:hidden;background:#D6E3EF;box-shadow:inset 0 0 0 2px var(--oro-hondo), inset 0 0 0 3px var(--oro-claro)}
+.cuadro img{width:100%;height:100%;object-fit:cover;display:block;transform:translateY(7%)}
+.cuadro .placa{position:absolute;left:0;right:0;bottom:0;margin:0;background:linear-gradient(var(--oro-claro),var(--oro));border:1px solid var(--oro-hondo);
   font-family:var(--display);font-weight:700;font-size:14px;letter-spacing:.06em;text-align:center;color:var(--tinta);padding:1px 0}
 .cuadro.elegido{transform:translateY(-10px)}
 .cuadro.ocupado img{filter:grayscale(1) brightness(.9)}
@@ -94,7 +101,7 @@ button{font:inherit;color:inherit}
 .velo.on{opacity:1;pointer-events:auto}
 .hoja{position:absolute;z-index:7;left:12px;right:12px;bottom:-100%;max-height:calc(100% - 90px);overflow-y:auto;background:var(--marfil);border:1px solid var(--oro);border-radius:6px;
   padding:16px;box-shadow:0 -8px 24px rgba(0,0,0,.25);transition:bottom .3s ease}
-.hoja.on{bottom:calc(222px + env(safe-area-inset-bottom,0px))}
+.hoja.on{bottom:calc(206px + env(safe-area-inset-bottom,0px))}
 .hoja.alta.on{bottom:12px}
 .cerrar{position:absolute;top:6px;right:6px;width:40px;height:40px;border:none;background:none;font-size:20px;cursor:pointer;color:var(--tinta-suave)}
 .cab{display:flex;gap:12px;align-items:center;padding-right:30px}
@@ -131,11 +138,10 @@ h2{font-family:var(--display);font-weight:600;font-size:24px;line-height:1.05;ma
   <div class="mapa" aria-hidden="true"></div>
   <div class="sombra-sup"></div><div class="sombra-inf"></div>
   <div class="barra">
-    <div class="ficha-barra semana" title="Semana 1 de 6"><small>SEMANA</small>1 de 6</div>
-    <div class="dias" id="dias"></div>
-    <div class="ficha-barra resp" id="resp" title="Invitaciones respondidas"><small>✉</small><span id="respn">0/4</span></div>
+    <div class="calendario"><div class="semana-txt">Semana 1</div><div class="dias" id="dias"></div></div>
     <button class="sello" id="comenzar" aria-label="Comenzar semana">▶</button>
   </div>
+  <button class="sobres" id="sobres" aria-label="Invitaciones por responder"><svg width="50" height="36" viewBox="0 0 50 36"><rect x="1" y="1" width="48" height="34" rx="2" fill="#FBF7F0" stroke="#2B3350" stroke-width="1.2"/><path d="M1.5 2 L25 20 L48.5 2" fill="none" stroke="#2B3350" stroke-width="1.2"/><circle cx="25" cy="19" r="4" fill="#C0627A"/></svg><span id="respn">0/4</span></button>
   <div id="marcadores"></div>
   <div class="nota" id="nota"><small>NOTA</small>Ya llegaron sus ocho jóvenes. Toque una carta para conocer a cada uno, o un sobre para responder.</div>
   <div class="mano" id="mano"></div>
@@ -148,20 +154,22 @@ const D = /*DATOS*/null;
 const IMG = /*IMAGENES*/null;
 const HAB=["baile","estatus","chisme","presencia","intelecto"], HABN={baile:"Baile",estatus:"Estatus",chisme:"Chisme",presencia:"Presencia",intelecto:"Intelecto"};
 const ICON={recepcion:"🫖",paseo:"🌹",cena:"🍷",clase:"📖",baile:"🪭"};
-const DSEM={27:"JUE",28:"VIE",29:"SÁB",30:"DOM"};
+const DSEM={24:"LUN",25:"MAR",26:"MIÉ",27:"JUE",28:"VIE",29:"SÁB",30:"DOM"};
 const POS={palacio:[50,24],jardines:[74,41],imprenta:[26,38],academia:[62,57]};
 const asign={}, respondidas=new Set();
 let abierto=null;
 const $=s=>document.querySelector(s);
 
 function render(){
-  $("#dias").innerHTML=[27,28,29,30].map((d,i)=>`<div class="ficha-barra dia ${i==0?'hoy':''} ${D.eventos.some(e=>e.dia==d)?'evento':''}" title="${D.eventos.some(e=>e.dia==d)?'Hay eventos este día':'Sin eventos'}"><small>${DSEM[d]}</small>${d}</div>`).join("");
+  const empieza=d=>D.eventos.some(e=>e.dia==d), sigue=d=>D.eventos.some(e=>d>e.dia&&d<e.dia+(e.duracion||1));
+  $("#dias").innerHTML=[24,25,26,27,28,29,30].map(d=>`<div class="ficha-barra dia ${d==27?'hoy':''} ${empieza(d)?'evento':sigue(d)?'sigue':'libre'}" title="${empieza(d)?'Empieza un evento':sigue(d)?'Continúa un evento':'Sin eventos'}"><small>${DSEM[d]}</small>${d}</div>`).join("");
   $("#marcadores").innerHTML=D.eventos.map(e=>{const [x,y]=POS[e.lugar];return `<button class="marcador ${e.obligatorio?'oblig':''} ${respondidas.has(e.id)?'resp-ok':''}" style="left:${x}%;top:${y}%" data-ev="${e.id}" aria-label="${e.titulo}"><span class="icono">${ICON[e.tipo]||"✉"}</span><span class="etq"><b>${e.dia}</b><span>${e.lugarN}</span></span></button>`}).join("");
   document.querySelectorAll(".marcador").forEach(b=>b.onclick=()=>abrirEvento(b.dataset.ev));
   const ocup=ocupados();
-  $("#mano").innerHTML=D.elenco.map(p=>`<button class="cuadro ${abierto&&abierto.plazas&&abierto.plazas.includes(p.id)?'elegido':''} ${ocup[p.id]&&!(abierto&&abierto.plazas&&abierto.plazas.includes(p.id))?'ocupado':''}" data-p="${p.id}" aria-label="${p.pila}"><div class="marco"><div class="lienzo"><img alt="" src="${IMG[p.id]}"></div></div><div class="placa">${p.pila}</div></button>`).join("");
+  $("#mano").innerHTML=D.elenco.map(p=>`<button class="cuadro ${abierto&&abierto.plazas&&abierto.plazas.includes(p.id)?'elegido':''} ${ocup[p.id]&&!(abierto&&abierto.plazas&&abierto.plazas.includes(p.id))?'ocupado':''}" data-p="${p.id}" aria-label="${p.pila}"><div class="marco"><div class="lienzo"><img alt="" src="${IMG[p.id]}"><div class="placa">${p.pila}</div></div></div></button>`).join("");
   document.querySelectorAll(".cuadro").forEach(b=>b.onclick=()=>tocarCarta(b.dataset.p,b));
   $("#respn").textContent=`${respondidas.size}/${D.eventos.length}`;
+  $("#sobres").classList.toggle("completo",respondidas.size==D.eventos.length);
   const obl=D.eventos.filter(e=>e.obligatorio).every(e=>respondidas.has(e.id));
   $("#comenzar").classList.toggle("listo",obl);
 }
@@ -180,7 +188,8 @@ function radar(req,ids,size){const c=size/2,r=c-26,ang=i=>-Math.PI/2+i*2*Math.PI
   HAB.forEach((h,i)=>{const [x,y]=pt(i,6.3);s+=`<text x="${x}" y="${y+3}" font-size="9" text-anchor="middle" fill="#5D6480" font-family="Cormorant Garamond, serif" font-weight="600">${HABN[h].toUpperCase()}</text>`});
   return s+"</svg>"}
 
-function abrirEvento(id){const e=D.eventos.find(x=>x.id==id);abierto={tipo:"evento",e,plazas:[...(asign[id]||[])]};pintarEvento();$("#hoja").classList.add("on");$("#velo").classList.add("on");render()}
+function ocultarNota(){$("#nota").hidden=true}
+function abrirEvento(id){ocultarNota();const e=D.eventos.find(x=>x.id==id);abierto={tipo:"evento",e,plazas:[...(asign[id]||[])]};pintarEvento();$("#hoja").classList.add("on");$("#velo").classList.add("on");render()}
 function pintarEvento(){const {e,plazas}=abierto;const n=e.plazas.max;
   let pl="";for(let i=0;i<n;i++){const p=plazas[i];pl+=`<div class="plaza" data-i="${i}">${p?`<img alt="${D.pers[p].pila}" src="${IMG[p]}">`:"+"}</div>`}
   const listo=plazas.length>=e.plazas.min;
@@ -205,7 +214,7 @@ function tocarCarta(pid,btn){
     if(e.regla=="dama_caballero"){const g=plazas.map(x=>D.pers[x].genero);if(g.includes(p.genero))return av(p.genero=="m"?"Falta una dama.":"Falta un caballero.")}
     plazas.push(pid);pintarEvento();render();return}
   abrirFicha(pid)}
-function abrirFicha(pid){const p=D.pers[pid];abierto={tipo:"ficha"};
+function abrirFicha(pid){ocultarNota();const p=D.pers[pid];abierto={tipo:"ficha"};
   $("#hoja").innerHTML=`<button class="cerrar" aria-label="Cerrar">✕</button>
    <div class="ficha-cab"><div class="cuadro"><div class="marco"><div class="lienzo"><img alt="" src="${IMG[pid]}"></div></div></div><div><h2>${p.nombre}</h2><div class="sub">${p.casa}</div><p class="cita">${p.linea}</p></div></div>
    <div class="fila" style="margin-top:8px">${radar(null,[pid],150)}<dl class="tecnica"><dt>Edad</dt><dd>${p.edad}</dd>${HAB.map(h=>`<dt>${HABN[h]}</dt><dd>${p.habilidades[h]} de 5</dd>`).join("")}</dl></div>
@@ -213,6 +222,7 @@ function abrirFicha(pid){const p=D.pers[pid];abierto={tipo:"ficha"};
    <div class="etiqueta">Lo que usted sabe</div>
    ${p.entradas.map((t,i)=>`<div class="entrada ${i?'bloq':''}">${i?'Aún no lo sabe.':t}</div>`).join("")}`;
   $(".cerrar").onclick=cerrar;$("#hoja").classList.add("on","alta");$("#velo").classList.add("on");render()}
-$("#comenzar").onclick=()=>{if($("#comenzar").classList.contains("listo"))$("#nota").innerHTML="<small>NOTA</small>Aquí empezaría la semana: los días corren y los retratos viajan por el mapa.";};
+$("#sobres").onclick=()=>{const e=D.eventos.find(x=>!respondidas.has(x.id));if(e)abrirEvento(e.id)};
+$("#comenzar").onclick=()=>{if($("#comenzar").classList.contains("listo")){$("#nota").hidden=false;$("#nota").innerHTML="<small>NOTA</small>Aquí empezaría la semana: los días corren y los retratos viajan por el mapa.";}};
 render();
 </script>

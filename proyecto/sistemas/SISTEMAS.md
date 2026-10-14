@@ -14,7 +14,7 @@
 | Elemento | Regla |
 |---|---|
 | Temporada | 6 semanas |
-| Semana | 4 días de salón (jueves a domingo) |
+| Semana | 7 días visibles en el calendario (lunes a domingo). Los eventos de la versión 1 caen de jueves a domingo; un evento largo puede ocupar varios días |
 | Fases de la semana | **Planificación**: el tiempo está parado → **Ejecución**: los días corren solos → **Cierre**: Crónica y «Sólo para sus ojos» |
 | Duración de la animación | `seg_por_dia` = 6 s; ▶▶ multiplica por `vel_rapida` = 3. La pausa detiene todo |
 | Cambio de día | La ficha del día nuevo crece en el centro (1 s); después salen los viajes de ese día |

@@ -116,3 +116,18 @@ Sube desde abajo, por detrás de las cartas. **El busto de la pose de ficha** as
 Cuando estén definidas las semanas, se revisará el flujo completo:
 - **En Figma**, si hay capacidad; si no, en una **maqueta HTML navegable** a tamaño de teléfono.
 - **Se medirá:** toques por semana, ventanas que interrumpen y tiempo hasta la primera decisión.
+
+---
+
+## 8. Decisiones de la maqueta HTML (14 oct.)
+
+Maqueta: `diseno/maqueta/index.html`, publicada como artefacto privado. Manda sobre la especificación v3 en todo lo siguiente.
+
+| Elemento | Decisión |
+|---|---|
+| **Barra superior** | Rótulo «Semana 1» en versalitas. Debajo, **los 7 días** (lunes a domingo) como fichas de almanaque iguales, todas de 42 de alto. A la derecha, el sello ▶ para comenzar la semana. No se dice cuántas semanas hay en total |
+| **Días con evento** | Sin puntos: el **filete de la ficha y el número se ponen rosa** el día que empieza un evento. Los días que un evento largo sigue llevan filete rosa discontinuo. El día de hoy, halo dorado |
+| **Invitaciones pendientes** | Un **sobre lateral** bajo el sello, con «0/4» escrito en el sobre. Hace de recordatorio: al tocarlo se abre la siguiente invitación sin responder. Al completarlas todas, la cifra pasa a dorado |
+| **Retrato del elenco** | Cuadro rectangular de 112 × 168 dp, con marco y el **nombre dentro del cuadro**, en una placa abajo a todo lo ancho. La cara baja un poco para dejar aire arriba, donde irán las bandas de estado |
+| **Nota de la asistente** | Se oculta al primer toque, para no saturar la pantalla |
+| **Cifras** | Siempre de tipo «lining» (todas a la misma altura); las cifras antiguas de Cormorant se confundían con letras |
