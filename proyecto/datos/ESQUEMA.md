@@ -178,7 +178,7 @@ Las claves usan puntos: `hoja.boton.carta`, `ajustes.idioma`. El motor resuelve 
 **Orden de las plazas en `dama_caballero`:** la plaza `a` es el caballero y la `b` es la dama.
 | `consecuencia: {cercania_asistentes, efectos, reputacion_si_exito}` | En una opción de incidente | Precio o premio de esa opción, se aplica con cualquier resultado |
 | `pista_coste: {es, en}` | En una opción de incidente | Línea breve bajo la opción que insinúa su consecuencia |
-| `chispa(a, b)` | Condiciones | Asistieron juntos esta semana y al menos uno puede sentir atracción por el otro (verdad de autor). Nunca se muestra como etiqueta |
+| `chispa(a, b)` | Condiciones (también admite plazas: `chispa(a, b)` con las plazas del evento) | Asistieron juntos esta semana y al menos uno puede sentir atracción por el otro (verdad de autor). Nunca se muestra como etiqueta |
 
 ## 6. Campos añadidos al escribir la semana 2
 
@@ -200,3 +200,5 @@ Las claves usan puntos: `hoja.boton.carta`, `ajustes.idioma`. El motor resuelve 
 | `apertura.recuerdos: [{si, texto}]` | Apertura | Líneas de la asistente según las marcas de semanas anteriores; se muestran todas las que se cumplan |
 | `peticiones[].requiere_solicitante: true` | Petición | Sólo se cumple si asiste quien la pide |
 | `peticiones[].efectos_si_cumple` | Petición | Marcas que se activan al cumplirse |
+| `lineas[].si` | Línea de diálogo | La línea sólo se muestra si se cumple la condición |
+| `hoja.cuerpo` (con `variantes`) | Hoja | Texto único de la Hoja, en lugar de `secreto_por_protagonista` |

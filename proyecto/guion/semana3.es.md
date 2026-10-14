@@ -99,4 +99,139 @@ Su Majestad bajará al río el sábado y, por primera vez en años, hablará con
   - si `asiste(celia)`: Celia hizo la reverencia perfecta a la primera. Mireya no dijo nada, y Celia supo que eso era un elogio.
   - si `asiste(dario)`: Dario sabía ya todo el protocolo. Mireya le preguntó dónde lo había aprendido. «En casa de mi tía», dijo, «se practica mucho de noche.»
 
-*(Cierre pendiente: se escribe en la parte 2.)*
+## Barcas al atardecer · día 12 · muelles
+*paseo · plazas 2–2 · cualquiera*
+
+> La víspera de los Faroles, los barqueros alquilan barcas para dos. Se rema poco y se habla mucho.
+
+Requisito: presencia 4, chisme 5, intelecto 4
+- \+ Dos personas solas en una barca se conocen deprisa
+- − La corriente del Serel lleva hacia Arcos Bajos al caer la noche
+
+**Carta**
+
+*Señora:*
+
+El viernes, víspera de los Faroles, el gremio alquila barcas para dos desde el muelle de las Lonjas. Se reman hasta el puente y se vuelve antes de que oscurezca. Si no se vuelve antes de que oscurezca, la culpa es de la corriente, que lleva hacia Arcos Bajos y no entiende de modales.
+
+*Por el gremio, el maestre barquero*
+
+**Incidente (día 12)** · Anochece antes de lo previsto y la corriente lleva la barca hacia Arcos Bajos. En la orilla, en un taller que debería estar cerrado, hay luz y se oye una prensa.
+
+- **Remar con decisión de vuelta al muelle** (presencia, d 4)
+  - Éxito: {mejor} rema contra la corriente sin perder el buen humor. Llegan al muelle con las manos rojas y riéndose.
+  - A medias: Llegan, pero tarde y empapados. El barquero no cobra el retraso, por lástima.
+  - Fallo: Los remos se cruzan, la barca gira dos veces y tiene que rescatarlos el gremio. Lo ve medio muelle.
+- **Dejarse llevar y mirar quién trabaja en el taller** (chisme, d 4)
+  - Éxito: Por la ventana se ve una silueta delgada, con manguitos de escribiente, colgando pliegos a secar. Al oír los remos, apaga la lámpara.
+  - A medias: Sólo ven pliegos colgados, como ropa tendida. Luego la lámpara se apaga.
+  - Fallo: La barca golpea el muelle del taller. La lámpara se apaga al instante y alguien cierra los postigos de un golpe.
+- **Orientarse por los faroles ya colgados y buscar un remanso** (intelecto, d 4)
+  - Éxito: {mejor} encuentra un remanso bajo el puente. Esperan a que la corriente afloje, y en la espera hablan más que en todo el otoño.
+  - A medias: Encuentran el remanso, pero hace frío. Hablan poco, muy juntos.
+  - Fallo: El remanso resulta ser un banco de barro. Esperan a los barqueros con el agua por los tobillos.
+
+**Desenlace · favorable** — Bajo el puente
+- publico: {grupo} pasearon en barca la víspera de los Faroles. Volvieron tarde, y nadie en el muelle se atrevió a preguntar de qué hablaban.
+- privado: El barquero dice que es la barca que más tarde ha vuelto este otoño, y la única que volvió sin discutir.
+  - si `chispa(a, b)`: Al bajar de la barca, {a} le tendió la mano a {b}, y tardaron un poco más de la cuenta en soltarse.
+  - si `asiste(irene)`: Cuando pasaron cerca de Arcos Bajos, Irene se puso a hablar muy deprisa de otra cosa.
+
+**Desenlace · medias** — Agua fría
+- publico: {grupo} pasearon en barca y volvieron empapados. El Serel no respeta apellidos.
+- privado: Bruna pone a secar dos pares de guantes junto a la chimenea y no hace preguntas.
+
+**Desenlace · desaire** — Rescate en el muelle
+- publico: El gremio de barqueros tuvo que rescatar a {grupo} la víspera de los Faroles. Valcenda se ha reído toda la mañana.
+- privado: Los dos se culpan mutuamente. Con mucha educación, eso sí.
+
+## Velada de los Faroles · día 13 · muelles
+*encargo_real · plazas 3–3 · cualquiera · OBLIGATORIO*
+
+> Valcenda suelta faroles sobre el Serel por lo que ardió hace ochenta años. Este año, la reina baja a los muelles y hablará con sus jóvenes.
+
+Requisito: presencia 5, estatus 5, intelecto 5
+- \+ La reina recordará a quien le hable bien
+- \+ Una noche de recuerdo: se habla con el corazón
+- − Es una conmemoración: un chiste a destiempo pesa el doble
+- − Medio Valcenda lleva una Hoja en el bolsillo
+
+**Carta**
+
+*A la casamentera de la Temporada,*
+
+Su Majestad bajará a los muelles del Serel el sábado, al caer la tarde, para soltar el primer farol por el Archivo. Desea que la acompañen tres jóvenes de la temporada, a su elección. La reina hablará con ellos. Le ruego que elija a quien sepa recordar sin entristecer, y escuchar sin mirar el reloj.
+
+*Mireya, secretaria de listas*
+
+**Incidente (día 13)** · La reina suelta su farol y se vuelve hacia sus jóvenes. «Dígame, ¿qué cree que perdió Valcenda aquella noche?» Mira a {a}. Detrás, en el agua, un farol hecho con un pliego impreso arde despacio.
+
+- **Contestar con sinceridad: los nombres y las pruebas** (intelecto, d 5)
+  - Éxito: {mejor} habla de los registros que nadie pudo rehacer: quién era hijo de quién, quién era dueño de qué. La reina escucha sin interrumpir. «Exacto», dice. «Y alguien se aprovechó.»
+  - A medias: La respuesta es buena, pero larga. La reina asiente con educación y mira el agua.
+  - Fallo: {mejor} se enreda en fechas y apellidos. Varias casas carraspean a la vez.
+- **Contestar como enseñó Mireya: breve, digno y sin nombres** (estatus, d 5)
+  - Éxito: «La memoria, Majestad. Por eso estamos aquí.» La reina sonríe por primera vez en la noche. Mireya respira.
+  - A medias: La respuesta es correcta. La reina la ha oído cien veces y lo agradece, pero no la recordará.
+  - Fallo: La reverencia sale torcida y la frase, a medias. Mireya cierra los ojos.
+- **No contestar: ofrecerle un farol para que lo suelte por quien ella quiera** (presencia, d 5)
+  - Éxito: La reina toma el farol y se queda callada mucho tiempo. Lo suelta sin decir por quién. Al volverse, tiene los ojos brillantes y no lo disimula.
+  - A medias: La reina acepta el farol con una cortesía distante. Lo suelta y sigue su camino.
+  - Fallo: El farol se apaga antes de tocar el agua. Alguien se ríe y se calla de golpe.
+
+**Desenlace · favorable** — Mil faroles
+- publico: La reina soltó el primer farol y habló largo con {grupo}. Nadie recuerda una Noche de los Faroles tan hermosa, ni tan comentada.
+  - si `asiste(celia) y asistio(s3_clase, celia)`: Celia Lobreda contestó a la reina sin una sola duda. La reina le preguntó dónde había aprendido. «Sola, Majestad», dijo Celia.
+  - si `asiste(saul) y asiste(isolda) y marca(semilla_lavanda)`: El capitán Veyra y la señorita Marén soltaron un farol juntos. La reina comentó que hacían buena pareja. Ninguno de los dos supo qué contestar.
+  - si `asiste(nilo)`: Nilo Lobreda ayudó a los barqueros a soltar los faroles de los que no tenían a nadie que los soltara. La reina lo vio, y no dijo nada.
+- privado: Mireya le hace llegar una nota: «Su Majestad pregunta si usted cree, como ella, que algunas cosas no ardieron.»
+  - si `asiste(irene)`: Irene soltó un farol sin nombre. Cuando le preguntaron por quién era, dijo: «Por los que nadie apuntó.»
+
+**Desenlace · medias** — Una noche correcta
+- publico: La Velada de los Faroles fue solemne y correcta. La reina saludó a {grupo} con cortesía, y volvió pronto a palacio.
+- privado: En el agua flotaban, entre los faroles, restos de pliegos impresos. Alguien los había usado de papel.
+
+**Desenlace · desaire** — Un farol apagado
+- publico: En la Noche de los Faroles, la reina se retiró antes de tiempo. Se dice que algo la incomodó entre los jóvenes de la casamentera.
+- privado: Mireya no le ha escrito. Usted sabe ya lo que significa que Mireya no escriba.
+
+**Desenlace · sin_asistentes**
+- publico: La casamentera no acompañó a la reina en la Noche de los Faroles. La reina soltó su farol sola.
+
+## Crónica de salones · Número 3 · Impreso por Calce, Calle de los Sellos
+
+*Mil faroles en el río y un solo tema en los salones. Esta Crónica no se lo dirá, porque ya lo sabe usted.*
+
+- **La reina en el río** (texto del desenlace)
+- **Martillo en los jardines** (texto del desenlace)
+- **Dos en una barca** (texto del desenlace)
+- **Reverencias** (texto del desenlace)
+- **Se busca impresor**: Esta Crónica ofrece diez coronas a quien diga dónde se imprime la Hoja sin Firma. No por celos: por oficio.
+- **Faroles de más**: Los cereros de la Calle de los Sellos se quedaron sin velas el viernes. Dicen que alguien compró cuarenta de golpe, y que pagó en monedas de cobre.
+
+*La Crónica firma todo lo que publica. Incluso esto.*
+
+## La Hoja sin Firma · nº 2
+
+*Hace ochenta años ardió el Archivo. No ardió todo.*
+
+Sobrevivieron páginas del Pacto del Umbral, el documento que se dio por perdido aquella noche. Algunas casas lo saben, porque las han comprado. Otras lo temen, porque aparecen en ellas.
+- si `marca(cofre_para_archivo)`: Esta semana un cofre de papeles quemados volvió al Archivo, y Valcenda aplaudió. Interesante. ¿Por qué nadie preguntó qué faltaba dentro?
+- si `no marca(cofre_para_archivo)`: Esta semana alguien pagó el triple por un cofre de papeles quemados. Interesante. ¿Por qué se paga tanto por ceniza?
+
+*— Folio 81, que sigue a donde lo dejamos.*
+
+## Sólo para sus ojos
+
+- si `marca(pista_sello_umbral)`: Dibuja de memoria el sello del cofre: una puerta abierta dentro de un círculo. Lo guarda entre las páginas de la Hoja nº 2. Encaja demasiado bien.
+- si `marca(pujador_miraves)`: Amalia Miravés quería esos papeles. La tía de Dario no compra nada que no necesite.
+- si `marca(pista_taller_arcos)`: Un taller de Arcos Bajos con la prensa en marcha a medianoche y pliegos colgados a secar. Y una silueta con manguitos de escribiente.
+- si `marca(pista_mala_impresion) y marca(pista_taller_arcos)`: Mara tenía razón: la Hoja no sale de sus prensas, que imprimen limpio. Sale de una prensa vieja, manejada por alguien que no es impresor.
+- si `marca(catalejo_maren)`: Los Marén pagaron el seguro del Clara de Nácar sin discutir, y ahora compran el catalejo de su capitán. Isolda no sabe nada. O eso parece.
+- si `marca(reina_interes) o marca(reina_conmovida)`: La reina también cree que algo no ardió. Si es así, la temporada no termina en un baile: termina en el Archivo.
+- si `semana == 3`: Mitad de temporada. Sus jóvenes empiezan a tutearse en los rincones. Usted empieza a no tutear a nadie.
+
+## Gancho
+
+- **nota**: Señora: la reina ha dejado caer en palacio que alguien de su elenco sabe del Archivo más de lo que dice.
+- **nota**: Y otra cosa. El teatro de gala es el día 20, con luna llena. Nilo ha preguntado dos veces a qué hora termina la función.

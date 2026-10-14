@@ -1,8 +1,9 @@
 # Semana 3 · Noche de los Faroles — Nieblas 8 a 14 (lunes a domingo). Arco: proyecto/canon/ARCO-TEMPORADA.md.
-# PARTE 1 (este bloque): apertura con recuerdos de la semana 2, decisión sobre Mara, 2 peticiones,
-#   la subasta del Archivo (incidente con pista del sello del Umbral) y la clase de protocolo.
-# PARTE 2 (pendiente): s3_barcas (opcional, día 12), s3_faroles (OBLIGATORIO, día 13, la reina en el río),
-#   cierre (Crónica nº 3, Hoja nº 2 sobre las páginas del Pacto, «Sólo para sus ojos», gancho) y escenas B.
+# Parte 1: apertura con recuerdos de la semana 2, decisión sobre Mara, 2 peticiones,
+#   la subasta del Archivo (pista del sello del Umbral) y la clase de protocolo.
+# Parte 2: s3_barcas (opcional, día 12, pista del taller de Arcos Bajos), s3_faroles (OBLIGATORIO, día 13,
+#   la reina en el río), cierre (Crónica nº 3, Hoja nº 2 sobre las páginas del Pacto, «Sólo para sus ojos»,
+#   gancho hacia el plenilunio) y escenas B (escenas/vinculos_B.yaml).
 # Presagio de la cartomante: minijuego_adivina.yaml, semana 3.
 
 semana:
@@ -286,3 +287,366 @@ eventos:
             texto:
               es: "Dario sabía ya todo el protocolo. Mireya le preguntó dónde lo había aprendido. «En casa de mi tía», dijo, «se practica mucho de noche.»"
               en: "Dario already knew all the protocol. Mireya asked where he'd learned it. “At my aunt's,” he said. “We practise a great deal at night.”"
+
+  # ── Viernes 12 · Barcas al atardecer (opcional, para dos; pista del taller de Arcos Bajos) ──
+  - id: s3_barcas
+    tipo: paseo
+    lugar: muelles
+    dia: 12
+    duracion: 1
+    plazas: { min: 2, max: 2 }
+    regla: cualquiera
+    obligatorio: false
+    requisito: { presencia: 4, chisme: 5, intelecto: 4 }
+    anfitrion: { es: "El gremio de barqueros del Serel", en: "The Serel boatmen's guild" }
+    titulo: { es: "Barcas al atardecer", en: "Boats at dusk" }
+    resumen:
+      es: "La víspera de los Faroles, los barqueros alquilan barcas para dos. Se rema poco y se habla mucho."
+      en: "On the eve of the Lanterns, the boatmen hire out boats for two. There's little rowing and a great deal of talking."
+    a_favor:
+      - { es: "Dos personas solas en una barca se conocen deprisa", en: "Two people alone in a boat get acquainted quickly" }
+    en_contra:
+      - { es: "La corriente del Serel lleva hacia Arcos Bajos al caer la noche", en: "At nightfall the Serel current runs toward Arcos Bajos" }
+    carta:
+      saludo: { es: "Señora:", en: "Madam," }
+      cuerpo:
+        es: >
+          El viernes, víspera de los Faroles, el gremio alquila barcas para dos desde el muelle de las Lonjas.
+          Se reman hasta el puente y se vuelve antes de que oscurezca. Si no se vuelve antes de que oscurezca,
+          la culpa es de la corriente, que lleva hacia Arcos Bajos y no entiende de modales.
+        en: >
+          On Friday, the eve of the Lanterns, the guild hires out boats for two from the Exchange wharf.
+          You row as far as the bridge and come back before dark. If you don't come back before dark,
+          blame the current, which runs toward Arcos Bajos and has no manners at all.
+      firma: { es: "Por el gremio, el maestre barquero", en: "For the guild, the master boatman" }
+    incidente:
+      dia: 12
+      situacion:
+        es: "Anochece antes de lo previsto y la corriente lleva la barca hacia Arcos Bajos. En la orilla, en un taller que debería estar cerrado, hay luz y se oye una prensa."
+        en: "Night falls sooner than expected and the current carries the boat toward Arcos Bajos. On the bank, in a workshop that ought to be closed, a lamp is lit and a press is running."
+      cita: { habla: a, bark: incidente }
+      opciones:
+        - id: remar
+          habilidad: presencia
+          d: 4
+          texto: { es: "Remar con decisión de vuelta al muelle", en: "Row firmly back to the wharf" }
+          pista_coste: { es: "Volverán a tiempo, y sin saber nada", en: "You'll be back in time, knowing nothing" }
+          consecuencia: { cercania_asistentes: 1 }
+          exito:
+            es: "{mejor} rema contra la corriente sin perder el buen humor. Llegan al muelle con las manos rojas y riéndose."
+            en: "{mejor} rows against the current without losing good humour. They reach the wharf with red hands, laughing."
+          medias:
+            es: "Llegan, pero tarde y empapados. El barquero no cobra el retraso, por lástima."
+            en: "They make it back, but late and soaked. The boatman doesn't charge for the delay, out of pity."
+          fallo:
+            es: "Los remos se cruzan, la barca gira dos veces y tiene que rescatarlos el gremio. Lo ve medio muelle."
+            en: "The oars cross, the boat spins twice and the guild has to rescue them. Half the wharf sees it."
+        - id: acercarse
+          habilidad: chisme
+          d: 4
+          texto: { es: "Dejarse llevar y mirar quién trabaja en el taller", en: "Drift closer and see who's working in the workshop" }
+          pista_coste: { es: "Verán algo, y alguien los verá a ellos", en: "They'll see something, and someone will see them" }
+          consecuencia: { efectos: [pista_taller_arcos, vistos_en_arcos] }
+          exito:
+            es: "Por la ventana se ve una silueta delgada, con manguitos de escribiente, colgando pliegos a secar. Al oír los remos, apaga la lámpara."
+            en: "Through the window: a slender figure in clerk's sleeves, hanging sheets up to dry. At the sound of the oars, it puts out the lamp."
+          medias:
+            es: "Sólo ven pliegos colgados, como ropa tendida. Luego la lámpara se apaga."
+            en: "All they see are sheets hung up like washing. Then the lamp goes out."
+          fallo:
+            es: "La barca golpea el muelle del taller. La lámpara se apaga al instante y alguien cierra los postigos de un golpe."
+            en: "The boat knocks against the workshop jetty. The lamp goes out at once and someone slams the shutters."
+        - id: orientarse
+          habilidad: intelecto
+          d: 4
+          texto: { es: "Orientarse por los faroles ya colgados y buscar un remanso", en: "Steer by the lanterns already hung and find slack water" }
+          pista_coste: { es: "Una conversación larga en el agua quieta", en: "A long talk on still water" }
+          consecuencia: { cercania_asistentes: 2 }
+          exito:
+            es: "{mejor} encuentra un remanso bajo el puente. Esperan a que la corriente afloje, y en la espera hablan más que en todo el otoño."
+            en: "{mejor} finds slack water under the bridge. They wait for the current to ease, and while they wait they talk more than all autumn."
+          medias:
+            es: "Encuentran el remanso, pero hace frío. Hablan poco, muy juntos."
+            en: "They find the slack water, but it's cold. They talk little, sitting close."
+          fallo:
+            es: "El remanso resulta ser un banco de barro. Esperan a los barqueros con el agua por los tobillos."
+            en: "The slack water turns out to be a mudbank. They wait for the boatmen with water up to their ankles."
+    desenlaces:
+      favorable:
+        titulo: { es: "Bajo el puente", en: "Under the bridge" }
+        publico:
+          es: "{grupo} pasearon en barca la víspera de los Faroles. Volvieron tarde, y nadie en el muelle se atrevió a preguntar de qué hablaban."
+          en: "{grupo} went boating on the eve of the Lanterns. They came back late, and nobody on the wharf dared ask what they'd been talking about."
+        privado:
+          es: "El barquero dice que es la barca que más tarde ha vuelto este otoño, y la única que volvió sin discutir."
+          en: "The boatman says it's the latest boat back this autumn, and the only one that came back without an argument."
+          variantes:
+            - si: "chispa(a, b)"
+              texto:
+                es: "Al bajar de la barca, {a} le tendió la mano a {b}, y tardaron un poco más de la cuenta en soltarse."
+                en: "Stepping off the boat, {a} offered {b} a hand, and they took a little longer than necessary to let go."
+            - si: "asiste(irene)"
+              texto:
+                es: "Cuando pasaron cerca de Arcos Bajos, Irene se puso a hablar muy deprisa de otra cosa."
+                en: "When they drifted near Arcos Bajos, Irene began talking very quickly about something else."
+      medias:
+        titulo: { es: "Agua fría", en: "Cold water" }
+        publico:
+          es: "{grupo} pasearon en barca y volvieron empapados. El Serel no respeta apellidos."
+          en: "{grupo} went boating and came back soaked. The Serel has no respect for family names."
+        privado:
+          es: "Bruna pone a secar dos pares de guantes junto a la chimenea y no hace preguntas."
+          en: "Bruna sets two pairs of gloves to dry by the fire and asks no questions."
+      desaire:
+        titulo: { es: "Rescate en el muelle", en: "Rescue at the wharf" }
+        publico:
+          es: "El gremio de barqueros tuvo que rescatar a {grupo} la víspera de los Faroles. Valcenda se ha reído toda la mañana."
+          en: "The boatmen's guild had to rescue {grupo} on the eve of the Lanterns. Valcenda has been laughing all morning."
+        privado:
+          es: "Los dos se culpan mutuamente. Con mucha educación, eso sí."
+          en: "Each blames the other. Very politely, mind you."
+
+  # ── Sábado 13 · Velada de los Faroles (OBLIGATORIO; la reina en el río) ──
+  - id: s3_faroles
+    tipo: encargo_real
+    lugar: muelles
+    dia: 13
+    duracion: 1
+    plazas: { min: 3, max: 3 }
+    regla: cualquiera
+    obligatorio: true
+    requisito: { presencia: 5, estatus: 5, intelecto: 5 }
+    anfitrion: { es: "La Corona", en: "The Crown" }
+    titulo: { es: "Velada de los Faroles", en: "The Lantern Vigil" }
+    resumen:
+      es: "Valcenda suelta faroles sobre el Serel por lo que ardió hace ochenta años. Este año, la reina baja a los muelles y hablará con sus jóvenes."
+      en: "Valcenda sets lanterns afloat on the Serel for what burned eighty years ago. This year the Queen comes down to the wharves and will speak to your young people."
+    a_favor:
+      - { es: "La reina recordará a quien le hable bien", en: "The Queen will remember whoever speaks to her well" }
+      - { es: "Una noche de recuerdo: se habla con el corazón", en: "A night of remembrance: people speak from the heart" }
+    en_contra:
+      - { es: "Es una conmemoración: un chiste a destiempo pesa el doble", en: "It's a commemoration: a joke at the wrong moment weighs double" }
+      - { es: "Medio Valcenda lleva una Hoja en el bolsillo", en: "Half of Valcenda has a Sheet in its pocket" }
+    carta:
+      saludo: { es: "A la casamentera de la Temporada,", en: "To the Matchmaker of the Season," }
+      cuerpo:
+        es: >
+          Su Majestad bajará a los muelles del Serel el sábado, al caer la tarde, para soltar el primer farol por el Archivo.
+          Desea que la acompañen tres jóvenes de la temporada, a su elección. La reina hablará con ellos.
+          Le ruego que elija a quien sepa recordar sin entristecer, y escuchar sin mirar el reloj.
+        en: >
+          Her Majesty will come down to the Serel wharves on Saturday at dusk to release the first lantern for the Archive.
+          She wishes three of the season's young people to accompany her, at your choosing. The Queen will speak with them.
+          I beg you to choose those who can remember without sorrow, and listen without looking at the clock.
+      firma: { es: "Mireya, secretaria de listas", en: "Mireya, Keeper of the Lists" }
+    incidente:
+      dia: 13
+      situacion:
+        es: "La reina suelta su farol y se vuelve hacia sus jóvenes. «Dígame, ¿qué cree que perdió Valcenda aquella noche?» Mira a {a}. Detrás, en el agua, un farol hecho con un pliego impreso arde despacio."
+        en: "The Queen releases her lantern and turns to the young people. “Tell me, what do you think Valcenda lost that night?” She looks at {a}. Behind her, on the water, a lantern made from a printed sheet burns slowly."
+      cita: { habla: a, bark: incidente }
+      opciones:
+        - id: verdad
+          habilidad: intelecto
+          d: 5
+          texto: { es: "Contestar con sinceridad: los nombres y las pruebas", en: "Answer honestly: the names and the proof" }
+          pista_coste: { es: "A la reina le interesará. A algunas casas, no", en: "The Queen will be interested. Some houses won't" }
+          consecuencia: { efectos: [reina_interes], reputacion_si_exito: 1 }
+          exito:
+            es: "{mejor} habla de los registros que nadie pudo rehacer: quién era hijo de quién, quién era dueño de qué. La reina escucha sin interrumpir. «Exacto», dice. «Y alguien se aprovechó.»"
+            en: "{mejor} speaks of the records no one could rebuild: who was whose child, who owned what. The Queen listens without interrupting. “Exactly,” she says. “And someone took advantage.”"
+          medias:
+            es: "La respuesta es buena, pero larga. La reina asiente con educación y mira el agua."
+            en: "The answer is good, but long. The Queen nods politely and looks at the water."
+          fallo:
+            es: "{mejor} se enreda en fechas y apellidos. Varias casas carraspean a la vez."
+            en: "{mejor} gets tangled in dates and surnames. Several houses clear their throats at once."
+        - id: protocolo
+          habilidad: estatus
+          d: 5
+          texto: { es: "Contestar como enseñó Mireya: breve, digno y sin nombres", en: "Answer as Mireya taught: brief, dignified, no names" }
+          pista_coste: { es: "La respuesta segura", en: "The safe answer" }
+          consecuencia: { reputacion_si_exito: 1 }
+          exito:
+            es: "«La memoria, Majestad. Por eso estamos aquí.» La reina sonríe por primera vez en la noche. Mireya respira."
+            en: "“Its memory, Your Majesty. That's why we're here.” The Queen smiles for the first time that night. Mireya breathes."
+          medias:
+            es: "La respuesta es correcta. La reina la ha oído cien veces y lo agradece, pero no la recordará."
+            en: "The answer is correct. The Queen has heard it a hundred times and is grateful, but won't remember it."
+          fallo:
+            es: "La reverencia sale torcida y la frase, a medias. Mireya cierra los ojos."
+            en: "The bow comes out crooked and the sentence half finished. Mireya closes her eyes."
+        - id: farol
+          habilidad: presencia
+          d: 5
+          texto: { es: "No contestar: ofrecerle un farol para que lo suelte por quien ella quiera", en: "Don't answer: offer her a lantern to release for whomever she wishes" }
+          pista_coste: { es: "Un gesto que nadie espera", en: "A gesture no one expects" }
+          consecuencia: { efectos: [reina_conmovida], cercania_asistentes: 1 }
+          exito:
+            es: "La reina toma el farol y se queda callada mucho tiempo. Lo suelta sin decir por quién. Al volverse, tiene los ojos brillantes y no lo disimula."
+            en: "The Queen takes the lantern and stays silent a long while. She releases it without saying for whom. When she turns back, her eyes are bright and she doesn't hide it."
+          medias:
+            es: "La reina acepta el farol con una cortesía distante. Lo suelta y sigue su camino."
+            en: "The Queen accepts the lantern with distant courtesy. She releases it and moves on."
+          fallo:
+            es: "El farol se apaga antes de tocar el agua. Alguien se ríe y se calla de golpe."
+            en: "The lantern goes out before it touches the water. Someone laughs, then stops short."
+    desenlaces:
+      favorable:
+        titulo: { es: "Mil faroles", en: "A thousand lanterns" }
+        publico:
+          es: "La reina soltó el primer farol y habló largo con {grupo}. Nadie recuerda una Noche de los Faroles tan hermosa, ni tan comentada."
+          en: "The Queen released the first lantern and spoke at length with {grupo}. Nobody remembers a Lantern Night so beautiful, or so talked about."
+          variantes:
+            - si: "asiste(celia) y asistio(s3_clase, celia)"
+              texto:
+                es: "Celia Lobreda contestó a la reina sin una sola duda. La reina le preguntó dónde había aprendido. «Sola, Majestad», dijo Celia."
+                en: "Celia Lobreda answered the Queen without a moment's hesitation. The Queen asked where she'd learned. “On my own, Your Majesty,” said Celia."
+            - si: "asiste(saul) y asiste(isolda) y marca(semilla_lavanda)"
+              texto:
+                es: "El capitán Veyra y la señorita Marén soltaron un farol juntos. La reina comentó que hacían buena pareja. Ninguno de los dos supo qué contestar."
+                en: "Captain Veyra and Miss Marén released a lantern together. The Queen remarked that they made a fine pair. Neither knew what to say."
+            - si: "asiste(nilo)"
+              texto:
+                es: "Nilo Lobreda ayudó a los barqueros a soltar los faroles de los que no tenían a nadie que los soltara. La reina lo vio, y no dijo nada."
+                en: "Nilo Lobreda helped the boatmen release the lanterns of those with no one to release them. The Queen saw, and said nothing."
+        privado:
+          es: "Mireya le hace llegar una nota: «Su Majestad pregunta si usted cree, como ella, que algunas cosas no ardieron.»"
+          en: "Mireya sends you a note: “Her Majesty asks whether you believe, as she does, that some things did not burn.”"
+          variantes:
+            - si: "asiste(irene)"
+              texto:
+                es: "Irene soltó un farol sin nombre. Cuando le preguntaron por quién era, dijo: «Por los que nadie apuntó.»"
+                en: "Irene released a lantern with no name on it. When asked who it was for, she said: “For the ones nobody wrote down.”"
+      medias:
+        titulo: { es: "Una noche correcta", en: "A proper evening" }
+        publico:
+          es: "La Velada de los Faroles fue solemne y correcta. La reina saludó a {grupo} con cortesía, y volvió pronto a palacio."
+          en: "The Lantern Vigil was solemn and proper. The Queen greeted {grupo} courteously, and returned early to the palace."
+        privado:
+          es: "En el agua flotaban, entre los faroles, restos de pliegos impresos. Alguien los había usado de papel."
+          en: "Floating among the lanterns were scraps of printed sheets. Someone had used them as lantern paper."
+      desaire:
+        titulo: { es: "Un farol apagado", en: "A lantern gone out" }
+        publico:
+          es: "En la Noche de los Faroles, la reina se retiró antes de tiempo. Se dice que algo la incomodó entre los jóvenes de la casamentera."
+          en: "On Lantern Night the Queen withdrew early. Word is that something among the Matchmaker's young people made her uncomfortable."
+        privado:
+          es: "Mireya no le ha escrito. Usted sabe ya lo que significa que Mireya no escriba."
+          en: "Mireya hasn't written. You already know what it means when Mireya doesn't write."
+      sin_asistentes:
+        publico:
+          es: "La casamentera no acompañó a la reina en la Noche de los Faroles. La reina soltó su farol sola."
+          en: "The Matchmaker did not accompany the Queen on Lantern Night. The Queen released her lantern alone."
+
+# ─────────────────────────────────────────────────────────────────────────────
+cierre:
+  cronica:
+    numero: 3
+    cabecera: { es: "Crónica de salones", en: "The Salon Chronicle" }
+    subtitulo: { es: "Número 3 · Impreso por Calce, Calle de los Sellos", en: "Issue 3 · Printed by Calce, Street of Seals" }
+    entradilla:
+      es: "Mil faroles en el río y un solo tema en los salones. Esta Crónica no se lo dirá, porque ya lo sabe usted."
+      en: "A thousand lanterns on the river and one subject in every salon. This Chronicle won't tell you what it is, because you already know."
+    noticias:
+      - id: n3_faroles
+        evento: s3_faroles
+        usa_desenlace_publico: true
+        titular: { es: "La reina en el río", en: "The Queen at the river" }
+      - id: n3_subasta
+        evento: s3_subasta
+        si: "asistio(s3_subasta, *)"
+        usa_desenlace_publico: true
+        titular: { es: "Martillo en los jardines", en: "The hammer in the gardens" }
+      - id: n3_barcas
+        evento: s3_barcas
+        si: "asistio(s3_barcas, *)"
+        usa_desenlace_publico: true
+        titular: { es: "Dos en una barca", en: "Two in a boat" }
+      - id: n3_clase
+        evento: s3_clase
+        si: "asistio(s3_clase, *)"
+        usa_completada_publico: true
+        titular: { es: "Reverencias", en: "Curtsies" }
+      - id: n3_mara
+        si: "marca(mara_investiga)"
+        titular: { es: "Se busca impresor", en: "Printer wanted" }
+        texto:
+          es: "Esta Crónica ofrece diez coronas a quien diga dónde se imprime la Hoja sin Firma. No por celos: por oficio."
+          en: "This Chronicle offers ten crowns to whoever can say where the Unsigned Sheet is printed. Not out of jealousy: out of professional interest."
+      - id: n3_relleno_1
+        relleno: true
+        titular: { es: "Faroles de más", en: "Lanterns to spare" }
+        texto:
+          es: "Los cereros de la Calle de los Sellos se quedaron sin velas el viernes. Dicen que alguien compró cuarenta de golpe, y que pagó en monedas de cobre."
+          en: "The chandlers on the Street of Seals ran out of candles on Friday. They say someone bought forty at once, and paid in copper."
+    pie:
+      es: "La Crónica firma todo lo que publica. Incluso esto."
+      en: "The Chronicle signs everything it prints. Even this."
+
+  # Hoja nº 2: ya no es un secreto menor. Habla de las páginas del Pacto. Pistas: la construcción «Interesante. ¿Por qué…?»
+  # (canon §6, pista 3) y un número de folio exacto (pista 1). Aparece el domingo, al día siguiente de los Faroles.
+  hoja:
+    numero: 2
+    cabecera: { es: "La Hoja sin Firma", en: "The Unsigned Sheet" }
+    entradilla:
+      es: "Hace ochenta años ardió el Archivo. No ardió todo."
+      en: "Eighty years ago the Archive burned. Not all of it."
+    cuerpo:
+      es: "Sobrevivieron páginas del Pacto del Umbral, el documento que se dio por perdido aquella noche. Algunas casas lo saben, porque las han comprado. Otras lo temen, porque aparecen en ellas."
+      en: "Pages of the Threshold Pact survived, the document given up for lost that night. Some houses know it, because they bought them. Others fear it, because they are named in them."
+      variantes:
+        - si: "marca(cofre_para_archivo)"
+          texto:
+            es: "Esta semana un cofre de papeles quemados volvió al Archivo, y Valcenda aplaudió. Interesante. ¿Por qué nadie preguntó qué faltaba dentro?"
+            en: "This week a chest of burned papers went back to the Archive, and Valcenda applauded. Interesting. Why did nobody ask what was missing from it?"
+        - si: "no marca(cofre_para_archivo)"
+          texto:
+            es: "Esta semana alguien pagó el triple por un cofre de papeles quemados. Interesante. ¿Por qué se paga tanto por ceniza?"
+            en: "This week someone paid three times over for a chest of burned papers. Interesting. Why pay so much for ash?"
+    pie:
+      es: "— Folio 81, que sigue a donde lo dejamos."
+      en: "— Folio 81, which follows where we left off."
+    pista: "«Interesante. ¿Por qué…?» es la construcción favorita de Irene. Folio 81 sigue al 80 del sobre de la semana 1."
+    efectos: [hoja_2_publicada]
+
+  solo_sus_ojos:
+    observaciones:
+      - si: "marca(pista_sello_umbral)"
+        texto:
+          es: "Dibuja de memoria el sello del cofre: una puerta abierta dentro de un círculo. Lo guarda entre las páginas de la Hoja nº 2. Encaja demasiado bien."
+          en: "You sketch the chest's seal from memory: an open door inside a circle. You slip it between the pages of Sheet no. 2. It fits far too well."
+      - si: "marca(pujador_miraves)"
+        texto:
+          es: "Amalia Miravés quería esos papeles. La tía de Dario no compra nada que no necesite."
+          en: "Amalia Miravés wanted those papers. Dario's aunt buys nothing she doesn't need."
+      - si: "marca(pista_taller_arcos)"
+        texto:
+          es: "Un taller de Arcos Bajos con la prensa en marcha a medianoche y pliegos colgados a secar. Y una silueta con manguitos de escribiente."
+          en: "A workshop in Arcos Bajos with its press running at midnight and sheets hung up to dry. And a figure in clerk's sleeves."
+      - si: "marca(pista_mala_impresion) y marca(pista_taller_arcos)"
+        texto:
+          es: "Mara tenía razón: la Hoja no sale de sus prensas, que imprimen limpio. Sale de una prensa vieja, manejada por alguien que no es impresor."
+          en: "Mara was right: the Sheet doesn't come from her presses, which print clean. It comes from an old press, run by someone who isn't a printer."
+      - si: "marca(catalejo_maren)"
+        texto:
+          es: "Los Marén pagaron el seguro del Clara de Nácar sin discutir, y ahora compran el catalejo de su capitán. Isolda no sabe nada. O eso parece."
+          en: "The Maréns paid out on the Clara de Nácar without a quarrel, and now they've bought her captain's spyglass. Isolda knows nothing. Or so it seems."
+      - si: "marca(reina_interes) o marca(reina_conmovida)"
+        texto:
+          es: "La reina también cree que algo no ardió. Si es así, la temporada no termina en un baile: termina en el Archivo."
+          en: "The Queen also believes something didn't burn. If so, the season doesn't end at a ball: it ends at the Archive."
+      - si: "semana == 3"
+        texto:
+          es: "Mitad de temporada. Sus jóvenes empiezan a tutearse en los rincones. Usted empieza a no tutear a nadie."
+          en: "Halfway through the season. Your young people have begun to speak familiarly in corners. You have begun to trust no one."
+
+  gancho:
+    pantalla: residencia
+    lineas:
+      - habla: nota
+        es: "Señora: la reina ha dejado caer en palacio que alguien de su elenco sabe del Archivo más de lo que dice."
+        en: "Madam: the Queen let slip at the palace that someone among your eight knows more about the Archive than they say."
+      - habla: nota
+        es: "Y otra cosa. El teatro de gala es el día 20, con luna llena. Nilo ha preguntado dos veces a qué hora termina la función."
+        en: "And another thing. The gala at the theatre is on the 20th, under a full moon. Nilo has asked twice what time the performance ends."

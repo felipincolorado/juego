@@ -99,4 +99,139 @@ Her Majesty will come down to the river on Saturday and, for the first time in y
   - si `asiste(celia)`: Celia made a perfect curtsy on the first attempt. Mireya said nothing, and Celia knew that was praise.
   - si `asiste(dario)`: Dario already knew all the protocol. Mireya asked where he'd learned it. “At my aunt's,” he said. “We practise a great deal at night.”
 
-*(Cierre pendiente: se escribe en la parte 2.)*
+## Boats at dusk · día 12 · muelles
+*paseo · plazas 2–2 · cualquiera*
+
+> On the eve of the Lanterns, the boatmen hire out boats for two. There's little rowing and a great deal of talking.
+
+Requisito: presencia 4, chisme 5, intelecto 4
+- \+ Two people alone in a boat get acquainted quickly
+- − At nightfall the Serel current runs toward Arcos Bajos
+
+**Carta**
+
+*Madam,*
+
+On Friday, the eve of the Lanterns, the guild hires out boats for two from the Exchange wharf. You row as far as the bridge and come back before dark. If you don't come back before dark, blame the current, which runs toward Arcos Bajos and has no manners at all.
+
+*For the guild, the master boatman*
+
+**Incidente (día 12)** · Night falls sooner than expected and the current carries the boat toward Arcos Bajos. On the bank, in a workshop that ought to be closed, a lamp is lit and a press is running.
+
+- **Row firmly back to the wharf** (presencia, d 4)
+  - Éxito: {mejor} rows against the current without losing good humour. They reach the wharf with red hands, laughing.
+  - A medias: They make it back, but late and soaked. The boatman doesn't charge for the delay, out of pity.
+  - Fallo: The oars cross, the boat spins twice and the guild has to rescue them. Half the wharf sees it.
+- **Drift closer and see who's working in the workshop** (chisme, d 4)
+  - Éxito: Through the window: a slender figure in clerk's sleeves, hanging sheets up to dry. At the sound of the oars, it puts out the lamp.
+  - A medias: All they see are sheets hung up like washing. Then the lamp goes out.
+  - Fallo: The boat knocks against the workshop jetty. The lamp goes out at once and someone slams the shutters.
+- **Steer by the lanterns already hung and find slack water** (intelecto, d 4)
+  - Éxito: {mejor} finds slack water under the bridge. They wait for the current to ease, and while they wait they talk more than all autumn.
+  - A medias: They find the slack water, but it's cold. They talk little, sitting close.
+  - Fallo: The slack water turns out to be a mudbank. They wait for the boatmen with water up to their ankles.
+
+**Desenlace · favorable** — Under the bridge
+- publico: {grupo} went boating on the eve of the Lanterns. They came back late, and nobody on the wharf dared ask what they'd been talking about.
+- privado: The boatman says it's the latest boat back this autumn, and the only one that came back without an argument.
+  - si `chispa(a, b)`: Stepping off the boat, {a} offered {b} a hand, and they took a little longer than necessary to let go.
+  - si `asiste(irene)`: When they drifted near Arcos Bajos, Irene began talking very quickly about something else.
+
+**Desenlace · medias** — Cold water
+- publico: {grupo} went boating and came back soaked. The Serel has no respect for family names.
+- privado: Bruna sets two pairs of gloves to dry by the fire and asks no questions.
+
+**Desenlace · desaire** — Rescue at the wharf
+- publico: The boatmen's guild had to rescue {grupo} on the eve of the Lanterns. Valcenda has been laughing all morning.
+- privado: Each blames the other. Very politely, mind you.
+
+## The Lantern Vigil · día 13 · muelles
+*encargo_real · plazas 3–3 · cualquiera · OBLIGATORIO*
+
+> Valcenda sets lanterns afloat on the Serel for what burned eighty years ago. This year the Queen comes down to the wharves and will speak to your young people.
+
+Requisito: presencia 5, estatus 5, intelecto 5
+- \+ The Queen will remember whoever speaks to her well
+- \+ A night of remembrance: people speak from the heart
+- − It's a commemoration: a joke at the wrong moment weighs double
+- − Half of Valcenda has a Sheet in its pocket
+
+**Carta**
+
+*To the Matchmaker of the Season,*
+
+Her Majesty will come down to the Serel wharves on Saturday at dusk to release the first lantern for the Archive. She wishes three of the season's young people to accompany her, at your choosing. The Queen will speak with them. I beg you to choose those who can remember without sorrow, and listen without looking at the clock.
+
+*Mireya, Keeper of the Lists*
+
+**Incidente (día 13)** · The Queen releases her lantern and turns to the young people. “Tell me, what do you think Valcenda lost that night?” She looks at {a}. Behind her, on the water, a lantern made from a printed sheet burns slowly.
+
+- **Answer honestly: the names and the proof** (intelecto, d 5)
+  - Éxito: {mejor} speaks of the records no one could rebuild: who was whose child, who owned what. The Queen listens without interrupting. “Exactly,” she says. “And someone took advantage.”
+  - A medias: The answer is good, but long. The Queen nods politely and looks at the water.
+  - Fallo: {mejor} gets tangled in dates and surnames. Several houses clear their throats at once.
+- **Answer as Mireya taught: brief, dignified, no names** (estatus, d 5)
+  - Éxito: “Its memory, Your Majesty. That's why we're here.” The Queen smiles for the first time that night. Mireya breathes.
+  - A medias: The answer is correct. The Queen has heard it a hundred times and is grateful, but won't remember it.
+  - Fallo: The bow comes out crooked and the sentence half finished. Mireya closes her eyes.
+- **Don't answer: offer her a lantern to release for whomever she wishes** (presencia, d 5)
+  - Éxito: The Queen takes the lantern and stays silent a long while. She releases it without saying for whom. When she turns back, her eyes are bright and she doesn't hide it.
+  - A medias: The Queen accepts the lantern with distant courtesy. She releases it and moves on.
+  - Fallo: The lantern goes out before it touches the water. Someone laughs, then stops short.
+
+**Desenlace · favorable** — A thousand lanterns
+- publico: The Queen released the first lantern and spoke at length with {grupo}. Nobody remembers a Lantern Night so beautiful, or so talked about.
+  - si `asiste(celia) y asistio(s3_clase, celia)`: Celia Lobreda answered the Queen without a moment's hesitation. The Queen asked where she'd learned. “On my own, Your Majesty,” said Celia.
+  - si `asiste(saul) y asiste(isolda) y marca(semilla_lavanda)`: Captain Veyra and Miss Marén released a lantern together. The Queen remarked that they made a fine pair. Neither knew what to say.
+  - si `asiste(nilo)`: Nilo Lobreda helped the boatmen release the lanterns of those with no one to release them. The Queen saw, and said nothing.
+- privado: Mireya sends you a note: “Her Majesty asks whether you believe, as she does, that some things did not burn.”
+  - si `asiste(irene)`: Irene released a lantern with no name on it. When asked who it was for, she said: “For the ones nobody wrote down.”
+
+**Desenlace · medias** — A proper evening
+- publico: The Lantern Vigil was solemn and proper. The Queen greeted {grupo} courteously, and returned early to the palace.
+- privado: Floating among the lanterns were scraps of printed sheets. Someone had used them as lantern paper.
+
+**Desenlace · desaire** — A lantern gone out
+- publico: On Lantern Night the Queen withdrew early. Word is that something among the Matchmaker's young people made her uncomfortable.
+- privado: Mireya hasn't written. You already know what it means when Mireya doesn't write.
+
+**Desenlace · sin_asistentes**
+- publico: The Matchmaker did not accompany the Queen on Lantern Night. The Queen released her lantern alone.
+
+## The Salon Chronicle · Issue 3 · Printed by Calce, Street of Seals
+
+*A thousand lanterns on the river and one subject in every salon. This Chronicle won't tell you what it is, because you already know.*
+
+- **The Queen at the river** (texto del desenlace)
+- **The hammer in the gardens** (texto del desenlace)
+- **Two in a boat** (texto del desenlace)
+- **Curtsies** (texto del desenlace)
+- **Printer wanted**: This Chronicle offers ten crowns to whoever can say where the Unsigned Sheet is printed. Not out of jealousy: out of professional interest.
+- **Lanterns to spare**: The chandlers on the Street of Seals ran out of candles on Friday. They say someone bought forty at once, and paid in copper.
+
+*The Chronicle signs everything it prints. Even this.*
+
+## The Unsigned Sheet · nº 2
+
+*Eighty years ago the Archive burned. Not all of it.*
+
+Pages of the Threshold Pact survived, the document given up for lost that night. Some houses know it, because they bought them. Others fear it, because they are named in them.
+- si `marca(cofre_para_archivo)`: This week a chest of burned papers went back to the Archive, and Valcenda applauded. Interesting. Why did nobody ask what was missing from it?
+- si `no marca(cofre_para_archivo)`: This week someone paid three times over for a chest of burned papers. Interesting. Why pay so much for ash?
+
+*— Folio 81, which follows where we left off.*
+
+## Sólo para sus ojos
+
+- si `marca(pista_sello_umbral)`: You sketch the chest's seal from memory: an open door inside a circle. You slip it between the pages of Sheet no. 2. It fits far too well.
+- si `marca(pujador_miraves)`: Amalia Miravés wanted those papers. Dario's aunt buys nothing she doesn't need.
+- si `marca(pista_taller_arcos)`: A workshop in Arcos Bajos with its press running at midnight and sheets hung up to dry. And a figure in clerk's sleeves.
+- si `marca(pista_mala_impresion) y marca(pista_taller_arcos)`: Mara was right: the Sheet doesn't come from her presses, which print clean. It comes from an old press, run by someone who isn't a printer.
+- si `marca(catalejo_maren)`: The Maréns paid out on the Clara de Nácar without a quarrel, and now they've bought her captain's spyglass. Isolda knows nothing. Or so it seems.
+- si `marca(reina_interes) o marca(reina_conmovida)`: The Queen also believes something didn't burn. If so, the season doesn't end at a ball: it ends at the Archive.
+- si `semana == 3`: Halfway through the season. Your young people have begun to speak familiarly in corners. You have begun to trust no one.
+
+## Gancho
+
+- **nota**: Madam: the Queen let slip at the palace that someone among your eight knows more about the Archive than they say.
+- **nota**: And another thing. The gala at the theatre is on the 20th, under a full moon. Nilo has asked twice what time the performance ends.

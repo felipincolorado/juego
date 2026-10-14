@@ -167,9 +167,13 @@ def guion_semana(datos, lengua):
     out += ["", f"*{t(cr['pie'])}*", ""]
     h = datos["cierre"].get("hoja")
     if h:
-        out += [f"## {t(h['cabecera'])} · nº {h['numero']}", "", f"*{t(h['entradilla'])}*", "",
-                "Secreto según quién tenga más fama:"]
-        out += [f"- **{k}**: {t(v)}" for k, v in h["secreto_por_protagonista"].items()]
+        out += [f"## {t(h['cabecera'])} · nº {h['numero']}", "", f"*{t(h['entradilla'])}*", ""]
+        if "secreto_por_protagonista" in h:
+            out.append("Secreto según quién tenga más fama:")
+            out += [f"- **{k}**: {t(v)}" for k, v in h["secreto_por_protagonista"].items()]
+        if "cuerpo" in h:
+            out.append(t(h["cuerpo"]))
+            out += [f"- si `{v['si']}`: {t(v['texto'])}" for v in h["cuerpo"].get("variantes", [])]
         out += ["", f"*{t(h['pie'])}*", ""]
     out += ["## Sólo para sus ojos", ""]
     for o in datos["cierre"]["solo_sus_ojos"]["observaciones"]:
@@ -215,7 +219,8 @@ def main():
     contenido = {os.path.relpath(r, DATOS): cargar(r) for r in archivos_yaml()}
     personajes = contenido.get("personajes.yaml", {})
     ids = {
-        "personas": {p["id"] for p in personajes.get("elenco", [])} | {p["id"] for p in personajes.get("recurrentes", [])},
+        "personas": {p["id"] for p in personajes.get("elenco", [])} | {p["id"] for p in personajes.get("recurrentes", [])}
+                    | {"a", "b", "c", "d"},  # plazas del evento actual
         "lugares": {l["id"] for l in contenido.get("lugares.yaml", {}).get("lugares", [])},
         "eventos": set(),
     }

@@ -1,0 +1,884 @@
+{
+ "escenas": [
+  {
+   "id": "b_saul_dario",
+   "nivel": "B",
+   "pareja": [
+    "saul",
+    "dario"
+   ],
+   "ambiente": {
+    "es": "El despacho de los Veyra, tarde",
+    "en": "The Veyra study, late"
+   },
+   "lineas": [
+    {
+     "habla": null,
+     "es": "Han venido a firmar un papel de sus casas. Está firmado desde hace una hora. Ninguno se ha ido.",
+     "en": "They came to sign a paper for their houses. It was signed an hour ago. Neither has left."
+    },
+    {
+     "habla": "dario",
+     "es": "Su padre tiene el mejor coñac de Valcenda y el peor gusto para los cuadros.",
+     "en": "Your father has the best brandy in Valcenda and the worst taste in paintings."
+    },
+    {
+     "habla": "saul",
+     "expr": "alegre",
+     "es": "Los cuadros los eligió mi madre. El coñac, yo.",
+     "en": "My mother chose the paintings. I chose the brandy."
+    },
+    {
+     "habla": "dario",
+     "es": "Entonces el del buen gusto es usted.",
+     "en": "Then you're the one with the taste."
+    },
+    {
+     "habla": null,
+     "es": "Saúl se quita los guantes y los deja sobre la mesa. Dario lo mira como si hubiera hecho algo indecente.",
+     "en": "Saúl takes off his gloves and lays them on the desk. Dario looks at him as though he's done something indecent."
+    },
+    {
+     "habla": "dario",
+     "expr": "ruborizada",
+     "es": "Capitán. Nunca le había visto las manos.",
+     "en": "Captain. I've never seen your hands."
+    },
+    {
+     "habla": "saul",
+     "es": "Me los quito con quien no tengo que negociar.",
+     "en": "I take them off with people I don't have to negotiate with."
+    },
+    {
+     "habla": "dario",
+     "es": "Usted y yo negociamos un préstamo.",
+     "en": "You and I negotiated a loan."
+    },
+    {
+     "habla": "saul",
+     "es": "Y a mitad perdió usted la compostura. Nunca supe por qué. No fueron las cifras.",
+     "en": "And halfway through, you lost your composure. I never knew why. It wasn't the figures."
+    },
+    {
+     "habla": "dario",
+     "es": "No. No fueron las cifras.",
+     "en": "No. It wasn't the figures."
+    },
+    {
+     "habla": null,
+     "es": "El reloj del despacho da la hora. Ninguno lo mira.",
+     "en": "The study clock strikes the hour. Neither looks at it."
+    },
+    {
+     "habla": "saul",
+     "es": "Llámame Saúl. Aquí, por lo menos.",
+     "en": "Call me Saúl. In here, at least."
+    },
+    {
+     "habla": "dario",
+     "expr": "alegre",
+     "es": "Saúl. Suena peor que «capitán». Me gusta más.",
+     "en": "Saúl. It sounds worse than “Captain.” I like it better."
+    }
+   ],
+   "efectos": [
+    "saul_sin_guantes"
+   ],
+   "apunte": {
+    "es": "Saúl y Dario ya se tutean en privado. En público siguen siendo «capitán» y «señor Miravés».",
+    "en": "Saúl and Dario use first names in private now. In public they're still “Captain” and “Mr. Miravés.”"
+   }
+  },
+  {
+   "id": "b_irene_isolda",
+   "nivel": "B",
+   "pareja": [
+    "irene",
+    "isolda"
+   ],
+   "ambiente": {
+    "es": "La sala de lectura del Archivo, después de cerrar",
+    "en": "The Archive reading room, after closing"
+   },
+   "lineas": [
+    {
+     "habla": null,
+     "es": "Irene ha dejado entrar a Isolda por la puerta de los escribientes.",
+     "en": "Irene has let Isolda in through the clerks' door."
+    },
+    {
+     "habla": "isolda",
+     "expr": "ruborizada",
+     "es": "¿Esto está permitido?",
+     "en": "Is this allowed?"
+    },
+    {
+     "habla": "irene",
+     "es": "No. Por eso es la única hora en que se puede leer tranquila.",
+     "en": "No. That's why it's the only hour you can read in peace."
+    },
+    {
+     "habla": null,
+     "es": "Isolda hojea un registro. Irene la mira a ella, no al registro.",
+     "en": "Isolda leafs through a register. Irene watches her, not the register."
+    },
+    {
+     "habla": "isolda",
+     "es": "Tengo que confesarle una cosa. Los papeles de mi abuela… No los necesitaba. Mi madre los tenía en casa.",
+     "en": "I have to confess something. My grandmother's papers… I didn't need them. My mother had them at home."
+    },
+    {
+     "habla": "irene",
+     "es": "Lo sé. Lo descubrí la segunda semana. Seguí buscando igual.",
+     "en": "I know. I worked it out in the second week. I kept looking anyway."
+    },
+    {
+     "habla": "isolda",
+     "expr": "ruborizada",
+     "es": "¿Por qué?",
+     "en": "Why?"
+    },
+    {
+     "habla": "irene",
+     "es": "Porque usted seguía viniendo.",
+     "en": "Because you kept coming."
+    },
+    {
+     "habla": null,
+     "es": "Isolda deja el registro. Por primera vez en toda la temporada, tiene las manos quietas.",
+     "en": "Isolda sets the register down. For the first time all season, her hands are still."
+    },
+    {
+     "habla": "isolda",
+     "es": "¿Puedo tutearte? Es que «usted» me queda muy lejos.",
+     "en": "Can I stop being so formal with you? It feels so far away."
+    },
+    {
+     "habla": "irene",
+     "expr": "alegre",
+     "es": "Puedes. Yo llevo semanas haciéndolo por dentro.",
+     "en": "You can. I've been doing it in my head for weeks."
+    },
+    {
+     "habla": "isolda",
+     "expr": "alegre",
+     "es": "Entonces… gracias, Irene. Por buscar tres semanas algo que no estaba perdido.",
+     "en": "Then… thank you, Irene. For spending three weeks looking for something that wasn't lost."
+    },
+    {
+     "habla": "irene",
+     "es": "De nada, Isolda. Lo volvería a hacer.",
+     "en": "You're welcome, Isolda. I'd do it again."
+    },
+    {
+     "habla": null,
+     "si": "marca(pista_taller_arcos)",
+     "es": "Al despedirse, Isolda ve en la mesa de Irene unos manguitos de escribiente, manchados de tinta. No dice nada.",
+     "en": "As they part, Isolda notices a pair of clerk's sleeves on Irene's desk, stained with ink. She says nothing."
+    }
+   ],
+   "apunte": {
+    "es": "Isolda ya llama a Irene por su nombre. Lo dice muy bajito, como quien se guarda algo en el bolsillo.",
+    "en": "Isolda calls Irene by her name now. She says it very softly, like someone slipping something into a pocket."
+   }
+  },
+  {
+   "id": "b_nilo_camila",
+   "nivel": "B",
+   "pareja": [
+    "nilo",
+    "camila"
+   ],
+   "ambiente": {
+    "es": "El camino de Greda, a media tarde",
+    "en": "The Greda road, mid-afternoon"
+   },
+   "lineas": [
+    {
+     "habla": null,
+     "es": "El carruaje de Camila ha perdido una rueda. Nilo, que pasaba a caballo, ya se ha quitado la chaqueta.",
+     "en": "Camila's carriage has lost a wheel. Nilo, who happened to be riding by, already has his coat off."
+    },
+    {
+     "habla": "camila",
+     "es": "Señor Lobreda. ¿Usted siempre aparece cuando se rompe algo?",
+     "en": "Mr. Lobreda. Do you always turn up when something breaks?"
+    },
+    {
+     "habla": "nilo",
+     "expr": "alegre",
+     "es": "Casi siempre. Es una maldición familiar. Sujete esto, por favor.",
+     "en": "Nearly always. It's a family curse. Hold this, please."
+    },
+    {
+     "habla": null,
+     "es": "Camila sujeta la rueda sin pensarlo. Luego se ríe de sí misma.",
+     "en": "Camila holds the wheel without thinking. Then she laughs at herself."
+    },
+    {
+     "habla": "camila",
+     "es": "Hace dos años, en este mismo camino, un caballero me arregló el eje y se fue sin preguntarme el nombre. Llevo dos años acordándome de él.",
+     "en": "Two years ago, on this very road, a gentleman mended my axle and rode off without asking my name. I've thought of him for two years."
+    },
+    {
+     "habla": "nilo",
+     "expr": "ruborizada",
+     "es": "¿Un caballero con un caballo pinto y un sombrero horrible?",
+     "en": "A gentleman on a piebald horse, with a dreadful hat?"
+    },
+    {
+     "habla": "camila",
+     "es": "…Sí.",
+     "en": "…Yes."
+    },
+    {
+     "habla": "nilo",
+     "es": "El sombrero era de mi padre.",
+     "en": "The hat was my father's."
+    },
+    {
+     "habla": null,
+     "es": "Camila se queda quieta, con la rueda en las manos. Nilo no sabe adónde mirar.",
+     "en": "Camila stands still with the wheel in her hands. Nilo doesn't know where to look."
+    },
+    {
+     "habla": "camila",
+     "expr": "alegre",
+     "es": "Lo más romántico que me ha pasado en dos años, y eras tú. Qué decepción. Y qué alivio.",
+     "en": "The most romantic thing that's happened to me in two years, and it was you, Nilo. How disappointing. And what a relief."
+    },
+    {
+     "habla": "nilo",
+     "expr": "alegre",
+     "es": "¿Me tuteas?",
+     "en": "“Nilo”? Not “Mr. Lobreda”?"
+    },
+    {
+     "habla": "camila",
+     "es": "Te he sujetado una rueda, Nilo. Ya no hay vuelta atrás.",
+     "en": "I've held a wheel for you. There's no going back now."
+    }
+   ],
+   "apunte": {
+    "es": "Camila ya sabe quién le arregló el carruaje hace dos años. No se lo ha contado a nadie, pero sonríe cada vez que ve un sombrero feo.",
+    "en": "Camila knows now who mended her carriage two years ago. She hasn't told a soul, but she smiles whenever she sees an ugly hat."
+   }
+  },
+  {
+   "id": "b_teo_celia",
+   "nivel": "B",
+   "pareja": [
+    "teo",
+    "celia"
+   ],
+   "ambiente": {
+    "es": "El salón vacío, cuando los músicos recogen",
+    "en": "The empty ballroom, as the musicians pack up"
+   },
+   "lineas": [
+    {
+     "habla": null,
+     "es": "Sólo queda un violinista, afinando.",
+     "en": "Only one violinist remains, tuning."
+    },
+    {
+     "habla": "teo",
+     "es": "Señorita Lobreda. Usted dijo que por algo se empieza.",
+     "en": "Miss Lobreda. You said one has to start somewhere."
+    },
+    {
+     "habla": "celia",
+     "es": "Lo dije. ¿Y?",
+     "en": "I did. And?"
+    },
+    {
+     "habla": "teo",
+     "expr": "ruborizada",
+     "es": "Pues empiezo. ¿Me concede un baile que no cuente nadie? Ni siquiera usted.",
+     "en": "Then I'm starting. Will you grant me a dance nobody counts? Not even you."
+    },
+    {
+     "habla": "celia",
+     "expr": "molesta",
+     "es": "No sé bailar sin contar.",
+     "en": "I don't know how to dance without counting."
+    },
+    {
+     "habla": "teo",
+     "es": "Y yo no sé bailar contando. Entre los dos hacemos una pareja entera.",
+     "en": "And I don't know how to dance counting. Between us, we make one whole partner."
+    },
+    {
+     "habla": null,
+     "es": "Bailan mal. Teo la pisa una vez. Celia se ríe antes que él.",
+     "en": "They dance badly. Teo treads on her once. Celia laughs before he does."
+    },
+    {
+     "habla": "celia",
+     "expr": "alegre",
+     "es": "Te has reído tarde.",
+     "en": "You laughed late, Teo."
+    },
+    {
+     "habla": "teo",
+     "es": "Me has tuteado.",
+     "en": "You called me Teo."
+    },
+    {
+     "habla": "celia",
+     "expr": "ruborizada",
+     "es": "Se me ha escapado. Es que bailas tan mal que no hay manera de ser formal.",
+     "en": "It slipped out. You dance so badly there's no way to stay formal."
+    },
+    {
+     "habla": "celia",
+     "es": "Ha sido el peor baile de mi vida.",
+     "en": "That was the worst dance of my life."
+    },
+    {
+     "habla": "teo",
+     "es": "¿Y?",
+     "en": "And?"
+    },
+    {
+     "habla": "celia",
+     "expr": "alegre",
+     "es": "Y el primero que no he contado.",
+     "en": "And the first one I didn't count."
+    }
+   ],
+   "apunte": {
+    "es": "Teo y Celia bailaron en un salón vacío. El violinista dice que fue un desastre precioso.",
+    "en": "Teo and Celia danced in an empty ballroom. The violinist says it was a beautiful disaster."
+   }
+  },
+  {
+   "id": "b_dario_celia",
+   "nivel": "B",
+   "pareja": [
+    "dario",
+    "celia"
+   ],
+   "ambiente": {
+    "es": "La Academia, de mañana, en un ensayo",
+    "en": "The Academy, one morning, at rehearsal"
+   },
+   "lineas": [
+    {
+     "habla": null,
+     "es": "Ensayan para el teatro de gala. Celia tropieza en un giro y cae de rodillas.",
+     "en": "They're rehearsing for the gala. Celia stumbles on a turn and falls to her knees."
+    },
+    {
+     "habla": null,
+     "es": "Antes de que nadie se ría, Dario tropieza también, con mucho más estrépito, y se queda tumbado en el suelo.",
+     "en": "Before anyone can laugh, Dario stumbles too, far more noisily, and lies flat on the floor."
+    },
+    {
+     "habla": "dario",
+     "expr": "alegre",
+     "es": "¡Este suelo lo ha encerado un enemigo de la casa Miravés!",
+     "en": "This floor was waxed by an enemy of House Miravés!"
+    },
+    {
+     "habla": null,
+     "es": "La sala se ríe de él. Nadie mira a Celia.",
+     "en": "The room laughs at him. Nobody looks at Celia."
+    },
+    {
+     "habla": "celia",
+     "expr": "ruborizada",
+     "es": "Lo ha hecho a propósito.",
+     "en": "You did that on purpose."
+    },
+    {
+     "habla": "dario",
+     "es": "Yo nunca tropiezo a propósito. Tropiezo con talento.",
+     "en": "I never stumble on purpose. I stumble with talent."
+    },
+    {
+     "habla": "celia",
+     "es": "¿Por qué?",
+     "en": "Why?"
+    },
+    {
+     "habla": "dario",
+     "es": "Porque es más fácil que se rían de mí. Yo estoy acostumbrado. Tú no.",
+     "en": "Because it's easier if they laugh at me. I'm used to it. You aren't, Celia."
+    },
+    {
+     "habla": "celia",
+     "es": "Me ha tuteado.",
+     "en": "You called me Celia."
+    },
+    {
+     "habla": "dario",
+     "es": "Me he caído delante de veinte personas por ti. Creo que me lo he ganado.",
+     "en": "I've just fallen over in front of twenty people for you. I think I've earned it."
+    },
+    {
+     "habla": "celia",
+     "expr": "alegre",
+     "es": "Te lo has ganado, Dario. Pero la próxima vez déjame caer. Quiero aprender a levantarme sola.",
+     "en": "You've earned it, Dario. But next time, let me fall. I want to learn to get up on my own."
+    },
+    {
+     "habla": "dario",
+     "es": "Trato hecho. Y yo quiero aprender qué se siente cuando uno no finge.",
+     "en": "Done. And I want to learn what it feels like not to pretend."
+    }
+   ],
+   "efectos": [
+    "celia_error_tapado"
+   ],
+   "apunte": {
+    "es": "Dario se cayó en el ensayo para que nadie viera caer a Celia. Ella le ha pedido que no lo repita.",
+    "en": "Dario fell at rehearsal so that nobody would see Celia fall. She's asked him not to do it again."
+   }
+  },
+  {
+   "id": "b_teo_irene",
+   "nivel": "B",
+   "pareja": [
+    "teo",
+    "irene"
+   ],
+   "ambiente": {
+    "es": "La biblioteca de los Salvat",
+    "en": "The Salvats' library"
+   },
+   "lineas": [
+    {
+     "habla": null,
+     "es": "Teo ha venido a devolver un libro que nunca le prestaron.",
+     "en": "Teo has come to return a book nobody ever lent him."
+    },
+    {
+     "habla": "irene",
+     "es": "Ese libro no es mío.",
+     "en": "That book isn't mine."
+    },
+    {
+     "habla": "teo",
+     "es": "Lo sé. Es una excusa con tapas.",
+     "en": "I know. It's an excuse with a binding."
+    },
+    {
+     "habla": "irene",
+     "es": "Es mala.",
+     "en": "It's a poor one."
+    },
+    {
+     "habla": "teo",
+     "expr": "alegre",
+     "es": "Es la mejor que tengo. Las buenas las gasto en los salones.",
+     "en": "It's the best I've got. I spend the good ones in the salons."
+    },
+    {
+     "habla": null,
+     "es": "Teo saca un cuaderno pequeño y lo deja sobre la mesa, sin abrir.",
+     "en": "Teo takes out a small notebook and sets it on the table, unopened."
+    },
+    {
+     "habla": "teo",
+     "es": "Escribo versos. Para una dama que nunca se los cree. No se los voy a leer. Sólo quería que alguien supiera que existen.",
+     "en": "I write verse. For a lady who never believes it. I'm not going to read them to you. I just wanted someone to know they exist."
+    },
+    {
+     "habla": "irene",
+     "es": "¿Por qué yo?",
+     "en": "Why me?"
+    },
+    {
+     "habla": "teo",
+     "es": "Porque usted no se ríe cuando no tiene gracia. Y esto no la tiene.",
+     "en": "Because you don't laugh when it isn't funny. And this isn't."
+    },
+    {
+     "habla": "irene",
+     "es": "Teo. Si los escribiste sin buscar la risa, léelos. Yo te diré si me los creo.",
+     "en": "Teo. If you wrote them without reaching for a laugh, read them. I'll tell you whether I believe them."
+    },
+    {
+     "habla": "teo",
+     "expr": "ruborizada",
+     "es": "Me has llamado Teo.",
+     "en": "You called me Teo."
+    },
+    {
+     "habla": "irene",
+     "expr": "alegre",
+     "es": "Es tu nombre. Es exacto.",
+     "en": "It's your name. It's accurate."
+    }
+   ],
+   "apunte": {
+    "es": "Teo le enseñó a Irene un cuaderno que no enseña a nadie. Ella no le ha dicho si se creyó los versos.",
+    "en": "Teo showed Irene a notebook he shows no one. She hasn't told him whether she believed the verses."
+   }
+  },
+  {
+   "id": "b_saul_isolda",
+   "nivel": "B",
+   "pareja": [
+    "saul",
+    "isolda"
+   ],
+   "ambiente": {
+    "es": "El mismo balcón de la primera vez",
+    "en": "The same balcony as the first time"
+   },
+   "lineas": [
+    {
+     "habla": null,
+     "es": "Esta vez es Isolda quien ha salido a buscarlo.",
+     "en": "This time it's Isolda who has come out to find him."
+    },
+    {
+     "habla": "isolda",
+     "es": "Mi padre ya ha escrito al suyo. Dice que la alianza de convoyes necesita algo más que firmas.",
+     "en": "My father has written to yours. He says the convoy alliance needs more than signatures."
+    },
+    {
+     "habla": "saul",
+     "es": "Lo sé. Mi padre me lo ha dicho con las mismas palabras. Creo que se copian las cartas.",
+     "en": "I know. My father told me in the very same words. I think they copy each other's letters."
+    },
+    {
+     "habla": "isolda",
+     "expr": "ruborizada",
+     "es": "Usted es muy amable. Pero yo no podría quererle como se espera.",
+     "en": "You're very kind. But I could never love you the way they expect."
+    },
+    {
+     "habla": "saul",
+     "es": "Ni yo a usted, señorita Marén.",
+     "en": "Nor I you, Miss Marén."
+    },
+    {
+     "habla": null,
+     "es": "Se miran. Ninguno pregunta por qué. Los dos lo entienden.",
+     "en": "They look at each other. Neither asks why. Both understand."
+    },
+    {
+     "habla": "saul",
+     "expr": "alegre",
+     "es": "Es lo más honrado que me han dicho en esta ciudad.",
+     "en": "That's the most honest thing anyone has said to me in this city."
+    },
+    {
+     "habla": "isolda",
+     "es": "¿Y si… y si a los dos nos conviniera que nadie preguntara nunca?",
+     "en": "And what if… what if it suited us both for no one ever to ask?"
+    },
+    {
+     "habla": "saul",
+     "es": "Entonces seríamos los dos mentirosos más sinceros de Valcenda.",
+     "en": "Then we'd be the two most honest liars in Valcenda."
+    },
+    {
+     "habla": "isolda",
+     "es": "¿Puedo llamarte Saúl? Si vamos a mentir juntos, mejor de tú.",
+     "en": "May I call you Saúl? If we're going to lie together, we might as well use first names."
+    },
+    {
+     "habla": "saul",
+     "es": "Isolda. Todavía no hemos decidido nada.",
+     "en": "Isolda. We haven't decided anything yet."
+    },
+    {
+     "habla": "isolda",
+     "es": "No. Pero ya no tengo miedo de que lo decidan por mí.",
+     "en": "No. But I'm not afraid any more of it being decided for me."
+    }
+   ],
+   "efectos": [
+    "lavanda_hablada"
+   ],
+   "apunte": {
+    "es": "Saúl e Isolda han hablado de convoyes, de sus padres y de lo que no se pregunta. Han salido del balcón con un secreto compartido.",
+    "en": "Saúl and Isolda talked about convoys, their fathers and what isn't asked. They left the balcony sharing a secret."
+   }
+  },
+  {
+   "id": "b_celia_camila",
+   "nivel": "B",
+   "pareja": [
+    "celia",
+    "camila"
+   ],
+   "ambiente": {
+    "es": "La alcoba de Celia, a medianoche",
+    "en": "Celia's bedroom, at midnight"
+   },
+   "lineas": [
+    {
+     "habla": null,
+     "es": "Camila entra a apagar la vela y encuentra a Celia escribiendo en un cuaderno.",
+     "en": "Camila comes in to put out the candle and finds Celia writing in a notebook."
+    },
+    {
+     "habla": "camila",
+     "es": "¿Cartas de amor, a estas horas?",
+     "en": "Love letters, at this hour?"
+    },
+    {
+     "habla": "celia",
+     "expr": "molesta",
+     "es": "Una lista.",
+     "en": "A list."
+    },
+    {
+     "habla": "camila",
+     "es": "¿De pretendientes?",
+     "en": "Of suitors?"
+    },
+    {
+     "habla": "celia",
+     "es": "De los que me miraron mal en un salón. Desde los quince años.",
+     "en": "Of everyone who looked down on me in a ballroom. Since I was fifteen."
+    },
+    {
+     "habla": "camila",
+     "es": "¿Cuántos van?",
+     "en": "How many so far?"
+    },
+    {
+     "habla": "celia",
+     "expr": "ruborizada",
+     "es": "Cuarenta y tres.",
+     "en": "Forty-three."
+    },
+    {
+     "habla": "camila",
+     "expr": "alegre",
+     "es": "Apunte a la casa Miravés. Me reclaman un barco que está en el fondo del mar. Si me ayuda a odiarlos, yo la ayudo a quemar el cuaderno.",
+     "en": "Put down House Miravés. They're claiming a ship from me that's at the bottom of the sea. Help me hate them, and I'll help you burn the notebook."
+    },
+    {
+     "habla": "celia",
+     "es": "¿Lo del Clara de Nácar es verdad?",
+     "en": "Is it true, about the Clara de Nácar?"
+    },
+    {
+     "habla": "camila",
+     "es": "Lo que dice la Hoja suele ser verdad, Celia. Lo malo es lo que calla.",
+     "en": "What the Sheet says is usually true, Celia. The trouble is what it leaves out."
+    },
+    {
+     "habla": "celia",
+     "es": "Camila… ¿Puedo tutearla? Tutearte.",
+     "en": "Mrs. Ferrán… may I call you Camila?"
+    },
+    {
+     "habla": "camila",
+     "expr": "alegre",
+     "es": "Llevas tres semanas haciéndolo cuando crees que duermo.",
+     "en": "You've been doing it for three weeks whenever you think I'm asleep."
+    }
+   ],
+   "apunte": {
+    "es": "Celia y Camila hablaron hasta tarde. La lista de Celia tiene un nombre nuevo, y no es de nadie que la mirara mal.",
+    "en": "Celia and Camila talked until late. Celia's list has a new name on it, and it isn't anyone who looked down on her."
+   }
+  },
+  {
+   "id": "b_dario_isolda",
+   "nivel": "B",
+   "pareja": [
+    "dario",
+    "isolda"
+   ],
+   "ambiente": {
+    "es": "El despacho de los Marén, junto a la maqueta del puerto",
+    "en": "The Marén office, beside the model of the harbour"
+   },
+   "lineas": [
+    {
+     "habla": null,
+     "es": "Dario mira la maqueta del puerto de Nácar como la miraba de niño.",
+     "en": "Dario looks at the model of Nácar harbour the way he did as a boy."
+    },
+    {
+     "habla": "dario",
+     "es": "Aquí estaba el muelle donde me escondía de mi tía.",
+     "en": "This is the jetty where I used to hide from my aunt."
+    },
+    {
+     "habla": "isolda",
+     "es": "Y yo me escondía contigo. Nunca supe de qué huías.",
+     "en": "And I hid there with you. I never knew what you were running from."
+    },
+    {
+     "habla": "dario",
+     "es": "De las cenas. Mi tía cena muy tarde, y con gente muy pálida.",
+     "en": "Dinners. My aunt dines very late, with very pale people."
+    },
+    {
+     "habla": "isolda",
+     "es": "Eso no es motivo para esconderse.",
+     "en": "That's no reason to hide."
+    },
+    {
+     "habla": "dario",
+     "es": "A los ocho años, lo era.",
+     "en": "At eight, it was."
+    },
+    {
+     "habla": null,
+     "es": "Isolda le pone una mano en la manga, sin temblar. Es la primera vez que es ella quien lo hace.",
+     "en": "Isolda rests a hand on his sleeve, without trembling. It's the first time she's been the one to do it."
+    },
+    {
+     "habla": "isolda",
+     "es": "Dario. Tú me defendías cuando yo no sabía hablar. Ahora sé un poco. Si algún día necesitas que alguien hable por ti…",
+     "en": "Dario. You stood up for me when I couldn't speak. I can a little now. If you ever need someone to speak for you…"
+    },
+    {
+     "habla": "dario",
+     "expr": "ruborizada",
+     "es": "¿Me tuteas, Isolda Marén?",
+     "en": "Just “Dario”, Isolda Marén?"
+    },
+    {
+     "habla": "isolda",
+     "expr": "alegre",
+     "es": "Te tuteaba a los ocho años. Sólo lo he recuperado.",
+     "en": "I called you Dario when we were eight. I've only taken it back."
+    },
+    {
+     "habla": "dario",
+     "es": "Mi tía quiere algo de esta temporada. No sé qué. Si lo averiguo, serás la primera en saberlo.",
+     "en": "My aunt wants something from this season. I don't know what. If I find out, you'll be the first to know."
+    },
+    {
+     "habla": "isolda",
+     "si": "marca(pujador_miraves)",
+     "es": "¿Tiene que ver con un cofre de papeles quemados?",
+     "en": "Does it have to do with a chest of burned papers?"
+    },
+    {
+     "habla": "dario",
+     "si": "marca(pujador_miraves)",
+     "es": "…Serás la segunda. Parece que la primera ya eres tú.",
+     "en": "…You'll be the second. It seems you're already the first."
+    }
+   ],
+   "apunte": {
+    "es": "Isolda le ha ofrecido a Dario hablar por él si algún día lo necesita. Él no ha dicho que no.",
+    "en": "Isolda has offered to speak for Dario if he ever needs it. He didn't say no."
+   }
+  },
+  {
+   "id": "b_nilo_celia",
+   "nivel": "B",
+   "pareja": [
+    "nilo",
+    "celia"
+   ],
+   "ambiente": {
+    "es": "La cocina de la casa Lobreda, tarde",
+    "en": "The Lobreda kitchen, late"
+   },
+   "lineas": [
+    {
+     "habla": null,
+     "es": "Celia encuentra a Nilo mirando el calendario colgado junto a la despensa.",
+     "en": "Celia finds Nilo staring at the calendar by the pantry."
+    },
+    {
+     "habla": "celia",
+     "es": "El 20.",
+     "en": "The 20th."
+    },
+    {
+     "habla": "nilo",
+     "es": "El 20.",
+     "en": "The 20th."
+    },
+    {
+     "habla": "celia",
+     "es": "Hay teatro de gala. La casamentera querrá mandarnos a los dos.",
+     "en": "There's the gala at the theatre. The Matchmaker will want to send us both."
+    },
+    {
+     "habla": "nilo",
+     "es": "Ya lo sé.",
+     "en": "I know."
+    },
+    {
+     "habla": "celia",
+     "es": "Si te pregunta, diré que tienes una cita. Con una dama muy fea, para que nadie pregunte quién.",
+     "en": "If she asks, I'll say you have an assignation. With a very plain lady, so nobody asks who."
+    },
+    {
+     "habla": "nilo",
+     "expr": "alegre",
+     "es": "¿Me estás ayudando?",
+     "en": "Are you helping me?"
+    },
+    {
+     "habla": "celia",
+     "es": "Una vez. Tú me dejaste hacerlo sola. Te la devuelvo.",
+     "en": "Once. You let me do it on my own. I'm returning the favour."
+    },
+    {
+     "habla": null,
+     "es": "Nilo cuelga el calendario boca abajo. Le tiemblan un poco las manos, y Celia finge no verlo.",
+     "en": "Nilo turns the calendar to face the wall. His hands are shaking slightly, and Celia pretends not to see."
+    },
+    {
+     "habla": "nilo",
+     "es": "Celia… ¿Lo sabe alguien más?",
+     "en": "Celia… does anyone else know?"
+    },
+    {
+     "habla": "celia",
+     "es": "Sólo la familia. Y la familia no habla.",
+     "en": "Only family. And family doesn't talk."
+    }
+   ],
+   "efectos": [
+    "celia_cubre_nilo"
+   ],
+   "apunte": {
+    "es": "Nilo y Celia hablaron en la cocina. Celia dice que su primo tiene «un compromiso» la noche del 20. No sabe mentir, pero lo intenta.",
+    "en": "Nilo and Celia talked in the kitchen. Celia says her cousin has “an engagement” on the night of the 20th. She can't lie, but she's trying."
+   }
+  },
+  {
+   "id": "b_generica",
+   "nivel": "B",
+   "pareja": [
+    "a",
+    "b"
+   ],
+   "ambiente": {
+    "es": "El mismo rincón de siempre",
+    "en": "The usual corner"
+   },
+   "lineas": [
+    {
+     "habla": null,
+     "es": "{a} y {b} coinciden en el mismo rincón por tercera vez. Ya no fingen que es casualidad.",
+     "en": "{a} and {b} end up in the same corner for the third time. They no longer pretend it's chance."
+    },
+    {
+     "habla": "a",
+     "es": "¿Y si dejamos el «usted»? Me cansa.",
+     "en": "Shall we drop the formalities? They tire me."
+    },
+    {
+     "habla": "b",
+     "expr": "alegre",
+     "es": "Pensé que no me lo pedirías nunca.",
+     "en": "I thought you'd never ask."
+    }
+   ],
+   "apunte": {
+    "es": "{a} y {b} ya se tutean. Nadie en los salones sabe desde cuándo.",
+    "en": "{a} and {b} are on first-name terms now. Nobody in the salons knows since when."
+   }
+  }
+ ]
+}

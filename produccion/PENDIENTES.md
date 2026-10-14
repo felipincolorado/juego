@@ -51,3 +51,12 @@ Se actualiza al terminar cada sesión. **Lo que espera tu decisión va primero.*
 - Simulación de la semana 2: con la mejor opción, entre el 68 % y el 80 % de desenlaces favorables; con la peor, entre el 17 % y el 52 %.
 - **Falta para el motor:** implementar la fama (sistemas §5 bis), las peticiones (§5 ter), la regla `parejas` y la elección de `indisposicion.quien`.
 - **Siguiente:** capítulo 3 (Noche de los Faroles), con las escenas B.
+
+## Capítulo 3 · terminado (14 oct.)
+
+- `semanas/semana3.yaml`:
+  - parte 1: recuerdos de la semana 2, decisión sobre Mara, peticiones de Camila y Celia, subasta del lote 12 y clase de protocolo;
+  - parte 2: barcas al atardecer (pista del taller de Arcos Bajos), Velada de los Faroles con la reina (obligatoria, 3 plazas), Crónica nº 3, Hoja nº 2 (páginas del Pacto, folio 81), «Sólo para sus ojos» y gancho hacia el plenilunio.
+- `escenas/vinculos_B.yaml`: 10 escenas B, en las que pasan al tú, más una genérica. Marcas nuevas que usarán los capítulos 4 y 5: `celia_cubre_nilo` (permite evitar el incidente de Nilo el día 20), `lavanda_hablada`, `saul_sin_guantes` y `celia_error_tapado`.
+- Simulación de la semana 3: con la mejor opción, entre el 53 % y el 78 % de desenlaces favorables.
+- **Siguiente:** capítulo 4 (Luna llena), en dos partes.
