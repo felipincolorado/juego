@@ -1,0 +1,667 @@
+# Semana 5 · Cierre de Cuentas — Nieblas 22 a 28 (lunes a domingo). Arco: proyecto/canon/ARCO-TEMPORADA.md.
+# La semana de las pruebas: las uniones sin amor obtienen su motivo (lavanda = convoyes; compromiso del paso;
+# deuda Rovena), vence la deuda Miravés–Ferrán, llega la orden de Tiria para Saúl y Nilo elige entre dos promesas.
+# Escenas propias: escenas/capitulo5.yaml (besos, confesiones no correspondidas, acuerdos).
+# Misterio: la Hoja nº 4 cita una fecha que sólo una archivera sabría. Pista falsa: Mara pide una entrevista.
+
+semana:
+  numero: 5
+  nombre: { es: "Cierre de Cuentas", en: "The Reckoning" }
+  mes: nieblas
+  dias: [22, 23, 24, 25, 26, 27, 28]
+  hecho_del_reino:
+    titulo: { es: "Tormentas de Nácar", en: "The Nácar storms" }
+    texto:
+      es: "Llegan las tormentas de Nácar y, con ellas, los convoyes del sur. Antes del Gran Baile, las casas saldan sus deudas: las que se pagan y las que no se pueden pagar."
+      en: "The Nácar storms arrive, and with them the southern convoys. Before the Grand Ball, the houses settle their debts: those that can be paid and those that can't."
+
+# ─────────────────────────────────────────────────────────────────────────────
+apertura:
+  lineas:
+    - habla: nota
+      es: "Señora: el capitán Veyra ha abierto por fin el correo de Tiria. Es una orden: debe volver al ejército después del Gran Baile."
+      en: "Madam: Captain Veyra has finally opened the letter from Tiria. It's an order: he must return to the army after the Grand Ball."
+    - habla: nota
+      es: "Salvo que antes selle un compromiso en el Archivo. Entonces podrá quedarse a servir aquí, «para la alianza de su casa»."
+      en: "Unless he seals an engagement at the Archive before then. In that case he may stay and serve here, “for the alliance of his house.”"
+    - habla: nota
+      es: "Y Mara Calce pide una entrevista. Por escrito, esta vez, y con sello. Dice que es la última vez que lo pide."
+      en: "And Mara Calce is requesting an interview. In writing this time, and sealed. She says it's the last time she'll ask."
+  recuerdos:
+    - si: "marca(nilo_cubierto) o marca(nilo_confia)"
+      texto:
+        es: "Nilo ha venido a desayunar dos veces esta semana. No ha contado nada. Pero se queda más rato, como quien está a punto de decir algo."
+        en: "Nilo has come to breakfast twice this week. He hasn't told you anything. But he stays longer, like someone about to say something."
+    - si: "marca(nilo_visto) y no marca(nilo_cubierto)"
+      texto:
+        es: "En los salones se habla de Nilo Lobreda «y sus huidas». Él sonríe como siempre. Ya no duerme como siempre."
+        en: "The salons are talking about Nilo Lobreda “and his escapes.” He smiles as he always does. He no longer sleeps as he used to."
+    - si: "marca(dario_sospechoso)"
+      texto:
+        es: "Han apedreado el carruaje de los Miravés en el puente. Dario dice que no fue nada. Llevaba las cortinas abiertas."
+        en: "Someone threw stones at the Miravés carriage on the bridge. Dario says it was nothing. He had the curtains open."
+    - si: "marca(teo_bufon)"
+      texto:
+        es: "Teo es el invitado más solicitado de la semana. Lo llaman para que haga reír. Nadie lo llama para otra cosa."
+        en: "Teo is the most sought-after guest of the week. People invite him to make them laugh. Nobody invites him for anything else."
+    - si: "marca(isolda_hablo_primero)"
+      texto:
+        es: "Isolda le ha dado los buenos días en voz alta, desde la puerta, sin que usted la viera llegar. Bruna casi deja caer la bandeja."
+        en: "Isolda said good morning to you aloud, from the doorway, before you'd even seen her arrive. Bruna nearly dropped the tray."
+  decision:
+    - id: conceder_entrevista
+      texto: { es: "Conceder la entrevista a Mara", en: "Grant Mara the interview" }
+      resultado:
+        es: "Mara no pregunta por parejas. Pregunta si usted escribe la Hoja. Usted se ríe. Ella no. «Alguien que lo sabe todo de su elenco… Si no es usted, es alguien muy cerca de usted.» Se va satisfecha, sin una línea apuntada."
+        en: "Mara doesn't ask about couples. She asks whether you write the Sheet. You laugh. She doesn't. “Someone who knows everything about your eight… If it isn't you, it's someone very close to you.” She leaves satisfied, without having written a single line."
+      efectos: [mara_entrevista]
+    - id: negar_entrevista
+      texto: { es: "Negarse con firmeza", en: "Refuse, firmly" }
+      resultado:
+        es: "Mara devuelve el sello roto con una nota: «Entonces escribiré lo que pienso, que es peor que lo que usted habría dicho.»"
+        en: "Mara returns the broken seal with a note: “Then I'll write what I think, which is worse than anything you'd have said.”"
+      efectos: [mara_hostil]
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Peticiones. Nuevo campo `si`: la petición sólo aparece si se cumple.
+peticiones:
+  # La prueba de Nilo: su casa o la persona a la que quiere (ARCO §4, capítulo 5).
+  - id: p5_nilo_promesa
+    personaje: nilo
+    tipo: no_asistir
+    dia: 25
+    si: "nivel(nilo, camila) >= B"
+    texto:
+      es: "Nilo: «Mi casa quiere que esté en la lectura de capitulaciones del jueves. Y le prometí a Camila ayudarla ese mismo día con las cuentas del barco. No me mande. Por favor. Esta vez quiero cumplir la promesa que importa.»"
+      en: "Nilo: “My house wants me at the reading of the articles on Thursday. And I promised Camila I'd help her with the ship's accounts that same day. Don't send me. Please. This time I want to keep the promise that matters.”"
+    si_cumple:
+      es: "Nilo pasa el jueves entre los libros de cuentas de los Ferrán. Su padre le escribe una carta furiosa. Nilo la lee, la dobla y sigue sumando."
+      en: "Nilo spends Thursday among the Ferrán account books. His father writes him a furious letter. Nilo reads it, folds it and goes on adding up."
+    efectos_si_cumple: [nilo_elige_promesa]
+    si_no:
+      es: "Nilo va a la lectura, como pide su casa. Camila hace las cuentas sola. Cuando él llega, por la noche, ya están hechas."
+      en: "Nilo goes to the reading, as his house wishes. Camila does the accounts alone. When he arrives that night, they're already done."
+  - id: p5_camila_cena
+    personaje: camila
+    evento: s5_cena_deudas
+    requiere_solicitante: true
+    texto:
+      es: "Camila: «A la cena de las deudas quiero ir yo. Si los Miravés van a leer mi nombre en voz alta, que lo hagan mirándome.»"
+      en: "Camila: “I want to go to the debts supper myself. If the Miravés are going to read my name aloud, let them do it looking at me.”"
+    si_cumple:
+      es: "Camila vuelve de la villa Serravalle y se quita los guantes en la puerta, como quien deja un peso. «Hecho», dice. Nada más."
+      en: "Camila comes back from the Serravalle villa and pulls off her gloves at the door, like someone setting down a weight. “Done,” she says. Nothing more."
+    si_no:
+      es: "Camila se entera por otros de lo que se dijo de ella en la cena. No se lo reprocha a usted. Eso es peor."
+      en: "Camila hears from others what was said about her at the supper. She doesn't reproach you for it. That's worse."
+
+# ─────────────────────────────────────────────────────────────────────────────
+eventos:
+  # ── Martes 23 · Lección de canto con Inés (clase opcional) ──
+  - id: s5_clase
+    tipo: clase
+    lugar: academia
+    dia: 23
+    duracion: 1
+    plazas: { min: 1, max: 3 }
+    regla: cualquiera
+    obligatorio: false
+    mejora: { habilidad: presencia, cantidad: 1, tope: 4 }
+    anfitrion: { es: "Inés, cantante de los salones", en: "Inés, singer of the salons" }
+    titulo: { es: "Lección de voz", en: "A voice lesson" }
+    resumen:
+      es: "Inés enseña a hablar en un salón lleno sin levantar la voz. En el Gran Baile, dice, la reina sólo oirá a quien sepa hacerse oír."
+      en: "Inés teaches how to speak in a crowded room without raising your voice. At the Grand Ball, she says, the Queen will only hear those who can make themselves heard."
+    a_favor:
+      - { es: "+1 en Presencia a cada asistente (hasta 4)", en: "+1 Presence for each attendee (up to 4)" }
+    en_contra:
+      - { es: "Inés hace cantar a todo el mundo. A todo el mundo", en: "Inés makes everyone sing. Everyone" }
+    carta:
+      saludo: { es: "Señora casamentera:", en: "Dear Matchmaker," }
+      cuerpo:
+        es: >
+          El martes doy la última lección de la temporada. No es de baile: es de voz. Quien no sepa hacerse oír
+          en el Gran Baile, bailará muy bien y nadie sabrá su nombre. Mándeme a los que hablan bajito. Y a los que
+          hablan demasiado, para que aprendan a callar a tiempo.
+        en: >
+          On Tuesday I give the last lesson of the season. Not dancing: voice. Whoever can't make themselves heard
+          at the Grand Ball will dance beautifully and nobody will learn their name. Send me the quiet ones. And those who
+          talk too much, so they learn when to stop.
+      firma: { es: "Inés", en: "Inés" }
+    completada:
+      publico:
+        es: "{grupo} tomaron lección de voz con Inés. En la Academia se oyó cantar hasta el portero."
+        en: "{grupo} took a voice lesson with Inés. At the Academy, even the porter was heard singing."
+      privado:
+        es: "Inés le escribe: «Ya se hacen oír. Ahora falta que tengan algo que decir. Eso ya no lo enseño yo.»"
+        en: "Inés writes: “They can make themselves heard now. What they need is something to say. That I don't teach.”"
+        variantes:
+          - si: "asiste(isolda)"
+            texto:
+              es: "Isolda cantó sola una estrofa entera. Cuando terminó, nadie aplaudió durante un momento, y después todos a la vez."
+              en: "Isolda sang a whole verse alone. When she finished, nobody applauded for a moment, and then everyone did at once."
+          - si: "asiste(irene)"
+            texto:
+              es: "Irene se negó a cantar y leyó un poema en voz alta. Inés dijo que también contaba. Irene leyó demasiado bien para ser la primera vez."
+              en: "Irene refused to sing and read a poem aloud instead. Inés said it counted. Irene read far too well for a first time."
+          - si: "asiste(saul)"
+            texto:
+              es: "Saúl cantó una marcha del ejército, sin desafinar y sin sonreír. Inés le pidió otra, más lenta. Esa sí la cantó sonriendo."
+              en: "Saúl sang an army march, perfectly in tune and without a smile. Inés asked for another, slower one. That one he sang smiling."
+
+  # ── Miércoles 24 · Llegada de los convoyes, en plena tormenta (opcional; el motivo de la unión lavanda) ──
+  - id: s5_convoyes
+    tipo: recepcion
+    lugar: muelles
+    dia: 24
+    duracion: 1
+    plazas: { min: 2, max: 4 }
+    regla: cualquiera
+    obligatorio: false
+    requisito: { estatus: 5, presencia: 5, intelecto: 4 }
+    anfitrion: { es: "Las casas Marén y Veyra", en: "Houses Marén and Veyra" }
+    titulo: { es: "Llegada de los convoyes", en: "The convoys come in" }
+    resumen:
+      es: "Los Marén y los Veyra reciben en los muelles a los convoyes del sur, entre tormenta y tormenta. Quieren que Valcenda vea su alianza."
+      en: "The Maréns and the Veyras greet the southern convoys at the wharves, between storms. They want Valcenda to see their alliance."
+    a_favor:
+      - { es: "Las dos casas están de muy buen humor", en: "Both houses are in excellent spirits" }
+    en_contra:
+      - { es: "El cielo de Nácar no respeta recepciones", en: "The Nácar sky has no respect for receptions" }
+      - { es: "Los aseguradores miran cada barco como si fuera a hundirse", en: "The insurers watch every ship as though it were about to sink" }
+    carta:
+      saludo: { es: "Distinguida señora:", en: "Distinguished Madam," }
+      cuerpo:
+        es: >
+          El miércoles llegan a Valcenda los primeros convoyes que la casa Veyra escolta por tierra y la casa Marén asegura
+          por mar. Celebraremos su llegada en los muelles, si la tormenta lo permite, y aunque no lo permita.
+          Nos honraría ver a sus jóvenes. Sobre todo, a los que ya conocen a nuestros hijos.
+        en: >
+          On Wednesday the first convoys escorted by land by House Veyra and insured by sea by House Marén reach Valcenda.
+          We shall celebrate their arrival at the wharves, if the storm allows, and even if it doesn't.
+          We would be honoured to see your young people. Above all, those who already know our children.
+      firma: { es: "Tobías Marén y Ernesto Veyra", en: "Tobías Marén and Ernesto Veyra" }
+    incidente:
+      dia: 24
+      situacion:
+        es: "Un golpe de viento tumba el toldo de la recepción. Entre el desorden, los dos padres anuncian en voz alta que «la alianza merece un lazo más fuerte que un contrato». Todos miran a {a}."
+        en: "A gust of wind brings down the reception awning. In the confusion, both fathers announce aloud that “the alliance deserves a tie stronger than a contract.” Everyone looks at {a}."
+      cita: { habla: a, bark: incidente }
+      opciones:
+        - id: rescatar
+          habilidad: presencia
+          d: 5
+          texto: { es: "Poner orden bajo la lluvia y salvar la recepción", en: "Restore order in the rain and save the reception" }
+          pista_coste: { es: "La recepción se salva; el anuncio, también", en: "The reception is saved; so is the announcement" }
+          consecuencia: { efectos: [alianza_anunciada], reputacion_si_exito: 1 }
+          exito:
+            es: "{mejor} organiza a los criados, a los invitados y a la lluvia. Cuando vuelve a salir el sol, los padres brindan por la alianza y todo el muelle aplaude."
+            en: "{mejor} organises the servants, the guests and the rain. When the sun comes out again, the fathers toast the alliance and the whole wharf applauds."
+          medias:
+            es: "La recepción se salva a medias. El brindis se hace bajo un toldo torcido."
+            en: "The reception is half saved. The toast is made under a crooked awning."
+          fallo:
+            es: "La lluvia gana. Los invitados se dispersan y el anuncio queda en el aire, empapado."
+            en: "The rain wins. The guests scatter and the announcement hangs in the air, soaked."
+        - id: desviar
+          habilidad: estatus
+          d: 5
+          texto: { es: "Desviar la atención de los padres antes de que digan nombres", en: "Distract the fathers before they name names" }
+          pista_coste: { es: "Saúl e Isolda respirarán; sus padres, no tanto", en: "Saúl and Isolda will breathe easier; their fathers, less so" }
+          consecuencia: { efectos: [alianza_aplazada] }
+          exito:
+            es: "{mejor} propone un brindis por los barqueros antes de que nadie diga un nombre. Los padres se miran, contrariados. Saúl e Isolda, aliviados."
+            en: "{mejor} proposes a toast to the boatmen before anyone can say a name. The fathers exchange annoyed looks. Saúl and Isolda, relieved ones."
+          medias:
+            es: "El brindis llega a tiempo, pero uno de los padres se las arregla para decir «nuestros hijos» antes de beber."
+            en: "The toast comes in time, but one of the fathers manages to say “our children” before drinking."
+          fallo:
+            es: "El brindis llega tarde: los dos apellidos ya están dichos, juntos, delante de todo el muelle."
+            en: "The toast comes too late: both names have already been said, together, in front of the whole wharf."
+        - id: contar
+          habilidad: intelecto
+          d: 4
+          texto: { es: "Fijarse en qué barco revisan los aseguradores con más cuidado", en: "Notice which ship the insurers check most carefully" }
+          pista_coste: { es: "Un dato sobre el Clara de Nácar", en: "Something about the Clara de Nácar" }
+          consecuencia: { efectos: [pista_clara_nacar] }
+          exito:
+            es: "Los aseguradores Marén revisan un barco gemelo del Clara de Nácar. Uno murmura: «Éste no se hundirá. Aquél tampoco tenía por qué.» {mejor} lo oye."
+            en: "The Marén insurers inspect a sister ship of the Clara de Nácar. One mutters: “This one won't sink. That one had no reason to either.” {mejor} hears it."
+          medias:
+            es: "Los aseguradores revisan todos los barcos igual. Pero uno de ellos se santigua al ver el último."
+            en: "The insurers check every ship the same. But one crosses himself at the sight of the last."
+          fallo:
+            es: "{mejor} se acerca demasiado al barco y un marinero le pide, con malos modos, que se aparte."
+            en: "{mejor} gets too close to the ship and a sailor rudely tells them to step back."
+    desenlaces:
+      favorable:
+        titulo: { es: "Barcos y brindis", en: "Ships and toasts" }
+        publico:
+          es: "Los convoyes de Nácar llegaron entre tormentas y aplausos. {grupo} estuvieron en el muelle y fueron lo único seco de la tarde."
+          en: "The Nácar convoys arrived between storms and applause. {grupo} were on the wharf and were the only dry thing all afternoon."
+          variantes:
+            - si: "asiste(saul) y asiste(isolda)"
+              texto:
+                es: "El capitán Veyra y la señorita Marén recibieron juntos al primer barco. Sus padres lloraron. Ellos dos se dieron la mano como socios."
+                en: "Captain Veyra and Miss Marén greeted the first ship together. Their fathers wept. The two of them shook hands like business partners."
+            - si: "asiste(camila)"
+              texto:
+                es: "La señora Ferrán miró pasar el barco gemelo del Clara de Nácar sin apartar la vista. Después pidió una copa y brindó por los que no llegaron."
+                en: "Mrs. Ferrán watched the Clara de Nácar's sister ship go by without looking away. Then she asked for a glass and toasted those who never arrived."
+        privado:
+          es: "Tobías Marén le escribe: «Mi hija nunca había hablado tanto en una recepción. No sé qué le ha hecho usted, pero siga.»"
+          en: "Tobías Marén writes to you: “My daughter has never talked so much at a reception. I don't know what you've done to her, but carry on.”"
+          variantes:
+            - si: "asiste(isolda) y marca(isolda_hablo_primero)"
+              texto:
+                es: "Isolda le pidió a su padre, delante de todos, que la dejara elegir sola. Su padre dijo que sí antes de pensarlo. Ahora lo está pensando."
+                en: "In front of everyone, Isolda asked her father to let her choose for herself. He said yes before thinking about it. Now he is thinking about it."
+      medias:
+        titulo: { es: "Mojados pero aliados", en: "Wet but allied" }
+        publico:
+          es: "La recepción de los convoyes terminó bajo la lluvia. La alianza Marén–Veyra, en cambio, parece más sólida que nunca."
+          en: "The convoy reception ended in the rain. The Marén–Veyra alliance, on the other hand, seems stronger than ever."
+        privado:
+          es: "Saúl se va del muelle sin despedirse, a paso militar. Isolda lo mira irse y no dice nada."
+          en: "Saúl leaves the wharf without saying goodbye, at a military pace. Isolda watches him go and says nothing."
+      desaire:
+        titulo: { es: "La tormenta ganó", en: "The storm won" }
+        publico:
+          es: "La tormenta arruinó la recepción de los convoyes. Las casas Marén y Veyra culpan al cielo. Algunos culpan a otros."
+          en: "The storm ruined the convoy reception. Houses Marén and Veyra blame the sky. Some blame others."
+        privado:
+          es: "Los dos padres le escriben el mismo día, por separado, la misma queja. Se copian las cartas, decididamente."
+          en: "Both fathers write to you the same day, separately, with the same complaint. They do copy each other's letters."
+
+  # ── Jueves 25 · Lectura de capitulaciones Lobreda–Veyra (opcional; el compromiso del paso) ──
+  - id: s5_capitulaciones
+    tipo: recepcion
+    lugar: archivo
+    dia: 25
+    duracion: 1
+    plazas: { min: 2, max: 3 }
+    regla: cualquiera
+    obligatorio: false
+    requisito: { estatus: 5, intelecto: 5, chisme: 4 }
+    anfitrion: { es: "Las casas Lobreda y Veyra", en: "Houses Lobreda and Veyra" }
+    titulo: { es: "Lectura de capitulaciones", en: "The reading of the articles" }
+    resumen:
+      es: "Los Lobreda y los Veyra leen en el Archivo los acuerdos del paso de Greda. Dicen que sólo hablarán de caravanas. Nadie lo cree."
+      en: "The Lobredas and the Veyras read the Greda pass agreements at the Archive. They say they'll only discuss caravans. Nobody believes it."
+    a_favor:
+      - { es: "Quien entienda los papeles, entiende la temporada", en: "Whoever understands the papers understands the season" }
+    en_contra:
+      - { es: "Los Veyra ya tienen otra alianza sobre la mesa", en: "The Veyras already have another alliance on the table" }
+    carta:
+      saludo: { es: "Señora:", en: "Madam," }
+      cuerpo:
+        es: >
+          El jueves, en la sala de actas del Archivo, nuestras casas renovarán los acuerdos del paso de Greda.
+          Se agradecerá la presencia de testigos de confianza. La señorita Celia Lobreda y el capitán Saúl Veyra
+          están invitados de forma especial, aunque no se ha dicho por qué.
+        en: >
+          On Thursday, in the Archive's record room, our houses will renew the Greda pass agreements.
+          The presence of trustworthy witnesses would be appreciated. Miss Celia Lobreda and Captain Saúl Veyra
+          are particularly invited, though nobody has said why.
+      firma: { es: "Las casas Lobreda y Veyra", en: "Houses Lobreda and Veyra" }
+    incidente:
+      dia: 25
+      situacion:
+        es: "En la última página de las capitulaciones aparece una cláusula nueva: «El paso quedará unido por matrimonio.» No lleva nombres, pero hay dos sillas vacías junto a la mesa. {a} la lee primero."
+        en: "On the last page of the articles there's a new clause: “The pass shall be bound by marriage.” It names no one, but there are two empty chairs by the table. {a} reads it first."
+      cita: { habla: a, bark: incidente }
+      opciones:
+        - id: leer
+          habilidad: intelecto
+          d: 5
+          texto: { es: "Leerla en voz alta, tal como está", en: "Read it aloud, exactly as written" }
+          pista_coste: { es: "Todos sabrán lo que se pretende", en: "Everyone will know what's intended" }
+          consecuencia: { efectos: [compromiso_paso_propuesto] }
+          exito:
+            es: "{mejor} lee la cláusula con calma. Los padres asienten. Celia se queda muy quieta. Saúl mira la ventana."
+            en: "{mejor} reads the clause calmly. The fathers nod. Celia goes very still. Saúl looks at the window."
+          medias:
+            es: "La cláusula se lee, pero nadie dice nada después. El silencio dura un minuto entero."
+            en: "The clause is read, but no one says anything afterwards. The silence lasts a whole minute."
+          fallo:
+            es: "{mejor} se trabuca en los nombres de las casas. Alguien se ríe, nervioso, y la reunión se agria."
+            en: "{mejor} stumbles over the house names. Someone laughs nervously and the meeting sours."
+        - id: enmendar
+          habilidad: estatus
+          d: 5
+          texto: { es: "Proponer una enmienda: «si ambas partes lo desean»", en: "Propose an amendment: “if both parties so wish”" }
+          pista_coste: { es: "Celia y Saúl podrán elegir. Sus padres lo notarán", en: "Celia and Saúl will be able to choose. Their fathers will notice" }
+          consecuencia: { efectos: [clausula_libre], cercania_asistentes: 1 }
+          exito:
+            es: "{mejor} propone la enmienda con tal cortesía que nadie se atreve a negarla. «Si ambas partes lo desean» queda escrito con tinta fresca."
+            en: "{mejor} proposes the amendment with such courtesy that nobody dares refuse. “If both parties so wish” is written in fresh ink."
+          medias:
+            es: "La enmienda se acepta «para estudiarla». Nadie sabe qué significa eso."
+            en: "The amendment is accepted “for consideration.” Nobody knows what that means."
+          fallo:
+            es: "Los padres rechazan la enmienda a la vez, como si lo hubieran ensayado."
+            en: "The fathers reject the amendment in unison, as if they'd rehearsed it."
+        - id: archivera
+          habilidad: chisme
+          d: 4
+          texto: { es: "Preguntar a la archivera de guardia quién redactó la cláusula", en: "Ask the archivist on duty who drafted the clause" }
+          pista_coste: { es: "Un dato del Archivo, y una archivera que se pone nerviosa", en: "A fact from the Archive, and a nervous archivist" }
+          consecuencia: { efectos: [pista_irene_actas] }
+          exito:
+            es: "La archivera de guardia es Irene Salvat. Dice que la cláusula la trajeron ya escrita. Tiene un pliego doblado en el bolsillo del delantal, y lo tapa con la mano."
+            en: "The archivist on duty is Irene Salvat. She says the clause arrived already written. She has a folded sheet in her apron pocket, and covers it with her hand."
+          medias:
+            es: "La archivera de guardia dice que no puede hablar de documentos privados. Es Irene Salvat. No le mira a los ojos."
+            en: "The archivist on duty says she can't discuss private documents. It's Irene Salvat. She won't meet anyone's eye."
+          fallo:
+            es: "La pregunta se oye en toda la sala. Los padres miran a {mejor} como a un intruso."
+            en: "The question is heard across the room. The fathers look at {mejor} as at an intruder."
+    desenlaces:
+      favorable:
+        titulo: { es: "Tinta fresca", en: "Fresh ink" }
+        publico:
+          es: "Las casas Lobreda y Veyra renovaron los acuerdos del paso. {grupo} firmaron como testigos con una caligrafía impecable."
+          en: "Houses Lobreda and Veyra renewed the pass agreements. {grupo} signed as witnesses in impeccable hands."
+          variantes:
+            - si: "asiste(celia) y asiste(saul)"
+              texto:
+                es: "Celia Lobreda y Saúl Veyra se sentaron en las dos sillas vacías. No se miraron. Valcenda ya les ha puesto fecha."
+                en: "Celia Lobreda and Saúl Veyra sat in the two empty chairs. They didn't look at each other. Valcenda has already set them a date."
+        privado:
+          es: "Al salir del Archivo, el padre de Celia le estrecha la mano: «Usted entiende de casas.» No sabe si es un elogio o una amenaza."
+          en: "Leaving the Archive, Celia's father shakes your hand: “You understand houses.” You can't tell whether it's praise or a threat."
+          variantes:
+            - si: "asiste(celia) y opcion(s5_capitulaciones) == enmendar"
+              texto:
+                es: "Celia la alcanza en la escalera y le dice, muy rápido: «Gracias por lo de “si ambas partes lo desean”. Todavía no sé lo que deseo. Pero ahora puedo saberlo.»"
+                en: "Celia catches up with you on the stairs and says, very fast: “Thank you for ‘if both parties so wish.’ I don't know yet what I wish. But now I'm allowed to find out.”"
+      medias:
+        titulo: { es: "Una silla vacía", en: "An empty chair" }
+        publico:
+          es: "La lectura de capitulaciones del paso fue larga y discreta. Se firmó todo menos la última página."
+          en: "The reading of the pass articles was long and discreet. Everything was signed except the last page."
+        privado:
+          es: "La última página se queda en el Archivo, sin firmar. Alguien la ha guardado en un legajo con el número 84."
+          en: "The last page stays at the Archive, unsigned. Someone has filed it in a bundle numbered 84."
+      desaire:
+        titulo: { es: "Papeles rotos", en: "Torn papers" }
+        publico:
+          es: "La lectura de capitulaciones Lobreda–Veyra terminó con voces. Las caravanas del paso seguirán pasando. Las casas, por ahora, no."
+          en: "The reading of the Lobreda–Veyra articles ended in raised voices. The pass caravans will keep passing. The houses, for now, won't."
+        privado:
+          es: "Celia no ha salido de su cuarto en todo el día. Camila dice que está bien. Camila tampoco ha salido del suyo."
+          en: "Celia hasn't left her room all day. Camila says she's fine. Camila hasn't left hers either."
+
+  # ── Viernes 26 · Cena de las deudas, villa Serravalle (OBLIGATORIO) ──
+  - id: s5_cena_deudas
+    tipo: cena
+    lugar: jardines
+    dia: 26
+    duracion: 1
+    plazas: { min: 3, max: 3 }
+    regla: cualquiera
+    obligatorio: true
+    requisito: { intelecto: 5, chisme: 5, estatus: 5 }
+    anfitrion: { es: "Leonora Serravalle", en: "Leonora Serravalle" }
+    titulo: { es: "Cena de las deudas", en: "The debts supper" }
+    resumen:
+      es: "La víspera del cierre de cuentas, las grandes casas cenan en la villa Serravalle y saldan en voz alta lo que se deben. Es una tradición. Es una crueldad."
+      en: "On the eve of the reckoning, the great houses dine at the Serravalle villa and settle their debts aloud. It's a tradition. It's a cruelty."
+    a_favor:
+      - { es: "Lo que se arregla esta noche no llega al Gran Baile", en: "What's settled tonight won't reach the Grand Ball" }
+    en_contra:
+      - { es: "Esta noche vence la reclamación Miravés contra la señora Ferrán", en: "Tonight the Miravés claim against Mrs. Ferrán falls due" }
+      - { es: "Las casas con deudas no perdonan a quien las ve pagar", en: "Indebted houses don't forgive anyone who watches them pay" }
+    carta:
+      saludo: { es: "Querida casamentera:", en: "Dear Matchmaker," }
+      cuerpo:
+        es: >
+          Como cada otoño, la víspera del cierre de cuentas reúno en la villa a las casas que se deben algo.
+          Se cena bien, se habla claro y se sale con las cuentas saldadas o con los enemigos declarados.
+          Esta vez, me temo, habrá de todo. Traiga a tres de sus jóvenes, y que sepan contar.
+        en: >
+          As every autumn, on the eve of the reckoning I gather at the villa the houses that owe one another something.
+          The food is good, the talk is plain, and everyone leaves with their accounts settled or their enemies declared.
+          This time, I fear, there will be both. Bring three of your young people, and let them be good at sums.
+      firma: { es: "Leonora Serravalle", en: "Leonora Serravalle" }
+    incidente:
+      dia: 26
+      situacion:
+        es: "Amalia Miravés se levanta y le tiende un papel a su sobrino: «Léelo tú, Dario. Es tu reclamación.» Es la deuda del Clara de Nácar contra la viuda Ferrán. La mesa entera mira a {a}."
+        en: "Amalia Miravés rises and hands her nephew a paper: “You read it, Dario. It's your claim.” It's the Clara de Nácar debt against the widow Ferrán. The whole table looks at {a}."
+      cita: { habla: a, bark: incidente }
+      opciones:
+        - id: documentos
+          habilidad: intelecto
+          d: 5
+          facil_si: { si: "marca(pista_clara_nacar)", d: 3 }   # ya sabe que el barco no tenía por qué hundirse
+          texto: { es: "Demostrar con los papeles que el seguro Marén ya pagó ese barco", en: "Prove with the papers that the Marén insurance already paid for that ship" }
+          pista_coste: { es: "La deuda puede caer. Los Marén quedarán expuestos", en: "The debt may fall. The Maréns will be exposed" }
+          consecuencia: { efectos: [deuda_saldada, maren_expuestos] }
+          exito:
+            es: "{mejor} recuerda las fechas: el seguro Marén pagó el Clara de Nácar entero, sin discutir. Reclamarlo dos veces es cobrarlo dos veces. Amalia se sienta despacio. La deuda cae."
+            en: "{mejor} recalls the dates: the Marén insurance paid for the Clara de Nácar in full, without a quarrel. Claiming it again is collecting twice. Amalia sits down slowly. The debt falls."
+          medias:
+            es: "El argumento es bueno, pero faltan papeles. La deuda se aplaza hasta la primavera."
+            en: "The argument is sound, but papers are missing. The debt is postponed until spring."
+          fallo:
+            es: "{mejor} se equivoca de año. Amalia sonríe, educada. La deuda queda en pie."
+            en: "{mejor} gets the year wrong. Amalia smiles, politely. The debt stands."
+        - id: negociar
+          habilidad: estatus
+          d: 5
+          texto: { es: "Negociar en nombre de la casamentera: aplazar la deuda", en: "Negotiate on the Matchmaker's behalf: postpone the debt" }
+          pista_coste: { es: "Camila respirará un invierno. Usted quedará en deuda con Amalia", en: "Camila will breathe for a winter. You'll owe Amalia" }
+          consecuencia: { efectos: [deuda_aplazada, favor_amalia], reputacion_si_exito: 1 }
+          exito:
+            es: "{mejor} propone aplazar la deuda hasta después de la primavera, con la garantía de la casamentera. Amalia acepta con una mirada que dice: «Me debe una.»"
+            en: "{mejor} proposes postponing the debt until after spring, guaranteed by the Matchmaker. Amalia accepts with a look that says: “You owe me one.”"
+          medias:
+            es: "Se aplaza un mes. Lo justo para pasar el Gran Baile."
+            en: "It's postponed a month. Just enough to get through the Grand Ball."
+          fallo:
+            es: "La propuesta suena a caridad. Camila la rechaza en voz alta, por orgullo."
+            en: "The proposal sounds like charity. Camila turns it down aloud, out of pride."
+        - id: exponer
+          habilidad: chisme
+          d: 5
+          texto: { es: "Contraatacar: preguntar por el cofre de papeles quemados", en: "Strike back: ask about the chest of burned papers" }
+          pista_coste: { es: "Los Miravés callarán. Dario lo pagará", en: "The Miravés will go quiet. Dario will pay for it" }
+          consecuencia: { efectos: [miraves_expuesta, dario_herido] }
+          exito:
+            es: "«¿Y los papeles del lote 12, señora Miravés?» La mesa se vuelve hacia Amalia. Amalia guarda la reclamación sin leerla. Dario no levanta la vista del plato."
+            en: "“And the papers from lot 12, Mrs. Miravés?” The table turns to Amalia. Amalia puts the claim away unread. Dario doesn't look up from his plate."
+          medias:
+            es: "La pregunta incomoda, pero Amalia la esquiva con elegancia. La reclamación se lee igual."
+            en: "The question unsettles her, but Amalia sidesteps it gracefully. The claim is read regardless."
+          fallo:
+            es: "La pregunta suena a calumnia. Leonora pide orden, y la mesa se pone de parte de los Miravés."
+            en: "The question sounds like slander. Leonora calls for order, and the table sides with the Miravés."
+    desenlaces:
+      favorable:
+        titulo: { es: "Cuentas claras", en: "Accounts settled" }
+        publico:
+          es: "La cena de las deudas terminó con más cuentas saldadas que enemigos. {grupo} salieron de la villa Serravalle con la frente alta."
+          en: "The debts supper ended with more accounts settled than enemies made. {grupo} left the Serravalle villa with their heads high."
+          variantes:
+            - si: "asiste(dario) y marca(dario_sin_mascara)"
+              texto:
+                es: "Dario Miravés se negó a leer la reclamación de su tía. «No la redacté yo», dijo, «y no la voy a firmar.» Es la primera vez que alguien le lleva la contraria a Amalia en público."
+                en: "Dario Miravés refused to read his aunt's claim. “I didn't draft it,” he said, “and I won't sign it.” It's the first time anyone has contradicted Amalia in public."
+            - si: "asiste(camila)"
+              texto:
+                es: "La señora Ferrán escuchó su nombre sin pestañear y contestó con una sola frase: «El mar ya cobró ese barco.» Leonora pidió que se lo grabaran en un plato."
+                en: "Mrs. Ferrán heard her name without blinking and answered with a single sentence: “The sea has already collected on that ship.” Leonora asked for it to be engraved on a plate."
+            - si: "asiste(teo)"
+              texto:
+                es: "Aurelio Rovena anunció que su hijo buscará «una unión ventajosa» antes del Gran Baile. Teo brindó por ello sin un solo chiste."
+                en: "Aurelio Rovena announced that his son will seek “an advantageous match” before the Grand Ball. Teo toasted it without a single joke."
+        privado:
+          es: "Leonora le escribe a medianoche: «Hacía veinte años que nadie salía contento de esta cena. Ha sido usted. No vuelva a hacerlo: me arruina la tradición.»"
+          en: "Leonora writes to you at midnight: “For twenty years nobody has left this supper happy. That was your doing. Don't do it again: you're ruining my tradition.”"
+          variantes:
+            - si: "marca(deuda_saldada) y asiste(isolda)"
+              texto:
+                es: "Isolda supo esa noche por qué su familia pagó sin discutir: un asegurador de los Marén firmó el barco sabiendo que estaba podrido. Su padre pagó para callarlo. Isolda no lloró en la cena. Lloró después, sola, y luego fue a ver a Camila."
+                en: "That night Isolda learned why her family paid without a quarrel: a Marén underwriter signed off the ship knowing it was rotten. Her father paid to keep it quiet. Isolda didn't cry at the supper. She cried afterwards, alone, and then went to see Camila."
+      medias:
+        titulo: { es: "Cuentas pendientes", en: "Accounts outstanding" }
+        publico:
+          es: "En la cena de las deudas se saldó la mitad y se aplazó el resto. Es lo normal. {grupo} no empeoraron nada, que esta noche ya es mucho."
+          en: "At the debts supper, half was settled and the rest postponed. That's normal. {grupo} made nothing worse, which tonight is saying a lot."
+        privado:
+          es: "Camila vuelve a casa sola, a pie, bajo la lluvia. No quiso carruaje."
+          en: "Camila walks home alone, in the rain. She wouldn't take a carriage."
+      desaire:
+        titulo: { es: "Enemigos declarados", en: "Enemies declared" }
+        publico:
+          es: "La cena de las deudas de este otoño se recordará por las voces. La señora Ferrán sale de ella con la deuda en pie y la mitad de las casas, en contra."
+          en: "This autumn's debts supper will be remembered for the shouting. Mrs. Ferrán leaves it with the debt standing and half the houses against her."
+        privado:
+          es: "Amalia Miravés le manda un ramo de flores blancas. Sin nota. Bruna las tira sin preguntar."
+          en: "Amalia Miravés sends you a bouquet of white flowers. No note. Bruna throws them out without asking."
+      sin_asistentes:
+        publico:
+          es: "La casamentera no envió a nadie a la cena de las deudas. Las casas cenaron sin testigos, y eso nunca termina bien."
+          en: "The Matchmaker sent no one to the debts supper. The houses dined without witnesses, and that never ends well."
+
+  # ── Sábado 27 · Visita privada (vínculo B o más) ──
+  - id: s5_visita
+    tipo: visita
+    lugar: residencia
+    dia: 27
+    duracion: 1
+    plazas: { min: 2, max: 2 }
+    regla: cualquiera
+    obligatorio: false
+    disponible_si: "nivel(a, b) >= B"
+    anfitrion: { es: "La residencia", en: "The residence" }
+    titulo: { es: "La última visita antes del baile", en: "The last visit before the ball" }
+    resumen:
+      es: "Una tarde a solas antes del Gran Baile. Si ya se dijeron lo que sienten, ésta es la tarde en que algo puede pasar."
+      en: "An afternoon alone before the Grand Ball. If they've already said what they feel, this is the afternoon something may happen."
+    a_favor:
+      - { es: "+2 de cercanía. Tras una escena A, desbloquea el beso", en: "+2 closeness. After an A scene, unlocks the kiss" }
+    en_contra:
+      - { es: "No da reputación: nadie se entera", en: "No reputation: nobody finds out" }
+    completada:
+      publico:
+        es: "Una tarde privada. Nadie en Valcenda lo sabrá."
+        en: "A private afternoon. No one in Valcenda will know."
+      privado:
+        es: "{a} y {b} pasaron la tarde en la residencia. Bruna no llevó té. Dice que no hizo falta."
+        en: "{a} and {b} spent the afternoon at the residence. Bruna didn't bring tea. She says it wasn't needed."
+        variantes:
+          - si: "nivel(a, b) >= A"
+            texto:
+              es: "Cuando {a} y {b} se fueron, la sala olía a chimenea apagada y a algo que Bruna no quiso nombrar. Sonreía."
+              en: "When {a} and {b} left, the room smelled of a dead fire and of something Bruna wouldn't name. She was smiling."
+
+# ─────────────────────────────────────────────────────────────────────────────
+cierre:
+  cronica:
+    numero: 5
+    cabecera: { es: "Crónica de salones", en: "The Salon Chronicle" }
+    subtitulo: { es: "Número 5 · Impreso por Calce, Calle de los Sellos", en: "Issue 5 · Printed by Calce, Street of Seals" }
+    entradilla:
+      es: "Semana de cuentas. Se pagó lo que se pudo, se aplazó lo que no y se prometió todo lo demás para el Gran Baile."
+      en: "A week of reckoning. What could be paid was paid, what couldn't was postponed, and everything else was promised for the Grand Ball."
+    noticias:
+      - id: n5_cena
+        evento: s5_cena_deudas
+        usa_desenlace_publico: true
+        titular: { es: "La cena de las deudas", en: "The debts supper" }
+      - id: n5_convoyes
+        evento: s5_convoyes
+        si: "asistio(s5_convoyes, *)"
+        usa_desenlace_publico: true
+        titular: { es: "Barcos del sur", en: "Ships from the south" }
+      - id: n5_capitulaciones
+        evento: s5_capitulaciones
+        si: "asistio(s5_capitulaciones, *)"
+        usa_desenlace_publico: true
+        titular: { es: "El paso de Greda", en: "The Greda pass" }
+      - id: n5_entrevista
+        si: "marca(mara_entrevista)"
+        titular: { es: "La casamentera habla", en: "The Matchmaker speaks" }
+        texto:
+          es: "Esta Crónica entrevistó a la casamentera. No dijo nada. Lo dijo muy bien. Esta Crónica cree que sabe quién escribe la Hoja, y que no es ella."
+          en: "This Chronicle interviewed the Matchmaker. She said nothing. She said it very well. This Chronicle believes she knows who writes the Sheet, and that it isn't her."
+      - id: n5_hostil
+        si: "marca(mara_hostil)"
+        titular: { es: "Preguntas sin respuesta", en: "Unanswered questions" }
+        texto:
+          es: "La casamentera se negó a hablar con esta Crónica. Lo respetamos. También nos preguntamos por qué alguien que no esconde nada necesita tanta discreción."
+          en: "The Matchmaker declined to speak to this Chronicle. We respect that. We also wonder why someone with nothing to hide needs so much discretion."
+      - id: n5_relleno_1
+        relleno: true
+        titular: { es: "Tormentas", en: "Storms" }
+        texto:
+          es: "Las tormentas de Nácar han tumbado tres toldos, dos chimeneas y un compromiso. Esta Crónica no dirá cuál."
+          en: "The Nácar storms have brought down three awnings, two chimneys and an engagement. This Chronicle won't say which."
+    pie:
+      es: "La Crónica firma todo lo que publica. La semana que viene, también el Gran Baile."
+      en: "The Chronicle signs everything it prints. Next week, the Grand Ball too."
+
+  # Hoja nº 4: anuncia que el último número dará nombres de familias. Pista: una fecha y una hora que sólo
+  # están en el registro interno del Archivo. Si Irene empieza a «crecer», el anuncio se suaviza (ARCO §3).
+  hoja:
+    numero: 4
+    cabecera: { es: "La Hoja sin Firma", en: "The Unsigned Sheet" }
+    entradilla:
+      es: "El próximo número será el último. Llevará nombres."
+      en: "The next issue will be the last. It will carry names."
+    cuerpo:
+      es: "El Archivo empezó a arder a la hora tercera de la noche del 14 de nieblas, hace ochenta años, por la sala de linajes. No por la de impuestos, como dice la historia oficial. Alguien eligió qué debía arder. El Gran Baile sabrá quién."
+      en: "The Archive began to burn at the third hour of the night of the 14th of Nieblas, eighty years ago, in the lineage room. Not the tax room, as the official history says. Someone chose what should burn. The Grand Ball will learn who."
+      variantes:
+        - si: "nivel(irene, isolda) >= A o nivel(irene, teo) >= A o marca(nombres_protegidos)"
+          texto:
+            es: "Publicaremos lo que se robó y a quién se le robó. Los nombres de quienes sólo intentaban esconderse… todavía no lo hemos decidido."
+            en: "We shall publish what was stolen and from whom. As for the names of those who were only trying to hide… we have not yet decided."
+    pie:
+      es: "— Folio 84. El último."
+      en: "— Folio 84. The last."
+    pista: "La hora y la sala del inicio del incendio sólo constan en el registro interno del Archivo (canon §6). Si el jugador fue a las capitulaciones y preguntó a la archivera, sabe que Irene tenía un pliego en el delantal."
+    efectos: [hoja_4_publicada]
+
+  solo_sus_ojos:
+    observaciones:
+      - si: "marca(pista_irene_actas)"
+        texto:
+          es: "Irene estaba de guardia en el Archivo el jueves, con un pliego doblado en el delantal. La Hoja nº 4 salió el viernes."
+          en: "Irene was on duty at the Archive on Thursday, with a folded sheet in her apron. Sheet no. 4 came out on Friday."
+      - si: "marca(hoja_4_publicada)"
+        texto:
+          es: "La Hoja dice a qué hora y en qué sala empezó el incendio. Eso no está en ningún libro: sólo en el registro interno del Archivo. Quien la escribe ha leído ese registro."
+          en: "The Sheet says at what hour and in which room the fire began. That isn't in any book: only in the Archive's internal register. Whoever writes it has read that register."
+      - si: "marca(deuda_saldada)"
+        texto:
+          es: "La deuda del Clara de Nácar ha caído. Camila es libre. Los Marén, no tanto: ahora todos saben por qué pagaron sin discutir."
+          en: "The Clara de Nácar debt has fallen. Camila is free. The Maréns, less so: now everyone knows why they paid without a quarrel."
+      - si: "marca(favor_amalia)"
+        texto:
+          es: "Le debe un favor a Amalia Miravés. Sospecha que se lo cobrará en el Gran Baile, y que tendrá que ver con papeles."
+          en: "You owe Amalia Miravés a favour. You suspect she'll collect at the Grand Ball, and that it will have to do with papers."
+      - si: "marca(nilo_elige_promesa)"
+        texto:
+          es: "Nilo eligió la promesa que importaba, no la que le exigía su casa. Es la primera vez que mide lo que promete."
+          en: "Nilo chose the promise that mattered, not the one his house demanded. It's the first time he's weighed what he promises."
+      - si: "marca(alianza_anunciada) o marca(compromiso_paso_propuesto)"
+        texto:
+          es: "Saúl tiene dos alianzas sobre la mesa, la de los convoyes y la del paso, y una orden de Tiria. Sólo puede sellar una cosa en el Gran Baile, o marcharse."
+          en: "Saúl has two alliances on the table, the convoys and the pass, and an order from Tiria. He can seal only one thing at the Grand Ball, or leave."
+      - si: "semana == 5"
+        texto:
+          es: "Una semana. Repasa sus notas: hay pistas suficientes para saber quién escribe la Hoja, si se atreve a juntarlas."
+          en: "One week. You go over your notes: there are clues enough to know who writes the Sheet, if you dare put them together."
+
+  gancho:
+    pantalla: residencia
+    lineas:
+      - habla: nota
+        es: "Señora: ha llegado el carnet de baile del Gran Baile del Sello. Ocho nombres, doce valses y una sola noche."
+        en: "Madam: the dance card for the Grand Ball of the Seal has arrived. Eight names, twelve waltzes and a single night."
+      - habla: nota
+        es: "Y otra nota, sin firma, con letra pequeña y muy ordenada: «Si quiere saber quién soy, venga al Archivo antes del baile. Si no quiere saberlo, no venga.»"
+        en: "And another note, unsigned, in small, very neat handwriting: “If you want to know who I am, come to the Archive before the ball. If you don't want to know, don't come.”"

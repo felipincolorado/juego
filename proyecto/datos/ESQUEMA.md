@@ -213,3 +213,11 @@ Las claves usan puntos: `hoja.boton.carta`, `ajustes.idioma`. El motor resuelve 
 | `opciones[].facil_si: {si, d}` | Opción de incidente | Si se cumple la condición, la dificultad baja a `d` |
 | `disponible_si` | Evento | Condición sobre las plazas para poder asignar (la visita exige `nivel(a, b) >= B`) |
 | `tipo: visita` | Evento | Sin requisito ni desenlace: usa `completada`. +2 de cercanía |
+
+## 9. Campos añadidos al escribir la semana 5
+
+| Campo | Dónde | Significado |
+|---|---|---|
+| `peticiones[].si` | Petición | La petición sólo aparece si se cumple la condición |
+| `escenas[].tipo: beso / confesion / acuerdo` | `escenas/capitulo5.yaml` | Escenas especiales (sistemas §4.3); `condicion` decide si se pueden reproducir |
+| `escenas[].de`, `escenas[].a` | Confesión | Quien confiesa y a quien |

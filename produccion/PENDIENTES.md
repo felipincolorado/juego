@@ -76,3 +76,19 @@ Se actualiza al terminar cada sesión. **Lo que espera tu decisión va primero.*
 - Simulación de la semana 4: con la mejor opción, entre el 66 % y el 69 % de desenlaces favorables. Si va Nilo al teatro, con la peor opción no hay ningún favorable.
 - Marcas que usará el capítulo 5: `nilo_visto`, `nilo_cubierto`, `nilo_confia`, `amalia_conocida`, `amalia_saludada`, `teo_conversacion_seria`, `teo_bufon`, `isolda_hablo_primero`, `camila_espera_secreto`, `dario_sin_mascara`, `nombres_protegidos`, `pista_archivera`, `pista_ausencias`.
 - **Siguiente:** capítulo 5 (Cierre de Cuentas): la cena de las deudas, los motivos de las uniones sin amor (el acuerdo lavanda, el compromiso del paso y la deuda), los besos y las confesiones no correspondidas.
+
+## Capítulo 5 · terminado (14 oct.)
+
+- `semanas/semana5.yaml`:
+  - apertura: la orden de Tiria para Saúl (volver al ejército salvo que selle un compromiso) y la entrevista de Mara (decisión);
+  - peticiones: la prueba de Nilo (su casa o la promesa a Camila, sólo si llegaron al nivel B) y Camila pide ir a la cena;
+  - eventos:
+    - clase de voz (+1 Presencia);
+    - llegada de los convoyes, el motivo de la unión lavanda;
+    - lectura de capitulaciones, el compromiso del paso. Irene está de guardia con un pliego en el delantal;
+    - **cena de las deudas**, obligatoria: la deuda del *Clara de Nácar* y el secreto de los Marén;
+    - última visita privada;
+  - cierre: Crónica nº 5, Hoja nº 4 («llevará nombres»; la hora y la sala del incendio sólo constan en el registro interno; se suaviza si Irene crece), 7 notas privadas y gancho: el carnet de baile y la nota de Irene, «venga al Archivo antes del baile».
+- `escenas/capitulo5.yaml`: 6 besos, 2 confesiones no correspondidas (Dario a Isolda; Celia a Saúl), una confesión genérica y 3 acuerdos sin amor (la lavanda Saúl–Isolda, el compromiso del paso Saúl–Celia y la deuda Teo–Camila).
+- **Equilibrio pendiente:** con la mejor opción, la cena de las deudas sale favorable el 94 % de las veces. La fórmula topa en 5, y con tres personas casi siempre se cubre el requisito. Habría que revisar §3.1 (el +1 por segundo asistente) antes de programar, o aceptarlo, porque en los obligatorios lo que está en juego es la historia.
+- **Siguiente:** capítulo 6 (Gran Baile del Sello): el carnet de baile, la confrontación con Irene en el Archivo, «Proteger los nombres», las propuestas y los epílogos de las 8 vidas.

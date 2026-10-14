@@ -198,7 +198,10 @@ def guion_escenas(datos, lengua, titulo):
     t = lambda x: (x or {}).get(lengua, "") if isinstance(x, dict) else ""
     out = [f"# {titulo}", ""]
     for e in datos["escenas"]:
-        out += [f"## {' y '.join(e['pareja'])} · {t(e['ambiente'])}", f"*{e['id']} · nivel {e['nivel']}*", ""]
+        quienes = e.get("pareja") or [e["de"], e["a"]]
+        clase = e.get("tipo") or f"nivel {e['nivel']}"
+        out += [f"## {' y '.join(quienes)} · {t(e['ambiente'])}",
+                f"*{e['id']} · {clase}*" + (f" · si `{e['condicion']}`" if e.get("condicion") else ""), ""]
         for l in e["lineas"]:
             quien = l.get("habla") or "narración"
             out.append(f"- **{quien}**" + (f" ({l['expr']})" if l.get("expr") else "")
@@ -262,7 +265,7 @@ def main():
                 base, texto = "tutorial", guion_tutorial(d, lengua)
             elif nombre.startswith("escenas"):
                 base = os.path.basename(nombre).rsplit(".", 1)[0]
-                texto = guion_escenas(d, lengua, "Escenas de vínculo · " + base.split("_")[-1])
+                texto = guion_escenas(d, lengua, ("Escenas de vínculo · " + base.split("_")[-1]) if base.startswith("vinculos") else "Escenas del capítulo 5: besos, confesiones y acuerdos")
             else:
                 continue
             with open(os.path.join(SALIDA_GUION, f"{base}.{lengua}.md"), "w", encoding="utf-8") as f:

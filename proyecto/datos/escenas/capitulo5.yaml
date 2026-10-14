@@ -1,0 +1,320 @@
+# Escenas del capítulo 5 (y siguientes): besos, confesiones no correspondidas y acuerdos sin amor.
+# Se reproducen en el cierre, con la misma regla de máximo 2 por cierre (los acuerdos tienen prioridad).
+# · `tipo: beso`: escena A vista y una visita privada después (sistemas §4.3). Marca `beso_<a>_<b>`.
+# · `tipo: confesion`: A siente por B, cercanía ≥ 10 y B no puede corresponder. Marca `no_correspondido`.
+# · `tipo: acuerdo`: el motivo de una unión sin amor (ARCO §2, capítulo 5). Abre la propuesta en el Gran Baile.
+# Ningún beso es explícito: la escena corta en el gesto. Las orientaciones nunca se nombran.
+
+escenas:
+  # ════════════════════════════ BESOS ════════════════════════════
+  - id: beso_saul_dario
+    tipo: beso
+    pareja: [saul, dario]
+    condicion: "nivel(saul, dario) >= A"
+    ambiente: { es: "La sala pequeña de la residencia, con la chimenea apagándose", en: "The small parlour at the residence, the fire burning low" }
+    lineas:
+      - habla: dario
+        es: "Mañana te vas a Tiria, o te quedas. Y yo sigo sin saber cuál de las dos me da más miedo."
+        en: "Tomorrow you either leave for Tiria or you stay. And I still don't know which frightens me more."
+      - habla: saul
+        es: "A mí me da miedo esto."
+        en: "This is what frightens me."
+      - habla: null
+        es: "Saúl se quita los guantes, despacio, uno y luego el otro. Esta vez no los deja en la mesa: los deja caer."
+        en: "Saúl takes off his gloves, slowly, one and then the other. This time he doesn't lay them on the table: he lets them fall."
+      - habla: null
+        es: "Dario es el que se acerca. Saúl es el que no se aparta."
+        en: "Dario is the one who moves closer. Saúl is the one who doesn't step away."
+      - habla: null
+        es: "Cuando Bruna entra a avivar el fuego, ya no hace falta."
+        en: "When Bruna comes in to stoke the fire, it's no longer needed."
+    efectos: [beso_saul_dario]
+
+  - id: beso_irene_isolda
+    tipo: beso
+    pareja: [irene, isolda]
+    condicion: "nivel(irene, isolda) >= A"
+    ambiente: { es: "La sala de lectura del Archivo, de noche", en: "The Archive reading room, at night" }
+    lineas:
+      - habla: irene
+        es: "Antes de que pase nada, tengo que contarte algo. Sobre lo que hago de noche."
+        en: "Before anything happens, I have to tell you something. About what I do at night."
+      - habla: isolda
+        es: "¿Es peligroso?"
+        en: "Is it dangerous?"
+      - habla: irene
+        es: "Para otros. Para gente que no lo merece, quizá."
+        en: "For others. For people who may not deserve it."
+      - habla: isolda
+        expr: ruborizada
+        es: "Entonces cuéntamelo después. Ahora es mi turno de hablar primero."
+        en: "Then tell me afterwards. Right now it's my turn to go first."
+      - habla: null
+        es: "Isolda no dice nada más. No hace falta: esta vez, es ella quien se acerca."
+        en: "Isolda says nothing more. She doesn't need to: this time, she's the one who leans in."
+    efectos: [beso_irene_isolda, irene_casi_confiesa]
+
+  - id: beso_nilo_camila
+    tipo: beso
+    pareja: [nilo, camila]
+    condicion: "nivel(nilo, camila) >= A"
+    ambiente: { es: "El invernadero de los Ferrán, al anochecer", en: "The Ferrán conservatory, at nightfall" }
+    lineas:
+      - habla: camila
+        es: "He tirado las plantas de Julián. Todas menos una."
+        en: "I've thrown out Julián's plants. All but one."
+      - habla: nilo
+        es: "¿Por qué ésa?"
+        en: "Why that one?"
+      - habla: camila
+        expr: alegre
+        es: "Porque es la que regaste tú."
+        en: "Because it's the one you watered."
+      - habla: null
+        es: "Nilo abre la boca para prometer algo. Camila se la cierra antes de que pueda."
+        en: "Nilo opens his mouth to promise something. Camila closes it before he can."
+      - habla: null
+        es: "Por una vez, Nilo Lobreda no ofrece nada. Sólo se queda."
+        en: "For once, Nilo Lobreda offers nothing. He simply stays."
+    efectos: [beso_nilo_camila]
+
+  - id: beso_teo_celia
+    tipo: beso
+    pareja: [teo, celia]
+    condicion: "nivel(teo, celia) >= A"
+    ambiente: { es: "El salón vacío, con un solo violinista", en: "The empty ballroom, with a single violinist" }
+    lineas:
+      - habla: teo
+        es: "El violinista me ha cobrado el doble por quedarse. Dice que esta vez no tiene que tocar mal."
+        en: "The violinist charged me double to stay. He says this time he doesn't have to play badly."
+      - habla: celia
+        es: "¿Y tú vas a bailar bien?"
+        en: "And are you going to dance well?"
+      - habla: teo
+        es: "No. Pero voy a dejar de contar los chistes."
+        en: "No. But I'm going to stop counting the jokes."
+      - habla: null
+        es: "Bailan. Teo no la pisa. Celia no cuenta. En el tercer giro, ninguno de los dos sigue bailando."
+        en: "They dance. Teo doesn't tread on her. Celia doesn't count. By the third turn, neither of them is dancing any more."
+      - habla: null
+        es: "El violinista sigue tocando, de espaldas, con mucha discreción y bastante orgullo."
+        en: "The violinist keeps playing, his back turned, with great discretion and considerable pride."
+    efectos: [beso_teo_celia]
+
+  - id: beso_dario_celia
+    tipo: beso
+    pareja: [dario, celia]
+    condicion: "nivel(dario, celia) >= A"
+    ambiente: { es: "La Academia, junto al piano", en: "The Academy, beside the piano" }
+    lineas:
+      - habla: celia
+        es: "Toca algo. Pero de verdad."
+        en: "Play something. But properly."
+      - habla: null
+        es: "Dario toca. Sin una sola nota falsa, y tan despacio que parece otra persona."
+        en: "Dario plays. Without a single false note, and so slowly he seems like someone else."
+      - habla: dario
+        es: "Es la primera vez que toco sin que nadie me aplauda."
+        en: "It's the first time I've played without anyone applauding."
+      - habla: celia
+        expr: alegre
+        es: "No pienso aplaudir. Tengo otra idea."
+        en: "I've no intention of applauding. I have another idea."
+      - habla: null
+        es: "La última nota se queda sonando sola. Ninguno de los dos la termina."
+        en: "The last note goes on ringing by itself. Neither of them finishes it."
+    efectos: [beso_dario_celia]
+
+  - id: beso_teo_irene
+    tipo: beso
+    pareja: [teo, irene]
+    condicion: "nivel(teo, irene) >= A"
+    ambiente: { es: "La biblioteca de los Salvat, entre estanterías", en: "The Salvats' library, between the shelves" }
+    lineas:
+      - habla: irene
+        es: "He leído todos tus versos. Los del cuaderno y los que tachaste."
+        en: "I've read all your verses. The ones in the notebook and the ones you crossed out."
+      - habla: teo
+        expr: ruborizada
+        es: "¿Y?"
+        en: "And?"
+      - habla: irene
+        es: "Me los creo."
+        en: "I believe them."
+      - habla: null
+        es: "Teo empieza un chiste por costumbre y se le olvida a la mitad. Irene no le deja recordarlo."
+        en: "Teo starts a joke out of habit and forgets it halfway. Irene doesn't let him remember it."
+    efectos: [beso_teo_irene]
+
+  # ════════════════════════ CONFESIONES NO CORRESPONDIDAS ════════════════════════
+  # Dario siente por Isolda, que no puede corresponderle. Se resuelve con ternura: la amistad sobrevive.
+  - id: conf_dario_isolda
+    tipo: confesion
+    de: dario
+    a: isolda
+    condicion: "cercania(dario, isolda) >= 10"
+    ambiente: { es: "El despacho de los Marén, junto a la maqueta del puerto", en: "The Marén office, beside the model of the harbour" }
+    lineas:
+      - habla: dario
+        es: "Isolda. Desde que teníamos ocho años, te he defendido de todo el mundo. Creo que también me estaba defendiendo de esto."
+        en: "Isolda. Since we were eight, I've defended you from everyone. I think I was also defending myself from this."
+      - habla: isolda
+        es: "Dario…"
+        en: "Dario…"
+      - habla: dario
+        es: "No digas nada. Lo veo en tu cara. No es «todavía no». Es «no»."
+        en: "Don't say anything. I can see it in your face. It isn't “not yet.” It's “no.”"
+      - habla: isolda
+        expr: ruborizada
+        es: "No es por ti. Es que yo… no puedo querer así a ningún caballero. Eres el primero al que se lo digo."
+        en: "It isn't you. It's that I… can't love any gentleman that way. You're the first person I've told."
+      - habla: null
+        es: "Dario se queda callado mucho rato. Después le tiende la mano, como cuando eran niños, para salir del escondite."
+        en: "Dario is silent for a long while. Then he holds out his hand, as when they were children, to come out of hiding."
+      - habla: dario
+        expr: alegre
+        es: "Entonces seguiré defendiéndote. Ahora sé de qué."
+        en: "Then I'll go on defending you. Now I know from what."
+    efectos: [no_correspondido_dario, dario_guarda_secreto_isolda]
+
+  # Celia, prometida por conveniencia en el compromiso del paso, se enamora de Saúl, que no puede corresponderle.
+  - id: conf_celia_saul
+    tipo: confesion
+    de: celia
+    a: saul
+    condicion: "cercania(celia, saul) >= 10 y marca(compromiso_paso_propuesto)"
+    ambiente: { es: "La sala de actas del Archivo, vacía", en: "The Archive's empty record room" }
+    lineas:
+      - habla: celia
+        es: "Capitán. Firmé la primera página pensando que era un negocio. Ya no lo es. Para mí, no."
+        en: "Captain. I signed the first page thinking it was a business matter. It isn't any more. Not for me."
+      - habla: saul
+        es: "Señorita Lobreda. Celia. Usted merece a alguien que la mire como usted me mira ahora."
+        en: "Miss Lobreda. Celia. You deserve someone who looks at you the way you're looking at me now."
+      - habla: celia
+        expr: molesta
+        es: "¿Y usted no puede?"
+        en: "And you can't?"
+      - habla: saul
+        es: "No. Y no es por usted. Le pido que no me pregunte más, y le prometo que nunca le mentiré sobre esto."
+        en: "No. And it isn't because of you. I ask you not to question me further, and I promise I will never lie to you about it."
+      - habla: null
+        es: "Celia cuenta en voz baja hasta tres. Luego deja de contar."
+        en: "Celia counts to three under her breath. Then she stops counting."
+      - habla: celia
+        es: "Entonces no firmaré la última página. No por orgullo. Porque quiero bailar con alguien que no cuente los pasos para huir."
+        en: "Then I won't sign the last page. Not out of pride. Because I want to dance with someone who isn't counting the steps to the door."
+    efectos: [no_correspondido_celia, celia_rechaza_paso]
+
+  - id: conf_generica
+    tipo: confesion
+    de: a
+    a: b
+    condicion: "cercania(a, b) >= 10"
+    ambiente: { es: "Un rincón del salón, al final de la velada", en: "A corner of the ballroom, at the end of the evening" }
+    lineas:
+      - habla: a
+        es: "Tengo que decírtelo una vez, aunque ya sepa la respuesta. Te quiero más de lo que debería."
+        en: "I have to say it once, even though I already know the answer. I love you more than I should."
+      - habla: b
+        es: "Lo sé. Y lo siento. No puedo darte lo mismo."
+        en: "I know. And I'm sorry. I can't give you the same."
+      - habla: null
+        es: "{a} asiente. Duele menos de lo que esperaba, y más de lo que dice."
+        en: "{a} nods. It hurts less than expected, and more than {a} lets on."
+    efectos: [no_correspondido]
+
+  # ════════════════════════ ACUERDOS SIN AMOR ════════════════════════
+  # Lavanda (D3: alianza de convoyes). Requiere haber hablado en B (lavanda_hablada).
+  - id: acuerdo_saul_isolda
+    tipo: acuerdo
+    pareja: [saul, isolda]
+    condicion: "marca(lavanda_hablada)"
+    ambiente: { es: "El despacho de los Veyra, con dos copas y un contrato", en: "The Veyra study, with two glasses and a contract" }
+    lineas:
+      - habla: saul
+        es: "Mi padre quiere un vínculo formal con los Marén. El ejército quiere que vuelva a Tiria si no me caso. Y yo quiero quedarme en Valcenda."
+        en: "My father wants a formal tie with the Maréns. The army wants me back in Tiria unless I marry. And I want to stay in Valcenda."
+      - habla: isolda
+        es: "Mi padre quiere un yerno que proteja los convoyes. Y yo quiero que nadie me pregunte nunca por qué no estoy enamorada de mi marido."
+        en: "My father wants a son-in-law who'll protect the convoys. And I want no one ever to ask me why I'm not in love with my husband."
+      - habla: saul
+        es: "Te ofrezco mi nombre, mi respeto y una puerta que siempre podrás cerrar."
+        en: "I offer you my name, my respect, and a door you can always close."
+      - habla: isolda
+        es: "Y yo a ti lo mismo. Y una casa donde nadie mire tus guantes."
+        en: "And I offer you the same. And a house where no one looks at your gloves."
+      - habla: null
+        es: "Brindan sin sonreír. Luego sonríen sin brindar. Es el contrato más sincero que se ha firmado en esa mesa."
+        en: "They toast without smiling. Then they smile without toasting. It's the most honest contract ever signed at that table."
+      - habla: isolda
+        si: "nivel(irene, isolda) >= A"
+        es: "Saúl. Hay alguien. No quiero dejar de verla."
+        en: "Saúl. There's someone. I don't want to stop seeing her."
+      - habla: saul
+        si: "nivel(irene, isolda) >= A"
+        es: "Lo sé. Para eso es la puerta."
+        en: "I know. That's what the door is for."
+      - habla: saul
+        si: "nivel(irene, isolda) >= A y nivel(saul, dario) >= A"
+        es: "Yo también tengo a alguien detrás de la mía."
+        en: "I have someone behind mine too."
+    efectos: [acuerdo_lavanda]
+
+  # Compromiso del paso (Lobreda–Veyra). Celia y Saúl, sin amor; sólo si nadie lo ha roto antes.
+  - id: acuerdo_saul_celia
+    tipo: acuerdo
+    pareja: [saul, celia]
+    condicion: "marca(compromiso_paso_propuesto) y no marca(celia_rechaza_paso) y no marca(acuerdo_lavanda)"
+    ambiente: { es: "Una galería del palacio, a media tarde", en: "A palace gallery, mid-afternoon" }
+    lineas:
+      - habla: celia
+        es: "Nuestras casas ya lo han decidido. Sólo falta que lo decidamos nosotros."
+        en: "Our houses have already decided. All that's left is for us to decide."
+      - habla: saul
+        es: "Seré un marido correcto. Puntual. Leal a su casa. No le pediré nada que no quiera darme."
+        en: "I'll be a proper husband. Punctual. Loyal to your house. I'll never ask you for anything you don't wish to give."
+      - habla: celia
+        es: "Es la proposición menos romántica que me han hecho."
+        en: "That's the least romantic proposal I've ever received."
+      - habla: saul
+        es: "Es la más honrada que sé hacer."
+        en: "It's the most honest one I know how to make."
+      - habla: null
+        es: "Celia cuenta los pasos hasta el final de la galería. Doce. Los cuenta dos veces."
+        en: "Celia counts the steps to the end of the gallery. Twelve. She counts them twice."
+      - habla: celia
+        es: "Lo pensaré hasta el Gran Baile. Si digo que sí, no será por mi casa."
+        en: "I'll think about it until the Grand Ball. If I say yes, it won't be for my house."
+    efectos: [acuerdo_paso]
+
+  # La deuda: la casa Rovena necesita dinero; Camila, aliados contra los Miravés. Unión de compañía.
+  - id: acuerdo_teo_camila
+    tipo: acuerdo
+    pareja: [teo, camila]
+    condicion: "cercania(teo, camila) >= 6 y no marca(deuda_saldada)"
+    ambiente: { es: "La salita de los Ferrán, con las cuentas sobre la mesa", en: "The Ferrán sitting room, the accounts on the table" }
+    lineas:
+      - habla: camila
+        es: "Tu padre quiere casarte con dinero. Yo tengo dinero y una deuda que me quieren cobrar dos veces."
+        en: "Your father wants to marry you to money. I have money, and a debt they want to collect twice."
+      - habla: teo
+        es: "¿Me está proponiendo matrimonio, señora Ferrán?"
+        en: "Are you proposing marriage, Mrs. Ferrán?"
+      - habla: camila
+        es: "Te estoy proponiendo un negocio. Tu apellido me protege de los Miravés; mi fortuna salva tus molinos. Julián te quería como a un hermano pequeño."
+        en: "I'm proposing a business arrangement. Your name protects me from the Miravés; my fortune saves your mills. Julián loved you like a little brother."
+      - habla: teo
+        es: "¿Y el amor?"
+        en: "And love?"
+      - habla: camila
+        expr: alegre
+        es: "Ya lo tuve una vez. Ahora quiero a alguien que me haga reír por las mañanas. Tú eres muy bueno en eso."
+        en: "I had it once. Now I want someone who makes me laugh in the mornings. You're very good at that."
+      - habla: teo
+        es: "Es el chiste más serio que me han contado."
+        en: "That's the most serious joke anyone's ever told me."
+      - habla: null
+        es: "No dicen que sí. Tampoco que no. Teo se lleva las cuentas a casa para leerlas, y no hace ni un chiste en el camino."
+        en: "They don't say yes. Nor no. Teo takes the accounts home to read, and doesn't make a single joke on the way."
+    efectos: [acuerdo_deuda]
